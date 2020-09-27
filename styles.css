@@ -6,7 +6,41 @@ body {
 @media only screen and (max-width:599px) {
 
 .bg {
+    position: fixed;
     width: 100vw;
+    z-index: -1;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-
+header {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100vw;
+    background-color: #2F4072;
+    z-index: 3;
+}
+#splash {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 800px;
+    min-width: 100vw;
+    min-height: 760px;
+    background-image: url(../ASC-LLC-Redesign/images/mobile_grad.png);
+    background-size: cover;
+    z-index: 2;
+}
+#splashGrad {
+    width: 100vw;
+    height: 80vh;
+}
+#logoGlyph {
+    position: relative;
+    height: 100%;
+}
+#logoText {
+    position: relative;
+    height: 100%;
+}
 }
