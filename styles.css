@@ -21,14 +21,14 @@ header {
     z-index: 3;
 }
 #splash {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 0;
-    height: 800px;
     min-width: 100vw;
-    min-height: 760px;
+    min-height: 560px;
     background-image: url(../ASC-LLC-Redesign/images/mobile_grad.png);
-    background-size: cover;
+    background-size: 100% 100%;
     z-index: 2;
 }
 #splashGrad {
@@ -36,11 +36,18 @@ header {
     height: 80vh;
 }
 #logoGlyph {
+    display: grid;
     position: relative;
-    height: 100%;
+    margin-top: 140px;
+    width: 100%;
+    scale: 1.2;
+    justify-content: center;
 }
 #logoText {
+    display: grid;
     position: relative;
+    margin-top: 30px;
     height: 100%;
+    justify-content: center;
 }
 }
