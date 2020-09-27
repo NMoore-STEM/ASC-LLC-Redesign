@@ -1,8 +1,12 @@
+body {
+    padding: 0;
+    margin: 0;
+}
 /*---------MOBILE--------*/
 @media only screen and (max-width:599px) {
 
 .bg {
-
+    width: 100vw;
 }
 
 }
