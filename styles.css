@@ -5,7 +5,19 @@ body {
 }
 /*---------MOBILE--------*/
 @media only screen and (max-width:599px) {
-
+h1 {
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18pt;
+}
+h2 {
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16pt;
+}
+p, li {
+    color: #91B4DF;
+}
 .bg {
     position: fixed;
     width: 100vw;
@@ -76,9 +88,6 @@ header {
     display: block;
     padding: 10px;
     background-color: #403C95;
-    color: white;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 18pt;
     width: 100vw;
     height: 100px;
 }
@@ -87,14 +96,20 @@ header {
     background-color: transparent;
     height: 100px;
 }
-#why {
-    height: 300px;
+section {
     background-color: #2A385D;
+    height: auto;
+}
+#why {
+    height: auto;
 }
 .titleBlue {
     height: 80px;
     background-color: #2C4A9A;
     border-bottom: solid 20px #253C84;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: white;
 }
 #how {
     height: 300px;
