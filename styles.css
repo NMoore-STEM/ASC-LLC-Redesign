@@ -48,9 +48,30 @@ header {
     position: fixed;
     top: 0;
     height: 100px;
-    width: 100vw;
+    width: 92vw;
     background-color: #2F4072;
     z-index: 3;
+    padding: 0 4vw 0;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+#logoGlyphMobile {
+    /*width: 20%;*/
+    scale: 3;
+    left: 10vw;
+    position: absolute;
+    z-index: -1;
+}
+#logoTextMobile {
+    height: 70%;
+    align-self: center;
+}
+#menuButton {
+    height: 53px;
+}
+rect {
+    cursor: pointer;
 }
 #splash {
     display: flex;
