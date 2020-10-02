@@ -56,6 +56,18 @@ header {
     align-items: center;
     overflow: hidden;
 }
+.initial {
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+.show {
+    visibility: visible;
+    transition: all 0.2s ease;
+}
+.initial #menuButton {
+    display: block !important;
+    visibility: visible;
+}
 #logoGlyphMobile {
     /*width: 20%;*/
     scale: 3;
