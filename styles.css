@@ -20,6 +20,12 @@ h2 {
     padding: 20px 20px 20px;
     margin: 0;
 }
+h3 {
+    font-size: 3.2vw;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
 p, li {
     color: #91B4DF;
     font-family: 'Noto Sans KR', sans-serif;
@@ -27,6 +33,10 @@ p, li {
 }
 p {
     text-align: center;
+}
+a {
+    height: min-content;
+    text-decoration: none;
 }
 .bg {
     /*position: fixed;*/
@@ -60,12 +70,12 @@ header {
 .initial {
     visibility: hidden;
     opacity: 0;
-    transition: all 0.2s ease;
+    transition: all 0.7s ease;
 }
 .show {
     visibility: visible;
     opacity: 1;
-    transition: all 0.2s ease;
+    transition: all 0.7s ease;
 }
 .initial #menuButton {
     display: block !important;
@@ -93,12 +103,14 @@ header {
 #menu {
     display: block;
     position: fixed;
-    background-color: white;
+    background-color: rgba(145,180,223,0.4);
     width: 30vw;
     right: 4vw;
     top: 75px;
     margin: 0;
-    padding: 0;
+    padding: 15px;
+    line-height: 1.5;
+    text-align: center;
     z-index: 3;
 }
 .menuClosed {
@@ -175,13 +187,15 @@ section {
     height: auto;
 }
 .contactButton {
+    text-align: center;
     margin: 40px 30px 0;
+}
+.contactButton, .menuItem {
     background-color: #553692;
     color: #9D90C5;
     align-content: center;
     display: grid;
     font-family: 'Noto Sans KR', sans-serif;
-    text-align: center;
     padding: 10px;
     text-decoration: none;
 }
