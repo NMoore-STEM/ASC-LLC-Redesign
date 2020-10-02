@@ -29,7 +29,8 @@ p {
     text-align: center;
 }
 .bg {
-    position: fixed;
+    /*position: fixed;*/
+    background-attachment: fixed;
     width: 100vw;
     height: 100%;
     z-index: -1;
@@ -58,15 +59,18 @@ header {
 }
 .initial {
     visibility: hidden;
+    opacity: 0;
     transition: all 0.2s ease;
 }
 .show {
     visibility: visible;
+    opacity: 1;
     transition: all 0.2s ease;
 }
 .initial #menuButton {
     display: block !important;
     visibility: visible;
+    opacity: 1 !important;
 }
 #logoGlyphMobile {
     /*width: 20%;*/
@@ -80,10 +84,28 @@ header {
     align-self: center;
 }
 #menuButton {
+    position: fixed;
+    right: 4vw;
+    top: 25px;
     height: 53px;
+    z-index: 3;
 }
-rect {
-    cursor: pointer;
+#menu {
+    display: block;
+    position: fixed;
+    background-color: white;
+    width: 30vw;
+    right: 4vw;
+    top: 75px;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+.menuClosed {
+    visibility: hidden;
+}
+.menuOpen {
+    visibility: visible;
 }
 #splash {
     display: flex;
