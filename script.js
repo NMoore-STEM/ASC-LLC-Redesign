@@ -19,7 +19,16 @@ $(document).ready(function(){
     });
 });
 //MOBILE & TABLET Menu button action//
-
+$(document).ready(function(){
+    $('#menuButton').on('click', function(){
+        $('.menuClosed').toggleClass('menuOpen');
+        $('#menu').toggleClass('menuButtonOpen');
+    });
+    $('.menuItem').on('click', function(){
+        $('.menuClosed').removeClass('menuOpen');
+        $('#menu').removeClass('menuButtonOpen');
+    })
+});
 
 
 //Button click animation for MOBILE and TABLET//
