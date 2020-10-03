@@ -19,3 +19,8 @@ $(document).ready(function(){
     });
 });
 //MOBILE & TABLET Menu button action//
+
+
+
+//Button click animation for MOBILE and TABLET//
+//NOTE: Need to use #btn to grab element, then toggle class to .menuItemClicked//
