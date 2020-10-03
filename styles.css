@@ -90,8 +90,9 @@ header {
     z-index: -1;
 }
 #logoTextMobile {
+    display: flex;
     height: 70%;
-    align-self: center;
+    width: 112px;
 }
 #menuButton {
     position: fixed;
