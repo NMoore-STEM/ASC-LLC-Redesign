@@ -173,7 +173,7 @@ header {
 .spacer {
     display: block;
     background-color: transparent;
-    height: 100px;
+    height: 130px;
 }
 section {
     display: grid;
@@ -182,12 +182,6 @@ section {
     height: auto;
     padding-bottom: 20px;
     margin: 0 auto 0;
-}
-.jumpTarget::before {
-    content:"";
-    display:block;
-    height:50px; /* fixed header height*/
-    margin:-50px 0 0; /* negative fixed header height */
 }
 .contactButton {
     text-align: center;
@@ -211,9 +205,6 @@ section {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 20px;
     color: white;
-}
-#how {
-    background-color: #2A385D;
 }
 .listDeco {
     position: relative;
