@@ -183,8 +183,11 @@ section {
     padding-bottom: 20px;
     margin: 0 auto 0;
 }
-#why {
-    height: auto;
+.jumpTarget::before {
+    content:"";
+    display:block;
+    height:50px; /* fixed header height*/
+    margin:-50px 0 0; /* negative fixed header height */
 }
 .contactButton {
     text-align: center;
