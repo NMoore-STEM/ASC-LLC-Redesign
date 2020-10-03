@@ -104,7 +104,7 @@ header {
     display: block;
     position: fixed;
     background-color: rgba(145,180,223,0.4);
-    width: 30vw;
+    width: 40vw;
     right: 4vw;
     top: 75px;
     margin: 0;
@@ -198,6 +198,9 @@ section {
     font-family: 'Noto Sans KR', sans-serif;
     padding: 10px;
     text-decoration: none;
+}
+.menuItem {
+    color: white;
 }
 .titleBlue {
     background-color: #2C4A9A;
