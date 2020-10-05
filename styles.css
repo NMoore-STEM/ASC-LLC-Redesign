@@ -277,7 +277,9 @@ section {
 /*----------------   CONTACT/ MOBILE TABLET   ----------------*/
 /*============================================================*/
 .formContainer{
+    display: flex;
     height: 750px;
+    margin-top: 160px;
     background: transparent;
 }
 .contactForm {
