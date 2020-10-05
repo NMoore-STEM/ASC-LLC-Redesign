@@ -273,4 +273,22 @@ section {
     padding-top: 30px;
     text-align: center;
 }
+/*============================================================*/
+/*----------------   CONTACT/ MOBILE TABLET   ----------------*/
+/*============================================================*/
+.formContainer{
+    height: 750px;
+    background: transparent;
+}
+.contactForm {
+    background: white;
+    height: auto;
+    max-width: 96vw;
+}
+.floatContainer {
+	border: solid 1px black;
+	padding: 0 0.75vh;
+	padding-top: 0.5vh;
+	position: relative;
+}
 }
