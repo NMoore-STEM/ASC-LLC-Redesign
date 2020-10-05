@@ -8,9 +8,10 @@ body {
 h1 {
     color: white;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 18pt;
+    /*font-size: 18pt;*/
+    font-size: 3vh;
     text-align: center;
-    padding: 0 20px 0;
+    /*padding: 0 20px 0;*/
 }
 h2 {
     color: white;
@@ -128,11 +129,13 @@ header {
     position: relative;
     top: 0;
     min-width: 100vw;
-    min-height: 540px;
-    background-image: url(../ASC-LLC-Redesign/images/mobile_grad.png);
+    height: 74vh;
+    /*min-height: 540px;*/
+    /*background-image: url(../ASC-LLC-Redesign/images/mobile_grad.png);*/
     background-size: 100% 100%;
     background-image: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
     z-index: 2;
+    padding-bottom: 4vh;
 }
 #splashGrad {
     width: 100vw;
@@ -141,17 +144,19 @@ header {
 #logoGlyph {
     display: grid;
     position: relative;
-    margin-top: 140px;
-    width: 100%;
-    scale: 1.2;
+    margin-top: 15vh;
+    /*margin-top: 140px;*/
+    /*width: 100%;*/
+    /*scale: 1.2;*/
     justify-content: center;
     filter: drop-shadow( 1px 10px 3px rgba(0, 0, 0, .7));
 }
 #logoText {
     display: grid;
-    position: relative;
-    margin-top: 30px;
-    height: 100%;
+    /*position: relative;*/
+    /*margin-top: 30px;*/
+    margin-top: 4vh;
+    /*height: 100%;*/
     justify-content: center;
     filter: drop-shadow( 1px 10px 3px rgba(0, 0, 0, .7));
 }
@@ -159,19 +164,23 @@ header {
     display: block;
     position: relative;
     background-color: #322F60;
-    height: 180px;
+    /*height: 180px;*/
+    height: 22vh;
 }
 #colorBand02 {
     display: block;
     background-color: #3B348B;
     width: 100vw;
-    height: 150px;
+    /*height: 150px;*/
+    height: 19vh;
 }
 #colorBand03 {
     display: block;
     padding: 10px;
     background-color: #403C95;
-    height: 100px;
+    /*height: 100px;*/
+    height: auto;
+    min-height: 9vh;
 }
 .spacer {
     display: block;
