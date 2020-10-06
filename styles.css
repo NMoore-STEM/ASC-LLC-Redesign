@@ -278,14 +278,17 @@ section {
 /*============================================================*/
 .formContainer{
     display: flex;
-    height: 750px;
-    margin-top: 160px;
+    flex-direction: column;
+    /*height: 750px;*/
+    margin: 160px 8vw 0;
     background: transparent;
 }
 .contactForm {
+    display: block;
     background: white;
-    height: 520px;
-    max-width: 96vw;
+    /*height: 520px;*/
+    max-width: 76vw;
+    padding: 4vw;
 }
 .floatContainer {
 	border: solid 1px black;
@@ -300,20 +303,16 @@ input .floatContainer {
 	padding: 2.5vh 0 1.5vh;
 }
 input {
-	box-sizing: border-box;
-	display: block;
-	/* display: flex; */
-	position: relative;
+    display: block;
+    border: none;
 	overflow: hidden;
 	font-family: 'Exo 2', sans-serif;
-	font: 'Exo 2', sans-serif;
 	background-color: transparent;
-	align-items: center;
 	padding-left: 0.5vw;
 	padding-right: 0.5vw;
 	padding-top: 0.5vw;
-	width: 100%;
-	height: 100%;
-	font-size: 28px;
+}
+textarea {
+    border: none;
 }
 }
