@@ -33,3 +33,72 @@ $(document).ready(function(){
 
 //Button click animation for MOBILE and TABLET//
 //NOTE: Need to use #btn to grab element, then toggle class to .menuItemClicked//
+
+
+//Contact page "onfocus" event to highlight active field//
+
+/*$(document).ready().addEventListener(function(){
+$('#nameField').on('focus', function() {
+        $('.floatContainer').addClass('floatContainerActive');
+        $('label').addClass('labelActive');
+});
+
+$('#nameField').off('focus', function() {
+        $('.floatContainer').removeClass('floatContainerActive');
+        $('label').removeClass('labelActive');
+});
+});*/
+
+$(document).ready(function(){
+    $('#nameField').focus(function() {
+        $('.nameContainer').addClass('focusActive');
+        $('#nameLabel').addClass('labelActive');
+    });
+    $('#nameField').blur(function() {
+        $('.nameContainer').removeClass('focusActive');
+        $('#nameLabel').removeClass('labelActive');
+    });
+
+    /*$('#nameField').on('focus blur', function() {
+        $('.nameContainer').toggleClass('focusActive');
+   });*/
+});
+
+$('#nameField').blur(function() {
+    $('<div.floatContainer>').removeClass('floatContainerActive');
+    $('label').removeClass('labelActive');
+});
+
+$("form :input").focus(function() {
+    $('.floatContainer').addClass('floatContainerActive');
+    $("label[for='" + this.id + "']").addClass("labelfocus");
+    $('label').addClass('labelActive');
+});
+
+$('#nameField').blur(function() {
+    $('<div.floatContainer>').removeClass('floatContainerActive');
+    $('label').removeClass('labelActive');
+});
+/*function activeField(){
+    $(document).getElementByClass('.floatContainer')
+        $('floatContainer').toggleClass('floatContainerActive')
+};*/
+/*$(document).ready(function() {
+    function activeField() {
+        $(document).getElementByClass('.floatContainer')
+            $('floatContainer').toggleClass('floatContainerActive')
+    };
+    //$('#contactField').onfocus(activeField)
+
+});*/
+/*$('input').focus(function() {
+    $('.floatContainer').addClass('floatContainerActive')
+});
+$('textarea').focus(function() {
+    $('.floatContainer').addClass('floatContainerActive')
+});
+$(document).ready(function() {
+    $('input').focus(function() {
+        $('<div.floatContainer>').toggleClass('floatContainerActive')
+    })
+});*/

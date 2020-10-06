@@ -292,27 +292,49 @@ section {
 }
 .floatContainer {
 	border: solid 1px black;
-	padding: 0 0.75vh;
-	padding-top: 0.5vh;
-	position: relative;
+    padding: 2vw;
 }
-input .floatContainer {
-	border: none;
-	font-size: 2.5vh;
-	outline: 0;
-	padding: 2.5vh 0 1.5vh;
+.nameContainer {
+	border: solid 1px black;
+    padding: 2vw;
+}
+.focusActive {
+    border: solid 2px blue;
+    box-shadow: 1px 1px 3px solid black;
+}
+/*#nameField {
+    border: 1px solid black;
+    padding: 5px;
+}*/
+label {
+    display: block;
+    position: absolute;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+}
+#nameLabel {
+    transition: all 0.2s ease;
+}
+#nameField {
+    width: 100%;
+}
+.labelActive {
+    transition: all 0.2s ease;
 }
 input {
     display: block;
     border: none;
 	overflow: hidden;
-	font-family: 'Exo 2', sans-serif;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
 	background-color: transparent;
-	padding-left: 0.5vw;
-	padding-right: 0.5vw;
-	padding-top: 0.5vw;
 }
 textarea {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
     border: none;
+    width: 100%;
 }
 }
