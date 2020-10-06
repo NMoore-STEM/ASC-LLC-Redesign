@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASC LLC</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&family=Noto+Sans+KR:wght@500&family=Ubuntu:wght@500&family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&family=Exo+2&family=Noto+Sans+KR:wght@500&family=Ubuntu:wght@500&family=Kanit&display=swap" rel="stylesheet">
     <script src="jquery-3.5.1.js"></script>
     <script src="script.js"></script>
 </head>
@@ -48,23 +48,22 @@
             </a>
         </menu>
         <wrapper class=formContainer>
-            <section class=contactForm>
-                <div class=floatContainer>
-                    <label for=nameField>Name:</label>
-                    <input id=nameField type=text size=40 autocomplete=off>
+            <form class=contactForm>
+                <div class=nameContainer>
+                    <label id=nameLabel for=nameField>Name:</label>
+                    <input id=nameField type=text size=40 tabindex=1 autocomplete=off>
                 </div>
                 <br>
                 <div class=floatContainer>
                     <label for=emailField >Email:</label>
-                    <input id=emailField type=email size=40 autocomplete=off>
+                    <input id=emailField type=email size=100% tabindex=2 autocomplete=off>
                 </div>
                 <br>
                 <div class=floatContainer>
                     <label for=messageField>Message:</label>
-                    <textarea id=messageField rows=4 cols=50 autocomplete=off>
-                    </textarea>
+                    <textarea id=messageField rows=10 cols=50 tabindex=3 autocomplete=off></textarea>
                 </div>
-            </section>
+            </form>
             <div class="spacer"></div>
         </wrapper>
     
