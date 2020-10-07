@@ -283,6 +283,11 @@ section {
     margin: 160px 8vw 0;
     background: transparent;
 }
+.contactTitle {
+    display: block;
+    height: 75px;
+    background-color: blueviolet;
+}
 .contactForm {
     display: block;
     background: white;
@@ -290,11 +295,8 @@ section {
     max-width: 76vw;
     padding: 4vw;
 }
-.floatContainer {
-	border: solid 1px black;
-    padding: 2vw;
-}
 .nameContainer {
+    display: block;
 	border: solid 1px black;
     padding: 2vw;
 }
@@ -302,14 +304,14 @@ section {
 	border: solid 1px black;
     padding: 2vw;
 }
-.focusActive {
-    border: solid 2px blue;
-    box-shadow: 1px 1px 3px solid black;
+.messageContainer {
+	border: solid 1px black;
+    padding: 2vw;
 }
-/*#nameField {
-    border: 1px solid black;
-    padding: 5px;
-}*/
+.focusActive {
+    border: solid 1px blueviolet;
+    box-shadow: 1px 1px 3px blueviolet;
+}
 label {
     display: block;
     position: absolute;
@@ -317,6 +319,7 @@ label {
     font-size: 14px;
     color: black;
     background-color: white;
+    padding: 0 5px 0;
 }
 #nameLabel {
     transition: all 0.2s ease;
@@ -325,6 +328,7 @@ label {
     width: 100%;
 }
 .labelActive {
+    margin-top: -18px;
     transition: all 0.2s ease;
 }
 input {
@@ -340,5 +344,13 @@ textarea {
     font-size: 18px;
     border: none;
     width: 100%;
+}
+#submitContact {
+    display: block;
+    height: 40px;
+    width: 140px;
+    background-color: blueviolet;
+    box-shadow: 1px 1px 2px solid black;
+    margin: 8vw auto 8vw;
 }
 }
