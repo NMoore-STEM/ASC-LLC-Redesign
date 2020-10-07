@@ -48,6 +48,9 @@
             </a>
         </menu>
         <wrapper class=formContainer>
+            <div class=contactTitle>
+            <h2>CONTACT ASC</h2>
+            </div>
             <form class=contactForm>
                 <div class=nameContainer>
                     <label id=nameLabel for=nameField>Name:</label>
@@ -55,14 +58,15 @@
                 </div>
                 <br>
                 <div class=emailContainer>
-                    <label for=emailField >Email:</label>
+                    <label id=emailLabel for=emailField >Email:</label>
                     <input id=emailField type=email size=100% tabindex=2 autocomplete=off>
                 </div>
                 <br>
-                <div class=floatContainer>
-                    <label for=messageField>Message:</label>
+                <div class=messageContainer>
+                    <label id=messageLabel for=messageField>Message:</label>
                     <textarea id=messageField rows=10 cols=50 tabindex=3 autocomplete=off></textarea>
                 </div>
+                <a href="" id=submitContact>SUBMIT</a>
             </form>
             <div class="spacer"></div>
         </wrapper>

@@ -57,22 +57,45 @@ $(document).ready(function(){
     });
     $('#nameField').blur(function() {
         $('.nameContainer').removeClass('focusActive');
-        $('#nameLabel').removeClass('labelActive');
+        //$('#nameLabel').removeClass('labelActive');
     });
     $('#emailField').focus(function() {
         $('.emailContainer').addClass('focusActive');
-        $('#nameLabel').addClass('labelActive');
+        $('#emailLabel').addClass('labelActive');
     });
     $('#emailField').blur(function() {
         $('.emailContainer').removeClass('focusActive');
-        $('#nameLabel').removeClass('labelActive');
+        //$('#emailLabel').removeClass('labelActive');
+    });
+    $('#messageField').focus(function() {
+        $('.messageContainer').addClass('focusActive');
+        $('#messageLabel').addClass('labelActive');
+    });
+    $('#messageField').blur(function() {
+        $('.messageContainer').removeClass('focusActive');
+        //$('#messageLabel').removeClass('labelActive');
     });
 //----------------------------------------------------------------//
+//----   Attempt to keep label above text field if content is entered, 
+//----   if not, then label reverts to initial position  
+
+    $('#emailField').blur(function() {    
+        if ($('#emailField').val().length < 0) {
+            $('#emailLabel').removeClass('labelActive');
+        } else {
+            $('#emailLabel').addClass('labelActive');
+        }
+    })
+});
+//----  Doesnt seem to work, when using "console.log($('#emailField).value()"
+//----  in console, 0 is returned whether or not something is entered into
+//----  field.  This can be refined to work as intended, but will be abandoned
+//----  for now (time constraints).
 
     /*$('#nameField').on('focus blur', function() {
         $('.nameContainer').toggleClass('focusActive');
    });*/
-});
+//});
 
 $('#nameField').blur(function() {
     $('<div.floatContainer>').removeClass('floatContainerActive');
