@@ -23,21 +23,22 @@ h1 {
 }
 h2 {
     color: white;
+    font-size: 16pt;
 }
 h2, h4 {
     font-family: 'Spartan', sans-serif;
-    font-size: 16pt;
     text-align: center;
     padding: 20px 20px 20px;
     margin: 0;
 }
 h3 {
-    font-size: 3.2vw;
+    font-size: 10pt;
     font-weight: normal;
     text-align: center;
     margin: 0;
 }
 h4 {
+    font-size: 18pt;
     color: #9D90C5;
 }
 p, li {
@@ -120,6 +121,7 @@ header {
     position: fixed;
     background-color: rgba(145,180,223,0.4);
     width: 40vw;
+    max-width: 220px;
     right: 4vw;
     top: 75px;
     margin: 0;
@@ -270,6 +272,7 @@ section {
 }
 .footerButton {
     display: grid;
+    min-width: 120px;
     color: #9D90C5;
     background-color: #3C2C5E;
     text-align: center;
@@ -302,7 +305,7 @@ section {
     display: flex;
     flex-direction: column;
     /*height: 750px;*/
-    margin: 160px 6vw 0;
+    margin: 140px 6vw 0;
     background: transparent;
 }
 .contactTitle {
@@ -384,5 +387,9 @@ textarea {
     background-color:#553692;
     text-align: center;
     align-content: center;
+}
+.spacer2 {
+    height: 80px;
+    background-color: transparent;
 }
 }
