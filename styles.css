@@ -298,6 +298,10 @@ section {
 	border: solid 1px black;
     padding: 2vw;
 }
+.emailContainer {
+	border: solid 1px black;
+    padding: 2vw;
+}
 .focusActive {
     border: solid 2px blue;
     box-shadow: 1px 1px 3px solid black;
