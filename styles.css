@@ -3,6 +3,14 @@ body {
     margin: 0;
     overflow: scroll;
 }
+::selection {
+    background: purple; /* WebKit/Blink Browsers */
+    color: #9D90C5;
+}
+::-moz-selection {
+    background: purple; /* Gecko Browsers */
+    color: #9D90C5;
+}
 /*---------MOBILE--------*/
 @media only screen and (max-width:770px) {
 h1 {
@@ -15,6 +23,8 @@ h1 {
 }
 h2 {
     color: white;
+}
+h2, h4 {
     font-family: 'Spartan', sans-serif;
     font-size: 16pt;
     text-align: center;
@@ -26,6 +36,9 @@ h3 {
     font-weight: normal;
     text-align: center;
     margin: 0;
+}
+h4 {
+    color: #9D90C5;
 }
 p, li {
     color: #91B4DF;
@@ -276,7 +289,7 @@ section {
     display: block;
     position: relative;
     top: 30px;
-    color: black;
+    color: #9D90C5;
     font-family: 'Roboto', sans-serif;
     text-shadow: 1px 1px purple;
     padding-top: 30px;
@@ -294,12 +307,12 @@ section {
 }
 .contactTitle {
     display: block;
-    height: 75px;
-    background-color: blueviolet;
+    /*height: 75px;*/
+    background-color:#553692;
 }
 .contactForm {
     display: block;
-    background: white;
+    background: whitesmoke;
     /*height: 520px;*/
     max-width: 80vw;
     padding: 4vw;
@@ -330,7 +343,7 @@ label {
     font-family: 'Exo 2', sans-serif;
     font-size: 14px;
     color: black;
-    background-color: white;
+    background-color: whitesmoke;
     padding: 0 5px 0;
 }
 #nameLabel {
@@ -360,14 +373,15 @@ textarea {
     font-size: 18px;
     border: none;
     width: 95%;
+    background-color: transparent;
 }
 #submitContact {
     display: grid;
     height: 40px;
     width: 140px;
-    background-color: blueviolet;
-    box-shadow: 1px 1px 2px solid black;
     margin: 6vw auto 4vw;
+    color: white;
+    background-color:#553692;
     text-align: center;
     align-content: center;
 }
