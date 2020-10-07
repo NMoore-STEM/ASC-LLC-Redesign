@@ -244,16 +244,25 @@ section {
     /*height: 150px;*/
     background-color: #4F2F88;
     /*border-bottom: 40px solid #3C2C5E;*/
-    border-bottom: 40px solid #553692;
+    border-bottom: 40px solid #3C2C5E;
 }
 #colorBand05 {
     display: flex;
     /*height: 100px;*/
     /*background-color: #553692;*/
-    background-color: #3C2C5E;
+    background-color: #553692;
     justify-content: space-around;
     align-items: center;
     padding: 30px;
+}
+.footerButton {
+    display: grid;
+    color: #9D90C5;
+    background-color: #3C2C5E;
+    text-align: center;
+    margin: 40px 30px 0;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .topButton {
     display: block;
@@ -280,7 +289,7 @@ section {
     display: flex;
     flex-direction: column;
     /*height: 750px;*/
-    margin: 160px 8vw 0;
+    margin: 160px 6vw 0;
     background: transparent;
 }
 .contactTitle {
@@ -292,17 +301,19 @@ section {
     display: block;
     background: white;
     /*height: 520px;*/
-    max-width: 76vw;
+    max-width: 80vw;
     padding: 4vw;
 }
 .nameContainer {
     display: block;
 	border: solid 1px black;
     padding: 2vw;
+    max-width: 360px;
 }
 .emailContainer {
 	border: solid 1px black;
     padding: 2vw;
+    max-width: 360px;
 }
 .messageContainer {
 	border: solid 1px black;
@@ -310,6 +321,7 @@ section {
 }
 .focusActive {
     border: solid 1px blueviolet;
+    scale: 1.02;
     box-shadow: 1px 1px 3px blueviolet;
 }
 label {
@@ -325,10 +337,14 @@ label {
     transition: all 0.2s ease;
 }
 #nameField {
-    width: 100%;
+    width: 95%;
+}
+#emailField {
+    width: 95%;
 }
 .labelActive {
-    margin-top: -18px;
+    /*margin-top: -18px;*/
+    margin-top: -4.2vw;
     transition: all 0.2s ease;
 }
 input {
@@ -343,14 +359,16 @@ textarea {
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
     border: none;
-    width: 100%;
+    width: 95%;
 }
 #submitContact {
-    display: block;
+    display: grid;
     height: 40px;
     width: 140px;
     background-color: blueviolet;
     box-shadow: 1px 1px 2px solid black;
-    margin: 8vw auto 8vw;
+    margin: 6vw auto 4vw;
+    text-align: center;
+    align-content: center;
 }
 }
