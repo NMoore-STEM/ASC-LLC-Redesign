@@ -49,6 +49,7 @@ $('#nameField').off('focus', function() {
 });
 });*/
 
+//----------------------------------------------------------------//
 $(document).ready(function(){
     $('#nameField').focus(function() {
         $('.nameContainer').addClass('focusActive');
@@ -58,6 +59,15 @@ $(document).ready(function(){
         $('.nameContainer').removeClass('focusActive');
         $('#nameLabel').removeClass('labelActive');
     });
+    $('#emailField').focus(function() {
+        $('.emailContainer').addClass('focusActive');
+        $('#nameLabel').addClass('labelActive');
+    });
+    $('#emailField').blur(function() {
+        $('.emailContainer').removeClass('focusActive');
+        $('#nameLabel').removeClass('labelActive');
+    });
+//----------------------------------------------------------------//
 
     /*$('#nameField').on('focus blur', function() {
         $('.nameContainer').toggleClass('focusActive');
