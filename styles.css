@@ -104,6 +104,9 @@ header {
     position: absolute;
     z-index: -1;
 }
+.precise {
+    shape-rendering: geometricPrecision;
+}
 #logoTextMobile {
     display: flex;
     height: 70%;
@@ -138,7 +141,10 @@ header {
     visibility: visible;
     transition: all 0.3s ease;
 }
-#splash {
+#splashFULL {
+    visibility: hidden;
+}
+#splashMT {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -391,5 +397,32 @@ textarea {
 .spacer2 {
     height: 80px;
     background-color: transparent;
+}
+}
+@media only screen and (min-width:771px) {
+.bg {
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #16142D;
+    background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
+}
+header {
+    background-color: transparent;
+    display: flex;
+    width: 100%;
+}
+#splashMT {
+    visibility: hidden;
+}
+#splashFULL {
+    display: block;
+    width: 100vw;
+}
+#splashFULL img {
+    width: 100vw;
 }
 }
