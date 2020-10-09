@@ -412,6 +412,11 @@ h1 {
     font-family: 'Spartan', sans-serif;
     font-size: 4vw;
 }
+h2 {
+    color: white;
+    font-family: 'Spartan',sans-serif;
+    font-size: 18pt;
+}
 p {
     font-family: 'Exo 2',sans-serif;
     font-size: 18pt;
@@ -483,5 +488,17 @@ header a {
     top: 30vw;
     left: 20vw;
     max-width: 70vw;
+}
+section {
+    background-color: #16142D;
+}
+.contactButton {
+    background-color: #553692;
+    color: #9D90C5;
+    align-content: center;
+    display: grid;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 10px;
+    text-decoration: none;
 }
 }
