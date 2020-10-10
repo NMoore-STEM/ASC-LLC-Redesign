@@ -1,8 +1,11 @@
+html {
+    height: 100%;
+}
 body {
     padding: 0;
     margin: 0;
-    /*overflow-y: scroll;
-    overflow-x: hidden;*/
+    overflow-y: scroll;
+    overflow-x: hidden;
     height: 100%;
 }
 ::selection {
@@ -56,14 +59,13 @@ a {
     text-decoration: none;
 }
 .bg {
-    position: fixed;
+    /*position: fixed;*/
+    position: absolute;
     background-attachment: fixed;
-    width: 100vw;
-    height: 100%;
-    z-index: -1;
+    width: 100%;
+    /*height: 100%;*/
     background-color: #16142D;
     background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
-    /*background-image: url("data:image/svg+xml,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 100vw 100vw' xml:space='preserve'><pattern width='100' height='90' patternUnits='userSpaceOnUse' id='asanohaTile' viewBox='100.045 -180.235 100 90' overflow='visible'><polygon fill='none' points='100.045 -180.235 200.045 -180.235 200.045 -90.235 100.045 -90.235 '/><line fill='none' stroke='#662D91' stroke-width='2' stroke-miterlimit='10' x1='100.001' y1='-135.632' x2='200.079' y2='-135.748'/><line fill='none' stroke='#662D91' stroke-width='2' stroke-miterlimit='10' x1='175.7' y1='-90.485' x2='125.827' y2='-180.485'/><line fill='none' stroke='#662D91' stroke-width='2' stroke-miterlimit='10' x1='100.001' y1='-135.632' x2='125.827' y2='-180.485'/><polyline fill='none' stroke='#662D91' stroke-width='2' stroke-miterlimit='10' points='125.557 -90.485 150.651 -135.688 175.522 -180.485 '/><line fill='none' stroke='#662D91' stroke-width='2' stroke-miterlimit='10' x1='175.7' y1='-90.485' x2='200.079' y2='-135.735'/><line fill='none' stroke='#662D91' stroke-width='2' stroke-miterlimit='10' x1='200.079' y1='-135.735' x2='175.522' y2='-180.485'/><line fill='none' stroke='#662D91' stroke-width='2' stroke-miterlimit='10' x1='125.557' y1='-90.485' x2='100.001' y2='-135.632'/><line fill='none' stroke='#662D91' stroke-width='2' stroke-miterlimit='10' x1='100.079' y1='-90.485' x2='200.079' y2='-90.485'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='100.001' y1='-135.632' x2='125.827' y2='-150.521'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='175.7' y1='-120.683' x2='125.827' y2='-150.521'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='125.557' y1='-120.683' x2='175.522' y2='-150.521'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='125.827' y1='-150.521' x2='125.827' y2='-180.485'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='125.557' y1='-90.485' x2='125.557' y2='-120.683'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='175.7' y1='-90.485' x2='175.7' y2='-120.683'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='175.522' y1='-150.521' x2='175.522' y2='-180.485'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='125.557' y1='-120.683' x2='100.001' y2='-135.632'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='175.7' y1='-120.683' x2='200.079' y2='-135.735'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='200.079' y1='-135.735' x2='175.522' y2='-150.521'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='150.617' y1='-103.792' x2='150.764' y2='-165.081'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='175.7' y1='-90.485' x2='150.617' y2='-103.792'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='150.764' y1='-165.081' x2='125.827' y2='-180.485'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='125.557' y1='-90.485' x2='150.617' y2='-103.792'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='150.764' y1='-165.081' x2='175.522' y2='-180.485'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='175.7' y1='-90.485' x2='200.079' y2='-105.163'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='100.079' y1='-165.013' x2='125.827' y2='-180.485'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='125.557' y1='-90.485' x2='100.079' y2='-105.207'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='200.079' y1='-165.173' x2='175.522' y2='-180.485'/><line fill='none' stroke='#662D91' stroke-miterlimit='10' x1='200.079' y1='-105.297' x2='200.079' y2='-165.307'/></pattern><g id='asanohaPatt'><rect fill='url(#asanohaTile)' width='100vw' height='100vh'/></g></svg>");*/
     /*background-attachment: scroll;*/
     /*background-size: 100vw 100%;*/
     /*background-repeat: repeat;*/
@@ -183,6 +185,9 @@ header {
     /*height: 100%;*/
     justify-content: center;
     filter: drop-shadow( 1px 10px 3px rgba(0, 0, 0, .7));
+}
+.fullValue, .logoValueContainer {
+    display: none;
 }
 #colorBand01 {
     display: block;
@@ -423,10 +428,10 @@ p {
     color: white;
 }
 .bg {
+    position: absolute;
     background-attachment: fixed;
-    /*width: 100vw;*/
-    height: 100%;
-    z-index: -1;
+    width: 100%;
+    /*height: 100%;*/
     background-color: #16142D;
     background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
 }
@@ -462,7 +467,8 @@ header a {
 .menuItem {
     height: auto;
 }
-#splashMT {
+#splashMT, #colorBand01, .mobileValue {
+    display: none;
     visibility: hidden;
     height: 0;
 }
@@ -475,14 +481,19 @@ header a {
     display: block;
     width: 100%;
 }
-#logoGlyphFull {
+.logoValueContainer {
+    display: flex;
+    position: absolute;
+    top: 7%;
+}
+/*#logoGlyphFull {
     position: absolute;
     top: 10%;
 }
 #logoTextFull {
     position: absolute;
     top: 35%;
-}
+}*/
 #colorBand03 {
     position: absolute;
     top: 30vw;
