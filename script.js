@@ -21,15 +21,42 @@ $(document).ready(function(){
 //MOBILE & TABLET Menu button action//
 $(document).ready(function(){
     $('#menuButton').on('click', function(){
-        $('.menuClosed').toggleClass('menuOpen');
-        $('#menu').toggleClass('menuButtonOpen');
+        //var container = $('#menu, #menuButton')
+        /*if (!container.is(event.target) && container.visibility('visible')) {
+            $('#menu').toggleClass();
+        };*/
+        /*$('.menuClosed').toggleClass('menuOpen');
+        $('#menu').toggleClass('menuButtonOpen');*/
+        /*$('#menu').removeClass('menuClosed');
+        $('#menu').addClass('menuOpen');*/
+        $('#menu').toggleClass('menuOpen');
     });
     $('.menuItem').on('click', function(){
         $('.menuClosed').removeClass('menuOpen');
         $('#menu').removeClass('menuButtonOpen');
-    })
+    });
+    /*$(document).click(function(event) {
+        if ($('.menuOpen').is(':visible') && $(event.target).not('#menu')) {
+         $('#menu').removeClass('menuOpen')};*/
+    /*$('#menuButton').blur(function() {
+        $('.menuClosed').removeClass('menuOpen');
+    })*/
 });
+/*$(document).click(function(event) {
+   if ($('.menuOpen').is(':visible') && $(event.target).not('#menu')) {
+    $('#menu').removeClass('menuOpen')};
+});*/
+/*$(document).click(function (e){
 
+    var container = $('#menu');
+    var button = $('#menuButton');
+
+	if (!container.is(e.target) && container.has(e.target).length === 0){
+
+		$('#menu').toggleClass('menuOpen');
+		
+	}
+});*/
 
 //Button click animation for MOBILE and TABLET//
 //NOTE: Need to use #btn to grab element, then toggle class to .menuItemClicked//
