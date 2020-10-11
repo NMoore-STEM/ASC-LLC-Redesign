@@ -455,17 +455,23 @@ header a {
 }
 #menu {
     display: flex;
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
     height: auto;
     margin: 0;
     padding: 0;
-    top: 0;
+    top: 20px;
     left: 25%;
     justify-content: space-between;
     width: 70%;
 }
 .menuItem {
     height: auto;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.2vw;
+    color: white;
+    justify-self: space-between;
+    text-decoration: none;
 }
 #splashMT, #colorBand01, .mobileValue {
     display: none;
@@ -485,6 +491,12 @@ header a {
     display: flex;
     position: absolute;
     top: 7%;
+}
+.fullLogo {
+    padding: 0 4vw 0;
+}
+.fullValue {
+    margin: auto 2vw auto;
 }
 /*#logoGlyphFull {
     position: absolute;
