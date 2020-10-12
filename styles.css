@@ -17,6 +17,16 @@ body {
     background: purple; /* Gecko Browsers */
     color: #9D90C5;
 }
+.copyright {
+    display: block;
+    position: relative;
+    top: 30px;
+    color: #9D90C5;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px purple;
+    padding-top: 30px;
+    text-align: center;
+}
 /*---------MOBILE--------*/
 @media only screen and (max-width:770px) {
 h1 {
@@ -342,7 +352,10 @@ section {
     border-radius: 50% 50%;
     border: solid 6px #553692;
 }
-.copyright {
+.topButtonFULL {
+    display: none;
+}
+/*.copyright {
     display: block;
     position: relative;
     top: 30px;
@@ -351,7 +364,7 @@ section {
     text-shadow: 1px 1px purple;
     padding-top: 30px;
     text-align: center;
-}
+}*/
 /*============================================================*/
 /*----------------   CONTACT/ MOBILE TABLET   ----------------*/
 /*============================================================*/
@@ -621,5 +634,35 @@ section {
     justify-self: center;
     text-align: center;
     max-width: 400px;
+}
+footer {
+    width: 100%;
+    color: #9D90C5;
+    background-color: #3C2C5E;
+    text-align: center;
+    margin: 40px 30px 0;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.footerButton {
+    display: grid;
+    min-width: 120px;
+    color: #9D90C5;
+    background-color: #3C2C5E;
+    text-align: center;
+    margin: 40px 30px 0;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.topButtonFULL {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-color: #4F2F88;
+    border-radius: 50% 50%;
+    border: solid 6px #553692;
+}
+.topButton {
+    display: none;
 }
 }
