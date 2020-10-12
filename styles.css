@@ -464,11 +464,12 @@ h2 {
     font-size: 18pt;
     margin: 2vw 4vw;
     white-space: nowrap;
+    transform: skewX(20deg);
 }
 p {
     font-family: 'Exo 2',sans-serif;
     font-size: 18pt;
-    color: white;
+    color:  #253C84;
 }
 .bg {
     position: absolute;
@@ -579,15 +580,23 @@ header a {
 }
 section {
     display: grid;
-    background-color: #16142D;
+    /*background-color: #91B4DF;*/
+    background-color: #C0D2E8;
+    overflow: hidden;
 }
 #whyContent {
     margin: 0 8vw 0;
-    max-width: 60vw;
+    max-width: 84vw;
 }
 .sectionTitle {
     background-color: #2C4A9A;
-    border-bottom: solid 20px #253C84;
+    /*border-bottom: solid 20px #253C84;
+    border-width: 80%;*/
+    outline: solid 20px #253C84;
+    outline-offset: 2px;
+    transform: skewX(-20deg);
+    width:110%;
+    margin-left: 8vw;
 }
 #howContent {
     margin: 0 8vw 0;
