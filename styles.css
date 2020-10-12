@@ -479,7 +479,7 @@ p {
     background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
 }
 header {
-    background-color: black;
+    background-color: rgba(0,0,0,0.8);
     display: flex;
     position: fixed;
     width: 100%;
