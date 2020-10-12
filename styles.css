@@ -280,7 +280,7 @@ section {
     right: 0;
     position: relative;
 }
-.titleBlue {
+.sectionTitle {
     background-color: #2C4A9A;
     border-bottom: solid 20px #253C84;
     font-family: 'Noto Sans KR', sans-serif;
@@ -567,6 +567,28 @@ header a {
 }
 section {
     background-color: #16142D;
+}
+#whyContent {
+    margin: 0 8vw 0;
+    max-width: 60vw;
+}
+.sectionTitle {
+    background-color: #2C4A9A;
+    border-bottom: solid 20px #253C84;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+#howContent {
+    margin: 0 8vw 0;
+    max-width: 60vw;
+    float: right;
+}
+#servicesContent {
+    width: 100%;
+}
+#qualContent {
+    width: 100%;
 }
 .contactButton {
     background-color: #553692;
