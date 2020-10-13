@@ -477,12 +477,15 @@ h2 {
     font-size: 18pt;
     margin: 2vw 4vw;
     white-space: nowrap;
-    transform: skewX(20deg);
+    /*transform: skewX(20deg);*/
 }
 p {
     font-family: 'Exo 2',sans-serif;
     font-size: 18pt;
-    color:  #253C84;
+    /*color:  #253C84;*/
+    color: #91B4DF;
+    width: 90%;
+    text-align: center;
 }
 .bg {
     position: absolute;
@@ -592,29 +595,33 @@ header a {
     height: 130px;
 }
 section {
-    display: grid;
+    /*display: grid;*/
     /*background-color: #91B4DF;*/
-    background-color: #C0D2E8;
+    /*background-color: #C0D2E8;*/
+    background-color: #253C84;
     overflow: hidden;
 }
 #whyContent {
-    margin: 0 8vw 0;
-    max-width: 84vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 0;
+    max-width: 1200px;
 }
 .sectionTitle {
     background-color: #2C4A9A;
     /*border-bottom: solid 20px #253C84;
     border-width: 80%;*/
-    outline: solid 20px #253C84;
-    outline-offset: 2px;
-    transform: skewX(-20deg);
+    /*outline: solid 20px #253C84;
+    outline-offset: 2px;*/
+    /*transform: skewX(-20deg);*/
     width:110%;
     margin-left: 8vw;
 }
 #howContent {
     margin: 0 8vw 0;
     max-width: 60vw;
-    float: right;
+    /*float: right;*/
 }
 #servicesContent {
     width: 100%;
@@ -628,6 +635,7 @@ section {
     align-content: center;
     display: grid;
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18pt;
     padding: 2vw 4vw;
     text-decoration: none;
     margin: 2vw;
