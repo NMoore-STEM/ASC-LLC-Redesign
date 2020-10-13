@@ -600,13 +600,14 @@ section {
     /*background-color: #C0D2E8;*/
     background-color: #253C84;
     overflow: hidden;
+    padding: 50px 60px;
 }
 #whyContent {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto 0;
-    max-width: 1200px;
+    max-width: 1100px;
 }
 .sectionTitle {
     background-color: #2C4A9A;
