@@ -483,6 +483,12 @@ h2 {
     white-space: nowrap;
     /*transform: skewX(20deg);*/
 }
+h3 {
+    font-family: 'Spartan', sans-serif;
+    font-size: 16pt;
+    color:  #2C4A9A;
+    padding-right: 50px;
+}
 p {
     font-family: 'Exo 2',sans-serif;
     font-size: 18pt;
@@ -675,8 +681,13 @@ section {
     flex-direction: column;
     background-color: #91B4DF;
     border: 2px solid #2C395E;
-    border-radius: 5px;
+    border-radius: 15px;
     margin: 50px;
+    padding: 10px;
+}
+.cardHeading {
+    display: flex;
+    justify-content: space-between;
 }
 .cardContent {
     align-content: center;
