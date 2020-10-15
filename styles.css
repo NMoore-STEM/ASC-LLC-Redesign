@@ -486,8 +486,13 @@ h2 {
 h3 {
     font-family: 'Spartan', sans-serif;
     font-size: 16pt;
-    color:  #2C4A9A;
+    color:  white;
     padding-right: 50px;
+}
+h4 {
+    font-family: 'Spartan', sans-serif;
+    font-size: 16pt;
+    color:  #253C84;
 }
 p {
     font-family: 'Exo 2',sans-serif;
@@ -678,19 +683,19 @@ section {
 }
 .cardFrame {
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     background-color: #91B4DF;
     border: 2px solid #2C395E;
     border-radius: 15px;
     margin: 50px;
     padding: 10px;
 }
-.cardHeading {
-    display: flex;
-    justify-content: space-between;
+.cardIcon {
+    display: inherit;
 }
 .cardContent {
-    align-content: center;
+    flex-grow: 1;
+    text-align: center;
 }
 #servicesContent {
     max-width: 1100px;
