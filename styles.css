@@ -376,13 +376,14 @@ section {
     display: flex;
     flex-direction: column;
     /*height: 750px;*/
-    margin: 140px 6vw 0;
+    margin: 0 6vw 0;
     background: transparent;
 }
 .contactTitle {
     display: block;
     /*height: 75px;*/
     background-color:#553692;
+    margin-top: 150px;
 }
 .contactForm {
     display: block;
