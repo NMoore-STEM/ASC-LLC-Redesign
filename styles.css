@@ -558,7 +558,7 @@ header a {
     opacity: 1;
     left: 20px;
     scale: 1;
-    transition: opacity 0.4s ease-in, left 0.5s ease-out, scale 0.25s linear;
+    transition: opacity 0.4s ease, left 0.5s ease-out, scale 0.3s ease;
 }
 #logoGlyphMobile {
     display: none;
@@ -657,7 +657,6 @@ header a {
     height: 130px;
 }
 section {
-    /*display: grid;*/
     /*background-color: #91B4DF;*/
     /*background-color: #C0D2E8;*/
     background-color: #253C84;
@@ -682,18 +681,10 @@ section {
     position: absolute;
     z-index: 4;
     background-color: #2C4A9A;
-    /*border-bottom: solid 20px #253C84;
-    border-width: 80%;*/
-    /*outline: solid 20px #253C84;
-    outline-offset: 2px;*/
-    /*transform: skewX(-20deg);*/
-    /*width:110%;*/
     margin-left: -5vw;
     margin-top: -80px;
     text-align: right;
     padding-right: 6vw;
-    box-shadow: 1px 6px 4px 0px black;
-    filter: drop-shadow(1px 6px 4px 0px black);
     clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
     min-width: 800px;
 }
@@ -703,8 +694,6 @@ section {
     grid-template-rows: 1fr 1fr 1fr;
     margin: 0 8vw 0;
     padding-top: 100px;
-    /*max-width: 80vw;*/
-    /*float: right;*/
 }
 .leftAside {
     grid-row-start: 1;
