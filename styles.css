@@ -118,6 +118,7 @@ header {
     /*width: 20%;*/
     scale: 3;
     left: 10vw;
+    top: -60px;
     position: absolute;
     z-index: -1;
 }
@@ -487,7 +488,7 @@ h2 {
 h3 {
     font-family: 'Spartan', sans-serif;
     font-size: 16pt;
-    color:  white;
+    color:  #91B4DF;
     padding-right: 50px;
 }
 h4 {
@@ -526,12 +527,29 @@ header {
     width: 100%;
     z-index: 4;
     top:0;
+    /*below might not be needed*/
+    align-content: center;
+    align-items: center;
 }
 header img {
-    height: 100px;
+    height: 120px;
 }
 header a {
     height: 100px;
+}
+#logoContainer {
+    display: flex;
+    padding: 10px 0 10px 25px;
+    align-items: center;
+}
+#logoGlyphMobile {
+    display: none;
+}
+#logoFullHeader {
+    height: 100px;
+}
+#logoTextMobile {
+    padding-top: 5px;
 }
 #menuButton {
     display: block;
