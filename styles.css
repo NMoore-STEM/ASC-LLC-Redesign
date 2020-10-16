@@ -532,15 +532,33 @@ header {
     align-items: center;
 }
 header img {
-    height: 120px;
+    height: 80px;
+    align-self: center;
 }
 header a {
     height: 100px;
 }
 #logoContainer {
     display: flex;
+    position: relative;
     padding: 10px 0 10px 25px;
     align-items: center;
+    /*left: -240px;
+    opacity: 0;
+    scale: 2;
+    transition: opacity 0.6s ease-in, left 0.6s ease, scale 0.6s ease;*/
+}
+.logoHide {
+    left: -240px;
+    opacity: 0;
+    scale: 2;
+    transition: opacity 0.4s ease-in, left 0.2s linear 0.4s, scale 0.4s ease;
+}
+.logoReveal {
+    opacity: 1;
+    left: 20px;
+    scale: 1;
+    transition: opacity 0.4s ease-in, left 0.5s ease-out, scale 0.25s linear;
 }
 #logoGlyphMobile {
     display: none;
@@ -549,6 +567,7 @@ header a {
     height: 100px;
 }
 #logoTextMobile {
+    display: flex;
     padding-top: 5px;
 }
 #menuButton {

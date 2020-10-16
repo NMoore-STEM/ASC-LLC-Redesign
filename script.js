@@ -18,9 +18,13 @@ $(document).ready(function(){
         }
     });
     //Below will be used to have logo move into header in FULL
-    /*$(document).scroll(function(){
-        if ($(document).scrollTop() >= 500) {
-            $('#headerMT').addClass('show');*/
+    $(document).scroll(function(){
+        if ($(document).scrollTop() > 430) {
+            $('#logoContainer').addClass('logoReveal');
+        } else {
+            $('#logoContainer').removeClass('logoReveal');
+        }
+    });
 });
 //MOBILE & TABLET Menu button action//
 $(document).ready(function(){
