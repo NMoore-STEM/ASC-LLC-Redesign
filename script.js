@@ -17,6 +17,10 @@ $(document).ready(function(){
             $('#headerMT').removeClass('show');
         }
     });
+    //Below will be used to have logo move into header in FULL
+    /*$(document).scroll(function(){
+        if ($(document).scrollTop() >= 500) {
+            $('#headerMT').addClass('show');*/
 });
 //MOBILE & TABLET Menu button action//
 $(document).ready(function(){
