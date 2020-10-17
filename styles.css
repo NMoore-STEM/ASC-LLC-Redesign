@@ -496,8 +496,9 @@ h3 {
 }
 h4 {
     font-family: 'Spartan', sans-serif;
-    font-size: 16pt;
+    font-size: 18pt;
     color:  #253C84;
+    margin: 0;
 }
 p {
     font-family: 'Exo 2',sans-serif;
@@ -747,10 +748,11 @@ section {
 .leftAside {
     grid-row-start: 1;
     grid-row-end: span 3;
-    max-width: 60%;
-    align-self: left;
-    padding: 80px 60px;
+    max-width: 80%;
     margin: auto;
+    text-align: left;
+    padding-left: 4vw;
+    margin-top: 4vw;
 }
 .cardContainer {
     grid-column-start: 2;
@@ -764,7 +766,7 @@ section {
     border: 2px solid #2C395E;
     border-radius: 15px;
     margin: 50px;
-    padding: 10px;
+    padding: 15px;
 }
 .cardIcon {
     display: inherit;
@@ -775,6 +777,10 @@ section {
 }
 .cardContent p {
     color: black;
+    margin: 0;
+    font-size: 13pt;
+    text-align: left;
+    padding: 10px 15px 0;
 }
 #servicesContent {
     width: 60vw;
