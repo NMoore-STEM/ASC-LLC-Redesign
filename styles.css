@@ -130,6 +130,9 @@ header {
     height: 70%;
     width: 112px;
 }
+#logoFullHeader {
+    display: none;
+}
 #menuButton {
     position: fixed;
     right: 4vw;
