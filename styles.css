@@ -703,27 +703,39 @@ section {
 }
 #coreValues::before {
     content: "\007B";
+    display: flex;
     height: 100%;
     font-family: 'Spartan', sans-serif;
     font-size: 150pt;
     background: linear-gradient(30deg, rgb(50, 39, 73) 0%/*, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%*/, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
     background-clip: text;
     color: transparent;
+    margin-left: auto;
+    align-items: center;
 }
 #coreValues::after {
     content: "\007D";
+    display: flex;
     font-family: 'Spartan', sans-serif;
     font-size: 150pt;
     background: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
     background-clip: text;
     color: transparent;
+    margin-right: auto;
+    align-items: center;
+}
+.coreInternal {
+    margin: 0 10vw 0;
 }
 #coreValues h3 {
-    width: 100%;
-    flex: 0 0 100%;
+    /*width: 100%;
+    flex: 0 0 100%;*/
+    padding: 0;
 }
 #coreValues li {
-    flex: 1;
+    list-style: none;
+    line-height: 1.4;
+    text-align: center;
 }
 #howContent {
     display: grid;
