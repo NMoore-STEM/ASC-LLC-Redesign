@@ -133,6 +133,9 @@ header {
 #logoFullHeader {
     display: none;
 }
+#menuFULL {
+    display: none;
+}
 #menuButton {
     position: fixed;
     right: 4vw;
@@ -574,6 +577,9 @@ header a {
     display: flex;
     padding-top: 5px;
 }
+#menuFULL {
+    display: flex;
+}
 #menuButton {
     display: block;
     visibility: hidden;
@@ -581,7 +587,8 @@ header a {
     width: 0;
 }
 #menu {
-    display: flex;
+    display: none;
+    /*display: flex;*/
     /*position: absolute;*/
     position: fixed;
     height: auto;
