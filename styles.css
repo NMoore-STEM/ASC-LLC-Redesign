@@ -699,7 +699,31 @@ section {
     border-radius: 15px;
     margin: 30px;
     justify-items: space-between;
-    flex-wrap: row wrap;
+    flex-wrap: wrap;
+}
+#coreValues::before {
+    content: "\007B";
+    height: 100%;
+    font-family: 'Spartan', sans-serif;
+    font-size: 150pt;
+    background: linear-gradient(30deg, rgb(50, 39, 73) 0%/*, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%*/, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
+    background-clip: text;
+    color: transparent;
+}
+#coreValues::after {
+    content: "\007D";
+    font-family: 'Spartan', sans-serif;
+    font-size: 150pt;
+    background: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
+    background-clip: text;
+    color: transparent;
+}
+#coreValues h3 {
+    width: 100%;
+    flex: 0 0 100%;
+}
+#coreValues li {
+    flex: 1;
 }
 #howContent {
     display: grid;
@@ -736,6 +760,9 @@ section {
 .cardContent {
     flex-grow: 1;
     text-align: center;
+}
+.cardContent p {
+    color: black;
 }
 #servicesContent {
     width: 60vw;
