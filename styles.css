@@ -790,10 +790,13 @@ section {
     padding: 10px 15px 0;
 }
 #servicesContent {
+    display: flex;
+    flex-wrap: wrap;
     width: 60vw;
     padding-top: 100px;
     max-width: 1100px;
     margin: 0 auto 0;
+    justify-content: center;
 }
 .listDeco {
     position: relative;
@@ -831,7 +834,6 @@ section {
     padding: 2vw 4vw;
     text-decoration: none;
     margin: 2vw;
-    justify-self: center;
     text-align: center;
     max-width: 400px;
 }
