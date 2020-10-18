@@ -579,6 +579,10 @@ header a {
 }
 #menuFULL {
     display: flex;
+    position: relative;
+    /*right: 80px;*/
+    left: -20px;
+    transition: right 0.4s ease;
 }
 #menuButton {
     display: block;
@@ -608,6 +612,14 @@ header a {
     justify-self: space-between;
     text-decoration: none;
     z-index: 5;
+    max-height: 30px;
+}
+.menuItem h3 {
+    margin: 0;
+    padding: 0;
+}
+.passwordKey img {
+    max-height: 50px;
 }
 #splashMT, .mobileValue {
     display: none;
