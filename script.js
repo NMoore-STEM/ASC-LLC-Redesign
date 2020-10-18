@@ -26,6 +26,16 @@ $(document).ready(function(){
         }
     });
 });
+//use: console.log($('#logoContainer').css('left')); to get position
+
+//THIS ALSO worked in console:
+/*
+$(document).ready(function() {
+    var $left1 = $('#menuFULL').css('left');
+    var $left2 = $('#logoContainer').css('left');
+    console.log($left1, $left2);
+});
+*/
 //MOBILE & TABLET Menu button action//
 $(document).ready(function(){
     $('#menuButton').on('click', function(){
@@ -114,6 +124,7 @@ $(document).ready(function(){
 //----   Attempt to keep label above text field if content is entered, 
 //----   if not, then label reverts to initial position  
 
+    /*
     $('#emailField').blur(function() {    
         if ($('#emailField').val().length < 0) {
             $('#emailLabel').removeClass('labelActive');
@@ -121,6 +132,7 @@ $(document).ready(function(){
             $('#emailLabel').addClass('labelActive');
         }
     })
+    */
 });
 //----  Doesnt seem to work, when using "console.log($('#emailField).value()"
 //----  in console, 0 is returned whether or not something is entered into
