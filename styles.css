@@ -31,6 +31,14 @@ i {
     padding-top: 30px;
     text-align: center;
 }
+/*=========================================================*/
+/*-----------------   CONTACT general   -------------------*/
+.contactTitle {
+    display: block;
+    /*height: 75px;*/
+    background-color:#553692;
+    margin-top: 150px;
+}
 /*---------MOBILE--------*/
 @media only screen and (max-width:770px) {
 h1 {
@@ -908,5 +916,8 @@ footer {
     width: 60vw;
     height: calc(80vh - 250px);
     min-height: 400px;
+}
+form:focus-within {
+
 }
 }
