@@ -483,7 +483,7 @@ h1 {
     font-size: 4vw;
 }
 h2 {
-    display: grid;
+    /*display: grid;*/
     color: white;
     font-family: 'Spartan',sans-serif;
     font-size: 18pt;
@@ -532,7 +532,7 @@ header {
     display: flex;
     position: fixed;
     width: 100%;
-    z-index: 4;
+    z-index: 5;
     top:0;
     /*below might not be needed*/
     align-content: center;
@@ -679,15 +679,13 @@ header img {
     width: 100%;
 }
 .spacer {
-    height: 130px;
+    height: 100px;
 }
 section {
     /*background-color: #91B4DF;*/
     /*background-color: #C0D2E8;*/
     background-color: #253C84;
-    /*overflow: hidden;*/
-    /*padding: 50px 60px;*/
-    padding-top: 60px;
+    padding-top: 40px;
 }
 #whyContent {
     display: flex;
@@ -698,7 +696,12 @@ section {
     /*padding: 50px 60px;*/
 }
 #whyContent p {
-    margin-top: 60px;
+    /*margin-top: 130px;*/
+    width: auto;
+    margin: 180px 0 60px;
+    padding: 0 14vw;
+    text-align: left;
+
 }
 .filterShadow {
     filter: drop-shadow(1px 6px 4px black);
@@ -710,11 +713,12 @@ section {
     z-index: 4;
     background-color: #2C4A9A;
     margin-left: -5vw;
-    margin-top: -80px;
-    text-align: right;
     padding-right: 6vw;
     clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
     min-width: 800px;
+}
+.sectionTitle p {
+    padding-top: 40px;
 }
 #coreValues {
     display: flex;
@@ -894,5 +898,15 @@ footer {
 }
 .topButton {
     display: none;
+}
+/*================================================================*/
+/*----------------   CONTACT PAGE FULL   -------------------------*/
+/*================================================================*/
+.formContainer {
+    margin-top: 20vh;
+    background-color: white;
+    width: 60vw;
+    height: calc(80vh - 250px);
+    min-height: 400px;
 }
 }
