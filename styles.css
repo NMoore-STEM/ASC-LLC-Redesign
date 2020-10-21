@@ -33,12 +33,7 @@ i {
 }
 /*=========================================================*/
 /*-----------------   CONTACT general   -------------------*/
-.contactTitle {
-    display: block;
-    /*height: 75px;*/
-    background-color:#553692;
-    margin-top: 150px;
-}
+
 /*---------MOBILE--------*/
 @media only screen and (max-width:770px) {
 h1 {
@@ -910,14 +905,103 @@ footer {
 /*================================================================*/
 /*----------------   CONTACT PAGE FULL   -------------------------*/
 /*================================================================*/
+#logoContainerContact {
+    width: 100%;
+    align-items: center;
+}
+.logoR2 {
+    opacity: 1;
+    left: 20px;
+    scale: 1;
+    margin-right: 10vw;
+    transition: opacity 0.4s ease, left 0.5s ease-out, scale 0.3s ease, margin 0.4s ease-out;
+}
 .formContainer {
-    margin-top: 20vh;
-    background-color: white;
+    margin-top: 16vh;
+    background-color: whitesmoke;
     width: 60vw;
-    height: calc(80vh - 250px);
+    /*height: calc(80vh - 250px);*/
     min-height: 400px;
 }
-form:focus-within {
+.contactTitle {
+    display: block;
+    background-color:#553692;
+}
+.contactTitle h4 {
+    font-size: 18pt;
+    color: #9D90C5;
+    font-family: 'Spartan', sans-serif;
+    text-align: center;
+    padding: 20px 20px 20px;
+    margin: 0;
+}
+.contactForm {
+    background: whitesmoke;
+    padding: 40px;
+    margin: 0 auto 0;
+    max-width: 40vw;
+}
+/*form:focus-within {
 
+}*/
+.nameContainer {
+    display: block;
+    border: solid 1px black;
+    padding: 10px;
+    max-width: 360px;
+}
+label {
+    display: block;
+    position: absolute;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: whitesmoke;
+    padding: 0 5px 0;
+}
+.labelActive {
+    margin-top: -22px;
+    transition: all 0.2s ease;
+}
+#nameLabel {
+    transition: all 0.2s ease;
+}
+#nameField {
+    width: 95%;
+}
+input {
+    display: block;
+    border: none;
+    overflow: hidden;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
+    background-color: transparent;
+}
+.focusActive {
+    border: solid 1px blueviolet !important;
+    scale: 1.02;
+    box-shadow: 1px 1px 3px blueviolet;
+}
+.emailContainer {
+    border: solid 1px black;
+    padding: 10px;
+    max-width: 360px;
+}
+.messageContainer {
+    border: solid 1px black;
+    padding: 10px;
+}
+textarea {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
+    border: none;
+    width: 95%;
+    background-color: transparent;
+}
+#submitContact {
+    max-width: 20vw;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 }
