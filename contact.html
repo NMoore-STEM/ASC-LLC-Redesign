@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&family=Exo+2&family=Noto+Sans+KR:wght@500&family=Ubuntu:wght@500&family=Kanit&display=swap" rel="stylesheet">
     <script src="jquery-3.5.1.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>"
 </head>
 <body>
     <main class=bg>
@@ -45,17 +46,17 @@
             <form class=contactForm>
                 <div class=nameContainer>
                     <label id=nameLabel for=nameField>Name:</label>
-                    <input id=nameField type=text size=40 tabindex=1 autocomplete=off>
+                    <input id=nameField type=text inputmode=text size=40 tabindex=1 autocomplete=off required>
                 </div>
                 <br>
                 <div class=emailContainer>
                     <label id=emailLabel for=emailField >Email:</label>
-                    <input id=emailField type=email size=100% tabindex=2 autocomplete=off>
+                    <input id=emailField type=email inputmode=email size=100% tabindex=2 autocomplete=off required>
                 </div>
                 <br>
                 <div class=messageContainer>
                     <label id=messageLabel for=messageField>Message:</label>
-                    <textarea id=messageField rows=10 cols=50 tabindex=3 autocomplete=off></textarea>
+                    <textarea id=messageField rows=10 cols=50 tabindex=3 autocomplete=off required></textarea>
                 </div>
                 <a href="" id=submitContact class=footerButton>SUBMIT</a>
             </form>
