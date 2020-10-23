@@ -43,21 +43,24 @@
             <div class=contactTitle>
             <h4>CONTACT ASC</h4>
             </div>
-            <form class=contactForm>
+            <form class=contactForm name=contactASC>
                 <div class=nameContainer>
                     <label id=nameLabel for=nameField>Name:</label>
-                    <input id=nameField type=text inputmode=text size=40 tabindex=1 autocomplete=off required>
+                    <input id=nameField type=text name=name inputmode=text size=40 tabindex=1 autocomplete=off required>
                 </div>
                 <br>
                 <div class=emailContainer>
                     <label id=emailLabel for=emailField >Email:</label>
-                    <input id=emailField type=email inputmode=email size=100% tabindex=2 autocomplete=off required>
+                    <input id=emailField type=email name=email inputmode=email size=100% tabindex=2 autocomplete=off required>
                 </div>
                 <br>
                 <div class=messageContainer>
                     <label id=messageLabel for=messageField>Message:</label>
                     <textarea id=messageField rows=10 cols=50 tabindex=3 autocomplete=off required></textarea>
                 </div>
+                <p>
+                    <input class="submit" type="submit" value="SUBMIT">
+                </p>
                 <a href="" id=submitContact class=footerButton>SUBMIT</a>
             </form>
             <div class=spacer2></div>
