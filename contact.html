@@ -43,7 +43,7 @@
             <div class=contactTitle>
             <h4>CONTACT ASC</h4>
             </div>
-            <form class=contactForm action="mailto:nick@anandascience.com" method=POST enctype="multipart/form-data" name=contactASC>
+            <form class=contactForm action="send.php" method=POST enctype="multipart/form-data" name=contactASC>
                 <div class=nameContainer>
                     <label id=nameLabel for=nameField>Name:</label>
                     <input id=nameField type=text name=name inputmode=text size=40 tabindex=1 autocomplete=off required>
@@ -58,6 +58,9 @@
                     <label id=messageLabel for=messageField>Message:</label>
                     <textarea id=messageField rows=10 cols=50 tabindex=3 autocomplete=off required></textarea>
                 </div>
+                <!--Hidden bot trap security device-->
+                <label for=botJail class=botCatfish>Fellow Humans, please refrain from entering any characters in this field.</label>
+                <input name=botJail class=botCatfish>
                 <p>
                     <input class="footerButton submit" type=submit value=SUBMIT>
                 </p>

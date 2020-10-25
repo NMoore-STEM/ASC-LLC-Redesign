@@ -21,6 +21,10 @@ i {
     background: purple; /* Gecko Browsers */
     color: #9D90C5;
 }
+/*-- bot prevention on contact form --*/
+.botCatfish {
+    display: none;
+}
 .copyright {
     display: block;
     position: relative;
