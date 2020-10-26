@@ -949,7 +949,7 @@ footer {
     transition: opacity 0.4s ease, left 0.5s ease-out, scale 0.3s ease, margin 0.4s ease-out;
 }
 .formContainer {
-    margin-top: 16vh;
+    margin-top: 130px;
     background-color: whitesmoke;
     width: 60vw;
     /*height: calc(80vh - 250px);*/
@@ -968,6 +968,8 @@ footer {
     margin: 0;
 }
 .contactForm {
+    display: flex;
+    flex-direction: column;
     background: whitesmoke;
     padding: 40px;
     margin: 0 auto 0;
@@ -980,6 +982,7 @@ footer {
     display: block;
     border: solid 1px black;
     padding: 10px;
+    margin-bottom: 2vw;
     max-width: 360px;
 }
 label {
@@ -1040,11 +1043,13 @@ textarea:-moz-ui-invalid {
 .emailContainer {
     border: solid 1px black;
     padding: 10px;
+    margin-bottom: 2vw;
     max-width: 360px;
 }
 .messageContainer {
     border: solid 1px black;
     padding: 10px;
+    margin-bottom: 2vw;
 }
 textarea {
     font-family: 'Exo 2', sans-serif;
@@ -1060,6 +1065,13 @@ textarea {
     margin-right: auto;
 }
 .submitButton {
-    padding: 15px;
+    /*padding: 15px;*/
+    display: flex;
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+}
+.submitButton > .footerButton {
+    margin: 0;
 }
 }
