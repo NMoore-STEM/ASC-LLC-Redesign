@@ -1059,4 +1059,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
 }
+.submitButton {
+    padding: 15px;
+}
 }
