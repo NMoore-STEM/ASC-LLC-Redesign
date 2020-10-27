@@ -46,17 +46,17 @@
             <form class=contactForm action="send.php" method=POST enctype="multipart/form-data" name=contactASC>
                 <div class=nameContainer>
                     <label id=nameLabel for=nameField>Name:</label>
-                    <input id=nameField type=text name=name inputmode=text size=40 tabindex=1 autocomplete=off required>
+                    <input id=nameField class=inputField type=text name=name inputmode=text size=40 tabindex=1 autocomplete=off required>
                 </div>
                 <br>
                 <div class=emailContainer>
                     <label id=emailLabel for=emailField >Email:</label>
-                    <input id=emailField type=email name=email inputmode=email size=100% tabindex=2 autocomplete=off required>
+                    <input id=emailField class=inputField type=email name=email inputmode=email size=100% tabindex=2 autocomplete=off required>
                 </div>
                 <br>
                 <div class=messageContainer>
                     <label id=messageLabel for=messageField>Message:</label>
-                    <textarea id=messageField name=message rows=10 cols=50 tabindex=3 autocomplete=off required></textarea>
+                    <textarea id=messageField class=inputField name=message rows=10 cols=50 tabindex=3 autocomplete=off required></textarea>
                 </div>
                 <!--Hidden bot trap security device-->
                 <label for=botCatfish class=botCatfish>Fellow Humans, please refrain from entering any characters in this field.</label>
