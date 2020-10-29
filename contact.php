@@ -5,12 +5,31 @@ require 'vendor/autoload.php';
 
     $mail = new PHPMailer;
     $mail->isSMTP();
+    //for debugging
+    $mail->SMTPDebug = 2;
     $mail->Host = 'smtp.hostinger.com';
     $mail->Port = 587;
     $mail->SMTPAuth = true;
+    $mail->Username = 'nick@anandascience.com';
+    $mail->Password = 'Nm008168';
+    $mail->setFrom('nick@anandascience.com', 'Nick');
+    $mail->addReplyTo('nick@anandascience.com', 'Nick');
+    //$mail->addAddress('example@email.com', 'Receiver Name');
+    $mail->Subject = 'Testing PHPMailer';
+    $mail->msgHTML(file_get_contents('msg_format.html'), __DIR__);
+    //$mail->Body = 'This is a plain text message body - This is a test...';
+    //$mail->addAttachment('test.txt');
+    $mail->AltBody = 'HTML format not used, this is the alt body';
+
+if (!$mail->send()) {
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'The email message was sent.';
+}
+
     $mail->IsHTML(true);
-    //for debugging
-    $mail->SMTPDebug = 2;
+
+
 
     //below code might not be needed
     $mail->Subject = "Subject Text";
