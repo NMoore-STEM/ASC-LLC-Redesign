@@ -719,6 +719,12 @@ section {
 .sectionTitle p {
     padding-top: 40px;
 }
+.animation_initial {
+
+}
+.animation_final {
+    
+}
 #whyContent {
     /*display: flex;
     flex-direction: column;*/

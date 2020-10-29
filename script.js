@@ -60,6 +60,42 @@ $(document).ready(function(){
         $('.menuClosed').removeClass('menuOpen');
     })*/
 });
+//From left section title animations
+//".animate_initial" => ".animate_final"
+//animate_initial {translate: 0px -100px 0px 0px; opacity:0}
+//animate_final {translate: 0 0 0 0; opacity:1}
+//triggered by window position and parent div position
+//Console log commands to use:
+/*console.log($(document).scrollTop())
+console.log($(window).height())
+console.log($('.sectionTitle').offset().top)*/
+
+var $animation_element = $('.sectionTitle');
+var $window = $(window);
+
+function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+    $.each($animation_element, function() {
+        var $element = $(this);
+        var element_height = $element.outerHeight();
+        var element_top_position = $element.offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+      $element.addClass('animation_final');
+    } else {
+      $element.removeClass('animation_final');
+    }
+  });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
 /*$(document).click(function(event) {
    if ($('.menuOpen').is(':visible') && $(event.target).not('#menu')) {
     $('#menu').removeClass('menuOpen')};
