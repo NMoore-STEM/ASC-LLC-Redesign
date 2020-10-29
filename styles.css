@@ -713,8 +713,8 @@ section {
     margin-left: -4.8vw;
     /*padding-right: 6vw;*/
     clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
-    /*min-width: 800px;*/
-    width: 100%;
+    min-width: 800px;
+    /*width: 100%;*/
     text-align: center;
 }
 .sectionTitle p {
