@@ -68,7 +68,11 @@ $(document).ready(function(){
 //Console log commands to use:
 /*console.log($(document).scrollTop())
 console.log($(window).height())
-console.log($('.sectionTitle').offset().top)*/
+console.log($('.sectionTitle').offset().top)
+var $element = $('.sectionTitle')
+console.log($element.outerHeight())*/
+//looks like animation will need to be triggered when offset().top of element is >= 
+// +150px of window size - will need to refine more to include an "in-view" calc/event
 
 var $animation_element = $('.sectionTitle');
 var $window = $(window);
@@ -78,7 +82,7 @@ function check_if_in_view() {
     var window_top_position = $window.scrollTop();
     var window_bottom_position = (window_top_position + window_height);
     $.each($animation_element, function() {
-        var $element = $(this);
+        var $element = $('.sectionTitle');
         var element_height = $element.outerHeight();
         var element_top_position = $element.offset().top;
         var element_bottom_position = (element_top_position + element_height);
