@@ -160,7 +160,32 @@ $window.on('scroll resize', move)
     $window.on('scroll resize', my_view)
 });*/
 //DONE!!! trying another approach using jquery.inview add on/library
-
+//jquery.inview attempt 01
+$(document).ready(function(){
+    var $titleBar = $('.sectionTitle');
+    $titleBar.one('inview', function(event, isInView) {
+        if (isInView) {
+          // element is now visible in the viewport
+          $titleBar.addClass('animation_final')
+        } else {
+          // element has gone out of viewport
+          $titleBar.removeClass('animation_final')
+        }
+    });
+})
+//This method is working, HOWEVER!, it is applying the addClass to all similar elements at once
+//ATTEMPT 02
+$(document).ready(function(){
+    $titleBar.one('inview', function(event, isInView) {
+        if (isInView) {
+          // element is now visible in the viewport
+          $titleBar.addClass('animation_final')
+        } else {
+          // element has gone out of viewport
+          $titleBar.removeClass('animation_final')
+        }
+    });
+})
 
 
 /*$(document).click(function(event) {
