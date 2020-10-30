@@ -708,20 +708,26 @@ section {
 .sectionTitle {
     display: grid;
     position: absolute;
+    opacity: 0;
     z-index: 4;
     background-color: #2C4A9A;
+    /*width: 100px;*/
     margin-left: -4.8vw;
     /*padding-right: 6vw;*/
     clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
-    min-width: 800px;
+    /*min-width: 800px;*/
     /*width: 100%;*/
     text-align: center;
+    transform: translateX(-100px) scaleX(0.2);
 }
 .sectionTitle p {
     padding-top: 40px;
 }
 .animation_final {
-    background-color: red;
+    opacity: 1;
+    min-width: 800px;
+    transform: translateX(0) scaleX(1);
+    transition: all 0.4s ease 0.1s;
 }
 #whyContent {
     /*display: flex;
@@ -858,7 +864,7 @@ section {
     display: inline-block;
     position: relative;
     top: 30px;
-    max-width: 250px;
+    min-width: 250px;
     z-index: 1;
     list-style: none;
     /*margin: 0 auto 10vw;*/
@@ -881,14 +887,20 @@ section {
     display: grid;
     max-width: 1100px;
     min-width: 750px;
-    grid-template-rows: 130px 1fr 1fr 1fr 1fr 130px;
+    grid-template-rows: 130px 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 }
 .list_container01 {
     grid-column-start: 1;
+    grid-row-start: 2;
 }
 .list_container02 {
     grid-column-start: 2;
+    grid-row-start: 2;
+}
+.lastLi {
+    grid-column-end: span 2;
+    max-width: 90%;
 }
 .contactButton {
     background-color: #553692;
