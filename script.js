@@ -162,30 +162,83 @@ $window.on('scroll resize', move)
 //DONE!!! trying another approach using jquery.inview add on/library
 //jquery.inview attempt 01
 $(document).ready(function(){
-    var $titleBar = $('.sectionTitle');
-    $titleBar.one('inview', function(event, isInView) {
+    //var $titleBar = $('.sectionTitle');
+
+    var $bar01 = $('#title01');
+    var $bar02 = $('#title02');
+    var $bar03 = $('#title03');
+    var $bar04 = $('#title04');
+
+    $bar01.on('inview', function(event, isInView) {
         if (isInView) {
           // element is now visible in the viewport
-          $titleBar.addClass('animation_final')
+          $bar01.addClass('animation_final')
         } else {
           // element has gone out of viewport
-          $titleBar.removeClass('animation_final')
+          //$bar01.removeClass('animation_final')
+        }
+    });
+    $bar02.on('inview', function(event, isInView) {
+        if (isInView) {
+          // element is now visible in the viewport
+          $bar02.addClass('animation_final')
+        } else {
+          // element has gone out of viewport
+          //$bar02.removeClass('animation_final')
         }
     });
 })
 //This method is working, HOWEVER!, it is applying the addClass to all similar elements at once
 //ATTEMPT 02
+/*var $bar01 = $('#title01');
+var $bar02 = $('#title02');
+var $bar03 = $('#title03');
+var $bar04 = $('#title04');
+
 $(document).ready(function(){
-    $titleBar.one('inview', function(event, isInView) {
+    $bar01.one('inview', function(event, isInView) {
         if (isInView) {
           // element is now visible in the viewport
-          $titleBar.addClass('animation_final')
+          $bar01.addClass('animation_final')
         } else {
           // element has gone out of viewport
-          $titleBar.removeClass('animation_final')
+          $bar01.removeClass('animation_final')
         }
     });
-})
+});
+$(document).ready(function(){
+    $bar02.one('inview', function(event, isInView) {
+        if (isInView) {
+          // element is now visible in the viewport
+          $bar02.addClass('animation_final')
+        } else {
+          // element has gone out of viewport
+          $bar02.removeClass('animation_final')
+        }
+    });
+});
+$(document).ready(function(){
+    $bar03.on('inview', function(event, isInView) {
+        if (isInView) {
+          // element is now visible in the viewport
+          $bar03.addClass('animation_final')
+        } else {
+          // element has gone out of viewport
+          $bar03.removeClass('animation_final')
+        }
+    });
+});
+$(document).ready(function(){
+    $bar04.on('inview', function(event, isInView) {
+        if (isInView) {
+          // element is now visible in the viewport
+          $bar04.addClass('animation_final')
+        } else {
+          // element has gone out of viewport
+          $bar04.removeClass('animation_final')
+        }
+    });
+})*/
 
 
 /*$(document).click(function(event) {

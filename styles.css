@@ -720,9 +720,6 @@ section {
 .sectionTitle p {
     padding-top: 40px;
 }
-.animation_initial {
-
-}
 .animation_final {
     background-color: red;
 }
