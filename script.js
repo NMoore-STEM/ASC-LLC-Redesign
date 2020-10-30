@@ -74,7 +74,7 @@ console.log($element.outerHeight())*/
 //looks like animation will need to be triggered when offset().top of element is >= 
 // +150px of window size - will need to refine more to include an "in-view" calc/event
 
-var $animation_element = $('.sectionTitle');
+/*var $animation_element = $('.sectionTitle');
 var $window = $(window);
 
 function check_if_in_view() {
@@ -98,7 +98,70 @@ function check_if_in_view() {
 }
 
 $window.on('scroll resize', check_if_in_view);
-$window.trigger('scroll');
+$window.trigger('scroll');*/
+
+/*Below attempt was close to working, but the issues are beyond my understanding
+USED THIS in CONSOLE and it seemed to return values just fine:
+console.log($window.scrollTop())
+console.log($window.height())
+
+var $bottom = ($window.scrollTop() + $window.height())
+console.log($bottom.valueOf())
+console.log($('.sectionTitle').offset().top)
+console.log($('.sectionTitle').height())
+var $divBottom = ($('.sectionTitle').offset().top + $('.sectionTitle').height())
+console.log($divBottom.valueOf())
+function do_tha_thang() {
+  var $top = ($window.scrollTop())
+  var $bottom = ($window.scrollTop() + $window.height())
+  var $divTop = ($('.sectionTitle').offset().top)
+  var $divBottom = ($('.sectionTitle').offset().top + $('.sectionTitle').height())
+  if (($divBottom >= $top) && ($divTop <= $bottom)){ $('sectionTitle').addClass('animation_final')} else {
+    $('sectionTitle').removeClass('animation_final')
+  }
+}
+$('.sectionTitle').outerHeight()
+
+//---  begin code for website ---//
+var $window = $(window);
+var $title = ('#titleMain');
+
+$(document).ready(function move() {
+    var $top = ($window.scrollTop());
+    var $bottom = ($window.scrollTop() + $window.height());
+    var $divTop = ($('#titleMain').offset().top);
+    var $divBottom = ($('#titleMain').offset().top + $('#titleMain').height());
+    $.each($title, function(){
+        if (($divBottom >= $top) && ($divTop <= $bottom)){ 
+            $('#titleMain').addClass('.animation_final')
+        } else {
+            $('#titleMain').removeClass('.animation_final')
+        }
+    });
+})
+
+$window.on('scroll resize', move)
+//$window.trigger('scroll');
+*/
+
+//ANOTHER ATTEMPT at adding a class when element is in view (w/o plugin)
+/*$(document).ready (function my_view () {
+    var $window = $(window).height();
+    var $titleBar = $.each('.sectionTitle');
+    (function () {
+        var $currentPos = ($.scrollTop() + $window);
+        var $visible = ($titleBar.offset().top >= $currentPos);
+        if ($visible){
+            $titleBar.addClass('animation_final')
+        } else {
+            $titleBar.removeClass('animation_final')
+        }
+    })
+    $window.on('scroll resize', my_view)
+});*/
+//DONE!!! trying another approach using jquery.inview add on/library
+
+
 
 /*$(document).click(function(event) {
    if ($('.menuOpen').is(':visible') && $(event.target).not('#menu')) {

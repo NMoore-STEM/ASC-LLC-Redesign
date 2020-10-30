@@ -724,7 +724,7 @@ section {
 
 }
 .animation_final {
-
+    background-color: red;
 }
 #whyContent {
     /*display: flex;
