@@ -854,7 +854,7 @@ section {
 #servicesContent {
     display: flex;
     flex-wrap: wrap;
-    width: 60vw;
+    width: 80vw;
     padding-top: 100px;
     max-width: 1100px;
     margin: 0 auto 0;
@@ -863,8 +863,16 @@ section {
 #servicesContent > .listDeco {
     display: block;
 }
-#servicesContent > .listDeco::before {
+.service_group > .listDeco::before {
     display: none;
+}
+.service_group {
+    border: 3px solid #263048;
+    background-color: #3B348B;
+    max-width: 35vw;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
 }
 .listDeco {
     display: inline-block;
