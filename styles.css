@@ -860,6 +860,12 @@ section {
     margin: 0 auto 0;
     justify-content: center;
 }
+#servicesContent > .listDeco {
+    display: block;
+}
+#servicesContent > .listDeco::before {
+    display: none;
+}
 .listDeco {
     display: inline-block;
     position: relative;
