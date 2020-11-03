@@ -866,6 +866,9 @@ section {
 .service_group > .listDeco::before {
     display: none;
 }
+.cardContent > .listDeco::before {
+    display: none;
+}
 .service_group {
     border: 3px solid #263048;
     background-color: #3B348B;
