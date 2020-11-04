@@ -14,52 +14,88 @@
     <main class=bg>
 
         <header id=headerMT class=initial>
-            <div id=logoContainer class=logoHide>
-            <img id=logoGlyphMobile src="images\ASC Seed LOGO_linGrad.svg"></img>
-            <img id=logoFullHeader src="images\ASC_Seed_LOGO_ltBlue2.svg"></img>
-            <a id=logoTextMobile href="#">
-                <img src="images\ASC LOGO Text_ltBlue.svg"></img>
+            <div id=logoContainer class=logoR2>
+            <img id=logoGlyphMobile src="..\images\ASC Seed LOGO_linGrad.svg"></img>
+            <img id=logoFullHeader src="..\images\ASC_Seed_LOGO_ltBlue2.svg"></img>
+            <a id=logoTextMobile href="..\index.html">
+                <img src="..\images\ASC LOGO Text_ltBlue.svg"></img>
             </a>
             </div>
             <nav id=menuFULL>
-                <a class=menuItem href="#why"><h3>RESUM&Eacute;</h3></a>
-                <a class=menuItem href="#how"><h3>ABOUT ME</h3></a>
-                <a class=menuItem href="#services"><h3>WEB DEV WORK</h3></a>
-                <a class=menuItem href="#qualifications">
+                <a class=menuItem href="#about"><h3>ABOUT ME</h3></a>
+                <a class=menuItem href="#resume"><h3>RESUM&Eacute;</h3></a>
+                <a class=menuItem href="#web_dev"><h3>WEB DEV WORK</h3></a>
+                <a class=menuItem href="#design">
                     <h3>DESIGN WORK</h3>
                 </a>
-                <a class=menuItem href="contact.html">
+                <a class=menuItem href="#art">
                     <h3>ARTWORK</h3>
                 </a>
             </nav>
            
         </header>
         <section id=formalities>
-            <span id=resume>
+            <div id=about class=spacer></div>
+            <span id=about_me>
+                <h2>About me...</h2>
+                <h3>Greetings,</h3>
+                <p>My name is Nick Moore.  I am glad to have you read through the content I provide here 
+                    and look forward to discussing how I can contribute to your endeavors with my experience 
+                    and skill-set.  I am a driven person currently in the process of "re-skilling" in order to better meet 
+                    the demands of our technologically driven economy.
+                </p>
+            </span>
+            <div id=resume class=spacer></div>
+            <span id=resume_content>
                 <h2>Resume</h2>
-                <a></a>
+                <a class=contactButton href="">
+                    <h4>Download PDF</h4>
+                </a>
+                <iframe id="resume_iframe" title="PDF Resume" src="..\pdf\NMoore_ASCResume_2020.pdf" frameborder="1" height="600" width="580" ></iframe>
+
             </span>
             <span id=soft_skills>
                 <h2>Soft Skills</h2>
-            </span>
-            <span id=about_me>
-                <h2>About me...</h2>
             </span>
         </section>
         <div class=spacer></div>
         <section id=portfolio>
             <h2>Portfolio</h2>
+            <div id=web_dev class=spacer></div>
             <span id=front_end_dev>
                 <h3>Front-end Web Dev Work</h3>
             </span>
+            <div id=design class=spacer></div>
             <span id=graphic_design>
                 <h3>Graphic Design Work</h3>
             </span>
+            <div id=art class=spacer></div>
             <span id=artwork>
                 <h3>My Artwork</h3>
                 <h4>(at a glance)</h4>
             </span>
         </section>
-        <footer id=footer></footer>
+        <footer>
+            <div id=colorBand04>
+                <div id=colorBand05>
+                    <a href="contact.html" class=footerButton style="margin:0;padding:20px;">
+                        CONTACT ASC
+                    </a>
+                    <a href="#" class=topButton>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <line x1="10" y1="32" x2="25" y2="12" stroke="#9D90C5" stroke-width="6" stroke-linecap="round"/>
+                            <line x1="25" y1="12" x2="40" y2="32" stroke="#9D90C5" stroke-width="6" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class=topButtonFULL>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <line x1="10" y1="32" x2="25" y2="12" stroke="#9D90C5" stroke-width="6" stroke-linecap="round"/>
+                            <line x1="25" y1="12" x2="40" y2="32" stroke="#9D90C5" stroke-width="6" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class=copyright>COPYRIGHT &#169 2020 ASC,LLC.</div>
+            </div>
+        </footer>
     </main>
 </body>
