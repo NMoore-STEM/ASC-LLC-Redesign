@@ -1120,4 +1120,12 @@ textarea {
 .submitButton > .footerButton {
     margin: 0;
 }
+/*=======================   RESTRICTED AREA   =====================*/
+#formalities {
+    width: 80vw;
+}
+#resume_iframe {
+    border: 1px solid #666CCC;
+    max-width: 50vw;
+}
 }
