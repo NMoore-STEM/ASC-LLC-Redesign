@@ -1176,6 +1176,7 @@ textarea {
 /*=======================   RESTRICTED AREA FULL   =====================*/
 #formalities {
     width: 80vw;
+    padding: 4vw;
 }
 #resume_content {
     display: flex;
@@ -1185,7 +1186,7 @@ textarea {
 }
 #resume_iframe {
     border: 1px solid #666CCC;
-    max-width: 50vw;
+    max-width: 70vw;
     align-self: center;
 }
 #soft_skills {
@@ -1209,6 +1210,7 @@ ul{
     width: max-content;
 }
 #portfolio {
-    width: 80vw;
+    width: 70vw;
+    padding: 4vw;
 }
 }
