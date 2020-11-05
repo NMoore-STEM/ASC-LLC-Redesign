@@ -565,7 +565,7 @@ h4 {
 }
 p {
     font-family: 'Exo 2',sans-serif;
-    font-size: 18pt;
+    font-size: 15pt;
     /*color:  #253C84;*/
     color: #91B4DF;
     width: 90%;
@@ -1187,5 +1187,28 @@ textarea {
     border: 1px solid #666CCC;
     max-width: 50vw;
     align-self: center;
+}
+#soft_skills {
+    display: flex;
+    padding: 4vw;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+}
+#soft_skills h3 {
+    width: 80vw;
+}
+#soft_skills h2 {
+    margin-top: 80px;
+    width: 80vw;
+}
+ul{
+    margin: 15px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 14pt;
+    color: #91B4DF;
+    width: max-content;
+}
+#portfolio {
+    width: 80vw;
 }
 }
