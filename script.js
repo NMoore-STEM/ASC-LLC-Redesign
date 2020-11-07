@@ -381,3 +381,35 @@ $(document).ready(function() {
         $('<div.floatContainer>').toggleClass('floatContainerActive')
     })
 });*/
+
+//=============  Drop-downs for Services section when vw is less than 1000px ==//
+
+$(document).ready(function() {
+    var $details01 = $('#details01');
+    var $details02 = $('#details02');
+    var $details03 = $('#details03');
+    var $details04 = $('#details04');
+    var $details05 = $('#details05');
+    var $service01 = $('.service_group01');
+    var $service02 = $('.service_group02');
+    var $service03 = $('.service_group03');
+    var $service04 = $('.service_group04');
+    var $service05 = $('.service_group05');
+
+    $service01.on('click', function(){
+        $details01.toggleClass('show_details');
+    })
+    $service02.on('click', function(){
+        $details02.toggleClass('show_details');
+    })
+    $service03.on('click', function(){
+        $details03.toggleClass('show_details');
+    })
+    $service04.on('click', function(){
+        $details04.toggleClass('show_details');
+    })
+    $service05.on('click', function(){
+        $details05.toggleClass('show_details');
+    })
+
+});
