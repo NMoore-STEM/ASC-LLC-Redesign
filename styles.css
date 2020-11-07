@@ -573,7 +573,8 @@ p {
 }
 li {
     font-family: 'Exo 2',sans-serif;
-    font-size: 18pt;
+    /*font-size: 18pt;*/
+    font-size: 2vw;
     color: #91B4DF;
 }
 .bg {
@@ -1245,6 +1246,43 @@ ul{
 @media only screen and (max-width:1000px) {
 /*   This will be to control the appearance of Services; to enact a drop down
 /*    "read more" accordian instead of showing desciption content fully.  This
-/*    will look better at smaller vw.
-
+/*    will look better at smaller vw.*/
+.service_group {
+    display: flex;
+    flex-direction: column;
+    /*border: 3px solid #263048;*/
+    /*background-color: #3B348B;*/
+    background-color: #2F4587;
+    /*max-width: 35vw;*/
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: space-around;
+    /*background-color: #2C395E;*/
+    box-shadow: -2px 2px #2C395E;
+    /*height: 14pt;*/
+    width: 70vw;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.service_group h3 {
+    font-size: 14pt;
+    white-space: nowrap;
+    text-overflow: " . . .";
+    overflow: hidden;
+    max-width: 60vw;
+    display: block;
+    word-break: break-word;
+}
+.service_group ul {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+}
+.service_group:hover {
+    transform: translateX(5px) translateY(-5px);
+    box-shadow: -4px 4px #2C395E;
+    transition: all 0.3s ease;
+}
 }
