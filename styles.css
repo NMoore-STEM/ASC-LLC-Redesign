@@ -390,6 +390,8 @@ section {
     margin-bottom: 35px;
 }
 #coreValues li {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20pt;
     list-style: none;
     line-height: 1.4;
     text-align: center;
@@ -865,6 +867,7 @@ section {
     grid-row-start: 2;
     grid-column-start: 2;
     justify-self: center;
+    scale: 0.8;
 }
 #coreValues::before, ::after {
     display: flex;
@@ -895,6 +898,11 @@ section {
     /*width: 100%;
     flex: 0 0 100%;*/
     padding: 0;
+    font-size: 16pt;
+    text-align: center;
+    color: rgb(47, 64, 114);
+    color: rgb(50, 39, 73);
+    color: rgb(38, 48, 73);
 }
 #coreValues li {
     list-style: none;
