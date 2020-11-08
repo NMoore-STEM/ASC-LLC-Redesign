@@ -205,6 +205,41 @@ $(document).ready(function(){
           //$bar02.removeClass('animation_final')
         }
     });
+    // Need to turn this JQ off for TABLET and MOBILE vw
+    $bar01.off('inview', function(event, isInView) {
+        if (isInView) && <<"vw <=770px">> {
+            $bar01.removeClass('animation_final')
+        } else {
+          // element has gone out of viewport
+        }
+    });
+    /*$bar02.on('inview', function(event, isInView) {
+        if (isInView) {
+          // element is now visible in the viewport
+          $bar02.addClass('animation_final')
+        } else {
+          // element has gone out of viewport
+          //$bar02.removeClass('animation_final')
+        }
+    });
+    $bar03.on('inview', function(event, isInView) {
+        if (isInView) {
+          // element is now visible in the viewport
+          $bar03.addClass('animation_final')
+        } else {
+          // element has gone out of viewport
+          //$bar02.removeClass('animation_final')
+        }
+    });
+    $bar04.on('inview', function(event, isInView) {
+        if (isInView) {
+          // element is now visible in the viewport
+          $bar04.addClass('animation_final')
+        } else {
+          // element has gone out of viewport
+          //$bar02.removeClass('animation_final')
+        }
+    });  */
 })
 //This method is working, HOWEVER!, it is applying the addClass to all similar elements at once
 //ATTEMPT 02
