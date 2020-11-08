@@ -353,6 +353,8 @@ section {
 }
 #why_container p {
     max-width: inherit;
+    text-align: left;
+    white-space: break-spaces;
 }
 #coreValues {
     display: flex;
