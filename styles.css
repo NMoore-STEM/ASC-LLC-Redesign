@@ -647,8 +647,8 @@ p {
 }
 li {
     font-family: 'Exo 2',sans-serif;
-    /*font-size: 18pt;*/
-    font-size: 2vw;
+    font-size: 16pt;
+    /*font-size: 2vw;*/
     color: #91B4DF;
 }
 .bg {
