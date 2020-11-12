@@ -964,6 +964,9 @@ section {
     display: flex;
     flex-wrap: wrap;
     grid-row-start: 2;
+    justify-content: center;
+    max-width: 60vw;
+    grid-column-end: span 2;
 }
 .leftAside {
     grid-row-start: 2;
@@ -975,8 +978,15 @@ section {
     text-align: left;
     padding-left: 4vw;
     margin-top: 4vw;
+    display: flex;
+    max-width: 400px;
+    white-space: break-spaces;
 }
 .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 400px;
     grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: span 3;
