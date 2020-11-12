@@ -962,6 +962,7 @@ section {
 .how_flex {
     display: flex;
     flex-wrap: wrap;
+    grid-row-start: 2;
 }
 .leftAside {
     grid-row-start: 2;
