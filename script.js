@@ -379,6 +379,8 @@ $(document).ready(function(){
    });*/
 //});
 
+/*  Below code was somehow brought back to life when creating accordians for SERVICES
+section.  Contact form has reverted to working as intended with inactivating this code.
 $('#nameField').blur(function() {
     $('<div.floatContainer>').removeClass('floatContainerActive');
     $('label').removeClass('labelActive');
