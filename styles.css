@@ -1007,6 +1007,9 @@ section {
     flex-grow: 1;
     text-align: center;
 }
+.cardContent h4 {
+    font-size: 12pt;
+}
 .cardContent p {
     color: black;
     margin: 0;
