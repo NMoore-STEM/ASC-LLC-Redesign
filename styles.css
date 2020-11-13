@@ -976,11 +976,13 @@ section {
     min-width: 400px;
     margin: auto;
     text-align: left;
-    padding-left: 4vw;
+    /*padding-left: 4vw;*/
     margin-top: 4vw;
     display: flex;
     max-width: 400px;
     white-space: break-spaces;
+    /*pre-wrap is redundant, but can supplement break-spaces*/
+    white-space: pre-wrap;
 }
 .cardContainer {
     display: flex;
