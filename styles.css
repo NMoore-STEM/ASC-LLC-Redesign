@@ -894,9 +894,10 @@ section {
     grid-row-start: 2;*/
     flex-flow: row;
     display: flex;
-    max-width: 400px;
+    /*max-width: 400px;*/
     text-align: left;
     white-space: break-spaces;
+    flex: 0.35 0 400px;
 }
 /*#whyContent p:nth-of-type(1) {
     margin-top: 180px;
@@ -957,7 +958,7 @@ section {
     grid-template-columns: 1fr 1fr;
     /*grid-template-rows: 130px 1fr 1fr 1fr;*/
     grid-template-rows: 100px 1fr 50px;
-    margin: 0 8vw 0;
+    margin: 0 auto 0;
     /*padding-top: 100px;*/
 }
 .how_flex {
@@ -965,7 +966,7 @@ section {
     flex-wrap: wrap;
     grid-row-start: 2;
     justify-content: center;
-    max-width: 60vw;
+    /*max-width: 60vw;*/
     grid-column-end: span 2;
 }
 .leftAside {
@@ -973,38 +974,42 @@ section {
     grid-row-end: span 3;*/
     /*max-width: 80%;*/
     max-width: 650px;
-    min-width: 400px;
+    /*min-width: 400px;*/
     /*margin: auto;*/
     text-align: left;
     /*padding-left: 4vw;*/
-    margin-top: 4vw;
+    /*margin-top: 4vw;*/
     /*display: flex;*/
-    max-width: 400px;
     white-space: break-spaces;
     /*pre-wrap is redundant, but can supplement break-spaces*/
     white-space: pre-wrap;
     padding: 40px 40px 20px 80px;
+    flex: 1 0 400px;
 }
 .cardContainer {
-    /*display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 400px;
+    /*max-width: 400px;
     grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: span 3;*/
     margin: auto 30px;
+    flex: 1 350px;
+    padding-top: 50px;
 }
 .cardFrame {
     display: flex;
+    flex: 1 350px;
     /*flex-direction: column;*/
     background-color: #91B4DF;
     border: 2px solid #2C395E;
     border-radius: 15px;
-    margin: 50px;
+    margin: 0 40px 40px;
     padding: 15px;
     max-width: 300px;
-    min-width: 200px;
+    /*min-width: 200px;*/
+
 }
 .cardIcon {
     display: inherit;
