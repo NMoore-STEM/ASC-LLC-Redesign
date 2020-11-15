@@ -411,6 +411,8 @@ section {
 .leftAside {
     text-align: left;
     padding-top: 30px;
+    white-space: pre-line;
+    white-space: break-spaces;
 }
 .cardContainer {
     max-width: inherit;
@@ -418,7 +420,7 @@ section {
 }
 .cardFrame {
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     background-color: #91B4DF;
     border: 2px solid #2C395E;
     border-radius: 15px;
@@ -884,14 +886,8 @@ section {
     grid-row-end: span 2;
 }
 #whyContent p {
-    /*margin-top: 130px;*/
-    /*width: auto;*/
     margin: 0 0 50px;
     padding: 40px 40px 20px 80px;
-    /*text-align: left;
-    text-indent: 4vw;*/
-    /*grid-column-start: 1;
-    grid-row-start: 2;*/
     flex-flow: row;
     display: flex;
     /*max-width: 400px;*/
@@ -970,30 +966,20 @@ section {
     grid-column-end: span 2;
 }
 .leftAside {
-    /*grid-row-start: 2;
-    grid-row-end: span 3;*/
-    /*max-width: 80%;*/
     max-width: 650px;
-    /*min-width: 400px;*/
     /*margin: auto;*/
     text-align: left;
-    /*padding-left: 4vw;*/
-    /*margin-top: 4vw;*/
-    /*display: flex;*/
     white-space: break-spaces;
     /*pre-wrap is redundant, but can supplement break-spaces*/
     white-space: pre-wrap;
     padding: 40px 40px 20px 80px;
-    flex: 1 0 400px;
+    flex: 0.35 0 400px;
 }
 .cardContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /*max-width: 400px;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end: span 3;*/
+    /*max-width: 400px;*/
     margin: auto 30px;
     flex: 1 350px;
     padding-top: 50px;
@@ -1001,14 +987,13 @@ section {
 .cardFrame {
     display: flex;
     flex: 1 350px;
-    /*flex-direction: column;*/
     background-color: #91B4DF;
     border: 2px solid #2C395E;
     border-radius: 15px;
-    margin: 0 40px 40px;
+    margin: 0 20px 40px;
     padding: 15px;
-    max-width: 300px;
-    /*min-width: 200px;*/
+    max-width: 400px;
+    min-width: 350px;
 
 }
 .cardIcon {
@@ -1027,6 +1012,7 @@ section {
     font-size: 13pt;
     text-align: left;
     padding: 10px 15px 0;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 #servicesContent {
     display: flex;
