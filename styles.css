@@ -1346,15 +1346,30 @@ ul{
     width: 70vw;
     padding: 4vw;
 }
+.portfolio_item_main {
+    display: flex;
+    padding: 0;
+}
+.portfolio_item_sub {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+}
 .portfolio_img_web {
     width: 25vw;
+}
+.portfolio_dev_icon {
+    display: flex;
+    gap: 32.5px;
+    margin: 25px auto;
 }
 .new_bailey {
     display: block;
     width: 25vw;
 }
 .code_icon {
-    height: 100px;
+    height: 50px;
     align-self: center;
 }
 }
