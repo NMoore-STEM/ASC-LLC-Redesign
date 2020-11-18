@@ -1347,7 +1347,15 @@ ul{
     padding: 4vw;
 }
 .portfolio_img_web {
-    
+    width: 25vw;
+}
+.new_bailey {
+    display: block;
+    width: 25vw;
+}
+.code_icon {
+    height: 100px;
+    align-self: center;
 }
 }
 
