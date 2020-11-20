@@ -1356,15 +1356,16 @@ ul{
 .portfolio_item_main {
     display: flex;
     background-color: #2C4A9A;
-    padding: 0;
+    padding: 50px 0;
 }
 .portfolio_item_sub {
     display: flex;
     flex-direction: column;
     background-color: #2C4A9A;
     margin: 0 auto;
-    padding: 0;
+    padding: 30px;
     background-color: #253C84;
+    border-radius: 15px;
 }
 .portfolio_img_web {
     width: 25vw;
@@ -1375,6 +1376,7 @@ ul{
     margin: 25px auto;
     background-color: #253C84;
     padding: 40px 50px;
+    margin: 0;
 }
 .new_bailey {
     display: block;
