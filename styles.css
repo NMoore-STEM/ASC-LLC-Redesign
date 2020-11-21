@@ -1349,9 +1349,17 @@ ul{
     width: 70vw;
     padding: 4vw;
 }
+#portfolio h2 {
+    font-size: 26pt;
+}
+.first_overlay {
+    background-color: #253C84;
+    display: block;
+}
 #front_end_dev {
     background-color: #2C4A9A;
     display: block;
+    background-color: #253C84;
 }
 .portfolio_item_main {
     display: flex;
@@ -1382,6 +1390,17 @@ ul{
     display: block;
     width: 25vw;
     align-self: center;
+    transition: 0.2s all ease;
+}
+.new_bailey img {
+    transition: 0.2s all ease;
+}
+.new_bailey img:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 5px 10px black;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transition: 0.2s all ease;
 }
 .code_icon {
     height: 50px;
