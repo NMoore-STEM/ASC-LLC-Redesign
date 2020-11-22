@@ -1346,8 +1346,8 @@ ul{
     width: max-content;
 }
 #portfolio {
-    width: 70vw;
-    padding: 4vw;
+    width: 84.4vw;
+    padding: 1.8vw;
 }
 #portfolio h2 {
     font-size: 26pt;
@@ -1361,10 +1361,19 @@ ul{
     display: block;
     background-color: #253C84;
 }
+#front_end_dev h4 {
+    color: white;
+}
 .portfolio_item_main {
     display: flex;
+    flex-wrap: wrap;
     background-color: #2C4A9A;
     padding: 50px 0;
+    margin: 0 2vw;
+}
+.portfolio_item_main h4 {
+    color: white;
+    width: 100%;
 }
 .portfolio_item_sub {
     display: flex;
@@ -1374,6 +1383,9 @@ ul{
     padding: 30px;
     background-color: #253C84;
     border-radius: 15px;
+}
+.portfolio_item_sub a {
+    align-self: center;
 }
 .portfolio_img_web {
     width: 25vw;
