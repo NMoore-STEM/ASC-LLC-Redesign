@@ -1364,6 +1364,16 @@ ul{
 #front_end_dev h4 {
     color: white;
 }
+.gitHub_icon {
+    background-image: url('images/gh_wh_bg.svg');
+    height: 40px;
+    display: block;
+    background-repeat: no-repeat;
+    background-color: white;
+    width: 135px;
+    background-size: contain;
+    border-radius: 60px;
+}
 .portfolio_item_main {
     display: flex;
     flex-wrap: wrap;
