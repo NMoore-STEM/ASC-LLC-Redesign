@@ -1370,6 +1370,7 @@ ul{
     background-color: #2C4A9A;
     padding: 50px 0;
     margin: 0 2vw;
+    justify-content: space-evenly;
 }
 .portfolio_item_main h4 {
     color: white;
@@ -1379,10 +1380,11 @@ ul{
     display: flex;
     flex-direction: column;
     background-color: #2C4A9A;
-    margin: 0 auto;
-    padding: 30px;
+    /*margin: 0 auto;*/
+    padding: 10px 40px;
     background-color: #253C84;
     border-radius: 15px;
+    min-width: 300px;
 }
 .portfolio_item_sub a {
     align-self: center;
@@ -1395,7 +1397,7 @@ ul{
     gap: 32.5px;
     margin: 25px auto;
     background-color: #253C84;
-    padding: 40px 50px;
+    padding: 40px;
     margin: 0;
 }
 .new_bailey {
