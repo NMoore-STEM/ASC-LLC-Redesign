@@ -1364,6 +1364,11 @@ ul{
 #front_end_dev h4 {
     color: white;
 }
+.link_container {
+    display: flex;
+    align-items: center;
+    margin: 0 10vw;
+}
 .gitHub_icon {
     background-image: url('images/gh_wh_bg.svg');
     height: 40px;
@@ -1373,6 +1378,10 @@ ul{
     width: 135px;
     background-size: contain;
     border-radius: 60px;
+}
+.link_01 {
+    color: #91B4DF;
+    font-size: 18pt;
 }
 .portfolio_item_main {
     display: flex;
