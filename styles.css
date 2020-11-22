@@ -1366,6 +1366,7 @@ ul{
 }
 .portfolio_item_main {
     display: flex;
+    flex-wrap: wrap;
     background-color: #2C4A9A;
     padding: 50px 0;
     margin: 0 2vw;
@@ -1382,6 +1383,9 @@ ul{
     padding: 30px;
     background-color: #253C84;
     border-radius: 15px;
+}
+.portfolio_item_sub a {
+    align-self: center;
 }
 .portfolio_img_web {
     width: 25vw;
