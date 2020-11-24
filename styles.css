@@ -1367,7 +1367,10 @@ ul{
 .link_container {
     display: flex;
     align-items: center;
-    margin: 0 10vw;
+    margin: 0 10vw 60px;
+    padding: 10px;
+    background-color: white;
+    max-width: max-content;
 }
 .gitHub_icon {
     background-image: url('images/gh_wh_bg.svg');
