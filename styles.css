@@ -1381,7 +1381,9 @@ ul{
 }
 .link_01 {
     color: #91B4DF;
+    color: black;
     font-size: 18pt;
+    font-family: 'Ubuntu';
 }
 .portfolio_item_main {
     display: flex;
