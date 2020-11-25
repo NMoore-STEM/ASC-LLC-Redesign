@@ -1347,10 +1347,13 @@ ul{
 }
 #portfolio {
     width: 84.4vw;
-    padding: 1.8vw;
+    padding: 1.8vw 4vw;
 }
 #portfolio h2 {
     font-size: 26pt;
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin: 2vw 0;
 }
 .first_overlay {
     background-color: #253C84;
@@ -1360,6 +1363,10 @@ ul{
     background-color: #2C4A9A;
     display: block;
     background-color: #253C84;
+    padding: 50px;
+}
+#front_end_dev h3 {
+    font-size: 20pt;
 }
 #front_end_dev h4 {
     color: white;
