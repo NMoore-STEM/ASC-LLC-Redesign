@@ -1365,6 +1365,10 @@ ul{
     background-color: #253C84;
     padding: 50px;
 }
+.section_intro {
+    display: flex;
+    flex-wrap: wrap;
+}
 #front_end_dev h3 {
     font-size: 20pt;
 }
