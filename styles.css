@@ -1368,6 +1368,12 @@ ul{
 .section_intro {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+.section_intro p, .section_intro ul {
+    max-width: 30vw;
+    flex: 2 0 auto;
 }
 #front_end_dev h3 {
     font-size: 20pt;
@@ -1378,7 +1384,8 @@ ul{
 .link_container {
     display: flex;
     align-items: center;
-    margin: 0 10vw 60px;
+    /*margin: 0 10vw 60px;*/
+    margin-left: 4vw;
     padding: 10px;
     background-color: white;
     max-width: max-content;
@@ -1427,6 +1434,8 @@ ul{
 }
 .portfolio_img_web {
     width: 25vw;
+    min-width: 250px;
+    align-self: center;
 }
 .portfolio_dev_icon {
     display: flex;
@@ -1435,6 +1444,7 @@ ul{
     background-color: #253C84;
     padding: 40px;
     margin: 0;
+    justify-content: space-evenly;
 }
 .new_bailey {
     display: block;
