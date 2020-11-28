@@ -1413,14 +1413,14 @@ ul{
     display: flex;
     flex-wrap: wrap;
     background-color: #2C4A9A;
-    padding: 0 0 50px;
+    padding: 40px 0 50px;
     margin: 0 2vw;
     justify-content: space-evenly;
 }
 .portfolio_item_main h4 {
     color: white;
     width: 100%;
-    margin: 40px;
+    margin: 0 40px 40px;
 }
 .portfolio_item_sub {
     display: flex;
@@ -1472,6 +1472,7 @@ ul{
 .portfolio_img_graphic {
     align-self: center;
     max-height: 250px;
+    margin: 20px;
 }
 }
 
