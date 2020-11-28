@@ -1320,6 +1320,12 @@ textarea {
     justify-content: center;
     align-content: center;
 }
+#resume_content h4 {
+    color: #9D90C5;
+}
+sub {
+    font-size: 10pt;
+}
 #resume_iframe {
     border: 1px solid #666CCC;
     max-width: 70vw;
@@ -1337,6 +1343,11 @@ textarea {
 #soft_skills h2 {
     margin-top: 80px;
     width: 80vw;
+}
+#soft_skills ul {
+    background-color: #253C84;
+    border-radius: 10px;
+    padding: 15px;
 }
 ul{
     margin: 15px;
@@ -1360,7 +1371,8 @@ ul{
     display: block;
 }
 #web_dev {
-    height: 0;
+    height: 100px;
+    margin: -25px;
 }
 #front_end_dev {
     background-color: #2C4A9A;
