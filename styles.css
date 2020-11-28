@@ -1063,7 +1063,8 @@ section {
 }
 .service_group ul {
     /*flex: 4 3 auto;*/
-    flex: 0 3 60vw;
+    /*flex: 0 3 60vw;*/
+    flex: 0 60vw;
     width: inherit;
 }
 .listDeco {
