@@ -1068,9 +1068,9 @@ section {
     width: inherit;
 }
 .subtext {
-    max-width: 70%;
+    max-width: 475px;
     font-family: "Exo", sans-serif;
-    font-size: 10pt;
+    font-size: 11pt;
     color: #91B4DF;
     padding: 20px;
     margin-bottom: 40px;
