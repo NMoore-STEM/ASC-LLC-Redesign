@@ -1067,6 +1067,17 @@ section {
     flex: 0 60vw;
     width: inherit;
 }
+.subtext {
+    max-width: 70%;
+    font-family: "Exo", sans-serif;
+    font-size: 10pt;
+    color: #91B4DF;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.subtext i {
+    font-size: 12pt;
+}
 .listDeco {
     display: inline-block;
     position: relative;
