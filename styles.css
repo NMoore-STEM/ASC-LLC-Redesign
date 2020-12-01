@@ -345,6 +345,10 @@ section {
     font-size: 20px;
     color: white;
 }
+.sectionTitle h2 {
+    width: 70vw;
+    padding: 15vw;
+}
 #whyContent {
     max-width: inherit;
     padding: 20px 4.5vw;
@@ -444,6 +448,12 @@ section {
     font-size: 10pt;
     text-align: left;
     padding: 0 0 0 20px;
+}
+#servicesContent {
+    max-width: 475px;
+}
+.service_group {
+    width: auto;
 }
 .listDeco {
     position: relative;
