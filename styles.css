@@ -346,8 +346,8 @@ section {
     color: white;
 }
 .sectionTitle h2 {
-    width: 70vw;
-    padding: 15vw;
+    /*width: 70vw;
+    padding: 15vw;*/
 }
 #whyContent {
     max-width: inherit;
@@ -1536,7 +1536,7 @@ ul{
     /*background-color: #2C395E;*/
     box-shadow: -2px 2px #2C395E;
     /*height: 14pt;*/
-    width: 70vw;
+    /*width: 70vw;*/
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1549,12 +1549,7 @@ ul{
     max-width: 60vw;
     display: block;
     word-break: break-word;
-}
-.service_group ul {
-    flex: 0 1 auto;
-    width: 57vw;
-    border-top: 2px solid;
-    padding-inline-start: 60px;
+    align-self: center;
 }
 /*#details {
     visibility: hidden;
@@ -1590,5 +1585,13 @@ ul{
 .service_group ul {
     width: inherit;
     flex: 0 3 60vw;
+}
+}
+@media only screen and (min-width:771px) and (max-width:1000px) {
+.service_group ul {
+    flex: 0 1 auto;
+    width: 57vw;
+    border-top: 2px solid;
+    padding-inline-start: 60px;
 }
 }
