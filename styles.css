@@ -25,6 +25,17 @@ i {
 .botCatfish {
     display: none;
 }
+.service_group ul {
+    font-family: ;
+    color:  #91B4DF;
+    border-top: 2px solid;
+    padding-inline-start: 60px;
+}
+.subtext {
+    font-family: 'Exo', sans-serif;
+    color:  #91B4DF;
+    font-size: ;
+}
 .copyright {
     display: block;
     position: relative;
