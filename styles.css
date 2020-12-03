@@ -26,15 +26,16 @@ i {
     display: none;
 }
 .service_group ul {
-    font-family: ;
+    font-family: 'Spartan', sans-serif;;
     color:  #91B4DF;
-    border-top: 2px solid;
-    padding-inline-start: 60px;
 }
 .subtext {
     font-family: 'Exo', sans-serif;
     color:  #91B4DF;
-    font-size: ;
+    font-size: 10pt;
+}
+.subtext i {
+    font-size: 12pt;
 }
 .copyright {
     display: block;
@@ -465,6 +466,18 @@ section {
 }
 .service_group {
     width: auto;
+}
+.service_group h3 {
+    color: white;
+}
+.subtext {
+    font-family: "Exo", sans-serif;
+    font-size: 10pt;
+    color: #91B4DF;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    margin: 30px auto 0;
 }
 .listDeco {
     position: relative;
@@ -1562,6 +1575,10 @@ ul{
     word-break: break-word;
     align-self: center;
 }
+.service_group ul {
+    border-top: 2px solid;
+    padding-inline-start: 60px;
+}
 /*#details {
     visibility: hidden;
     height: 0;
@@ -1588,6 +1605,10 @@ ul{
     box-shadow: -4px 4px #2C395E;
     transition: all 0.3s ease;
 }
+#title03 sub {
+    padding: 2px;
+    margin: 0;
+}
 }
 @media only screen and (min-width:1000px) {
 .service_group h3 {
@@ -1596,6 +1617,10 @@ ul{
 .service_group ul {
     width: inherit;
     flex: 0 3 60vw;
+}
+#title03 sub {
+    display: none;
+    visibility: hidden;
 }
 }
 @media only screen and (min-width:771px) and (max-width:1000px) {
