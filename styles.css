@@ -1164,7 +1164,9 @@ section {
     max-width: 90%;
 }
 .contactButton {
-    background-color: #553692;
+    /*background-color: #553692;*/
+    position: relative;
+    background-color: transparent;
     color: #9D90C5;
     align-content: center;
     display: grid;
@@ -1183,7 +1185,19 @@ section {
     overflow: hidden;
     transition: all 0.6s ease;
 }
-.contactButton:hover {
+.button_text {
+    background-color: transparent;
+    color: #9D90C5;
+    align-content: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18pt;
+    padding: 2vw 4vw;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0 0 0 #553692;
+    transition: text-shadow 0.4s ease-out;
+}
+/*.contactButton:hover {
     animation: purple_gradient_swirl 4s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
@@ -1193,6 +1207,33 @@ section {
     0% {background-color: #553692;}
     50% {background-color: #800080;}
     /*100% {background-color: #322f60;}*/
+}
+.contactButton:hover {
+    padding: 10px;
+}
+.contactButton:hover .button_fx {
+    visibility: visible;
+    /*width: 110%;*/
+    left: -10%;
+    background: linear-gradient(135deg, rgba(155,57,144,1) 0%,rgba(255,255,255,0) 50%);
+    transition: all 0.5s ease;
+}
+.contactButton:hover .button_text {
+    text-shadow: 12px 6px 2px  #553692;
+    transition: text-shadow 0.4s ease-in;
+}
+.button_fx {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: -110%;
+    width: 200%;
+    background: linear-gradient(135deg, rgba(155,57,144,1) 0%,rgba(255,255,255,0) 50%);
+    transition: all 0.5s ease;
+    z-index: 5;
+}
+.button_bg {
+    background-color: #553692;
 }
 /*.button_effect {
     display: block;
