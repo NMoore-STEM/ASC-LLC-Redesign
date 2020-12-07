@@ -385,7 +385,7 @@ section {
     padding: 30px;
     justify-content: center;
 }
-#coreValues::before, ::after {
+#coreValues::before, #coreValues::after {
     display: flex;
     font-family: 'Spartan', sans-serif;
     font-size: 150pt;
@@ -935,7 +935,7 @@ section {
 /*#whyContent p:nth-of-type(1) {
     margin-top: 180px;
 }*/
-.coreValues {
+#coreValues {
     display: flex;
     height:250px;
     background-color: #2C4A9A;
@@ -944,7 +944,7 @@ section {
     margin: auto 30px;
     scale: 0.8;
 }
-.coreValues::before, .coreValues::after {
+#coreValues::before, #coreValues::after {
     display: flex;
     font-family: 'Spartan', sans-serif;
     font-size: 150pt;
@@ -953,23 +953,23 @@ section {
     /*background: rgb(43, 57, 96);*/
     background: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
 }
-.coreValues::before {
+#coreValues::before {
     content: "\007B";
     height: 100%;
     /*background: linear-gradient(30deg, rgb(50, 39, 73) 0%/*, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%*//*, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);*/
     background-clip: text;
     color: transparent;
 }
-.coreValues::after {
+#coreValues::after {
     content: "\007D";
     /*background: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);*/
     background-clip: text;
     color: transparent;
 }
-.coreInternal {
+#coreInternal {
     padding: 0 30px 0;
 }
-.coreValues h3 {
+#coreValues h3 {
     padding: 0;
     margin: 0 0 20px 0;
     font-size: 16pt;
@@ -978,7 +978,7 @@ section {
     color: rgb(50, 39, 73);
     color: rgb(38, 48, 73);
 }
-.coreValues li {
+#coreValues li {
     list-style: none;
     line-height: 2;
     text-align: center;
