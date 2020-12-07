@@ -1172,7 +1172,7 @@ section {
     display: grid;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 18pt;
-    padding: 2vw 4vw;
+    /*padding: 2vw 4vw;*/
     text-decoration: none;
     margin: 2vw 8vw;
     text-align: center;
@@ -1194,8 +1194,11 @@ section {
     padding: 2vw 4vw;
     text-decoration: none;
     text-align: center;
-    text-shadow: 0 0 0 #553692;
-    transition: text-shadow 0.4s ease-out;
+    /*text-shadow: 0 0 0 #553692;*/
+    outline: solid 2px #9D90C5;
+    outline-offset: 20px;
+    transition: all 0.4s ease-out;
+    z-index: 5;
 }
 /*.contactButton:hover {
     animation: purple_gradient_swirl 4s;
@@ -1209,18 +1212,27 @@ section {
     /*100% {background-color: #322f60;}*/
 }
 .contactButton:hover {
-    padding: 10px;
+    padding: 6px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    transition: all 0.8s ease, padding 0.2s ease;
 }
 .contactButton:hover .button_fx {
     visibility: visible;
     /*width: 110%;*/
     left: -10%;
     background: linear-gradient(135deg, rgba(155,57,144,1) 0%,rgba(255,255,255,0) 50%);
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 .contactButton:hover .button_text {
-    text-shadow: 12px 6px 2px  #553692;
-    transition: text-shadow 0.4s ease-in;
+    color: #c88cdf;
+    outline-offset: -1px;
+    /*text-shadow: 12px 6px 2px  #553692;*/
+    transition: all 0.4s ease-in, outline-offset 0.1s ease-in;
+}
+.contactButton:hover .button_bg {
+    box-shadow: 4px 6px rgba(0,0,0,0.6);
+    inset: 2px solid #9D90C5;
+    transition: all 0.8s ease;
 }
 .button_fx {
     visibility: hidden;
@@ -1228,11 +1240,15 @@ section {
     top: 0;
     left: -110%;
     width: 200%;
+    height: 100%;
     background: linear-gradient(135deg, rgba(155,57,144,1) 0%,rgba(255,255,255,0) 50%);
     transition: all 0.5s ease;
-    z-index: 5;
+    z-index: 4;
 }
 .button_bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background-color: #553692;
 }
 /*.button_effect {
