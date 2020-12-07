@@ -755,6 +755,12 @@ header img {
 #logoTextMobile {
     display: flex;
     padding-top: 5px;
+    background: url(../ASC-LLC-Redesign/images/ASC_LOGO_Text_ltBlue.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80px;
+    width: 160px;
 }
 #menuFULL {
     display: flex;
