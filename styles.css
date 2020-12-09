@@ -714,7 +714,7 @@ header {
     display: flex;
     position: fixed;
     width: 100%;
-    z-index: 5;
+    z-index: 6;
     top:0;
     /*below might not be needed*/
     align-content: center;
