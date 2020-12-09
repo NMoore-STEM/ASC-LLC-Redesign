@@ -1163,7 +1163,7 @@ section {
     /*grid-template-rows: 130px 1fr 1fr;*/
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr 1fr;
-    padding: 130px 50px 100px;
+    padding: 130px 7vw 100px;
 }
 .list_container01 {
     grid-column-start: 1;
