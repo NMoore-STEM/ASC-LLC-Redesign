@@ -1,11 +1,13 @@
 html {
     /*height: 100%;*/
     scroll-behavior: smooth;
+    overflow: auto;
 }
 body {
     padding: 0;
     margin: 0;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
+    overflow-y: auto;
     overflow-x: hidden;
     /*height: 100%;*/
 }
@@ -1197,6 +1199,9 @@ section {
     overflow: hidden;
     transition: all 0.6s ease;
 }
+.button_wide {
+    max-width: 600px;
+}
 .button_text {
     background-color: transparent;
     color: #9D90C5;
@@ -1215,7 +1220,8 @@ section {
 .contactButton:hover {
     padding: 6px;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    transition: all 0.8s ease, padding 0.2s ease;
+    transition: all 0.8s ease, padding 0.2s ease, margin 0.2s ease;
+    margin: calc(2vw - 6px) 8vw;
 }
 .contactButton:hover .button_fx {
     visibility: visible;
