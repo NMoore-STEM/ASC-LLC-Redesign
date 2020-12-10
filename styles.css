@@ -1477,6 +1477,8 @@ textarea {
 }
 /*=======================   RESTRICTED AREA FULL   =====================*/
 #formalities {
+    display: flex;
+    flex-wrap: wrap;
     width: 80vw;
     padding: 4vw;
 }
