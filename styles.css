@@ -1489,6 +1489,21 @@ textarea {
 #resume_content h4 {
     color: #9D90C5;
 }
+.contactButton a[href$=".pdf"]:before {
+    /* PDF file */
+width:32px;
+height:32px;
+background:url('http://wwwimages.adobe.com/content/dam/acom/en/legal/images/badges/Adobe_PDF_file_icon_32x32.png');
+display:inline-block;
+content:' ';
+}
+.button_text h4:before {
+    width:32px;
+    height:32px;
+    background:url('http://wwwimages.adobe.com/content/dam/acom/en/legal/images/badges/Adobe_PDF_file_icon_32x32.png');
+    display:inline-block;
+    content:' ';
+}
 sub {
     font-size: 10pt;
 }
