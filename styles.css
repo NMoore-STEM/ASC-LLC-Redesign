@@ -1480,23 +1480,32 @@ textarea {
     width: 80vw;
     padding: 4vw;
 }
-spacer #about {
-    height: 150px;
+#about {
+    height: 130px;
 }
 .intro_container {
     display: flex;
     flex-wrap: wrap;
+}
+#about_me {
     max-width: 45vw;
 }
 .top_cred_links {
     display: flex;
     flex-direction: column;
+    max-width: 24vw;
 }
-#resume_content {
+/*#resume_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+}*/
+.resumeButton {
+    margin: 0;
+}
+.resumeButton:hover {
+    margin: 0;
 }
 #resume_content h4 {
     color: #9D90C5;
