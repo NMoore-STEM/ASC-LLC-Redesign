@@ -1486,6 +1486,7 @@ textarea {
 .intro_container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 #about_me {
     max-width: 45vw;
@@ -1503,10 +1504,17 @@ textarea {
     align-content: center;
 }*/
 .resumeButton {
-    margin: 0;
+    margin: 6px;
+    width: 100%
+}
+.resumeButton h4 {
+    color: #9D90C5;
 }
 .resumeButton:hover {
     margin: 0;
+}
+.resumeButton:hover h4 {
+    color: #c88cdf;
 }
 #resume_content h4 {
     color: #9D90C5;
