@@ -1476,11 +1476,21 @@ textarea {
     margin: 0;
 }
 /*=======================   RESTRICTED AREA FULL   =====================*/
-#formalities {
-    display: flex;
-    flex-wrap: wrap;
+#intro {
     width: 80vw;
     padding: 4vw;
+}
+spacer #about {
+    height: 150px;
+}
+.intro_container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 45vw;
+}
+.top_cred_links {
+    display: flex;
+    flex-direction: column;
 }
 #resume_content {
     display: flex;
