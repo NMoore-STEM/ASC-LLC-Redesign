@@ -1494,6 +1494,7 @@ textarea {
     display: flex;
     flex-direction: column;
     max-width: 24vw;
+    padding-top: 50px;
 }
 /*#resume_content {
     display: flex;
