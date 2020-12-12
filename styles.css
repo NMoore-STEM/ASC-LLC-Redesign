@@ -1497,6 +1497,10 @@ textarea {
     max-width: 24vw;
     padding-top: 50px;
 }
+.top_cred_links .link_container {
+    min-width: 100%;
+    margin: 0;
+}
 /*#resume_content {
     display: flex;
     flex-direction: column;
@@ -1506,6 +1510,10 @@ textarea {
 .resumeButton {
     margin: 6px;
     width: 100%
+}
+.resumeButton .button_text {
+    display: inherit;
+    padding: 10px;
 }
 .resumeButton h4 {
     color: #9D90C5;
