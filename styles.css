@@ -1487,9 +1487,17 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: #253C84;
+}
+.intro_container h2 {
+    width: 100%;
 }
 #about_me {
     max-width: 45vw;
+}
+.intro_bg {
+    display: block;
+    background-color:#2C4A9A;
 }
 .top_cred_links {
     display: flex;
