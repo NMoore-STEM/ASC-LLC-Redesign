@@ -1486,7 +1486,7 @@ textarea {
 .intro_container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: #253C84;
 }
 .intro_container h2 {
@@ -1502,8 +1502,11 @@ textarea {
 .top_cred_links {
     display: flex;
     flex-direction: column;
-    max-width: 24vw;
-    padding-top: 50px;
+    width: 24vw;
+    max-width: 385px;
+    min-width: 285px;
+    /*padding-top: 50px;*/
+    justify-content: space-evenly;
 }
 .top_cred_links .link_container {
     min-width: 100%;
