@@ -1644,7 +1644,7 @@ ul{
 #front_end_dev h3 {
     font-size: 20pt;
 }
-#front_end_dev h4 {
+#front_end_dev h4, #graphic_design h4 {
     color: white;
 }
 .link_container {
@@ -1741,6 +1741,10 @@ ul{
     align-self: center;
     max-height: 250px;
     margin: 20px;
+}
+item {
+    max-width: 300px;
+    min-width: 200px;
 }
 }
 
