@@ -1587,11 +1587,11 @@ sub {
     flex-wrap: wrap;
 }
 #soft_skills h3 {
-    width: 80vw;
+    /*width: 80vw;*/
 }
 #soft_skills h2 {
     margin-top: 80px;
-    width: 80vw;
+    /*width: 80vw;*/
 }
 #soft_skills ul {
     background-color: #253C84;
