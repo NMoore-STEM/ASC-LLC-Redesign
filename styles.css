@@ -1742,10 +1742,18 @@ ul{
     max-height: 250px;
     margin: 20px;
 }
-item {
+.portfolio_svg_anim {
     max-width: 300px;
     min-width: 200px;
     display: block;
+    background-color: white;
+    outline: 4px solid black;
+}
+.item_title {
+    display: block;
+    font-family: ;
+    font-size: ;
+    color: ;
 }
 }
 
