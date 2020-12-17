@@ -1707,7 +1707,7 @@ ul{
     align-self: center;
 }
 .portfolio_img_web {
-    width: 25vw;
+    width: 40vw;
     min-width: 250px;
     align-self: center;
 }
@@ -1722,7 +1722,7 @@ ul{
 }
 .new_bailey {
     display: block;
-    width: 25vw;
+    width: 40vw;
     align-self: center;
     transition: 0.2s all ease;
 }
