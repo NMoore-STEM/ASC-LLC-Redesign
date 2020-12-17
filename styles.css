@@ -842,6 +842,7 @@ header img {
 }
 .fullValue {
     margin: auto 2vw auto;
+    text-shadow: 1px 1px 10px black;
 }
 /*#logoGlyphFull {
     position: absolute;
@@ -1492,10 +1493,14 @@ textarea {
 }
 .intro_container h2 {
     width: 100%;
+    font-size: 8vw;
+    color: #2C529A;
+    margin-bottom: -2vw;
 }
 #about_me {
     max-width: 45vw;
     margin-right: 15px;
+    min-width: 420px;
 }
 .intro_bg {
     display: block;
@@ -1585,6 +1590,8 @@ sub {
     /*padding: 4vw;*/
     /*flex-direction: column;*/
     flex-wrap: wrap;
+    max-width: 55vw;
+    justify-content: space-evenly;
 }
 #soft_skills h3 {
     /*width: 80vw;*/
@@ -1594,11 +1601,12 @@ sub {
     /*width: 80vw;*/
 }
 #soft_skills ul {
-    background-color: #253C84;
-    border-radius: 10px;
-    padding: 15px;
+    /*background-color: #253C84;*/
+    /*border-radius: 10px;*/
+    padding: 10px;
     width: max-content;
     font-size: 10pt;
+    background-color: #2C4A9A;
 }
 ul{
     margin: 15px;
