@@ -1585,6 +1585,10 @@ sub {
     max-width: 70vw;
     align-self: center;
 }
+.intro_sub_container {
+    display: flex;
+    flex-wrap: wrap;
+}
 #soft_skills {
     display: flex;
     /*padding: 4vw;*/
@@ -1599,6 +1603,15 @@ sub {
 #soft_skills h2 {
     margin-top: 80px;
     /*width: 80vw;*/
+    margin-left: -8vw;
+}
+#soft_skills sub {
+    display: block;
+    margin-top: -2vw;
+    text-align: right;
+    margin-bottom: 2vw;
+    margin-right: 10vw;
+    font-size: 14pt;
 }
 #soft_skills ul {
     /*background-color: #253C84;*/
@@ -1614,6 +1627,12 @@ ul{
     font-size: 14pt;
     color: #91B4DF;
     width: max-content;
+}
+#interests {
+    background-color: #2C4A9A;
+}
+#interests h2 {
+    font-size: 15pt;
 }
 #portfolio {
     width: 84.4vw;
