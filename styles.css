@@ -1523,18 +1523,30 @@ textarea {
 }
 .top_cred_links .link_container {
     min-width: 285px;
-    margin: 0;
+    margin: 6px;
     max-width: 385px;
     height: 75px;
     padding: 0;
     justify-content: center;
 }
+/*.top_cred_links .button_text {
+    width: inherit;
+    height: inherit;
+    justify-content: center;
+}*/
+.gh_text {
+    height: 78px;
+}
 .top_cred_links .gitHub_icon {
     height: 32px;
     width: 110px;
+    background-color: transparent;
+    align-self: center;
 }
 .top_cred_links .link_01 {
     font-size: 14pt;
+    align-self: center;
+    color: #9D90C5;
 }
 /*#resume_content {
     display: flex;
@@ -1630,6 +1642,8 @@ ul{
 }
 #interests {
     background-color: #2C4A9A;
+    padding: 30px;
+    height: max-content;
 }
 #interests h2 {
     font-size: 15pt;
