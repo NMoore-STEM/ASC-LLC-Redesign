@@ -1494,7 +1494,8 @@ textarea {
 .intro_container h2 {
     width: 100%;
     font-size: 8vw;
-    color: #2C529A;
+    /*color: #2C529A;*/
+    color: #486AAC;
     margin-bottom: -2vw;
 }
 #about_me {
