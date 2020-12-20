@@ -802,11 +802,33 @@ header img {
     text-decoration: none;
     z-index: 6;
     max-height: 30px;
+    position: relative;
+}
+.nav_text {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-image: linear-gradient(to right,white 50%, #91B4DF 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    transition: all 0.2s ease;
+}
+.menuItem:hover .nav_text {
+    background-position: 0% 0%;
+    /*font-size: 2vw;*/
+    scale: 1.2;
+    transition: background-position 0.15s ease 0.2s, scale 0.2s ease;
 }
 .menuItem h3 {
     margin: 0;
     padding: 0;
     font-size: 1.4vw;
+    display: block;
+    background-clip: text;
+    background-color: #91B4DF;
+    /*background-color: orchid;*/
+    color: transparent;
+
 }
 .passwordKey img {
     max-height: 2.5vw;
@@ -1501,8 +1523,9 @@ textarea {
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #253C84;
-    padding: 30px;
-    padding-top: 0;
+    /*padding: 30px;
+    padding-top: 0;*/
+    padding: 0 30px;
     margin-top: 30px;
     margin-bottom: 60px;
 }
