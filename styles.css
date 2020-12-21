@@ -1769,7 +1769,7 @@ ul{
     max-width: max-content;
 }
 .gitHub_icon {
-    background-image: url('images/gh_wh_bg.svg');
+    background-image: url('images/gh_wh.svg');
     height: 40px;
     display: block;
     background-repeat: no-repeat;
