@@ -895,8 +895,9 @@ header img {
 section {
     /*background-color: #91B4DF;*/
     /*background-color: #C0D2E8;*/
-    background-color: #253C84;
+    /*background-color: #253C84;*/
     background-color: #2A385D;
+    background-color: #1F3160;
     padding-top: 40px;
 }
 .sectionMain {
@@ -1638,11 +1639,11 @@ content:' ';
 sub {
     font-size: 10pt;
 }
-#resume_iframe {
+/*#resume_iframe {
     border: 1px solid #666CCC;
     max-width: 70vw;
     align-self: center;
-}
+}*/
 /*.intro_sub_container {
     display: flex;
     flex-wrap: wrap;
@@ -1724,10 +1725,11 @@ ul{
     padding: 1.8vw;
 }
 #portfolio h2 {
-    font-size: 26pt;
+    /*font-size: 26pt;*/
     text-align: center;
-    border-bottom: 4px solid white;
-    margin: 2vw 0;
+    /*border-bottom: 4px solid white;*/
+    /*margin: 2vw 0;*/
+    margin-bottom: -110px;
 }
 .first_overlay {
     background-color: #253C84;
