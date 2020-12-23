@@ -1746,7 +1746,6 @@ ul{
     display: block;
     background-color: #253C84;
     padding: 50px;
-    margin-right: 40vw;
 }
 .section_intro {
     display: flex;
@@ -1754,6 +1753,9 @@ ul{
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 60px;
+    max-width: 400px;
+    /*background-color: #2C4A9A;*/
+    padding: 1.8vw;
 }
 .section_intro p, .section_intro ul {
     max-width: 30vw;
