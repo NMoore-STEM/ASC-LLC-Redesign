@@ -1721,8 +1721,10 @@ ul{
     margin-left: 40px;
 }
 #portfolio {
-    width: 84.4vw;
-    padding: 1.8vw;
+    /*width: 84.4vw;*/
+    /*padding: 1.8vw;*/
+    padding: 1.8vw 4vw;
+    width: 80vw;
 }
 #portfolio h2 {
     /*font-size: 26pt;*/
@@ -1744,9 +1746,11 @@ ul{
     display: block;
     background-color: #253C84;
     padding: 50px;
+    margin-right: 40vw;
 }
 .section_intro {
     display: flex;
+    max-width: 400px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 60px;
