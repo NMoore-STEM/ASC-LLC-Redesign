@@ -1745,10 +1745,16 @@ ul{
     background-color: #2C4A9A;
     display: block;
     background-color: #253C84;
-    padding: 50px;
+    padding-top: 80px;
+}
+#front_end_dev h3 {
+    font-size: 28pt;
+    font-family: ;
 }
 .section_top {
-    display: flex;
+    display: block;
+    box-sizing: border-box;
+    /*display: flex;*/
     /*max-width: 400px;*/
     flex-wrap: wrap;
     width: 100%;
@@ -1777,9 +1783,6 @@ ul{
 .section_top .link_container {
     max-width: 25vw;
     align-self: auto;
-}
-#front_end_dev h3 {
-    font-size: 20pt;
 }
 #front_end_dev h4, #graphic_design h4 {
     color: white;
@@ -1842,6 +1845,11 @@ ul{
 }
 .portfolio_item_sub a {
     align-self: center;
+}
+.portfolio_item_sub sub {
+    font-size: 14pt;
+    font-family: 'Exo2', sans-serif;
+    color: #91B4DF;
 }
 .portfolio_img_web {
     /*width: 40vw;*/
