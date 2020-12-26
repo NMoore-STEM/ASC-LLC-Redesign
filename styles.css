@@ -1796,6 +1796,10 @@ ul{
 #front_end_dev h4, #graphic_design h4 {
     color: white;
 }
+em {
+    color: white;
+    font-style: normal;
+}
 .link_container {
     display: flex;
     align-items: center;
