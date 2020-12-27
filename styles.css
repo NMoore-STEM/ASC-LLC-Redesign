@@ -1742,10 +1742,10 @@ ul{
     margin: -25px;
 }
 #front_end_dev {
-    background-color: #2C4A9A;
+    /*background-color: #2C4A9A;*/
     display: block;
     background-color: #253C84;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 #portfolio h3 {
     font-size: 28pt;
