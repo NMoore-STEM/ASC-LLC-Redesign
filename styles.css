@@ -1905,6 +1905,13 @@ em {
     /*justify-content: space-evenly;*/
     justify-content: center;
 }
+/*svg.php_icon {
+    stroke:#fff;
+    stroke-width:4px;
+    stroke-linejoin:round;
+    stroke-linecap:round;
+    paint-order:stroke fill;
+}*/
 .new_bailey {
     display: block;
     /*width: 40vw;*/
