@@ -1838,7 +1838,7 @@ em {
     /*background-color: #2C4A9A;*/
     background-color: #253C84;
     /*padding: 40px 0 50px;*/
-    padding: 0 0 50px;
+    padding: 0;
     margin: 20px 2vw;
     justify-content: space-evenly;
     max-width: 30vw;
@@ -1902,7 +1902,8 @@ em {
     background-color: #253C84;
     padding: 40px;
     margin: 0;
-    justify-content: space-evenly;
+    /*justify-content: space-evenly;*/
+    justify-content: center;
 }
 .new_bailey {
     display: block;
@@ -1921,7 +1922,7 @@ em {
     transition: 0.2s all ease;
 }*/
 .code_icon {
-    height: 50px;
+    height: 40px;
     align-self: center;
 }
 #graphic_design h3 {
