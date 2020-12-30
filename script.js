@@ -451,4 +451,10 @@ $(document).ready(function() {
     })
 
 });
+//----  For cred page web dev portfolio items in FULL view ---//
+$(document).ready(function() {
+    var $study = $('.case_study_popup');
+    $study.on(click,function(){
+
+    }
 });

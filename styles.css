@@ -1866,6 +1866,7 @@ em {
 }
 .portfolio_item_sub {
     display: flex;
+    position: relative;
     flex-direction: column;
     background-color: #2C4A9A;
     /*margin: 0 auto;*/
@@ -1905,6 +1906,15 @@ em {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+.case_study_popup {
+    display: block;
+    position: absolute;
+    right: -350px;
+    /*display: none;*/
+    max-width: ;
+    background-color: white;
+    padding: 15px;
 }
 .portfolio_dev_icon {
     display: flex;
