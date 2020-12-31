@@ -1866,6 +1866,11 @@ em {
     /*margin: 0 40px 40px;*/
     /*text-align: center;*/
     text-align: left;
+    /*background-color: #2C4A9A;*/
+}
+.web_dev_header {
+    display: flex;
+    width: 100%;
     background-color: #2C4A9A;
 }
 .portfolio_item_sub {
@@ -1888,7 +1893,7 @@ em {
 .portfolio_item_sub a {
     align-self: center;
 }
-.portfolio_item_sub sub {
+.portfolio_item_main sub {
     font-size: 14pt;
     font-family: 'Exo2', sans-serif;
     color: #91B4DF;
@@ -1903,7 +1908,7 @@ em {
     /*width: 100%;*/
     max-width: 450px;
 }
-.case_study {
+/*.case_study {
     cursor: pointer;
     display: block;
     margin: 10px;
@@ -1913,16 +1918,16 @@ em {
     text-align: center;
     justify-content: center;
     align-items: center;
-}
-.case_study_popup {
+}*/
+/*.case_study_popup {
     display: block;
     position: absolute;
     right: -350px;
-    /*display: none;*/
+    display: none;
     max-width: ;
     background-color: white;
     padding: 15px;
-}
+}*/
 .portfolio_dev_icon {
     display: flex;
     gap: 32.5px;
