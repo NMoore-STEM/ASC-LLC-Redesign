@@ -1836,17 +1836,19 @@ em {
     display: flex;
     flex-wrap: wrap;
     /*background-color: #2C4A9A;*/
-    background-color: #253C84;
+    /*background-color: #253C84;*/
+    background-color: transparent;
     /*padding: 40px 0 50px;*/
     padding: 0;
     margin: 20px 2vw;
     justify-content: space-evenly;
-    max-width: 30vw;
-    min-width: 425px;
+    /*max-width: 30vw;*/
+    /*min-width: 425px;*/
     /*outline: 2px solid #2c4a9a;*/
     outline: 0 solid #2C4A9A;
     /*overflow: hidden;
     height: 300px;*/
+    max-width: 80%;
     transition: outline 0.1s ease, box-shadow 0.1s ease;
 }
 .portfolio_item_main:hover {
@@ -1859,25 +1861,29 @@ em {
 .portfolio_item_main h4 {
     color: white;
     width: 100%;
+    /*width: 50%;*/
     padding: 40px;
     /*margin: 0 40px 40px;*/
-    text-align: center;
+    /*text-align: center;*/
+    text-align: left;
     background-color: #2C4A9A;
 }
 .portfolio_item_sub {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
-    flex-direction: column;
-    background-color: #2C4A9A;
+    /*flex-direction: column;*/
+    /*background-color: #2C4A9A;*/
+    background-color: transparent;
     /*margin: 0 auto;*/
     /*padding: 10px 40px;*/
-    background-color: #253C84;
-    border-radius: 15px;
-    min-width: 300px;
+    /*background-color: #253C84;*/
+    /*border-radius: 15px;*/
+    /*min-width: 300px;*/
     justify-content: flex-end;
     width: 100%;
-    max-width: 30vw;
-    min-width: 375px;
+    /*max-width: 30vw;*/
+    /*min-width: 375px;*/
 }
 .portfolio_item_sub a {
     align-self: center;
@@ -1894,7 +1900,8 @@ em {
     /*max-width: 30vw;*/
     /*min-width: 250px;*/
     /*align-self: center;*/
-    width: 100%;
+    /*width: 100%;*/
+    max-width: 450px;
 }
 .case_study {
     cursor: pointer;
@@ -1920,7 +1927,8 @@ em {
     display: flex;
     gap: 32.5px;
     margin: 25px auto;
-    background-color: #253C84;
+    /*background-color: #253C84;*/
+    background-color: transparent;
     padding: 40px;
     margin: 0;
     /*justify-content: space-evenly;*/
