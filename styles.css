@@ -1885,7 +1885,7 @@ em {
     /*background-color: #253C84;*/
     /*border-radius: 15px;*/
     /*min-width: 300px;*/
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
     width: 100%;
     /*max-width: 30vw;*/
     /*min-width: 375px;*/
@@ -1893,8 +1893,9 @@ em {
 }
 .portfolio_item_sub a {
     align-self: center;
+    margin-left: 60px;
 }
-.portfolio_item_main sub {
+.portfolio_item_main sub, .item_details {
     font-size: 14pt;
     font-family: 'Exo2', sans-serif;
     color: #91B4DF;
@@ -1911,6 +1912,7 @@ em {
 }
 .item_details {
     margin-top: 50px;
+    padding-left: 10px;
 }
 .item_details li{
     /*text-align: center;*/
@@ -1942,7 +1944,7 @@ em {
     margin: 25px auto;
     /*background-color: #253C84;*/
     background-color: transparent;
-    padding: 40px;
+    padding: 15px 40px 40px;
     margin: 0;
     /*justify-content: space-evenly;*/
     justify-content: center;
