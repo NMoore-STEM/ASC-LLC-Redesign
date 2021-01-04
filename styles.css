@@ -1874,13 +1874,14 @@ em {
     background-color: #2C4A9A;
     align-items: center;
     justify-content: center;
-    padding-bottom: 60px;
+    /*padding-bottom: 60px;*/
 }
 .portfolio_item_sub {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    justify-content: center;
+    /*justify-content: center;*/
+    justify-content: space-evenly;
     /*flex-direction: column;*/
     /*background-color: #2C4A9A;*/
     background-color: transparent;
@@ -1921,6 +1922,7 @@ em {
 .item_details li{
     /*text-align: center;*/
     margin-left: 80px;
+    font-size: 14pt;
 }
 /*.case_study {
     cursor: pointer;
