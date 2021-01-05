@@ -1786,6 +1786,7 @@ ul{
     max-width: inherit;
     margin: 0;
     flex-direction: row;
+    justify-content: center;
 }
 .top_cred_links ul {
     width: 25vw;
