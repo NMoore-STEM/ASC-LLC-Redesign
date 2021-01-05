@@ -251,6 +251,14 @@ header {
     transform: -100%;
     transition: all 1s ease;
 }
+.menuOpen .passwordkey {
+    max-height: 30px;
+    max-width: max-content;
+    display: flex;
+    align-self: center;
+    margin: 30px auto 0;
+    border-radius: 50%;
+}
 .menuOpen h3 {
     /*position: relative;*/
     opacity: 1;
@@ -1654,7 +1662,8 @@ sub {
 .intro_sub_container h2 {
     font-size: 50pt;
     margin-bottom: -70px;
-    margin-left: 14.5vw;
+    /*margin-left: 14.5vw;*/
+    margin-left: 3vw;
 }
 #soft_skills {
     display: flex;
@@ -1709,8 +1718,8 @@ ul{
     background-color: #2C4A9A;
     padding: 30px 30px 60px 30px;
     height: max-content;
-    align-self: center;
-    margin-top: -100px;
+    /*align-self: center;*/
+    margin-top: -40px;
 }
 #interests h2 {
     font-size: 15pt;
@@ -2028,5 +2037,10 @@ em {
     width: 57vw;
     border-top: 2px solid;
     padding-inline-start: 60px;
+}
+@media only screen and (max-width:900px) {
+#interests {
+    margin-top: 80px;
+}
 }
 }
