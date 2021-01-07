@@ -1851,7 +1851,7 @@ em {
     flex-wrap: wrap;
     background-color: transparent;
     padding: 0;
-    margin: 60px 2vw;
+    margin: 60px 4vw;
     justify-content: space-evenly;
     outline: 0 solid #2C4A9A;
     max-width: 80%;
