@@ -663,10 +663,28 @@ textarea {
 /*================================================================*/
 /*------------------ MOBILE - Portfolio/ Restricted --------------*/
 /*================================================================*/
-
+.section_heading {
+    font-size: 45pt;
+    color: #456299;
+    margin-bottom: -30px;
+}
+.intro_container {
+    background-color: #253C84;
+}
+.intro_bg h3 {
+    font-size: 20pt;
+}
+.intro_bg p {
+    text-align: left;
+}
+#about_me {
+    padding: 30px 20px;
+}
 }
 /*================================================================*/
+/*================================================================*/
 /*------------------ FULL RESOLUTION  ----------------------------*/
+/*================================================================*/
 /*================================================================*/
 
 @media only screen and (min-width:771px) {
@@ -1512,7 +1530,9 @@ textarea {
 .submitButton > .footerButton {
     margin: 0;
 }
+/*======================================================================*/
 /*=======================   RESTRICTED AREA FULL   =====================*/
+/*======================================================================*/
 #intro {
     width: 80vw;
     padding: 0 4vw;
@@ -2042,6 +2062,23 @@ em {
     border-top: 2px solid;
     padding-inline-start: 60px;
 }
+/*BELOW RULES NOT WORKING-NEW APPROACH NEEDED*/
+@media only screen and (min-width: 771px) and (max-width:1050px) {
+#about_me {
+    max-width: 70vw;
+    margin-top: -30px;
+    margin-right: 15px;
+    min-width: 420px;
+}
+}
+/*@media only screen and (min-width:1051px) {
+#about_me {
+    max-width: 45vw;
+    margin-top: -30px;
+    margin-right: 15px;
+    min-width: 420px;
+}
+}*/
 @media only screen and (max-width:900px) {
 #interests {
     margin-top: 80px;
