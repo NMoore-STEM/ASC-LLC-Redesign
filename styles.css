@@ -722,6 +722,7 @@ textarea {
 }
 .intro_sub_container {
     margin-top: 70px;
+    padding-bottom: 20px;
 }
 .intro_sub_container h2 {
     margin-bottom: -70px;
@@ -745,6 +746,7 @@ textarea {
 }
 .ss_bg {
     background-color: #253C84;
+    padding-bottom: 40px;
 }
 .section_heading sub {
     display: block;
