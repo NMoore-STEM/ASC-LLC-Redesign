@@ -345,6 +345,7 @@ header {
     display: block;
     background-color: transparent;
     height: 130px;
+    max-width: 475px;
 }
 section {
     display: grid;
@@ -675,6 +676,7 @@ textarea {
     font-size: 45pt;
     color: #456299;
     margin-bottom: -30px;
+    width: max-content;
 }
 .intro_container {
     background-color: #253C84;
@@ -783,6 +785,36 @@ ul{
     margin-left: 40px;
     padding: 0;
 }
+#front_end_dev {
+    max-width: inherit;
+}
+#front_end_dev h3 {
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: left; 
+}
+.section_top {
+    width: 100%;
+}
+.section_top p {
+    text-align: left;
+}
+.top_cred_links ul {
+    width: inherit;
+}
+.web_dev_header {
+    width: 475px;
+}
+.code_icon {
+    height: 35px;
+}
+.portfolio_item_sub a {
+    display: block;
+}
+.portfolio_img_web, .portfolio_img_graphic {
+    max-width: 400px;
+}
+
 }
 /*================================================================*/
 /*================================================================*/
