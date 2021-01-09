@@ -729,12 +729,10 @@ textarea {
 #soft_skills {
     display: flex;
     /*padding: 4vw;*/
-    padding: 30px;
-    padding-top: 50px;
+    padding: 50px 0 40px;
     /*flex-direction: column;*/
     flex-wrap: wrap;
-    max-width: 45vw;
-    /*justify-content: space-evenly;*/
+    justify-content: center;
 }
 #soft_skills h3 {
     /*width: 80vw;*/
@@ -746,18 +744,13 @@ textarea {
     font-size: 6vw;
 }
 .ss_bg {
-    display: flex;
     background-color: #253C84;
-    justify-content: space-around;
-    justify-content: space-evenly;
-    padding-right: 50px;
 }
 .section_heading sub {
     display: block;
     margin-top: -1vw;
     text-align: right;
     margin-bottom: 2vw;
-    margin-right: -30px;
     font-size: 18pt;
 }
 #soft_skills ul {
@@ -775,18 +768,18 @@ ul{
 }
 #interests {
     background-color: #2C4A9A;
+    margin: 0 60px;
     padding: 30px 30px 60px 30px;
     height: max-content;
     /*align-self: center;*/
-    margin-top: -40px;
 }
 #interests h2 {
-    font-size: 15pt;
-    margin: 30px 0 15px 0;
+    margin: 0;
     color: #91B4DF;
 }
 #interests li {
     margin-left: 40px;
+    padding: 0;
 }
 }
 /*================================================================*/
