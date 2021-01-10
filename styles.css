@@ -672,8 +672,11 @@ textarea {
 /*================================================================*/
 /*------------------ MOBILE - Portfolio/ Restricted --------------*/
 /*================================================================*/
+#about {
+    width: 0;
+}
 .section_heading {
-    font-size: 45pt;
+    font-size: 35pt;
     color: #456299;
     margin-bottom: -30px;
     width: max-content;
@@ -785,13 +788,17 @@ ul{
     margin-left: 40px;
     padding: 0;
 }
+#web_dev {
+    width: 0;
+}
 #front_end_dev {
-    max-width: inherit;
+    max-width: 100vw;
 }
 #front_end_dev h3 {
     font-size: 18pt;
     font-weight: bold;
-    text-align: left; 
+    text-align: left;
+    max-width: 100vw;
 }
 .section_top {
     width: 100%;
@@ -803,16 +810,21 @@ ul{
     width: inherit;
 }
 .web_dev_header {
-    width: 475px;
 }
 .code_icon {
     height: 35px;
+}
+.portfolio_item_container {
+
+}
+.portfolio_item_main {
+
 }
 .portfolio_item_sub a {
     display: block;
 }
 .portfolio_img_web, .portfolio_img_graphic {
-    max-width: 400px;
+    max-width: 340px;
 }
 
 }
