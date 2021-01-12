@@ -85,6 +85,16 @@ textarea:-moz-ui-invalid {
     display: block;
     background-repeat: no-repeat;
 }
+.item_placeholder {
+    height: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    text-align: center;
+    font-size: 20pt;
+    text-shadow: 0 0 2px white;
+    color: #B1C7E1;
+    cursor: crosshair;
+}
 /*=====================================================================*/
 /*---------------------------MOBILE------------------------------------*/
 /*=====================================================================*/
@@ -848,8 +858,6 @@ ul{
     display: block;
     /*margin-top: -115px;*/
     margin-top: -95px;
-    outline: 8px solid #253C84;
-    outline-offset: 8px;
 }
 .portfolio_img_web, .portfolio_img_graphic {
     max-width: 340px;
@@ -860,6 +868,9 @@ ul{
 .item_details li {
     padding: 0;
     margin: 0;
+}
+.item_placeholder {
+    line-height: 2;
 }
 }
 /*================================================================*/
@@ -2118,6 +2129,10 @@ em {
 .code_icon {
     height: 40px;
     align-self: center;
+}
+.item_placeholder {
+    line-height: 4.5;
+    max-width: 340px;
 }
 #graphic_design h3 {
     padding: 4vw 2vw;
