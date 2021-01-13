@@ -414,6 +414,7 @@ section {
     max-width: inherit;
     text-align: left;
     white-space: break-spaces;
+    padding: 10px;
 }
 #coreValues {
     display: flex;
@@ -489,6 +490,10 @@ section {
 .cardIcon {
     width: min-content;
     margin: auto 0;
+}
+.cardIcon img {
+    width: 20vw;
+    max-width: 100px;
 }
 .cardContent h4 {
     font-size: 14pt;
@@ -2277,7 +2282,8 @@ em {
 }
 .service_group ul {
     border-top: 2px solid;
-    padding-inline-start: 60px;
+    padding-inline-start: 20px;
+    font-size: 12pt;
 }
 /*#details {
     visibility: hidden;
