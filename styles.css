@@ -781,7 +781,6 @@ ul{
     font-family: 'Spartan', sans-serif;
     font-size: 14pt;
     color: #91B4DF;
-    width: max-content;
 }
 #interests {
     background-color: #2C4A9A;
@@ -814,10 +813,13 @@ ul{
     font-size: 18pt;
     font-weight: bold;
     text-align: left;
-    max-width: 100vw;
-    background-color: #2C4A9A;
     padding: 30px 10px;
     letter-spacing: 3px;
+    background-color: #2C4A9A;
+}
+.first_overlay {
+    max-width: 100vw;
+    background-color: #253C84;
 }
 .section_top {
     width: 100%;
@@ -901,6 +903,45 @@ ul{
 }
 .item_placeholder {
     line-height: 2;
+}
+#graphic_design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#graphic_design h3 {
+    color: #91B4DF;
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: left;
+    width: calc(100% - 10px);
+    padding: 30px 0 0 10px;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    background-color: #2C4A9A;
+}
+#graphic_design p {
+    background-color: #2C4A9A;
+    width: calc(100% - 30px);
+	max-width: 100vw;
+	padding: 30px 0 10px 30px;
+    margin: 0;
+    text-align: left;
+}
+#graphic_design .portfolio_dev_icon {
+    background-color: #2C4A9A;
+    width: 100%;
+    padding: 10px 0 30px;
+}
+.graphic_item {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+#graphic_design h4 {
+
 }
 }
 /*================================================================*/
