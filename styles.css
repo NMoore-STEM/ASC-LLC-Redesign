@@ -1109,6 +1109,7 @@ header img {
     z-index: 6;
     max-height: 30px;
     position: relative;
+    padding: 10px;
 }
 .nav_text {
     background-clip: text;
