@@ -456,5 +456,26 @@ $(document).ready(function() {
     var $study = $('.case_study_popup');
     $study.on(click,function(){
 
-    }*/  //PENDING IMPLEMENTATION//
+    }*/  //PENDING IMPLEMENTATION// --- scrapped idea
+
+    // UX button click feedback for contact page
+    $(".submit").click(function(){
+        $(".submit").addClass("loading");
+        setTimeout(function(){
+            $(".submit").addClass("sent");
+        }, 4000);
+        setTimeout(function(){
+            $(".submit").removeClass("loading");
+            $(".submit").removeClass("sent");
+        }, 6000);
+    });
+
+    // Slightly different general button click feedback for MOBILE and FULL
+    $(".contactButton").click(function(){
+        if ($(window).width() <= 770){
+
+        }else{
+            
+        }
+    })
 });

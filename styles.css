@@ -95,6 +95,15 @@ textarea:-moz-ui-invalid {
     padding: 20px;
     margin-top: 2em;
 }
+.loading {
+
+}
+@keyframes load {
+
+}
+.sent {
+
+}
 /*=====================================================================*/
 /*------------------  RESTRICTED - General ----------------------------*/
 .gitHub_icon {
