@@ -77,6 +77,24 @@ textarea:-moz-ui-invalid {
     scale: 1.02;
     box-shadow: 1px 1px 3px blueviolet;
 }
+.submit {
+    margin: 0;
+    padding: 15px 50px;
+    /*color: #9D90C5;
+    background-color: #3C2C5E;*/
+    background-color: #553692;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.submitButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 2em;
+}
 /*=====================================================================*/
 /*------------------  RESTRICTED - General ----------------------------*/
 .gitHub_icon {
@@ -615,7 +633,7 @@ section {
     background: whitesmoke;
     /*height: 520px;*/
     max-width: 80vw;
-    padding: 4vw;
+    padding: 30px;
 }
 .nameContainer {
     display: block;
