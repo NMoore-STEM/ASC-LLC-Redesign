@@ -104,13 +104,19 @@ textarea:-moz-ui-invalid {
 }
 .loading {
     animation: load 0.8s;
-    background-image: url("images/contact_border.svg");
 }
 @keyframes load {
-
+    100% {stroke-dashoffset: 0;}
 }
+/*.sending_bg {
+    background: gray !important;
+    background-color: gray;
+}*/
 .sent {
 
+}
+g #load_outline {
+    fill: white;
 }
 /*=====================================================================*/
 /*------------------  RESTRICTED - General ----------------------------*/
