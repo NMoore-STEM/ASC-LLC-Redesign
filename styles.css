@@ -88,6 +88,10 @@ textarea:-moz-ui-invalid {
     text-align: center;
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif;
+    background-image: url("images/contact_border.svg");
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+    background-position: center;
     transition: all ease 0.4s;
 }
 .submitButton {
@@ -100,7 +104,7 @@ textarea:-moz-ui-invalid {
 }
 .loading {
     animation: load 0.8s;
-    background-image: url("/images/contact_border.svg");
+    background-image: url("images/contact_border.svg");
 }
 @keyframes load {
 
