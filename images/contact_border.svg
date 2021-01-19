@@ -5,6 +5,6 @@
 	height="86px" viewBox="0 0 400 86" enable-background="new 0 0 400 86" 	xml:space="preserve">
 
 	<g id="load_outline">
-		<rect x="0" y="2" fill="#FFFFFF" stroke="#231F20" stroke-width="4" stroke-miterlimit="10" width="396" height="82"/>
+		<rect x="2" y="2" fill="none" stroke="#231F20" stroke-width="4" stroke-miterlimit="10" width="396" height="82"/>
 	</g>
 </svg>
