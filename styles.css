@@ -100,7 +100,7 @@ textarea:-moz-ui-invalid {
 }
 .loading {
     animation: load 0.8s;
-    background: url(/images/contact_border.svg);
+    background-image: url("/images/contact_border.svg");
 }
 @keyframes load {
 
