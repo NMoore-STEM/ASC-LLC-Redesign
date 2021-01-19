@@ -78,6 +78,7 @@ textarea:-moz-ui-invalid {
     box-shadow: 1px 1px 3px blueviolet;
 }
 .submit {
+    min-width: 300px;
     margin: 0;
     padding: 15px 50px;
     /*color: #9D90C5;
@@ -87,16 +88,19 @@ textarea:-moz-ui-invalid {
     text-align: center;
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif;
+    transition: all ease 0.4s;
 }
 .submitButton {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: 2em;
+    /*margin-top: 2em;*/
+    margin: 0;
 }
 .loading {
-
+    animation: load 0.8s;
+    background: url(/images/contact_border.svg);
 }
 @keyframes load {
 
@@ -644,13 +648,7 @@ section {
     max-width: 80vw;
     padding: 30px;
 }
-.nameContainer {
-    display: block;
-	border: solid 1px black;
-    padding: 2vw;
-    max-width: 360px;
-}
-.emailContainer {
+.nameContainer, .emailContainer {
 	border: solid 1px black;
     padding: 2vw;
     max-width: 360px;
