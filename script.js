@@ -460,6 +460,8 @@ $(document).ready(function() {
 
     // UX button click feedback for contact page
     $(".submit").click(function(){
+        //$(".contactForm").addClass("sending_bg");
+        //$("label").addClass("sending_bg");
         $(".submit").addClass("loading");
         setTimeout(function(){
             $(".submit").addClass("sent");
