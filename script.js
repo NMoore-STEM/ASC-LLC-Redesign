@@ -462,13 +462,13 @@ $(document).ready(function() {
     $(".submit").click(function(){
         //$(".contactForm").addClass("sending_bg");
         //$("label").addClass("sending_bg");
-        $(".submit").addClass("loading");
+        $(".submitButton").addClass("loading");
         setTimeout(function(){
-            $(".submit").addClass("sent");
+            $(".submitButton").addClass("sent");
         }, 4000);
         setTimeout(function(){
-            $(".submit").removeClass("loading");
-            $(".submit").removeClass("sent");
+            $(".submitButton").removeClass("loading");
+            $(".submitButton").removeClass("sent");
         }, 6000);
     });
 
