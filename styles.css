@@ -78,17 +78,19 @@ textarea:-moz-ui-invalid {
     box-shadow: 1px 1px 3px blueviolet;
 }
 .submit {
+    position: relative;
+    z-index: 3;
     min-width: 300px;
     margin: 0;
     padding: 15px 50px;
     /*color: #9D90C5;
     background-color: #3C2C5E;*/
-    background-color: #553692;
+    /*background-color: #553692;*/
     color: white;
     text-align: center;
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif;
-    background-image: url("images/contact_border.svg");
+    /*background-image: url("images/contact_border.svg");*/
     /*background-size: cover;*/
     background-repeat: no-repeat;
     background-position: center;
@@ -96,16 +98,32 @@ textarea:-moz-ui-invalid {
 }
 .submitButton {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    /*padding: 20px;*/
     /*margin-top: 2em;*/
-    margin: 0;
+    /*margin: 0;*/
+    margin: 20px auto 30px;
+    width: 300px;
+    background-color: #553692;
 }
 .loading {
-    animation: load 0.8s;
+    animation: load 5s;
+}
+.loading2 {
+    animation: load2 3.5s;
+}
+.loading3 {
+    animation: load2 3.5s;
 }
 @keyframes load {
+    50% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: 0;}
+}
+@keyframes load2 {
+    30% {stroke-dashoffset: 980;}
+    60% {stroke-dashoffset: 680;}
     100% {stroke-dashoffset: 0;}
 }
 /*.sending_bg {
@@ -113,7 +131,13 @@ textarea:-moz-ui-invalid {
     background-color: gray;
 }*/
 .sent {
-
+    content: "SENT";
+}
+.svg_border {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*transition: all ease 0.2s;*/
 }
 /*=====================================================================*/
 /*------------------  RESTRICTED - General ----------------------------*/

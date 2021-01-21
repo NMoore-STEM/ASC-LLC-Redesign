@@ -3,7 +3,7 @@
 //NOTE: scrollTop did not work when using "console.log($(document).scrollTop())"
 //in console because in the bg class/id in the <main> element in HTML had a
 //"position: fixed;" declaration which prevented this.  I had encountered the 
-//same problem with the Bailey Lab website.  I had used positoin:fixed so the
+//same problem with the Bailey Lab website.  I had used position:fixed so the
 //background remained fixed as the other elements of the document scrolled.
 //Instead, I used "background-attachment: fixed;" which accomplished the same
 //desired effect.
@@ -462,14 +462,18 @@ $(document).ready(function() {
     $(".submit").click(function(){
         //$(".contactForm").addClass("sending_bg");
         //$("label").addClass("sending_bg");
-        $(".submitButton").addClass("loading");
+        $(".load_outline3").addClass("loading");
         setTimeout(function(){
-            $(".submitButton").addClass("sent");
-        }, 4000);
+            $(".load_outline2").addClass("loading2")}, 500);
+        setTimeout(function(){
+            $(".load_outline").addClass("loading3")}, 1500);
+        setTimeout(function(){
+            $(".submit").val("SENT");
+        }, 5000);
         setTimeout(function(){
             $(".submitButton").removeClass("loading");
             $(".submitButton").removeClass("sent");
-        }, 6000);
+        }, 8000);
     });
 
     // Slightly different general button click feedback for MOBILE and FULL
