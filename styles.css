@@ -105,7 +105,8 @@ textarea:-moz-ui-invalid {
     /*margin-top: 2em;*/
     /*margin: 0;*/
     margin: 20px auto 30px;
-    width: 300px;
+    width: 250px;
+    height: 100%;
     background-color: #553692;
 }
 .loading {
