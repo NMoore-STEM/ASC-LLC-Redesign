@@ -46,7 +46,8 @@
             </div>
             <!--<form class=contactForm action="contact.php" method=POST enctype="multipart/form-data" name=contactASC>-->
         <!--Need to add action="https://formspree.io/f/xleozrbe" below to make funcional, disabled through dev process-->
-            <form class=contactForm action="" method=POST enctype="multipart/form-data" name=contactASC>
+        <!--Or for FormCarry use action="https://formcarry.com/s/_e7pm-Gb5q"-->
+            <form class=contactForm action="https://formcarry.com/s/_e7pm-Gb5q" method=POST enctype="multipart/form-data" name=contactASC>
                 <div class=nameContainer>
                     <label id=nameLabel for=nameField>Name:</label>
                     <input id=nameField class=inputField type=text name=name inputmode=text size=40 tabindex=1 autocomplete=off required>
@@ -61,6 +62,8 @@
                     <label id=messageLabel for=messageField>Message:</label>
                     <textarea id=messageField class=inputField name=message rows=10 cols=50 tabindex=3 autocomplete=off required></textarea>
                 </div>
+                <!--Attempt at submitted form redirect NOT going to formspree website-->
+                <input type="hidden" name="_next" value="https://stackoverflow.com/questions/40831948/making-the-next-option-work-in-formspree?noredirect=1&lq=1" />
                 <!--Hidden bot trap security device-->
                 <label for=botCatfish class=botCatfish>Fellow Humans, please refrain from entering any characters in this field.</label>
                 <input name=botCatfish id=botCatfish class=botCatfish>
