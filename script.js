@@ -460,8 +460,13 @@ $(document).ready(function() {
 
     // UX button click feedback for contact page
     $(".submit").click(function(){
+        //var $change = $('.formContainer', '.contactForm', '#nameLabel', '#emailLabel', '#messageLabel');
         //$(".contactForm").addClass("sending_bg");
         //$("label").addClass("sending_bg");
+        //$(".formContainer", ".contactForm", "#nameLabel", "#emailLabel", "#messageLabel").css("background-color","#777676");
+        //$(".formContainer").css("background-color","#777676");
+        //$change.css("background-color","#777676");
+        $('.willChangeJQ').css("background-color","#777676");
         $(".load_outline3").addClass("loading");
         setTimeout(function(){
             $(".load_outline2").addClass("loading2")}, 500);

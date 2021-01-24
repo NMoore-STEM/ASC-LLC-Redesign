@@ -40,26 +40,26 @@
                 <h3>HOME</h3>
             </a>
         </menu>
-        <wrapper class=formContainer>
+        <wrapper class="formContainer willChangeJQ">
             <div class=contactTitle>
             <h4>CONTACT ASC</h4>
             </div>
             <!--<form class=contactForm action="contact.php" method=POST enctype="multipart/form-data" name=contactASC>-->
         <!--Need to add action="https://formspree.io/f/xleozrbe" below to make funcional, disabled through dev process-->
         <!--Or for FormCarry use action="https://formcarry.com/s/_e7pm-Gb5q"-->
-            <form class=contactForm action="https://formcarry.com/s/_e7pm-Gb5q" method=POST enctype="multipart/form-data" name=contactASC>
+            <form class="contactForm willChangeJQ" action="" method=POST enctype="multipart/form-data" name=contactASC>
                 <div class=nameContainer>
-                    <label id=nameLabel for=nameField>Name:</label>
+                    <label id=nameLabel class=willChangeJQ for=nameField>Name:</label>
                     <input id=nameField class=inputField type=text name=name inputmode=text size=40 tabindex=1 autocomplete=off required>
                 </div>
                 <br>
                 <div class=emailContainer>
-                    <label id=emailLabel for=emailField >Email:</label>
+                    <label id=emailLabel class=willChangeJQ for=emailField >Email:</label>
                     <input id=emailField class=inputField type=email name=email inputmode=email size=100% tabindex=2 autocomplete=off required>
                 </div>
                 <br>
                 <div class=messageContainer>
-                    <label id=messageLabel for=messageField>Message:</label>
+                    <label id=messageLabel class=willChangeJQ for=messageField>Message:</label>
                     <textarea id=messageField class=inputField name=message rows=10 cols=50 tabindex=3 autocomplete=off required></textarea>
                 </div>
                 <!--Attempt at submitted form redirect NOT going to formspree website-->
