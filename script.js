@@ -505,6 +505,7 @@ $(document).ready(function() {
                         window.location.href = 'thanks.html'; // change this. 
                     }else{
                         alert("An error occured: " + response.message);
+                        //window.location.href = 'thanks.html';
                     }
                 }
             });
