@@ -484,4 +484,25 @@ $(document).ready(function() {
             
         }
     })
+    //----Specific AJAX workaround for "FormCarry" form back-end service
+    //----Code copied from: https://forum.webflow.com/t/any-good-free-form-processors-out-there-that-allow-redirects-after-submission/63192/6
+    $(function(){
+        $(".contactForm").submit(function(e){
+            e.preventDefault();
+            var href = $(this).attr("action");
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: href,
+                data: $(this).serialize(),
+                success: function(response){
+                    if(response.status == "success"){
+                        window.location.href = 'thanks.html'; // change this. 
+                    }else{
+                        alert("An error occured: " + response.message);
+                    }
+                }
+            });
+        });
+    });
 });
