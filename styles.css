@@ -140,6 +140,9 @@ textarea:-moz-ui-invalid {
     width: 100%;
     /*transition: all ease 0.2s;*/
 }
+.willChangeJQ {
+    transition: background-color ease 2s;
+}
 /*=====================================================================*/
 /*------------------  RESTRICTED - General ----------------------------*/
 .gitHub_icon {
