@@ -466,7 +466,8 @@ $(document).ready(function() {
         //$(".formContainer", ".contactForm", "#nameLabel", "#emailLabel", "#messageLabel").css("background-color","#777676");
         //$(".formContainer").css("background-color","#777676");
         //$change.css("background-color","#777676");
-        $('.willChangeJQ').css("background-color","#777676");
+        //$('.willChangeJQ').css("background-color","#777676");
+        $('.willChangeJQ').css("background-color","#B7ACCD");
         $(".load_outline3").addClass("loading");
         setTimeout(function(){
             $(".load_outline2").addClass("loading2")}, 500);
