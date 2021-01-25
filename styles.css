@@ -136,16 +136,30 @@ textarea:-moz-ui-invalid {
     animation: load2 3.5s;
 }
 .loading3 {
-    animation: load2 3.5s;
+    animation: load3 3.5s;
 }
 @keyframes load {
     50% {stroke-dashoffset: 0;}
     100% {stroke-dashoffset: 0;}
 }
+/* @keyframes load2 {
+    30% {stroke-dashoffset: 980;stroke-dasharray: 200 884;}
+    60% {stroke-dashoffset: 680;stroke-dasharray: 80 1004;}
+    100% {stroke-dashoffset: 0;stroke-dasharray: 5 1079;}
+} */
 @keyframes load2 {
-    30% {stroke-dashoffset: 980;}
-    60% {stroke-dashoffset: 680;}
-    100% {stroke-dashoffset: 0;}
+    from { stroke-dashoffset: 980;stroke-dasharray: 200 884; }
+    to { stroke-dashoffset: 0;stroke-dasharray: 5 1079; }
+}
+/* top layer below */
+/* @keyframes load3 {
+    30% { stroke-dashoffset: 250;stroke-dasharray: 0 225; }
+    60% { stroke-dashoffset: 650;stroke-dasharray: 630 650; }
+    100% { stroke-dashoffset: 0;stroke-dasharray: 1084 0; }
+} */
+@keyframes load3 {
+    from { stroke-dashoffset: 980;stroke-dasharray: 20 884; }
+    to { stroke-dashoffset: 0;stroke-dasharray: 1 1079; }
 }
 /*.sending_bg {
     background: gray !important;

@@ -18,7 +18,7 @@ function test_input($data) {
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
-});
+}
 
 $formcontent= "From: $name \n Email: $email \n Message: $message \n";
 $recipient = "nick@anandascience.com";

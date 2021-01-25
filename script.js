@@ -470,9 +470,9 @@ $(document).ready(function() {
         $('.willChangeJQ').css("background-color","#B7ACCD");
         $(".load_outline3").addClass("loading");
         setTimeout(function(){
-            $(".load_outline2").addClass("loading2")}, 500);
+            $(".load_outline2").addClass("loading2")}, 1500);
         setTimeout(function(){
-            $(".load_outline").addClass("loading3")}, 1500);
+            $(".load_outline").addClass("loading3")}, 2000);
         setTimeout(function(){
             $(".submit").val("SENT");
         }, 5000);
