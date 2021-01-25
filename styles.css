@@ -51,7 +51,9 @@ i {
 }
 /*=========================================================*/
 /*-----------------   CONTACT general   -------------------*/
-
+.formContainer {
+    overflow: hidden;
+}
 input:-moz-ui-invalid, textarea:-moz-ui-invalid {
     box-shadow: none;
     background-image: url('images/error_x_icon.svg');
@@ -108,48 +110,56 @@ textarea:-moz-ui-invalid {
     width: 250px;
     height: 100%;
     background-color: #553692;
+    transition: all ease 0.6s;
 }
-.submitButton::before {
+/*.submitButton::before {
     content: "";
     position: absolute;
     width: inherit;
     height: 56px;
-    /*background-color: inherit;*/
     background-color: transparent;
     outline: 8px solid #553692;
     outline-offset: -8px;
     opacity: 1;
     scale: 1;
     transition: all ease 0.3s;
-}
+}*/
 /*  Active state might be better used as a one-time addClass JS event tied to click*/
-.submitButton:active::before {
+/*.submitButton:active::before {
     scale: 1.4;
     opacity: 0;
     outline: 1px solid #553692;
     transition: opacity ease-out 0.4s, scale ease-out 0.2s;
-}
+}*/
 .loading {
-    animation: load 5s;
+    animation: load 2s linear 2;
+    transition: all ease 0.3s;
 }
 .loading2 {
-    animation: load2 3.5s;
+    animation: load2 1.8s linear 2;
 }
 .loading3 {
-    animation: load3 3.5s;
+    animation: load3 1.8s linear 2;
 }
+
 @keyframes load {
-    50% {stroke-dashoffset: 0;}
-    100% {stroke-dashoffset: 0;}
+    40% { stroke-dashoffset: 0; }
+    99% { opacity: 0.5; }
+    100% {stroke-dashoffset: 0; }
 }
 /* @keyframes load2 {
     30% {stroke-dashoffset: 980;stroke-dasharray: 200 884;}
     60% {stroke-dashoffset: 680;stroke-dasharray: 80 1004;}
     100% {stroke-dashoffset: 0;stroke-dasharray: 5 1079;}
 } */
+/*@keyframes load2 {
+    from { stroke-dashoffset: 1500;stroke-dasharray: 300 1084; }
+    to { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
+}*/
 @keyframes load2 {
-    from { stroke-dashoffset: 980;stroke-dasharray: 200 884; }
-    to { stroke-dashoffset: 0;stroke-dasharray: 5 1079; }
+    0% { stroke-dashoffset: 1084;stroke-dasharray: 0 1084; }
+    15% { stroke-dashoffset: 1500;stroke-dasharray: 300 1084; }
+    90% { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
 }
 /* top layer below */
 /* @keyframes load3 {
@@ -157,9 +167,14 @@ textarea:-moz-ui-invalid {
     60% { stroke-dashoffset: 650;stroke-dasharray: 630 650; }
     100% { stroke-dashoffset: 0;stroke-dasharray: 1084 0; }
 } */
+/*@keyframes load3 {
+    from { stroke-dashoffset: 920;stroke-dasharray: 10 1084; }
+    to { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
+}*/
 @keyframes load3 {
-    from { stroke-dashoffset: 980;stroke-dasharray: 20 884; }
-    to { stroke-dashoffset: 0;stroke-dasharray: 1 1079; }
+    0% { stroke-dashoffset: 1084;stroke-dasharray: 0 1084; }
+    15% { stroke-dashoffset: 920;stroke-dasharray: 20 1084; }
+    90% { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
 }
 /*.sending_bg {
     background: gray !important;
@@ -177,6 +192,21 @@ textarea:-moz-ui-invalid {
 .willChangeJQ {
     transition: background-color ease 2s;
 }
+.darken {
+    /*background-color: #16142D;*/
+    filter: hue-rotate(10deg);
+    transition: all ease 0.8s;
+}
+.willMoveJQ {
+    position: relative;
+    transition: all ease-in 0.3s;
+}
+
+@keyframes form_left {
+    60% { transform: translateX(70px); }
+    100% { transform: translateX(-700px); }
+}
+/* ----  Post-Submit Thank You transition/page ----- */
 #ty {
     display: flex;
     flex-direction: column;

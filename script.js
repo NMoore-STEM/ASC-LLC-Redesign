@@ -468,18 +468,25 @@ $(document).ready(function() {
         //$change.css("background-color","#777676");
         //$('.willChangeJQ').css("background-color","#777676");
         $('.willChangeJQ').css("background-color","#B7ACCD");
+        $('.submitButton').addClass("darken");
         $(".load_outline3").addClass("loading");
         setTimeout(function(){
-            $(".load_outline2").addClass("loading2")}, 1500);
+            $(".load_outline2").addClass("loading2")}, 500);
         setTimeout(function(){
-            $(".load_outline").addClass("loading3")}, 2000);
+            $(".load_outline").addClass("loading3")}, 500);
         setTimeout(function(){
             $(".submit").val("SENT");
+            //$(".willMoveJQ").css('transform','translateX(60px)');
+            $(".willMoveJQ").css('animation','form_left 0.5s ease-in forwards');
+            $('.submitButton').css('background-color','white');
+            
         }, 5000);
         setTimeout(function(){
+            //$(".willMoveJQ").css('transform','translateX(-700px)');
             $(".submitButton").removeClass("loading");
+            $(".submitButton").removeClass("darken");
             $(".submitButton").removeClass("sent");
-        }, 8000);
+        }, 5100);
     });
 
     // Slightly different general button click feedback for MOBILE and FULL
