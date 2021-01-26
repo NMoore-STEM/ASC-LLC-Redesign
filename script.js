@@ -467,6 +467,7 @@ $(document).ready(function() {
         //$(".formContainer").css("background-color","#777676");
         //$change.css("background-color","#777676");
         //$('.willChangeJQ').css("background-color","#777676");
+        $('.submit').val("SENDING...");
         $('.willChangeJQ').css("background-color","#B7ACCD");
         $('.submitButton').addClass("darken");
         $(".load_outline3").addClass("loading");
@@ -479,6 +480,8 @@ $(document).ready(function() {
             //$(".willMoveJQ").css('transform','translateX(60px)');
             $(".willMoveJQ").css('animation','form_left 0.5s ease-in forwards');
             $('.submitButton').css('background-color','white');
+            $('.submit').css({'color':'#553692','font-size':'20pt'});
+            
             
         }, 5000);
         setTimeout(function(){
