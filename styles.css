@@ -80,6 +80,7 @@ textarea:-moz-ui-invalid {
     box-shadow: 1px 1px 3px blueviolet;
 }
 .submit {
+    cursor: pointer;
     position: relative;
     z-index: 3;
     min-width: 300px;
