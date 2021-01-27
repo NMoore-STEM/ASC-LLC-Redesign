@@ -507,7 +507,7 @@ $(document).ready(function() {
         }, 5000);
         setTimeout(function(){
             //$(".willMoveJQ").css('transform','translateX(-700px)');
-            $('.submit').off('click');
+            //$('.submit').off('click');
             $(".submitButton").removeClass("loading");
             $(".submitButton").removeClass("darken");
             $(".submitButton").removeClass("sent");
@@ -515,13 +515,13 @@ $(document).ready(function() {
     });
 
     // Slightly different general button click feedback for MOBILE and FULL
-    $(".contactButton").click(function(){
+    /* $(".contactButton").click(function(){
         if ($(window).width() <= 770){
 
         }else{
             
         }
-    })
+    }) */
     //----Specific AJAX workaround for "FormCarry" form back-end service
     //----Code copied from: https://forum.webflow.com/t/any-good-free-form-processors-out-there-that-allow-redirects-after-submission/63192/6
     $(function(){

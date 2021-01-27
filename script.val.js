@@ -28,4 +28,10 @@ $(function() {
       }
     });
   });
+
+  // Code below is my attempt to create form validation from scratch
+  // Hoping to remove the need to include the plug-in jquery.validate.js
+
+  // Email field input regular expression parameters
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,6})+$/;
   
