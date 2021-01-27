@@ -330,6 +330,7 @@ $('#nameField').off('focus', function() {
 });*/
 
 //----------------------------------------------------------------//
+//    Could replace ".blur()" with ".focusout()" if cross-browser issues arise
 $(document).ready(function(){
     $('#nameField').focus(function() {
         $('.nameContainer').addClass('focusActive');
@@ -337,7 +338,9 @@ $(document).ready(function(){
     });
     $('#nameField').blur(function() {
         $('.nameContainer').removeClass('focusActive');
-        //$('#nameLabel').removeClass('labelActive');
+        if (!$('#nameField').val()) {
+            $('#nameLabel').removeClass('labelActive');
+        }
     });
     $('#emailField').focus(function() {
         $('.emailContainer').addClass('focusActive');
@@ -345,7 +348,9 @@ $(document).ready(function(){
     });
     $('#emailField').blur(function() {
         $('.emailContainer').removeClass('focusActive');
-        //$('#emailLabel').removeClass('labelActive');
+        if (!$('#emailField').val()) {
+            $('#emailLabel').removeClass('labelActive');
+        }
     });
     $('#messageField').focus(function() {
         $('.messageContainer').addClass('focusActive');
@@ -353,8 +358,17 @@ $(document).ready(function(){
     });
     $('#messageField').blur(function() {
         $('.messageContainer').removeClass('focusActive');
-        //$('#messageLabel').removeClass('labelActive');
+        if (!$('#messageField').val()) {
+            $('#messageLabel').removeClass('labelActive');
+        }
     });
+    $('.submit').focusin(function() {
+        $('.submitButton').css({'outline':'2px solid blueviolet','outline-offset':'7px'})
+    });
+    $('.submit').focusout(function() {
+        $('.submitButton').removeAttr('style');
+    });
+
 //----------------------------------------------------------------//
 //----   Attempt to keep label above text field if content is entered, 
 //----   if not, then label reverts to initial position  
@@ -458,6 +472,15 @@ $(document).ready(function() {
 
     }*/  //PENDING IMPLEMENTATION// --- scrapped idea
 
+//  Below is to provide negative feedback for incomplete form and to prevent form submission
+/* $(function(){
+    if ($('#nameField','#emailField','#messageField').val(length) = 0){
+        $('.submit').off('click');
+        $('.submitButton').addClass('subm_error');
+    } else {
+
+    }
+}) */
     // UX button click feedback for contact page
     $(".submit").click(function(){
         //var $change = $('.formContainer', '.contactForm', '#nameLabel', '#emailLabel', '#messageLabel');
@@ -480,12 +503,11 @@ $(document).ready(function() {
             //$(".willMoveJQ").css('transform','translateX(60px)');
             $(".willMoveJQ").css('animation','form_left 0.5s ease-in forwards');
             $('.submitButton').css('background-color','white');
-            $('.submit').css({'color':'#553692','font-size':'20pt'});
-            
-            
+            $('.submit').css({'color':'#553692','font-size':'20pt','pointer-events':'none','cursor':'not-allowed'});
         }, 5000);
         setTimeout(function(){
             //$(".willMoveJQ").css('transform','translateX(-700px)');
+            $('.submit').off('click');
             $(".submitButton").removeClass("loading");
             $(".submitButton").removeClass("darken");
             $(".submitButton").removeClass("sent");

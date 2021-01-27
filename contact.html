@@ -15,9 +15,9 @@
     <main class=bg>
         <header id=headerMT>
             <div id=logoContainer class=logoR2>
-                <img id=logoGlyphMobile src="images\ASC Seed LOGO_linGrad.svg"></img>
-                <img id=logoFullHeader src="images\ASC_Seed_LOGO_ltBlue2.svg"></img>
-                <a id=logoTextMobile href="index.html">
+                <img id=logoGlyphMobile src="images\ASC Seed LOGO_linGrad.svg" alt="asc logo"></img>
+                <img id=logoFullHeader src="images\ASC_Seed_LOGO_ltBlue2.svg" alt="asc logo"></img>
+                <a id=logoTextMobile href="index.html" tabindex=-1 alt="asc logo" name=home>
                     <!--<img src="images\ASC LOGO Text_ltBlue.svg"></img>-->
                 </a>
             </div>
@@ -50,17 +50,17 @@
             <form class="contactForm willChangeJQ" action="" method=POST enctype="multipart/form-data" name=contactASC>
                 <div class="nameContainer willMoveJQ">
                     <label id=nameLabel class=willChangeJQ for=nameField>Name:</label>
-                    <input id=nameField class=inputField type=text name=name inputmode=text size=40 tabindex=1 autocomplete=off required>
+                    <input id=nameField class=inputField type=text name=name inputmode=text size=40 autocomplete=off required>
                 </div>
                 <br>
                 <div class="emailContainer willMoveJQ">
                     <label id=emailLabel class=willChangeJQ for=emailField >Email:</label>
-                    <input id=emailField class=inputField type=email name=email inputmode=email size=100% tabindex=2 autocomplete=off required>
+                    <input id=emailField class=inputField type=email name=email inputmode=email size=100% autocomplete=off required>
                 </div>
                 <br>
                 <div class="messageContainer willMoveJQ">
                     <label id=messageLabel class=willChangeJQ for=messageField>Message:</label>
-                    <textarea id=messageField class=inputField name=message rows=10 cols=50 tabindex=3 autocomplete=off required></textarea>
+                    <textarea id=messageField class=inputField name=message rows=10 cols=50 autocomplete=off required></textarea>
                 </div>
                 <!--Attempt at submitted form redirect NOT going to formspree website-->
                 <input type="hidden" name="_next" value="https://stackoverflow.com/questions/40831948/making-the-next-option-work-in-formspree?noredirect=1&lq=1" />
