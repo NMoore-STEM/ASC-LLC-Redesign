@@ -332,34 +332,36 @@ $('#nameField').off('focus', function() {
 //----------------------------------------------------------------//
 //    Could replace ".blur()" with ".focusout()" if cross-browser issues arise
 $(document).ready(function(){
+    var fA = 'focusActive';
+    var lA = 'labelActive';
     $('#nameField').focus(function() {
-        $('.nameContainer').addClass('focusActive');
-        $('#nameLabel').addClass('labelActive');
+        $('.nameContainer').addClass(fA);
+        $('#nameLabel').addClass(lA);
     });
     $('#nameField').blur(function() {
-        $('.nameContainer').removeClass('focusActive');
+        $('.nameContainer').removeClass(fA);
         if (!$('#nameField').val()) {
-            $('#nameLabel').removeClass('labelActive');
+            $('#nameLabel').removeClass(lA);
         }
     });
     $('#emailField').focus(function() {
-        $('.emailContainer').addClass('focusActive');
-        $('#emailLabel').addClass('labelActive');
+        $('.emailContainer').addClass(fA);
+        $('#emailLabel').addClass(lA);
     });
     $('#emailField').blur(function() {
-        $('.emailContainer').removeClass('focusActive');
+        $('.emailContainer').removeClass(fA);
         if (!$('#emailField').val()) {
-            $('#emailLabel').removeClass('labelActive');
+            $('#emailLabel').removeClass(lA);
         }
     });
     $('#messageField').focus(function() {
-        $('.messageContainer').addClass('focusActive');
-        $('#messageLabel').addClass('labelActive');
+        $('.messageContainer').addClass(fA);
+        $('#messageLabel').addClass(lA);
     });
     $('#messageField').blur(function() {
-        $('.messageContainer').removeClass('focusActive');
+        $('.messageContainer').removeClass(fA);
         if (!$('#messageField').val()) {
-            $('#messageLabel').removeClass('labelActive');
+            $('#messageLabel').removeClass(lA);
         }
     });
     $('.submit').focusin(function() {
@@ -481,6 +483,38 @@ $(document).ready(function() {
 
     }
 }) */
+
+
+//============  Unified verification code below ==================
+function nameVerify() {
+    if (!$('#nameField').val()) {
+        return false;
+    }
+};
+function emailVerify() {
+    var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var emailF = $('#emailField');
+    var emailStr = emailF.val();
+    if (!emailF.val() || regex.test(emailStr)) {
+        return false;
+    }
+};
+function messageVerify() {
+    if (!$('messageField').val()) {
+        return false;
+    }
+};
+function clickGate() {
+    var nResult = nameVerify();
+    var eResult = emailVerify();
+    var mResult = messageVerify();
+    if (nResult == false && eResult == false && mResult == false) {
+        //<<button "shake" animation here>>
+    } else { //<<full submit form actions and animations here>> }
+}
+//=============  ATTEMPT to unify verification above =================
+
+
     // UX button click feedback for contact page
     $(".submit").click(function(){
         //var $change = $('.formContainer', '.contactForm', '#nameLabel', '#emailLabel', '#messageLabel');
@@ -522,6 +556,15 @@ $(document).ready(function() {
             
         }
     }) */
+
+    // Attempt at bringing all contact form elements/functions together
+    /*function emptyFieldVerify(name,message) {
+        var name = $('#nameField');
+        var message = $('#messageField');
+        if (name == val()) && (message == val()) {
+            return false;
+        }
+    }*/
     //----Specific AJAX workaround for "FormCarry" form back-end service
     //----Code copied from: https://forum.webflow.com/t/any-good-free-form-processors-out-there-that-allow-redirects-after-submission/63192/6
     $(function(){
