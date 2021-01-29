@@ -492,7 +492,8 @@ function nameVerify() {
     }
 };
 function emailVerify() {
-    var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    //var regex = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
+    var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/gi); //tested and working
     var emailF = $('#emailField');
     var emailStr = emailF.val();
     if (!emailF.val() || regex.test(emailStr)) {
@@ -508,10 +509,10 @@ function clickGate() {
     var nResult = nameVerify();
     var eResult = emailVerify();
     var mResult = messageVerify();
-    if (nResult == false && eResult == false && mResult == false) {
+    if (nResult == false || eResult == false || mResult == false) {
         //<<button "shake" animation here>>
     } else { //<<full submit form actions and animations here>> }
-}
+};
 //=============  ATTEMPT to unify verification above =================
 
 
