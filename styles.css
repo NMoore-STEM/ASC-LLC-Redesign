@@ -78,6 +78,11 @@ textarea:-moz-ui-invalid {
     border: solid 1px blueviolet !important;
     scale: 1.02;
     box-shadow: 1px 1px 3px blueviolet;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 .submit {
     cursor: pointer;
@@ -192,8 +197,8 @@ textarea:-moz-ui-invalid {
     width: 100%;
     /*transition: all ease 0.2s;*/
 }
-.willChangeJQ {
-    transition: background-color ease 2s;
+.willChangeJQ, label .willChangeJQ {
+    transition: background-color ease 2s !important;
 }
 .darken {
     /*background-color: #16142D;*/
@@ -202,7 +207,7 @@ textarea:-moz-ui-invalid {
 }
 .willMoveJQ {
     position: relative;
-    transition: all ease-in 0.3s;
+    /*transition: all ease-in 0.3s;*/
 }
 
 @keyframes form_left {
@@ -774,11 +779,12 @@ section {
 	border: solid 1px black;
     padding: 2vw;
 }
-.focusActive {
+/*.focusActive {
     border: solid 1px blueviolet;
     scale: 1.02;
     box-shadow: 1px 1px 3px blueviolet;
-}
+    transition: scale 0.2s ease;
+}*/
 label {
     display: block;
     position: absolute;
@@ -800,7 +806,7 @@ label {
 .labelActive {
     /*margin-top: -18px;*/
     margin-top: -4.2vw;
-    transition: all 0.2s ease;
+    transition: margin-top 0.2s ease, background-color 1.2s ease;
 }
 input {
     display: block;
@@ -1269,7 +1275,7 @@ header img {
 .menuItem:hover .nav_text {
     background-position: 0% 0%;
     /*font-size: 2vw;*/
-    scale: 1.2;
+    scale: 1.2002;
     transition: background-position 0.15s ease 0.2s, scale 0.2s ease;
 }
 .menuItem h3 {
@@ -1857,11 +1863,13 @@ footer {
 /*form:focus-within {
 
 }*/
-.nameContainer {
+.nameContainer, .emailContainer, .messageContainer {
     display: block;
     border: solid 1px black;
     padding: 10px;
     margin-bottom: 2vw;
+}
+.nameContainer, .emailContainer {
     max-width: 360px;
 }
 label {
@@ -1878,6 +1886,11 @@ label {
     transition: all 0.2s ease;
 }
 #nameLabel, #emailLabel, #messageLabel {
+    display: inline-table;
+    transform-style: flat;
+    transform: perspective(1px) scale(1) translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
     transition: all 0.2s ease;
 }
 #nameField {
@@ -1894,6 +1907,8 @@ input {
     font-size: 18px;
     background-color: transparent;
 }
+/* BUILT-IN ERROR STYLES - CANNOT USE WHILE "novalidate" is in form HTML
+/*Duplicate code below - can DELETE later (in global styles)
 input:-moz-ui-invalid, textarea:-moz-ui-invalid {
     box-shadow: none;
     background-image: url('images/error_x_icon.svg');
@@ -1908,28 +1923,41 @@ input:-moz-ui-invalid {
 textarea:-moz-ui-invalid {
     border-top: solid 2px red;
     background-position: right 2px;
-}
-@keyframes glow {
+} */
+/*ERROR STYLES FOR JS-ONLY FORM VERIFICATION*/
+/*.error_js {
+    border-bottom: solid 2px red;
+    background-position: right;
+    box-shadow: none;
+    background-image: url('images/error_x_icon.svg');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    animation: glow 2.5s ease-in-out infinite;
+}*/
+/*--  MAY STRIKE JS ONLY ERROR STYLE --*/
+/*@keyframes glow {
     0% { opacity: 0.3;}
     50% { opacity: 1;}
     100% { opacity: 0.3;}
-}
-.focusActive {
+}*/
+/*.focusActive {
+    display: initial;
     border: solid 1px blueviolet !important;
-    scale: 1.02;
+    transform: scale(1.018) perspective(1px) translateZ(0);
     box-shadow: 1px 1px 3px blueviolet;
-}
-.emailContainer {
+    transition: all 0.16s ease;
+}*/
+/*.emailContainer {
     border: solid 1px black;
     padding: 10px;
     margin-bottom: 2vw;
     max-width: 360px;
-}
-.messageContainer {
+}*/
+/*.messageContainer {
     border: solid 1px black;
     padding: 10px;
     margin-bottom: 2vw;
-}
+}*/
 textarea {
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
