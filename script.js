@@ -514,7 +514,7 @@ function clickGate() {
     } else { //<<full submit form actions and animations here>> }
 }; */
 //var emailF = $('#emailField');
-var emailStr = $('#emailField').val();
+/* var emailStr = $('#emailField').val();
 var nameStr = $('#nameField').val();
 var messageStr = $('#messageField').val();
 var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
@@ -533,14 +533,61 @@ function validateAll() {
         //alert('PASS!!!');
       return true;
     };
+}; */
+var emailStr = $('#emailField').val();
+var nameStr = $('#nameField').val();
+var messageStr = $('#messageField').val();
+var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
+function blankCheck() {
+    if (emailStr == '' || nameStr == '' || messageStr == '') {
+      return true;
+    } else {
+      return false;
+    };
+};
+function validateAll() {
+    if (!blankCheck() && regex.test(emailStr).val()) {
+        alert('PASS!!!');
+        $('.submit').val("SENDING...");
+      return true;
+    } else {
+        $('.submitButton').css('background-color', 'red');
+        alert('FAIL!!!');
+      return false;
+    };
 };
 $(".submit").click(function() {
-        if (validateAll() === true) {
+    blankCheck();
+    validateAll();
+});
+    /* var emailStr = $('#emailField').val();
+    var nameStr = $('#nameField').val();
+    var messageStr = $('#messageField').val();
+    var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
+    function validateAll() {
+        if (blankCheck() || regex.test(emailStr)) {
+            alert('PASS!!!');
+          return true;
+        } else {
+            alert('PASS!!!');
+          return false;
+        };
+    };
+    function blankCheck() {
+        if (emailStr || nameStr || messageStr) {
+          return true;
+        } else {
+          return false;
+        };
+    }; */
+    //validateAll();
+        /*if (validateAll()) {
             $('.submitButton').style('background-color', 'red');
         } else {
             $('.submit').val("SENDING...");
-        };
-    });
+        };*/
+    //});
+
 /* $(".submit").click(function(){
     if (!validateAll() === true) {
         //$('.submit').prop('disabled',true);
