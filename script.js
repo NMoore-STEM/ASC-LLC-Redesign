@@ -241,7 +241,7 @@ $(document).ready(function(){
           //$bar02.removeClass('animation_final')
         }
     });  */
-}
+};
 //This method is working, HOWEVER!, it is applying the addClass to all similar elements at once
 //ATTEMPT 02
 /*var $bar01 = $('#title01');
@@ -365,12 +365,12 @@ $(document).ready(function(){
         }
     });
     $('.submit').focusin(function() {
-        $('.submitButton').css({'outline':'2px solid blueviolet','outline-offset':'7px'})
+        $('.submitButton').css({'outline':'1px solid blueviolet','outline-offset':'7px'})
     });
     $('.submit').focusout(function() {
         $('.submitButton').removeAttr('style');
     });
-
+});
 //----------------------------------------------------------------//
 //----   Attempt to keep label above text field if content is entered, 
 //----   if not, then label reverts to initial position  
@@ -486,7 +486,7 @@ $(document).ready(function() {
 
 
 //============  Unified verification code below ==================
-function nameVerify() {
+/* function nameVerify() {
     if (!$('#nameField').val()) {
         return false;
     }
@@ -512,19 +512,40 @@ function clickGate() {
     if (nResult == false || eResult == false || mResult == false) {
         //<<button "shake" animation here>>
     } else { //<<full submit form actions and animations here>> }
+}; */
+//var emailF = $('#emailField');
+var emailStr = $('#emailField').val();
+var nameStr = $('#nameField').val();
+var messageStr = $('#messageField').val();
+var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
+function blankCheck() {
+    if (emailStr == '' || nameStr == '' || messageStr == '') {
+      return false;
+    } else {
+      return true;
+    };
 };
-//=============  ATTEMPT to unify verification above =================
-
-
-    // UX button click feedback for contact page
-    $(".submit").click(function(){
-        //var $change = $('.formContainer', '.contactForm', '#nameLabel', '#emailLabel', '#messageLabel');
-        //$(".contactForm").addClass("sending_bg");
-        //$("label").addClass("sending_bg");
-        //$(".formContainer", ".contactForm", "#nameLabel", "#emailLabel", "#messageLabel").css("background-color","#777676");
-        //$(".formContainer").css("background-color","#777676");
-        //$change.css("background-color","#777676");
-        //$('.willChangeJQ').css("background-color","#777676");
+function validateAll() {
+    if (blankCheck== false || regex.test(emailStr)== false) {
+        //alert('FAIL!!!');
+      return false;
+    } else {
+        //alert('PASS!!!');
+      return true;
+    };
+};
+$(".submit").click(function() {
+        if (validateAll() === true) {
+            $('.submitButton').style('background-color', 'red');
+        } else {
+            $('.submit').val("SENDING...");
+        };
+    });
+/* $(".submit").click(function(){
+    if (!validateAll() === true) {
+        //$('.submit').prop('disabled',true);
+        //shake/denial animation
+        //$('.submit').prop('disabled',false)
         $('.submit').val("SENDING...");
         $('.willChangeJQ').css("background-color","#B7ACCD");
         $('.submitButton').addClass("darken");
@@ -547,7 +568,46 @@ function clickGate() {
             $(".submitButton").removeClass("darken");
             $(".submitButton").removeClass("sent");
         }, 5100);
-    });
+    }else{
+        $('input[type=submit]').prop('disabled', true);
+    }
+});*/
+
+//=============  ATTEMPT to unify verification above =================
+
+
+    // UX button click feedback for contact page
+    //$(".submit").click(function(){
+        //var $change = $('.formContainer', '.contactForm', '#nameLabel', '#emailLabel', '#messageLabel');
+        //$(".contactForm").addClass("sending_bg");
+        //$("label").addClass("sending_bg");
+        //$(".formContainer", ".contactForm", "#nameLabel", "#emailLabel", "#messageLabel").css("background-color","#777676");
+        //$(".formContainer").css("background-color","#777676");
+        //$change.css("background-color","#777676");
+        //$('.willChangeJQ').css("background-color","#777676");
+        /* $('.submit').val("SENDING...");
+        $('.willChangeJQ').css("background-color","#B7ACCD");
+        $('.submitButton').addClass("darken");
+        $(".load_outline3").addClass("loading");
+        setTimeout(function(){
+            $(".load_outline2").addClass("loading2")}, 500);
+        setTimeout(function(){
+            $(".load_outline").addClass("loading3")}, 500);
+        setTimeout(function(){
+            $(".submit").val("SENT");
+            //$(".willMoveJQ").css('transform','translateX(60px)');
+            $(".willMoveJQ").css('animation','form_left 0.5s ease-in forwards');
+            $('.submitButton').css('background-color','white');
+            $('.submit').css({'color':'#553692','font-size':'20pt','pointer-events':'none','cursor':'not-allowed'});
+        }, 5000);
+        setTimeout(function(){
+            //$(".willMoveJQ").css('transform','translateX(-700px)');
+            //$('.submit').off('click');
+            $(".submitButton").removeClass("loading");
+            $(".submitButton").removeClass("darken");
+            $(".submitButton").removeClass("sent");
+        }, 5100);
+    }); */
 
     // Slightly different general button click feedback for MOBILE and FULL
     /* $(".contactButton").click(function(){
@@ -571,7 +631,7 @@ function clickGate() {
     $(function(){
         $(".contactForm").submit(function(e){
             e.preventDefault();
-            var href = $(this).attr("action");
+            /*var href = $(this).attr("action");
             $.ajax({
                 type: "POST",
                 dataType: "json",
@@ -585,7 +645,6 @@ function clickGate() {
                         //window.location.href = 'thanks.html';
                     }
                 }
-            });
+            }); */
         });
     });
-});
