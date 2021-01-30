@@ -13,13 +13,16 @@ $(function() {
           required: true,
           // Specify that email should be validated
           // by the built-in "email" rule
-          email: true
+          email: true,
+          regex: /^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i
         },
       },
       // Specify validation error messages
       messages: {
         name: "Please enter your name",
-        email: "Please enter a valid email address"
+        email: {
+          regex: "Please enter a valid email address"
+        }
       },
       // Make sure the form is submitted to the destination defined
       // in the "action" attribute of the form when valid

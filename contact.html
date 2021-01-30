@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASC LLC</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&family=Exo+2&family=Noto+Sans+KR:wght@500&family=Ubuntu:wght@500&family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&family=Exo+2&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg">
     <script src="jquery-3.5.1.js"></script>
     <script src="script.js"></script>
@@ -47,7 +48,7 @@
             <!--<form class=contactForm action="contact.php" method=POST enctype="multipart/form-data" name=contactASC>-->
         <!--Need to add action="https://formspree.io/f/xleozrbe" below to make funcional, disabled through dev process-->
         <!--Or for FormCarry use action="https://formcarry.com/s/_e7pm-Gb5q"-->
-            <form class="contactForm willChangeJQ" action="" method=POST enctype="multipart/form-data" name=contactASC>
+            <form class="contactForm willChangeJQ" action="#" method=POST enctype="multipart/form-data" name=contactASC>
                 <div class="nameContainer willMoveJQ">
                     <label id=nameLabel class=willChangeJQ for=nameField>Name:</label>
                     <input id=nameField class=inputField type=text name=name inputmode=text size=40 autocomplete=off required>
@@ -55,21 +56,20 @@
                 <br>
                 <div class="emailContainer willMoveJQ">
                     <label id=emailLabel class=willChangeJQ for=emailField >Email:</label>
-                    <input id=emailField class=inputField type=email name=email inputmode=email size=100% autocomplete=off required pattern="^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b">
+                    <input id=emailField class=inputField type=email name=email inputmode=email size=100% autocomplete=off required="true" pattern="^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b">
+                    <!--regex developed/tested with tool at https://regexr.com/-->
                 </div>
                 <br>
                 <div class="messageContainer willMoveJQ">
                     <label id=messageLabel class=willChangeJQ for=messageField>Message:</label>
                     <textarea id=messageField class=inputField name=message rows=10 cols=50 autocomplete=off required></textarea>
                 </div>
-                <!--Attempt at submitted form redirect NOT going to formspree website-->
-                <input type="hidden" name="_next" value="https://stackoverflow.com/questions/40831948/making-the-next-option-work-in-formspree?noredirect=1&lq=1" />
                 <!--Hidden bot trap security device-->
                 <label for=botCatfish class=botCatfish>Fellow Humans, please refrain from entering any characters in this field.</label>
                 <input name=botCatfish id=botCatfish class=botCatfish>
                 <div class=submitButton>
                     <!-- NOTE: use SVGGeometryElement.getTotalLength() in console to measure paths-->
-                    <svg class=svg_border version="1.1" xmlns="http://www.w3.org/2000/svg" 	xmlns:xlink="http://www.w3.org/1999/xlink" x="4px" y="2px" viewBox="0 0 464 86"	xml:space="preserve" preserveAspectRatio="none">
+                    <svg class=svg_border x="4px" y="2px" viewBox="0 0 464 86" preserveAspectRatio="none">
                         <defs>
                             <linearGradient id="white_glow" x1="0%" y1="0%" x2="100%" y2="0%">
                               <stop offset="0%"   stop-color="white"/>
