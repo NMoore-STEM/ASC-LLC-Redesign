@@ -81,18 +81,41 @@ $(document).ready(function(){
                     $(".load_outline").addClass("loading3")}, 500);
                 setTimeout(function(){
                     $(".submit").val("SENT");
+                    //Original method - all fields with class moved at the same time
                     //$(".willMoveJQ").css('transform','translateX(60px)');
-                    $(".willMoveJQ").css('animation','form_left 0.5s ease-in forwards');
+                    //Might strike below - JSvanilla approach
+                    /*for (var i=0;i<3,i++) {
+                        (function(i){
+                            setTimeout(function(){
+                            $("form > div").slice(0,3).css('animation','form_left 0.5s ease-in forwards');
+                        }(i)
+                    };*/
+                    //Staggered input field exit animation- Jquery approach - tested and works
+                    $("form > div").each(function(i){
+                        setTimeout(function(){
+                            $("form > div").slice(0,3).eq(i).css('animation','form_left 0.5s ease-in forwards')
+                        }, i*60);
+                    });
                     $('.submitButton').css('background-color','white');
                     $('.submit').css({'color':'#553692','font-size':'20pt','pointer-events':'none','cursor':'not-allowed'});
                 }, 5000);
                 setTimeout(function(){
                     //$(".willMoveJQ").css('transform','translateX(-700px)');
                     //$('.submit').off('click');
-                    $(".submitButton").removeClass("loading");
-                    $(".submitButton").removeClass("darken");
-                    $(".submitButton").removeClass("sent");
-                }, 5100);
+                    $(".submitButton").removeClass("loading darken sent").css({'height':'30px','animation':'form_left 0.5s ease-in forwards'});
+
+                    //$(".submitButton").removeClass("darken");
+                    //$(".submitButton").removeClass("sent");
+                }, 5700);
+                setTimeout(function(){
+                    $('.contactForm').css({'max-height':'35vh','background-color':'whitesmoke'});
+                }, 6000);
+                setTimeout(function(){
+                    $('.thankYou').css('animation','form_left 0.5s ease-in forwards');
+                }, 6200);
+                setTimeout(function(){
+                    $('.thankYou-sub').css('animation','form_left 0.5s ease-in forwards');
+                }, 6400);
                 //$('.submitButton').css({'background-color':'green'});
             return true;
             } else {
