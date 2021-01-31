@@ -56,7 +56,7 @@ $(document).ready(function(){
     var messageStr = $('#messageField').val();
     var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
     function blankCheck() {
-        if (emailStr || nameStr || messageStr) {
+        if (emailStr && nameStr && messageStr) {
             alert('blankCheck PASS!!!');
         return true;
         } else {

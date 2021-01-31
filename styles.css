@@ -50,13 +50,21 @@ i {
     text-align: center;
 }
 /*=========================================================*/
-/*-----------------   CONTACT general   -------------------*/
+/*-----------------   CONTACT global   -------------------*/
 .formContainer {
     overflow: hidden;
 }
 .contactTitle {
     display: block;
     background-color:#553692;
+}
+.contactTitle h1 {
+    font-size: 22pt;
+    color: #9D90C5;
+    font-family: 'Spartan', sans-serif;
+    text-align: center;
+    padding: 30px 20px 30px;
+    margin: 0;
 }
 .nameContainer, .emailContainer, .messageContainer {
     display: block;
@@ -76,7 +84,22 @@ label {
     color: black;
     background-color: whitesmoke;
     padding: 0 5px 0;
-    transition: background-color 2s ease, all 0.2s ease;
+    transition: background-color 2s ease, margin-top 0.2s ease;
+}
+.labelActive {
+    margin-top: -23px;
+    transition: margin-top 0.3s ease-out, background-color 1.2s ease;
+}
+#nameField, #emailField, #messageField {
+    width: 99%;
+}
+input {
+    display: block;
+    border: none;
+	overflow: hidden;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
+	background-color: transparent;
 }
 input:-moz-ui-invalid, textarea:-moz-ui-invalid {
     box-shadow: none;
@@ -88,6 +111,13 @@ input:-moz-ui-invalid, textarea:-moz-ui-invalid {
 input:-moz-ui-invalid {
     border-bottom: solid 2px red;
     background-position: right;
+}
+textarea {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 18px;
+    border: none;
+    width: 99%;
+    background-color: transparent;
 }
 textarea:-moz-ui-invalid {
     border-top: solid 2px red;
@@ -113,7 +143,7 @@ textarea:-moz-ui-invalid {
     cursor: pointer;
     position: relative;
     z-index: 3;
-    min-width: 300px;
+    /*min-width: 300px;*/
     margin: 0;
     padding: 15px 50px;
     /*color: #9D90C5;
@@ -213,9 +243,9 @@ textarea:-moz-ui-invalid {
     background: gray !important;
     background-color: gray;
 }*/
-.sent {
+/*.sent {
     content: "SENT";
-}
+}*/
 .svg_border {
     position: absolute;
     height: 100%;
@@ -223,7 +253,7 @@ textarea:-moz-ui-invalid {
     /*transition: all ease 0.2s;*/
 }
 .willChangeJQ {
-    transition: background-color ease 2s;
+    transition: background-color 2s ease, margin-top 0.2s ease;;
 }
 .darken {
     /*background-color: #16142D;*/
@@ -819,36 +849,37 @@ section {
     background-color: whitesmoke;
     padding: 0 5px 0;
 }*/
-#nameLabel {
+/*#nameLabel {
     transition: all 0.2s ease;
-}
-#nameField {
+}*/
+/*#nameField {
     width: 95%;
 }
 #emailField {
-    width: 95%;
-}
-.labelActive {
+    width: 99%;
+}*/
+/*.labelActive {*/
     /*margin-top: -18px;*/
-    margin-top: -4.2vw;
-    transition: margin-top 0.2s ease, background-color 1.2s ease;
-}
-input {
+    /*margin-top: -4.2vw;*/
+    /*margin-top: -23px;
+    transition: margin-top 0.3s ease-out, background-color 1.2s ease;
+}*/
+/*input {
     display: block;
     border: none;
 	overflow: hidden;
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
 	background-color: transparent;
-}
-textarea {
+}*/
+/*textarea {
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
     border: none;
     width: 95%;
     background-color: transparent;
-}
-#submitContact {
+}*/
+/*#submitContact {
     display: grid;
     height: 40px;
     width: 140px;
@@ -857,7 +888,7 @@ textarea {
     background-color:#553692;
     text-align: center;
     align-content: center;
-}
+}*/
 .spacer2 {
     height: 80px;
     background-color: transparent;
@@ -1869,14 +1900,14 @@ footer {
     display: block;
     background-color:#553692;
 }*/
-.contactTitle h4 {
-    /*font-size: 18pt;*/
+/*.contactTitle h1 {
+    font-size: 18pt;
     color: #9D90C5;
-    /*font-family: 'Spartan', sans-serif;*/
+    font-family: 'Spartan', sans-serif;
     text-align: center;
     padding: 30px 20px 30px;
-    /*margin: 0;*/
-}
+    margin: 0;
+}*/
 .contactForm {
     display: flex;
     flex-direction: column;
@@ -1904,32 +1935,33 @@ footer {
     padding: 0 5px 0;
     transition: all 0.2s ease;
 }*/
-.labelActive {
-    margin-top: -22px;
-    transition: all 0.2s ease;
-}
+/*.labelActive {
+    margin-top: -23px;
+    transition: margin-top 0.3s ease-out;
+}*/
+/*Below code for trying to reduce blur on animation*/
 #nameLabel, #emailLabel, #messageLabel {
     display: inline-table;
     transform-style: flat;
     transform: perspective(1px) scale(1) translateZ(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
-    transition: all 0.2s ease;
+    transition: background-color 2s ease, margin-top 0.2s ease;
 }
-#nameField {
+/*#nameField {
     width: 99%;
 }
 #emailField {
     width: 99%;
-}
-input {
+}*/
+/*input {
     display: block;
     border: none;
     overflow: hidden;
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
     background-color: transparent;
-}
+}*/
 /* BUILT-IN ERROR STYLES - CANNOT USE WHILE "novalidate" is in form HTML
 /*Duplicate code below - can DELETE later (in global styles)
 input:-moz-ui-invalid, textarea:-moz-ui-invalid {
@@ -1981,32 +2013,32 @@ textarea:-moz-ui-invalid {
     padding: 10px;
     margin-bottom: 2vw;
 }*/
-textarea {
+/*textarea {
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
     border: none;
     width: 99%;
     background-color: transparent;
-}
-#submitContact {
+}*/
+/*#submitContact {
     max-width: 20vw;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
-}
-.submitButton {
+}*/
+/*.submitButton {*/
     /*padding: 15px;*/
-    display: flex;
-    width: 100%;
-    align-self: center;
+    /*display: flex;*/
+    /*width: 100%;*/
+    /*align-self: center;
     justify-content: center;
-}
-.submitButton > .footerButton {
+}*/
+/*.submitButton > .footerButton {
     margin: 0;
-}
-.submit {
+}*/
+/*.submit {
     width: 100%;
-}
+}*/
 /*======================================================================*/
 /*=======================   RESTRICTED AREA FULL   =====================*/
 /*======================================================================*/
