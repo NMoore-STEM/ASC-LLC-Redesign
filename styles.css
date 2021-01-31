@@ -66,6 +66,10 @@ i {
     padding: 30px 20px 30px;
     margin: 0;
 }
+.contactForm {
+    background: whitesmoke;
+    position: relative;
+}
 .nameContainer, .emailContainer, .messageContainer {
     display: block;
     border: solid 1px black;
@@ -252,8 +256,9 @@ textarea:-moz-ui-invalid {
     width: 100%;
     /*transition: all ease 0.2s;*/
 }
+/*Might be able to move "willChange" solely to class "contactForm"*/
 .willChangeJQ {
-    transition: background-color 2s ease, margin-top 0.2s ease;;
+    transition: background-color 2s ease, margin-top 0.2s ease, max-height 0.5s ease;
 }
 .darken {
     /*background-color: #16142D;*/
@@ -272,18 +277,27 @@ textarea:-moz-ui-invalid {
 /* ----  Post-Submit Thank You transition/page ----- */
 #ty {
     display: flex;
+    position: absolute;
+    top: 90px;
+    left: 80vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 60vw;
 }
 .thankYou {
+    position: absolute;
     color:rgb(65, 45, 103);
     font-size: 35pt;
     margin-top: 60px;
+    white-space: break-spaces;
+    -webkit-white-space: break-spaces;
+    text-align: center;
 }
-#ty h3 {
-    color:rgb(86, 54, 148)
+.thankYou-sub {
+    position: absolute;
+    top: 120px;
+    color:rgb(86, 54, 148);
 }
 /*=====================================================================*/
 /*------------------  RESTRICTED - General ----------------------------*/
@@ -820,8 +834,10 @@ section {
 }
 .contactForm {
     display: block;
-    background: whitesmoke;
+    /*background: whitesmoke;*/
     /*height: 520px;*/
+    /*max-height used to transition with JS animations*/
+    max-height: 70vh;
     max-width: 80vw;
     padding: 30px 30px 0;
 }
@@ -1911,7 +1927,9 @@ footer {
 .contactForm {
     display: flex;
     flex-direction: column;
-    background: whitesmoke;
+    /*background: whitesmoke;*/
+/*Max-height included for smooth JS animation*/
+    max-height: 60vh;
     padding: 40px 10vw;
     margin: 0 auto 0;
     max-width: 60vw;
@@ -2039,6 +2057,9 @@ textarea:-moz-ui-invalid {
 /*.submit {
     width: 100%;
 }*/
+.thankYou {
+    max-width: 50vw;
+}
 /*======================================================================*/
 /*=======================   RESTRICTED AREA FULL   =====================*/
 /*======================================================================*/
