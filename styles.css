@@ -54,6 +54,30 @@ i {
 .formContainer {
     overflow: hidden;
 }
+.contactTitle {
+    display: block;
+    background-color:#553692;
+}
+.nameContainer, .emailContainer, .messageContainer {
+    display: block;
+    border: solid 1px black;
+    padding: 10px;
+    margin-bottom: 25px;
+    transition: all 0.2s ease;
+}
+.nameContainer, .emailContainer {
+    max-width: 360px;
+}
+label {
+    display: block;
+    position: absolute;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: whitesmoke;
+    padding: 0 5px 0;
+    transition: background-color 2s ease, all 0.2s ease;
+}
 input:-moz-ui-invalid, textarea:-moz-ui-invalid {
     box-shadow: none;
     background-image: url('images/error_x_icon.svg');
@@ -83,6 +107,7 @@ textarea:-moz-ui-invalid {
     -ms-transform: translate3d(0,0,0);
     -o-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    transition: all 0.16s ease;
 }
 .submit {
     cursor: pointer;
@@ -197,8 +222,8 @@ textarea:-moz-ui-invalid {
     width: 100%;
     /*transition: all ease 0.2s;*/
 }
-.willChangeJQ, label .willChangeJQ {
-    transition: background-color ease 2s !important;
+.willChangeJQ {
+    transition: background-color ease 2s;
 }
 .darken {
     /*background-color: #16142D;*/
@@ -758,19 +783,19 @@ section {
     background: transparent;
 }
 .contactTitle {
-    display: block;
+    /*display: block;*/
     /*height: 75px;*/
-    background-color:#553692;
-    margin-top: 150px;
+    /*background-color:#553692;*/
+    margin-top: 130px;
 }
 .contactForm {
     display: block;
     background: whitesmoke;
     /*height: 520px;*/
     max-width: 80vw;
-    padding: 30px;
+    padding: 30px 30px 0;
 }
-.nameContainer, .emailContainer {
+/*.nameContainer, .emailContainer {
 	border: solid 1px black;
     padding: 2vw;
     max-width: 360px;
@@ -778,14 +803,14 @@ section {
 .messageContainer {
 	border: solid 1px black;
     padding: 2vw;
-}
+}*/
 /*.focusActive {
     border: solid 1px blueviolet;
     scale: 1.02;
     box-shadow: 1px 1px 3px blueviolet;
     transition: scale 0.2s ease;
 }*/
-label {
+/*label {
     display: block;
     position: absolute;
     font-family: 'Exo 2', sans-serif;
@@ -793,7 +818,7 @@ label {
     color: black;
     background-color: whitesmoke;
     padding: 0 5px 0;
-}
+}*/
 #nameLabel {
     transition: all 0.2s ease;
 }
@@ -1840,17 +1865,17 @@ footer {
     /*height: calc(80vh - 250px);*/
     min-height: 400px;
 }
-.contactTitle {
+/*.contactTitle {
     display: block;
     background-color:#553692;
-}
+}*/
 .contactTitle h4 {
-    font-size: 18pt;
+    /*font-size: 18pt;*/
     color: #9D90C5;
-    font-family: 'Spartan', sans-serif;
+    /*font-family: 'Spartan', sans-serif;*/
     text-align: center;
-    padding: 20px 20px 20px;
-    margin: 0;
+    padding: 30px 20px 30px;
+    /*margin: 0;*/
 }
 .contactForm {
     display: flex;
@@ -1864,15 +1889,12 @@ footer {
 
 }*/
 .nameContainer, .emailContainer, .messageContainer {
-    display: block;
-    border: solid 1px black;
-    padding: 10px;
-    margin-bottom: 2vw;
+    margin-bottom: 30px;
 }
-.nameContainer, .emailContainer {
+/*.nameContainer, .emailContainer {
     max-width: 360px;
-}
-label {
+}*/
+/*label {
     display: block;
     position: absolute;
     font-family: 'Exo 2', sans-serif;
@@ -1880,7 +1902,8 @@ label {
     color: black;
     background-color: whitesmoke;
     padding: 0 5px 0;
-}
+    transition: all 0.2s ease;
+}*/
 .labelActive {
     margin-top: -22px;
     transition: all 0.2s ease;

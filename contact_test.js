@@ -70,9 +70,10 @@ $(document).ready(function(){
             if (blankCheck() && regex.test(emailStr)) {
                 alert('vA PASS!!!');
                 $('.submit').val("SENDING...");
+                $('.submit').blur();
     //INSERTED FULL ANIMATION (THUS FAR)================================
                 $('.willChangeJQ').css("background-color","#B7ACCD");
-                $('.submitButton').addClass("darken");
+                $('.submitButton').addClass("darken").removeAttr('style');
                 $(".load_outline3").addClass("loading");
                 setTimeout(function(){
                     $(".load_outline2").addClass("loading2")}, 500);
