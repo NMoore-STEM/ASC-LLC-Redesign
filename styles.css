@@ -274,29 +274,29 @@ textarea:-moz-ui-invalid {
     60% { transform: translateX(70px); }
     100% { transform: translateX(-1000px); }
 }
+/*@keyframes ty_left {
+    1% { transform: translateX(-50vw);}
+    100% { transform: translateX(-60vw);}
+}*/
 /* ----  Post-Submit Thank You transition/page ----- */
 #ty {
     display: flex;
     position: absolute;
-    top: 90px;
-    left: 80vw;
+    top: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60vw;
 }
 .thankYou {
-    position: absolute;
+    position: relative;
     color:rgb(65, 45, 103);
     font-size: 35pt;
-    margin-top: 60px;
     white-space: break-spaces;
     -webkit-white-space: break-spaces;
     text-align: center;
 }
 .thankYou-sub {
-    position: absolute;
-    top: 120px;
+    position: relative;
     color:rgb(86, 54, 148);
 }
 /*=====================================================================*/
@@ -840,6 +840,20 @@ section {
     max-height: 70vh;
     max-width: 80vw;
     padding: 30px 30px 0;
+}
+#ty {
+    width: 88vw;
+    left: 88vw;
+    height: 290px;
+}
+.thankYou {
+    max-width: 80vw;
+    font-size: 22pt;
+    margin-top: -40px;
+}
+@keyframes ty_left01 {
+    1% { transform: translateX(-76vw); }
+    100% { transform: translateX(-88vw); }
 }
 /*.nameContainer, .emailContainer {
 	border: solid 1px black;
@@ -2057,9 +2071,22 @@ textarea:-moz-ui-invalid {
 /*.submit {
     width: 100%;
 }*/
+#ty {
+    width: 60vw;
+    left: 60vw;
+    height: 46vh;
+}
 .thankYou {
     max-width: 50vw;
 }
+.thankYou-sub {
+    margin-left: 5vw;
+}
+@keyframes ty_left02 {
+    1% { transform: translateX(-50vw);}
+    100% { transform: translateX(-60vw);}
+}
+
 /*======================================================================*/
 /*=======================   RESTRICTED AREA FULL   =====================*/
 /*======================================================================*/
