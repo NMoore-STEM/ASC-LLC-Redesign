@@ -1,9 +1,15 @@
 //TEST JS FILE - USED TO DEBUG SCRIPT USED ON CONTACT PAGE OF ASC REVAMP
 
 //--------- UI FORM BEHAVIOR
+var emailStr = $('#emailField').val();
+var nameStr = $('#nameField').val();
+var messageStr = $('#messageField').val();
 $(document).ready(function(){
     var fA = 'focusActive';
     var lA = 'labelActive';
+    //var emailStr = $('#emailField').val();
+    //var nameStr = $('#nameField').val();
+    //var messageStr = $('#messageField').val();
     if ($('#nameField').val() != ''){
         $('#nameLabel').addClass(lA);
     };
@@ -15,6 +21,9 @@ $(document).ready(function(){
         $('.nameContainer').removeClass(fA);
         if (!$('#nameField').val()) {
             $('#nameLabel').removeClass(lA);
+        } else {
+            alert('Name not blank01');
+            return true;
         }
     });
     if ($('#emailField').val() != ''){
@@ -28,6 +37,9 @@ $(document).ready(function(){
         $('.emailContainer').removeClass(fA);
         if (!$('#emailField').val()) {
             $('#emailLabel').removeClass(lA);
+        } else {
+            alert('Email not blank01');
+            return true;
         }
     });
     if ($('#messageField').val() != ''){
@@ -41,6 +53,9 @@ $(document).ready(function(){
         $('.messageContainer').removeClass(fA);
         if (!$('#messageField').val()) {
             $('#messageLabel').removeClass(lA);
+        } else {
+            alert('Message not blank01');
+            return true;
         }
     });
     $('.submit').focusin(function() {
@@ -51,12 +66,12 @@ $(document).ready(function(){
     });
 
     //------------  FORM VERIFICATION/SUBMISSION/& resulting animation
-    var emailStr = $('#emailField').val();
-    var nameStr = $('#nameField').val();
-    var messageStr = $('#messageField').val();
+    //var emailStr = $('#emailField').val();
+    //var nameStr = $('#nameField').val();
+    //var messageStr = $('#messageField').val();
     var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
     function blankCheck() {
-        if (emailStr && nameStr && messageStr) {
+        if ($(emailStr) && $(nameStr) && $(messageStr)) {
             alert('blankCheck PASS!!!');
         return true;
         } else {
@@ -67,7 +82,7 @@ $(document).ready(function(){
     $(".contactForm").submit(function(e){
         function validateAll() {
             //blankCheck();
-            if (blankCheck() && regex.test(emailStr)) {
+            if (blankCheck() && regex.test($('#emailField').val())) {
                 alert('vA PASS!!!');
                 $('.submit').val("SENDING...");
                 $('.submit').blur();
@@ -111,10 +126,18 @@ $(document).ready(function(){
                     $('.contactForm').css({'max-height':'35vh','background-color':'whitesmoke'});
                 }, 6000);
                 setTimeout(function(){
-                    $('.thankYou').css('animation','form_left 0.5s ease-in forwards');
+                    if ($(window).width() <= 770) {
+                    $('.thankYou').css('animation','ty_left01 1s linear forwards');
+                    } else {
+                        $('.thankYou').css('animation','ty_left02 1s linear forwards');
+                    }
                 }, 6200);
                 setTimeout(function(){
-                    $('.thankYou-sub').css('animation','form_left 0.5s ease-in forwards');
+                    if ($(window).width() <= 770) {
+                    $('.thankYou-sub').css('animation','ty_left01 1.2s ease-in forwards');
+                    } else {
+                        $('.thankYou-sub').css('animation','ty_left02 0.8s ease-in forwards');
+                    }
                 }, 6400);
                 //$('.submitButton').css({'background-color':'green'});
             return true;
@@ -125,21 +148,23 @@ $(document).ready(function(){
             };
         };
         validateAll();
-        e.preventDefault();
-        //var href = $('.contactForm').attr("action");
-        /*$.ajax({
-            type: "POST",
-            dataType: "json",
-            url: href,
-            data: $('.contactForm').serialize(),
-            success: function(response){
-                if(response.status == "success"){
-                    window.location.href = 'thanks.html'; // change this. 
-                }else{
-                    alert("An error occured: " + response.message);
-                    //window.location.href = 'thanks.html';
+        $.when(validateAll).done(function(){
+            e.preventDefault();
+            //var href = $('.contactForm').attr("action");
+            /*$.ajax({
+                type: "POST",
+                dataType: "json",
+                url: href,
+                data: $('.contactForm').serialize(),
+                success: function(response){
+                    if(response.status == "success"){
+                        window.location.href = 'thanks.html'; // change this. 
+                    }else{
+                        alert("An error occured: " + response.message);
+                        //window.location.href = 'thanks.html';
+                    }
                 }
-            }
-        });*/
+            });*/
+        });
     });
 });
