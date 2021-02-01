@@ -148,6 +148,7 @@ textarea:-moz-ui-invalid {
     position: relative;
     z-index: 3;
     /*min-width: 300px;*/
+    width: 100%;
     margin: 0;
     padding: 15px 50px;
     /*color: #9D90C5;

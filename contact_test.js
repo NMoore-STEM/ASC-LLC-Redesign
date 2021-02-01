@@ -21,9 +21,6 @@ $(document).ready(function(){
         $('.nameContainer').removeClass(fA);
         if (!$('#nameField').val()) {
             $('#nameLabel').removeClass(lA);
-        } else {
-            alert('Name not blank01');
-            return true;
         }
     });
     if ($('#emailField').val() != ''){
@@ -37,9 +34,6 @@ $(document).ready(function(){
         $('.emailContainer').removeClass(fA);
         if (!$('#emailField').val()) {
             $('#emailLabel').removeClass(lA);
-        } else {
-            alert('Email not blank01');
-            return true;
         }
     });
     if ($('#messageField').val() != ''){
@@ -53,9 +47,6 @@ $(document).ready(function(){
         $('.messageContainer').removeClass(fA);
         if (!$('#messageField').val()) {
             $('#messageLabel').removeClass(lA);
-        } else {
-            alert('Message not blank01');
-            return true;
         }
     });
     $('.submit').focusin(function() {
@@ -123,6 +114,7 @@ $(document).ready(function(){
                     //$(".submitButton").removeClass("sent");
                 }, 5700);
                 setTimeout(function(){
+                    $(document).scrollTop(0);
                     $('.contactForm').css({'max-height':'35vh','background-color':'whitesmoke'});
                 }, 6000);
                 setTimeout(function(){
@@ -140,11 +132,12 @@ $(document).ready(function(){
                     }
                 }, 6400);
                 //$('.submitButton').css({'background-color':'green'});
-            return true;
+            //return true;
             } else {
+                //Below is to give test users feedback
                 $('.submitButton').css({'background-color':'red'});
                 alert('validateAll FAIL!!!');
-            return false;
+            //return false;
             };
         };
         validateAll();
