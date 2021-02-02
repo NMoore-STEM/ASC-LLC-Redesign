@@ -200,20 +200,22 @@ textarea:-moz-ui-invalid {
     transition: opacity ease-out 0.4s, scale ease-out 0.2s;
 }*/
 .loading {
-    animation: load 2s linear 2;
+    animation: load 1.8s linear 3;
     transition: all ease 0.3s;
 }
 .loading2 {
-    animation: load2 1.8s linear 2;
+    animation: load2 1.8s linear 3;
 }
 .loading3 {
-    animation: load3 1.8s linear 2;
+    animation: load3 1.8s linear 3;
 }
 
 @keyframes load {
-    40% { stroke-dashoffset: 0; }
+    0% { stroke-dashoffset: 1084;stroke-dasharray: 0 1084; }
+    15% { stroke-dashoffset: 1400;stroke-dasharray: 600 1084; }
+    /*40% { stroke-dashoffset: 1500;stroke-dasharray: 1200 1084; }*/
     99% { opacity: 0.5; }
-    100% {stroke-dashoffset: 0; }
+    100% {stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
 }
 /* @keyframes load2 {
     30% {stroke-dashoffset: 980;stroke-dasharray: 200 884;}
@@ -226,7 +228,7 @@ textarea:-moz-ui-invalid {
 }*/
 @keyframes load2 {
     0% { stroke-dashoffset: 1084;stroke-dasharray: 0 1084; }
-    15% { stroke-dashoffset: 1500;stroke-dasharray: 300 1084; }
+    15% { stroke-dashoffset: 1200;stroke-dasharray: 300 1084; }
     90% { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
 }
 /* top layer below */
@@ -621,10 +623,10 @@ section {
     font-size: 20px;
     color: white;
 }
-.sectionTitle h2 {
-    /*width: 70vw;
-    padding: 15vw;*/
-}
+/* .sectionTitle h2 {
+    width: 70vw;
+    padding: 15vw;
+} */
 #whyContent {
     max-width: calc(100vw - 9vw);
     /*max-width: inherit;*/
@@ -995,9 +997,9 @@ section {
     flex-wrap: wrap;
     justify-content: center;
 }
-#soft_skills h3 {
-    /*width: 80vw;*/
-}
+/* #soft_skills h3 {
+    width: 80vw;
+} */
 #soft_skills h2 {
     /*margin-top: 80px;
     margin-left: -8vw;*/
@@ -1710,15 +1712,15 @@ section {
     font-size: 14pt;
 
 }
-.service_group ul {
-    /*flex: 4 3 auto;*/
-    /*flex: 0 3 60vw;*/
-    /*flex: 0 60vw;*/
-    /*width: inherit;*/
-    /*border-top: 2px solid;*/
-    /*width: 60vw;*/
-    /*padding-inline-start: 60px;*/
-}
+/* .service_group ul {
+    flex: 4 3 auto;
+    flex: 0 3 60vw;
+    flex: 0 60vw;
+    width: inherit;
+    border-top: 2px solid;
+    width: 60vw;
+    padding-inline-start: 60px;
+} */
 .subtext {
     max-width: 600px;
     font-family: "Exo", sans-serif;
@@ -2288,9 +2290,9 @@ sub {
     max-width: 45vw;
     /*justify-content: space-evenly;*/
 }
-#soft_skills h3 {
-    /*width: 80vw;*/
-}
+/*#soft_skills h3 {
+    width: 80vw;
+}*/
 #soft_skills h2 {
     /*margin-top: 80px;
     margin-left: -8vw;*/
@@ -2371,7 +2373,7 @@ ul{
 }
 #portfolio h3 {
     font-size: 28pt;
-    font-family: ;
+    /* font-family: ; */
     margin-bottom: -20px;
     margin-left: 3.5vw;
     padding: 0;
@@ -2550,9 +2552,9 @@ em {
 }
 .item_title {
     display: block;
-    font-family: ;
+    /* font-family: ;
     font-size: ;
-    color: ;
+    color: ; */
 }
 }
 

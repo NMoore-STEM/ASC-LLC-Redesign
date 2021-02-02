@@ -81,10 +81,12 @@ $(document).ready(function(){
                 $('.willChangeJQ').css("background-color","#B7ACCD");
                 $('.submitButton').addClass("darken").removeAttr('style');
                 $(".load_outline3").addClass("loading");
-                setTimeout(function(){
+                $(".load_outline2").addClass("loading2");
+                $(".load_outline").addClass("loading3");
+                /* setTimeout(function(){
                     $(".load_outline2").addClass("loading2")}, 500);
                 setTimeout(function(){
-                    $(".load_outline").addClass("loading3")}, 500);
+                    $(".load_outline").addClass("loading3")}, 500); */
                 setTimeout(function(){
                     $(".submit").val("SENT");
                     //Original method - all fields with class moved at the same time
