@@ -114,7 +114,6 @@ $(document).ready(function(){
                     //$(".submitButton").removeClass("sent");
                 }, 5700);
                 setTimeout(function(){
-                    $(document).scrollTop(0);
                     $('.contactForm').css({'max-height':'35vh','background-color':'whitesmoke'});
                 }, 6000);
                 setTimeout(function(){

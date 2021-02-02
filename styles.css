@@ -1349,6 +1349,15 @@ header img {
     max-height: 30px;
     position: relative;
     padding: 10px;
+    /*-----------------------------------------*/
+    /* image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0) scale(1, 1);
+    -webkit-transform: translateZ(0) translate3d(0,0,0) perspective(1px) scale(1, 1);
+    display: inline-table;
+    transform-style: flat;
+    -webkit-font-smoothing: subpixel-antialiased; */
 }
 .nav_text {
     background-clip: text;
@@ -1358,12 +1367,31 @@ header img {
     background-size: 200% 100%;
     background-position: 100% 0%;
     transition: all 0.2s ease;
+    /* Below is attempt to eliminate distortion and 1px jump after scale */
+    /* None of these worked - will need to eliminate scaling factors like % and vw to fix */
+    /* image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0) translate3d(0,0,0) scale(1, 1);
+    -webkit-transform: translateZ(0) translate3d(0,0,0) perspective(1px) scale(1, 1);
+    display: inline-table;
+    transform-style: flat;
+    -webkit-font-smoothing: subpixel-antialiased; */
 }
 .menuItem:hover .nav_text {
     background-position: 0% 0%;
     /*font-size: 2vw;*/
     scale: 1.2002;
     transition: background-position 0.15s ease 0.2s, scale 0.2s ease;
+    /*------------------------------*/
+    /* image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0) translate3d(0,0,0) scale(1, 1);
+    -webkit-transform: translateZ(0) translate3d(0,0,0) perspective(1px) scale(1, 1);
+    display: inline-table;
+    transform-style: flat;
+    -webkit-font-smoothing: subpixel-antialiased; */
 }
 .menuItem h3 {
     margin: 0;
@@ -1980,6 +2008,9 @@ footer {
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
     transition: background-color 2s ease, margin-top 0.2s ease;
+}
+b {
+
 }
 /*#nameField {
     width: 99%;
