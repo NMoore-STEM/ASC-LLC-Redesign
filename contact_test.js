@@ -80,9 +80,10 @@ $(document).ready(function(){
     //INSERTED FULL ANIMATION (THUS FAR)================================
                 $('.willChangeJQ').css("background-color","#B7ACCD");
                 $('.submitButton').addClass("darken").removeAttr('style');
-                $(".load_outline3").addClass("loading");
-                $(".load_outline2").addClass("loading2");
-                $(".load_outline").addClass("loading3");
+                //$(".load_outline3").addClass("loading");
+                $(".load_outline3").addClass("loading03");
+                $(".load_outline2").addClass("loading02");
+                $(".load_outline").addClass("loading01");
                 /* setTimeout(function(){
                     $(".load_outline2").addClass("loading2")}, 500);
                 setTimeout(function(){
@@ -127,9 +128,9 @@ $(document).ready(function(){
                 }, 6200);
                 setTimeout(function(){
                     if ($(window).width() <= 770) {
-                    $('.thankYou-sub').css('animation','ty_left01 1.2s ease-in forwards');
+                    $('.thankYou-sub').css('animation','ty_left01 1.2s ease-out forwards');
                     } else {
-                        $('.thankYou-sub').css('animation','ty_left02 0.8s ease-in forwards');
+                        $('.thankYou-sub').css('animation','ty_left02 0.8s ease-out forwards');
                     }
                 }, 6400);
                 //$('.submitButton').css({'background-color':'green'});

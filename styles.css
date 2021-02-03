@@ -199,7 +199,37 @@ textarea:-moz-ui-invalid {
     outline: 1px solid #553692;
     transition: opacity ease-out 0.4s, scale ease-out 0.2s;
 }*/
-.loading {
+
+.loading03 {
+    animation: load03 1.4s linear 3;
+}
+.loading02 {
+    animation: load02 1.4s linear 3;
+}
+.loading01 {
+    animation: load01 1.4s linear 3;
+}
+
+@keyframes load03 {
+    10% { stroke-dashoffset: 0;stroke-dasharray: 30 1084; }
+    30% { stroke-dashoffset: -150;stroke-dasharray: 180 1084; }
+    60% { stroke-dashoffset: -384;stroke-dasharray: 500 1084;opacity: 1; }
+    100% { stroke-dashoffset: -1084;stroke-dasharray: 0 1094;opacity: 0; }
+}
+@keyframes load02 {
+    10% { stroke-dashoffset: 0;stroke-dasharray: 30 1084; }
+    30% { stroke-dashoffset: -200;stroke-dasharray: 100 1084; }
+    80% { stroke-dasharray: 250 1084;opacity: 1; }
+    100% { stroke-dashoffset: -1084;stroke-dasharray: 0 1094;opacity: 0; }
+}
+@keyframes load01 {
+    10% { stroke-dashoffset: 0;stroke-dasharray: 30 1084; }
+    80% { stroke-dashoffset: -1054;stroke-dasharray: 30 1084;opacity: 1; }
+    100% { stroke-dashoffset: -1084;stroke-dasharray: 0 1094;opacity: 0; }
+}
+
+/* below classes were tied to older attempts at svg animation for button border */
+/*.loading {
     animation: load 1.8s linear 3;
     transition: all ease 0.3s;
 }
@@ -208,15 +238,28 @@ textarea:-moz-ui-invalid {
 }
 .loading3 {
     animation: load3 1.8s linear 3;
-}
-
-@keyframes load {
+} */
+/* load, load2, load3 below were implemented up to feb 3rd 2021 */
+/* other keyframes named the same (further down) were even earlier attempts */
+/* @keyframes load {
     0% { stroke-dashoffset: 1084;stroke-dasharray: 0 1084; }
     15% { stroke-dashoffset: 1400;stroke-dasharray: 600 1084; }
     /*40% { stroke-dashoffset: 1500;stroke-dasharray: 1200 1084; }*/
-    99% { opacity: 0.5; }
+    /* 99% { opacity: 0.5; }
     100% {stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
 }
+@keyframes load2 {
+    0% { stroke-dashoffset: 1084;stroke-dasharray: 0 1084; }
+    15% { stroke-dashoffset: 1200;stroke-dasharray: 300 1084; }
+    90% { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
+}
+@keyframes load3 {
+    0% { stroke-dashoffset: 1084;stroke-dasharray: 0 1084; }
+    15% { stroke-dashoffset: 920;stroke-dasharray: 20 1084; }
+    90% { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
+} */
+
+/* keyframes below are from before feb 2021 */
 /* @keyframes load2 {
     30% {stroke-dashoffset: 980;stroke-dasharray: 200 884;}
     60% {stroke-dashoffset: 680;stroke-dasharray: 80 1004;}
@@ -226,11 +269,7 @@ textarea:-moz-ui-invalid {
     from { stroke-dashoffset: 1500;stroke-dasharray: 300 1084; }
     to { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
 }*/
-@keyframes load2 {
-    0% { stroke-dashoffset: 1084;stroke-dasharray: 0 1084; }
-    15% { stroke-dashoffset: 1200;stroke-dasharray: 300 1084; }
-    90% { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
-}
+
 /* top layer below */
 /* @keyframes load3 {
     30% { stroke-dashoffset: 250;stroke-dasharray: 0 225; }
@@ -241,11 +280,7 @@ textarea:-moz-ui-invalid {
     from { stroke-dashoffset: 920;stroke-dasharray: 10 1084; }
     to { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
 }*/
-@keyframes load3 {
-    0% { stroke-dashoffset: 1084;stroke-dasharray: 0 1084; }
-    15% { stroke-dashoffset: 920;stroke-dasharray: 20 1084; }
-    90% { stroke-dashoffset: 0;stroke-dasharray: 0 1084; }
-}
+
 /*.sending_bg {
     background: gray !important;
     background-color: gray;
@@ -300,7 +335,8 @@ textarea:-moz-ui-invalid {
 }
 .thankYou-sub {
     position: relative;
-    color:rgb(86, 54, 148);
+    /* color:rgb(86, 54, 148); */
+    color: #9D90C5;
 }
 /*=====================================================================*/
 /*------------------  RESTRICTED - General ----------------------------*/
@@ -854,6 +890,10 @@ section {
     font-size: 22pt;
     margin-top: -40px;
 }
+.thankYou-sub {
+    font-size: 14pt;
+}
+
 @keyframes ty_left01 {
     1% { transform: translateX(-76vw); }
     100% { transform: translateX(-88vw); }
@@ -2115,6 +2155,7 @@ textarea:-moz-ui-invalid {
 }
 .thankYou-sub {
     margin-left: 5vw;
+    font-size: 22pt;
 }
 @keyframes ty_left02 {
     1% { transform: translateX(-50vw);}
