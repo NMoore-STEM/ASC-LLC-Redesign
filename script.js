@@ -467,12 +467,154 @@ $(document).ready(function() {
     })
 
 });
-//----  For cred page web dev portfolio items in FULL view ---//
+
+// WORKING CONTACT FORM VERIFICATION AND SUBMISSION (fr contact_test.js)
+$(function(){
+    var fA = 'focusActive';
+    var lA = 'labelActive';
+    var nameF = $('#nameField');
+    var nL = $('#nameLabel');
+    var nameC = $('.nameContainer');
+    var emailF = $('#emailField');
+    var emL = $('#emailLabel');
+    var emailC = $('.emailContainer');
+    var msgF = $('#messageField');
+    var msgL = $('#messageLabel');
+    var msgC = $('.messageContainer');
+    var emailStr = emailF.val();
+    var nameStr = nameF.val();
+    var msgStr = msgF.val();
+    
+    if (nameStr != ''){
+        nL.addClass(lA);
+    };
+    nameF.on('focus',function() {
+        nameC.addClass(fA);
+        nL.addClass(lA);
+    });
+    nameF.on('blur',function() {
+        nameC.removeClass(fA);
+        if (!nameF.val()) {
+            nL.removeClass(lA);
+        }
+    });
+    if (emailStr != ''){
+        emL.addClass(lA);
+    };
+    emailF.on('focus',function() {
+        emailC.addClass(fA);
+        emL.addClass(lA);
+    });
+    emailF.on('blur',function() {
+        emailC.removeClass(fA);
+        if (!emailF.val()) {
+            emL.removeClass(lA);
+        }
+    });
+    if (msgStr != ''){
+        msgL.addClass(lA);
+    };
+    msgF.on('focus',function() {
+        msgC.addClass(fA);
+        msgL.addClass(lA);
+    });
+    msgF.on('blur',function() {
+        msgC.removeClass(fA);
+        if (!msgF.val()) {
+            msgL.removeClass(lA);
+        }
+    });
+    $('.submit').on('focus focusin',function() {
+        $('.submitButton').css({'outline':'1px solid blueviolet','outline-offset':'7px'})
+    });
+    $('.submit').on('blur focusout',function() {
+        $('.submitButton').removeAttr('style');
+    });
+
+    // FORM VERIFICATION - SUBMISSION - ANIMATION
+    var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
+    function blankCheck() {
+        if (emailStr && nameStr && msgStr != '') {
+            alert('blankCheck PASS!!!');
+        return true;
+        } else {
+            alert('BLANK FAIL!!!');
+        return false;
+        };
+    };
+    $(".contactForm").on('submit',function(e){
+        function validateAll() {
+            if (blankCheck() && regex.test(emailStr)) {
+                alert('vA PASS!!!');
+                $('.submit').val("SENDING...");
+    // ANIMATION BELOW
+                $('.willChangeJQ').css("background-color","#B7ACCD");
+                $('.submitButton').addClass("darken").removeAttr('style');
+                //$(".load_outline3").addClass("loading");
+                $(".load_outline3").addClass("loading03");
+                $(".load_outline2").addClass("loading02");
+                $(".load_outline").addClass("loading01");
+                setTimeout(function(){
+    // Can't change below .blur() as it is more of a command
+                    $('.submit').blur();
+                }, 450);
+                setTimeout(function(){
+                    $(".submit").val("SENT");
+    //Staggered input field exit animation- Jquery approach - tested and works
+                    $("form > div").each(function(i){
+                        setTimeout(function(){
+                            $("form > div").slice(0,3).eq(i).css('animation','form_left 0.5s ease-in forwards')
+                        }, i*60);
+                    });
+                    $('.submitButton').css('background-color','white');
+                    $('.submit').css({'color':'#553692','font-size':'20pt','pointer-events':'none','cursor':'not-allowed'});
+                }, 5000);
+                setTimeout(function(){
+                    $(".submitButton").removeClass("loading darken sent").css({'height':'30px','animation':'form_left 0.5s ease-in forwards'});
+                }, 5700);
+                setTimeout(function(){
+                    $('.contactForm').css({'max-height':'35vh','background-color':'whitesmoke'});
+                }, 6000);
+                setTimeout(function(){
+                    if ($(window).width() <= 770) {
+                    $('.thankYou').css('animation','ty_left01 1s linear forwards');
+                    } else {
+                        $('.thankYou').css('animation','ty_left02 1s linear forwards');
+                    }
+                }, 6200);
+                setTimeout(function(){
+                    if ($(window).width() <= 770) {
+                    $('.thankYou-sub').css('animation','ty_left01 1.2s ease-out forwards');
+                    } else {
+                        $('.thankYou-sub').css('animation','ty_left02 0.8s ease-out forwards');
+                    }
+                }, 6400);
+            } else {
+    //Below is to give test users feedback
+                $('.submitButton').css({'background-color':'red'});
+                alert('validateAll FAIL!!!');
+            };
+        };
+        validateAll();
+        $.when(validateAll).done(function(){
+            e.preventDefault();
+            var href = $('.contactForm').attr("action");
+            /*$.ajax({
+                type: "POST",
+                dataType: "json",
+                url: href,
+                data: $('.contactForm').serialize(),
+            });*/
+        });
+    });
+});
+
+//----  scrapped idea - For cred page web dev portfolio items in FULL view ---//
 /*$(document).ready(function() {
     var $study = $('.case_study_popup');
     $study.on(click,function(){
 
-    }*/  //PENDING IMPLEMENTATION// --- scrapped idea
+    }*/  //PENDING IMPLEMENTATION --- scrapped idea
 
 //  Below is to provide negative feedback for incomplete form and to prevent form submission
 /* $(function(){
@@ -534,7 +676,7 @@ function validateAll() {
       return true;
     };
 }; */
-var emailStr = $('#emailField').val();
+/*var emailStr = $('#emailField').val();
 var nameStr = $('#nameField').val();
 var messageStr = $('#messageField').val();
 var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
@@ -559,7 +701,7 @@ function validateAll() {
 $(".submit").click(function() {
     blankCheck();
     validateAll();
-});
+});*/
     /* var emailStr = $('#emailField').val();
     var nameStr = $('#nameField').val();
     var messageStr = $('#messageField').val();
@@ -675,10 +817,10 @@ $(".submit").click(function() {
     }*/
     //----Specific AJAX workaround for "FormCarry" form back-end service
     //----Code copied from: https://forum.webflow.com/t/any-good-free-form-processors-out-there-that-allow-redirects-after-submission/63192/6
-    $(function(){
+    /*$(function(){
         $(".contactForm").submit(function(e){
             e.preventDefault();
-            /*var href = $(this).attr("action");
+            var href = $(this).attr("action");
             $.ajax({
                 type: "POST",
                 dataType: "json",
@@ -692,6 +834,6 @@ $(".submit").click(function() {
                         //window.location.href = 'thanks.html';
                     }
                 }
-            }); */
+            });
         });
-    });
+    }); */
