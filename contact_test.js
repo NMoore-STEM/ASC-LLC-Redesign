@@ -1,58 +1,67 @@
 //TEST JS FILE - USED TO DEBUG SCRIPT USED ON CONTACT PAGE OF ASC REVAMP
 
 //--------- UI FORM BEHAVIOR
-var emailStr = $('#emailField').val();
-var nameStr = $('#nameField').val();
-var messageStr = $('#messageField').val();
-$(document).ready(function(){
+// Removed $(document).ready(function(){ as VSCode said was depricated
+// Jquery specs also said that from ver 3.0+, it is recommended to use $(function(){}
+$(function(){
     var fA = 'focusActive';
     var lA = 'labelActive';
-    //var emailStr = $('#emailField').val();
-    //var nameStr = $('#nameField').val();
-    //var messageStr = $('#messageField').val();
-    if ($('#nameField').val() != ''){
-        $('#nameLabel').addClass(lA);
+    var nameF = $('#nameField');
+    var nL = $('#nameLabel');
+    var nameC = $('.nameContainer');
+    var emailF = $('#emailField');
+    var emL = $('#emailLabel');
+    var emailC = $('.emailContainer');
+    var msgF = $('#messageField');
+    var msgL = $('#messageLabel');
+    var msgC = $('.messageContainer');
+    var emailStr = emailF.val();
+    var nameStr = nameF.val();
+    var msgStr = msgF.val();
+    
+    if (nameStr != ''){
+        nL.addClass(lA);
     };
-    $('#nameField').focus(function() {
-        $('.nameContainer').addClass(fA);
-        $('#nameLabel').addClass(lA);
+    nameF.on('focus',function() {
+        nameC.addClass(fA);
+        nL.addClass(lA);
     });
-    $('#nameField').blur(function() {
-        $('.nameContainer').removeClass(fA);
-        if (!$('#nameField').val()) {
-            $('#nameLabel').removeClass(lA);
+    nameF.on('blur',function() {
+        nameC.removeClass(fA);
+        if (!nameF.val()) {
+            nL.removeClass(lA);
         }
     });
-    if ($('#emailField').val() != ''){
-        $('#emailLabel').addClass(lA);
+    if (emailStr != ''){
+        emL.addClass(lA);
     };
-    $('#emailField').focus(function() {
-        $('.emailContainer').addClass(fA);
-        $('#emailLabel').addClass(lA);
+    emailF.on('focus',function() {
+        emailC.addClass(fA);
+        emL.addClass(lA);
     });
-    $('#emailField').blur(function() {
-        $('.emailContainer').removeClass(fA);
-        if (!$('#emailField').val()) {
-            $('#emailLabel').removeClass(lA);
+    emailF.on('blur',function() {
+        emailC.removeClass(fA);
+        if (!emailF.val()) {
+            emL.removeClass(lA);
         }
     });
-    if ($('#messageField').val() != ''){
-        $('#messageLabel').addClass(lA);
+    if (msgStr != ''){
+        msgL.addClass(lA);
     };
-    $('#messageField').focus(function() {
-        $('.messageContainer').addClass(fA);
-        $('#messageLabel').addClass(lA);
+    msgF.on('focus',function() {
+        msgC.addClass(fA);
+        msgL.addClass(lA);
     });
-    $('#messageField').blur(function() {
-        $('.messageContainer').removeClass(fA);
-        if (!$('#messageField').val()) {
-            $('#messageLabel').removeClass(lA);
+    msgF.on('blur',function() {
+        msgC.removeClass(fA);
+        if (!msgF.val()) {
+            msgL.removeClass(lA);
         }
     });
-    $('.submit').focusin(function() {
+    $('.submit').on('focus focusin',function() {
         $('.submitButton').css({'outline':'1px solid blueviolet','outline-offset':'7px'})
     });
-    $('.submit').focusout(function() {
+    $('.submit').on('blur focusout',function() {
         $('.submitButton').removeAttr('style');
     });
 
@@ -62,7 +71,7 @@ $(document).ready(function(){
     //var messageStr = $('#messageField').val();
     var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
     function blankCheck() {
-        if ($(emailStr) && $(nameStr) && $(messageStr)) {
+        if (emailStr && nameStr && msgStr != '') {
             alert('blankCheck PASS!!!');
         return true;
         } else {
@@ -70,13 +79,13 @@ $(document).ready(function(){
         return false;
         };
     };
-    $(".contactForm").submit(function(e){
+    $(".contactForm").on('submit',function(e){
         function validateAll() {
             //blankCheck();
-            if (blankCheck() && regex.test($('#emailField').val())) {
+            if (blankCheck() && regex.test(emailStr)) {
                 alert('vA PASS!!!');
                 $('.submit').val("SENDING...");
-                $('.submit').blur();
+                //$('.submit').blur();
     //INSERTED FULL ANIMATION (THUS FAR)================================
                 $('.willChangeJQ').css("background-color","#B7ACCD");
                 $('.submitButton').addClass("darken").removeAttr('style');
@@ -89,16 +98,12 @@ $(document).ready(function(){
                 setTimeout(function(){
                     $(".load_outline").addClass("loading3")}, 500); */
                 setTimeout(function(){
+    // Cant change below .blur() as it is more of a command
+                    $('.submit').blur();
+                }, 450);
+                setTimeout(function(){
                     $(".submit").val("SENT");
-                    //Original method - all fields with class moved at the same time
-                    //$(".willMoveJQ").css('transform','translateX(60px)');
-                    //Might strike below - JSvanilla approach
-                    /*for (var i=0;i<3,i++) {
-                        (function(i){
-                            setTimeout(function(){
-                            $("form > div").slice(0,3).css('animation','form_left 0.5s ease-in forwards');
-                        }(i)
-                    };*/
+                    
                     //Staggered input field exit animation- Jquery approach - tested and works
                     $("form > div").each(function(i){
                         setTimeout(function(){
@@ -145,21 +150,65 @@ $(document).ready(function(){
         validateAll();
         $.when(validateAll).done(function(){
             e.preventDefault();
-            //var href = $('.contactForm').attr("action");
-            /*$.ajax({
+            var href = $('.contactForm').attr("action");
+            $.ajax({
                 type: "POST",
                 dataType: "json",
                 url: href,
                 data: $('.contactForm').serialize(),
-                success: function(response){
+                /*success: function(response){
                     if(response.status == "success"){
                         window.location.href = 'thanks.html'; // change this. 
                     }else{
                         alert("An error occured: " + response.message);
                         //window.location.href = 'thanks.html';
                     }
-                }
-            });*/
+                }*/
+            });
         });
     });
 });
+
+
+
+//PREVIOUS ATTEMPTS WITH NOTES BELOW
+/*Below also worked, but truncated version implemented instead */
+    /*if (nameF.val() === ""){
+        nL.removeClass(lA);
+     } else {
+         nL.addClass(lA);
+     };*/
+     /* PREVIOUS CODE FOR EMAIL FIELD - USING .blur() instead of .on() */
+     /* Using .blur() seemed to cause functinality issues and throw odd errors */
+     /* as well as using .submit(), which controls overall behavior of form */
+     /* VSCode recommends not using event shortcuts such as .blur() or .submit()
+     since jquery v3.3+ */
+     /* jquery website also recommends not using the event shortcuts for v1.7+ */
+    /*if (emailStr != ''){
+        emL.addClass(lA);
+    };
+    emailF.focus(function() {
+        emailC.addClass(fA);
+        emL.addClass(lA);
+    });
+    emailF.blur(function() {
+        emailC.removeClass(fA);
+        if (!emailF.val()) {
+            emL.removeClass(lA);
+        }
+    });*/
+    /* SUBMIT example below */
+    /*$(".contactForm").submit(function(e){
+        function validateAll() {
+            //blankCheck();
+            if (blankCheck() && regex.test(emailStr)) { */
+
+                //Original method - all fields with class moved at the same time
+                    //$(".willMoveJQ").css('transform','translateX(60px)');
+                    //Might strike below - JSvanilla approach - not used
+                    /* for (var i=0;i<3,i++) {
+                        (function(i){
+                            setTimeout(function(){
+                            $("form > div").slice(0,3).css('animation','form_left 0.5s ease-in forwards');
+                        }(i)
+                    }; */

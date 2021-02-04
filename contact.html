@@ -59,6 +59,7 @@
             <!--<form class=contactForm action="contact.php" method=POST enctype="multipart/form-data" name=contactASC>-->
         <!--Need to add action="https://formspree.io/f/xleozrbe" below to make funcional, disabled through dev process-->
         <!--Or for FormCarry use action="https://formcarry.com/s/_e7pm-Gb5q"-->
+        <!--Use placeholder action="#" for dev process-->
             <form class="contactForm willChangeJQ" action="#" method=POST enctype="multipart/form-data" name=contactASC>
                 <div class="nameContainer willMoveJQ">
                     <label id=nameLabel class=willChangeJQ for=nameField>Name:</label>
@@ -74,8 +75,8 @@
                     <textarea id=messageField class=inputField name=message rows=8 cols=50 autocomplete=on required></textarea>
                 </div>
                 <!--Hidden bot trap security device-->
-                <!--<label for=botCatfish class=botCatfish>Fellow Humans, please refrain from entering any characters in this field.</label>
-                <input name=botCatfish id=botCatfish class=botCatfish>-->
+                <label for=botCatfish class=botCatfish>Fellow Humans, please refrain from entering any characters in this field.</label>
+                <input id=botCatfish class=botCatfish>
                 <div class=submitButton>
                     <!-- NOTE: use SVGGeometryElement.getTotalLength() in console to measure paths-->
                     <svg class=svg_border x="4px" y="2px" viewBox="0 0 464 86" preserveAspectRatio="none">
@@ -84,14 +85,14 @@
                               <stop offset="0%"   stop-color="white"/>
                               <stop offset="100%" stop-color="white" stop-opacity="0"/>
                             </linearGradient>-->
-                            <filter id="glow_bg">
+                            <!--<filter id="glow_bg">
                                 <feDropShadow dx="0" dy="0" stdDeviation="0.2" flood-color="#8B6BEF"/>
                                 <feGaussianBlur result="blurOut" in="offOut" stdDeviation="1" />
                             </filter>
                             <filter id="glow_main">
                                 <feDropShadow dx="0" dy="0" stdDeviation="0.2" flood-color="white"/>
                                 <feGaussianBlur result="blurOut" in="offOut" stdDeviation="0.2" />
-                            </filter>
+                            </filter>-->
                         </defs>
                         <g id="load_outline3">
                             <rect class=load_outline3 x="2" y="2" fill="none" stroke="#8B6BEF" stroke-dasharray="1084" stroke-dashoffset="1084" stroke-width="6" stroke-linecap="square" stroke-miterlimit="10" width="460" height="82"/>
