@@ -545,7 +545,7 @@ $(function(){
     };
     $(".contactForm").on('submit',function(e){
         function validateAll() {
-            if (blankCheck(true) && regex.test(emailF.val())) {
+            if (blankCheck() && regex.test(emailF.val())) {
                 alert('vA PASS!!!');
                 $('.subB').val("SENDING...");
     // ANIMATION BELOW
@@ -599,12 +599,12 @@ $(function(){
         $.when(validateAll).done(function(){
             e.preventDefault();
             var href = $('.contactForm').attr("action");
-            /*$.ajax({
+            $.ajax({
                 type: "POST",
                 dataType: "json",
                 url: href,
                 data: $('.contactForm').serialize(),
-            });*/
+            });
         });
     });
 });
@@ -837,3 +837,15 @@ $(".submit").click(function() {
             });
         });
     });*/
+
+// MOBILE UX - Button "touch" effect
+$(function(){
+    //var buttonM = $(document).hasClass('contactButton');
+
+    $('.contactButton').on('click touch', function(e){
+        e.preventDefault();
+        if ($(window).width() <= 770) {
+            $('.contactButton').addClass('clicked');
+        }
+    })
+})

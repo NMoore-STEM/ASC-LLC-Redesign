@@ -636,6 +636,9 @@ section {
     max-width: 300px;
     margin: 50px auto 0;
 }
+.clicked {
+    background-color: red;
+}
 .contactButton, .menuItem {
     background-color: #553692;
     color: #9D90C5;
