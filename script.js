@@ -837,3 +837,15 @@ $(".submit").click(function() {
             });
         });
     });*/
+
+// MOBILE UX - Button "touch" effect
+$(function(){
+    //var buttonM = $(document).hasClass('contactButton');
+
+    $('.contactButton').on('click touch', function(e){
+        e.preventDefault();
+        if ($(window).width() <= 770) {
+            $('.contactButton').addClass('clicked');
+        }
+    })
+})
