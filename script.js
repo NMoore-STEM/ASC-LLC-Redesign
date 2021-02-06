@@ -205,15 +205,16 @@ $(document).ready(function(){
           //$bar02.removeClass('animation_final')
         }
     });
+});
     // Need to turn this JQ off for TABLET and MOBILE vw
     //  Might not need to add code for this - modifying CSS in MOBILE to see...
     /*$bar01.off('inview', function(event, isInView) {
-        if (isInView) && /*<<"vw <=770px">>*/ {
+        if (isInView) && /*<<"vw <=770px">>*/ /*{
             /*$bar01.removeClass('animation_final')
         } else {
           // element has gone out of viewport
-        }*/
-    /*});
+        }
+    });*/
     /*$bar02.on('inview', function(event, isInView) {
         if (isInView) {
           // element is now visible in the viewport
@@ -241,7 +242,7 @@ $(document).ready(function(){
           //$bar02.removeClass('animation_final')
         }
     });  */
-};
+
 //This method is working, HOWEVER!, it is applying the addClass to all similar elements at once
 //ATTEMPT 02
 /*var $bar01 = $('#title01');
@@ -331,7 +332,7 @@ $('#nameField').off('focus', function() {
 
 //----------------------------------------------------------------//
 //    Could replace ".blur()" with ".focusout()" if cross-browser issues arise
-$(document).ready(function(){
+/*$(document).ready(function(){
     var fA = 'focusActive';
     var lA = 'labelActive';
     $('#nameField').focus(function() {
@@ -384,7 +385,7 @@ $(document).ready(function(){
         }
     })
     */
-});
+
 //----  Doesnt seem to work, when using "console.log($('#emailField).value()"
 //----  in console, 0 is returned whether or not something is entered into
 //----  field.  This can be refined to work as intended, but will be abandoned
@@ -550,7 +551,6 @@ $(function(){
     // ANIMATION BELOW
                 $('.willChangeJQ').css("background-color","#B7ACCD");
                 $('.submitButton').addClass("darken").removeAttr('style');
-                //$(".load_outline3").addClass("loading");
                 $(".load_outline3").addClass("loading03");
                 $(".load_outline2").addClass("loading02");
                 $(".load_outline").addClass("loading01");
@@ -836,4 +836,4 @@ $(".submit").click(function() {
                 }
             });
         });
-    }); */
+    });*/
