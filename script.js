@@ -525,17 +525,17 @@ $(function(){
             msgL.removeClass(lA);
         }
     });
-    $('.submit').on('focus focusin',function() {
-        $('.submitButton').css({'outline':'1px solid blueviolet','outline-offset':'7px'})
+    $('.subB').on('focus focusin',function() {
+        $('.submitButton').css({'outline':'1px solid blueviolet','outline-offset':'7px'});
     });
-    $('.submit').on('blur focusout',function() {
+    $('.subB').on('blur focusout',function() {
         $('.submitButton').removeAttr('style');
     });
 
     // FORM VERIFICATION - SUBMISSION - ANIMATION
     var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
     function blankCheck() {
-        if (emailStr && nameStr && msgStr != '') {
+        if (emailF.val()!="" && nameF.val()!="" && msgF.val()!="") {
             alert('blankCheck PASS!!!');
         return true;
         } else {
@@ -545,9 +545,9 @@ $(function(){
     };
     $(".contactForm").on('submit',function(e){
         function validateAll() {
-            if (blankCheck() && regex.test(emailStr)) {
+            if (blankCheck(true) && regex.test(emailF.val())) {
                 alert('vA PASS!!!');
-                $('.submit').val("SENDING...");
+                $('.subB').val("SENDING...");
     // ANIMATION BELOW
                 $('.willChangeJQ').css("background-color","#B7ACCD");
                 $('.submitButton').addClass("darken").removeAttr('style');
@@ -556,10 +556,10 @@ $(function(){
                 $(".load_outline").addClass("loading01");
                 setTimeout(function(){
     // Can't change below .blur() as it is more of a command
-                    $('.submit').blur();
+                    $('.subB').blur();
                 }, 450);
                 setTimeout(function(){
-                    $(".submit").val("SENT");
+                    $(".subB").val("SENT");
     //Staggered input field exit animation- Jquery approach - tested and works
                     $("form > div").each(function(i){
                         setTimeout(function(){
@@ -567,7 +567,7 @@ $(function(){
                         }, i*60);
                     });
                     $('.submitButton').css('background-color','white');
-                    $('.submit').css({'color':'#553692','font-size':'20pt','pointer-events':'none','cursor':'not-allowed'});
+                    $('.subB').css({'color':'#553692','font-size':'20pt','pointer-events':'none','cursor':'not-allowed'});
                 }, 5000);
                 setTimeout(function(){
                     $(".submitButton").removeClass("loading darken sent").css({'height':'30px','animation':'form_left 0.5s ease-in forwards'});
