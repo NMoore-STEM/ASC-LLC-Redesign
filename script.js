@@ -841,11 +841,20 @@ $(".submit").click(function() {
 // MOBILE UX - Button "touch" effect
 $(function(){
     //var buttonM = $(document).hasClass('contactButton');
-
+    //function manualNav(){
+        //window.location = 'contact.html'
+    //}
     $('.contactButton').on('click touch', function(e){
         e.preventDefault();
         if ($(window).width() <= 770) {
-            $('.contactButton').addClass('clicked');
+            //$(this).addClass('clicked');
+            $('.button_fx').addClass('clicked_fx');
+            $('.button_text').addClass('clicked_txt');
+            setTimeout( function () { 
+                window.location = 'contact.html';
+                $('.button_fx').removeClass('clicked_fx');
+                $('.button_text').removeClass('clicked_txt');
+            }, 1000);
         }
     })
 })
