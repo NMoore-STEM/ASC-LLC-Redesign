@@ -839,15 +839,17 @@ $(".submit").click(function() {
     });*/
 
 // MOBILE UX - Button "touch" effect
+// if onResize is inserted at beginning of this function, should add more rules dependent on vw
 $(function(){
+    if ($(window).width() < 771) {
     //var buttonM = $(document).hasClass('contactButton');
     //function manualNav(){
         //window.location = 'contact.html'
     //}
-    $('.contactButton').on('click touch', function(e){
-        e.preventDefault();
-        if ($(window).width() <= 770) {
-            //$(this).addClass('clicked');
+        $('.contactButton').on('click touch', function(e){
+            e.preventDefault();
+            //if ($(window).width() < 771) {
+                //$(this).addClass('clicked');
             $('.button_fx').addClass('clicked_fx');
             $('.button_text').addClass('clicked_txt');
             setTimeout( function () { 
@@ -855,6 +857,9 @@ $(function(){
                 $('.button_fx').removeClass('clicked_fx');
                 $('.button_text').removeClass('clicked_txt');
             }, 1000);
-        }
-    })
+            
+        })
+    } else {
+        return true;
+    }
 })
