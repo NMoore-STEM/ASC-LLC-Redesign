@@ -840,7 +840,7 @@ $(".submit").click(function() {
 
 // MOBILE UX - Button "touch" effect
 // if onResize is inserted at beginning of this function, should add more rules dependent on vw
-$(function(){
+/*$(function(){
     if ($(window).width() < 771) {
         $('.contactButton').on('click touch', function(e){
             // Prevent button from going instantly to href
@@ -851,18 +851,66 @@ $(function(){
             setTimeout(function() {
             // Outline fx
                 $(this).addClass('clicked');
-            }, 400);
+            }, 200);
             setTimeout( function () { 
                 $('.button_fx').removeClass('clicked_fx');
                 $('.button_text').removeClass('clicked_txt');
                 $(this).removeClass('clicked');
             // Redirect
                 window.location = 'contact.html';
-            }, 500);
+            }, 700);
             
         })
     } else {
     // This is for all ".contactButton" at vw > MOBILE
         return true;
     }
-})
+})*/
+
+// Attempt to keep the outline fx for button click triggering on back button on browser
+$(function(){
+    $('.contactButton').on('click touch', function(e){
+            if ($(window).width() < 771) {
+            // Prevent button from going instantly to href
+                e.preventDefault();
+                $(this).addClass('clicked');
+                $('.button_fx').addClass('clicked_fx');
+                $('.button_text').addClass('clicked_txt');
+                setTimeout(function() {
+                // Outline fx
+                    $(this).addClass('clicked');
+                }, 200);
+                setTimeout( function () { 
+                    $('.button_fx').removeClass('clicked_fx');
+                    $('.button_text').removeClass('clicked_txt');
+                    $(this).removeClass('clicked');
+                // Redirect
+                    window.location = 'contact.html';
+                }, 700);
+            } else {
+            // This is for all ".contactButton" at vw > MOBILE
+                return true;
+            }
+        })
+    })
+
+
+// For testing bfcache status in console log
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+      console.log('This page was restored from the bfcache.');
+    } else {
+      console.log('This page was loaded normally.');
+    }
+});
+
+//!!! Seems to have fixed the issue, but there is a flash of unstyled content
+//  Should place literal script in head of HTML file to avoid this
+// Back button page reset? - This should work for all browsers that use bfcache
+// ?? WILL this cause any other unexpected behaviors?  Should this only be for MOBILE?
+window.onpageshow = function (event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};
+    
