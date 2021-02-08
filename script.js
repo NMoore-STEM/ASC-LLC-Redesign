@@ -842,24 +842,27 @@ $(".submit").click(function() {
 // if onResize is inserted at beginning of this function, should add more rules dependent on vw
 $(function(){
     if ($(window).width() < 771) {
-    //var buttonM = $(document).hasClass('contactButton');
-    //function manualNav(){
-        //window.location = 'contact.html'
-    //}
         $('.contactButton').on('click touch', function(e){
+            // Prevent button from going instantly to href
             e.preventDefault();
-            //if ($(window).width() < 771) {
-                //$(this).addClass('clicked');
+            $(this).addClass('clicked');
             $('.button_fx').addClass('clicked_fx');
             $('.button_text').addClass('clicked_txt');
+            setTimeout(function() {
+            // Outline fx
+                $(this).addClass('clicked');
+            }, 400);
             setTimeout( function () { 
-                window.location = 'contact.html';
                 $('.button_fx').removeClass('clicked_fx');
                 $('.button_text').removeClass('clicked_txt');
-            }, 1000);
+                $(this).removeClass('clicked');
+            // Redirect
+                window.location = 'contact.html';
+            }, 500);
             
         })
     } else {
+    // This is for all ".contactButton" at vw > MOBILE
         return true;
     }
 })
