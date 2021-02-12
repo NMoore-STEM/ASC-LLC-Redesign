@@ -886,6 +886,12 @@ $(function(){
                     $(this).removeClass('clicked');
                 // Redirect
                     window.location = 'contact.html';
+                // Above redirect made every instance of .contactButton go to contact page
+                // Below is an attempt at redirecting to href attribute in <a> element
+                // None below worked as intended - still a few options available...
+                    //window.location.href = targetUrl;
+                    //window.location.href = $(this).attr('href');
+                    //window.location.href = $('a').attr('href');
                 }, 700);
             } else {
             // This is for all ".contactButton" at vw > MOBILE
@@ -913,4 +919,8 @@ window.onpageshow = function (event) {
         window.location.reload();
     }
 };
+
+// FOLLOW UP - YES, this segment of code for MOBILE button UX is flawed
+// All buttons trigger animations when one is clicked - index each instance?
+// On portfolio page, noticed that only one button "reset" from UX fx
     
