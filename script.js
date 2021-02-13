@@ -869,56 +869,80 @@ $(".submit").click(function() {
 
 // Attempt to keep the outline fx for button click triggering on back button on browser
 $(function(){
-    $('.contactButton').on('click touch', function(e){
-            if ($(window).width() < 771) {
-            // Prevent button from going instantly to href
-                e.preventDefault();
+    $('#c01').on('click touch', function(e){
+        if ($(window).width() < 771) {
+        // Prevent button from going instantly to href
+            e.preventDefault();
+            $(this).addClass('clicked');
+            $('.button_fx').addClass('clicked_fx');
+            $('.button_text').addClass('clicked_txt');
+            setTimeout(function() {
+            // Outline fx
                 $(this).addClass('clicked');
-                $('.button_fx').addClass('clicked_fx');
-                $('.button_text').addClass('clicked_txt');
-                setTimeout(function() {
-                // Outline fx
-                    $(this).addClass('clicked');
-                }, 200);
-                setTimeout( function () { 
-                    $('.button_fx').removeClass('clicked_fx');
-                    $('.button_text').removeClass('clicked_txt');
-                    $(this).removeClass('clicked');
-                // Redirect
-                    window.location = 'contact.html';
-                // Above redirect made every instance of .contactButton go to contact page
-                // Below is an attempt at redirecting to href attribute in <a> element
-                // None below worked as intended - still a few options available...
-                    //window.location.href = targetUrl;
-                    //window.location.href = $(this).attr('href');
-                    //window.location.href = $('a').attr('href');
-                }, 700);
-            } else {
-            // This is for all ".contactButton" at vw > MOBILE
-                return true;
-            }
-        })
-    })
+            }, 200);
+            setTimeout( function () { 
+                $('.button_fx').removeClass('clicked_fx');
+                $('.button_text').removeClass('clicked_txt');
+                $(this).removeClass('clicked');
+            // Redirect
+                window.location = 'contact.html';
+            // Above redirect made every instance of .contactButton go to contact page
+            // Below is an attempt at redirecting to href attribute in <a> element
+            // None below worked as intended - still a few options available...
+                //window.location.href = targetUrl;
+                //window.location.href = $(this).attr('href');
+                //window.location.href = $('a').attr('href');
+            }, 700);
+        } else {
+        // This is for all ".contactButton" at vw > MOBILE
+            return true;
+        };
+    });
+    $('#c02').on('click touch', function(e){
+        if ($(window).width() < 771) {
+        // Prevent button from going instantly to href
+            e.preventDefault();
+            $(this).addClass('clicked');
+            $('.button_fx').addClass('clicked_fx');
+            $('.button_text').addClass('clicked_txt');
+            setTimeout(function() {
+            // Outline fx
+                $(this).addClass('clicked');
+            }, 200);
+            setTimeout( function () { 
+                $('.button_fx').removeClass('clicked_fx');
+                $('.button_text').removeClass('clicked_txt');
+                $(this).removeClass('clicked');
+            // Redirect
+                window.location = 'contact.html';
+            // Above redirect made every instance of .contactButton go to contact page
+            }, 700);
+        } else {
+        // This is for all ".contactButton" at vw > MOBILE
+            return true;
+        };
+    });
 
 
-// For testing bfcache status in console log
-window.addEventListener('pageshow', function(event) {
-    if (event.persisted) {
-      console.log('This page was restored from the bfcache.');
-    } else {
-      console.log('This page was loaded normally.');
-    }
+    // For testing bfcache status in console log
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+        console.log('This page was restored from the bfcache.');
+        } else {
+        console.log('This page was loaded normally.');
+        }
+    });
+
+    //!!! Seems to have fixed the issue, but there is a flash of unstyled content
+    //  Should place literal script in head of HTML file to avoid this
+    // Back button page reset? - This should work for all browsers that use bfcache
+    // ?? WILL this cause any other unexpected behaviors?  Should this only be for MOBILE?
+    window.onpageshow = function (event) {
+        if (event.persisted) {
+            window.location.reload();
+        }
+    };
 });
-
-//!!! Seems to have fixed the issue, but there is a flash of unstyled content
-//  Should place literal script in head of HTML file to avoid this
-// Back button page reset? - This should work for all browsers that use bfcache
-// ?? WILL this cause any other unexpected behaviors?  Should this only be for MOBILE?
-window.onpageshow = function (event) {
-    if (event.persisted) {
-        window.location.reload();
-    }
-};
 
 // FOLLOW UP - YES, this segment of code for MOBILE button UX is flawed
 // All buttons trigger animations when one is clicked - index each instance?
