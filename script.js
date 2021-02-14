@@ -1069,7 +1069,7 @@ $(function(){
     // console.log($('.contactButton').length) gives how many instances of
     // the specified class on page - this could be used with .each() or loop?
     $('#gh01').on('click touch', function(e){
-        var goTo = $(this).attr(href);
+        var goTo = $(this).attr('href');
     
         if ($(window).width() < 771) {
         // Prevent button from going instantly to href
@@ -1086,9 +1086,9 @@ $(function(){
             setTimeout(function(){
                 $(this).find('.button_fx').removeClass('clicked_fx');
                 $(this).find('.button_text').removeClass('clicked_txt');
+                $(this).removeClass('clicked');
                 // Not sure about below line - trying to get new tab to open on click
                 window.open(goTo, "_blank") || window.location.replace(goTo);
-                $(this).removeClass('clicked');
             }, 700)
         } else {
             // This is for all ".contactButton" at vw > MOBILE
