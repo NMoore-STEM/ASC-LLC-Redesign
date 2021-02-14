@@ -977,11 +977,31 @@ function mobileButtonUX() {
 };
 
 $(function(){
+    /*function navAnim() {
+        var btnFX = $(this).find('.button_fx');
+        var btnTxt = $(this).find('.button_text')
+        //var goTo = $(this).prop('href');
+        // Prevent button from going instantly to href
+        $(this).addClass('clicked');
+        btnFX.addClass('clicked_fx');
+        btnTxt.addClass('clicked_txt');
+        setTimeout(function(){
+            btnFX.removeClass('clicked_fx');
+            btnTxt.removeClass('clicked_txt');
+            //window.location = goTo;
+            $(this).removeClass('clicked');
+        }, 700)
+    }*/
+    // Var for href in <a> HTML
+    //var goTo = $(this).attr('href');
+    //var goTo = $(this).prop(href);
     // Contact buttons on index page (2 total)
     $('#c01').on('click touch', function(e){
         if ($(window).width() < 771) {
         // Prevent button from going instantly to href
             e.preventDefault();
+            // For dev purposes
+            console.log(document.activeElement);
             $(this).addClass('clicked');
             $('.button_fx').addClass('clicked_fx');
             $('.button_text').addClass('clicked_txt');
@@ -1004,6 +1024,8 @@ $(function(){
         if ($(window).width() < 771) {
         // Prevent button from going instantly to href
             e.preventDefault();
+            // For dev purposes
+            console.log(document.activeElement);
             $(this).addClass('clicked');
             $('.button_fx').addClass('clicked_fx');
             $('.button_text').addClass('clicked_txt');
@@ -1022,13 +1044,54 @@ $(function(){
             return true;
         };
     });
+    //$('#gh01').on('click touch', function(e){
+        //var goTo = $(this).attr('href');
+        //var btnFX = $(this).find('.button_fx');
+        //var btnTxt = $(this).find('.button_text')
+
+        //if ($(window).width() < 771) {
+            //e.preventDefault();
+            //navAnim();
+            //window.location = goTo;
+        //} else {
+        //    return true;
+        //};
+    //});
+    //$('#gh01').on('click touch', function(){
+        //var goTo = $(this).attr('href');
+
+        //navAnim();
+        //window.location = goTo;
+    //});
+    // Below is best working jquery for button UX behavior -
+    // would like to minimize if possible - still thinking of for loop...
+
+    // console.log($('.contactButton').length) gives how many instances of
+    // the specified class on page - this could be used with .each() or loop?
     $('#gh01').on('click touch', function(e){
+        var goTo = $(this).attr(href);
+    
         if ($(window).width() < 771) {
         // Prevent button from going instantly to href
             e.preventDefault();
-            mobileButtonUX();
+            // For dev purposes
+            console.log(document.activeElement);
+            $(this).addClass('clicked');
+            $(this).find('.button_fx').addClass('clicked_fx');
+            $(this).find('.button_text').addClass('clicked_txt');
+            /*mobileButtonUX().then(function(){
+                window.location.href = $(this).attr('href');
+                $(this).removeClass('clicked');
+            })*/
+            setTimeout(function(){
+                $(this).find('.button_fx').removeClass('clicked_fx');
+                $(this).find('.button_text').removeClass('clicked_txt');
+                // Not sure about below line - trying to get new tab to open on click
+                window.open(goTo, "_blank") || window.location.replace(goTo);
+                $(this).removeClass('clicked');
+            }, 700)
         } else {
-        // This is for all ".contactButton" at vw > MOBILE
+            // This is for all ".contactButton" at vw > MOBILE
             return true;
         };
     });
@@ -1036,9 +1099,23 @@ $(function(){
         if ($(window).width() < 771) {
         // Prevent button from going instantly to href
             e.preventDefault();
-            mobileButtonUX();
+            // For dev purposes
+            console.log(document.activeElement);
+            $(this).addClass('clicked');
+            $('.button_fx').addClass('clicked_fx');
+            $('.button_text').addClass('clicked_txt');
+            /*mobileButtonUX().then(function(){
+                window.location.href = $(this).attr('href');
+                $(this).removeClass('clicked');
+            })*/
+            setTimeout(function(){
+                $('.button_fx').removeClass('clicked_fx');
+                $('.button_text').removeClass('clicked_txt');
+                window.location.href = 'contact.html';
+                $(this).removeClass('clicked');
+            }, 700)
         } else {
-        // This is for all ".contactButton" at vw > MOBILE
+            // This is for all ".contactButton" at vw > MOBILE
             return true;
         };
     });
@@ -1046,26 +1123,55 @@ $(function(){
         if ($(window).width() < 771) {
         // Prevent button from going instantly to href
             e.preventDefault();
-            mobileButtonUX();
+            $(this).addClass('clicked');
+            $('$(this).button_fx').addClass('clicked_fx');
+            $('this.button_text').addClass('clicked_txt');
+            /*mobileButtonUX().then(function(){
+                window.location.href = $(this).attr('href');
+                $(this).removeClass('clicked');
+            })*/
+            setTimeout(function(){
+                $('.button_fx').removeClass('clicked_fx');
+                $('.button_text').removeClass('clicked_txt');
+                window.location.href = 'contact.html';
+                $(this).removeClass('clicked');
+            }, 700)
         } else {
-        // This is for all ".contactButton" at vw > MOBILE
+            // This is for all ".contactButton" at vw > MOBILE
             return true;
         };
-    })
+    });
         // For testing bfcache status in console log
     window.addEventListener('pageshow', function(event) {
         if (event.persisted) {
         console.log('This page was restored from the bfcache.');
         } else {
         console.log('This page was loaded normally.');
-        }
-    })
-    window.onpageshow = function (event) {
+        };
+    });
+    /*window.onpageshow = function (event) {
         if (event.persisted) {
             window.location.reload();
         }
-    };
-});
+    };*/
+    // Alternative attempt at refreshing button UX on browser "back"
+    /*window.addEventListener(onpageshow, function(event){
+        if (event.persisted ||
+            ( typeof window.performance != ('undefined') &&
+            window.PerformanceNavigation.type === 2 )) {
+                window.location.reload();
+        }
+    })*/
+    /*window.addEventListener(onpageshow, function(event){
+        if (event.persisted) {
+                window.location.reload();
+        }
+    })*/
+
+    // Below code accomplishes what I want, but dev tools are disabled 
+    // after browser back button is clicked - looking for a resolution...
+    window.addEventListener('unload', function () {});
+})
 
 
     
