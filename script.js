@@ -957,7 +957,7 @@ $(".submit").click(function() {
 // If the above suggestion is used, will need to find a way to read the 
 // "html" property from each anchor element and redirect page accordingly
 
-function mobileButtonUX() {
+/*function mobileButtonUX() {
     //$(this).addClass('clicked');
     $('.button_fx').addClass('clicked_fx');
     $('.button_text').addClass('clicked_txt');
@@ -974,9 +974,9 @@ function mobileButtonUX() {
         //window.location = 'contact.html';
         // Above redirect made every instance of .contactButton go to contact page
     }, 700);
-};
+};*/
 
-$(function(){
+//$(function(){
     /*function navAnim() {
         var btnFX = $(this).find('.button_fx');
         var btnTxt = $(this).find('.button_text')
@@ -996,7 +996,7 @@ $(function(){
     //var goTo = $(this).attr('href');
     //var goTo = $(this).prop(href);
     // Contact buttons on index page (2 total)
-    $('#c01').on('click touch', function(e){
+    /*$('#c01').on('click touch', function(e){
         if ($(window).width() < 771) {
         // Prevent button from going instantly to href
             e.preventDefault();
@@ -1005,10 +1005,6 @@ $(function(){
             $(this).addClass('clicked');
             $('.button_fx').addClass('clicked_fx');
             $('.button_text').addClass('clicked_txt');
-            /*mobileButtonUX().then(function(){
-                window.location.href = $(this).attr('href');
-                $(this).removeClass('clicked');
-            })*/
             setTimeout(function(){
                 $('.button_fx').removeClass('clicked_fx');
                 $('.button_text').removeClass('clicked_txt');
@@ -1019,8 +1015,8 @@ $(function(){
             // This is for all ".contactButton" at vw > MOBILE
             return true;
         };
-    });
-    $('#c02').on('click touch', function(e){
+    });*/
+    /*$('#c02').on('click touch', function(e){
         if ($(window).width() < 771) {
         // Prevent button from going instantly to href
             e.preventDefault();
@@ -1029,10 +1025,6 @@ $(function(){
             $(this).addClass('clicked');
             $('.button_fx').addClass('clicked_fx');
             $('.button_text').addClass('clicked_txt');
-            /*mobileButtonUX().then(function(){
-                window.location.href = $(this).attr('href');
-                $(this).removeClass('clicked');
-            })*/
             setTimeout(function(){
                 $('.button_fx').removeClass('clicked_fx');
                 $('.button_text').removeClass('clicked_txt');
@@ -1043,7 +1035,7 @@ $(function(){
             // This is for all ".contactButton" at vw > MOBILE
             return true;
         };
-    });
+    });*/
     //$('#gh01').on('click touch', function(e){
         //var goTo = $(this).attr('href');
         //var btnFX = $(this).find('.button_fx');
@@ -1068,7 +1060,7 @@ $(function(){
 
     // console.log($('.contactButton').length) gives how many instances of
     // the specified class on page - this could be used with .each() or loop?
-    $('#gh01').on('click touch', function(e){
+    /*$('#gh01').on('click touch', function(e){
         var goTo = $(this).attr('href');
     
         if ($(window).width() < 771) {
@@ -1076,26 +1068,30 @@ $(function(){
             e.preventDefault();
             // For dev purposes
             console.log(document.activeElement);
+            //
             $(this).addClass('clicked');
             $(this).find('.button_fx').addClass('clicked_fx');
-            $(this).find('.button_text').addClass('clicked_txt');
+            $(this).find('.button_text').addClass('clicked_txt');*/
             /*mobileButtonUX().then(function(){
                 window.location.href = $(this).attr('href');
                 $(this).removeClass('clicked');
             })*/
-            setTimeout(function(){
-                $(this).find('.button_fx').removeClass('clicked_fx');
-                $(this).find('.button_text').removeClass('clicked_txt');
+            /*setTimeout(function(){
+                $('.button_fx').removeClass('clicked_fx');
+                $('.button_text').removeClass('clicked_txt');
                 $(this).removeClass('clicked');
-                // Not sure about below line - trying to get new tab to open on click
+            }, 400);*/
+            /*setTimeout(function(){
+                $('.button_fx').removeClass('clicked_fx');
+                $('.button_text').removeClass('clicked_txt');
+                $('#gh01').removeClass('clicked');
                 window.open(goTo, "_blank") || window.location.replace(goTo);
             }, 700)
         } else {
-            // This is for all ".contactButton" at vw > MOBILE
             return true;
         };
-    });
-    $('#gh02').on('click touch', function(e){
+    });*/
+    /*$('#gh02').on('click touch', function(e){
         if ($(window).width() < 771) {
         // Prevent button from going instantly to href
             e.preventDefault();
@@ -1104,10 +1100,6 @@ $(function(){
             $(this).addClass('clicked');
             $('.button_fx').addClass('clicked_fx');
             $('.button_text').addClass('clicked_txt');
-            /*mobileButtonUX().then(function(){
-                window.location.href = $(this).attr('href');
-                $(this).removeClass('clicked');
-            })*/
             setTimeout(function(){
                 $('.button_fx').removeClass('clicked_fx');
                 $('.button_text').removeClass('clicked_txt');
@@ -1115,27 +1107,183 @@ $(function(){
                 $(this).removeClass('clicked');
             }, 700)
         } else {
-            // This is for all ".contactButton" at vw > MOBILE
             return true;
         };
-    });
-    $('#r01').on('click touch', function(e){
+    });*/
+    /*$('#r01').on('click touch', function(e){
         if ($(window).width() < 771) {
-        // Prevent button from going instantly to href
             e.preventDefault();
             $(this).addClass('clicked');
             $('$(this).button_fx').addClass('clicked_fx');
             $('this.button_text').addClass('clicked_txt');
-            /*mobileButtonUX().then(function(){
-                window.location.href = $(this).attr('href');
-                $(this).removeClass('clicked');
-            })*/
             setTimeout(function(){
                 $('.button_fx').removeClass('clicked_fx');
                 $('.button_text').removeClass('clicked_txt');
                 window.location.href = 'contact.html';
                 $(this).removeClass('clicked');
             }, 700)
+        } else {
+            return true;
+        };
+    });*/
+
+    // New working jquery for MOBILE button UX
+$(function(){
+    // Definitions
+    //var goTo = $(this).attr('href');
+    //document.onclick = e;
+
+
+    /*$('a').on('click touch', function(e){
+        if ($(window).width() < 771 && document.activeElement.tagName == 'a') {
+                e.preventDefault();
+        } else {
+            return true;
+        }
+    });*/
+    
+    function resetNav(){
+        var goTo = $(this).attr('href');
+        //var this1 = document.activeElement;
+
+        setTimeout(function(){
+            console.log($(this));
+            $('.button_fx').removeClass('clicked_fx');
+            $('.button_text').removeClass('clicked_txt');
+            $('a').removeClass('clicked');
+            //window.open('https://github.com/NMoore-STEM','_blank') || window.location.replace(goTo);
+            window.open(goTo) || window.location.replace(goTo);
+        }, 700)
+    }
+    $('#gh01').on('click touch', function(e){
+        var goTo = $(this).attr('href');
+
+        e.preventDefault();
+        if ($(window).width() < 771) {
+            // Prevent button from going instantly to href
+            e.preventDefault();
+            // For dev purposes
+            console.log(document.activeElement);
+            //
+            $(this).addClass('clicked');
+            $(this).find('.button_fx').addClass('clicked_fx');
+            $(this).find('.button_text').addClass('clicked_txt');
+            window.location.href = goTo;
+            
+        } else {
+            return true;
+        }
+    });
+    //$('#c01').on('click touch', mobileUXC);
+    /*$('#c01').on('click touch', function(e){
+        var goTo = $(this).attr('href');
+    
+        //navAnim();
+        if ($(window).width() < 771) {
+        // Prevent button from going instantly to href
+            e.preventDefault();
+            // For dev purposes
+            console.log(document.activeElement);
+            //
+            $(this).addClass('clicked');
+            $(this).find('.button_fx').addClass('clicked_fx');
+            $(this).find('.button_text').addClass('clicked_txt');
+            resetNavC();
+        } else {
+            // This is for all ".contactButton" at vw > MOBILE
+            return true;
+        };
+    });*/
+    $('#c02').on('click touch', function(e){
+        var goTo = $(this).attr('href');
+    
+        if ($(window).width() < 771) {
+            e.preventDefault();
+            // For dev purposes
+            console.log(document.activeElement);
+            //
+            $(this).addClass('clicked');
+            $(this).find('.button_fx').addClass('clicked_fx');
+            $(this).find('.button_text').addClass('clicked_txt');
+            setTimeout(function(){
+                $('.button_fx').removeClass('clicked_fx');
+                $('.button_text').removeClass('clicked_txt');
+                $('#gh01').removeClass('clicked');
+                window.open(goTo, "_blank") || window.location.replace(goTo);
+            }, 700)
+        } else {
+            return true;
+        };
+    });
+    $('#r01').on('click touch', function(e){
+        var goTo = $(this).attr('href');
+    
+        if ($(window).width() < 771) {
+            e.preventDefault();
+            // For dev purposes
+            console.log(document.activeElement);
+            //
+            $(this).addClass('clicked');
+            $(this).find('.button_fx').addClass('clicked_fx');
+            $(this).find('.button_text').addClass('clicked_txt');
+            setTimeout(function(){
+                $('.button_fx').removeClass('clicked_fx');
+                $('.button_text').removeClass('clicked_txt');
+                $('#gh01').removeClass('clicked');
+                window.open(goTo, "_blank") || window.location.replace(goTo);
+            }, 700)
+        } else {
+            // This is for all ".contactButton" at vw > MOBILE
+            return true;
+        };
+    });
+    /*$('#gh01').on('click touch', function(e){
+        var goTo = $(this).attr('href');
+    
+        if ($(window).width() < 771) {
+        // Prevent button from going instantly to href
+            e.preventDefault();
+            // For dev purposes
+            console.log(document.activeElement);
+            //
+            $(this).addClass('clicked');
+            $(this).find('.button_fx').addClass('clicked_fx');
+            $(this).find('.button_text').addClass('clicked_txt');
+            setTimeout(function(){
+                //$(this).find('.button_fx').removeClass('clicked_fx');
+                //$(this).find('.button_text').removeClass('clicked_txt');
+                //$(this).removeClass('clicked');
+                $('.button_fx').removeClass('clicked_fx');
+                $('.button_text').removeClass('clicked_txt');
+                $('#gh01').removeClass('clicked');
+                // Not sure about below line - trying to get new tab to open on click
+                window.open(goTo, "_blank") || window.location.replace(goTo);
+            }, 700)
+        } else {
+            // This is for all ".contactButton" at vw > MOBILE
+            return true;
+        };
+    });*/
+    $('#gh02').on('click touch', function(e){
+        //var goTo = $(this).attr('href');
+    
+        if ($(window).width() < 771) {
+        // Prevent button from going instantly to href
+            e.preventDefault();
+            // For dev purposes
+            console.log(document.activeElement);
+            //console.log(this);
+            console.log($(this));
+            //
+            $(this).addClass('clicked');
+            $(this).find('.button_fx').addClass('clicked_fx');
+            $(this).find('.button_text').addClass('clicked_txt');
+        // Problem within resetNav() function - (this) is not reffering
+        // to the <a> element once resetNav() runs... 20210215
+        // Just opens another blank page in new tab/window, but
+        // class reset works fine
+            resetNav();
+            return this;
         } else {
             // This is for all ".contactButton" at vw > MOBILE
             return true;
@@ -1171,6 +1319,7 @@ $(function(){
     // Below code accomplishes what I want, but dev tools are disabled 
     // after browser back button is clicked - looking for a resolution...
     window.addEventListener('unload', function () {});
+
 })
 
 
