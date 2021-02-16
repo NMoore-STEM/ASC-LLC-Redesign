@@ -1143,8 +1143,15 @@ $(function(){
     });*/
     
     function resetNav(){
-        var goTo = $(this).attr('href');
+        //var goTo = $(this).attr('href');
+        var goTo = $('#gh01').prop('href');
+        console.log($('#gh01').attr('href'))
         //var this1 = document.activeElement;
+
+        //might be able to make use of function.apply(thisObj, [array])
+        //to pass on "this" rather than return this...
+        // resetNav.apply(document.activeElement);
+        // above code led to "too much recursion", basically called itself into an endless loop
 
         setTimeout(function(){
             console.log($(this));
@@ -1153,7 +1160,10 @@ $(function(){
             $('a').removeClass('clicked');
             //window.open('https://github.com/NMoore-STEM','_blank') || window.location.replace(goTo);
             window.open(goTo) || window.location.replace(goTo);
+            //window.location = goTo;
         }, 700)
+        console.log($(this));
+        return this;
     }
     $('#gh01').on('click touch', function(e){
         var goTo = $(this).attr('href');
@@ -1274,7 +1284,9 @@ $(function(){
             console.log(document.activeElement);
             //console.log(this);
             console.log($(this));
-            //
+            // trying to make sure "this" is what I intend
+            //resetNav.apply(document.activeElement);
+
             $(this).addClass('clicked');
             $(this).find('.button_fx').addClass('clicked_fx');
             $(this).find('.button_text').addClass('clicked_txt');
@@ -1288,6 +1300,8 @@ $(function(){
             // This is for all ".contactButton" at vw > MOBILE
             return true;
         };
+        console.log($(this));
+        return this;
     });
         // For testing bfcache status in console log
     window.addEventListener('pageshow', function(event) {
