@@ -270,171 +270,89 @@ $(function(){
 
 // MOBILE UX - Button "touch" effect
 
-    // New working jquery for MOBILE button UX
+//  Another MOBILE button UX approach in attempt to minimize code
+// Previously written code for mobile button UX was 2894 chars - this one
+// is only 2218 chars -- This was a 23.4% improvement! 20210217
+
 $(function(){
-    
     function resetNav(){
-        //var goTo = $(this).attr('href');
-        var goTo = $('#gh01').prop('href');
-        console.log($('#gh01').attr('href'))
-        //var this1 = document.activeElement;
+        var goTo = $(this).prop('href');
 
-        //might be able to make use of function.apply(thisObj, [array])
-        //to pass on "this" rather than return this...
-        // resetNav.apply(document.activeElement);
-        // above code led to "too much recursion", basically called itself into an endless loop
-
+        //console.log($(this));
         setTimeout(function(){
             console.log($(this));
             $('.button_fx').removeClass('clicked_fx');
             $('.button_text').removeClass('clicked_txt');
             $('a').removeClass('clicked');
-            //window.open('https://github.com/NMoore-STEM','_blank') || window.location.replace(goTo);
-            window.open(goTo) || window.location.replace(goTo);
-            //window.location = goTo;
-        }, 700)
-        console.log($(this));
-        return this;
+            if ($(this).is('[id^="gh"]')){
+                window.open(goTo) || window.location.replace(goTo);
+                //alert('exactly!')
+            } else {
+                window.location.assign(goTo);
+                //alert('not quite...')
+            }
+        }.bind(this), 700)
     }
-    $('#gh01').on('click touch', function(e){
-        var goTo = $(this).attr('href');
+    function mobileUX() {
+        let boundNav = resetNav.bind(this);
 
-        e.preventDefault();
-        if ($(window).width() < 771) {
-            // Prevent button from going instantly to href
-            e.preventDefault();
-            // For dev purposes
-            console.log(document.activeElement);
-            //
-            $(this).addClass('clicked');
-            $(this).find('.button_fx').addClass('clicked_fx');
-            $(this).find('.button_text').addClass('clicked_txt');
-            window.location.href = goTo;
-            
-        } else {
-            return true;
-        }
-    });
-    //$('#c01').on('click touch', mobileUXC);
-    /*$('#c01').on('click touch', function(e){
-        var goTo = $(this).attr('href');
-    
-        //navAnim();
-        if ($(window).width() < 771) {
-        // Prevent button from going instantly to href
-            e.preventDefault();
-            // For dev purposes
-            console.log(document.activeElement);
-            //
-            $(this).addClass('clicked');
-            $(this).find('.button_fx').addClass('clicked_fx');
-            $(this).find('.button_text').addClass('clicked_txt');
-            resetNavC();
-        } else {
-            // This is for all ".contactButton" at vw > MOBILE
-            return true;
-        };
-    });*/
-    $('#c02').on('click touch', function(e){
-        var goTo = $(this).attr('href');
-    
+        $(this).addClass('clicked');
+        $(this).find('.button_fx').addClass('clicked_fx');
+        $(this).find('.button_text').addClass('clicked_txt');
+        boundNav();
+    }
+    $('#c01').on('click touch', function(e){
         if ($(window).width() < 771) {
             e.preventDefault();
-            // For dev purposes
-            console.log(document.activeElement);
-            //
-            $(this).addClass('clicked');
-            $(this).find('.button_fx').addClass('clicked_fx');
-            $(this).find('.button_text').addClass('clicked_txt');
-            setTimeout(function(){
-                $('.button_fx').removeClass('clicked_fx');
-                $('.button_text').removeClass('clicked_txt');
-                $('#gh01').removeClass('clicked');
-                window.open(goTo, "_blank") || window.location.replace(goTo);
-            }, 700)
-        } else {
-            return true;
-        };
-    });
-    $('#r01').on('click touch', function(e){
-        var goTo = $(this).attr('href');
-    
-        if ($(window).width() < 771) {
-            e.preventDefault();
-            // For dev purposes
-            console.log(document.activeElement);
-            //
-            $(this).addClass('clicked');
-            $(this).find('.button_fx').addClass('clicked_fx');
-            $(this).find('.button_text').addClass('clicked_txt');
-            setTimeout(function(){
-                $('.button_fx').removeClass('clicked_fx');
-                $('.button_text').removeClass('clicked_txt');
-                $('#gh01').removeClass('clicked');
-                window.open(goTo, "_blank") || window.location.replace(goTo);
-            }, 700)
-        } else {
-            // This is for all ".contactButton" at vw > MOBILE
-            return true;
-        };
-    });
-    /*$('#gh01').on('click touch', function(e){
-        var goTo = $(this).attr('href');
-    
-        if ($(window).width() < 771) {
-        // Prevent button from going instantly to href
-            e.preventDefault();
-            // For dev purposes
-            console.log(document.activeElement);
-            //
-            $(this).addClass('clicked');
-            $(this).find('.button_fx').addClass('clicked_fx');
-            $(this).find('.button_text').addClass('clicked_txt');
-            setTimeout(function(){
-                //$(this).find('.button_fx').removeClass('clicked_fx');
-                //$(this).find('.button_text').removeClass('clicked_txt');
-                //$(this).removeClass('clicked');
-                $('.button_fx').removeClass('clicked_fx');
-                $('.button_text').removeClass('clicked_txt');
-                $('#gh01').removeClass('clicked');
-                // Not sure about below line - trying to get new tab to open on click
-                window.open(goTo, "_blank") || window.location.replace(goTo);
-            }, 700)
-        } else {
-            // This is for all ".contactButton" at vw > MOBILE
-            return true;
-        };
-    });*/
-    $('#gh02').on('click touch', function(e){
-        //var goTo = $(this).attr('href');
-    
-        if ($(window).width() < 771) {
-        // Prevent button from going instantly to href
-            e.preventDefault();
-            // For dev purposes
-            console.log(document.activeElement);
-            //console.log(this);
             console.log($(this));
-            // trying to make sure "this" is what I intend
-            //resetNav.apply(document.activeElement);
-
-            $(this).addClass('clicked');
-            $(this).find('.button_fx').addClass('clicked_fx');
-            $(this).find('.button_text').addClass('clicked_txt');
-        // Problem within resetNav() function - (this) is not reffering
-        // to the <a> element once resetNav() runs... 20210215
-        // Just opens another blank page in new tab/window, but
-        // class reset works fine
-            resetNav();
-            return this;
+            let boundUX = mobileUX.bind(this);
+            boundUX();
         } else {
-            // This is for all ".contactButton" at vw > MOBILE
             return true;
         };
-        console.log($(this));
-        return this;
-    });
-        // For testing bfcache status in console log
+    })
+    $('#c02').on('click touch', function(e){
+        if ($(window).width() < 771) {
+            e.preventDefault();
+            console.log($(this));
+            let boundUX = mobileUX.bind(this);
+            boundUX();
+        } else {
+            return true;
+        };
+    })
+    $('#gh00').on('click touch', function(e){
+        if ($(window).width() < 771) {
+            e.preventDefault();
+            console.log($(this));
+            let boundUX = mobileUX.bind(this);
+            boundUX();
+        } else {
+            return true;
+        };
+    })
+    $('#gh01').on('click touch', function(e){
+        if ($(window).width() < 771) {
+            e.preventDefault();
+            console.log($(this));
+            let boundUX = mobileUX.bind(this);
+            boundUX();
+        } else {
+            return true;
+        };
+    })
+    $('#gh02').on('click touch', function(e){
+        if ($(window).width() < 771) {
+            e.preventDefault();
+            console.log($(this));
+            let boundUX = mobileUX.bind(this);
+            boundUX();
+        } else {
+            return true;
+        };
+    })
+
+    // Below code might not be needed - should test in detail before final release
     window.addEventListener('pageshow', function(event) {
         if (event.persisted) {
         console.log('This page was restored from the bfcache.');
@@ -442,30 +360,6 @@ $(function(){
         console.log('This page was loaded normally.');
         };
     });
-    /*window.onpageshow = function (event) {
-        if (event.persisted) {
-            window.location.reload();
-        }
-    };*/
-    // Alternative attempt at refreshing button UX on browser "back"
-    /*window.addEventListener(onpageshow, function(event){
-        if (event.persisted ||
-            ( typeof window.performance != ('undefined') &&
-            window.PerformanceNavigation.type === 2 )) {
-                window.location.reload();
-        }
-    })*/
-    /*window.addEventListener(onpageshow, function(event){
-        if (event.persisted) {
-                window.location.reload();
-        }
-    })*/
-
-    // Below code accomplishes what I want, but dev tools are disabled 
-    // after browser back button is clicked - looking for a resolution...
-    window.addEventListener('unload', function () {});
-
-})
-
-
     
+    window.addEventListener('unload', function () {});
+})
