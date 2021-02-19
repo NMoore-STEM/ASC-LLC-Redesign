@@ -10,6 +10,14 @@
 
 //Reveal header for MOBILE and TABLET//
 $(document).ready(function(){
+    // Below to keep header visible if page is refreshed/nav back and not top
+    if ($(document).scrollTop() > 450) {
+        $('#headerMT').addClass('show');
+    } else {
+        $('#headerMT').removeClass('show');
+    }
+    // Above might not be best solution, but cannot think of another now
+
     $(document).scroll(function(){
         if ($(document).scrollTop() > 450) {
             $('#headerMT').addClass('show');
@@ -280,7 +288,7 @@ $(function(){
 
         //console.log($(this));
         setTimeout(function(){
-            console.log($(this));
+            //console.log($(this));
             $('.button_fx').removeClass('clicked_fx');
             $('.button_text').removeClass('clicked_txt');
             $('a').removeClass('clicked');
