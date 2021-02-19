@@ -538,6 +538,15 @@ header {
     margin: 30px auto 0;
     border-radius: 50%;
 }
+.passwordKey {
+    border-radius: 50% 50%;
+    max-width: min-content;
+    display: grid !important;
+    margin: 4vw auto 0;
+}
+.passwordKey img {
+    max-height: 40px;
+}
 .menuOpen h3 {
     /*position: relative;*/
     opacity: 1;
