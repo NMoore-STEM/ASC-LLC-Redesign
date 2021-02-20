@@ -371,3 +371,17 @@ $(function(){
     
     window.addEventListener('unload', function () {});
 })
+
+//  Button on portfolio page that starts and stops svg animation on items
+$(function(){
+    $('.start_stop_gmj').on('click', function(){
+        if ($(this).text() == 'start animation'){
+            $(this).text("stop animation")
+        } else {
+            $(this).text("start animation")
+        }
+        $('#mask line').toggleClass('gmj_a01')
+        $('#eff, #shi').toggleClass('gmj_a02')
+        $('#shi_cross, #eff_cross').toggleClass('gmj_a03')
+    })
+})

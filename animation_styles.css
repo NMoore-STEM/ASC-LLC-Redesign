@@ -10,16 +10,25 @@
     stroke-width: 15;
     stroke-dasharray: 299 299;
     stroke-dashoffset: 299;
+    /*animation: draw01 5s infinite;*/
+}
+.gmj_a01 {
     animation: draw01 5s infinite;
 }
 #eff, #shi {
     stroke-dasharray: 453.16 453.16;
     stroke-dashoffset: 453.16;
+    /*animation: draw02 5s infinite;*/
+}
+.gmj_a02 {
     animation: draw02 5s infinite;
 }
 #shi_cross, #eff_cross {
     stroke-dasharray: 299 299;
     stroke-dashoffset: 299;
+    /*animation: draw03 5s infinite;*/
+}
+.gmj_a03 {
     animation: draw03 5s infinite;
 }
 @keyframes draw01 {
