@@ -356,6 +356,27 @@ textarea:-moz-ui-invalid {
     color: #B1C7E1;
     cursor: crosshair;
 }
+.start_stop_gmj {
+    display: block;
+    position: relative;
+    border: 2px solid #2C4A9A;
+    transition: all 0.3s ease;
+}
+.gmj_logo .portfolio_svg_anim {
+    background-image: url('restricted/images_secure/gmj_still.svg');
+    /*height: auto;
+    max-width: 475px;
+    min-width: calc(360px - 30px);*/
+    background-size: contain;
+}
+.gmj_logo .portfolio_svg_anim::before {
+    content: "";
+    position: absolute;
+    background-color:#2A385D;
+    opacity: 0.4;
+    height: 96vw;
+    width: 95vw;
+}
 /*=====================================================================*/
 /*---------------------------MOBILE------------------------------------*/
 /*=====================================================================*/
