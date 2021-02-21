@@ -374,15 +374,26 @@ $(function(){
 
 //  Button on portfolio page that starts and stops svg animation on items
 $(function(){
-    $('.start_stop_gmj').on('click', function(){
+    $('.start_stop_gmj').on('click touch', function(event){
+        // Having an issue with page jumping around 300px up when clicked
+        // I think it might have to do with methods fadeOut and In
+        // try replacing them with fade or add class
+        event.preventDefault();
+        //$('html,body').stop();
         if ($(this).text() == 'start animation'){
             $(this).text("stop animation")
+            $('.gmj_ph').fadeOut(400);
+            //$('.gmj_ph').hide('scale',{percent:130},200);
         } else {
             $(this).text("start animation")
+            $('.gmj_ph').fadeIn(400);
+            //$('.gmj_ph').show('scale',{percent:130},200);
         };
-        $('.portfolio_svg_anim').toggleClass('gmj_logo_hide');
+        //$('.gmj_ph').fadeOut(200);
+        //$('.portfolio_svg_anim').toggleClass('gmj_logo_hide');
         $('#mask line').toggleClass('gmj_a01');
         $('#eff, #shi').toggleClass('gmj_a02');
         $('#shi_cross, #eff_cross').toggleClass('gmj_a03')
+        return false;
     })
 })
