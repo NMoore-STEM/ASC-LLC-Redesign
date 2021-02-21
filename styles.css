@@ -361,7 +361,7 @@ textarea:-moz-ui-invalid {
     position: relative;
     border: 2px solid #91B4DF;
     transition: all 0.3s ease;
-    margin: 15px auto;
+    margin: 20px auto 20px;
     appearance: none;
     font-family: 'Spartan', sans-serif;
     font-size: 12pt;
@@ -371,27 +371,41 @@ textarea:-moz-ui-invalid {
     box-shadow: 2px 2px 2px black;
 }
 .gmj_logo .portfolio_svg_anim {
-    background-image: url('restricted/images_secure/gmj_still.svg');
-    /*height: auto;
-    max-width: 475px;
-    min-width: calc(360px - 30px);*/
-    opacity: 0.4;
-    background-size: contain;
+    position: relative;
+    margin: 20px 10px 0;
     background-color: white;
-    transition: all 0.2s linear;
+    height: 320px;
+    overflow: hidden;
 }
-.gmj_logo_hide {
+.gmj_logo h4 {
+    font-size: 12pt;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.gmj_ph {
+    background-image: url('restricted/images_secure/gmj_still.svg');
+    opacity: 0.9;
+    background-color:#253C84;
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background-size: contain;
+    top: 0;
+}
+/*.gmj_logo_hide {
     background-image: none;
     opacity: 0;
-}
-.gmj_logo .portfolio_svg_anim::before {
+}*/
+/* Doing away with the psuedo-element as an svg placeholder
+    will add a solid DOM element so I can manipulate in script
+/*.gmj_logo .portfolio_svg_anim::before {
     content: "";
     position: absolute;
     background-color:#2A385D;
     opacity: 0.4;
     height: 96vw;
     width: 95vw;
-}
+}*/
 /*=====================================================================*/
 /*---------------------------MOBILE------------------------------------*/
 /*=====================================================================*/
@@ -697,9 +711,9 @@ section {
     animation: outlineGrow 0.4s linear forwards;
 }
 /* Check if below class is still needed (script and HTML - both vws)*/
-.clicked_delay {
+/*.clicked_delay {
     animation:
-}
+}*/
 
 @keyframes outlineGrow {
     10% { outline-offset: 5px; outline-width: 5px; outline-color: rgba(85,54,146,1) }
@@ -1286,6 +1300,7 @@ ul{
     outline-offset: -4px;
 }
 .portfolio_item_main {
+    position: relative;
     background-color: #253C84;
     /*margin: 130px auto 130px;*/
     margin-bottom: 80px;
@@ -1360,7 +1375,7 @@ ul{
     background-color: revert;
 }
 .gmj_logo {
-    background-color: #FFFFFF;
+    background-color: #253C84;
     padding-bottom: 0;
 }
 }
@@ -2176,9 +2191,6 @@ footer {
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
     transition: background-color 2s ease, margin-top 0.2s ease;
-}
-b {
-
 }
 /*#nameField {
     width: 99%;
