@@ -379,9 +379,10 @@ $(function(){
             $(this).text("stop animation")
         } else {
             $(this).text("start animation")
-        }
-        $('#mask line').toggleClass('gmj_a01')
-        $('#eff, #shi').toggleClass('gmj_a02')
+        };
+        $('.portfolio_svg_anim').toggleClass('gmj_logo_hide');
+        $('#mask line').toggleClass('gmj_a01');
+        $('#eff, #shi').toggleClass('gmj_a02');
         $('#shi_cross, #eff_cross').toggleClass('gmj_a03')
     })
 })
