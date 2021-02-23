@@ -375,6 +375,7 @@ textarea:-moz-ui-invalid {
     margin: 20px 0 0;
     background-color: white;
     height: 340px;
+    max-width: 340px;
     overflow: hidden;
 }
 .gmj_logo h4 {
@@ -391,8 +392,8 @@ textarea:-moz-ui-invalid {
     position: absolute;
     width: 340px;
     height: 340px;
-    /*background-size: contain;*/
-    background-size: 25px;
+    background-size: contain;
+    /*background-size: 25px;*/ /*For tiled preview image*/
     top: 0;
 }
 /*.gmj_logo_hide {
@@ -2638,6 +2639,7 @@ em {
 }
 .portfolio_item_main {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     background-color: transparent;
     padding: 0;
@@ -2654,9 +2656,11 @@ em {
 }
 .portfolio_item_main h4 {
     color: white;
-    width: 100%;
+    /*width: 100%;*/
+    /*padding: 40px;*/
     padding: 40px;
     text-align: left;
+    text-align: center;
 }
 .web_dev_header {
     display: flex;
@@ -2729,12 +2733,15 @@ em {
     max-height: 250px;
     margin: 20px;
 }
+.gmj_logo h4 {
+    padding-bottom: 20px;
+}
 .portfolio_svg_anim {
     max-width: 300px;
     min-width: 200px;
     display: block;
     background-color: white;
-    outline: 4px solid black;
+    /*outline: 4px solid black;*/
 }
 .item_title {
     display: block;
