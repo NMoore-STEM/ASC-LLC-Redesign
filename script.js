@@ -11,10 +11,12 @@
 //Reveal header for MOBILE and TABLET//
 $(document).ready(function(){
     // Below to keep header visible if page is refreshed/nav back and not top
-    if ($(document).scrollTop() > 450) {
+    if ($(document).scrollTop() > 430) {
         $('#headerMT').addClass('show');
+        $('#logoContainer').addClass('logoReveal');
     } else {
         $('#headerMT').removeClass('show');
+        $('#logoContainer').removeClass('logoReveal');
     }
     // Above might not be best solution, but cannot think of another now
 
@@ -25,6 +27,13 @@ $(document).ready(function(){
             $('#headerMT').removeClass('show');
         }
     });
+
+    //Below to keep logo in view if page is refreshed not at top (FULL)
+    /*if ($(document).scrollTop() > 430) {
+        $('#logoContainer').addClass('show');
+    } else {
+        $('#logoContainer').removeClass('show');
+    }*/
     //Below will be used to have logo move into header in FULL
     $(document).scroll(function(){
         if ($(document).scrollTop() > 430) {

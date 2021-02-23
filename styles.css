@@ -1878,9 +1878,9 @@ section {
     background-color: #2F4587;
     /*max-width: 35vw;*/
     /*margin: 20px;*/
-    margin: 20px 40px;
+    margin: 10px 40px;
     padding: 10px;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     justify-content: space-around;
     /*background-color: #2C395E;*/
     box-shadow: -2px 2px #2C395E;
@@ -2755,13 +2755,17 @@ em {
 .service_group {
     display: flex;
     flex-direction: column;
+    position: relative;
     /*border: 3px solid #263048;*/
+    /*border: 2px solid #91B4DF;*/
+    border: 2px solid #2C4A9A;
     /*background-color: #3B348B;*/
-    background-color: #2F4587;
+    /*background-color: #2F4587;*/
+    background-color: #2A385D;
     /*max-width: 35vw;*/
     margin: 20px;
     padding: 20px;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     justify-content: space-around;
     /*background-color: #2C395E;*/
     box-shadow: -2px 2px #2C395E;
@@ -2812,6 +2816,21 @@ em {
     box-shadow: -4px 4px #2C395E;
     transition: all 0.3s ease;
 }
+.service_group::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    height: 88px;
+    transition: left 0.4s ease-out;
+}
+.service_group:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    box-shadow: 0 0 0 6px #91B4DF;
+    transition: left 0.3s ease, height 0.4s ease-out;
+}
 #title03 sub {
     padding: 2px;
     margin: 0;
@@ -2831,6 +2850,13 @@ em {
 }
 }
 @media only screen and (min-width:771px) and (max-width:1000px) {
+#logoFullHeader {
+    height: 70px;
+}
+#logoTextMobile {
+    height: 56px;
+    width: 110px;
+}
 .service_group ul {
     flex: 0 1 auto;
     width: 57vw;
