@@ -372,24 +372,27 @@ textarea:-moz-ui-invalid {
 }
 .gmj_logo .portfolio_svg_anim {
     position: relative;
-    margin: 20px 10px 0;
+    margin: 20px 0 0;
     background-color: white;
-    height: 320px;
+    height: 340px;
     overflow: hidden;
 }
 .gmj_logo h4 {
     font-size: 12pt;
     margin-bottom: 0;
     padding-bottom: 0;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: lighter;
 }
 .gmj_ph {
     background-image: url('restricted/images_secure/gmj_still.svg');
     opacity: 0.9;
     background-color:#253C84;
     position: absolute;
-    width: 320px;
-    height: 320px;
-    background-size: contain;
+    width: 340px;
+    height: 340px;
+    /*background-size: contain;*/
+    background-size: 25px;
     top: 0;
 }
 /*.gmj_logo_hide {
@@ -841,12 +844,16 @@ section {
     height: 100%;
     /*background: linear-gradient(30deg, rgb(50, 39, 73) 0%/*, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%*//*, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);*/
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: transparent;
 }
 #coreValues::after {
     content: "\007D";
     /*background: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);*/
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: transparent;
 }
 .coreInternal {
