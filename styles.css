@@ -1,7 +1,18 @@
+* {
+    scrollbar-color: #4C206C #220e4d;
+}
+/* Below tested on Brave browser, but not working - should work 4 Chrome*/
+/**::-webkit-scrollbar-track {
+    background-color: #220e4d;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #4C206C;
+}*/
 html {
     /*height: 100%;*/
     scroll-behavior: smooth;
     overflow: auto;
+
 }
 body {
     padding: 0;
@@ -1972,7 +1983,9 @@ section {
     background-color: transparent;
     color: #9D90C5;
     align-content: center;
-    display: grid;
+    align-items: center;
+    /*display: grid;*/
+    display: flex;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 18pt;
     /*padding: 2vw 4vw;*/
@@ -1982,15 +1995,17 @@ section {
     max-width: 400px;
     grid-row-start: 3;
     grid-column-end: span 2;
-    align-self: center;
+    /*align-self: center;*/
     justify-self: center;
     /*for button effect*/
     overflow: hidden;
     transition: all 0.6s ease;
 }
+/* ======================================= REMOVE¿ ==================*/
 .button_wide {
     max-width: 600px;
 }
+/*========================= REMOVE ¿ ================================*/
 .button_text {
     background-color: transparent;
     color: #9D90C5;
@@ -2373,26 +2388,44 @@ textarea:-moz-ui-invalid {
     justify-content: space-evenly;
     margin-left: 15px;
 }
-.top_cred_links .link_container {
+/* === .cred_link will be used to consolidate button styles for cred page*/
+.cred_link {
+    min-width: 300px;
+    height: 78px;
+    margin: 6px;
+    justify-content: center;
+}
+/*=== Below may not be needed, but here for now ===*/
+.cred_link:hover {
+    margin: 0;
+}
+/*.top_cred_links .link_container {
     min-width: 285px;
     margin: 6px;
     max-width: 385px;
     height: 78px;
     padding: 0;
     justify-content: center;
-}
-.top_cred_links .link_container:hover {
+}*/
+/*.top_cred_links .link_container:hover {
     padding: 6px;
-}
+}*/
 /*.top_cred_links .button_text {
     width: inherit;
     height: inherit;
     justify-content: center;
 }*/
 .gh_text {
+    display: flex;
     height: 58px;
     width: 100%;
     justify-content: center;
+    padding: 10px;
+}
+.gh_text h4 {
+    font-size: 14pt;
+    align-self: center;
+    color: #9D90C5;
 }
 .top_cred_links .gitHub_icon {
     height: 32px;
@@ -2422,6 +2455,13 @@ textarea:-moz-ui-invalid {
 .resumeButton h4 {
     color: #9D90C5;
 }
+/*=== Below to replace above ===*/
+.button_text h4 {
+    color: #9D90C5;
+}
+.button_text h4:hover {
+    color: #c88cdf;
+}
 .resumeButton:hover {
     margin: 0;
 }
@@ -2431,21 +2471,22 @@ textarea:-moz-ui-invalid {
 #resume_content h4 {
     color: #9D90C5;
 }
-.contactButton a[href$=".pdf"]:before {
+/*=== Below may not be needed ===*/
+/*.contactButton a[href$=".pdf"]:before {*/
     /* PDF file */
-width:32px;
+/*width:32px;
 height:32px;
 background:url('http://wwwimages.adobe.com/content/dam/acom/en/legal/images/badges/Adobe_PDF_file_icon_32x32.png');
 display:inline-block;
 content:' ';
-}
-.button_text h4:before {
+}*/
+/*.button_text h4:before {
     width:32px;
     height:32px;
     background:url('http://wwwimages.adobe.com/content/dam/acom/en/legal/images/badges/Adobe_PDF_file_icon_32x32.png');
     display:inline-block;
     content:' ';
-}
+}*/
 sub {
     font-size: 10pt;
 }
@@ -2602,10 +2643,11 @@ ul{
 .top_cred_links ul {
     width: 25vw;
 }
-.section_top .link_container {
+/*=== Below might be needed ===*/
+/*.section_top .link_container {
     max-width: 25vw;
     align-self: auto;
-}
+}*/
 #front_end_dev h4, #graphic_design h4 {
     color: white;
 }
@@ -2613,15 +2655,15 @@ em {
     color: white;
     font-style: normal;
 }
-.link_container {
+/*.link_container {
     display: flex;
-    align-items: center;
+    align-items: center;*/
     /*margin: 0 10vw 60px;*/
-    margin-left: 4vw;
+    /*margin-left: 4vw;
     padding: 10px 20px 10px 10px;
     background-color: white;
     max-width: max-content;
-}
+}*/
 .gitHub_icon {
     width: 135px;
 }
