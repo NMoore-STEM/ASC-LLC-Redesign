@@ -581,7 +581,7 @@ header {
     display: block;
     /*visibility: visible;*/
     opacity: 1;
-    width: 40vw;
+    width: 48vw;
     transition: width 0.5s ease, display 0.3s ease, opacity 0.3s ease;
 }
 .menuOpen .menuItem {
@@ -795,6 +795,7 @@ section {
     text-decoration: none;
 }
 .menuItem {
+    font-family: 'Spartan', sans-serif;
     display: grid;
     position: relative;
     padding: 10px;
@@ -1562,7 +1563,11 @@ header img {
     -webkit-font-smoothing: subpixel-antialiased; */
 }
 .nav_text {
+    display: block;
+    font-size: 1.4vw;
+    font-weight: bold;
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     background-image: linear-gradient(to right,white 50%, #91B4DF 50%);
@@ -1584,7 +1589,8 @@ header img {
     background-position: 0% 0%;
     /*font-size: 2vw;*/
     scale: 1.2002;
-    transition: background-position 0.15s ease 0.2s, scale 0.2s ease;
+    transform: scale(1.2002);
+    transition: background-position 0.15s ease 0.2s, scale 0.2s ease, transform 0.2s ease;
     /*------------------------------*/
     /* image-rendering: crisp-edges;
     backface-visibility: hidden;
@@ -1595,17 +1601,16 @@ header img {
     transform-style: flat;
     -webkit-font-smoothing: subpixel-antialiased; */
 }
-.menuItem h3 {
+/*.menuItem h3 {
     margin: 0;
     padding: 0;
     font-size: 1.4vw;
     display: block;
     background-clip: text;
-    background-color: #91B4DF;
+    background-color: #91B4DF;*/
     /*background-color: orchid;*/
-    color: transparent;
-
-}
+    /*color: transparent;
+}*/
 .passwordKey img {
     max-height: 2.5vw;
 }
