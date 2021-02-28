@@ -57,11 +57,28 @@ $(document).ready(function() {
 $(document).ready(function(){
     // opens menu
     $('#menuButton').on('click touch', function(){
+    // Below is for dev purposes
+        //$('#menu').addClass('menuOpen');
         $('#menu').toggleClass('menuOpen');
+    // Attempt to collapse menuItem elements
+        /*$('#menu').on('click touch', function(){
+            $('.menuItem').each(function(i){
+                if ($('#menu').hasClass('menuOpen'))
+                setTimeout(function(){
+                    $('.menuItem').css('animation','menu_collapse 2s ease-in forwards')
+                }, i*200);
+            });
+        });*/
     });
     //closes menu after button in menu is clicked
-    $('.menuItem').on('click', function(){
-        $('.menuClosed').removeClass('menuOpen');
+    $('.menuItem','#menu').on('click touch', function(){
+        $('#menu').removeClass('menuOpen');
+        /*$('.menuItem').each(function(i){
+            if ($('#menu').hasClass('menuOpen'))
+            setTimeout(function(){
+                $('.menuItem').eq(i).css('animation','menu_collapse 2s ease-in forwards')
+            }, i*200);
+        });*/
         $('#menu').toggleClass('menuButtonOpen');
     });
 });
