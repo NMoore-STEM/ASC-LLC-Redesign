@@ -557,11 +557,22 @@ header {
     line-height: 1.5;
     /*text-align: center;*/
     z-index: 5;
-    transition: all 2s ease;
+    /*transition: all 2s ease;*/
 }
 .menu_default {
     opacity: 0;
     padding: 37px 15px 0;
+    /*width: 9%;*/
+    /*height: 2%;*/
+    transform: scaleX(0.28)scaleY(0.28);
+    transform-origin: top right;
+    /*transition: all 2s ease;*/
+    transition: padding 1.2s linear, transform 0.5s linear 1.6s, opacity 1s linear 1.6s;
+    /* time cut in half for transition */
+    transition: padding 0.6s linear, transform 0.25s linear 0.8s, opacity 0.5s linear 0.8s;
+    /* at .25 */
+    transition: padding 0.3s linear, transform 0.125s linear 0.4s, opacity 0.25s linear 0.4s;
+    transition: all 0.14s linear, transform 0.14s linear 0.14s, opacity 0.12s linear 0.16s;
 }
 .menuClosed {
     display: none;
@@ -592,22 +603,34 @@ header {
     opacity: 1;
     /*height: 60vh;*/
     /*width: 48vw;*/
-    width: auto;
+    /*width: auto;*/
+    /* width: 58%; */
     padding: 15px !important;
     /*justify-content: space-between;*/
     /*transition: width 0.5s ease, display 0.3s ease, opacity 0.3s ease;*/
-    transition: all 2s ease;
+    /*transition: all 2s ease;*/
+    transition: opacity 0.5s linear, padding 1.2s linear 1.2s, transform 0.5s linear;
+    /*height: auto;*/
+    /* height: 60%; */
+    transform: scale(1);
+    /* transition times cut in half */
+    transition: opacity 0.25s linear, padding 0.6s linear 0.6s, transform 0.25s linear;
+    /* at .25 */
+    transition: opacity 0.125s linear, padding 0.3s linear 0.3s, transform 0.125s linear;
+    transition: transform 0.125s linear,all 0.275s linear 0.125s;
 }
 .menuOpen .menuItem {
-    display: block;
     opacity: 1;
-    position: relative;
     margin: 15px 0;
     color: rgba(255,255,255,1);
-    /*position: absolute;*/
     /*width: auto;*/
-    /*transform: -100%;*/
-    transition: all 2s ease;
+    /*transition: all 2s ease;*/
+    transition: opacity 1.2s linear, margin 2s linear,color 0.4s linear 0.8s;
+    pointer-events: all;
+    /* transition time cut in half */
+    transition: opacity 0.6s linear, margin 1s linear,color 0.2s linear 0.4s;
+    /* at .25 */
+    transition: opacity 0.3s linear, margin 0.5s linear,color 0.1s linear 0.2s;
 }
 
 /*@keyframes menu_collapse {
@@ -618,7 +641,8 @@ header {
 
 .menuItem {
     font-family: 'Spartan', sans-serif;
-    display: grid;
+    /*display: grid;*/
+    display: block;
     position: relative;
     /*padding: 10px;*/
     padding: 10px 20px;
@@ -630,10 +654,15 @@ header {
     color: rgba(255,255,255,0);
     white-space: nowrap;
     right: 0;
-    transition: all 2s ease;
+    /*transition: all 2s ease;*/
+    transition: margin 1.4s linear, color 0.4s linear, opacity 0.6s linear 0.4s;
     margin: -22px 0;
     pointer-events: none;
     opacity: 0;
+    /* Transition time cut in half */
+    transition: margin 0.7s linear, color 0.2s linear, opacity 0.3s linear 0.2s;
+    /* at .25 */
+    transition: margin 0.35s linear, color 0.1s linear, opacity 0.15s linear 0.1s;
 }
 .menuOpen .passwordKey {
     /*max-height: 30px;*/
@@ -645,6 +674,12 @@ header {
     /*margin: 30px auto 0;*/
     border-radius: 50%;
     transition: all 2s ease;
+    transition: opacity 1.2s linear 0.6s;
+    pointer-events: all;
+    /* Transition time cut in half */
+    transition: all 1s ease, opacity 0.6s linear 0.3s;
+    /* at .25 */
+    transition: all 0.5s linear, opacity 0.3s linear 0.15s;
 }
 .passwordKey {
     opacity: 0;
@@ -657,7 +692,12 @@ header {
     align-self: center;
     background-color: #553692;
     transition: all 2s ease;
+    transition: opacity 0.8s linear;
     pointer-events: none;
+    /* Transition time cut in half */
+    transition: all 1s linear, opacity 0.4s linear;
+    /* at .25 */
+    transition: all 0.5s linear, opacity 0.2s linear;
 }
 .passwordKey img {
     max-height: 40px;
