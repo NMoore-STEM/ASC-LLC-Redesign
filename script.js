@@ -72,7 +72,7 @@ $(document).ready(function(){
     });
     //closes menu after button in menu is clicked
     $('.menuItem','#menu').on('click touch', function(){
-        $('#menu').removeClass('menuOpen');
+        $('#menu').toggleClass('menuOpen');
         /*$('.menuItem').each(function(i){
             if ($('#menu').hasClass('menuOpen'))
             setTimeout(function(){
