@@ -951,10 +951,8 @@ section {
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
-.coreInternal {
-    /*padding: 0 15px 0;*/
-    margin: 0 auto 0;
-    max-width: 255px;
+ul#coreInternal {
+    padding: 0;
 }
 #coreValues h3 {
     padding: 0;
@@ -1299,7 +1297,8 @@ section {
     margin-bottom: 2vw;
     font-size: 18pt;
 }
-#soft_skills ul {
+#soft_skills li {
+    display: block;
     padding: 8px;
     margin: 4px;
     font-size: 10pt;
@@ -1313,9 +1312,10 @@ ul{
 }
 #interests {
     background-color: #2C4A9A;
-    margin: 0 60px;
+    margin: 0 15px;
     padding: 30px 30px 60px 30px;
     height: max-content;
+    max-width: 330px;
     /*align-self: center;*/
 }
 #interests h2 {
@@ -1428,6 +1428,7 @@ ul{
     color: #91B4DF;
     font-family: 'Spartan', sans-serif;
     margin: 20px 0;
+    padding: 0;
 }
 .item_details li {
     padding: 0;
