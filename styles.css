@@ -1311,20 +1311,34 @@ ul{
     color: #91B4DF;
 }
 #interests {
+    display: flex;
+    flex-direction: column;
     background-color: #2C4A9A;
     margin: 0 15px;
-    padding: 30px 30px 60px 30px;
+    padding: 0 20px 40px;
     height: max-content;
-    max-width: 330px;
-    /*align-self: center;*/
+    max-width: 330px;    
 }
 #interests h2 {
-    margin: 0;
+    margin: 30px 0 0;
     color: #91B4DF;
+    padding: 0;
+    text-align: left;
+    text-shadow: 0 1px 0 #2A385D;
+}
+#interests ul {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    padding: 0;
+    margin: 10px 0 0;
+    justify-content: center;
 }
 #interests li {
-    margin-left: 40px;
+    margin-left: 30px;
     padding: 0;
+    list-style-type: circle;
+    font-size: 12pt;
 }
 #portfolio h2 {
     margin-bottom: -90px;
@@ -1436,6 +1450,22 @@ ul{
 }
 .item_placeholder {
     line-height: 2;
+}
+.main_port_button, .sub_port_button {
+    font-size: 100%;
+    font-family: inherit;
+    border: none;
+    height: 50px;
+    margin: 10px 30px;
+}
+.main_port_button {
+
+}
+.pb_text {
+    
+}
+.sub_port_button {
+
 }
 #graphic_design {
     display: flex;
@@ -2783,11 +2813,16 @@ em {
     max-width: 80%;
     transition: outline 0.1s ease, box-shadow 0.1s ease;
 }
-.portfolio_item_main:hover {
+.wd_item {
+    box-shadow: 2px 2px 4px black;
+    outline: 4px solid #2c4a9a;
+}
+/* Removing this hover effect */
+/*.portfolio_item_main:hover {
     box-shadow: 2px 2px 4px black;
     outline: 4px solid #2c4a9a;
     transition: outline 0.1s linear, box-shadow 0.2s ease 0.2s;
-}
+}*/
 .portfolio_item_main h4 {
     color: white;
     /*width: 100%;*/
@@ -2852,6 +2887,11 @@ em {
 .code_icon {
     height: 40px;
     align-self: center;
+}
+.main_port_button, .sub_port_button {
+    font-size: 100%;
+    font-family: inherit;
+    border: none;
 }
 .item_placeholder {
     line-height: 4.5;
@@ -3005,6 +3045,7 @@ em {
     border-top: 2px solid;
     padding-inline-start: 60px;
 }
+}
 /*BELOW RULES NOT WORKING-NEW APPROACH NEEDED*/
 @media only screen and (min-width: 771px) and (max-width:1050px) {
 #about_me {
@@ -3022,9 +3063,13 @@ em {
     min-width: 420px;
 }
 }*/
-@media only screen and (max-width:900px) {
+/*@media only screen and (max-width:900px) {
 #interests {
     margin-top: 80px;
 }
+}*/
+@media only screen and (min-width:420px) and (max-width:770px) {
+#interests {
+    margin: 0 auto !important;
 }
 }
