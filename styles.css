@@ -1396,14 +1396,20 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 130px;
+    /*padding-bottom: 130px;*/
+    margin-bottom: -50px;
     background-color: #2C4A9A;
+    padding: 0 0 105px;
 }
 .portfolio_dev_icon {
     display: flex;
-    width: 340px;
+    /*width: 340px;*/
+    width: 60vw;
+    max-width: 275px;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 20px;
+    margin-top: 50px;
 }
 .code_icon {
     height: 35px;
@@ -1433,10 +1439,26 @@ ul{
 .portfolio_item_sub a {
     display: block;
     /*margin-top: -115px;*/
-    margin-top: -95px;
+    /*margin-top: -95px;*/
 }
 .portfolio_img_web, .portfolio_img_graphic {
     max-width: 340px;
+}
+#asc_img {
+    background-image: url('./images/asc_screen_600X330.png');
+    background-size: cover;
+    height: 180px;
+    width: 100%;
+    max-width: 332px;
+    z-index: 1;
+}
+.pb_container {
+    margin-top: -50px;
+    display: flex;
+    /* flex: 0 0; */
+    width: 320px;
+    gap: 10px;
+    padding-top: 10px;
 }
 .item_details {
     color: #91B4DF;
@@ -1455,17 +1477,23 @@ ul{
     font-size: 100%;
     font-family: inherit;
     border: none;
-    height: 50px;
-    margin: 10px 30px;
+    /*height: 50px;*/
+    height: 35px;
+    /*margin: 10px 30px;*/
 }
 .main_port_button {
-
+    flex: 1;
+    background-color: #553692;
+    border: 2px solid #BDB0E6;
 }
 .pb_text {
-    
+    color: #BDB0E6;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .sub_port_button {
-
+    flex: 1;
+    background-color: #553692;
+    border: 2px solid #BDB0E6;
 }
 #graphic_design {
     display: flex;
@@ -2664,13 +2692,21 @@ sub {
     margin-right: -30px;
     font-size: 18pt;
 }
-#soft_skills ul {
+#soft_skills li {
     /*background-color: #253C84;*/
     /*border-radius: 10px;*/
     padding: 10px;
     width: max-content;
     font-size: 10pt;
     background-color: #2C4A9A;
+    list-style: none;
+}
+li {
+    margin: 15px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 14pt;
+    color: #91B4DF;
+    width: max-content;
 }
 ul{
     margin: 15px;
