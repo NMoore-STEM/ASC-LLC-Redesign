@@ -783,7 +783,8 @@ header {
 }
 section {
     display: grid;
-    background-color: #2A385D;
+    /*Might have to add more specific classes for sections on other pages*/
+    /*background-color: #2A385D;*/
     max-width: 475px;
     height: auto;
     padding-bottom: 20px;
@@ -813,6 +814,8 @@ section {
     outline: 2px solid rgba(85,54,146,0);
     outline-offset: 0;
     color: #9D90C5;
+    /* Added 20210306 - Trying out new styles for all buttons */
+    box-shadow: 4px 4px 0 #322749;
 }
 .clicked {
     /*background-color: red;*/
@@ -850,6 +853,8 @@ section {
     width: 300px;
     height: inherit;
     background-color: #553692;
+    /* New styles 20210306 */
+    background-color: #662D91;
 }
 /*.clicked_bg {
     animation: outlineGrow 0.3s linear;
@@ -1209,6 +1214,9 @@ ul#coreInternal {
 /*================================================================*/
 /*------------------ MOBILE - Portfolio/ Restricted --------------*/
 /*================================================================*/
+#intro {
+    background-color: #213160;
+}
 #about {
     width: 0;
 }
@@ -1246,6 +1254,8 @@ ul#coreInternal {
 .top_cred_links {
     padding: 5px;
     background-color: #2A385D;
+    /* New style 20210306 */
+    background-color: #213160;
 }
 .top_cred_links a {
     min-height: 70px;
@@ -1340,17 +1350,31 @@ ul{
     list-style-type: circle;
     font-size: 12pt;
 }
+#portfolio {
+    /* New BG color as of 20210306 */
+    /*background-color: #213160;*/
+    position: relative;
+}
 #portfolio h2 {
-    margin-bottom: -90px;
-    padding: 50px 0 0 20px;
+    /*margin-bottom: -90px;
+    padding: 50px 0 0 20px;*/
+    /*Nex style 20210306*/
+    padding: 0 0 0 20px;
+    z-index: 1;
+    top: 45px;
+    position: absolute;
 }
 #web_dev {
     width: 0;
+    height: 0;
 }
 #front_end_dev {
     max-width: 100vw;
     background-color: #253C84;
-    padding-top: 30px;
+    /*padding-top: 30px;*/
+    /* New style 20210306 */
+    background-color: #213160;
+    padding-top: 80px;
 }
 #front_end_dev h3 {
     font-size: 18pt;
@@ -1359,12 +1383,15 @@ ul{
     padding: 30px 10px;
     letter-spacing: 3px;
     background-color: #2C4A9A;
+    /*New style 20210306*/
+    border-top: 50px solid #253C84;
 }
 .first_overlay {
     max-width: 100vw;
     background-color: #253C84;
 }
 .section_top {
+    /*Might not need this class*/
     width: 100%;
 }
 .section_top p {
@@ -1382,15 +1409,21 @@ ul{
     font-style: normal;
 }
 .section_top .top_cred_links {
-    background-color: transparent;
-    margin: 50px 0;
+    /*background-color: transparent;*/
+    /*margin: 50px 0;*/
+    background-color: #253C84;
+    /* New style 20210306 */
+    background-color: #213160;
+    margin: 0 0 80px;
+    padding: 35px 0 40px;
 }
-.top_cred_links ul {
+.top_cred_links p {
     font-size: 12pt;
     width: inherit;
     padding: 0 20px;
     margin: 0 0 -20px;
     text-align: center;
+    background-color: #213160;
 }
 .web_dev_header {
     display: flex;
@@ -1418,15 +1451,18 @@ ul{
 }
 .portfolio_item_container {
     margin: 30px 10px 30px;
+    /* New style 20210306 - might not be needed*/
+    /*background-color: #213160;*/
 }
-#front_end_dev .portfolio_item_main {
+/* Might not need below */
+/*#front_end_dev .portfolio_item_main {
     outline: 4px solid #2C4A9A;
-    outline-offset: -4px;
+    outline-offset: -4px;*/
     /* border: 4px solid #2C4A9A; */
-}
+/*}*/
 .portfolio_item_main {
-    position: relative;
-    background-color: #253C84;
+    /*position: relative;
+    background-color: #253C84;*/
     /*margin: 130px auto 130px;*/
     margin-bottom: 80px;
     padding: 0;
@@ -1451,12 +1487,26 @@ ul{
 .portfolio_img_web, .portfolio_img_graphic {
     max-width: 340px;
 }
+/* Should make a common class for web dev portfolio screenshots and just include
+unique urls for each class */
 #asc_img {
     background-image: url('./images/asc_screen_600X330.png');
     background-size: cover;
-    height: 180px;
+    /*height: 180px;*/
+    height: 174px;
     width: 100%;
-    max-width: 332px;
+    /*max-width: 332px;*/
+    max-width: 320px;
+    z-index: 1;
+}
+#lab_img {
+    background-image: url('./images/Bailey_sample02.png');
+    background-size: cover;
+    /*height: 180px;*/
+    height: 174px;
+    width: 100%;
+    /*max-width: 332px;*/
+    max-width: 320px;
     z-index: 1;
 }
 .pb_container {
@@ -1467,18 +1517,16 @@ ul{
     gap: 10px;
     /*padding-top: 10px;*/
     padding: 10px;
-    background-color: #2A385D;
-    background-color: #253C84;
+    /*background-color: #2A385D;
+    background-color: #253C84;*/
     background-color: #2C4A9A;
 }
 .item_details {
     color: #91B4DF;
     font-family: 'Spartan', sans-serif;
+    font-size: 12pt;
     margin: 20px 0;
     padding: 0;
-}
-.item_details ul {
-    font-size: 12pt;
 }
 .item_details li {
     padding: 0;
@@ -1497,14 +1545,19 @@ ul{
     /*border: 2px solid #BDB0E6;*/
     background-color: #532B9E;
     background-color: #662D91;
-    box-shadow: 1px 1px 0 #322749, -1px -1px 0 #9D90C5;
+    /* box-shadow: 1px 1px 0 #322749, -1px -1px 0 #9D90C5;*/
+    box-shadow: 2px 2px 0 #322749;
     transition: all 0.3s linear;
     font-size: 100%;
     font-family: inherit;
     border: none;
-    height: 35px;
+    height: 40px;
 }
-a:any-link:-moz-focusring, a:focus-visible {
+/* Style for clicked/touched/tabbed/focused */
+.port_button:any-link:-moz-focusring, 
+.port_button:focus-visible,
+.contactButton:any-link:-moz-focusring,
+.contactButton:focus-visible {
     outline: 1px solid darkgray;
 }
 /*.main_port_button, .sub_port_button {
@@ -1552,7 +1605,9 @@ a:any-link:-moz-focusring, a:focus-visible {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #2A385D;
+    /*background-color: #2A385D;*/
+    /*New style 20210306*/
+    background-color: #213160;
 }
 #graphic_design h3 {
     color: #91B4DF;
@@ -1577,8 +1632,12 @@ a:any-link:-moz-focusring, a:focus-visible {
 #graphic_design .portfolio_dev_icon {
     background-color: #2C4A9A;
     width: 100%;
+    max-width: 100%;
     padding: 10px 0 30px;
     border-bottom: 30px solid #253C84;
+    margin: 0;
+    gap: 30px;
+    justify-content: center;
 }
 .graphic_item {
     align-items: center;
@@ -2850,7 +2909,7 @@ ul{
     flex-direction: row;
     justify-content: center;
 }
-.top_cred_links ul {
+.top_cred_links p {
     width: 25vw;
 }
 /*=== Below might be needed ===*/
