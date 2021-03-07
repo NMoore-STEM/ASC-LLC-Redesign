@@ -347,23 +347,170 @@ textarea:-moz-ui-invalid {
     color: #9D90C5;
 }
 /*=====================================================================*/
-/*------------------  RESTRICTED - General ----------------------------*/
+/*------------------  RESTRICTED - Global ----------------------------*/
 .gitHub_icon {
     background-image: url('images/gh_wh.svg');
     height: 40px;
     display: block;
     background-repeat: no-repeat;
 }
+/* Added to see if portfolio items can have global rules */
+.portfolio_item_main {
+    /*position: relative;
+    background-color: #253C84;*/
+    /*margin: 130px auto 130px;*/
+    margin-bottom: 80px;
+    padding: 0;
+    max-width: 340px;
+    width: 340px;
+}
+.web_dev_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*padding-bottom: 130px;*/
+    /*margin-bottom: -50px;*/
+    background-color: #2C4A9A;
+    /*padding: 0 0 105px;*/
+}
+.portfolio_item_main h4 {
+    /*color: #91B4DF;*/
+    padding: 30px 20px 30px;
+    color: #ffffff;
+}
+.portfolio_item_sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #253C84;
+    /*background-color: #2A385D;*/
+}
+.portfolio_img_web, .portfolio_img_graphic {
+    max-width: 340px;
+}
+/* Should make a common class for web dev portfolio screenshots and just include
+unique urls for each class */
+#asc_img {
+    background-image: url('./images/asc_screen_600X330.png');
+    background-size: cover;
+    /*height: 180px;*/
+    height: 174px;
+    width: 100%;
+    /*max-width: 332px;*/
+    max-width: 320px;
+    z-index: 1;
+}
+#lab_img {
+    background-image: url('./images/Bailey_sample02.png');
+    background-size: cover;
+    /*height: 180px;*/
+    height: 174px;
+    width: 100%;
+    /*max-width: 332px;*/
+    max-width: 320px;
+    z-index: 1;
+}
+.pb_container {
+    /*margin-top: -50px;*/
+    display: flex;
+    /* flex: 0 0; */
+    width: 320px;
+    gap: 10px;
+    /*padding-top: 10px;*/
+    padding: 10px;
+    /*background-color: #2A385D;
+    background-color: #253C84;*/
+    background-color: #2C4A9A;
+}
+.portfolio_dev_icon {
+    display: flex;
+    /*width: 340px;*/
+    width: 60vw;
+    max-width: 275px;
+    justify-content: space-evenly;
+    align-items: center;
+    /*padding-top: 20px;*/
+    /*margin-top: 50px;*/
+    padding: 10px 0;
+    margin-top: 15px;
+}
+.code_icon {
+    height: 35px;
+}
+.item_details {
+    color: #91B4DF;
+    font-family: 'Spartan', sans-serif;
+    /*font-size: 12pt;*/
+    margin: 15px 0 35px;
+    padding: 0;
+}
+.item_details li {
+    font-size: 11pt;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0 0 0 50px;
+}
 .item_placeholder {
+    display: grid;
+    line-height: 2;
+    height: 174px;
+    width: 100%;
+    /*max-width: 332px;*/
+    /*max-width: 320px;*/
+    z-index: 1;
+    max-width: 280px;
+    align-content: center;
+    border: 20px solid #253C84;
+    margin: 0 0 10px;
+    outline: 20px solid #213160;
+    /* This may not work in IE - make sure to test */
+    outline-offset: -40px;
+    background-color: #11182d;
+}
+/* For <a> inside of portfolio items - did away with <button> parent */
+.port_button {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #553692;
+    /*border: 2px solid #BDB0E6;*/
+    background-color: #532B9E;
+    background-color: #662D91;
+    /* box-shadow: 1px 1px 0 #322749, -1px -1px 0 #9D90C5;*/
+    box-shadow: 2px 2px 0 #322749;
+    transition: all 0.3s linear;
+    font-size: 100%;
+    font-family: inherit;
+    border: none;
+    height: 40px;
+    box-shadow: 0 10px 0 -6px #322749;
+    box-shadow: 0 6px 4px -6px #322749;
+}
+/* Style for clicked/touched/tabbed/focused */
+.port_button:any-link:-moz-focusring, 
+.port_button:focus-visible,
+.contactButton:any-link:-moz-focusring,
+.contactButton:focus-visible {
+    outline: 1px solid darkgray;
+}
+.pb_text {
+    color: #BDB0E6;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-bottom: 3px;
+    transition: all 0.2s ease;
+}
+/*.item_placeholder {
     height: 100px;
     font-family: 'Noto Sans KR', sans-serif;
     width: 100%;
     text-align: center;
     font-size: 20pt;
-    text-shadow: 0 0 2px white;
+    text-shadow: 0 0 2px white, 0 6px 1px black;
     color: #B1C7E1;
     cursor: crosshair;
-}
+    opacity: 0.4;
+}*/
 .start_stop_gmj {
     display: block;
     position: relative;
@@ -816,6 +963,8 @@ section {
     color: #9D90C5;
     /* Added 20210306 - Trying out new styles for all buttons */
     box-shadow: 4px 4px 0 #322749;
+    box-shadow: 0 10px 0 -6px #322749;
+    /*box-shadow: 0 6px 4px -6px #322749;*/
 }
 .clicked {
     /*background-color: red;*/
@@ -1380,6 +1529,7 @@ ul{
     font-size: 18pt;
     font-weight: bold;
     text-align: left;
+    color: #ffffff;
     padding: 30px 10px;
     letter-spacing: 3px;
     background-color: #2C4A9A;
@@ -1413,46 +1563,26 @@ ul{
     /*margin: 50px 0;*/
     background-color: #253C84;
     /* New style 20210306 */
-    background-color: #213160;
+    /*background-color: #213160;*/
     margin: 0 0 80px;
     padding: 35px 0 40px;
 }
 .top_cred_links p {
     font-size: 12pt;
-    width: inherit;
+    /*width: inherit;*/
+    width: 340px;
     padding: 0 20px;
-    margin: 0 0 -20px;
+    margin: 0 auto -20px;
     text-align: center;
-    background-color: #213160;
-}
-.web_dev_header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /*padding-bottom: 130px;*/
-    /*margin-bottom: -50px;*/
-    background-color: #2C4A9A;
-    /*padding: 0 0 105px;*/
-}
-.portfolio_dev_icon {
-    display: flex;
-    /*width: 340px;*/
-    width: 60vw;
-    max-width: 275px;
-    justify-content: space-evenly;
-    align-items: center;
-    /*padding-top: 20px;*/
-    /*margin-top: 50px;*/
-    padding: 10px 0;
-    margin-top: 10px;
-}
-.code_icon {
-    height: 35px;
+    /*background-color: #213160;*/
+    background-color: transparent;
 }
 .portfolio_item_container {
     margin: 30px 10px 30px;
     /* New style 20210306 - might not be needed*/
     /*background-color: #213160;*/
+    display: flex;
+    flex-wrap: wrap;
 }
 /* Might not need below */
 /*#front_end_dev .portfolio_item_main {
@@ -1467,10 +1597,21 @@ ul{
     margin-bottom: 80px;
     padding: 0;
     max-width: 340px;
+    width: 340px;
+}
+.web_dev_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*padding-bottom: 130px;*/
+    /*margin-bottom: -50px;*/
+    background-color: #2C4A9A;
+    /*padding: 0 0 105px;*/
 }
 .portfolio_item_main h4 {
-    color: #91B4DF;
+    /*color: #91B4DF;*/
     padding: 30px 20px 30px;
+    color: #ffffff;
 }
 .portfolio_item_sub {
     display: flex;
@@ -1521,19 +1662,50 @@ unique urls for each class */
     background-color: #253C84;*/
     background-color: #2C4A9A;
 }
+.portfolio_dev_icon {
+    display: flex;
+    /*width: 340px;*/
+    width: 60vw;
+    max-width: 275px;
+    justify-content: space-evenly;
+    align-items: center;
+    /*padding-top: 20px;*/
+    /*margin-top: 50px;*/
+    padding: 10px 0;
+    margin-top: 15px;
+}
+.code_icon {
+    height: 35px;
+}
 .item_details {
     color: #91B4DF;
     font-family: 'Spartan', sans-serif;
-    font-size: 12pt;
-    margin: 20px 0;
+    /*font-size: 12pt;*/
+    margin: 15px 0 35px;
     padding: 0;
 }
 .item_details li {
+    font-size: 11pt;
+    line-height: 1.5;
     padding: 0;
-    margin: 0 0 0 30px;
+    margin: 0 0 0 50px;
 }
 .item_placeholder {
+    display: grid;
     line-height: 2;
+    height: 174px;
+    width: 100%;
+    /*max-width: 332px;*/
+    /*max-width: 320px;*/
+    z-index: 1;
+    max-width: 280px;
+    align-content: center;
+    border: 20px solid #253C84;
+    margin: 0 0 10px;
+    outline: 20px solid #213160;
+    /* This may not work in IE - make sure to test */
+    outline-offset: -40px;
+    background-color: #11182d;
 }
 /* For <a> inside of portfolio items - did away with <button> parent */
 .port_button {
@@ -1552,6 +1724,8 @@ unique urls for each class */
     font-family: inherit;
     border: none;
     height: 40px;
+    box-shadow: 0 10px 0 -6px #322749;
+    box-shadow: 0 6px 4px -6px #322749;
 }
 /* Style for clicked/touched/tabbed/focused */
 .port_button:any-link:-moz-focusring, 
