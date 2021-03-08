@@ -104,6 +104,7 @@ label {
 }
 #nameField, #emailField, #messageField {
     width: 99%;
+    outline: none;
 }
 input {
     display: block;
@@ -443,8 +444,11 @@ unique urls for each class */
     /*font-size: 12pt;*/
     margin: 15px 0 35px;
     padding: 0;
+    /* Added 20210308 */
+    width: 300px;
 }
 .item_details li {
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 11pt;
     line-height: 1.5;
     padding: 0;
@@ -452,6 +456,13 @@ unique urls for each class */
 }
 .item_placeholder {
     display: grid;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    font-size: 20pt;
+    text-shadow: 0 0 2px white, 0 6px 1px black;
+    color: #B1C7E1;
+    cursor: crosshair;
+    opacity: 0.4;
     line-height: 2;
     height: 174px;
     width: 100%;
@@ -481,6 +492,7 @@ unique urls for each class */
     box-shadow: 2px 2px 0 #322749;
     transition: all 0.3s linear;
     font-size: 100%;
+    text-decoration: none;
     font-family: inherit;
     border: none;
     height: 40px;
@@ -936,6 +948,9 @@ section {
     height: auto;
     padding-bottom: 20px;
     margin: 0 auto 0;
+}
+.sectionMain {
+    background-color: #2A385D;
 }
 .filterShadow {
     width: 100%;
@@ -1570,7 +1585,7 @@ ul{
 .top_cred_links p {
     font-size: 12pt;
     /*width: inherit;*/
-    width: 340px;
+    width: 300px;
     padding: 0 20px;
     margin: 0 auto -20px;
     text-align: center;
@@ -3075,16 +3090,21 @@ ul{
 }
 .section_top .top_cred_links {
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     height: auto;
     width: inherit;
     max-width: inherit;
-    margin: 0;
-    flex-direction: row;
-    justify-content: center;
+    margin: 20px 0 0;
+    /*flex-direction: row;*/
+    /*justify-content: center;*/
+    align-items: center;
 }
 .top_cred_links p {
-    width: 25vw;
+    /*width: 25vw;*/
+    background-color: transparent;
+    padding: 15px;
+    max-width: 400px;
+    text-align: center;
 }
 /*=== Below might be needed ===*/
 /*.section_top .link_container {
@@ -3123,6 +3143,9 @@ em {
     justify-content: center;
 }
 .portfolio_item_main {
+    margin: 40px;
+}
+/*.portfolio_item_main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -3133,10 +3156,13 @@ em {
     outline: 0 solid #2C4A9A;
     max-width: 80%;
     transition: outline 0.1s ease, box-shadow 0.1s ease;
-}
+}*/
 .wd_item {
     box-shadow: 2px 2px 4px black;
     outline: 4px solid #2c4a9a;
+    /* New style 20210308 */
+    box-shadow: 0 6px 4px -6px #322749;
+    box-shadow: 0 6px 4px -6px black;
 }
 /* Removing this hover effect */
 /*.portfolio_item_main:hover {
@@ -3152,28 +3178,28 @@ em {
     text-align: left;
     text-align: center;
 }
-.web_dev_header {
+/*.web_dev_header {
     display: flex;
     width: 100%;
     background-color: #2C4A9A;
     align-items: center;
     justify-content: center;
-}
-.portfolio_item_sub {
+}*/
+/*.portfolio_item_sub {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    position: relative;*/
     /*justify-content: center;*/
-    justify-content: space-evenly;
+    /*justify-content: space-evenly;*/
     /*background-color: #2C4A9A;*/
-    background-color: transparent;
+    /*background-color: transparent;
     width: 100%;
     margin-top: -20px;
-}
-.portfolio_item_sub a {
-    align-self: center;
+}*/
+/*.portfolio_item_sub a {
+    align-self: center;*/
     /*margin-left: 60px;*/
-}
+/*}*/
 .portfolio_item_main sub, .item_details {
     font-size: 14pt;
     font-family: 'Exo2', sans-serif;
@@ -3186,25 +3212,25 @@ em {
 }
 .item_details {
     /*margin-top: 50px;*/
-    padding-left: 10px;
+    /*padding-left: 10px;*/
 }
-.item_details li{
+/*.item_details li{*/
     /*text-align: center;*/
-    margin-left: 80px;
+    /*margin-left: 80px;
     font-size: 14pt;
-}
-.portfolio_dev_icon {
+}*/
+/*.portfolio_dev_icon {
     display: flex;
-    gap: 32.5px;
+    gap: 32.5px;*/
     /*margin: 25px auto;*/
     /*background-color: #253C84;*/
-    background-color: transparent;
+    /*background-color: transparent;*/
     /*padding: 15px 40px 40px;*/
-    margin: 0;
-    margin-right: 30px;
+    /*margin: 0;
+    margin-right: 30px;*/
     /*justify-content: space-evenly;*/
-    justify-content: center;
-}
+    /*justify-content: center;
+}*/
 .code_icon {
     height: 40px;
     align-self: center;
@@ -3216,7 +3242,11 @@ em {
 }
 .item_placeholder {
     line-height: 4.5;
-    max-width: 340px;
+    /*max-width: 340px;*/
+    /*new styles */
+    max-width: 260px;
+    margin-bottom: 20px;
+    font-size: 16pt;
 }
 #graphic_design h3 {
     padding: 4vw 2vw;
