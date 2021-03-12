@@ -371,12 +371,12 @@ textarea:-moz-ui-invalid {
     color: lightblue;
     color: royalblue;
     padding-right: 15px;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 .cred_arr::after {
     content: "\003D";
     padding-left: 15px;
-    font-size: 14pt;
+    font-size: 18pt;
     color: lightblue;
     color: #ffffff;
 }
@@ -384,7 +384,7 @@ textarea:-moz-ui-invalid {
     position: relative;
     /*font-family: 'Consolas';*/
     font-family: 'Source Code Pro', monospace;
-    font-size: 14pt;
+    font-size: 16pt;
     color: peru;
     white-space: pre;
     margin: 0;
@@ -400,7 +400,7 @@ textarea:-moz-ui-invalid {
     content: "\005B";
 }
 .arr_prop::after {
-    content: "\005D";
+    content: "\005D\003B";
 }
 .gitHub_icon {
     background-image: url('images/gh_wh.svg');
@@ -1039,6 +1039,19 @@ section {
     box-shadow: 0 10px 0 -6px #322749;
     /*box-shadow: 0 6px 4px -6px #322749;*/
 }
+/* Combine below class with class above */
+/* Eliminate any unecessary declarations */
+.contactButton {
+    /*background-color: #553692;*/
+    color: #9D90C5;
+    align-content: center;
+    /*display: grid;*/
+    font-family: 'Noto Sans KR', sans-serif;
+    /*padding: 10px;*/
+    text-decoration: none;
+    /*New style 20210309 */
+    box-shadow: 0 10px 6px -6px #322749;
+}
 .clicked {
     /*background-color: red;*/
     animation: outlineGrow 0.4s linear forwards;
@@ -1106,18 +1119,6 @@ section {
 .clicked_txt {
     color: white;
     transition: all 0.8s linear;
-}
-
-.contactButton {
-    /*background-color: #553692;*/
-    color: #9D90C5;
-    align-content: center;
-    /*display: grid;*/
-    font-family: 'Noto Sans KR', sans-serif;
-    /*padding: 10px;*/
-    text-decoration: none;
-    /*New style 20210309 */
-    box-shadow: 0 10px 6px -6px #322749;
 }
 .sectionTitle {
     background-color: #2C4A9A;
@@ -1882,6 +1883,9 @@ unique urls for each class */
 	padding: 0 0 10px 30px;
     margin: 0;
     text-align: left;
+}
+.heading_decor {
+    width: 100%;
 }
 #graphic_design .portfolio_dev_icon {
     background-color: #2C4A9A;
