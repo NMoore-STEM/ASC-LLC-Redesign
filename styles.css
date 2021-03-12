@@ -349,6 +349,59 @@ textarea:-moz-ui-invalid {
 }
 /*=====================================================================*/
 /*------------------  RESTRICTED - Global ----------------------------*/
+/* Below is to give h1/top of portfolio some style that differs from rest of Doc */
+#title_cred {
+    /* background-color: #16142D; */
+    background-color: #211833;
+    margin-top: 30px;
+    max-width: 100%;
+}
+.cred_arr {
+    font-size: 30pt;
+    color: skyblue;
+    margin: 0;
+    padding-right: 10px;
+    padding-top: 180px;
+}
+.cred_arr::before {
+    content: "let";
+    /*font-family: 'Consolas';*/
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    color: lightblue;
+    color: royalblue;
+    padding-right: 15px;
+    font-size: 14pt;
+}
+.cred_arr::after {
+    content: "\003D";
+    padding-left: 15px;
+    font-size: 14pt;
+    color: lightblue;
+    color: #ffffff;
+}
+.arr_prop {
+    position: relative;
+    /*font-family: 'Consolas';*/
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14pt;
+    color: peru;
+    white-space: pre;
+    margin: 0;
+    padding: 0 0 180px;
+}
+.arr_prop::before, .arr_prop::after {
+    position: relative;
+    color: #ffffff;
+    font-size: 20pt;
+    font-weight: bolder;
+}
+.arr_prop::before {
+    content: "\005B";
+}
+.arr_prop::after {
+    content: "\005D";
+}
 .gitHub_icon {
     background-image: url('images/gh_wh.svg');
     height: 40px;
@@ -1390,6 +1443,7 @@ ul#coreInternal {
 }
 #about {
     width: 0;
+    height: 100px;
 }
 .section_heading {
     font-size: 35pt;

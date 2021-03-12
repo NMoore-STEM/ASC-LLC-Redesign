@@ -423,3 +423,20 @@ $(function(){
         return false;
     })
 })
+
+// Delete below before going live 
+// These are written here to see color format patterns
+// Possible h1 portfolio intro headings
+
+let Nick_Moore = ["your", "new", "employee"];
+
+$(function(Nick_Moore) {
+    var $bottom = scroll();
+    window.on(scroll, function(hire) {
+        if ($bottom == 0) {
+            hire
+            $(yourTeam).append(employees[Nick_Moore])
+        }
+    })
+})
+
