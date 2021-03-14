@@ -2532,11 +2532,6 @@ section {
     /* New style 20210309 */
     box-shadow: 0 10px 6px -6px #322749;
 }
-/* ======================================= REMOVE¿ ==================*/
-.button_wide {
-    max-width: 600px;
-}
-/*========================= REMOVE ¿ ================================*/
 .button_text {
     background-color: transparent;
     color: #9D90C5;
