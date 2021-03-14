@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASC LLC</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&family=Exo+2&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg">
+    <script src="../jquery-3.5.1.js"></script>
+    <script src="../script.js"></script>
+    <!--<script src="contact_test.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>-->
+</head>
+<body>
+    <noscript>
+        <style type="text/css">
+            .bg {display:none !important}
+            p {color:black}
+        </style>
+        <div style="height:30vh"></div>
+        <p>Please enable javascript to avoid broken webpage content and prevent potential errors.</p>
+        <p>For step-by-step instructions on how to enable javascript, please visit this <a href="https://www.enable-javascript.com/">link</a>.</p>
+        <p>Thank you for your patience.</p>
+    </noscript>
+    <main class=bg>
+        <header id=headerMT>
+            <div id=logoContainer class=logoR2>
+                <img id=logoGlyphMobile src="..\images\ASC Seed LOGO_linGrad.svg" alt="asc logo"></img>
+                <img id=logoFullHeader src="..\images\ASC_Seed_LOGO_ltBlue2.svg" alt="asc logo"></img>
+                <a id=logoTextMobile href="..\index.html" tabindex=-1 alt="asc logo" name=home>
+                    <!--<img src="images\ASC LOGO Text_ltBlue.svg"></img>-->
+                </a>
+            </div>
+        </header>
+        <a id=menuButton>
+            <img src="..\images\headerMenuIcon.svg"></img>
+        </a>
+        <menu id=menu class=menu_default>
+            <a class=menuItem href="cred.html#about">ABOUT ME</a>
+            <a class=menuItem href="cred.html#web_dev">WEB DEV WORK</a>
+            <a class=menuItem href="cred.html#design">DESIGN WORK</a>
+        </menu>
+        <wrapper class="formContainer">
+            <div class=contactTitle>
+            <h1>CONTACT ME</h1>
+            </div>
+            <!--<form class=contactForm action="contact.php" method=POST enctype="multipart/form-data" name=contactASC>-->
+        <!--Need to add action="https://formspree.io/f/xleozrbe" below to make funcional, disabled through dev process-->
+        <!--Or for FormCarry use action="https://formcarry.com/s/_e7pm-Gb5q"-->
+        <!--Use placeholder action="#" for dev process-->
+            <form class="contactForm willChangeJQ" action="#" method=POST enctype="multipart/form-data" name=contactASC>
+                <div class="nameContainer willMoveJQ">
+                    <label id=nameLabel class=willChangeJQ for=nameField>Name:</label>
+                    <input id=nameField class=inputField type=text name=name inputmode=text size=40 autocomplete=on required>
+                </div>
+                <div class="emailContainer willMoveJQ">
+                    <label id=emailLabel class=willChangeJQ for=emailField >Email:</label>
+                    <input id=emailField class=inputField type=email name=email inputmode=email size=40 autocomplete=on required="true" pattern="^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b">
+                    <!--regex developed/tested with tool at https://regexr.com/-->
+                </div>
+                <div class="messageContainer willMoveJQ">
+                    <label id=messageLabel class=willChangeJQ for=messageField>Message:</label>
+                    <textarea id=messageField class=inputField name=message rows=8 cols=50 autocomplete=on required></textarea>
+                </div>
+                <!--Hidden bot trap security device-->
+                <label for=botCatfish class=botCatfish>Fellow Humans, please refrain from entering any characters in this field.</label>
+                <input id=botCatfish class=botCatfish>
+                <div class=submitButton>
+                    <!-- NOTE: use SVGGeometryElement.getTotalLength() in console to measure paths-->
+                    <svg class=svg_border x="4px" y="2px" viewBox="0 0 464 86" preserveAspectRatio="none">
+                        <defs>
+                            <!--<linearGradient id="white_glow" x1="0%" y1="0%" x2="100%" y2="0%">
+                              <stop offset="0%"   stop-color="white"/>
+                              <stop offset="100%" stop-color="white" stop-opacity="0"/>
+                            </linearGradient>-->
+                            <!--<filter id="glow_bg">
+                                <feDropShadow dx="0" dy="0" stdDeviation="0.2" flood-color="#8B6BEF"/>
+                                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="1" />
+                            </filter>
+                            <filter id="glow_main">
+                                <feDropShadow dx="0" dy="0" stdDeviation="0.2" flood-color="white"/>
+                                <feGaussianBlur result="blurOut" in="offOut" stdDeviation="0.2" />
+                            </filter>-->
+                        </defs>
+                        <g id="load_outline3">
+                            <rect class=load_outline3 x="2" y="2" fill="none" stroke="#8B6BEF" stroke-dasharray="1084" stroke-dashoffset="1084" stroke-width="6" stroke-linecap="square" stroke-miterlimit="10" width="460" height="82"/>
+                            <!--<rect class=load_outline3 x="2" y="2" fill="none" stroke="red"(prev="#322749") stroke-dasharray="1084" stroke-dashoffset="1084" stroke-width="6" stroke-linecap="square" stroke-miterlimit="10" width="460" height="82"/>-->
+                        </g>
+                        <g id="load_outline2">
+                            <rect class=load_outline2 x="2" y="2" fill="none" stroke="#CDBBF7" stroke-dasharray="1084" stroke-dashoffset="1084" stroke-width="6" stroke-linecap="square" stroke-miterlimit="10" width="460" height="82"/>
+                        </g>
+                        <g id="load_outline">
+                            <rect class=load_outline x="2" y="2" fill="none" stroke="white" stroke-dasharray="1084" stroke-dashoffset="1084" stroke-width="6" stroke-linecap="square" stroke-miterlimit="10" width="460" height="82"/>
+                        </g>
+                    </svg>
+                    <input class="subB" type=submit value=SUBMIT>
+                </div>
+                <span id=ty>
+                    <h2 class=thankYou>Thank you for reaching out!</h2>
+                    <h3 class=thankYou-sub>We will be in touch soon</h3>
+                </span>
+                <!--<a href="" id=submitContact class=footerButton>SUBMIT</a>-->
+            </form>
+            <div class=spacer2></div>
+        </wrapper>
+    
+        <footer>
+            <div id=colorBand04>
+                <div id=colorBand05>
+                    <a href="cred.html" class=footerButton style="margin:0;padding:20px;">
+                        PORTFOLIO HOME
+                    </a>
+                </div>
+                <div class=copyright>COPYRIGHT &#169 2020 ASC,LLC.</div>
+            </div>
+
+        </footer>
+    </main>
+</body>
+</html>
