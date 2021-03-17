@@ -389,7 +389,7 @@ textarea:-moz-ui-invalid {
     font-size: 16pt;
     color: peru;
     white-space: pre;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 0 180px;
     max-width: max-content;
 }
