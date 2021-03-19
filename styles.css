@@ -2581,6 +2581,11 @@ section {
     /*text-shadow: 12px 6px 2px  #553692;*/
     transition: all 0.4s ease-in, outline-offset 0.1s ease-in;
 }
+.contactButton:hover .link_01,
+.contactButton:focus .link_01 {
+    color: #c88cdf;
+    transition: all 0.4s ease-in;
+}
 .contactButton:hover .button_bg, 
 .contactButton:focus .button_bg {
     box-shadow: 4px 6px rgba(0,0,0,0.6);
@@ -2944,10 +2949,12 @@ textarea:-moz-ui-invalid {
     justify-content: space-evenly;
     justify-content: center;
 }
-.top_cred_links a:focus {
+/* Below style was a bit disruptive to the entire flow of page */
+/* Disabled for now */
+/*.top_cred_links a:focus {
     margin: 0 0 0 15px;
     margin: 0 0 6px 15px;
-}
+}*/
 /* === .cred_link will be used to consolidate button styles for cred page*/
 .cred_link {
     min-width: 300px;
