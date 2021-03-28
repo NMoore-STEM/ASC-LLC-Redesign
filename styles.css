@@ -2477,6 +2477,7 @@ section {
     display: inline-block;
     position: relative;
     top: 30px;
+    width: auto;
     min-width: 250px;
     z-index: 1;
     list-style: none;
@@ -2498,13 +2499,22 @@ section {
     z-index: -1;
 }
 #qualContent {
-    display: grid;
-    max-width: 900px;
-    min-width: 750px;
-    /*grid-template-rows: 130px 1fr 1fr;*/
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr 1fr;
-    padding: 130px 7vw 100px;
+    /*display: grid;*/
+    width: 70vw;
+    max-width: 1100px;
+    /* min-width: 750px; */
+    /* grid-template-rows: 130px 1fr 1fr;*/
+    /*grid-template-rows: repeat(4, 1fr);*/
+    /*grid-template-columns: 1fr 1fr; */
+    padding: 130px 5vw 100px;
+}
+#qualContent ul {
+    /* display: flex;
+    flex-direction: column; */
+    width: auto;
+    padding: 0;
+    margin: 0;
+    /* white-space: pre; */
 }
 .list_container01 {
     grid-column-start: 1;
