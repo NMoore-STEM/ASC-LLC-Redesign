@@ -20,8 +20,11 @@ body {
     /*height: 100%;*/
 }
 i {
-    font-family: 'Crimson Pro', serif;
-    font-size: 6vw;
+    /* font-family: 'Crimson Pro', serif;
+    font-size: 6vw; */
+    font-size: 5.15vw;
+    font-family: 'Times New Roman', serif;
+    line-height: 0.78;
 }
 ::selection {
     background: purple; /* WebKit/Blink Browsers */
@@ -40,7 +43,7 @@ i {
     color:  #91B4DF;
 }
 .subtext {
-    font-family: 'Exo', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     color:  #91B4DF;
     font-size: 10pt;
 }
@@ -610,7 +613,7 @@ unique urls for each class */
     font-size: 12pt;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: 'Ubuntu',sans-serif;
+    /* font-family: 'Ubuntu',sans-serif; */
     font-weight: lighter;
 }
 .gmj_ph {
@@ -644,7 +647,8 @@ unique urls for each class */
 @media only screen and (max-width:770px) {
 h1 {
     color: white;
-    font-family: 'Noto Sans KR', sans-serif;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: 'Spartan', sans-serif;
     /*font-size: 18pt;*/
     font-size: 3vh;
     text-align: center;
@@ -680,6 +684,10 @@ p, li {
 }
 p {
     text-align: center;
+}
+i {
+    font-size: 20pt;
+    letter-spacing: 0.65pt;
 }
 a {
     height: min-content;
@@ -3270,7 +3278,8 @@ em {
     color: #91B4DF;
     color: black;
     font-size: 18pt;
-    font-family: 'Ubuntu';
+    /* font-family: 'Ubuntu'; */
+    font-family: 'Noto Sans KR';
 }
 .portfolio_item_container {
     display: flex;
