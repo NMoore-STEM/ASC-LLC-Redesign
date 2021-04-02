@@ -92,6 +92,7 @@ $(document).ready(function(){
     var $bar04 = $('#title04');
 
     // might be able to remove "event" from all function parameters below
+    // also, consider changing functs to arrow functions (seems to be more fluid and responsive)
     $bar01.on('inview', function(event, isInView) {
         if (isInView) {
           // element is now visible in the viewport
@@ -100,7 +101,7 @@ $(document).ready(function(){
           // element has gone out of viewport
         }
     });
-    $bar02.on('inview', function(event, isInView) {
+    $bar02.on('inview', (event, isInView) => {
         if (isInView) {
           // element is now visible in the viewport
           $bar02.addClass('animation_final')
@@ -108,14 +109,14 @@ $(document).ready(function(){
           // element has gone out of viewport
         }
     });
-    $bar03.on('inview', function(event, isInView) {
-        if (isInView) {
-          // element is now visible in the viewport
-          $bar03.addClass('animation_final')
-        } else {
-          // element has gone out of viewport
-        }
-    });
+    $bar03.on('inview', (event, isInView) => {
+            if (isInView) {
+                // element is now visible in the viewport
+                $bar03.addClass('animation_final');
+            } else {
+                // element has gone out of viewport
+            }
+        });
     $bar04.on('inview', function(event, isInView) {
         if (isInView) {
           // element is now visible in the viewport
