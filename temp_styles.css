@@ -9,8 +9,17 @@ h1 {
     -webkit-text-fill-color: transparent;
     background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
     font-size: 10vw;
-    text-shadow: 0 0 1px rgba(98,10,141,0.4);
+    /* text-shadow: 0 0 1px rgba(98,10,141,0.4); */
+    text-shadow: 0 0 0 rgba(98,10,141,0.4);
+    filter: brightness(1) drop-shadow(0 0 5px rgba(198,10,198,0.6));
+    animation: i_glow 4s ease 1.6s 1;
 }
+
+@keyframes i_glow {
+    40% {text-shadow: 0 0 1px rgba(98,10,141,0.7); filter: brightness(1.6) drop-shadow(0 0 20px rgba(198,10,198,0.6))};
+    100% {text-shadow: 0 0 0 rgba(98,10,141,0.4); filter: brightness(0.8) drop-shadow(0 0 0 rgba(198,10,198,0));};
+}
+
 .bg {
     background-attachment: fixed;
     width: 100%;
