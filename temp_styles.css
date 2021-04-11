@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
+    font-size: 10vw;
+    text-shadow: 0 0 1px rgba(98,10,141,0.4);
+}
+.bg {
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #16142D;
+    background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
+}
+.scrn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    height: 100vh;
+}
