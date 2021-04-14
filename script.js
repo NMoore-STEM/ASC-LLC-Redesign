@@ -226,6 +226,7 @@ $(function(){
     });
 
     // FORM VERIFICATION - SUBMISSION - ANIMATION
+    // Wrote a unique regular expression using regexr website to test parameters
     var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
     function blankCheck() {
         if (emailF.val()!="" && nameF.val()!="" && msgF.val()!="") {

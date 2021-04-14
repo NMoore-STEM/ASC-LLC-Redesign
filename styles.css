@@ -108,6 +108,8 @@ label {
 #nameField, #emailField, #messageField {
     width: 99%;
     outline: none;
+    /* chromium override ? */
+    background-color: transparent !important;
 }
 input {
     display: block;
@@ -115,8 +117,21 @@ input {
 	overflow: hidden;
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
-	background-color: transparent;
+	background-color: transparent !important;
 }
+/* Chromium Fix for form fields changing background-color to system/default after submission */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    background-color: transparent !important;
+}
+input:-webkit-internal-autofill-selected {
+    background-color: transparent !important;
+    color: -internal-light-dark(black, white);
+}
+/* Custom Error Visual Cue */
 input:-moz-ui-invalid, textarea:-moz-ui-invalid {
     box-shadow: none;
     background-image: url('images/error_x_icon.svg');
