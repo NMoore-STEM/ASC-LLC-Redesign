@@ -109,7 +109,7 @@ label {
     width: 99%;
     outline: none;
     /* chromium override ? */
-    background-color: transparent !important;
+    background-color: transparent;
 }
 input {
     display: block;
@@ -117,11 +117,12 @@ input {
 	overflow: hidden;
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
-	background-color: transparent !important;
+	background-color: transparent;
 }
 /* Chromium Fix for form fields changing background-color to system/default after submission */
+/* Decided to turn off autocomplete inline html value before launch as it should eliminate the design break */
 
-input:-webkit-autofill,
+/* input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
@@ -130,7 +131,7 @@ input:-webkit-autofill:active {
 input:-webkit-internal-autofill-selected {
     background-color: transparent !important;
     color: -internal-light-dark(black, white);
-}
+} */
 /* Custom Error Visual Cue */
 input:-moz-ui-invalid, textarea:-moz-ui-invalid {
     box-shadow: none;
