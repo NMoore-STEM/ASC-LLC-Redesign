@@ -2714,8 +2714,8 @@ section {
 #servicesContent {
     display: flex;
     flex-wrap: wrap;
-    width: 80vw;
-    padding-top: 100px;
+    /* width: 80vw; */
+    padding-top: 140px;
     max-width: 1100px;
     margin: 0 auto 0;
     justify-content: center;
@@ -2758,6 +2758,17 @@ section {
     font-size: 14pt;
 
 }
+.service_group05 {
+    margin-bottom: 60px;
+}
+#servicesContent .contactButton {
+    margin-top: 40px;
+    transition: all 0.2s linear;
+}
+#servicesContent .contactButton:hover {
+    margin-top: 34px;
+    transition: all 0.2s linear;
+}
 /* .service_group ul {
     flex: 4 3 auto;
     flex: 0 3 60vw;
@@ -2780,13 +2791,13 @@ section {
 } */
 #qualContent {
     /*display: grid;*/
-    width: 70vw;
+    /* width: 70vw; */
     max-width: 1100px;
     /* min-width: 750px; */
     /* grid-template-rows: 130px 1fr 1fr;*/
     /*grid-template-rows: repeat(4, 1fr);*/
     /*grid-template-columns: 1fr 1fr; */
-    padding: 130px 5vw 100px;
+    padding: 40px 5vw 60px;
 }
 #qualContent ul {
     display: flex;
@@ -2794,25 +2805,28 @@ section {
     flex-wrap: wrap;
     justify-content: space-around;
     width: auto;
-    padding: 0;
+    /* padding: 0; */
+    padding: 60px 70px 0;
     margin: 0 auto;
     /* white-space: pre; */
-    max-width: 700px;
+    /* max-width: 700px; */
 }
 .listDeco {
     /* display: inline-block; */
     /* position: relative;
     top: 30px; */
     /* width: auto; */
-    min-width: 250px;
+    /* min-width: 250px; */
     /* z-index: 1;
     list-style: none; */
     /*margin: 0 auto 10vw;*/
-    margin: 10px 20px 40px;
+    margin: 10px 0 40px;
     /* padding: 10px 0 20px 30px; */
     /* min-width: 225px; */
-    min-width: 125px;
-    max-width: 250px;
+    /* min-width: 125px;
+    max-width: 250px; */
+    width: 250px;
+    line-height: 1.5;
 }
 /* .listDeco::before {
     content: "";
@@ -2837,8 +2851,10 @@ section {
 .lastLi {
     /* grid-column-end: span 2; */
     /* max-width: 90%; */
-    max-width: 550px;
-    max-width: 49vw;
+    /* max-width: 550px; */
+    max-width: 60vw;
+    width: auto;
+    margin-bottom: 60px;
 }
 
 /*.button_effect {
@@ -3870,7 +3886,7 @@ em {
 /* Added below viewport rule to eliminate excessive white space/ empty space in qual section */
 @media only screen and (min-width:771px) and (max-width:910px) {
 .listDeco, .lastLi {
-    max-width: 50vw;
+    width: 60vw;
 }
 #qualContent ul {
     justify-content: left;
