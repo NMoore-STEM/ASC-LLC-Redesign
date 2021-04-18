@@ -53,16 +53,16 @@
             <form class="contactForm willChangeJQ" action="#" method=POST enctype="multipart/form-data" name=contactASC>
                 <div class="nameContainer willMoveJQ">
                     <label id=nameLabel class=willChangeJQ for=nameField>Name:</label>
-                    <input id=nameField class=inputField type=text name=name inputmode=text size=40 autocomplete=on required>
+                    <input id=nameField class=inputField type=text name=name inputmode=text size=40 autocomplete=off required>
                 </div>
                 <div class="emailContainer willMoveJQ">
                     <label id=emailLabel class=willChangeJQ for=emailField >Email:</label>
-                    <input id=emailField class=inputField type=email name=email inputmode=email size=40 autocomplete=on required="true" pattern="^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b">
+                    <input id=emailField class=inputField type=email name=email inputmode=email size=40 autocomplete=off required="true" pattern="^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b">
                     <!--regex developed/tested with tool at https://regexr.com/-->
                 </div>
                 <div class="messageContainer willMoveJQ">
                     <label id=messageLabel class=willChangeJQ for=messageField>Message:</label>
-                    <textarea id=messageField class=inputField name=message rows=8 cols=50 autocomplete=on required></textarea>
+                    <textarea id=messageField class=inputField name=message rows=8 cols=50 autocomplete=off required></textarea>
                 </div>
                 <!--Hidden bot trap security device-->
                 <label for=botCatfish class=botCatfish>Fellow Humans, please refrain from entering any characters in this field.</label>
