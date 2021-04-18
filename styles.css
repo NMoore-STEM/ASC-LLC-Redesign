@@ -39,6 +39,7 @@ i {
     line-height: 0.78;
 }
 p, li {
+    font-family: 'Noto Sans KR', sans-serif;
     color: #91B4DF;
 }
 ::selection {
@@ -126,15 +127,23 @@ p, li {
 .cardFrame {
     display: flex;
     background-color: #91B4DF;
-    border: 2px solid #2C395E;
+    /* border: 2px solid #2C395E; */
+    border: 2px solid black;
     border-radius: 15px;
 }
 .cardContent h4 {
     font-size: 14pt;
+    color: black;
+    text-align: left;
+    /* padding-left: 50px; */
+    /* padding: 0 0 0 50px; */
 }
 .cardContent p {
-    color: black;
+    font-family: 'Spartan', sans-serif;
+    color: #2A385D;
+    /* color: black; */
     margin: 0;
+    padding: 10px 0 0 20px;
     text-align: left;
 }
 
@@ -1416,18 +1425,23 @@ ul#coreInternal {
     width: 20vw;
     max-width: 100px;
 }
+.cardContent {
+    padding: 10px 0;
+}
 .cardContent h4 {
     /* font-size: 14pt; */
-    padding: 0;
-    margin: 0 auto 10px;
-    color: #253C84;
+    /* padding: 0; */
+    padding: 0 0 0 35px;
+    /* margin: 0 auto 10px; */
+    /* color: #253C84; */
 }
 .cardContent p {
     /* color: black;
     margin: 0; */
+    /* color: #2A385D; */
     font-size: 10pt;
     /* text-align: left; */
-    padding: 0 0 0 20px;
+    /* padding: 0 0 0 20px; */
 }
 #servicesContent {
     max-width: 475px;
@@ -2160,7 +2174,7 @@ h4 {
     margin: 0;
 }
 p {
-    font-family: 'Exo 2',sans-serif;
+    /* font-family: 'Exo 2',sans-serif; */
     font-size: 15pt;
     /*color:  #253C84;*/
     /* color: #91B4DF; */
@@ -2469,6 +2483,7 @@ section {
     /*padding: 2vw 4vw;*/
     margin: 2vw 8vw;
     max-width: 400px;
+    max-height: 110px;
     /* grid needs to stay */
     grid-row-start: 3;
     grid-column-end: span 2;
@@ -2481,12 +2496,14 @@ section {
     
 }
 .button_text {
+    max-height: 110px;
     background-color: transparent;
     color: #9D90C5;
     align-content: center;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 18pt;
-    padding: 2vw 4vw;
+    font-size: 16pt;
+    /* padding: 2vw 4vw; */
+    padding: 24px;
     text-decoration: none;
     text-align: center;
     /*text-shadow: 0 0 0 #553692;*/
@@ -2699,17 +2716,24 @@ section {
 .cardContent {
     flex-grow: 1;
     text-align: center;
+    padding: 15px 0;
 }
 /* .cardContent h4 {
     font-size: 14pt;
 } */
+.cardContent h4 {
+    padding: 0 0 0 50px;
+}
 .cardContent p {
     /* color: black;
     margin: 0; */
     font-size: 13pt;
     /* text-align: left; */
-    padding: 10px 15px 0;
-    font-family: 'Noto Sans KR', sans-serif;
+    /* padding: 10px 15px 0;
+    font-family: 'Noto Sans KR', sans-serif; */
+    /* font-family: 'Spartan', sans-serif; */
+    /* padding: 10px 0 0 20px; */
+    /* color: #253C84; */
 }
 #servicesContent {
     display: flex;
@@ -2797,7 +2821,7 @@ section {
     /* grid-template-rows: 130px 1fr 1fr;*/
     /*grid-template-rows: repeat(4, 1fr);*/
     /*grid-template-columns: 1fr 1fr; */
-    padding: 40px 5vw 60px;
+    padding: 40px 0 60px;
 }
 #qualContent ul {
     display: flex;
@@ -3887,9 +3911,13 @@ em {
 @media only screen and (min-width:771px) and (max-width:910px) {
 .listDeco, .lastLi {
     width: 60vw;
+    height: 60px;
+    /* margin: 10px auto 40px; */
 }
 #qualContent ul {
-    justify-content: left;
-    padding-left: 5vw;
+    /* justify-content: left;
+    padding-left: 5vw; */
+    justify-content: space-evenly;
+    padding-left: 100px;
 }
 }
