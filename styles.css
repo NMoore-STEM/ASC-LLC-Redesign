@@ -916,7 +916,9 @@ header {
 }
 #logoGlyphMobile {
     /*width: 20%;*/
-    scale: 3;
+    /* scale: 3; */
+    transform: scale(3);
+    -webkit-transform: scale(3);
     left: 10vw;
     top: -60px;
     position: absolute;
