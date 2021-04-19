@@ -198,6 +198,7 @@ p, li {
     margin: 40px 30px 0;
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif;
+    transition: all 0.5s ease;
 }
 .topButton {
     display: block;
@@ -206,8 +207,10 @@ p, li {
     background-color: #4F2F88;
     border-radius: 50% 50%;
     border: solid 6px #553692;
+    transition: all 0.5s ease;
 }
-/* Delete this element entirely from HTML later */
+
+/* Delete this element entirely from HTML and CSS later */
 .topButtonFULL {
     display: none;
 }
@@ -2925,6 +2928,12 @@ footer {
     margin: 40px 30px 0;
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif;
+}
+.footerButton:hover, .topButton:hover {
+    box-shadow: 0 10px 17px -5px black;
+    transform: scale(1.12);
+    -webkit-transform: scale(1.12);
+    transition: all 0.3s ease;
 }
 /* #colorBand04 {
     background-color: #4F2F88;
