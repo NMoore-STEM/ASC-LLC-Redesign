@@ -588,11 +588,30 @@ textarea:-moz-ui-invalid {
 .arr_prop::after {
     content: "\005D\003B";
 }
+.section_heading {
+    margin-bottom: -30px;
+    color: #456299;
+    width: max-content;
+}
+.intro_container {
+    background-color: #253C84;
+}
+.intro_bg {
+    display: block;
+    background-color: #2C4A9A;
+}
+.intro_bg p {
+    text-align: left;
+}
 .gitHub_icon {
     background-image: url('images/gh_wh.svg');
     height: 40px;
     display: block;
     background-repeat: no-repeat;
+}
+.gh_text {
+    display: flex;
+    justify-content: center;
 }
 /* Added to see if portfolio items can have global rules */
 .portfolio_item_main {
@@ -1662,9 +1681,9 @@ ul#coreInternal {
     padding: 0;
     max-width: 100%;
 }
-.cred_arr {
+/* .cred_arr {
     padding-top: 180px;
-}
+} */
 .arr_prop {
     font-size: 14pt;
     padding-bottom: 0;
@@ -1681,16 +1700,16 @@ ul#coreInternal {
 }
 .section_heading {
     font-size: 35pt;
-    color: #456299;
-    margin-bottom: -30px;
-    width: max-content;
+    /* color: #456299; */
+    /* margin-bottom: -30px; */
+    /* width: max-content; */
 }
-.intro_container {
+/* .intro_container {
     background-color: #253C84;
-}
+} */
 .intro_bg {
-    display: block;
-    background-color: #2C4A9A;
+    /* display: block;
+    background-color: #2C4A9A; */
     padding: 20px 10px;
 }
 .intro_bg h3 {
@@ -1700,7 +1719,7 @@ ul#coreInternal {
     letter-spacing: 3px;
 }
 .intro_bg p {
-    text-align: left;
+    /* text-align: left; */
     padding: 0 10px 0 30px;
     margin: .75em 0;
     /*white-space: pre-line;*/
@@ -1712,17 +1731,17 @@ ul#coreInternal {
 }
 .top_cred_links {
     padding: 5px;
-    background-color: #2A385D;
+    /* background-color: #2A385D; */
     /* New style 20210306 */
     background-color: #213160;
 }
 .top_cred_links a {
     min-height: 70px;
 }
-.gh_text {
+/* .gh_text {
     display: flex;
     justify-content: center;
-}
+} */
 .gitHub_icon {
     width: 105px;
     height: 32px;
@@ -3176,20 +3195,20 @@ textarea:-moz-ui-invalid {
 .section_heading {
     position: relative;
     /*width: 100%;*/
-    width: max-content;
+    /* width: max-content; */
     /*font-size: 8vw;*/
     font-size: 75pt;
-    color: #2C529A;
-    color: #486AAC;
-    color: #456299;
-    margin-bottom: -30px;
+    /* color: #2C529A;
+    color: #486AAC; */
+    /* color: #456299; */
+    /* margin-bottom: -30px; */
     z-index: 1;
 }
 .intro_container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: #253C84;
+    /* background-color: #253C84; */
     /*padding: 30px;
     padding-top: 0;*/
     padding: 0 30px;
@@ -3210,13 +3229,13 @@ textarea:-moz-ui-invalid {
     min-width: 420px;
 }
 .intro_bg {
-    display: block;
-    background-color:#2C4A9A;
+    /* display: block;
+    background-color:#2C4A9A; */
     padding: 20px;
 }
 .intro_bg p {
     padding: 20px;
-    text-align: left;
+    /* text-align: left; */
 }
 .top_cred_links {
     display: flex;
@@ -3266,10 +3285,10 @@ textarea:-moz-ui-invalid {
     justify-content: center;
 }*/
 .gh_text {
-    display: flex;
+    /* display: flex; */
     height: 58px;
     width: 100%;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 10px;
 }
 .gh_text h4 {
@@ -3401,6 +3420,7 @@ sub {
     font-size: 10pt;
     background-color: #2C4A9A;
     list-style: none;
+    align-self: center;
 }
 li {
     margin: 15px;
