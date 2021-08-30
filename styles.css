@@ -2354,9 +2354,11 @@ header img {
 .menuItem:hover .nav_text {
     background-position: 0% 0%;
     /*font-size: 2vw;*/
-    scale: 1.2002;
-    transform: scale(1.2002);
-    transition: background-position 0.15s ease 0.2s, scale 0.2s ease, transform 0.2s ease;
+    /* scale: 1.2002;
+    transform: scale(1.2002); */
+    transform: scale(1.4502);
+    /* transition: background-position 0.15s ease 0.2s, scale 0.2s ease, transform 0.2s ease; */
+    transition: background-position 0.15s ease 0.2s, transform 0.2s ease;
     /*------------------------------*/
     /* image-rendering: crisp-edges;
     backface-visibility: hidden;
