@@ -789,6 +789,7 @@ unique urls for each class */
 .start_stop_gmj {
     display: block;
     position: relative;
+    cursor: pointer;
     border: 2px solid #91B4DF;
     transition: all 0.3s ease;
     margin: 20px auto 20px;
@@ -840,6 +841,58 @@ unique urls for each class */
     height: 96vw;
     width: 95vw;
 }*/
+.kanji_12 .portfolio_svg_anim {
+    position: relative;
+}
+.kanji_34 .portfolio_svg_anim {
+    position: relative;
+}
+.kanji_12_ph {
+    background-color:#253C84;
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    background-size: contain;
+    top: 0;
+}
+.kanji_34_ph {
+    background-color:#253C84;
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    background-size: contain;
+    top: 0;
+}
+.start_stop_knj12 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #91B4DF;
+    transition: all 0.3s ease;
+    margin: 20px auto 20px;
+    appearance: none;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12pt;
+    background-color: #253C84;
+    color: #91B4DF;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 2px black;
+}
+.start_stop_knj34 {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #91B4DF;
+    transition: all 0.3s ease;
+    margin: 20px auto 20px;
+    appearance: none;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12pt;
+    background-color: #253C84;
+    color: #91B4DF;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 2px black;
+}
 /*=====================================================================*/
 /*---------------------------MOBILE------------------------------------*/
 /*=====================================================================*/
