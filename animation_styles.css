@@ -1,8 +1,13 @@
 /* =======  This file is solely for use with animated SVG logo for CDoinoff = */
-.portfolio_svg_anim line, .portfolio_svg_anim path {
+/* .portfolio_svg_anim line, .portfolio_svg_anim path {
     fill: none;
     /* stroke: black; */
+    /*stroke-width: 15;
+} */
+#gmj_anim path, #gmj_anim line {
+    fill: none;
     stroke-width: 15;
+    stroke: black;
 }
 #mask line {
     fill: none;
