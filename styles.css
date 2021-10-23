@@ -841,6 +841,11 @@ unique urls for each class */
     height: 96vw;
     width: 95vw;
 }*/
+
+/*=== Special rule specifically for kanji svg animations ===*/
+.portfolio_item_long {
+    /*== Might not be needed as there is no height specified in portfolio_item_main class ==*/
+}
 .kanji_12 .portfolio_svg_anim {
     position: relative;
 }
@@ -848,18 +853,22 @@ unique urls for each class */
     position: relative;
 }
 .kanji_12_ph {
+    background-image: url('restricted/images_secure/kibou_still.svg');
+    opacity: 0.9;
     background-color:#253C84;
     position: absolute;
     width: 340px;
-    height: 340px;
+    height: 500px;
     background-size: contain;
     top: 0;
 }
 .kanji_34_ph {
+    background-image: url('restricted/images_secure/yuuki_still.svg');
+    opacity: 0.9;
     background-color:#253C84;
     position: absolute;
     width: 340px;
-    height: 340px;
+    height: 500px;
     background-size: contain;
     top: 0;
 }
@@ -3817,12 +3826,22 @@ em {
 .gmj_logo h4 {
     padding-bottom: 20px;
 }
-.portfolio_svg_anim {
+.portfolio_svg_anim #gmj_anim {
     max-width: 300px;
     min-width: 200px;
+    /* display: block;
+    background-color: white; */
+    /*outline: 4px solid black;*/
+}
+.portfolio_svg_anim {
     display: block;
     background-color: white;
-    /*outline: 4px solid black;*/
+}
+.kanji_12 .portfolio_svg_anim,
+.kanji_34 .portfolio_svg_anim {
+    width: 340px;
+    height: 500px;
+    overflow: hidden;
 }
 .item_title {
     display: block;

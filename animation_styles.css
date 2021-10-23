@@ -1,7 +1,7 @@
 /* =======  This file is solely for use with animated SVG logo for CDoinoff = */
 .portfolio_svg_anim line, .portfolio_svg_anim path {
     fill: none;
-    stroke: black;
+    /* stroke: black; */
     stroke-width: 15;
 }
 #mask line {
