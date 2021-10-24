@@ -425,7 +425,95 @@ $(function(){
         return false;
     })
 })
+// Kibou Button
+// $(function(){
+//     $('.start_stop_knj12').on('click touch', function(event){
+//         event.preventDefault();
+//         if ($(this).text() == 'start animation'){
+//             $(this).text("stop animation")
+//             $('.kanji_12_ph').fadeOut(400);
+//         } else {
+//             $(this).text("start animation")
+//             $('.kanji_12_ph').fadeIn(400);
+//             kanji_ichi();
+//         };
+//         function kanji_ichi(){
+//             $('#kanji_1').css('display','block');
+//             $('#mask11').toggleClass('knj11');
+//             $('#mask12').toggleClass('knj12');
+//             $('#mask13').toggleClass('knj13');
+//             $('#mask14').toggleClass('knj14');
+//             $('#mask15').toggleClass('knj15');
+//             $('#mask16').toggleClass('knj16');
+//             $('#mask17').toggleClass('knj17');
+//             kanji_ni();
+//         }
+//         function kanji_ni(){
+//             $('#mask21').toggleClass('knj21');
+//             $('#mask22').toggleClass('knj22');
+//             $('#mask23').toggleClass('knj23');
+//             $('#mask24').toggleClass('knj24');
+//             $('#mask25').toggleClass('knj25');
+//             $('#mask26').toggleClass('knj26');
+//             $('#mask27').toggleClass('knj27');
+//             $('#mask28').toggleClass('knj28');
+//             $('#mask29').toggleClass('knj29');
+//             $('#mask210').toggleClass('knj210');
+//             $('#mask211').toggleClass('knj211');
+//             setTimeout(anim_done, 12100);
+//         }
+//         function anim_done(){
+//             $('.start_stop_knj12').text("start animation")
+//             $('.kanji_12_ph').fadeIn(400);
+//             $('#kanji_1, #kanji_2').css('display','none');
+//         }
+//         kanji_ichi();
+//         return false;
+//     })
+// })
+// Kibou Button (not so complicated)
+// Above code seeks to give control to end-user with start/stop animation button but also
+// seeks to reset the cover graphic once animation is complete.  The below attempt will allow
+// start/stop with button, but will not reset the cover graphic until the user presses the button
+// also animation will run infinitely but need to perfect the timing of animations - maybe first draw
+// of the first kanji remains up until the second kanji finishes or have both kanji draw simultaneously
+// still need to add english definitions that grow from middle...
 
+$(function(){
+    $('.start_stop_knj12').on('click touch', function(event){
+        // Having an issue with page jumping around 300px up when clicked
+        // I think it might have to do with methods fadeOut and In
+        // try replacing them with fade or add class
+        event.preventDefault();
+        if ($(this).text() == 'start animation'){
+            $(this).text("stop animation")
+            $('.kanji_12_ph').fadeOut(400);
+        } else {
+            $(this).text("start animation")
+            $('.kanji_12_ph').fadeIn(400);
+        };
+        $('#mask11').toggleClass('knj11');
+        $('#mask12').toggleClass('knj12');
+        $('#mask13').toggleClass('knj13');
+        $('#mask14').toggleClass('knj14');
+        $('#mask15').toggleClass('knj15');
+        $('#mask16').toggleClass('knj16');
+        $('#mask17').toggleClass('knj17');
+        $('#mask21').toggleClass('knj21');
+        $('#mask22').toggleClass('knj22');
+        $('#mask23').toggleClass('knj23');
+        $('#mask24').toggleClass('knj24');
+        $('#mask25').toggleClass('knj25');
+        $('#mask26').toggleClass('knj26');
+        $('#mask27').toggleClass('knj27');
+        $('#mask28').toggleClass('knj28');
+        $('#mask29').toggleClass('knj29');
+        $('#mask210').toggleClass('knj210');
+        $('#mask211').toggleClass('knj211');
+        $('#def12').toggleClass('def_play');
+        return false;
+    })
+})
 // Delete below before going live 
 // These are written here to see color format patterns
 // Possible h1 portfolio intro headings

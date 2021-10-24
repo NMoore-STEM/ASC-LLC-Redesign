@@ -90,3 +90,829 @@
     from {stroke-dashoffset:299}
     to {stroke-dashoffset:0;}
 }*/
+/*====KIBOU kanji 1====*/
+/* #mask11 {
+    stroke-dasharray: 76 80;
+    stroke-dashoffset: 0;
+}
+.knj11 {
+    animation: draw11 11.1s ease-out infinite;
+}
+@keyframes draw11 {
+    0%{stroke-dashoffset: 0;}
+    4%{stroke-dashoffset: 76;}
+    100%{stroke-dashoffset: 76;}
+}
+#mask12 {
+    stroke-dasharray: 86 86;
+    stroke-dashoffset: 0;
+}
+.knj12 {
+    animation: draw12 11.1s ease-out infinite;
+}
+@keyframes draw12 {
+    0%{stroke-dashoffset: 0;}
+    4%{stroke-dashoffset: 0;}
+    11%{stroke-dashoffset: -86;}
+    100%{stroke-dashoffset: -86;}
+}
+#mask13 {
+    stroke-dasharray: 95 95;
+    stroke-dashoffset: 0;
+}
+.knj13 {
+    animation: draw13 11.1s ease-in infinite;
+}
+@keyframes draw13 {
+    0%{stroke-dashoffset: 0;}
+    12%{stroke-dashoffset: 0;}
+    18%{stroke-dashoffset: 95;}
+    100%{stroke-dashoffset: 95;}
+}
+#mask14 {
+    stroke-dasharray: 157 157;
+    stroke-dashoffset: 0;
+}
+.knj14 {
+    animation: draw14 11.1s linear infinite;
+}
+@keyframes draw14 {
+    0%{stroke-dashoffset: 0;}
+    18%{stroke-dashoffset: 0;}
+    28%{stroke-dashoffset: -157;}
+    100%{stroke-dashoffset: -157;}
+}
+#mask15 {
+    stroke-dasharray: 60 60;
+    stroke-dashoffset: 0;
+}
+.knj15 {
+    animation: draw15 11.1s linear infinite;
+}
+@keyframes draw15 {
+    0%{stroke-dashoffset: 0;}
+    28%{stroke-dashoffset: 0;}
+    34%{stroke-dashoffset: -60;}
+    100%{stroke-dashoffset: -60;}
+}
+#mask16 {
+    stroke-dasharray: 158 162;
+    stroke-dashoffset: 0;
+}
+.knj16 {
+    animation: draw16 11.1s linear infinite;
+}
+@keyframes draw16 {
+    0%{stroke-dashoffset: 0;}
+    34%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: -162;}
+    100%{stroke-dashoffset: -162;}
+}
+#mask17 {
+    stroke-dasharray: 106.886 109;
+    stroke-dashoffset: 0;
+}
+.knj17 {
+    animation: draw17 11.1s ease-in infinite;
+}
+@keyframes draw17 {
+    0%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    48%{stroke-dashoffset: -109;}
+    100%{stroke-dashoffset: -109;}
+} */
+/*===KIBOU kanji 2===*/
+/* #mask21 {
+    stroke-dasharray: 28 30;
+    stroke-dashoffset: 0;
+}
+.knj21 {
+    animation: draw21 6s linear 5.1s infinite;
+}
+@keyframes draw21 {
+    0%{stroke-dashoffset: 0;}
+    9%{stroke-dashoffset: -30;}
+    100%{stroke-dashoffset: -30;}
+}
+#mask22 {
+    stroke-dasharray: 80 85;
+    stroke-dashoffset: 0;
+}
+.knj22 {
+    animation: draw22 6s linear 5.1s 1;
+}
+@keyframes draw22 {
+    0%{stroke-dashoffset: 0;}
+    9%{stroke-dashoffset: 0;}
+    18%{stroke-dashoffset: -85;}
+    100%{stroke-dashoffset: -85;}
+}
+#mask23 {
+    stroke-dasharray: 85 90;
+    stroke-dashoffset: 0;
+}
+.knj23 {
+    animation: draw23 6s linear 5.1s infinite;
+}
+@keyframes draw23 {
+    0%{stroke-dashoffset: 0;}
+    18%{stroke-dashoffset: 0;}
+    27%{stroke-dashoffset: -90;}
+    100%{stroke-dashoffset: -90;}
+}
+#mask24 {
+    stroke-dasharray: 78 83;
+    stroke-dashoffset: 0;
+}
+.knj24 {
+    animation: draw24 6s linear 5.1s infinite;
+}
+@keyframes draw24 {
+    0%{stroke-dashoffset: 0;}
+    27%{stroke-dashoffset: 0;}
+    36%{stroke-dashoffset: -83;}
+    100%{stroke-dashoffset: -83;}
+}
+#mask25 {
+    stroke-dasharray: 143 148;
+    stroke-dashoffset: 0;
+}
+.knj25 {
+    animation: draw25 6s linear 5.1s infinite;
+}
+@keyframes draw25 {
+    0%{stroke-dashoffset: 0;}
+    36%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: -143;}
+    100%{stroke-dashoffset: -143;}
+}
+#mask26 {
+    stroke-dasharray: 40 43;
+    stroke-dashoffset: 0;
+}
+.knj26 {
+    animation: draw26 6s ease-in 5.1s infinite;
+}
+@keyframes draw26 {
+    0%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    49%{stroke-dashoffset: -43;}
+    100%{stroke-dashoffset: -43;}
+}
+#mask27 {
+    stroke-dasharray: 44 47;
+    stroke-dashoffset: 0;
+}
+.knj27 {
+    animation: draw27 6s ease-in 5.1s infinite;
+}
+@keyframes draw27 {
+    0%{stroke-dashoffset: 0;}
+    49%{stroke-dashoffset: 0;}
+    54%{stroke-dashoffset: -47;}
+    100%{stroke-dashoffset: -47;}
+}
+#mask28 {
+    stroke-dasharray: 94 98;
+    stroke-dashoffset: 0;
+}
+.knj28 {
+    animation: draw28 6s linear 5.1s infinite;
+}
+@keyframes draw28 {
+    0%{stroke-dashoffset: 0;}
+    63%{stroke-dashoffset: 0;}
+    72%{stroke-dashoffset: -98;}
+    100%{stroke-dashoffset: -98;}
+}
+#mask29 {stroke-dasharray: 55 59;
+    stroke-dashoffset: 0;
+}
+.knj29 {
+    animation: draw29 6s linear 5.1s infinite;
+}
+@keyframes draw29 {
+    0%{stroke-dashoffset: 0;}
+    72%{stroke-dashoffset: 0;}
+    81%{stroke-dashoffset: -59;}
+    100%{stroke-dashoffset: -59;}
+}
+#mask210 {
+    stroke-dasharray: 83 88;
+    stroke-dashoffset: 0;
+}
+.knj210 {
+    animation: draw210 6s linear 5.1s infinite;
+}
+@keyframes draw210 {
+    0%{stroke-dashoffset: 0;}
+    81%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: -88;}
+    100%{stroke-dashoffset: -88;}
+}
+#mask211 {
+    stroke-dasharray: 151 155;
+    stroke-dashoffset: 0;
+}
+.knj211 {
+    animation: draw211 6s ease-in 5.1s infinite;
+}
+@keyframes draw211 {
+    0%{stroke-dashoffset: 0;}
+    87%{stroke-dashoffset: 0;}
+    97%{stroke-dashoffset: -155;}
+    100%{stroke-dashoffset: -155;}
+} */
+/*=== KIBOU Kanji New Attempt ===*/
+/*== 12s total run time (including appearing english text) ==*/
+/*== 100/12=8.333(repeating) ==*/
+#mask11 {
+    stroke-dasharray: 76 80;
+    stroke-dashoffset: 0;
+}
+.knj11 {
+    animation: draw11 12s ease-out infinite;
+}
+@keyframes draw11 {
+    0%{stroke-dashoffset: 0;}
+    3%{stroke-dashoffset: 0;}
+    6%{stroke-dashoffset: 76;}
+    /* 10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: 76;}
+}
+#mask12 {
+    stroke-dasharray: 86 86;
+    stroke-dashoffset: 0;
+}
+.knj12 {
+    animation: draw12 12s ease-out infinite;
+}
+@keyframes draw12 {
+    0%{stroke-dashoffset: 0;}
+    6%{stroke-dashoffset: 0;}
+    9%{stroke-dashoffset: -86;}
+    /* 10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -86;}
+}
+#mask13 {
+    stroke-dasharray: 95 95;
+    stroke-dashoffset: 0;
+}
+.knj13 {
+    animation: draw13 12s ease-in infinite;
+}
+@keyframes draw13 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    9%{stroke-dashoffset: 0;}
+    13%{stroke-dashoffset: 95;}
+    /* 15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: 95;}
+}
+#mask14 {
+    stroke-dasharray: 157 157;
+    stroke-dashoffset: 0;
+}
+.knj14 {
+    animation: draw14 12s linear infinite;
+}
+@keyframes draw14 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    13%{stroke-dashoffset: 0;}
+    17%{stroke-dashoffset: -157;}
+    /* 15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -157;}
+}
+#mask15 {
+    stroke-dasharray: 60 60;
+    stroke-dashoffset: 0;
+}
+.knj15 {
+    animation: draw15 12s linear infinite;
+}
+@keyframes draw15 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    17%{stroke-dashoffset: 0;}
+    19%{stroke-dashoffset: -60;}
+    /* 20%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -60;}
+}
+#mask16 {
+    stroke-dasharray: 158 162;
+    stroke-dashoffset: 0;
+}
+.knj16 {
+    animation: draw16 12s linear infinite;
+}
+@keyframes draw16 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    19%{stroke-dashoffset: 0;}
+    24%{stroke-dashoffset: -162;}
+    /* 25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -162;}
+}
+#mask17 {
+    stroke-dasharray: 106.886 109;
+    stroke-dashoffset: 0;
+}
+.knj17 {
+    animation: draw17 12s ease-in infinite;
+}
+@keyframes draw17 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    24%{stroke-dashoffset: 0;}
+    27%{stroke-dashoffset: -109;}
+    /* 25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -109;}
+}
+/*===================*/
+/*== KIBOU Kanji 2 ==*/
+/*===================*/
+#mask21 {
+    stroke-dasharray: 28 30;
+    stroke-dashoffset: 0;
+}
+.knj21 {
+    animation: draw21 12s linear infinite;
+}
+@keyframes draw21 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    27%{stroke-dashoffset: 0;}
+    29%{stroke-dashoffset: -30;}
+    /* 30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -30;}
+}
+#mask22 {
+    stroke-dasharray: 80 85;
+    stroke-dashoffset: 0;
+}
+.knj22 {
+    animation: draw22 12s linear infinite;
+}
+@keyframes draw22 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    29%{stroke-dashoffset: 0;}
+    32%{stroke-dashoffset: -85;}
+    /* 30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -85;}
+}
+#mask23 {
+    stroke-dasharray: 85 90;
+    stroke-dashoffset: 0;
+}
+.knj23 {
+    animation: draw23 12s linear infinite;
+}
+@keyframes draw23 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    32%{stroke-dashoffset: 0;}
+    36%{stroke-dashoffset: -90;}
+    /* 35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -90;}
+}
+#mask24 {
+    stroke-dasharray: 78 83;
+    stroke-dashoffset: 0;
+}
+.knj24 {
+    animation: draw24 12s linear infinite;
+}
+@keyframes draw24 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    36%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: -83;}
+    /* 40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -83;}
+}
+#mask25 {
+    stroke-dasharray: 143 148;
+    stroke-dashoffset: 0;
+}
+.knj25 {
+    animation: draw25 12s linear infinite;
+}
+@keyframes draw25 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    44%{stroke-dashoffset: -143;}
+    /* 45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -143;}
+}
+#mask26 {
+    stroke-dasharray: 40 43;
+    stroke-dashoffset: 0;
+}
+.knj26 {
+    animation: draw26 12s ease-in infinite;
+}
+@keyframes draw26 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    44%{stroke-dashoffset: 0;}
+    46%{stroke-dashoffset: -43;}
+    /* 45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -43;}
+}
+#mask27 {
+    stroke-dasharray: 44 47;
+    stroke-dashoffset: 0;
+}
+.knj27 {
+    animation: draw27 12s ease-in infinite;
+}
+@keyframes draw27 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    46%{stroke-dashoffset: 0;}
+    48%{stroke-dashoffset: -47;}
+    /* 55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -47;}
+}
+#mask28 {
+    stroke-dasharray: 94 98;
+    stroke-dashoffset: 0;
+}
+.knj28 {
+    animation: draw28 12s linear infinite;
+}
+@keyframes draw28 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    48%{stroke-dashoffset: 0;}
+    52%{stroke-dashoffset: -98;}
+    /* 55%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -98;}
+}
+#mask29 {stroke-dasharray: 55 59;
+    stroke-dashoffset: 0;
+}
+.knj29 {
+    animation: draw29 12s linear infinite;
+}
+@keyframes draw29 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    52%{stroke-dashoffset: 0;}
+    54%{stroke-dashoffset: -59;}
+    /* 60%{stroke-dashoffset: 0;}
+    65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -59;}
+}
+#mask210 {
+    stroke-dasharray: 83 88;
+    stroke-dashoffset: 0;
+}
+.knj210 {
+    animation: draw210 12s linear infinite;
+}
+@keyframes draw210 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    54%{stroke-dashoffset: 0;}
+    57%{stroke-dashoffset: -88;}
+    /* 65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -88;}
+}
+#mask211 {
+    stroke-dasharray: 151 155;
+    stroke-dashoffset: 0;
+}
+.knj211 {
+    animation: draw211 12s ease-in infinite;
+}
+@keyframes draw211 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    57%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: -155;}
+    /* 65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -155;}
+}
+#def12 {
+    position: absolute;
+    display: flex;
+    /* height: 10vh; */
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 30pt;
+    /* font-size: 9vh; */
+    color: silver;
+    filter: blur(20px);
+    opacity: 0;
+    top: 220px;
+    left: 115px;
+    /* transform: scale(1); */
+    /* transition: transform 100 ease-in; */
+    /* animation: 5s marquee 9s 1 ease-in; */
+    /* For Chromium browsers to reduce scaling jitter */
+    will-change: transform;
+}
+.def_play {
+    animation: english 12s ease-in infinite;
+}
+@keyframes english {
+    80%{opacity:1;filter:blur(0);}
+    90%{opacity:1;filter:blur(0);}
+    100%{transform:scale(3);opacity:0;filter:blur(10px);}
+}

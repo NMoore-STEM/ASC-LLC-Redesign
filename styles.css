@@ -615,8 +615,8 @@ textarea:-moz-ui-invalid {
 }
 /* Added to see if portfolio items can have global rules */
 .portfolio_item_main {
-    /*position: relative;
-    background-color: #253C84;*/
+    position: relative;
+    /*background-color: #253C84;*/
     /*margin: 130px auto 130px;*/
     margin-bottom: 80px;
     padding: 0;
@@ -846,6 +846,12 @@ unique urls for each class */
 .portfolio_item_long {
     /*== Might not be needed as there is no height specified in portfolio_item_main class ==*/
 }
+.kanji_12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .kanji_12 .portfolio_svg_anim {
     position: relative;
 }
@@ -853,6 +859,9 @@ unique urls for each class */
     position: relative;
 }
 .kanji_12_ph {
+    /*==TEMP==*/
+    /* display: none; */
+    /*==TEMP==*/
     background-image: url('restricted/images_secure/kibou_still.svg');
     opacity: 0.9;
     background-color:#253C84;
@@ -862,6 +871,18 @@ unique urls for each class */
     background-size: contain;
     top: 0;
 }
+#kanji_1 {
+    padding-top: 43px;
+}
+#kanji_2 {
+    padding-top: 51px;
+}
+/*==TEMP==*/
+/* #mask11, #mask12, #mask13, #mask14, #mask15, #mask16, #mask17, 
+#mask21, #mask22, #mask23, #mask24, #mask25, #mask26, #mask27, #mask28, #mask29, #mask210, #mask211 {
+    display: none;
+} */
+/*==TEMP==*/
 .kanji_34_ph {
     background-image: url('restricted/images_secure/yuuki_still.svg');
     opacity: 0.9;
@@ -3827,7 +3848,7 @@ em {
     padding-bottom: 20px;
 }
 .portfolio_svg_anim #gmj_anim {
-    max-width: 300px;
+    /* max-width: 300px; */
     min-width: 200px;
     /* display: block;
     background-color: white; */
