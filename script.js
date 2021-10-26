@@ -514,6 +514,40 @@ $(function(){
         return false;
     })
 })
+$(function(){
+    $('.start_stop_knj34').on('click touch', function(event){
+        // Having an issue with page jumping around 300px up when clicked
+        // I think it might have to do with methods fadeOut and In
+        // try replacing them with fade or add class
+        event.preventDefault();
+        if ($(this).text() == 'start animation'){
+            $(this).text("stop animation")
+            $('.kanji_34_ph').fadeOut(400);
+        } else {
+            $(this).text("start animation")
+            $('.kanji_34_ph').fadeIn(400);
+        };
+        $('#mask31').toggleClass('knj31');
+        $('#mask32').toggleClass('knj32');
+        $('#mask33').toggleClass('knj33');
+        $('#mask34').toggleClass('knj34');
+        $('#mask35').toggleClass('knj35');
+        $('#mask36').toggleClass('knj36');
+        $('#mask37').toggleClass('knj37');
+        $('#mask38').toggleClass('knj38');
+        $('#mask39').toggleClass('knj39');
+
+        $('#mask41').toggleClass('knj41');
+        $('#mask42').toggleClass('knj42');
+        $('#mask43').toggleClass('knj43');
+        $('#mask44').toggleClass('knj44');
+        $('#mask45').toggleClass('knj45');
+        $('#mask46').toggleClass('knj46');
+
+        $('#def34').toggleClass('def_play');
+        return false;
+    })
+})
 // Delete below before going live 
 // These are written here to see color format patterns
 // Possible h1 portfolio intro headings

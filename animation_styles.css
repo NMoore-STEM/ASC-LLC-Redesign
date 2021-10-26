@@ -887,7 +887,267 @@
     95%{stroke-dashoffset: 0;} */
     100%{stroke-dashoffset: -155;}
 }
+/*== YUUKI kanji 3 ==*/
+/*=====TEMP======*/
+#mask31, #mask32, #mask33, #mask34, #mask35, #mask36, #mask37, #mask38, #mask39, 
+#mask41, #mask42, #mask43, #mask44, #mask45, #mask46 {
+    display: none;
+}
+/*=====TEMP=====*/
+#mask31 {
+    stroke-dasharray: 135 135;
+    stroke-dashoffset: 0;
+}
+.knj31 {
+    animation: draw31 5s ease-in 1 forwards;
+}
+@keyframes draw31 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    57%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: -155;}
+    /* 65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -155;}
+}
+#mask32 {
+    stroke-dasharray: 25 25;
+    stroke-dashoffset: 0;
+}
+.knj32 {
+    animation: draw32 5s ease-in 1 forwards;
+}
+@keyframes draw32 {
+    0%{stroke-dashoffset: 0;}
+    5%{stroke-dashoffset: 0;}
+    10%{stroke-dashoffset: 0;}
+    15%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    23%{stroke-dashoffset: 0;}
+    25%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    35%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    45%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    57%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: -155;}
+    /* 65%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    75%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    85%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: 0;}
+    95%{stroke-dashoffset: 0;} */
+    100%{stroke-dashoffset: -155;}
+}
+#mask33 {
+    stroke-dasharray: 45 45;
+    stroke-dashoffset: 0;
+}
+.knj33 {
+    animation: draw33 5s ease-in 1 forwards;
+}
+@keyframes draw33 {
+    0%{stroke-dashoffset: 0;}
+    20%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: -45;}
+    100%{stroke-dashoffset: -45;}
+}
+#mask34 {
+    stroke-dasharray: 143 143;
+    stroke-dashoffset: 0;
+}
+.knj34 {
+    animation: draw34 5s ease-in 1 forwards;
+}
+@keyframes draw34 {
+    0%{stroke-dashoffset: 0;}
+    30%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: -143;}
+    100%{stroke-dashoffset: -143;}
+}
+#mask35 {
+    stroke-dasharray: 32 32;
+    stroke-dashoffset: 0;
+}
+.knj35 {
+    animation: draw35 5s ease-in 1 forwards;
+}
+@keyframes draw35 {
+    0%{stroke-dashoffset: 0;}
+    40%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: -32;}
+    100%{stroke-dashoffset: -32;}
+}
+#mask36 {
+    stroke-dasharray: 45 45;
+    stroke-dashoffset: 0;
+}
+.knj36 {
+    animation: draw36 5s ease-in 1 forwards;
+}
+@keyframes draw36 {
+    0%{stroke-dashoffset: 0;}
+    50%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: -45;}
+    100%{stroke-dashoffset: -45;}
+}
+#mask37 {
+    stroke-dasharray: 66 66;
+    stroke-dashoffset: 0;
+}
+.knj37 {
+    animation: draw37 5s ease-in 1 forwards;
+}
+@keyframes draw37 {
+    0%{stroke-dashoffset: 0;}
+    60%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: -66;}
+    100%{stroke-dashoffset: -66;}
+}
+#mask38 {
+    stroke-dasharray: 179 179;
+    stroke-dashoffset: 0;
+}
+.knj38 {
+    animation: draw38 5s ease-in 1 forwards;
+}
+@keyframes draw38 {
+    0%{stroke-dashoffset: 0;}
+    70%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: -179;}
+    100%{stroke-dashoffset: -179;}
+}
+#mask39 {
+    stroke-dasharray: 95 105;
+    stroke-dashoffset: 0;
+}
+.knj39 {
+    animation: draw39 5s ease-in 1 forwards;
+}
+@keyframes draw39 {
+    0%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    90%{stroke-dashoffset: -105;}
+    100%{stroke-dashoffset: -105;}
+}
+/*===YUUKI kanji 4===*/
+#mask41 {
+    stroke-dasharray: 58 64;
+    stroke-dashoffset: 0;
+}
+.knj41 {
+    animation: draw41 5s ease-in 5.1s 1 forwards;
+}
+@keyframes draw41 {
+    0%{stroke-dashoffset: 0;}
+    8%{stroke-dashoffset: -60;}
+    100%{stroke-dashoffset: -60;}
+}
+#mask42 {
+    stroke-dasharray: 60 60;
+    stroke-dashoffset: 0;
+}
+.knj42 {
+    animation: draw42 5s ease-in 5.1s 1 forwards;
+}
+@keyframes draw42 {
+    0%{stroke-dashoffset: 0;}
+    16%{stroke-dashoffset: 0;}
+    32%{stroke-dashoffset: -60;}
+    100%{stroke-dashoffset: -60;}
+}
+#mask43 {
+    stroke-dasharray: 52 52;
+    stroke-dashoffset: 0;
+}
+.knj43 {
+    animation: draw43 5s ease-in 5.1s 1 forwards;
+}
+@keyframes draw43 {
+    0%{stroke-dashoffset: 0;}
+    32%{stroke-dashoffset: 0;}
+    48%{stroke-dashoffset: -52;}
+    100%{stroke-dashoffset: -52;}
+}
+#mask44 {
+    stroke-dasharray: 286 286;
+    stroke-dashoffset: 0;
+}
+.knj44 {
+    animation: draw44 5s ease-in 5.1s 1 forwards;
+}
+@keyframes draw44 {
+    0%{stroke-dashoffset: 0;}
+    48%{stroke-dashoffset: 0;}
+    64%{stroke-dashoffset: -286;}
+    100%{stroke-dashoffset: -286;}
+}
+#mask45 {
+    stroke-dasharray: 107 107;
+    stroke-dashoffset: 0;
+}
+.knj45 {
+    animation: draw45 5s ease-in 5.1s 1 forwards;
+}
+@keyframes draw45 {
+    0%{stroke-dashoffset: 0;}
+    64%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: -107;}
+    100%{stroke-dashoffset: -107;}
+}
+#mask46 {
+    stroke-dasharray: 62 62;
+    stroke-dashoffset: 0;
+}
+.knj46 {
+    animation: draw46 5s ease-in 5.1s 1 forwards;
+}
+@keyframes draw46 {
+    0%{stroke-dashoffset: 0;}
+    80%{stroke-dashoffset: 0;}
+    86%{stroke-dashoffset: -62;}
+    100%{stroke-dashoffset: -62;}
+}
+/*== TEXT ==*/
 #def12 {
+    position: absolute;
+    display: flex;
+    /* height: 10vh; */
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 30pt;
+    /* font-size: 9vh; */
+    color: silver;
+    filter: blur(20px);
+    opacity: 0;
+    top: 220px;
+    left: 115px;
+    /* transform: scale(1); */
+    /* transition: transform 100 ease-in; */
+    /* animation: 5s marquee 9s 1 ease-in; */
+    /* For Chromium browsers to reduce scaling jitter */
+    will-change: transform;
+}
+#def34 {
     position: absolute;
     display: flex;
     /* height: 10vh; */
