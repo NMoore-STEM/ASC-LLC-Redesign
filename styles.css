@@ -877,6 +877,12 @@ unique urls for each class */
 #kanji_2 {
     padding-top: 51px;
 }
+#kanji_3, #kanji_4 {
+    padding-top: 46px;
+}
+/* #kanji_4 {
+    padding-top: 46px;
+} */
 /*==TEMP==*/
 /* #mask11, #mask12, #mask13, #mask14, #mask15, #mask16, #mask17, 
 #mask21, #mask22, #mask23, #mask24, #mask25, #mask26, #mask27, #mask28, #mask29, #mask210, #mask211 {
