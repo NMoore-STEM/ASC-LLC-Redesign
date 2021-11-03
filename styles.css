@@ -3289,6 +3289,7 @@ textarea:-moz-ui-invalid {
     /* width: max-content; */
     /*font-size: 8vw;*/
     font-size: 75pt;
+    margin-left: 10px;
     /* color: #2C529A;
     color: #486AAC; */
     /* color: #456299; */
@@ -3302,9 +3303,13 @@ textarea:-moz-ui-invalid {
     /* background-color: #253C84; */
     /*padding: 30px;
     padding-top: 0;*/
-    padding: 0 30px;
-    margin-top: 30px;
-    margin-bottom: 60px;
+    /* padding: 0 30px; */
+    padding: 70px 30px 0;
+    /* margin-top: 30px; */
+    margin-top: -40px;
+    /* margin-bottom: 60px; */
+    margin-bottom: 90px;
+    height: 210px;
 }
 .intro_container h2 {
     width: 100%;
