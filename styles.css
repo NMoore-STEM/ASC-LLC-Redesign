@@ -2318,6 +2318,7 @@ header {
     width: 100%;
     z-index: 6;
     top:0;
+    min-height: 120px;
     /*below might not be needed*/
     /* align-content: center;
     align-items: center; */
@@ -3265,12 +3266,61 @@ textarea:-moz-ui-invalid {
 /*======================================================================*/
 /*=======================   RESTRICTED AREA FULL   =====================*/
 /*======================================================================*/
+.head_cred {
+    justify-content: space-between;
+}
+.head_flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 65px;
+}
+.cred_head::before {
+    content: "[";
+    position: absolute;
+    left: -13px;
+    top: -3px;
+    color: #91B4DF;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bolder;
+}
+.cred_head::after {
+    content: "]";
+    position: absolute;
+    top: -3px;
+    color: #91B4DF;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bolder;
+}
+.cred_head {
+    position: relative;
+    color: #91B4DF;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+}
+.cred_head_sub {
+    color: #91B4DF;
+    font-size: 12pt;
+    font-family: 'Spartan', sans-serif;
+}
+.cred_menu {
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 6vw;
+}
 #title_cred {
     margin: 0;
     padding-top: 100px;
 }
+.cred_arr {
+    padding-top: 32vh;
+}
 .arr_prop {
-    padding: 0 0 30px;
+    /* padding: 0 0 30px; */
+    padding: 0 0 27vh;
 }
 #about {
     height: 120px;
