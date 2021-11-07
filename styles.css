@@ -1764,6 +1764,56 @@ ul#coreInternal {
 /*================================================================*/
 /*------------------ MOBILE - Portfolio/ Restricted --------------*/
 /*================================================================*/
+/* Header/ Nav */
+.head_flex {
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    height: 100%;
+}
+.home_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    text-decoration: none;
+    z-index: 5;
+    height: 70%;
+    transform: scale(0.8);
+}
+.cred_head::before {
+    color: #91B4DF;
+    content: "[";
+    position: absolute;
+    left: -13px;
+    top: -3px;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bolder;
+}
+.cred_head::after {
+    color: #91B4DF;
+    content: "]";
+    position: absolute;
+    top: -3px;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bolder;
+}
+.cred_head {
+    position: relative;
+    color: #91B4DF;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    line-height: 0.9;
+}
+.cred_head_sub {
+    color: #91B4DF;
+    font-size: 12pt;
+    font-family: 'Spartan', sans-serif;
+}
+
 /* Hero Styles */
 #title_cred {
     margin: 0;
@@ -3271,10 +3321,11 @@ textarea:-moz-ui-invalid {
 }
 .head_flex {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     padding-left: 65px;
+    transition: all 0.2s ease;
 }
 .cred_head::before {
     content: "[";
@@ -3285,6 +3336,7 @@ textarea:-moz-ui-invalid {
     font-size: 22pt;
     font-family: 'Spartan', sans-serif;
     font-weight: bolder;
+    transition: all 0.2s ease;
 }
 .cred_head::after {
     content: "]";
@@ -3294,17 +3346,31 @@ textarea:-moz-ui-invalid {
     font-size: 22pt;
     font-family: 'Spartan', sans-serif;
     font-weight: bolder;
+    transition: all 0.2s ease;
 }
 .cred_head {
     position: relative;
     color: #91B4DF;
     font-size: 22pt;
     font-family: 'Spartan', sans-serif;
+    transition: all 0.2s ease;
 }
 .cred_head_sub {
     color: #91B4DF;
     font-size: 12pt;
     font-family: 'Spartan', sans-serif;
+    transition: all 0.2s ease;
+}
+.home_link {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 5;
+    transition: all 0.2s ease;
 }
 .cred_menu {
     justify-content: space-between;
@@ -4065,6 +4131,33 @@ em {
     width: 57vw;
     border-top: 2px solid;
     padding-inline-start: 60px;
+}
+/*=== Restricted Med viewport ===*/
+.head_flex {
+    padding-left: 25px;
+}
+.home_link {
+    width: 60px;
+    height: 60px;
+}
+.cred_head::before, .cred_head::after, .cred_head {
+    font-size: 18pt;
+}
+.cred_head::before, .cred_head::after {
+    top: -2px;
+}
+.cred_head::before {
+    left: -11px;
+}
+.cred_head_sub {
+    font-size: 10pt;
+}
+.cred_menu {
+    padding-right: 0;
+    padding-left: 10vw;
+}
+.nav_text {
+    font-size: 10pt;
 }
 }
 /*BELOW RULES NOT WORKING-NEW APPROACH NEEDED*/
