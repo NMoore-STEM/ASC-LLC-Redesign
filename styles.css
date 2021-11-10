@@ -2677,6 +2677,9 @@ section {
     outline-offset: 20px;
     transition: all 0.4s ease-out;
     z-index: 5;
+    /* NEW 2021 (for cred page buttons, may need to remove) */
+    width: 100%;
+    cursor: pointer;
 }
 .contactButton:hover {
     padding: 6px;
@@ -3445,9 +3448,15 @@ textarea:-moz-ui-invalid {
     background-color:#2C4A9A; */
     padding: 20px;
 }
+.intro_bg h3 {
+    padding: 0 50px 0 30px;
+}
 .intro_bg p {
-    padding: 20px;
+    /* padding: 20px; */
     /* text-align: left; */
+    padding: 10px 50px;
+    max-width: 35vw;
+    min-width: 30vw;
 }
 .top_cred_links {
     display: flex;
@@ -3459,8 +3468,10 @@ textarea:-moz-ui-invalid {
     /*padding-top: 50px;*/
     margin-left: 15px;
     gap: 20px;
-    justify-content: space-evenly;
-    justify-content: center;
+    /* justify-content: space-evenly;
+    justify-content: center; */
+    /* NEW 2021 */
+    margin-top: -30px;
 }
 /* Below style was a bit disruptive to the entire flow of page */
 /* Disabled for now */
