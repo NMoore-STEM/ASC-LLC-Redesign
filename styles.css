@@ -2533,6 +2533,9 @@ header img {
     margin-top: 3vw;
     padding-top: 0;
     background-image: url(../ASC-LLC-Redesign/images/ASC_HERO_ver_07.png);
+    /*  to darken bg image for value phrase legibility  */
+    background-image: linear-gradient(to right, rgba(155,57,144, .10), rgba(120,114,180, .10)),
+                        url(../ASC-LLC-Redesign/images/ASC_HERO_ver_07.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
