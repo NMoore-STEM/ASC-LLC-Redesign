@@ -1,0 +1,38 @@
+* {
+    border: 0;
+    margin: 0;
+}
+body {
+    background-color: black;
+}
+#order {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+#button {
+    position: absolute;
+    border-radius: 50% 50%;
+    width: 82px;
+    height: 82px;
+    background-color: gray;
+    align-self: center;
+    cursor: pointer;
+    z-index: 1111;
+}
+svg {
+    position: absolute;
+}
+circle {
+    stroke: white;
+    stroke-width: 9px;
+    fill: none;
+}
+.fade1 {
+    animation: fade5 1500ms forwards 1;
+}
+@keyframes fade5 {
+    0%,100%{stroke-width: 9px;}
+    50%{stroke-width: 2px;}
+}
