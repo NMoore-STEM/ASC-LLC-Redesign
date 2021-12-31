@@ -3659,12 +3659,16 @@ sub {
 #soft_skills {
     display: flex;
     /*padding: 4vw;*/
-    padding: 30px;
-    padding-top: 50px;
+    /* padding: 30px; */
+    padding: 50px;
+    /* padding-top: 50px; */
     /*flex-direction: column;*/
     flex-wrap: wrap;
     max-width: 45vw;
     /*justify-content: space-evenly;*/
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
 }
 /*#soft_skills h3 {
     width: 80vw;
@@ -3699,6 +3703,13 @@ sub {
     background-color: #2C4A9A;
     list-style: none;
     align-self: center;
+    flex-grow: 1;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    /* Below optional??? */
+    max-height: min-content;
+    max-width: max-content;
 }
 li {
     margin: 15px;
