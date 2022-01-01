@@ -3660,15 +3660,17 @@ sub {
     display: flex;
     /*padding: 4vw;*/
     /* padding: 30px; */
-    padding: 50px;
-    /* padding-top: 50px; */
+    /* padding: 50px; */
+    padding-top: 50px;
+    padding-left: 10px;
     /*flex-direction: column;*/
     flex-wrap: wrap;
     max-width: 45vw;
     /*justify-content: space-evenly;*/
     justify-content: center;
-    align-content: center;
-    gap: 25px;
+    /* align-content: center; */
+    align-content: flex-start;
+    /* gap: 25px; */
 }
 /*#soft_skills h3 {
     width: 80vw;
@@ -3697,7 +3699,8 @@ sub {
 #soft_skills li {
     /*background-color: #253C84;*/
     /*border-radius: 10px;*/
-    padding: 10px;
+    /* padding: 10px; */
+    padding: 10px 20px;
     width: max-content;
     font-size: 10pt;
     background-color: #2C4A9A;
@@ -3709,7 +3712,11 @@ sub {
     text-align: center;
     /* Below optional??? */
     max-height: min-content;
-    max-width: max-content;
+    /* max-width: max-content; */
+    flex-grow: 1;
+}
+#soft_skills li:last-child, #soft_skills li:nth-child(14) {
+    flex-grow: 0.2;
 }
 li {
     margin: 15px;
@@ -4245,6 +4252,9 @@ em {
     margin-right: 15px;
     min-width: 420px;
 }
+
+        /* PLACE NEW #SOFT_SKILLS RULES HERE */
+        /*-----------------------------------*/
 }
 /*@media only screen and (min-width:1051px) {
 #about_me {
