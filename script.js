@@ -400,6 +400,16 @@ $(function(){
     window.addEventListener('unload', function () {});
 })
 
+//Graphic design portfolio item details pop-up window
+$(function(){
+    $('.more_info').on('click touch', function(event){
+        event.preventDefault();
+        //grow window from graphic, add viewport 100vw 100vh layer and darken all objects behind, lock scroll on viewport (behind new window)
+        //fade in content and close button on top right corner
+        //allow scroll in pop-up window only
+        //content will include why and how portfolio item was created
+    })
+})
 //  Button on portfolio page that starts and stops svg animation on items
 $(function(){
     $('.start_stop_gmj').on('click touch', function(event){

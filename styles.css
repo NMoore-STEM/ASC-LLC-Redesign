@@ -738,7 +738,8 @@ unique urls for each class */
 }
 /* For <a> inside of portfolio items - did away with <button> parent */
 .port_button {
-    display: inherit;
+    /* display: inherit; */
+    display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
@@ -750,6 +751,7 @@ unique urls for each class */
     box-shadow: 2px 2px 0 #322749;
     transition: all 0.3s linear;
     font-size: 100%;
+    cursor: pointer;
     text-decoration: none;
     font-family: inherit;
     border: none;
@@ -774,6 +776,17 @@ unique urls for each class */
     font-family: 'Noto Sans KR', sans-serif;
     padding-bottom: 3px;
     transition: all 0.2s ease;
+}
+/* Graphic design section */
+#graphic_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+#graphic_item h4 {
+    padding: 10px;
 }
 /*.item_placeholder {
     height: 100px;
