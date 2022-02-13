@@ -406,8 +406,16 @@ $(function(){
         event.preventDefault();
         //grow window from graphic, add viewport 100vw 100vh layer and darken all objects behind, lock scroll on viewport (behind new window)
         //fade in content and close button on top right corner
+        $('.modal_screen').addClass('m_screen_open');
+        $('.close_modal').addClass("show_close");
         //allow scroll in pop-up window only
+        $('body').css('overflow-y', 'hidden');
         //content will include why and how portfolio item was created
+    });
+    $('.close_modal').on('click touch', function(event){
+        event.preventDefault();
+        $('.modal_screen').removeClass('m_screen_open');
+        $('body').css('overflow-y', 'auto');
     })
 })
 //  Button on portfolio page that starts and stops svg animation on items
