@@ -788,6 +788,78 @@ unique urls for each class */
 #graphic_item h4 {
     padding: 10px;
 }
+/*====================================================*/
+/*===========================*/
+/*================================*/
+/*====================================================*/
+/* Graphic Design Portfolio Item Details Window/Modal */
+/* will need to cut some properties and paste in correct viewports */
+.modal_screen {
+    display: none;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(36, 15, 33, 0.4);
+    backdrop-filter: blur(1.2px);
+    -webkit-backdrop-filter: blur(1.2px);
+    transition: opacity 400ms;
+}
+.m_screen_open {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 400;
+    transition: opacity 200ms;
+}
+.g_modal {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 20vh 20vw 10vh;
+    padding: 20px 40px;
+    height: 70vh;
+    background-color:rgb(43, 57, 96) ;
+
+}
+.close_modal {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top: calc(20vh + 20px);
+    right: calc(20vw + 40px);
+    background-color:rgb(86, 54, 148);
+}
+.modal_top {
+    width: 100%;
+
+}
+/* below might not be needed - could use .modal_top h4 instead */
+.modal_title {
+
+}
+p.modal_intro {
+    text-align: left;
+    flex: none;
+    padding: 0;
+}
+.modal_flex {
+    display: flex;
+    flex-direction: column;
+}
+.modal_unit {
+    position: relative;
+}
+.modal_img {
+    position: absolute;
+}
+.modal_info_bg {
+    position: absolute;
+}
+.modal_details {
+
+}
 /*.item_placeholder {
     height: 100px;
     font-family: 'Noto Sans KR', sans-serif;
