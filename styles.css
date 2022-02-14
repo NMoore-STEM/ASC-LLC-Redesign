@@ -848,7 +848,10 @@ p.modal_intro {
     display: flex;
     flex-direction: column;
 }
-.modal_unit {
+.modal_unit_l {
+    position: relative;
+}
+.modal_unit_r {
     position: relative;
 }
 .modal_img {
