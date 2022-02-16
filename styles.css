@@ -4131,6 +4131,19 @@ em {
     padding: 30px 50px 30px 0;
     width: calc(72vw - 50px);
 }
+.heading_decor h4 {
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15pt;
+    font-weight: normal;
+	color: #91B4DF;
+	text-align: right;
+	padding-top: 30px;
+	padding-right: 40px;
+/* below might not be needed */
+	margin: 0;
+	flex: 4 auto;
+	width: calc(72vw - 280px);
+}
 .portfolio_img_graphic {
     align-self: center;
     max-height: 250px;
