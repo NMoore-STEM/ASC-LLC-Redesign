@@ -803,7 +803,11 @@ unique urls for each class */
     backdrop-filter: blur(1.2px);
     -webkit-backdrop-filter: blur(1.2px);
     transition: opacity 400ms;
+    transition: opacity 2s linear;
+    visibility: hidden;
 }
+/* might need to CSS transition background color as all child elements
+also transition opacity with how it is writter currently */
 .m_screen_open {
     position: fixed;
     display: block;
@@ -812,6 +816,8 @@ unique urls for each class */
     opacity: 1;
     z-index: 400;
     transition: opacity 200ms;
+    transition: opacity 2s linear;
+    visibility: visible;
 }
 .g_modal {
     position: relative;
@@ -830,38 +836,86 @@ unique urls for each class */
     top: calc(20vh + 20px);
     right: calc(20vw + 40px);
     background-color:rgb(86, 54, 148);
+    cursor: pointer;
+    z-index: 204;
 }
 .modal_top {
-    width: 100%;
-
+    display: block;
+    /* width: 100%; */
 }
 /* below might not be needed - could use .modal_top h4 instead */
 .modal_title {
-
+    padding: 20px 0;
 }
 p.modal_intro {
     text-align: left;
-    flex: none;
-    padding: 0;
+    /* flex: none;
+    padding: 0; */
+    padding: 10px 10px 30px;
+    margin: 0;
 }
 .modal_flex {
     display: flex;
     flex-direction: column;
+    /* height: 100%; */
 }
 .modal_unit_l {
     position: relative;
+    display: flex;
+    padding: 0 20px;
+    margin-bottom: 40px;
 }
 .modal_unit_r {
     position: relative;
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-direction: row-reverse;
+    margin-bottom: 40px;
 }
 .modal_img {
-    position: absolute;
+    /* position: absolute; */
+    max-width: 350px;
+    margin-bottom: 40px;
+    z-index: 202;
+    box-shadow: 20px 20px 0 black;
+}
+.modal_img_r {
+    max-width: 350px;
+    margin-bottom: 40px;
+    z-index: 202;
+    box-shadow: -20px 20px 0 black;
 }
 .modal_info_bg {
     position: absolute;
+    width: -moz-available;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    background-color: #2C4A9A;
+    z-index: 200;
+    height: calc(100% - 40px);
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.modal_info_bg_r {
+    position: absolute;
+    width: -moz-available;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    background-color: #2C4A9A;
+    z-index: 200;
+    height: calc(100% - 40px);
+    margin-left: 40px;
+    margin-right: 40px;
 }
 .modal_details {
-
+    text-align: right;
+    width: 100%;
+}
+.modal_details_r {
+    text-align: left;
+    width: 100%;
 }
 /*.item_placeholder {
     height: 100px;
@@ -4110,19 +4164,20 @@ em {
     justify-content: flex-end;
     background-color: #253C84
 }
-#graphic_design p, #graphic_design .portfolio_dev_icon {
+/* #graphic_design p, #graphic_design .portfolio_dev_icon {
     width: 72vw;
     margin: 0 auto;
-    max-width: 72vw;
+    max-width: 72vw; */
     /*background-color: #253C84;*/
-}
-#graphic_design p {
+/* } */
+/* below rule not needed after renaming element for "software used:" */
+/* #graphic_design p {
     flex: 4 auto;
     padding-top: 30px;
     padding-right: 40px;
     text-align: right;
     width: calc(72vw - 280px);
-}
+} */
 #graphic_design .portfolio_dev_icon {
     flex: 1 0;
     /*margin-bottom: 30px;*/
@@ -4130,6 +4185,7 @@ em {
     gap: 30px;
     padding: 30px 50px 30px 0;
     width: calc(72vw - 50px);
+    margin: 0;
 }
 .heading_decor h4 {
 	font-family: 'Noto Sans KR', sans-serif;
@@ -4149,6 +4205,7 @@ em {
     max-height: 250px;
     margin: 20px;
 }
+/* is the below rule needed still? */
 #graphic_design .portfolio_item_container:nth-of-type(3) {
     border-top: 50px solid #253C84;
     margin: 0 4vw;

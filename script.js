@@ -404,6 +404,11 @@ $(function(){
 $(function(){
     $('.more_info').on('click touch', function(event){
         event.preventDefault();
+        // Below is an attempt to track click coordinates
+        var x, y;
+        x = event.pageX;
+        y = event.pageY;
+        console.log(x,y);
         //grow window from graphic, add viewport 100vw 100vh layer and darken all objects behind, lock scroll on viewport (behind new window)
         //fade in content and close button on top right corner
         $('.modal_screen').addClass('m_screen_open');
