@@ -409,16 +409,23 @@ $(function(){
         x = event.pageX;
         y = event.pageY;
         console.log(x,y);
+        // var sReset = $('.g_modal')
+        // sReset.scrollTop = 0;
+        // sReset.scrollTop(0);
+        // $('.g_modal').scrollTop();
         //grow window from graphic, add viewport 100vw 100vh layer and darken all objects behind, lock scroll on viewport (behind new window)
         //fade in content and close button on top right corner
         $('.modal_screen').addClass('m_screen_open');
         $('.close_modal').addClass("show_close"); //might not be needed
         //allow scroll in pop-up window only
-        $('body').css('overflow-y', 'hidden'); //html element also has scroll, need to disable as well
+        $('body','html').css('overflow-y', 'hidden'); //html element also has scroll, need to disable as well
         //content will include why and how portfolio item was created
     });
     $('.close_modal').on('click touch', function(event){
         event.preventDefault();
+        // below resets scroll position each time it is closed
+        var sReset = $('.g_modal')
+        sReset.scrollTop(0);
         $('.modal_screen').removeClass('m_screen_open');
         $('body').css('overflow-y', 'auto');
     })
