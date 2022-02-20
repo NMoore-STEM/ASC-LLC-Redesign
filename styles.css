@@ -646,6 +646,8 @@ textarea:-moz-ui-invalid {
 }
 .portfolio_img_web, .portfolio_img_graphic {
     max-width: 340px;
+    /* Below to allow framing from the parent container */
+    max-width: 320px;
 }
 /* Should make a common class for web dev portfolio screenshots and just include
 unique urls for each class */
@@ -778,15 +780,21 @@ unique urls for each class */
     transition: all 0.2s ease;
 }
 /* Graphic design section */
-#graphic_item {
+.graphic_item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center;
     align-content: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+    box-shadow: 0 6px 4px -6px black;
 }
-#graphic_item h4 {
+.graphic_item h4 {
     padding: 10px;
+    background-color: #2C4A9A;
+}
+/* Might need to just use below rule instead of above if standardizing portfolio item formatting */
+.portfolio_item_main h4 {
+    background-color: #2C4A9A;
 }
 /*====================================================*/
 /*===========================*/
