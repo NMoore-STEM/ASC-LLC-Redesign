@@ -814,6 +814,11 @@ unique urls for each class */
     transition: opacity 2s linear;
     visibility: hidden;
 }
+/* Below might be needed for a smooth, fading transition of modal */
+@keyframes modal_fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 /* might need to CSS transition background color as all child elements
 also transition opacity with how it is writter currently */
 .m_screen_open {
@@ -826,18 +831,39 @@ also transition opacity with how it is writter currently */
     transition: opacity 200ms;
     transition: opacity 2s linear;
     visibility: visible;
+    animation: modal_fade 2s;
 }
 .g_modal {
     position: relative;
+    position:absolute;
+    bottom: 0;
+    right: 20vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 20vh 20vw 10vh;
+    padding: 20px 40px;
+    height: 10vh;
+    width: 20vh;
+    background-color:rgb(43, 57, 96);
+    transition: all ease-in 300ms;
+
+}
+.g_modal_open {
+    position: relative;
+    right: auto;
+    bottom: auto;
     overflow-x: hidden;
     overflow-y: scroll;
     margin: 20vh 20vw 10vh;
     padding: 20px 40px;
     height: 70vh;
-    background-color:rgb(43, 57, 96) ;
-
+    width: auto;
+    background-color:rgb(43, 57, 96);
+    transition: all ease-out 300ms;
 }
 .close_modal {
+    visibility: hidden;
+    opacity: 0;
     position: fixed;
     height: 40px;
     width: 40px;
@@ -846,6 +872,13 @@ also transition opacity with how it is writter currently */
     background-color:rgb(86, 54, 148);
     cursor: pointer;
     z-index: 204;
+    transition: opacity ease 200ms;
+}
+.show_close {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity ease 200ms;
+    animation: modal_fade 1s;
 }
 .modal_top {
     display: block;
