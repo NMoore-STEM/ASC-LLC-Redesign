@@ -787,6 +787,7 @@ unique urls for each class */
     align-content: flex-start;
     flex-wrap: wrap; */
     box-shadow: 0 6px 4px -6px black;
+    background-color: #253C84;
 }
 .graphic_item h4 {
     padding: 10px;
