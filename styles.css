@@ -787,6 +787,7 @@ unique urls for each class */
     align-content: flex-start;
     flex-wrap: wrap; */
     box-shadow: 0 6px 4px -6px black;
+    background-color: #253C84;
 }
 .graphic_item h4 {
     padding: 10px;
@@ -804,20 +805,25 @@ unique urls for each class */
 /* will need to cut some properties and paste in correct viewports */
 .modal_screen {
     display: none;
-    opacity: 0;
+    /* opacity: 0; */
     width: 100vw;
     height: 100vh;
-    background-color:rgba(36, 15, 33, 0.4);
+    /* background-color:rgba(36, 15, 33, 0.4); */
+    background-color:rgba(36, 15, 33, 0);
     backdrop-filter: blur(1.2px);
     -webkit-backdrop-filter: blur(1.2px);
-    transition: opacity 400ms;
-    transition: opacity 2s linear;
+    /* transition: opacity 400ms;
+    transition: opacity 2s linear; */
     visibility: hidden;
 }
 /* Below might be needed for a smooth, fading transition of modal */
 @keyframes modal_fade {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+@keyframes modal_alpha {
+    from {background-color: rgba(36, 15, 33, 0);}
+    to {background-color: rgba(36, 15, 33, 0.6);}
 }
 /* might need to CSS transition background color as all child elements
 also transition opacity with how it is writter currently */
@@ -826,26 +832,32 @@ also transition opacity with how it is writter currently */
     display: block;
     top: 0;
     left: 0;
-    opacity: 1;
+    /* opacity: 1; */
     z-index: 400;
-    transition: opacity 200ms;
-    transition: opacity 2s linear;
+    /* transition: opacity 200ms;
+    transition: opacity 2s linear; */
     visibility: visible;
-    animation: modal_fade 2s;
+    /* animation: modal_fade 2s; */
+    animation: modal_alpha 1.7s ease-out forwards;
+    /* background-color:rgba(36, 15, 33, 0.6);
+    transition: background-color 3s ease-out; */
 }
 .g_modal {
     position: relative;
     position:absolute;
-    bottom: 0;
+    /* bottom: 0; */
     right: 20vw;
     overflow-x: hidden;
     overflow-y: hidden;
+    overflow-y: scroll;
     margin: 20vh 20vw 10vh;
+    margin: 20vh 15vw 10vh;
     padding: 20px 40px;
     height: 10vh;
     width: 20vh;
     background-color:rgb(43, 57, 96);
     transition: all ease-in 300ms;
+    transform: scale(0.2);
 
 }
 .g_modal_open {
@@ -855,11 +867,13 @@ also transition opacity with how it is writter currently */
     overflow-x: hidden;
     overflow-y: scroll;
     margin: 20vh 20vw 10vh;
+    margin: 20vh 15vw 10vh;
     padding: 20px 40px;
     height: 70vh;
     width: auto;
     background-color:rgb(43, 57, 96);
     transition: all ease-out 300ms;
+    transform: scale(1);
 }
 .close_modal {
     visibility: hidden;
@@ -2501,6 +2515,19 @@ unique urls for each class */
 /*================================================================*/
 
 @media only screen and (min-width:771px) {
+/* below two rules for Chromium scroll color */
+::-webkit-scrollbar, ::-webkit-scrollbar-button {
+    background: #220e4d;
+}
+::-webkit-scrollbar-thumb {
+    background: #4C206C;
+}
+/* ::-webkit-scrollbar-corner {
+    background: #220e4d;
+} */
+/* ::-webkit-scrollbar-button {
+    background: #220e4d;
+} */
 html {
     scrollbar-color: #4C206C #220e4d;
 }

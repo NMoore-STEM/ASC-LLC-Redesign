@@ -416,9 +416,10 @@ $(function(){
         //grow window from graphic, add viewport 100vw 100vh layer and darken all objects behind, lock scroll on viewport (behind new window)
         //fade in content and close button on top right corner
         $('.modal_screen').addClass('m_screen_open');
+        // $('.g_modal').addClass('g_modal_open');
         setTimeout(function(){
             $('.g_modal').addClass('g_modal_open');
-        },400);
+        },100);
         $('.close_modal').addClass("show_close"); //might not be needed
         //allow scroll in pop-up window only
         $('body, html').css('overflow-y', 'hidden'); //html element also has scroll, need to disable as well
@@ -431,9 +432,11 @@ $(function(){
         sReset.scrollTop(0);
         $(this).removeClass("show_close");
         $('.g_modal').removeClass('g_modal_open');
+        // $('.modal_screen').removeClass('m_screen_open')
+        // May remove below timeout as it looks better with immediate close
         setTimeout(function(){
             $('.modal_screen').removeClass('m_screen_open');
-        },400);
+        },200);
         $('body, html').css('overflow-y', 'auto');
     })
 })
