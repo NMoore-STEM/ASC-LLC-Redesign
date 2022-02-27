@@ -458,11 +458,13 @@ $(function(){
         event.preventDefault();
         var sReset = $('.g_modal')
         sReset.scrollTop(0);
+        $('body, html').css('overflow-y', 'auto');
         $(this).removeClass('show_close');
         sReset.removeClass('g_modal_open');
         sReset.one('transitionend', function(e){
             $('.modal_screen').removeClass('m_screen_open').one('transitionend', function(e){
                 $('.modal_screen').css({ 'display':'none','visibility':'hidden'});
+                
                 $('.modal_screen').off(e);
                 console.log('!!! innermost');
             });
