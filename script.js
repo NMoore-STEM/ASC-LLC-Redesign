@@ -399,47 +399,234 @@ $(function(){
     
     window.addEventListener('unload', function () {});
 })
+////////////////////////////////////////
+// Best working modal script (20220227)
+////////////////////////////////////////
+// $(function(){
+//     $('.more_info').on('click touch', function(event){
+//         event.preventDefault();
+//         var x, y;
+//         x = event.pageX;
+//         y = event.pageY;
+//         console.log(x,y);
+//         $('.modal_screen').addClass('m_screen_open');
+//         $('.modal_screen').css('display','block');
+//         setTimeout(function(){
+//             $('.g_modal').addClass('g_modal_open');
+//         },100);
+//         setTimeout(function(){
+//             $('.close_modal').addClass("show_close");
+//         },400);
+//         $('body, html').css('overflow-y', 'hidden');
+//     });
+//     $('.close_modal').on('click touch', function(event){
+//         event.preventDefault();
+//         var sReset = $('.g_modal')
+//         sReset.scrollTop(0);
+//         $(this).removeClass('show_close');
+//         sReset.removeClass('g_modal_open');
+//         $('body, html').css('overflow-y', 'auto');
+//         $('.modal_screen').removeClass('m_screen_open')
+//         $('.modal_screen').css('display','none');
+//     })
+// });
+////////////////////////////////////////////////////////////////
 
-//Graphic design portfolio item details pop-up window
+////////////////////////////////////////////////////////////////
+// Using transitionend to remove modal elements from DOM after closing transitions
+////////////////////////////////////////////////////////////////
 $(function(){
     $('.more_info').on('click touch', function(event){
         event.preventDefault();
-        // Below is an attempt to track click coordinates
         var x, y;
         x = event.pageX;
         y = event.pageY;
         console.log(x,y);
-        // var sReset = $('.g_modal')
-        // sReset.scrollTop = 0;
-        // sReset.scrollTop(0);
-        // $('.g_modal').scrollTop();
-        //grow window from graphic, add viewport 100vw 100vh layer and darken all objects behind, lock scroll on viewport (behind new window)
-        //fade in content and close button on top right corner
         $('.modal_screen').addClass('m_screen_open');
-        // $('.g_modal').addClass('g_modal_open');
+        $('.modal_screen').css({ 'display':'block','visibility':'visible'});
+        // $('.modal_screen').css('display','block');
         setTimeout(function(){
             $('.g_modal').addClass('g_modal_open');
         },100);
-        $('.close_modal').addClass("show_close"); //might not be needed
-        //allow scroll in pop-up window only
-        $('body, html').css('overflow-y', 'hidden'); //html element also has scroll, need to disable as well
-        //content will include why and how portfolio item was created
+        setTimeout(function(){
+            $('.close_modal').addClass("show_close");
+        },400);
+        $('body, html').css('overflow-y', 'hidden');
     });
+    // Using .off(e) and .one() instead of .on() seemed to work
     $('.close_modal').on('click touch', function(event){
         event.preventDefault();
-        // below resets scroll position each time it is closed
         var sReset = $('.g_modal')
         sReset.scrollTop(0);
-        $(this).removeClass("show_close");
-        $('.g_modal').removeClass('g_modal_open');
-        // $('.modal_screen').removeClass('m_screen_open')
-        // May remove below timeout as it looks better with immediate close
-        setTimeout(function(){
-            $('.modal_screen').removeClass('m_screen_open');
-        },200);
-        $('body, html').css('overflow-y', 'auto');
+        $(this).removeClass('show_close');
+        sReset.removeClass('g_modal_open');
+        sReset.one('transitionend', function(e){
+            $('.modal_screen').removeClass('m_screen_open').one('transitionend', function(e){
+                $('.modal_screen').css({ 'display':'none','visibility':'hidden'});
+                $('.modal_screen').off(e);
+                console.log('!!! innermost');
+            });
+            sReset.off(e);
+            console.log('mid level');
+        })
+        console.log('top level');
     })
-})
+});
+
+//Graphic design portfolio item details pop-up window
+// $(function(){
+//     $('.more_info').on('click touch', function(event){
+//         event.preventDefault();
+//         // Below is an attempt to track click coordinates
+//         var x, y;
+//         x = event.pageX;
+//         y = event.pageY;
+//         console.log(x,y);
+//         // var sReset = $('.g_modal')
+//         // sReset.scrollTop = 0;
+//         // sReset.scrollTop(0);
+//         // $('.g_modal').scrollTop();
+//         //grow window from graphic, add viewport 100vw 100vh layer and darken all objects behind, lock scroll on viewport (behind new window)
+//         //fade in content and close button on top right corner
+//         $('.modal_screen').addClass('m_screen_open');
+//         $('.modal_screen').css('display','block');
+//         // $('.g_modal').addClass('g_modal_open');
+//         setTimeout(function(){
+//             $('.g_modal').addClass('g_modal_open');
+//         },100);
+//         // $('.close_modal').addClass("show_close"); //might not be needed
+//         setTimeout(function(){
+//             $('.close_modal').addClass("show_close");
+//         },400);
+//         //allow scroll in pop-up window only
+//         $('body, html').css('overflow-y', 'hidden'); //html element also has scroll, need to disable as well
+//         //content will include why and how portfolio item was created
+//     });
+    // $('.close_modal').on('click touch', function(event){
+    //     event.preventDefault();
+
+
+        // below resets scroll position each time it is closed
+
+
+        // var sReset = $('.g_modal')
+        // sReset.scrollTop(0);
+        // $(this).removeClass('show_close');
+        // sReset.removeClass('g_modal_open');
+
+
+        // Below not working...  close but not working as intended
+        // var mdl = $('.g_modal');
+        // mdl.on('transitionend webkittransitionend', function(){
+        //     console.log('This is working');
+        //     $('.modal_screen').removeClass('m_screen_open').addClass('m_screen_closing');
+        //     $('.modal_screen').on('webkitanimationend animationend', function(){
+        //         $('.modal_screen').removeClass('m_screen_closing');
+        //     })
+        // })
+
+
+        // $('.modal_screen').removeClass('m_screen_open');
+
+
+        // Below worked but had odd behaviour (1st click opened modal, clicking close closed modal, clicking again opened then shut immediately, no body scroll)
+        // Figured out what was happening (added console logs in different scopes):
+        // Below function runs on modal open because .modal_screen goes through a transition on open as well
+
+        // $('.modal_screen').on('transitionend webkitTransitionEnd oTransitionEnd', function(){
+        //     if (sReset.hasClass('g_modal_open') && $('.modal_screen').css('display','block')){
+        //         // $(this).css('display','none');
+        //         console.log('above operations not completed');
+        //     } else {
+        //         $(this).css('display','none');
+        //         console.log('!!! inner inner function');
+        //     }
+            
+        //     console.log('close function inner');
+        // })
+
+        // Below approach not working (from MDN site)
+        // let mdscr = $('.m_screen_open');
+        // mdscr.ontransitionend = () => {
+        //     if (sReset.hasClass('g_modal_open')){
+        //         // $(this).css('display','none');
+        //         console.log('above operations not completed');
+        //     } else {
+        //         $(this).css('display','none');
+        //         console.log('!!! inner inner function');
+        //     }
+        // }
+        // May remove below timeout as it looks better with immediate close
+        // setTimeout(function(){
+        //     $('.modal_screen').removeClass('m_screen_open');
+        // },200);
+        // $('.m_screen_open').style('animation','modal_alpha 1s ease reverse');
+        // Below is a mess - redo all of this - might use deferred object
+        // $('.modal_screen').addClass('m_screen_closing').removeClass('m_screen_open');
+        // const mdl = $('.m_screen_closing');
+        // mdl.bind('animationend', function(){
+        //     console.log('Animation ended');
+        //     $('.modal_screen').removeClass('m_screen_closing');
+        // })
+
+//         $('body, html').css('overflow-y', 'auto');
+//         console.log('close funct outer')
+//     })
+// })
+
+// Another attempt utilizing Jquery animations rather than CSS so as to chain events easier
+
+    // $('.close_modal').on('click touch', function(event){
+    //     event.preventDefault();
+    //     var sReset = $('.g_modal')
+    //     sReset.scrollTop(0);
+    //     $(this).removeClass('show_close');
+    //     sReset.removeClass('g_modal_open');
+    //     console.log('almost...');
+    //     setTimeout(function(){
+    //         // below not firing - guessing that another library is needed for this
+    //         $('.m_screen_open').animate({'background-color' : 'rgba(36, 15, 33, 0)'});
+    //         $('body, html').css('overflow-y', 'auto');
+    //         console.log('closer...');
+    //         // Below is not being executed for some reason - could be conflicting CSS...
+    //         $('.m_screen_open').on('animationend', function(){
+    //             $('modal_screen').css('display','none');
+    //             $('body, html').css('overflow-y', 'auto');
+    //             console.log('!!! innermost');
+    //         })
+    //     }, 300);
+    // });
+// });
+// Attempt to utilize a deferred function to trigger close button appearance
+// $(function(){
+//     $('.more_info').on('click touch', function(event){
+//         event.preventDefault();
+//         var x, y;
+//         x = event.pageX;
+//         y = event.pageY;
+//         console.log(x,y);
+//         var mscr = $('.modal_screen');
+//         mscr.addClass('m_s_o').animate({backgroundColor : 'rgba(36, 15, 33, 0.6)'});
+
+
+//     function screen_fade(){
+//         $('.modal_screen').removeClass('m_screen_open');
+//     }
+//     function shrink_modal(){
+//         $('.g_modal').removeClass('g_modal_open').then(screen_fade,function(){
+
+//         }).then(function(){
+//             $('modal_screen').css('display','none');
+//             $('body, html').css('overflow-y', 'auto');
+//             console.log('!!! innermost');
+//         })
+//     }
+//     var dfr1 = $.Deferred();
+//     dfr1.done(screen_fade);
+//     $('.close_modal').on('click touch', function(event){
+//         event.preventDefault();
+//         dfr1.resolve();
+
 //  Button on portfolio page that starts and stops svg animation on items
 $(function(){
     $('.start_stop_gmj').on('click touch', function(event){
