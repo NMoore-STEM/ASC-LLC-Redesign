@@ -416,11 +416,15 @@ $(function(){
         //grow window from graphic, add viewport 100vw 100vh layer and darken all objects behind, lock scroll on viewport (behind new window)
         //fade in content and close button on top right corner
         $('.modal_screen').addClass('m_screen_open');
+        $('.modal_screen').css('display','block');
         // $('.g_modal').addClass('g_modal_open');
         setTimeout(function(){
             $('.g_modal').addClass('g_modal_open');
         },100);
-        $('.close_modal').addClass("show_close"); //might not be needed
+        // $('.close_modal').addClass("show_close"); //might not be needed
+        setTimeout(function(){
+            $('.close_modal').addClass("show_close");
+        },400);
         //allow scroll in pop-up window only
         $('body, html').css('overflow-y', 'hidden'); //html element also has scroll, need to disable as well
         //content will include why and how portfolio item was created
@@ -432,14 +436,36 @@ $(function(){
         sReset.scrollTop(0);
         $(this).removeClass("show_close");
         $('.g_modal').removeClass('g_modal_open');
-        // $('.modal_screen').removeClass('m_screen_open')
+        // Below not working...  close but not working as intended
+        // var mdl = $('.g_modal');
+        // mdl.on('transitionend webkittransitionend', function(){
+        //     console.log('This is working');
+        //     $('.modal_screen').removeClass('m_screen_open').addClass('m_screen_closing');
+        //     $('.modal_screen').on('webkitanimationend animationend', function(){
+        //         $('.modal_screen').removeClass('m_screen_closing');
+        //     })
+        // })
+        $('.modal_screen').removeClass('m_screen_open');
+        $('.modal_screen').on('transitionend', function(){
+            $(this).css('display','none');
+        })
         // May remove below timeout as it looks better with immediate close
-        setTimeout(function(){
-            $('.modal_screen').removeClass('m_screen_open');
-        },200);
+        // setTimeout(function(){
+        //     $('.modal_screen').removeClass('m_screen_open');
+        // },200);
+        // $('.m_screen_open').style('animation','modal_alpha 1s ease reverse');
+        // Below is a mess - redo all of this - might use deferred object
+        // $('.modal_screen').addClass('m_screen_closing').removeClass('m_screen_open');
+        // const mdl = $('.m_screen_closing');
+        // mdl.bind('animationend', function(){
+        //     console.log('Animation ended');
+        //     $('.modal_screen').removeClass('m_screen_closing');
+        // })
         $('body, html').css('overflow-y', 'auto');
     })
 })
+// Attempt to utilize a deferred function to trigger close button appearance
+
 //  Button on portfolio page that starts and stops svg animation on items
 $(function(){
     $('.start_stop_gmj').on('click touch', function(event){

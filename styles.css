@@ -810,10 +810,11 @@ unique urls for each class */
     height: 100vh;
     /* background-color:rgba(36, 15, 33, 0.4); */
     background-color:rgba(36, 15, 33, 0);
-    backdrop-filter: blur(1.2px);
-    -webkit-backdrop-filter: blur(1.2px);
+    /* backdrop-filter: blur(1.2px);
+    -webkit-backdrop-filter: blur(1.2px); */
     /* transition: opacity 400ms;
     transition: opacity 2s linear; */
+    transition: background-color ease 1.2s;
     visibility: hidden;
 }
 /* Below might be needed for a smooth, fading transition of modal */
@@ -829,7 +830,7 @@ unique urls for each class */
 also transition opacity with how it is writter currently */
 .m_screen_open {
     position: fixed;
-    display: block;
+    /* display: block; */
     top: 0;
     left: 0;
     /* opacity: 1; */
@@ -838,26 +839,37 @@ also transition opacity with how it is writter currently */
     transition: opacity 2s linear; */
     visibility: visible;
     /* animation: modal_fade 2s; */
-    animation: modal_alpha 1.7s ease-out forwards;
+
+    /* animation: modal_alpha 1.2s ease-out forwards; */
+    
     /* background-color:rgba(36, 15, 33, 0.6);
     transition: background-color 3s ease-out; */
+    background-color: rgba(36, 15, 33, 0.6);
+    backdrop-filter: blur(1.2px);
+    -webkit-backdrop-filter: blur(1.2px);
+    transition: background-color ease 1.2s;
+}
+.m_screen_closing {
+    animation: modal_alpha 1s ease reverse;
 }
 .g_modal {
     position: relative;
     position:absolute;
     /* bottom: 0; */
-    right: 20vw;
+    /* right: 20vw; */
     overflow-x: hidden;
     overflow-y: hidden;
     overflow-y: scroll;
     margin: 20vh 20vw 10vh;
     margin: 20vh 15vw 10vh;
     padding: 20px 40px;
-    height: 10vh;
-    width: 20vh;
+    height: 70vh;
+    /* width: 20vh; */
     background-color:rgb(43, 57, 96);
-    transition: all ease-in 300ms;
+    transition: opacity ease-in 175ms, transform ease-in 300ms;
     transform: scale(0.2);
+    transform-origin: top center;
+    opacity: 0;
 
 }
 .g_modal_open {
@@ -872,8 +884,10 @@ also transition opacity with how it is writter currently */
     height: 70vh;
     width: auto;
     background-color:rgb(43, 57, 96);
-    transition: all ease-out 300ms;
+    transition: opacity ease-in 175ms, transform ease-out 300ms;
     transform: scale(1);
+    transform-origin: top center;
+    opacity: 1;
 }
 .close_modal {
     visibility: hidden;
@@ -882,7 +896,7 @@ also transition opacity with how it is writter currently */
     height: 40px;
     width: 40px;
     top: calc(20vh + 20px);
-    right: calc(20vw + 40px);
+    right: calc(15vw + 40px);
     background-color:rgb(86, 54, 148);
     cursor: pointer;
     z-index: 204;
@@ -891,8 +905,8 @@ also transition opacity with how it is writter currently */
 .show_close {
     visibility: visible;
     opacity: 1;
-    transition: opacity ease 200ms;
-    animation: modal_fade 1s;
+    transition: opacity ease 700ms;
+    /* animation: modal_fade 1s; */
 }
 .modal_top {
     display: block;
