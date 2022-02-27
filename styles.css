@@ -804,7 +804,7 @@ unique urls for each class */
 /* Graphic Design Portfolio Item Details Window/Modal */
 /* will need to cut some properties and paste in correct viewports */
 .modal_screen {
-    display: none;
+    /* display: none; */
     /* opacity: 0; */
     width: 100vw;
     height: 100vh;
@@ -815,7 +815,7 @@ unique urls for each class */
     /* transition: opacity 400ms;
     transition: opacity 2s linear; */
     transition: background-color ease 1.2s;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 /* Below might be needed for a smooth, fading transition of modal */
 @keyframes modal_fade {
@@ -837,7 +837,7 @@ also transition opacity with how it is writter currently */
     z-index: 400;
     /* transition: opacity 200ms;
     transition: opacity 2s linear; */
-    visibility: visible;
+    /* visibility: visible; */
     /* animation: modal_fade 2s; */
 
     /* animation: modal_alpha 1.2s ease-out forwards; */
@@ -847,8 +847,13 @@ also transition opacity with how it is writter currently */
     background-color: rgba(36, 15, 33, 0.6);
     backdrop-filter: blur(1.2px);
     -webkit-backdrop-filter: blur(1.2px);
-    transition: background-color ease 1.2s;
+    transition: background-color ease 2s;
 }
+.m_s_o {
+    display: block;
+    visibility: visible;
+}
+/* reverse animation, may not be needed */
 .m_screen_closing {
     animation: modal_alpha 1s ease reverse;
 }
@@ -866,7 +871,7 @@ also transition opacity with how it is writter currently */
     height: 70vh;
     /* width: 20vh; */
     background-color:rgb(43, 57, 96);
-    transition: opacity ease-in 175ms, transform ease-in 300ms;
+    transition: opacity ease-in 150ms, transform ease 300ms;
     transform: scale(0.2);
     transform-origin: top center;
     opacity: 0;
@@ -884,7 +889,7 @@ also transition opacity with how it is writter currently */
     height: 70vh;
     width: auto;
     background-color:rgb(43, 57, 96);
-    transition: opacity ease-in 175ms, transform ease-out 300ms;
+    transition: opacity ease-in 150ms, transform ease-out 300ms;
     transform: scale(1);
     transform-origin: top center;
     opacity: 1;
