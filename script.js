@@ -163,6 +163,7 @@ $(document).ready(function() {
 });
 
 // WORKING CONTACT FORM VERIFICATION AND SUBMISSION (fr contact_test.js)
+// can clean up "var" before each variable as it only needs to be declared once if all are grouped below
 $(function(){
     var fA = 'focusActive';
     var lA = 'labelActive';
@@ -435,16 +436,69 @@ $(function(){
 ////////////////////////////////////////////////////////////////
 // Using transitionend to remove modal elements from DOM after closing transitions
 ////////////////////////////////////////////////////////////////
+// $(function(){
+//     var mScr = $('.modal_screen');
+//         sReset = $('.g_modal')
+//     $('.more_info').on('click touch', function(event){
+//         event.preventDefault();
+//         var x, y;
+//         x = event.pageX;
+//         y = event.pageY;
+//         console.log(x,y);
+//         // $('.modal_screen').addClass('m_screen_open');
+//         mScr.addClass('m_screen_open');
+//         // $('.modal_screen').css({ 'display':'block','visibility':'visible'});
+//         mScr.css({ 'display':'block','visibility':'visible'} );
+//         // $('.modal_screen').css('display','block');
+//         setTimeout(function(){
+//             $('.g_modal').addClass('g_modal_open');
+//         },100);
+//         setTimeout(function(){
+//             $('.close_modal').addClass("show_close");
+//         },400);
+//         $('body, html').css('overflow-y', 'hidden');
+//     });
+//     // Using .off(e) and .one() instead of .on() seemed to work
+//     $('.close_modal').on('click touch', function(event){
+//         event.preventDefault();
+//         // var sReset = $('.g_modal')
+//         sReset.scrollTop(0);
+//         $('body, html').css('overflow-y', 'auto');
+//         $(this).removeClass('show_close');
+//         sReset.removeClass('g_modal_open');
+//         sReset.one('transitionend', function(e){
+//             // $('.modal_screen').removeClass('m_screen_open').one('transitionend', function(e){
+//             mScr.removeClass('m_screen_open').one('transitionend', function(e){
+//                 // $('.modal_screen').css({ 'display':'none','visibility':'hidden'});
+//                 mScr.css({ 'display':'none','visibility':'hidden'});
+                
+//                 // $('.modal_screen').off(e);
+//                 mScr.off(e);
+//                 console.log('!!! innermost');
+//             });
+//             sReset.off(e);
+//             console.log('mid level');
+//         })
+//         console.log('top level');
+//     })
+// });
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//              Best working script for portfolio modals    //
+//                --Cleaned up--                            //
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 $(function(){
+    var mScr = $('.modal_screen');
+        sReset = $('.g_modal')
     $('.more_info').on('click touch', function(event){
         event.preventDefault();
         var x, y;
         x = event.pageX;
         y = event.pageY;
         console.log(x,y);
-        $('.modal_screen').addClass('m_screen_open');
-        $('.modal_screen').css({ 'display':'block','visibility':'visible'});
-        // $('.modal_screen').css('display','block');
+        mScr.addClass('m_screen_open');
+        mScr.css({ 'display':'block','visibility':'visible'} );
         setTimeout(function(){
             $('.g_modal').addClass('g_modal_open');
         },100);
@@ -453,27 +507,25 @@ $(function(){
         },400);
         $('body, html').css('overflow-y', 'hidden');
     });
-    // Using .off(e) and .one() instead of .on() seemed to work
     $('.close_modal').on('click touch', function(event){
         event.preventDefault();
-        var sReset = $('.g_modal')
         sReset.scrollTop(0);
         $('body, html').css('overflow-y', 'auto');
         $(this).removeClass('show_close');
         sReset.removeClass('g_modal_open');
         sReset.one('transitionend', function(e){
-            $('.modal_screen').removeClass('m_screen_open').one('transitionend', function(e){
-                $('.modal_screen').css({ 'display':'none','visibility':'hidden'});
-                
-                $('.modal_screen').off(e);
+            mScr.removeClass('m_screen_open').one('transitionend', function(e){
+                mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
                 console.log('!!! innermost');
-            });
-            sReset.off(e);
+            }).off(e);
             console.log('mid level');
         })
         console.log('top level');
     })
 });
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 
 //Graphic design portfolio item details pop-up window
 // $(function(){

@@ -953,6 +953,7 @@ p.modal_intro {
     margin-bottom: 40px;
     z-index: 202;
     box-shadow: 20px 20px 0 black;
+    box-shadow: 20px 20px 0 #2C4A9A;
 }
 .modal_img_r {
     min-width: 200px;
@@ -960,6 +961,7 @@ p.modal_intro {
     margin-bottom: 40px;
     z-index: 202;
     box-shadow: -20px 20px 0 black;
+    box-shadow: -20px 20px 0 #2C4A9A;
 }
 .modal_info_bg {
     position: absolute;
@@ -973,6 +975,7 @@ p.modal_intro {
     height: calc(100% - 40px);
     margin-left: 40px;
     margin-right: 40px;
+    background-color: #253C84;
 }
 .modal_info_bg_r {
     position: absolute;
@@ -985,6 +988,7 @@ p.modal_intro {
     height: calc(100% - 40px);
     margin-left: 60px;
     margin-right: 40px;
+    background-color: #253C84;
 }
 .modal_details {
     text-align: right;
