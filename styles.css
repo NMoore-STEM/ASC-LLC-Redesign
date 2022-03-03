@@ -804,7 +804,7 @@ unique urls for each class */
 /* Graphic Design Portfolio Item Details Window/Modal */
 /* will need to cut some properties and paste in correct viewports */
 .modal_screen {
-    /* display: none; */
+    display: none;
     /* opacity: 0; */
     width: 100vw;
     height: 100vh;
@@ -2525,6 +2525,25 @@ unique urls for each class */
     justify-content: center;
     padding: 0;
     background-color: revert;
+}
+.port_button {
+    display: none;
+}
+.modal_screen {
+    width: 100vw;
+}
+.g_modal {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 340px;
+    width: 340px;
+    margin: 0 auto 0;
+    background-color: rgb(43, 57, 96);
+    height: auto;
+}
+.modal_top {
+    display: block;
 }
 .gmj_logo {
     background-color: #253C84;
