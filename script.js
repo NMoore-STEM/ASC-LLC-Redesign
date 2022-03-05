@@ -515,15 +515,35 @@ $(function(){
         sReset.removeClass('g_modal_open');
         sReset.one('transitionend', function(e){
             mScr.removeClass('m_screen_open').one('transitionend', function(e){
-                mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
+                //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
                 console.log('!!! innermost');
             }).off(e);
+            function hideModal() {
+                mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
+                console.log('new function');
+            }
+            setTimeout(hideModal,1200);
             console.log('mid level');
         })
         console.log('top level');
     })
 });
 ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+//         MOBILE version                                     //
+//   **Create new button that:                                //
+//     - Locks current scroll position of document (and       //
+//       disables)                                            //
+//     - Moves entire document to left (off-screen/out of     //
+//       viewport)                                            //
+//     - Slides in modal content from right side (takes up    //
+//       entire viewport)                                     //
+//     - Enables scroll on modal content (only)               //
+//   **ALTERNATIVELY                                          //
+//     - Lock document scroll position                        //
+//     - Move in modal content from right (off screen), and   //
+//       on top layer/z-index of document                     //
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
 
@@ -835,13 +855,13 @@ $(function(){
 
 let Nick_Moore = ["your", "new", "employee"];
 
-$(function(Nick_Moore) {
-    var $bottom = scroll();
-    window.on(scroll, function(hire) {
-        if ($bottom == 0) {
-            hire
-            $(yourTeam).append(employees[Nick_Moore])
-        }
-    })
-})
+// $(function(Nick_Moore) {
+//     var $bottom = scroll();
+//     window.on(scroll, function(hire) {
+//         if ($bottom == 0) {
+//             hire
+//             $(yourTeam).append(employees[Nick_Moore])
+//         }
+//     })
+// })
 

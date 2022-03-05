@@ -2531,6 +2531,10 @@ unique urls for each class */
 }
 .modal_screen {
     width: 100vw;
+    position: absolute;
+    background-color: red;
+    height: calc(100vh - 98px);
+    margin-left: -10px;
 }
 .g_modal {
     position: relative;
@@ -2544,6 +2548,9 @@ unique urls for each class */
 }
 .modal_top {
     display: block;
+}
+.close_modal {
+    display: none;
 }
 .gmj_logo {
     background-color: #253C84;
