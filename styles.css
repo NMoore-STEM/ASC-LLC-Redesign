@@ -2529,11 +2529,28 @@ unique urls for each class */
 .port_button {
     display: none;
 }
+.port_button_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #662D91;
+    height: 40px;
+    width: 100%;
+}
+.mobile_info {
+
+}
+.details_arrow {
+    height: 25px;
+    width: 25px;
+    right: 0;
+    position: absolute;
+}
 .modal_screen {
     width: 100vw;
     position: absolute;
     background-color: red;
-    height: calc(100vh - 98px);
+    height: calc(100vh - 100px);
     margin-left: -10px;
 }
 .g_modal {
@@ -4291,6 +4308,9 @@ em {
     display: flex;
     justify-content: flex-end;
     background-color: #253C84
+}
+.port_button_mobile {
+    display: none;
 }
 /* #graphic_design p, #graphic_design .portfolio_dev_icon {
     width: 72vw;
