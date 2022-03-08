@@ -544,9 +544,18 @@ $(function(){
 //     - Lock document scroll position                        //
 //     - Move in modal content from right (off screen), and   //
 //       on top layer/z-index of document                     //
+//     - Top of modal will be determined of current scroll    //
+//       position when the "more info" button is clicked
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
-
+$(function(){
+    $('.mobile_info').on('click touch', function(event){
+        event.preventDefault();
+        var fTop = $('HTML').scrollTop();
+            mTop = fTop - 1563;
+        $('.modal_screen').css({'top':mTop,'display':'block'});
+    })
+})
 //Graphic design portfolio item details pop-up window
 // $(function(){
 //     $('.more_info').on('click touch', function(event){
