@@ -804,7 +804,7 @@ unique urls for each class */
 /* Graphic Design Portfolio Item Details Window/Modal */
 /* will need to cut some properties and paste in correct viewports */
 .modal_screen {
-    display: none;
+    /* display: none; */
     /* opacity: 0; */
     width: 100vw;
     height: 100vh;
@@ -816,6 +816,10 @@ unique urls for each class */
     transition: opacity 2s linear; */
     transition: background-color ease 1.2s;
     /* visibility: hidden; */
+}
+.m_screen_fade {
+    background-color: rgba(36, 15, 33, 0.6);
+    transition: background-color ease 1.2s;
 }
 /* Below might be needed for a smooth, fading transition of modal */
 @keyframes modal_fade {
@@ -844,10 +848,10 @@ also transition opacity with how it is writter currently */
     
     /* background-color:rgba(36, 15, 33, 0.6);
     transition: background-color 3s ease-out; */
-    background-color: rgba(36, 15, 33, 0.6);
+    /* background-color: rgba(36, 15, 33, 0.6); */
     backdrop-filter: blur(1.2px);
     -webkit-backdrop-filter: blur(1.2px);
-    transition: background-color ease 2s;
+    transition: background-color ease 0.3s;
 }
 .m_s_o {
     display: block;
@@ -2552,6 +2556,16 @@ unique urls for each class */
     background-color: red;
     height: calc(100vh - 100px);
     margin-left: -10px;
+    transform: translate(100vw);
+    /* will-change: transform; */
+    transition: transform ease 1.2s;
+    visibility: visible;
+    z-index: 199;
+}
+.m_s_o_mobile {
+    transform: translate(0vw);
+    /* will-change: transform; */
+    transition: transform ease 1.2s;
 }
 .g_modal {
     position: relative;
@@ -2568,6 +2582,18 @@ unique urls for each class */
 }
 .close_modal {
     display: none;
+}
+.close_mobile {
+    position: absolute;
+    height: 60px;
+    display: flex;
+    width: 100%;
+    background-color: #574326;
+    z-index: 201;
+    top: 75vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .gmj_logo {
     background-color: #253C84;
@@ -4312,6 +4338,9 @@ em {
 .port_button_mobile {
     display: none;
 }
+.close_mobile {
+    display: none;
+}
 /* #graphic_design p, #graphic_design .portfolio_dev_icon {
     width: 72vw;
     margin: 0 auto;
@@ -4352,6 +4381,9 @@ em {
     align-self: center;
     max-height: 250px;
     margin: 20px;
+}
+.modal_screen {
+    display: none;
 }
 /* is the below rule needed still? */
 #graphic_design .portfolio_item_container:nth-of-type(3) {

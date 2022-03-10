@@ -497,7 +497,7 @@ $(function(){
         x = event.pageX;
         y = event.pageY;
         console.log(x,y);
-        mScr.addClass('m_screen_open');
+        mScr.addClass('m_screen_open m_screen_fade');
         mScr.css({ 'display':'block','visibility':'visible'} );
         setTimeout(function(){
             $('.g_modal').addClass('g_modal_open');
@@ -514,12 +514,12 @@ $(function(){
         $(this).removeClass('show_close');
         sReset.removeClass('g_modal_open');
         sReset.one('transitionend', function(e){
-            mScr.removeClass('m_screen_open').one('transitionend', function(e){
+            mScr.removeClass('m_screen_fade').one('transitionend', function(e){
                 //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
                 console.log('!!! innermost');
             }).off(e);
             function hideModal() {
-                mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
+                mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
                 console.log('new function');
             }
             setTimeout(hideModal,1200);
@@ -549,11 +549,16 @@ $(function(){
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
 $(function(){
+    // var cScroll = $(window).offset();
+    var fTop = $('HTML').scrollTop();
+        mTop = fTop - 1563;
+        wTop = window.pageYOffset;
     $('.mobile_info').on('click touch', function(event){
         event.preventDefault();
-        var fTop = $('HTML').scrollTop();
-            mTop = fTop - 1563;
-        $('.modal_screen').css({'top':mTop,'display':'block'});
+        $('body, html').css('overflow-y', 'hidden').scrollTop(wTop + 2);
+        // var fTop = $('HTML').scrollTop();
+        //     mTop = fTop - 1563;
+        $('.modal_screen').css({'top':mTop,'display':'block'}).addClass('m_s_o_mobile');
     })
 })
 //Graphic design portfolio item details pop-up window
