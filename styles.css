@@ -2368,17 +2368,21 @@ unique urls for each class */
 .portfolio_dev_icon {
     display: flex;
     /*width: 340px;*/
-    width: 60vw;
+    /* width: 60vw;
     max-width: 275px;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
     align-items: center;
     /*padding-top: 20px;*/
     /*margin-top: 50px;*/
     padding: 10px 0;
     margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
 }
 .code_icon {
-    height: 35px;
+    /* height: 35px; */
+    height: 40px;
 }
 .item_details {
     color: #91B4DF;
@@ -2493,7 +2497,7 @@ unique urls for each class */
     font-weight: bold;
     text-align: left;
     width: calc(100% - 10px);
-    padding: 30px 0 30px 10px;
+    padding: 30px 0 20px 10px;
     letter-spacing: 3px;
     /*margin-top: 30px;*/
     background-color: #2C4A9A;
@@ -2513,15 +2517,27 @@ unique urls for each class */
 .heading_decor {
     width: 100%;
 }
+.heading_decor h4 {
+    background-color: #2C4A9A;
+    color: #91B4DF;
+    font-size: 12pt;
+    text-align: left;
+    padding-left: 30px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
 #graphic_design .portfolio_dev_icon {
     background-color: #2C4A9A;
     width: 100%;
     max-width: 100%;
-    padding: 10px 0 30px;
+    padding: 10px 0 20px;
     border-bottom: 30px solid #253C84;
     margin: 0;
     gap: 30px;
     justify-content: center;
+}
+#graphic_design .code_icon {
+    height: 30px;
 }
 .graphic_item {
     align-items: center;
@@ -2529,6 +2545,9 @@ unique urls for each class */
     justify-content: center;
     padding: 0;
     background-color: revert;
+}
+.graphic_item h4 {
+    width: calc(100% - 40px);
 }
 .port_button {
     display: none;
@@ -2542,7 +2561,7 @@ unique urls for each class */
     width: 100%;
 }
 .mobile_info {
-
+    height: 60px;
 }
 .details_arrow {
     height: 25px;
@@ -2550,35 +2569,58 @@ unique urls for each class */
     right: 0;
     position: absolute;
 }
-.modal_screen {
+/* .modal_screen {
     width: 100vw;
     position: absolute;
-    background-color: red;
+    position: fixed;
+    background-color:rgb(43, 57, 96);
     height: calc(100vh - 100px);
     margin-left: -10px;
     transform: translate(100vw);
-    /* will-change: transform; */
     transition: transform ease 1.2s;
     visibility: visible;
     z-index: 199;
+} */
+.modal_screen {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color:rgb(43, 57, 96);
+    transform: translate(100vw);
+    transition: transform ease 1.2s;
+    z-index: 199;
+    left: 0;
+    top: 100px;
 }
 .m_s_o_mobile {
     transform: translate(0vw);
     /* will-change: transform; */
     transition: transform ease 1.2s;
 }
+.m_container {
+    position: relative;
+}
 .g_modal {
     position: relative;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
     max-width: 340px;
     width: 340px;
     margin: 0 auto 0;
     background-color: rgb(43, 57, 96);
     height: auto;
+    transform: scale(1);
+    opacity: 1;
+    padding: 0;
+    height: calc(100vh - 160px);
 }
 .modal_top {
     display: block;
+}
+.modal_title {
+    color: #91B4DF;
 }
 .close_modal {
     display: none;
@@ -2588,9 +2630,10 @@ unique urls for each class */
     height: 60px;
     display: flex;
     width: 100%;
-    background-color: #574326;
+    background-color: #662D91;
     z-index: 201;
-    top: 75vh;
+    /* top: 75vh; */
+    /* bottom: 5px; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;

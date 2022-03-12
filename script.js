@@ -549,18 +549,13 @@ $(function(){
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
 $(function(){
-    // var cScroll = $(window).offset();
-    var fTop = $('HTML').scrollTop();
-        mTop = fTop - 1563;
-        wTop = window.pageYOffset;
     $('.mobile_info').on('click touch', function(event){
-        var fTop = $('HTML').scrollTop();
-            mTop = fTop - 1563;
+        //var fTop = $('HTML').scrollTop();
+        //    mTop = fTop - 1563;
         event.preventDefault();
         $('body, html').css('overflow-y', 'hidden');
-        // var fTop = $('HTML').scrollTop();
-        //     mTop = fTop - 1563;
-        $('.modal_screen').css({'top':mTop,'display':'block'}).addClass('m_s_o_mobile');
+        //$('.modal_screen').css({'top':mTop + 'px'}).addClass('m_s_o_mobile');
+        $('.modal_screen').addClass('m_s_o_mobile');
         // Below is to prevent unwanted page jumping after click
         return false;
     })
@@ -569,7 +564,10 @@ $(function(){
     $('.close_mobile').on('click touch', function(event){
         event.preventDefault();
         $('body, html').css('overflow-y', 'scroll');
-        $('.modal_screen').removeClass('m_s_o_mobile');
+        $('.modal_screen').removeClass('m_s_o_mobile').one('transitionend', function(e){
+            // $(this).css({'display':'none'});
+            $('.g_modal').scrollTop(0);
+        })
     })
 })
 // ****NOTE: Use "return false;" within click function to help
