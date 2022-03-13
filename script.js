@@ -522,7 +522,7 @@ $(function(){
                 mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
                 console.log('new function');
             }
-            setTimeout(hideModal,1200);
+            setTimeout(hideModal,175);
             console.log('mid level');
         })
         console.log('top level');
