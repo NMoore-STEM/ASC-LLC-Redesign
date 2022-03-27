@@ -744,7 +744,7 @@ unique urls for each class */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    /* flex: 1; */
     background-color: #553692;
     /*border: 2px solid #BDB0E6;*/
     background-color: #532B9E;
@@ -4292,6 +4292,9 @@ em {
     filter: brightness(1.2);
     transition: all 0.2s ease-in;
 }
+.pb_web {
+    flex: 1;
+}
 /*.port_button::before {
     content: "";
     position: absolute;
@@ -4378,6 +4381,9 @@ em {
     justify-content: flex-end;
     background-color: #253C84
 }
+.more_info {
+    height: 55px;
+}
 .port_button_mobile {
     display: none;
 }
@@ -4421,9 +4427,10 @@ em {
 	width: calc(72vw - 280px);
 }
 .portfolio_img_graphic {
+    display: grid;
     align-self: center;
     max-height: 250px;
-    margin: 20px;
+    margin: 20px auto;
 }
 .modal_screen {
     display: none;
