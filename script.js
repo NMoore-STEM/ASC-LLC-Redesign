@@ -528,6 +528,35 @@ $(function(){
         console.log('top level');
     })
 });
+////////////------- Alternative Approach ----------/////////////
+//      This approach will be to create an array of all       //
+//      graphic design portfolio item "more details" buttons  //
+//      and have each one open unique and relevant content    //
+//      corresponding to where the button is located in the   //
+//      page.                                                 //
+//  **Consider using .each() method rather than loop iteration//
+////////////////////////////////////////////////////////////////
+var more = $('.more_info');
+    mScr = $('.modal_screen');
+    sReset = $('.g_modal')
+for (var i = 0; i < more.length; i++) {
+    more[i].on('click touch', function(event){
+        event.preventDefault();
+        var x, y;
+        x = event.pageX;
+        y = event.pageY;
+        console.log(x,y);
+        mScr.addClass('m_screen_open m_screen_fade');
+        mScr.css({ 'display':'block','visibility':'visible'} );
+        setTimeout(function(){
+            $('.g_modal').addClass('g_modal_open');
+        },100);
+        setTimeout(function(){
+            $('.close_modal').addClass("show_close");
+        },400);
+        $('body, html').css('overflow-y', 'hidden');
+    });
+}
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
