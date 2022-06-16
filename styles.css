@@ -1754,7 +1754,8 @@ ul#coreInternal {
 }
 .cardContainer {
     /* max-width: inherit; */
-    padding: 30px 20px;
+    /* padding: 30px 20px; */
+    padding-top: 30px;
 }
 .cardFrame {
     /* display: flex; */
