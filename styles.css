@@ -60,6 +60,7 @@ p, li {
 /* Class was not used in final iteration - double-check that it is not used, then delete */
 .botCatfish {
     display: none;
+    position: relative;
 }
 #logoTextMobile {
     display: flex;
