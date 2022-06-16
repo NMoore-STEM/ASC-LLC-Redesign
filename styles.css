@@ -4630,6 +4630,7 @@ em {
 }
 .nav_text {
     font-size: 10pt;
+    line-height: 2;
 }
 }
 /*BELOW RULES NOT WORKING-NEW APPROACH NEEDED*/
