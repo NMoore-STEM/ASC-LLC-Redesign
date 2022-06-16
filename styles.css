@@ -3239,7 +3239,8 @@ section {
 
 }
 .cardIcon {
-    display: inherit;
+    /* display: inherit; */
+    align-self: center;
 }
 .cardContent {
     flex-grow: 1;
