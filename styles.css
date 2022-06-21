@@ -88,6 +88,8 @@ p, li {
     background-color: transparent;
     box-shadow: 0 10px 6px -6px #322749;
     overflow: hidden;
+    /* standardized shadow color below */
+    box-shadow: 0 10px 6px -6px #1B253E;
 }
 #coreValues {
     display: flex;
@@ -95,6 +97,8 @@ p, li {
     background-color: #2C4A9A;
     border-radius: 15px;
     padding: 30px;
+    /* standardized shadow color below */
+    box-shadow: 0 8px 4px -6px #1B253E;
 }
 #coreValues::before, #coreValues::after {
     display: flex;
@@ -190,6 +194,7 @@ p, li {
     align-items: center;
     padding: 30px;
 }
+/* will keep black shadows on hover for these classes, looks better */
 .footerButton {
     display: grid;
     min-width: 120px;
@@ -2960,6 +2965,8 @@ section {
 }
 .filterShadow {
     filter: drop-shadow(1px 6px 4px black);
+    /* standardized shadow color below */
+    filter: drop-shadow(1px 6px 4px #1B253E);
     width: 100%;
 }
 .sectionTitle {
@@ -3297,6 +3304,8 @@ section {
     justify-content: space-around;
     /*background-color: #2C395E;*/
     box-shadow: -2px 2px #2C395E;
+    /* standardized shadow color below */
+    box-shadow: -2px 2px #1B253E;
 }
 .service_group h3 {
     color: white;
