@@ -99,6 +99,9 @@ p, li {
     padding: 30px;
     /* standardized shadow color below */
     box-shadow: 0 8px 4px -6px #1B253E;
+    min-width: 280px;
+    max-width: 350px;
+    height: 190px;
 }
 #coreValues::before, #coreValues::after {
     display: flex;
@@ -111,6 +114,7 @@ p, li {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 120pt;
 }
 #coreValues::before {
     content: "\007B";
@@ -124,6 +128,8 @@ p, li {
     font-size: 18pt;
     text-align: center;
     list-style: none;
+    font-size: 14.4pt;
+    line-height: 1.5;
 }
 .leftAside {
     text-align: left;
@@ -3130,6 +3136,14 @@ section {
     grid-row-start: 2;
     grid-row-end: span 2;
 } */
+.why_top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.why_top p {
+    max-width: 410px;
+}
 #whyContent p {
     margin: 0 0 50px;
     padding: 40px 40px 20px 80px;
@@ -3149,9 +3163,10 @@ section {
     background-color: #2C4A9A;
     border-radius: 15px;
     padding: 30px; */
-    margin: auto 30px;
-    transform: scale(0.8);
-    -webkit-transform: scale(0.8);
+    /* below taken out for new layout */
+    /* margin: auto 30px; */
+    /* transform: scale(0.8);
+    -webkit-transform: scale(0.8); */
 }
 /* #coreValues::before, #coreValues::after {
     display: flex;
@@ -3179,6 +3194,7 @@ section {
 } */
 #coreInternal {
     padding: 0 30px 0;
+    margin: 0;
 }
 #coreValues h3 {
     padding: 0;
@@ -3188,6 +3204,7 @@ section {
     /* color: rgb(47, 64, 114);
     color: rgb(50, 39, 73); */
     color: rgb(38, 48, 73);
+    font-size: 13pt;
 }
 #coreValues li {
     /* font-family: 'Noto Sans KR', sans-serif;
@@ -3195,7 +3212,7 @@ section {
     list-style: none;
     text-align: center; */
 
-    line-height: 2;
+    /* line-height: 2; */
     letter-spacing: 2px;
     width: auto;
 }
