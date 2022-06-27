@@ -99,9 +99,10 @@ p, li {
     padding: 30px;
     /* standardized shadow color below */
     box-shadow: 0 8px 4px -6px #1B253E;
-    min-width: 280px;
-    max-width: 350px;
+    /* min-width: 280px;
+    max-width: 350px; */
     height: 190px;
+    width: 350px;
 }
 #coreValues::before, #coreValues::after {
     display: flex;
@@ -118,10 +119,13 @@ p, li {
 }
 #coreValues::before {
     content: "\007B";
-    height: 100%;
+    /* below might not be needed */
+    /* height: 100%; */
+    margin-right: 24px;
 }
 #coreValues::after {
     content: "\007D";
+    margin-left: 24px;
 }
 #coreValues li {
     font-family: 'Noto Sans KR', sans-serif;
@@ -3129,6 +3133,7 @@ section {
     grid-row-start: 2;
     grid-column-end: span 2;
     justify-content: center;
+    padding: 0 80px;
 }
 /* Below class may not be needed */
 /* .whyP {
@@ -3142,7 +3147,7 @@ section {
     align-items: center;
 }
 .why_top p {
-    max-width: 410px;
+    /* max-width: 410px; */
 }
 #whyContent p {
     margin: 0 0 50px;
@@ -3193,8 +3198,9 @@ section {
     color: transparent;
 } */
 #coreInternal {
-    padding: 0 30px 0;
+    /* padding: 0 30px 0; */
     margin: 0;
+    padding: 0;
 }
 #coreValues h3 {
     padding: 0;
@@ -4664,6 +4670,18 @@ em {
 }
 /*BELOW RULES NOT WORKING-NEW APPROACH NEEDED*/
 @media only screen and (min-width: 771px) and (max-width:1050px) {
+.why_top {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.why_top p {
+    margin: 0;
+    padding: 40px 0 20px;
+    width: 100%;
+    padding: 1.8vw 0 20px;
+    max-width: unset;
+}
 #about_me {
     max-width: 70vw;
     margin-top: -30px;
@@ -4673,6 +4691,19 @@ em {
 
         /* PLACE NEW #SOFT_SKILLS RULES HERE */
         /*-----------------------------------*/
+}
+@media only screen and (min-width:1051px) {
+.why_top {
+    flex-wrap: nowrap;
+    /* justify-content: center; */
+    /* margin-bottom: 60px; */
+}
+.why_top p {
+    margin: 0;
+    padding: 40px 0 20px;
+    width: 90%;
+    /* padding: 1.8vw 0 20px; */
+}
 }
 /*@media only screen and (min-width:1051px) {
 #about_me {
