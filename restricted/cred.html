@@ -219,10 +219,10 @@
                         </div>
                         <div class=portfolio_item_sub>
                             <div class=pb_container>
-                                <a href="../index.html" class=port_button target="_blank">
+                                <a href="../index.html" class="port_button pb_web" target="_blank">
                                     <span class=pb_text>Website</span>
                                 </a>
-                                <a href="https://github.com/NMoore-STEM/ASC-LLC-Redesign"  class=port_button target="_blank">
+                                <a href="https://github.com/NMoore-STEM/ASC-LLC-Redesign"  class="port_button pb_web" target="_blank">
                                     <span class=pb_text>GH Repository</span>
                                 </a>
                             </div>
@@ -269,10 +269,10 @@
                         <div class=portfolio_item_sub>
                             <!--MAKE SURE TO ADD FINAL BAILEY SITE LOCATION AS LINK-->
                             <div class=pb_container>
-                                <a href="../../DBaileyLab_site/index.html" class=port_button target="_blank">
+                                <a href="../../DBaileyLab_site/index.html" class="port_button pb_web" target="_blank">
                                     <span class=pb_text>Website</span>
                                 </a>
-                                <a href="https://github.com/NMoore-STEM/DBaileyLab_site"  class=port_button target="_blank">
+                                <a href="https://github.com/NMoore-STEM/DBaileyLab_site"  class="port_button pb_web" target="_blank">
                                     <span class=pb_text>GH Repository</span>
                                 </a>
                             </div>
@@ -356,15 +356,78 @@
                     <section class="portfolio_item_main graphic_item">
                         <h4>Packaging Design:<br>
                         Victor's Mix</h4>
-                        <a href="..\restricted\images_secure\aplza_4in_sticker.svg" target="_blank">
+                        <!--<a href="..\restricted\images_secure\aplza_4in_sticker.svg" target="_blank">-->
                             <img class=portfolio_img_graphic src="..\restricted\images_secure\aplza_4in_sticker.svg"alt="">
-                        </a>
+                        <!--</a>-->
                         <a class="port_button more_info">
                             <span class=pb_text>Click for details...</span>
                         </a>
+                        <a class="port_button_mobile mobile_info">
+                            <span class=pb_text>Expand for details...</span>
+                            <span class=details_arrow>
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
+                                    <polygon points="17,1 17,30 1,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#8d76d6;"/>
+                                </svg>
+                            </span>
+                        </a>
                     </section>
                     <!-- more info for first graphic design portfolio item -->
-                    
+                    <span class="modal_screen">
+                        <div class=m_container>
+                            <aside class="g_modal">
+                                <!-- CLOSE WINDOW Button ** Moved up a level - see below -->
+                                <!-- <span class="close_modal">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" xml:space="preserve">
+                                        <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="12.5" y1="12.5" x2="37.5" y2="37.5"></line>
+                                        <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="37.5" y1="12.5" x2="12.5" y2="37.5"></line>
+                                    </svg>
+                                </span> -->
+                                <!-- Title Area -->
+                                <span class="modal_top">
+                                    <h4 class="modal_title">Packaging Design</h4>
+                                    <p class="modal_intro">A complete packaging design used for a fictional product.</p>
+                                </span>
+                                <!-- Flex container for detailed descriptions -->
+                                <div class="modal_flex">
+                                    <!-- IMG and Description Unit 1 -->
+                                    <span class="modal_unit_l">
+                                        <img class="modal_img" src="..\restricted\images_secure\ASC_AI.png" alt="">
+                                        <div class="modal_info_bg">
+                                            <p class="modal_details">TEST: p1</p>
+                                        </div>
+                                    </span>
+                                    <!-- IMG and Description Unit 2 -->
+                                    <span class="modal_unit_r">
+                                        <img class="modal_img_r" src="..\restricted\images_secure\ASC_blender.png" alt="">
+                                        <div class="modal_info_bg_r">
+                                            <p class="modal_details_r">TEST: p2</p>
+                                        </div>
+                                    </span>
+                                    <!-- IMG and Description Unit 3 -->
+                                    <span class="modal_unit_l">
+                                        <img class="modal_img" src="..\restricted\images_secure\ASC_shaded.png" alt="">
+                                        <div class="modal_info_bg">
+                                            <p class="modal_details">TEST: p3</p>
+                                        </div>
+                                    </span>
+                                    <!-- will add more descriptions as needed below this point -->
+                                </div>
+                            </aside>
+                            <!-- Hide below button in smaller resolutions -->
+                            <span class=close_modal>
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" xml:space="preserve">
+                                    <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="12.5" y1="12.5" x2="37.5" y2="37.5"></line>
+                                    <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="37.5" y1="12.5" x2="12.5" y2="37.5"></line>
+                                </svg>
+                            </span>
+                            <span class=close_mobile>
+                                <span class=pb_text>Return to portfolio...</span>
+                                <svg class=details_arrow version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
+                                    <polygon points="1,1 1,30 16,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#BDB0E6;;"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </span>
                     <!-- <span class="modal_screen">
                         <aside class="g_modal">
                             <span class="modal_top">

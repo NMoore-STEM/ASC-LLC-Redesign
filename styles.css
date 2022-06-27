@@ -60,6 +60,7 @@ p, li {
 /* Class was not used in final iteration - double-check that it is not used, then delete */
 .botCatfish {
     display: none;
+    position: relative;
 }
 #logoTextMobile {
     display: flex;
@@ -87,6 +88,8 @@ p, li {
     background-color: transparent;
     box-shadow: 0 10px 6px -6px #322749;
     overflow: hidden;
+    /* standardized shadow color below */
+    box-shadow: 0 10px 6px -6px #1B253E;
 }
 #coreValues {
     display: flex;
@@ -94,6 +97,12 @@ p, li {
     background-color: #2C4A9A;
     border-radius: 15px;
     padding: 30px;
+    /* standardized shadow color below */
+    box-shadow: 0 8px 4px -6px #1B253E;
+    /* min-width: 280px;
+    max-width: 350px; */
+    height: 190px;
+    width: 350px;
 }
 #coreValues::before, #coreValues::after {
     display: flex;
@@ -106,19 +115,25 @@ p, li {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 120pt;
 }
 #coreValues::before {
     content: "\007B";
-    height: 100%;
+    /* below might not be needed */
+    /* height: 100%; */
+    margin-right: 24px;
 }
 #coreValues::after {
     content: "\007D";
+    margin-left: 24px;
 }
 #coreValues li {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 18pt;
     text-align: center;
     list-style: none;
+    font-size: 14.4pt;
+    line-height: 1.5;
 }
 .leftAside {
     text-align: left;
@@ -189,6 +204,7 @@ p, li {
     align-items: center;
     padding: 30px;
 }
+/* will keep black shadows on hover for these classes, looks better */
 .footerButton {
     display: grid;
     min-width: 120px;
@@ -744,7 +760,7 @@ unique urls for each class */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    /* flex: 1; */
     background-color: #553692;
     /*border: 2px solid #BDB0E6;*/
     background-color: #532B9E;
@@ -1754,7 +1770,8 @@ ul#coreInternal {
 }
 .cardContainer {
     /* max-width: inherit; */
-    padding: 30px 20px;
+    /* padding: 30px 20px; */
+    padding-top: 30px;
 }
 .cardFrame {
     /* display: flex; */
@@ -2958,6 +2975,8 @@ section {
 }
 .filterShadow {
     filter: drop-shadow(1px 6px 4px black);
+    /* standardized shadow color below */
+    filter: drop-shadow(1px 6px 4px #1B253E);
     width: 100%;
 }
 .sectionTitle {
@@ -3114,6 +3133,7 @@ section {
     grid-row-start: 2;
     grid-column-end: span 2;
     justify-content: center;
+    padding: 0 80px;
 }
 /* Below class may not be needed */
 /* .whyP {
@@ -3121,6 +3141,14 @@ section {
     grid-row-start: 2;
     grid-row-end: span 2;
 } */
+.why_top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.why_top p {
+    /* max-width: 410px; */
+}
 #whyContent p {
     margin: 0 0 50px;
     padding: 40px 40px 20px 80px;
@@ -3140,9 +3168,10 @@ section {
     background-color: #2C4A9A;
     border-radius: 15px;
     padding: 30px; */
-    margin: auto 30px;
-    transform: scale(0.8);
-    -webkit-transform: scale(0.8);
+    /* below taken out for new layout */
+    /* margin: auto 30px; */
+    /* transform: scale(0.8);
+    -webkit-transform: scale(0.8); */
 }
 /* #coreValues::before, #coreValues::after {
     display: flex;
@@ -3169,7 +3198,9 @@ section {
     color: transparent;
 } */
 #coreInternal {
-    padding: 0 30px 0;
+    /* padding: 0 30px 0; */
+    margin: 0;
+    padding: 0;
 }
 #coreValues h3 {
     padding: 0;
@@ -3179,6 +3210,7 @@ section {
     /* color: rgb(47, 64, 114);
     color: rgb(50, 39, 73); */
     color: rgb(38, 48, 73);
+    font-size: 13pt;
 }
 #coreValues li {
     /* font-family: 'Noto Sans KR', sans-serif;
@@ -3186,7 +3218,7 @@ section {
     list-style: none;
     text-align: center; */
 
-    line-height: 2;
+    /* line-height: 2; */
     letter-spacing: 2px;
     width: auto;
 }
@@ -3239,7 +3271,8 @@ section {
 
 }
 .cardIcon {
-    display: inherit;
+    /* display: inherit; */
+    align-self: center;
 }
 .cardContent {
     flex-grow: 1;
@@ -3294,6 +3327,8 @@ section {
     justify-content: space-around;
     /*background-color: #2C395E;*/
     box-shadow: -2px 2px #2C395E;
+    /* standardized shadow color below */
+    box-shadow: -2px 2px #1B253E;
 }
 .service_group h3 {
     color: white;
@@ -4292,6 +4327,9 @@ em {
     filter: brightness(1.2);
     transition: all 0.2s ease-in;
 }
+.pb_web {
+    flex: 1;
+}
 /*.port_button::before {
     content: "";
     position: absolute;
@@ -4378,6 +4416,9 @@ em {
     justify-content: flex-end;
     background-color: #253C84
 }
+.more_info {
+    height: 55px;
+}
 .port_button_mobile {
     display: none;
 }
@@ -4421,9 +4462,10 @@ em {
 	width: calc(72vw - 280px);
 }
 .portfolio_img_graphic {
+    display: grid;
     align-self: center;
     max-height: 250px;
-    margin: 20px;
+    margin: 20px auto;
 }
 .modal_screen {
     display: none;
@@ -4623,10 +4665,23 @@ em {
 }
 .nav_text {
     font-size: 10pt;
+    line-height: 2;
 }
 }
 /*BELOW RULES NOT WORKING-NEW APPROACH NEEDED*/
 @media only screen and (min-width: 771px) and (max-width:1050px) {
+.why_top {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.why_top p {
+    margin: 0;
+    padding: 40px 0 20px;
+    width: 100%;
+    padding: 1.8vw 0 20px;
+    max-width: unset;
+}
 #about_me {
     max-width: 70vw;
     margin-top: -30px;
@@ -4636,6 +4691,19 @@ em {
 
         /* PLACE NEW #SOFT_SKILLS RULES HERE */
         /*-----------------------------------*/
+}
+@media only screen and (min-width:1051px) {
+.why_top {
+    flex-wrap: nowrap;
+    /* justify-content: center; */
+    /* margin-bottom: 60px; */
+}
+.why_top p {
+    margin: 0;
+    padding: 40px 0 20px;
+    width: 90%;
+    /* padding: 1.8vw 0 20px; */
+}
 }
 /*@media only screen and (min-width:1051px) {
 #about_me {
