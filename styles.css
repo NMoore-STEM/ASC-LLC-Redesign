@@ -103,6 +103,8 @@ p, li {
     max-width: 350px; */
     height: 190px;
     width: 350px;
+    min-width: 350px;
+    justify-content: center;
 }
 #coreValues::before, #coreValues::after {
     display: flex;
@@ -133,7 +135,66 @@ p, li {
     text-align: center;
     list-style: none;
     font-size: 14.4pt;
-    line-height: 1.5;
+    /* line-height: 1.5; */
+    /* new declarations 20220702 */
+    width: 178px;
+    position: absolute;
+    height: 40px;
+    margin: 0;
+    
+}
+.coreInitial {
+    width: 0;
+    will-change: width;
+    transition: all 0.4s ease;
+}
+.coreInitial h3 {
+    /* line-height: 4; */
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.coreMask {
+    overflow: hidden;
+    /* margin: 0; */
+    margin: 8px 0;
+    padding: 0;
+    position: relative;
+    width: 178px;
+    height: 40px;
+}
+.initialLi {
+    /* line-height: 4; */
+    opacity: 0;
+    top: -30px;
+    transition: all 0.8s ease;
+}
+.coreFinal {
+    animation: coreOpen 2s linear 0.4s 1 forwards;
+    /* animation-fill-mode: forwards; */
+    width: 178px;
+    /* min-width: 178px; */
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+}
+.coreFinal h3 {
+    opacity: 1;
+    transition: all 0.8s ease 0.4s;
+}
+/*.coreFinal li {*/
+    /* line-height: 1.5; */
+    /*top: 0;
+    opacity: 1;
+    transition: all 0.8s ease;
+}*/
+.finalLi {
+    top: 0;
+    opacity: 1;
+    transition: opacity 0.8s ease, top 0.4s ease;
+}
+@keyframes coreOpen {
+    0% {};
+    50% {};
+    100% {};
 }
 .leftAside {
     text-align: left;
@@ -3225,7 +3286,7 @@ section {
 
     /* line-height: 2; */
     letter-spacing: 2px;
-    width: auto;
+    /* width: auto; */
 }
 #howContent {
     display: grid;
