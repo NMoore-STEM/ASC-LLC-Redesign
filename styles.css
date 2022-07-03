@@ -151,7 +151,9 @@ p, li {
 .coreInitial h3 {
     /* line-height: 4; */
     opacity: 0;
-    transition: all 0.4s ease;
+    /* letter-spacing: 0; */
+    letter-spacing: -10px;
+    transition: all 0.6s ease;
 }
 .coreMask {
     overflow: hidden;
@@ -166,7 +168,7 @@ p, li {
     /* line-height: 4; */
     opacity: 0;
     top: -30px;
-    transition: all 0.8s ease;
+    transition: opacity 0.8s ease-out, top 0.8s ease-out;
 }
 .coreFinal {
     animation: coreOpen 2s linear 0.4s 1 forwards;
@@ -178,7 +180,9 @@ p, li {
 }
 .coreFinal h3 {
     opacity: 1;
-    transition: all 0.8s ease 0.4s;
+    letter-spacing: 4px;
+    /* transition: all 0.8s ease 0.2s; */
+    transition: all 0.8s ease;
 }
 /*.coreFinal li {*/
     /* line-height: 1.5; */
@@ -189,7 +193,7 @@ p, li {
 .finalLi {
     top: 0;
     opacity: 1;
-    transition: opacity 0.8s ease, top 0.4s ease;
+    transition: opacity 0.8s ease-out, top 0.4s ease-out;
 }
 @keyframes coreOpen {
     0% {};
@@ -1777,6 +1781,24 @@ section {
     max-width: 388px;
     justify-content: center;
     /*margin: 30px;*/
+    padding: 20px 0;
+    width: 100%;
+    min-width: 280px;
+}
+#coreValues::before, #coreValues::after {
+    font-size: 100pt;
+}
+#coreValues::before {
+    margin-right: 20px;
+}
+#coreValues::after {
+    margin-left: 20px;
+}
+.coreInitial {
+    margin: 0;
+}
+.coreFinal {
+    /* width: 45%; */
 }
 /* #coreValues::before, #coreValues::after {
     display: flex;
@@ -1809,10 +1831,17 @@ ul#coreInternal {
 }
 #coreValues h3 {
     padding: 0;
-    margin-bottom: 30px;
-    font-size: 14pt;
+    /* margin-bottom: 30px; */
+    /* margin-bottom: 20px; */
+    margin: 15px 0;
+    /* font-size: 14pt; */
+    font-size: 12pt;
     /*color: rgb(43 7 98);*/
     color: rgb(38, 48, 73);
+}
+.coreMask {
+    margin: 0;
+    width: 100%;
 }
 #coreValues li {
     /* font-family: 'Noto Sans KR', sans-serif;
@@ -1820,7 +1849,8 @@ ul#coreInternal {
     list-style: none;
     text-align: center; */
 
-    line-height: 1.8;
+    /* line-height: 1.8; */
+    width: 100%;
     padding: 0;
 }
 .leftAside {
