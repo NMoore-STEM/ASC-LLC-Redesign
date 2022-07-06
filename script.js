@@ -219,6 +219,7 @@ $(function(){
     var msgF = $('#messageField');
     var msgL = $('#messageLabel');
     var msgC = $('.messageContainer');
+        hPot = $('#botCatfish');
     var emailStr = emailF.val();
     var nameStr = nameF.val();
     var msgStr = msgF.val();
@@ -281,9 +282,18 @@ $(function(){
         return false;
         };
     };
+    // BOT TRAP/HONEYPOT FUNCTION
+    function botBoot() {
+        if (hPot.val() =="") {
+            return true;
+        } else {
+            alert('ACCESS DENIED');
+            return false;
+        };
+    };
     $(".contactForm").on('submit',function(e){
         function validateAll() {
-            if (blankCheck() && regex.test(emailF.val())) {
+            if (blankCheck() && regex.test(emailF.val()) && botBoot()) {
                 alert('vA PASS!!!');
                 $('.subB').val("SENDING...");
     // ANIMATION BELOW
