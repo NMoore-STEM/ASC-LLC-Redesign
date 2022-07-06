@@ -84,6 +84,7 @@ $(document).ready(function(){
 });
 
 //jquery.inview attempt 01
+// BELOW NEEDS TO BE REFACTORED/CLEANED-UP
 $(document).ready(function(){
 
     var $bar01 = $('#title01');
@@ -126,7 +127,49 @@ $(document).ready(function(){
         }
     });
 });
-    
+
+//=============  "Why" section core values animation ====
+$(document).ready(function(){
+    var $outer = $('#coreValues');
+        $inner = $('#coreInternal');
+        // $coreLi = $('#coreValues li')
+        $coreLi = $('#coreInternal li')
+        $trigger = $('#coreTrigger')
+    $trigger.on('inview', function(event,isInView) {
+        if (isInView) {
+            setTimeout(function(){
+                $inner.addClass('coreFinal');
+            },500);
+            // $('#coreInternal li').each(function(i){
+            //     setTimeout(function(){
+            //         $coreLi.slice(0).eq(i).css({top:0})
+            //     }, i*50);
+            //     console.log('inner core');
+            // });
+            setTimeout(function(){
+                // $coreLi.css({top:0});
+                $coreLi.each(function(i){
+                    setTimeout(function(){
+                        // $coreLi.slice(0).eq(i).css({top:0,opacity:1})
+                        $coreLi.slice(0).eq(i).addClass('finalLi')
+                    }, i*250);
+                    console.log('inner core');
+                });
+                console.log('second core');
+            },1200)
+            console.log('first core');
+        } else {}
+    });
+});
+// Possibly add HTML structure (divs containing the li elements
+// so the text can slide down from overflow:hidden in the parent
+// div.  Will need to stagger using an array for all li elements
+// within the coreInternal element to drop each one down after
+// the other - smoothly) to obtain desired effect with core
+// values items. - 20220701
+// 20220702 - used the above suggestion and attained desired
+// effect - seems to work well at full resolution - need to 
+// test all other resolutions...
 
 //----------------------------------------------------------------//
 
