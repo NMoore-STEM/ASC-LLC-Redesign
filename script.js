@@ -219,7 +219,6 @@ $(function(){
     var msgF = $('#messageField');
     var msgL = $('#messageLabel');
     var msgC = $('.messageContainer');
-        hPot = $('#botCatfish');
     var emailStr = emailF.val();
     var nameStr = nameF.val();
     var msgStr = msgF.val();
@@ -274,21 +273,12 @@ $(function(){
     // Wrote a unique regular expression using regexr website to test parameters
     var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
     function blankCheck() {
-        if (emailF.val()!="" && nameF.val()!="" && msgF.val()!="") {
+        if (emailF.val()!="" && nameF.val()!="") {
             alert('blankCheck PASS!!!');
         return true;
         } else {
             alert('BLANK FAIL!!!');
         return false;
-        };
-    };
-    // BOT TRAP/HONEYPOT FUNCTION
-    function botBoot() {
-        if (hPot.val() =="") {
-            return true;
-        } else {
-            alert('ACCESS DENIED');
-            return false;
         };
     };
     $(".contactForm").on('submit',function(e){
