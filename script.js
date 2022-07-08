@@ -273,7 +273,7 @@ $(function(){
     // Wrote a unique regular expression using regexr website to test parameters
     var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
     function blankCheck() {
-        if (emailF.val()!="" && nameF.val()!="" && msgF.val()!="") {
+        if (emailF.val()!="" && nameF.val()!="") {
             alert('blankCheck PASS!!!');
         return true;
         } else {
@@ -283,7 +283,7 @@ $(function(){
     };
     $(".contactForm").on('submit',function(e){
         function validateAll() {
-            if (blankCheck() && regex.test(emailF.val())) {
+            if (blankCheck() && regex.test(emailF.val()) && botBoot()) {
                 alert('vA PASS!!!');
                 $('.subB').val("SENDING...");
     // ANIMATION BELOW
