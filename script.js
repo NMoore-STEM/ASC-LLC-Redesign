@@ -220,6 +220,7 @@ $(function(){
     var msgL = $('#messageLabel');
     var msgC = $('.messageContainer');
     var emailStr = emailF.val();
+        hPot = $('#botCatfish');
     var nameStr = nameF.val();
     var msgStr = msgF.val();
     
@@ -273,12 +274,21 @@ $(function(){
     // Wrote a unique regular expression using regexr website to test parameters
     var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
     function blankCheck() {
-        if (emailF.val()!="" && nameF.val()!="") {
+        if (emailF.val()!="" && nameF.val()!="" && msgF.val()!="") {
             alert('blankCheck PASS!!!');
         return true;
         } else {
             alert('BLANK FAIL!!!');
         return false;
+        };
+    };
+    // BOT TRAP/HONEYPOT FUNCTION
+    function botBoot() {
+        if (hPot.val() =="") {
+            return true;
+        } else {
+            alert('ACCESS DENIED');
+            return false;
         };
     };
     $(".contactForm").on('submit',function(e){
@@ -531,46 +541,46 @@ $(function(){
 //                --Cleaned up--                            //
 //////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
-// $(function(){
-//     var mScr = $('.modal_screen');
-//         sReset = $('.g_modal')
-//     $('.more_info').on('click touch', function(event){
-//         event.preventDefault();
-//         var x, y;
-//         x = event.pageX;
-//         y = event.pageY;
-//         console.log(x,y);
-//         mScr.addClass('m_screen_open m_screen_fade');
-//         mScr.css({ 'display':'block','visibility':'visible'} );
-//         setTimeout(function(){
-//             $('.g_modal').addClass('g_modal_open');
-//         },100);
-//         setTimeout(function(){
-//             $('.close_modal').addClass("show_close");
-//         },400);
-//         $('body, html').css('overflow-y', 'hidden');
-//     });
-//     $('.close_modal').on('click touch', function(event){
-//         event.preventDefault();
-//         sReset.scrollTop(0);
-//         $('body, html').css('overflow-y', 'auto');
-//         $(this).removeClass('show_close');
-//         sReset.removeClass('g_modal_open');
-//         sReset.one('transitionend', function(e){
-//             mScr.removeClass('m_screen_fade').one('transitionend', function(e){
-//                 //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
-//                 console.log('!!! innermost');
-//             }).off(e);
-//             function hideModal() {
-//                 mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
-//                 console.log('new function');
-//             }
-//             setTimeout(hideModal,175);
-//             console.log('mid level');
-//         })
-//         console.log('top level');
-//     })
-// });
+$(function(){
+    var mScr = $('.modal_screen');
+        sReset = $('.g_modal')
+    $('.more_info').on('click touch', function(event){
+        event.preventDefault();
+        var x, y;
+        x = event.pageX;
+        y = event.pageY;
+        console.log(x,y);
+        mScr.addClass('m_screen_open m_screen_fade');
+        mScr.css({ 'display':'block','visibility':'visible'} );
+        setTimeout(function(){
+            $('.g_modal').addClass('g_modal_open');
+        },100);
+        setTimeout(function(){
+            $('.close_modal').addClass("show_close");
+        },400);
+        $('body, html').css('overflow-y', 'hidden');
+    });
+    $('.close_modal').on('click touch', function(event){
+        event.preventDefault();
+        sReset.scrollTop(0);
+        $('body, html').css('overflow-y', 'auto');
+        $(this).removeClass('show_close');
+        sReset.removeClass('g_modal_open');
+        sReset.one('transitionend', function(e){
+            mScr.removeClass('m_screen_fade').one('transitionend', function(e){
+                //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
+                console.log('!!! innermost');
+            }).off(e);
+            function hideModal() {
+                mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
+                console.log('new function');
+            }
+            setTimeout(hideModal,175);
+            console.log('mid level');
+        })
+        console.log('top level');
+    })
+});
 ////////////------- Alternative Approach ----------/////////////
 //      This approach will be to create an array of all       //
 //      graphic design portfolio item "more details" buttons  //
@@ -588,52 +598,66 @@ $(function(){
 //      mScr = $('.modal_screen');
 //      sReset = $('.g_modal');
 //      clBtn = $('.close_modal')
-$(function(){
-    $('.more_info').each(function(){
-    var mScr = $(this).nextAll('.modal_screen');
-        sReset = $(this).nextAll('.g_modal');
-        clBtn = $(this).nextAll('.close_modal')
-        $(this).on('click touch', () => {
-            var mScr = $(this).nextAll('.modal_screen');
-                sReset = $(this).nextAll('.g_modal');
-                clBtn = $(this).nextAll('.close_modal')
+
+
+// $(function(){
+//     $('.more_info').each(function(){
+//     var mScr = $(this).nextAll('.modal_screen');
+//         sReset = $(this).nextAll('.g_modal');
+//         clBtn = $(this).nextAll('.close_modal')
+//         $(this).on('click touch', () => {
+//             var mScr = $(this).nextAll('.modal_screen');
+//                 sReset = $(this).nextAll('.g_modal');
+//                 clBtn = $(this).nextAll('.close_modal')
+
+
                 // var mScr = $('.more_info .modal_screen');
                 //     sReset = $('.more_info .g_modal');
                 //     clBtn = $('.close_modal')
                 //event.preventDefault();
-            console.log('open button works');
-            $(this).nextAll('.modal_screen').addClass('m_screen_open m_screen_fade');
-            mScr.css({ 'display': 'block', 'visibility': 'visible' });
-                setTimeout(function () {
-                    sReset.addClass('g_modal_open');
-                }, 100);
-                setTimeout(function () {
-                    clBtn.addClass("show_close");
-                }, 400);
-                $('body, html').css('overflow-y', 'hidden');
-        });
-    });
-    $('.close_modal').on('click touch', function(){
+
+
+    //         console.log('open button works');
+    //         $(this).nextAll('.modal_screen').addClass('m_screen_open m_screen_fade');
+    //         mScr.css({ 'display': 'block', 'visibility': 'visible' });
+    //             setTimeout(function () {
+    //                 sReset.addClass('g_modal_open');
+    //             }, 100);
+    //             setTimeout(function () {
+    //                 clBtn.addClass("show_close");
+    //             }, 400);
+    //             $('body, html').css('overflow-y', 'hidden');
+    //     });
+    // });
+    // $('.close_modal').on('click touch', function(){
+
+
         //event.preventDefault();
-        $('.g_modal').scrollTop(0);
-        $('body, html').css('overflow-y', 'auto');
-        $('.close_modal').removeClass('show_close');
-        $('.g_modal').removeClass('g_modal_open');
-        $('.g_modal').one('transitionend', function(){
-            $('.modal_screen').removeClass('m_screen_fade').one('transitionend', function(){
+
+
+        // $('.g_modal').scrollTop(0);
+        // $('body, html').css('overflow-y', 'auto');
+        // $('.close_modal').removeClass('show_close');
+        // $('.g_modal').removeClass('g_modal_open');
+        // $('.g_modal').one('transitionend', function(){
+        //     $('.modal_screen').removeClass('m_screen_fade').one('transitionend', function(){
+
+
                 //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
-                console.log('!!! innermost');
-            });
-            function hideModal() {
-                $('.modal_screen').css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open');
-                console.log('new function');
-            }
-            setTimeout(hideModal,175);
-            console.log('mid level');
-        });
-        console.log('top level');
-    });
-})
+
+
+//                 console.log('!!! innermost');
+//             });
+//             function hideModal() {
+//                 $('.modal_screen').css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open');
+//                 console.log('new function');
+//             }
+//             setTimeout(hideModal,175);
+//             console.log('mid level');
+//         });
+//         console.log('top level');
+//     });
+// })
 // var more = $('.more_info');
 //     mScr = $('.modal_screen');
 //     sReset = $('.g_modal')
