@@ -88,9 +88,11 @@ $(document).ready(function(){
 $(document).ready(function(){
 
     var $bar01 = $('#title01');
-    var $bar02 = $('#title02');
-    var $bar03 = $('#title03');
-    var $bar04 = $('#title04');
+        $bar02 = $('#title02');
+        $bar03 = $('#title03');
+        $bar04 = $('#title04');
+        $this = $(this);
+
 
     // might be able to remove "event" from all function parameters below
     // also, consider changing functs to arrow functions (seems to be more fluid and responsive)
@@ -128,6 +130,41 @@ $(document).ready(function(){
     });
 });
 
+//// ----> Above refactored/ DRYed
+//  If all title bars have the class "titleBar"...
+//$('.titleBar).forEach('inview',function(isInView){
+//    titleBarIn();
+//    return this;
+//});
+//      OR (will need to loop through elements to get i)
+//$('#title0'+i).forEach(isInView, function(isInView){
+//    for (let i=1; i<4; i++) {
+//        const element = array[i];        
+//    }
+//  titleBarIn();
+//  return this;
+//})
+//function titleBarIn(event,isInView){
+//    if (isInView) {
+//        $this.addClass('animation_final')
+//      } else {};
+//}
+//
+//    Another attempt...
+//
+//  for (let i=1; i<4; i++) {
+//    $('#title0'+i).forEach(isInView, function(isInView){
+//      titleBarIn();
+//     //not sure if below is needed...
+//      return this;
+//    });
+//  }
+//function titleBarIn(event,isInView){
+//    if (isInView) {
+//        $this.addClass('animation_final')
+//      } else {};
+//}
+
 //=============  "Why" section core values animation ====
 $(document).ready(function(){
     var $outer = $('#coreValues');
@@ -135,7 +172,8 @@ $(document).ready(function(){
         // $coreLi = $('#coreValues li')
         $coreLi = $('#coreInternal li')
         $trigger = $('#coreTrigger')
-    $trigger.on('inview', function(event,isInView) {
+        // changed below to ".one()" instead of ".on()"
+    $trigger.one('inview', function(event,isInView) {
         if (isInView) {
             setTimeout(function(){
                 $inner.addClass('coreFinal');
@@ -160,6 +198,7 @@ $(document).ready(function(){
             console.log('first core');
         } else {}
     });
+    // $(document).ready(function(){});
 });
 // Possibly add HTML structure (divs containing the li elements
 // so the text can slide down from overflow:hidden in the parent
@@ -204,6 +243,45 @@ $(document).ready(function() {
     })
 
 });
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+///////////////  New Approach  /////////////////////
+////////////////////////////////////////////////////
+
+// Service and details ids and classes
+// should pick each element dependent upon which
+// one is clicked
+// showDetails(){
+//      $('#details0'+i).toggleClass('show_details');
+//}
+// for (let i=1;i<=5;i++) {
+//      $('#details0'+i).showDetails()
+// }
+// for (let i=1;i<=5;i++) {
+//      $('.service_group0'+i)
+// }
+//             Needs more work
+//   Might need to remove numbers at the end of each 
+//   .service_group so it can iterate through each similar
+//   class on click?
+
+//             Yet another approach
+//   const serviceG = document.querySelectorAll('.service_grouP');
+//   serviceG.forEach(element => {
+//      Element.addEventListener('click', (e)=>{
+//          $('#details0'+i).showDetails()
+//      })
+//   })
+//                  OR...
+//
+//   const serviceG = document.querySelectorAll('.service_grouP');
+//   serviceG.forEach(element => {
+//      Element.addEventListener('click', (e)=>{
+//          for (let i=1;i<=5;i++) {
+//              $('#details0'+i).showDetails()
+//          }
+//      })
+//   })
 
 // WORKING CONTACT FORM VERIFICATION AND SUBMISSION (fr contact_test.js)
 // can clean up "var" before each variable as it only needs to be declared once if all are grouped below
