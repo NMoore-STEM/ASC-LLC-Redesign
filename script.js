@@ -83,52 +83,80 @@ $(document).ready(function(){
     });
 });
 
+/////////////////////////////////////////////////////
+//           ASC Title Bar Scroll Animation        //
+//            (refactored/DRYed)                   //
+//           from 31 lines to 7!                   //
+/////////////////////////////////////////////////////
+$(function(){
+    for (let i=0; i<5; i++) {
+        $('#title0'+i).one('inview', function(){
+            //var $this = $(this);
+            //event.preventDefault();
+            //console.log('title_bar_0'+i);
+            //console.log($this);
+            $(this).addClass('animation_final')
+        });
+    }
+});
+
+/////////////////////////////////////////////////////
+//0000000000000   Title Bar inview animations 00000//
+/////////////////////////////////////////////////////
+//        Commented out 20220901                   //
+//     Reinstate if refactored code does not work  //
+
 //jquery.inview attempt 01
 // BELOW NEEDS TO BE REFACTORED/CLEANED-UP
-$(document).ready(function(){
+// $(document).ready(function(){
 
-    var $bar01 = $('#title01');
-        $bar02 = $('#title02');
-        $bar03 = $('#title03');
-        $bar04 = $('#title04');
-        $this = $(this);
+//     var $bar01 = $('#title01');
+//         $bar02 = $('#title02');
+//         $bar03 = $('#title03');
+//         $bar04 = $('#title04');
+        // added var below to handle new functions
+//        $this = $(this);
 
 
     // might be able to remove "event" from all function parameters below
     // also, consider changing functs to arrow functions (seems to be more fluid and responsive)
-    $bar01.on('inview', function(event, isInView) {
-        if (isInView) {
+//    $bar01.on('inview', function(event, isInView) {
+//        if (isInView) {
           // element is now visible in the viewport
-          $bar01.addClass('animation_final')
-        } else {
+//          $bar01.addClass('animation_final')
+//        } else {
           // element has gone out of viewport
-        }
-    });
-    $bar02.on('inview', (event, isInView) => {
-        if (isInView) {
+//        }
+//    });
+//    $bar02.on('inview', (event, isInView) => {
+//        if (isInView) {
           // element is now visible in the viewport
-          $bar02.addClass('animation_final')
-        } else {
+//          $bar02.addClass('animation_final')
+//        } else {
           // element has gone out of viewport
-        }
-    });
-    $bar03.on('inview', (event, isInView) => {
-            if (isInView) {
+//        }
+//    });
+//    $bar03.on('inview', (event, isInView) => {
+//            if (isInView) {
                 // element is now visible in the viewport
-                $bar03.addClass('animation_final');
-            } else {
+//                $bar03.addClass('animation_final');
+//            } else {
                 // element has gone out of viewport
-            }
-        });
-    $bar04.on('inview', function(event, isInView) {
-        if (isInView) {
+//            }
+//        });
+//    $bar04.on('inview', function(event, isInView) {
+//        if (isInView) {
           // element is now visible in the viewport
-          $bar04.addClass('animation_final')
-        } else {
+//          $bar04.addClass('animation_final')
+//        } else {
           // element has gone out of viewport
-        }
-    });
-});
+//        }
+//    });
+//});
+
+////////////////////////////////////////////////////
+//000000000000   End original title bar code 00000//
+////////////////////////////////////////////////////
 
 //// ----> Above refactored/ DRYed
 //  If all title bars have the class "titleBar"...
@@ -151,12 +179,27 @@ $(document).ready(function(){
 //}
 //
 //    Another attempt...
+//      .forEach() might be replaced with .each()...
 //
-//  for (let i=1; i<4; i++) {
-//    $('#title0'+i).forEach(isInView, function(isInView){
-//      titleBarIn();
-//     //not sure if below is needed...
-//      return this;
+// $(document).ready(function(){
+//      var $bar01 = $('#title01');
+//          $bar02 = $('#title02');
+//          $bar03 = $('#title03');
+//          $bar04 = $('#title04');
+        // added var below to handle new functions
+//         $this = $(this);
+//  for (let i=0; i<5; i++) {
+    //console.log(i);
+//    $('#title0'+i).one('inview', function(event){
+//        var $this = $(this);
+//        event.preventDefault();
+//        console.log('title_bar_0'+i);
+//        console.log($this);
+//        titleBarIn('#title0'+i);
+//        $this.addClass('animation_final')
+//        return this
+     //not sure if below is needed...
+//        return this;
 //    });
 //  }
 //function titleBarIn(event,isInView){
@@ -164,15 +207,26 @@ $(document).ready(function(){
 //        $this.addClass('animation_final')
 //      } else {};
 //}
+//
+//     OR for titleBarIn...
+//    function titleBarIn($this){
+//        if ('inview') {
+//            $this.addClass('animation_final')
+//        } else {};
+//    }
+//});
 
 //=============  "Why" section core values animation ====
-$(document).ready(function(){
+$(function(){
     var $outer = $('#coreValues');
         $inner = $('#coreInternal');
         // $coreLi = $('#coreValues li')
         $coreLi = $('#coreInternal li')
         $trigger = $('#coreTrigger')
-        // changed below to ".one()" instead of ".on()"
+// changed below to ".one()" instead of ".on()"
+//  this will prevent the event from happening every
+// time the element is scrolled into view - possible
+// memory saving?
     $trigger.one('inview', function(event,isInView) {
         if (isInView) {
             setTimeout(function(){
@@ -282,6 +336,17 @@ $(document).ready(function() {
 //          }
 //      })
 //   })
+//
+//         ANOTHER ATTEMPT 20220901
+//
+//$(function(){
+//    for(let j=0;j<6;j++){
+//        $('.service_group0'+j).each('click',function(){
+//            console.log(j);
+//            $('#details0'+j).toggleClass('show_details')
+//        });
+//    }
+//})
 
 // WORKING CONTACT FORM VERIFICATION AND SUBMISSION (fr contact_test.js)
 // can clean up "var" before each variable as it only needs to be declared once if all are grouped below
