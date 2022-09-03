@@ -86,7 +86,7 @@ $(document).ready(function(){
 /////////////////////////////////////////////////////
 //           ASC Title Bar Scroll Animation        //
 //            (refactored/DRYed)                   //
-//           from 31 lines to 7!                   //
+//           from 31 lines to 7 !                  //
 /////////////////////////////////////////////////////
 $(function(){
     for (let i=0; i<5; i++) {
@@ -267,38 +267,43 @@ $(function(){
 //----------------------------------------------------------------//
 
 //=============  Drop-downs for Services section when vw is less than 1000px ==//
+////////////////////////////////////////////////////////////
+//0000000000          Original code        000000000000000//
+////////////////////////////////////////////////////////////
+// $(document).ready(function() {
+//     var $details01 = $('#details01');
+//     var $details02 = $('#details02');
+//     var $details03 = $('#details03');
+//     var $details04 = $('#details04');
+//     var $details05 = $('#details05');
+//     var $service01 = $('.service_group01');
+//     var $service02 = $('.service_group02');
+//     var $service03 = $('.service_group03');
+//     var $service04 = $('.service_group04');
+//     var $service05 = $('.service_group05');
 
-$(document).ready(function() {
-    var $details01 = $('#details01');
-    var $details02 = $('#details02');
-    var $details03 = $('#details03');
-    var $details04 = $('#details04');
-    var $details05 = $('#details05');
-    var $service01 = $('.service_group01');
-    var $service02 = $('.service_group02');
-    var $service03 = $('.service_group03');
-    var $service04 = $('.service_group04');
-    var $service05 = $('.service_group05');
+//     $service01.on('click', function(){
+//         $details01.toggleClass('show_details');
+//     })
+//     $service02.on('click', function(){
+//         $details02.toggleClass('show_details');
+//     })
+//     $service03.on('click', function(){
+//         $details03.toggleClass('show_details');
+//     })
+//     $service04.on('click', function(){
+//         $details04.toggleClass('show_details');
+//     })
+//     $service05.on('click', function(){
+//         $details05.toggleClass('show_details');
+//     })
 
-    $service01.on('click', function(){
-        $details01.toggleClass('show_details');
-    })
-    $service02.on('click', function(){
-        $details02.toggleClass('show_details');
-    })
-    $service03.on('click', function(){
-        $details03.toggleClass('show_details');
-    })
-    $service04.on('click', function(){
-        $details04.toggleClass('show_details');
-    })
-    $service05.on('click', function(){
-        $details05.toggleClass('show_details');
-    })
-
-});
+// });
 ////////////////////////////////////////////////////
+//000000000      End Original Code     00000000000//
 ////////////////////////////////////////////////////
+
+
 ///////////////  New Approach  /////////////////////
 ////////////////////////////////////////////////////
 
@@ -338,15 +343,19 @@ $(document).ready(function() {
 //   })
 //
 //         ANOTHER ATTEMPT 20220901
-//
-//$(function(){
-//    for(let j=0;j<6;j++){
-//        $('.service_group0'+j).each('click',function(){
-//            console.log(j);
-//            $('#details0'+j).toggleClass('show_details')
-//        });
-//    }
-//})
+//////////////////////////////////////////////////
+//000000     Working refactored code   00000000//
+//000000     from 27 lines to 7 !       00000000//
+//////////////////////////////////////////////////
+$(function(){
+    //console.log('this thing on?!')
+    for(let j=0;j<6;j++){
+        $('.service_group0'+j).on('click',function(){
+            //console.log(j);
+            $('#details0'+j).toggleClass('show_details')
+        });
+    }
+})
 
 // WORKING CONTACT FORM VERIFICATION AND SUBMISSION (fr contact_test.js)
 // can clean up "var" before each variable as it only needs to be declared once if all are grouped below
@@ -688,40 +697,40 @@ $(function(){
     var mScr = $('.modal_screen');
         sReset = $('.g_modal')
     $('.more_info').on('click touch', function(event){
-        event.preventDefault();
-        var x, y;
-        x = event.pageX;
-        y = event.pageY;
-        console.log(x,y);
+            event.preventDefault();
+            var x, y;
+            x = event.pageX;
+            y = event.pageY;
+            console.log(x,y);
         mScr.addClass('m_screen_open m_screen_fade');
         mScr.css({ 'display':'block','visibility':'visible'} );
-        setTimeout(function(){
-            $('.g_modal').addClass('g_modal_open');
-        },100);
-        setTimeout(function(){
-            $('.close_modal').addClass("show_close");
-        },400);
-        $('body, html').css('overflow-y', 'hidden');
+            setTimeout(function(){
+                $('.g_modal').addClass('g_modal_open');
+            },100);
+            setTimeout(function(){
+                $('.close_modal').addClass("show_close");
+            },400);
+            $('body, html').css('overflow-y', 'hidden');
     });
-    $('.close_modal').on('click touch', function(event){
-        event.preventDefault();
-        sReset.scrollTop(0);
-        $('body, html').css('overflow-y', 'auto');
-        $(this).removeClass('show_close');
-        sReset.removeClass('g_modal_open');
-        sReset.one('transitionend', function(e){
-            mScr.removeClass('m_screen_fade').one('transitionend', function(e){
-                //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
-                console.log('!!! innermost');
-            }).off(e);
-            function hideModal() {
-                mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
-                console.log('new function');
-            }
-            setTimeout(hideModal,175);
-            console.log('mid level');
-        })
-        console.log('top level');
+        $('.close_modal').on('click touch', function(event){
+            event.preventDefault();
+            sReset.scrollTop(0);
+            $('body, html').css('overflow-y', 'auto');
+            $(this).removeClass('show_close');
+            sReset.removeClass('g_modal_open');
+            sReset.one('transitionend', function(e){
+                mScr.removeClass('m_screen_fade').one('transitionend', function(e){
+                    //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
+                    console.log('!!! innermost');
+                }).off(e);
+                function hideModal() {
+                    mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
+                    console.log('new function');
+                }
+                setTimeout(hideModal,175);
+                console.log('mid level');
+            })
+            console.log('top level');
     })
 });
 ////////////------- Alternative Approach ----------/////////////
