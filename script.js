@@ -695,36 +695,41 @@ $(function(){
 //////////////////////////////////////////////////////////////
 $(function(){
     var mScr = $('.modal_screen');
-        sReset = $('.g_modal')
+        sRst = $('.g_modal');
+        xModal = $('.close_modal')
     $('.more_info').on('click touch', function(event){
             event.preventDefault();
+            // Below to establish coordinates for click location
             var x, y;
             x = event.pageX;
             y = event.pageY;
             console.log(x,y);
-        mScr.addClass('m_screen_open m_screen_fade');
-        mScr.css({ 'display':'block','visibility':'visible'} );
+            //end coordinates code
+            mScr.addClass('m_screen_open m_screen_fade');
+            mScr.css({ 'display':'block','visibility':'visible'} );
             setTimeout(function(){
-                $('.g_modal').addClass('g_modal_open');
+                sRst.addClass('g_modal_open');
             },100);
             setTimeout(function(){
-                $('.close_modal').addClass("show_close");
+                xModal.addClass("show_close");
             },400);
             $('body, html').css('overflow-y', 'hidden');
     });
-        $('.close_modal').on('click touch', function(event){
+        xModal.on('click touch', function(event){
             event.preventDefault();
-            sReset.scrollTop(0);
+            sRst.scrollTop(0);
             $('body, html').css('overflow-y', 'auto');
             $(this).removeClass('show_close');
-            sReset.removeClass('g_modal_open');
-            sReset.one('transitionend', function(e){
-                mScr.removeClass('m_screen_fade').one('transitionend', function(e){
+            sRst.removeClass('g_modal_open');
+            sRst.one('transitionend', function(e){
+                mScr.removeClass('m_screen_fade').one('transitionend', function(){
                     //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
                     console.log('!!! innermost');
                 }).off(e);
                 function hideModal() {
                     mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
+                    // Added below to hide item-specific content after open
+                    $('.modal_content_00, .modal_content_01').hide();
                     console.log('new function');
                 }
                 setTimeout(hideModal,175);
@@ -733,6 +738,54 @@ $(function(){
             console.log('top level');
     })
 });
+
+// Array index experiment to load associated content
+$(function(){
+    var mBttn = $('.more_info');
+        cBttn = $('.mobile_info');
+        //mCont = $('.modal_content_0'+l)
+    for(let l=0;l<mBttn.length;l++){
+        // var l = $('.more_info').index(this);
+        //     m = l+1;
+        //var mBttn = $('.more_info');
+        mBttn.on('click',function(){
+            var l = $('.more_info').index(this);
+                //m = l+1;
+            //console.log($(this),i);
+            //console.log(i);
+            //console.log( mBttn.index(this) );
+            //console.log('l:'+l+'then m:'+m);
+            console.log('l:'+l);
+            $('.modal_content_0'+l).show();
+
+            // Will need to change if/else to
+            // if/ and if/else if more items are
+            // added to graphic design section w
+            // a corresponding modal
+            // if(l == 0){
+            //     $('.modal_content_0'+l).show();
+            //     console.log('IF')
+            // }else{
+            //     $('.modal_content_0'+l).show();
+            //     console.log('ELSE')
+                // Almost there!!! need to have close
+                // button click hide the same element
+                // that was shown, each time...
+            //};
+        });
+        function showModalIn() {
+            var l = $('.more_info').index(this);
+            console.log('l:'+l);
+            $('.modal_content_0'+l).show();
+        }
+    };
+});
+// $(function(){
+//     $('.more_info').each('click', function(i){
+//         $('.modal_content_0'+i).eq(i).show();
+//         console.log($(this));
+//     });
+// });
 ////////////------- Alternative Approach ----------/////////////
 //      This approach will be to create an array of all       //
 //      graphic design portfolio item "more details" buttons  //
@@ -746,6 +799,20 @@ $(function(){
 //      for ancestors or only elements that are parents or    //
 //      greater from the position of the selected element     //
 ////////////////////////////////////////////////////////////////
+//     20220903 - Notes on DRYing up modal script:            //
+//        Separate (in HTML) the modal general template from  //
+//        item-specific, unique content.  Logic could follow  //
+//        "if i == 0 then add first item content" "else (since//
+//        there are only two items that will have modals for  //
+//        now - if more is added then will need if, and if,   //
+//        else) show second item content"                     //
+//        classes .modal_top and .modal_flex will have button //
+//        item-specific content - can follow in HTML directly //
+//        after corresponding section.  Modal template can    //
+//        possibly be placed at broader scope, possibly after //
+//        or before the entire graphic design portfolio items //
+////////////////////////////////////////////////////////////////
+
 //  var more = $('.more_info');
 //      mScr = $('.modal_screen');
 //      sReset = $('.g_modal');
