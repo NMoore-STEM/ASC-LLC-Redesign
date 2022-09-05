@@ -749,7 +749,7 @@ $(function(){
         //     m = l+1;
         //var mBttn = $('.more_info');
         mBttn.on('click',function(){
-            var l = $('.more_info').index(this);
+            var l = mBttn.index(this);
                 //m = l+1;
             //console.log($(this),i);
             //console.log(i);
@@ -773,12 +773,19 @@ $(function(){
                 // that was shown, each time...
             //};
         });
-        function showModalIn() {
-            var l = $('.more_info').index(this);
-            console.log('l:'+l);
-            $('.modal_content_0'+l).show();
-        }
+        // function showModalIn() {
+        //     var l = $('.more_info').index(this);
+        //     console.log('l:'+l);
+        //     $('.modal_content_0'+l).show();
+        // }
     };
+    for(let m=0;m<cBttn.length;m++){
+        cBttn.on('click',function(){
+            var m = cBttn.index(this);
+            console.log('m:'+m);
+            $('.modal_content_0'+m).show();
+        });
+    }
 });
 // $(function(){
 //     $('.more_info').each('click', function(i){
@@ -937,6 +944,7 @@ $(function(){
         $('.modal_screen').removeClass('m_s_o_mobile').one('transitionend', function(e){
             // $(this).css({'display':'none'});
             $('.g_modal').scrollTop(0);
+            $('.modal_content_00, .modal_content_01').hide();
         })
     })
 })
