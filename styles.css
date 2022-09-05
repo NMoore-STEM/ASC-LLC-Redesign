@@ -2709,7 +2709,7 @@ unique urls for each class */
     margin: 0;
     background-color:rgb(43, 57, 96);
     transform: translate(100vw);
-    transition: transform ease 1.2s;
+    transition: transform ease 0.5s;
     z-index: 199;
     left: 0;
     top: 100px;
@@ -2717,7 +2717,7 @@ unique urls for each class */
 .m_s_o_mobile {
     transform: translate(0vw);
     /* will-change: transform; */
-    transition: transform ease 1.2s;
+    transition: transform ease 0.7s;
 }
 .m_container {
     position: relative;
