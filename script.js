@@ -83,59 +83,151 @@ $(document).ready(function(){
     });
 });
 
+/////////////////////////////////////////////////////
+//           ASC Title Bar Scroll Animation        //
+//            (refactored/DRYed)                   //
+//           from 31 lines to 7 !                  //
+/////////////////////////////////////////////////////
+$(function(){
+    for (let i=0; i<5; i++) {
+        $('#title0'+i).one('inview', function(){
+            //var $this = $(this);
+            //event.preventDefault();
+            //console.log('title_bar_0'+i);
+            //console.log($this);
+            $(this).addClass('animation_final')
+        });
+    }
+});
+
+/////////////////////////////////////////////////////
+//0000000000000   Title Bar inview animations 00000//
+/////////////////////////////////////////////////////
+//        Commented out 20220901                   //
+//     Reinstate if refactored code does not work  //
+
 //jquery.inview attempt 01
 // BELOW NEEDS TO BE REFACTORED/CLEANED-UP
-$(document).ready(function(){
+// $(document).ready(function(){
 
-    var $bar01 = $('#title01');
-    var $bar02 = $('#title02');
-    var $bar03 = $('#title03');
-    var $bar04 = $('#title04');
+//     var $bar01 = $('#title01');
+//         $bar02 = $('#title02');
+//         $bar03 = $('#title03');
+//         $bar04 = $('#title04');
+        // added var below to handle new functions
+//        $this = $(this);
+
 
     // might be able to remove "event" from all function parameters below
     // also, consider changing functs to arrow functions (seems to be more fluid and responsive)
-    $bar01.on('inview', function(event, isInView) {
-        if (isInView) {
+//    $bar01.on('inview', function(event, isInView) {
+//        if (isInView) {
           // element is now visible in the viewport
-          $bar01.addClass('animation_final')
-        } else {
+//          $bar01.addClass('animation_final')
+//        } else {
           // element has gone out of viewport
-        }
-    });
-    $bar02.on('inview', (event, isInView) => {
-        if (isInView) {
+//        }
+//    });
+//    $bar02.on('inview', (event, isInView) => {
+//        if (isInView) {
           // element is now visible in the viewport
-          $bar02.addClass('animation_final')
-        } else {
+//          $bar02.addClass('animation_final')
+//        } else {
           // element has gone out of viewport
-        }
-    });
-    $bar03.on('inview', (event, isInView) => {
-            if (isInView) {
+//        }
+//    });
+//    $bar03.on('inview', (event, isInView) => {
+//            if (isInView) {
                 // element is now visible in the viewport
-                $bar03.addClass('animation_final');
-            } else {
+//                $bar03.addClass('animation_final');
+//            } else {
                 // element has gone out of viewport
-            }
-        });
-    $bar04.on('inview', function(event, isInView) {
-        if (isInView) {
+//            }
+//        });
+//    $bar04.on('inview', function(event, isInView) {
+//        if (isInView) {
           // element is now visible in the viewport
-          $bar04.addClass('animation_final')
-        } else {
+//          $bar04.addClass('animation_final')
+//        } else {
           // element has gone out of viewport
-        }
-    });
-});
+//        }
+//    });
+//});
+
+////////////////////////////////////////////////////
+//000000000000   End original title bar code 00000//
+////////////////////////////////////////////////////
+
+//// ----> Above refactored/ DRYed
+//  If all title bars have the class "titleBar"...
+//$('.titleBar).forEach('inview',function(isInView){
+//    titleBarIn();
+//    return this;
+//});
+//      OR (will need to loop through elements to get i)
+//$('#title0'+i).forEach(isInView, function(isInView){
+//    for (let i=1; i<4; i++) {
+//        const element = array[i];        
+//    }
+//  titleBarIn();
+//  return this;
+//})
+//function titleBarIn(event,isInView){
+//    if (isInView) {
+//        $this.addClass('animation_final')
+//      } else {};
+//}
+//
+//    Another attempt...
+//      .forEach() might be replaced with .each()...
+//
+// $(document).ready(function(){
+//      var $bar01 = $('#title01');
+//          $bar02 = $('#title02');
+//          $bar03 = $('#title03');
+//          $bar04 = $('#title04');
+        // added var below to handle new functions
+//         $this = $(this);
+//  for (let i=0; i<5; i++) {
+    //console.log(i);
+//    $('#title0'+i).one('inview', function(event){
+//        var $this = $(this);
+//        event.preventDefault();
+//        console.log('title_bar_0'+i);
+//        console.log($this);
+//        titleBarIn('#title0'+i);
+//        $this.addClass('animation_final')
+//        return this
+     //not sure if below is needed...
+//        return this;
+//    });
+//  }
+//function titleBarIn(event,isInView){
+//    if (isInView) {
+//        $this.addClass('animation_final')
+//      } else {};
+//}
+//
+//     OR for titleBarIn...
+//    function titleBarIn($this){
+//        if ('inview') {
+//            $this.addClass('animation_final')
+//        } else {};
+//    }
+//});
 
 //=============  "Why" section core values animation ====
-$(document).ready(function(){
+$(function(){
     var $outer = $('#coreValues');
         $inner = $('#coreInternal');
         // $coreLi = $('#coreValues li')
         $coreLi = $('#coreInternal li')
         $trigger = $('#coreTrigger')
-    $trigger.on('inview', function(event,isInView) {
+// changed below to ".one()" instead of ".on()"
+//  this will prevent the event from happening every
+// time the element is scrolled into view - possible
+// memory saving?
+    $trigger.one('inview', function(event,isInView) {
         if (isInView) {
             setTimeout(function(){
                 $inner.addClass('coreFinal');
@@ -160,6 +252,7 @@ $(document).ready(function(){
             console.log('first core');
         } else {}
     });
+    // $(document).ready(function(){});
 });
 // Possibly add HTML structure (divs containing the li elements
 // so the text can slide down from overflow:hidden in the parent
@@ -174,36 +267,95 @@ $(document).ready(function(){
 //----------------------------------------------------------------//
 
 //=============  Drop-downs for Services section when vw is less than 1000px ==//
+////////////////////////////////////////////////////////////
+//0000000000          Original code        000000000000000//
+////////////////////////////////////////////////////////////
+// $(document).ready(function() {
+//     var $details01 = $('#details01');
+//     var $details02 = $('#details02');
+//     var $details03 = $('#details03');
+//     var $details04 = $('#details04');
+//     var $details05 = $('#details05');
+//     var $service01 = $('.service_group01');
+//     var $service02 = $('.service_group02');
+//     var $service03 = $('.service_group03');
+//     var $service04 = $('.service_group04');
+//     var $service05 = $('.service_group05');
 
-$(document).ready(function() {
-    var $details01 = $('#details01');
-    var $details02 = $('#details02');
-    var $details03 = $('#details03');
-    var $details04 = $('#details04');
-    var $details05 = $('#details05');
-    var $service01 = $('.service_group01');
-    var $service02 = $('.service_group02');
-    var $service03 = $('.service_group03');
-    var $service04 = $('.service_group04');
-    var $service05 = $('.service_group05');
+//     $service01.on('click', function(){
+//         $details01.toggleClass('show_details');
+//     })
+//     $service02.on('click', function(){
+//         $details02.toggleClass('show_details');
+//     })
+//     $service03.on('click', function(){
+//         $details03.toggleClass('show_details');
+//     })
+//     $service04.on('click', function(){
+//         $details04.toggleClass('show_details');
+//     })
+//     $service05.on('click', function(){
+//         $details05.toggleClass('show_details');
+//     })
 
-    $service01.on('click', function(){
-        $details01.toggleClass('show_details');
-    })
-    $service02.on('click', function(){
-        $details02.toggleClass('show_details');
-    })
-    $service03.on('click', function(){
-        $details03.toggleClass('show_details');
-    })
-    $service04.on('click', function(){
-        $details04.toggleClass('show_details');
-    })
-    $service05.on('click', function(){
-        $details05.toggleClass('show_details');
-    })
+// });
+////////////////////////////////////////////////////
+//000000000      End Original Code     00000000000//
+////////////////////////////////////////////////////
 
-});
+
+///////////////  New Approach  /////////////////////
+////////////////////////////////////////////////////
+
+// Service and details ids and classes
+// should pick each element dependent upon which
+// one is clicked
+// showDetails(){
+//      $('#details0'+i).toggleClass('show_details');
+//}
+// for (let i=1;i<=5;i++) {
+//      $('#details0'+i).showDetails()
+// }
+// for (let i=1;i<=5;i++) {
+//      $('.service_group0'+i)
+// }
+//             Needs more work
+//   Might need to remove numbers at the end of each 
+//   .service_group so it can iterate through each similar
+//   class on click?
+
+//             Yet another approach
+//   const serviceG = document.querySelectorAll('.service_grouP');
+//   serviceG.forEach(element => {
+//      Element.addEventListener('click', (e)=>{
+//          $('#details0'+i).showDetails()
+//      })
+//   })
+//                  OR...
+//
+//   const serviceG = document.querySelectorAll('.service_grouP');
+//   serviceG.forEach(element => {
+//      Element.addEventListener('click', (e)=>{
+//          for (let i=1;i<=5;i++) {
+//              $('#details0'+i).showDetails()
+//          }
+//      })
+//   })
+//
+//         ANOTHER ATTEMPT 20220901
+//////////////////////////////////////////////////
+//000000     Working refactored code   00000000//
+//000000     from 27 lines to 7 !       00000000//
+//////////////////////////////////////////////////
+$(function(){
+    //console.log('this thing on?!')
+    for(let j=0;j<6;j++){
+        $('.service_group0'+j).on('click',function(){
+            //console.log(j);
+            $('#details0'+j).toggleClass('show_details')
+        });
+    }
+})
 
 // WORKING CONTACT FORM VERIFICATION AND SUBMISSION (fr contact_test.js)
 // can clean up "var" before each variable as it only needs to be declared once if all are grouped below
@@ -543,44 +695,104 @@ $(function(){
 //////////////////////////////////////////////////////////////
 $(function(){
     var mScr = $('.modal_screen');
-        sReset = $('.g_modal')
+        sRst = $('.g_modal');
+        xModal = $('.close_modal')
     $('.more_info').on('click touch', function(event){
-        event.preventDefault();
-        var x, y;
-        x = event.pageX;
-        y = event.pageY;
-        console.log(x,y);
-        mScr.addClass('m_screen_open m_screen_fade');
-        mScr.css({ 'display':'block','visibility':'visible'} );
-        setTimeout(function(){
-            $('.g_modal').addClass('g_modal_open');
-        },100);
-        setTimeout(function(){
-            $('.close_modal').addClass("show_close");
-        },400);
-        $('body, html').css('overflow-y', 'hidden');
+            event.preventDefault();
+            // Below to establish coordinates for click location
+            var x, y;
+            x = event.pageX;
+            y = event.pageY;
+            console.log(x,y);
+            //end coordinates code
+            mScr.addClass('m_screen_open m_screen_fade');
+            mScr.css({ 'display':'block','visibility':'visible'} );
+            setTimeout(function(){
+                sRst.addClass('g_modal_open');
+            },100);
+            setTimeout(function(){
+                xModal.addClass("show_close");
+            },400);
+            $('body, html').css('overflow-y', 'hidden');
     });
-    $('.close_modal').on('click touch', function(event){
-        event.preventDefault();
-        sReset.scrollTop(0);
-        $('body, html').css('overflow-y', 'auto');
-        $(this).removeClass('show_close');
-        sReset.removeClass('g_modal_open');
-        sReset.one('transitionend', function(e){
-            mScr.removeClass('m_screen_fade').one('transitionend', function(e){
-                //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
-                console.log('!!! innermost');
-            }).off(e);
-            function hideModal() {
-                mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
-                console.log('new function');
-            }
-            setTimeout(hideModal,175);
-            console.log('mid level');
-        })
-        console.log('top level');
+        xModal.on('click touch', function(event){
+            event.preventDefault();
+            sRst.scrollTop(0);
+            $('body, html').css('overflow-y', 'auto');
+            $(this).removeClass('show_close');
+            sRst.removeClass('g_modal_open');
+            sRst.one('transitionend', function(e){
+                mScr.removeClass('m_screen_fade').one('transitionend', function(){
+                    //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
+                    console.log('!!! innermost');
+                }).off(e);
+                function hideModal() {
+                    mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
+                    // Added below to hide item-specific content after open
+                    $('.modal_content_00, .modal_content_01').hide();
+                    console.log('new function');
+                }
+                setTimeout(hideModal,175);
+                console.log('mid level');
+            })
+            console.log('top level');
     })
 });
+
+// Array index experiment to load associated content
+$(function(){
+    var mBttn = $('.more_info');
+        cBttn = $('.mobile_info');
+        //mCont = $('.modal_content_0'+l)
+    for(let l=0;l<mBttn.length;l++){
+        // var l = $('.more_info').index(this);
+        //     m = l+1;
+        //var mBttn = $('.more_info');
+        mBttn.on('click',function(){
+            var l = mBttn.index(this);
+                //m = l+1;
+            //console.log($(this),i);
+            //console.log(i);
+            //console.log( mBttn.index(this) );
+            //console.log('l:'+l+'then m:'+m);
+            console.log('l:'+l);
+            $('.modal_content_0'+l).show();
+
+            // Will need to change if/else to
+            // if/ and if/else if more items are
+            // added to graphic design section w
+            // a corresponding modal
+            // if(l == 0){
+            //     $('.modal_content_0'+l).show();
+            //     console.log('IF')
+            // }else{
+            //     $('.modal_content_0'+l).show();
+            //     console.log('ELSE')
+                // Almost there!!! need to have close
+                // button click hide the same element
+                // that was shown, each time...
+            //};
+        });
+        // function showModalIn() {
+        //     var l = $('.more_info').index(this);
+        //     console.log('l:'+l);
+        //     $('.modal_content_0'+l).show();
+        // }
+    };
+    for(let m=0;m<cBttn.length;m++){
+        cBttn.on('click',function(){
+            var m = cBttn.index(this);
+            console.log('m:'+m);
+            $('.modal_content_0'+m).show();
+        });
+    }
+});
+// $(function(){
+//     $('.more_info').each('click', function(i){
+//         $('.modal_content_0'+i).eq(i).show();
+//         console.log($(this));
+//     });
+// });
 ////////////------- Alternative Approach ----------/////////////
 //      This approach will be to create an array of all       //
 //      graphic design portfolio item "more details" buttons  //
@@ -594,6 +806,20 @@ $(function(){
 //      for ancestors or only elements that are parents or    //
 //      greater from the position of the selected element     //
 ////////////////////////////////////////////////////////////////
+//     20220903 - Notes on DRYing up modal script:            //
+//        Separate (in HTML) the modal general template from  //
+//        item-specific, unique content.  Logic could follow  //
+//        "if i == 0 then add first item content" "else (since//
+//        there are only two items that will have modals for  //
+//        now - if more is added then will need if, and if,   //
+//        else) show second item content"                     //
+//        classes .modal_top and .modal_flex will have button //
+//        item-specific content - can follow in HTML directly //
+//        after corresponding section.  Modal template can    //
+//        possibly be placed at broader scope, possibly after //
+//        or before the entire graphic design portfolio items //
+////////////////////////////////////////////////////////////////
+
 //  var more = $('.more_info');
 //      mScr = $('.modal_screen');
 //      sReset = $('.g_modal');
@@ -718,6 +944,7 @@ $(function(){
         $('.modal_screen').removeClass('m_s_o_mobile').one('transitionend', function(e){
             // $(this).css({'display':'none'});
             $('.g_modal').scrollTop(0);
+            $('.modal_content_00, .modal_content_01').hide();
         })
     })
 })
