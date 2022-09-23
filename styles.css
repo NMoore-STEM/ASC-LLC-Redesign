@@ -1043,11 +1043,15 @@ p.modal_intro {
     min-width: 200px;
     max-width: 350px;
     margin-bottom: 40px;
+    position: relative;
     z-index: 202;
     box-shadow: 20px 20px 0 black;
     box-shadow: 20px 20px 0 #2C4A9A;
 }
-.modal_img_r {
+.m_img_l {
+
+}
+.m_img_r {
     min-width: 200px;
     max-width: 350px;
     margin-bottom: 40px;
