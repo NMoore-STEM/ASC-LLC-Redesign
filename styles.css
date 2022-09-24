@@ -1113,6 +1113,10 @@ p.modal_intro {
     cursor: crosshair;
     opacity: 0.4;
 }*/
+.svg_item_heading {
+    background-color: #253C84;
+    width: auto;
+}
 .start_stop_gmj {
     display: block;
     position: relative;

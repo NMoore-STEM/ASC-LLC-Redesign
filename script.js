@@ -1253,6 +1253,19 @@ $(function(){
         return false;
     })
 })
+//////////////////  For iFrame concentric circles ///
+$(function(){
+    var iframe = $('.circle_iframe')
+    $('#iframeRefresh').on('click touch', function(){
+        //var iframe = $('.circle_iframe')
+        //$('.circle_iframe').location.reload()
+        //$('.circle_iframe').contentDocument.location.reload(true);
+        //iframe.contentDocument.location=iframe.src;
+        iframe.attr("src", iframe.attr("src"));
+        //iframe.attr("src");
+        //console.log('button works')
+    })
+});
 // Delete below before going live 
 // These are written here to see color format patterns
 // Possible h1 portfolio intro headings
