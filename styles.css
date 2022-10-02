@@ -990,6 +990,7 @@ also transition opacity with how it is writter currently */
     background-color:rgb(86, 54, 148);
     cursor: pointer;
     z-index: 204;
+    outline: 1px rgb(149, 91, 234) solid;
     transition: opacity ease 200ms;
 }
 .show_close {
@@ -1151,6 +1152,10 @@ p.modal_intro {
     position: relative;
     z-index: 202;
 }
+
+/* alt stroke color for close button on modal
+/* rgb(149, 91, 234)
+
 /*.item_placeholder {
     height: 100px;
     font-family: 'Noto Sans KR', sans-serif;
