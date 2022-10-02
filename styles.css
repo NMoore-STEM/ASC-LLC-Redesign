@@ -1102,6 +1102,55 @@ p.modal_intro {
     font-size: 12pt;
     padding-top: 20px;
 }
+/* Alternate modal design rules */
+.modal_flex2 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    background-color: #253C84; 
+}
+.g_modal2 {
+    position:absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 20vh 15vw 10vh;
+    height: 70vh;
+    background-color:rgb(43, 57, 96);
+    transition: opacity ease-in 150ms, transform ease 300ms;
+    transform: scale(0.2);
+    transform-origin: top center;
+    opacity: 0;
+}
+.g_modal_open2 {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 20vh 15vw 10vh;
+    height: 70vh;
+    width: auto;
+    background-color:rgb(43, 57, 96);
+    transition: opacity ease-in 150ms, transform ease-out 300ms;
+    transform: scale(1);
+    transform-origin: top center;
+    opacity: 1;
+}
+.modal_top2 {
+    display: block;
+    background-color: #253C84;
+}
+.modal_title2 {
+    padding: 20px 0;
+    background-color: #2C4A9A;
+}
+.modal_img2 {
+    min-width: 200px;
+    max-width: 350px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 202;
+}
 /*.item_placeholder {
     height: 100px;
     font-family: 'Noto Sans KR', sans-serif;

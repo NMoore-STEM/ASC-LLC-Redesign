@@ -53,6 +53,48 @@ $(document).ready(function() {
     console.log($left1, $left2);
 });
 */
+/////////////////////////////////////////////////
+// Cleaned up menu button script - 20220927
+/////////////////////////////////////////////////
+$(document).ready(function(){
+    $('#menuButton').on('click touch', function(){
+        $('#menu').toggleClass('menuOpen');
+    });
+    $('.menuItem','#menu').on('click touch', function(){
+        $('#menu').toggleClass('menuOpen');
+    });
+});
+// More attempts to close menu when clicking off element
+// 20220927
+$(document).ready(function(){
+    $('#menuButton').on('click touch focusout', function(event){
+        event.stopPropagation();
+        $('#menu').show().toggleClass('menuOpen');
+
+        // $('html').on('click touch', function(e){
+        //     if (e.target !== ($('#menuButton')||$('#menu').children())){
+        //         $('#menu').toggleClass('menuOpen');
+        //         console.log('clicked off menu')
+        //     }else{
+                
+        //     }
+        // })
+
+    });
+    $('#menu').children().on('click touch', function(event){
+        event.stopPropagation();
+        $('#menu').toggleClass('menuOpen');
+    });
+    $('html').on('click touch', function(e){
+        if (e.target !== ($('#menuButton'))){
+            $('#menu').hide(100);
+            setTimeout(function(){
+                $('html').off('click touch');
+                $('#menu').toggleClass('menuOpen');
+            }(50))
+        }else{}
+    })
+});
 //MOBILE & TABLET Menu button action//
 $(document).ready(function(){
     // opens menu
@@ -79,7 +121,7 @@ $(document).ready(function(){
                 $('.menuItem').eq(i).css('animation','menu_collapse 2s ease-in forwards')
             }, i*200);
         });*/
-        $('#menu').toggleClass('menuButtonOpen');
+        //$('#menu').toggleClass('menuButtonOpen');
     });
 });
 
