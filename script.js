@@ -53,6 +53,48 @@ $(document).ready(function() {
     console.log($left1, $left2);
 });
 */
+/////////////////////////////////////////////////
+// Cleaned up menu button script - 20220927
+/////////////////////////////////////////////////
+$(document).ready(function(){
+    $('#menuButton').on('click touch', function(){
+        $('#menu').toggleClass('menuOpen');
+    });
+    $('.menuItem','#menu').on('click touch', function(){
+        $('#menu').toggleClass('menuOpen');
+    });
+});
+// More attempts to close menu when clicking off element
+// 20220927
+$(document).ready(function(){
+    $('#menuButton').on('click touch focusout', function(event){
+        event.stopPropagation();
+        $('#menu').show().toggleClass('menuOpen');
+
+        // $('html').on('click touch', function(e){
+        //     if (e.target !== ($('#menuButton')||$('#menu').children())){
+        //         $('#menu').toggleClass('menuOpen');
+        //         console.log('clicked off menu')
+        //     }else{
+                
+        //     }
+        // })
+
+    });
+    $('#menu').children().on('click touch', function(event){
+        event.stopPropagation();
+        $('#menu').toggleClass('menuOpen');
+    });
+    $('html').on('click touch', function(e){
+        if (e.target !== ($('#menuButton'))){
+            $('#menu').hide(100);
+            setTimeout(function(){
+                $('html').off('click touch');
+                $('#menu').toggleClass('menuOpen');
+            }(50))
+        }else{}
+    })
+});
 //MOBILE & TABLET Menu button action//
 $(document).ready(function(){
     // opens menu
@@ -79,7 +121,7 @@ $(document).ready(function(){
                 $('.menuItem').eq(i).css('animation','menu_collapse 2s ease-in forwards')
             }, i*200);
         });*/
-        $('#menu').toggleClass('menuButtonOpen');
+        //$('#menu').toggleClass('menuButtonOpen');
     });
 });
 
@@ -1184,6 +1226,9 @@ $(function(){
 // of the first kanji remains up until the second kanji finishes or have both kanji draw simultaneously
 // still need to add english definitions that grow from middle...
 
+//////////////////////////////////////////////////////////
+//          Original kanji12 button and animation  //
+/////////////////////////////////////////////////////
 $(function(){
     $('.start_stop_knj12').on('click touch', function(event){
         // Having an issue with page jumping around 300px up when clicked
@@ -1197,28 +1242,52 @@ $(function(){
             $(this).text("start animation")
             $('.kanji_12_ph').fadeIn(400);
         };
-        $('#mask11').toggleClass('knj11');
-        $('#mask12').toggleClass('knj12');
-        $('#mask13').toggleClass('knj13');
-        $('#mask14').toggleClass('knj14');
-        $('#mask15').toggleClass('knj15');
-        $('#mask16').toggleClass('knj16');
-        $('#mask17').toggleClass('knj17');
-        $('#mask21').toggleClass('knj21');
-        $('#mask22').toggleClass('knj22');
-        $('#mask23').toggleClass('knj23');
-        $('#mask24').toggleClass('knj24');
-        $('#mask25').toggleClass('knj25');
-        $('#mask26').toggleClass('knj26');
-        $('#mask27').toggleClass('knj27');
-        $('#mask28').toggleClass('knj28');
-        $('#mask29').toggleClass('knj29');
-        $('#mask210').toggleClass('knj210');
-        $('#mask211').toggleClass('knj211');
+
+        mask1();
+        mask2();
+
+        // $('#mask11').toggleClass('knj11');
+        // $('#mask12').toggleClass('knj12');
+        // $('#mask13').toggleClass('knj13');
+        // $('#mask14').toggleClass('knj14');
+        // $('#mask15').toggleClass('knj15');
+        // $('#mask16').toggleClass('knj16');
+        // $('#mask17').toggleClass('knj17');
+        // $('#mask21').toggleClass('knj21');
+        // $('#mask22').toggleClass('knj22');
+        // $('#mask23').toggleClass('knj23');
+        // $('#mask24').toggleClass('knj24');
+        // $('#mask25').toggleClass('knj25');
+        // $('#mask26').toggleClass('knj26');
+        // $('#mask27').toggleClass('knj27');
+        // $('#mask28').toggleClass('knj28');
+        // $('#mask29').toggleClass('knj29');
+        // $('#mask210').toggleClass('knj210');
+        // $('#mask211').toggleClass('knj211');
+
         $('#def12').toggleClass('def_play');
         return false;
     })
 })
+///////////////////////////////////////////////////
+//          End Original kanji12 code           //
+///////////////////////////////////////////////////
+
+/////////   Modular functions for kanji12  /////////
+// refactored above code from 18 lines to 14 lines //
+function mask1(){
+    var msk1 = $('[id^="mask1"]');
+    for(let a=1;a<msk1.length+1;a++){
+        $('#mask1'+a).toggleClass('knj1'+a);
+    }
+}
+function mask2(){
+    var msk2 = $('[id^="mask2"]');
+    for(let b=1;b<msk2.length+1;b++){
+        $('#mask2'+b).toggleClass('knj2'+b);
+    }
+}
+
 $(function(){
     $('.start_stop_knj34').on('click touch', function(event){
         // Having an issue with page jumping around 300px up when clicked
@@ -1232,27 +1301,45 @@ $(function(){
             $(this).text("start animation")
             $('.kanji_34_ph').fadeIn(400);
         };
-        $('#mask31').toggleClass('knj31');
-        $('#mask32').toggleClass('knj32');
-        $('#mask33').toggleClass('knj33');
-        $('#mask34').toggleClass('knj34');
-        $('#mask35').toggleClass('knj35');
-        $('#mask36').toggleClass('knj36');
-        $('#mask37').toggleClass('knj37');
-        $('#mask38').toggleClass('knj38');
-        $('#mask39').toggleClass('knj39');
 
-        $('#mask41').toggleClass('knj41');
-        $('#mask42').toggleClass('knj42');
-        $('#mask43').toggleClass('knj43');
-        $('#mask44').toggleClass('knj44');
-        $('#mask45').toggleClass('knj45');
-        $('#mask46').toggleClass('knj46');
+        mask3();
+        mask4();
+
+        // $('#mask31').toggleClass('knj31');
+        // $('#mask32').toggleClass('knj32');
+        // $('#mask33').toggleClass('knj33');
+        // $('#mask34').toggleClass('knj34');
+        // $('#mask35').toggleClass('knj35');
+        // $('#mask36').toggleClass('knj36');
+        // $('#mask37').toggleClass('knj37');
+        // $('#mask38').toggleClass('knj38');
+        // $('#mask39').toggleClass('knj39');
+
+        // $('#mask41').toggleClass('knj41');
+        // $('#mask42').toggleClass('knj42');
+        // $('#mask43').toggleClass('knj43');
+        // $('#mask44').toggleClass('knj44');
+        // $('#mask45').toggleClass('knj45');
+        // $('#mask46').toggleClass('knj46');
 
         $('#def34').toggleClass('def_play');
         return false;
     })
 })
+//////    Modular functions for kanji34    ////////
+// refactored 15 lines to a DRY 14 lines         //
+function mask3(){
+    var msk3 = $('[id^="mask3"]');
+    for(let c=1;c<msk3.length+1;c++){
+        $('#mask3'+c).toggleClass('knj3'+c);
+    }
+}
+function mask4(){
+    var msk4 = $('[id^="mask4"]');
+    for(let d=1;d<msk4.length+1;d++){
+        $('#mask4'+d).toggleClass('knj4'+d);
+    }
+}
 //////////////////  For iFrame concentric circles ///
 $(function(){
     var iframe = $('.circle_iframe')

@@ -990,6 +990,7 @@ also transition opacity with how it is writter currently */
     background-color:rgb(86, 54, 148);
     cursor: pointer;
     z-index: 204;
+    outline: 1px rgb(149, 91, 234) solid;
     transition: opacity ease 200ms;
 }
 .show_close {
@@ -1102,6 +1103,83 @@ p.modal_intro {
     font-size: 12pt;
     padding-top: 20px;
 }
+/* Alternate modal design rules */
+.modal_flex2 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    background-color: #253C84;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.g_modal2 {
+    position:absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 20vh 15vw 10vh;
+    height: 70vh;
+    background-color:rgb(43, 57, 96);
+    transition: opacity ease-in 150ms, transform ease 300ms;
+    transform: scale(0.2);
+    transform-origin: top center;
+    opacity: 0;
+    overflow: hidden;
+}
+.g_modal_open2 {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 20vh 15vw 10vh;
+    height: 70vh;
+    width: auto;
+    background-color:rgb(43, 57, 96);
+    transition: opacity ease-in 150ms, transform ease-out 300ms;
+    transform: scale(1);
+    transform-origin: top center;
+    opacity: 1;
+}
+.modal_top2 {
+    display: block;
+    background-color: #253C84;
+    background-color: #2C4A9A;
+    padding-left: 20px;
+}
+.modal_title2 {
+    padding: 20px 0;
+    background-color: #2C4A9A;
+    padding: 20px 0 0;
+}
+p.modal_intro2 {
+    text-align: left;
+    padding: 0 0 20px 30px;
+}
+.modal_img2 {
+    min-width: 200px;
+    max-width: 350px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 202;
+}
+.close_modal2 {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top: calc(20vh + 27px);
+    right: calc(15vw + 30px);
+    background-color:rgb(86, 54, 148);
+    cursor: pointer;
+    z-index: 204;
+    outline: 1px rgb(149, 91, 234) solid;
+    transition: opacity ease 200ms;
+}
+
+/* alt stroke color for close button on modal
+/* rgb(149, 91, 234)
+
 /*.item_placeholder {
     height: 100px;
     font-family: 'Noto Sans KR', sans-serif;
