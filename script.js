@@ -585,7 +585,10 @@ $(function(){
         $(this).find('.button_text').addClass('clicked_txt');
         boundNav();
     }
-    $('#c01').on('click touch', function(e){
+///////  20221013 added all button classes in one function
+//       to DRY up code - seems to work as intended
+//     Refactored 50 lines to 10
+    $('#c01,#c02,#gh00,#gh01,#gh02').on('click touch', function(e){
         if ($(window).width() < 771) {
             e.preventDefault();
             console.log($(this));
@@ -595,46 +598,46 @@ $(function(){
             return true;
         };
     })
-    $('#c02').on('click touch', function(e){
-        if ($(window).width() < 771) {
-            e.preventDefault();
-            console.log($(this));
-            let boundUX = mobileUX.bind(this);
-            boundUX();
-        } else {
-            return true;
-        };
-    })
-    $('#gh00').on('click touch', function(e){
-        if ($(window).width() < 771) {
-            e.preventDefault();
-            console.log($(this));
-            let boundUX = mobileUX.bind(this);
-            boundUX();
-        } else {
-            return true;
-        };
-    })
-    $('#gh01').on('click touch', function(e){
-        if ($(window).width() < 771) {
-            e.preventDefault();
-            console.log($(this));
-            let boundUX = mobileUX.bind(this);
-            boundUX();
-        } else {
-            return true;
-        };
-    })
-    $('#gh02').on('click touch', function(e){
-        if ($(window).width() < 771) {
-            e.preventDefault();
-            console.log($(this));
-            let boundUX = mobileUX.bind(this);
-            boundUX();
-        } else {
-            return true;
-        };
-    })
+    // $('#c02').on('click touch', function(e){
+    //     if ($(window).width() < 771) {
+    //         e.preventDefault();
+    //         console.log($(this));
+    //         let boundUX = mobileUX.bind(this);
+    //         boundUX();
+    //     } else {
+    //         return true;
+    //     };
+    // })
+    // $('#gh00').on('click touch', function(e){
+    //     if ($(window).width() < 771) {
+    //         e.preventDefault();
+    //         console.log($(this));
+    //         let boundUX = mobileUX.bind(this);
+    //         boundUX();
+    //     } else {
+    //         return true;
+    //     };
+    // })
+    // $('#gh01').on('click touch', function(e){
+    //     if ($(window).width() < 771) {
+    //         e.preventDefault();
+    //         console.log($(this));
+    //         let boundUX = mobileUX.bind(this);
+    //         boundUX();
+    //     } else {
+    //         return true;
+    //     };
+    // })
+    // $('#gh02').on('click touch', function(e){
+    //     if ($(window).width() < 771) {
+    //         e.preventDefault();
+    //         console.log($(this));
+    //         let boundUX = mobileUX.bind(this);
+    //         boundUX();
+    //     } else {
+    //         return true;
+    //     };
+    // })
 
     // Below code might not be needed - should test in detail before final release
     window.addEventListener('pageshow', function(event) {
