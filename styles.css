@@ -1227,7 +1227,7 @@ p.modal_intro2 {
 }
 .gmj_ph {
     background-image: url('restricted/images_secure/gmj_still.svg');
-    opacity: 0.9;
+    /*opacity: 0.9;*/
     background-color:#253C84;
     position: absolute;
     width: 340px;
@@ -1272,7 +1272,7 @@ p.modal_intro2 {
     /* display: none; */
     /*==TEMP==*/
     background-image: url('restricted/images_secure/kibou_still.svg');
-    opacity: 0.9;
+    /*opacity: 0.9;*/
     background-color:#253C84;
     position: absolute;
     width: 340px;
@@ -1300,7 +1300,7 @@ p.modal_intro2 {
 /*==TEMP==*/
 .kanji_34_ph {
     background-image: url('restricted/images_secure/yuuki_still.svg');
-    opacity: 0.9;
+    /*opacity: 0.9;*/
     background-color:#253C84;
     position: absolute;
     width: 340px;
