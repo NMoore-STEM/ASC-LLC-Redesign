@@ -1194,6 +1194,7 @@ p.modal_intro2 {
 .svg_item_heading {
     background-color: #253C84;
     width: auto;
+    width: 100%;
 }
 .start_stop_gmj {
     display: block;
