@@ -1195,6 +1195,12 @@ p.modal_intro2 {
     background-color: #253C84;
     width: auto;
     width: 100%;
+    height: 100px;
+    /* below added after 20221018 */
+    /* may need to declare only for FULL resolution */
+    display: flex;
+    align-items: center;
+    background-color: #2C4A9A;
 }
 .start_stop_gmj {
     display: block;
@@ -1213,11 +1219,15 @@ p.modal_intro2 {
 }
 .gmj_logo .portfolio_svg_anim {
     position: relative;
-    margin: 20px 0 0;
+    /* margin: 20px 0 0; */
     background-color: white;
-    height: 340px;
-    max-width: 340px;
+    height: 350px;
+    max-width: 350px;
     overflow: hidden;
+    /* below added after 20221018 */
+    height: 500px;
+    display: flex;
+    align-items: center;
 }
 .gmj_logo h4 {
     font-size: 12pt;
@@ -1225,17 +1235,25 @@ p.modal_intro2 {
     padding-bottom: 0;
     /* font-family: 'Ubuntu',sans-serif; */
     font-weight: lighter;
+    /* below added after 20221018 */
+    width: 100%;
+    padding: 0 40px;
 }
 .gmj_ph {
     background-image: url('restricted/images_secure/gmj_still.svg');
     /*opacity: 0.9;*/
     background-color:#253C84;
     position: absolute;
-    width: 340px;
-    height: 340px;
+    width: 350px;
+    height: 350px;
     background-size: contain;
     /*background-size: 25px;*/ /*For tiled preview image*/
     top: 0;
+    /* below added after 20221018 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 350px;
+    height: 100%;
 }
 /*.gmj_logo_hide {
     background-image: none;
@@ -1338,6 +1356,9 @@ p.modal_intro2 {
     color: #91B4DF;
     padding: 10px 20px;
     box-shadow: 2px 2px 2px black;
+}
+iframe {
+    border-style: none;
 }
 /*=====================================================================*/
 /*---------------------------MOBILE------------------------------------*/
@@ -4463,6 +4484,13 @@ em {
 .portfolio_item_main {
     margin: 40px 15px;
 }
+.portfolio_item_svg {
+    position: relative;
+    margin: 40px 15px;
+    padding: 0;
+    max-width: 350px;
+    width: 350px;
+}
 /*.portfolio_item_main {
     display: flex;
     flex-direction: column;
@@ -4495,6 +4523,10 @@ em {
     /*padding: 40px;*/
     padding: 40px;
     text-align: left;
+    text-align: center;
+}
+.portfolio_item_svg h4 {
+    color: white;
     text-align: center;
 }
 /*.web_dev_header {
@@ -4678,7 +4710,7 @@ em {
 /* For animated svg portfolio_item_main, add a specific svg
     as the portfolio_item_container is smaller in this section*/
 .gmj_logo h4 {
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 .portfolio_svg_anim #gmj_anim {
     /* max-width: 300px; */
