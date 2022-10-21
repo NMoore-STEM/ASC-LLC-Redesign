@@ -1201,6 +1201,11 @@ p.modal_intro2 {
     display: flex;
     align-items: center;
     background-color: #2C4A9A;
+    /* added below on 20221020 - may remove later */
+    /* shadow for heading on svg items */
+    /* box-shadow: 0 6px 4px -6px black;
+    z-index: 3;
+    position: relative; */
 }
 .start_stop_gmj {
     display: block;
@@ -1221,30 +1226,31 @@ p.modal_intro2 {
     position: relative;
     /* margin: 20px 0 0; */
     background-color: white;
-    height: 350px;
-    max-width: 350px;
+    /* height: 350px;
+    max-width: 350px; */
     overflow: hidden;
     /* below added after 20221018 */
     height: 500px;
     display: flex;
     align-items: center;
+    width: 340px;
 }
 .gmj_logo h4 {
     font-size: 12pt;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    /* margin-bottom: 0;
+    padding-bottom: 0; */
     /* font-family: 'Ubuntu',sans-serif; */
     font-weight: lighter;
     /* below added after 20221018 */
-    width: 100%;
-    padding: 0 40px;
+    /* width: 100%;
+    padding: 0 40px; */
 }
 .gmj_ph {
     background-image: url('restricted/images_secure/gmj_still.svg');
     /*opacity: 0.9;*/
     background-color:#253C84;
     position: absolute;
-    width: 350px;
+    width: 340px;
     height: 350px;
     background-size: contain;
     /*background-size: 25px;*/ /*For tiled preview image*/
@@ -1252,7 +1258,7 @@ p.modal_intro2 {
     /* below added after 20221018 */
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 350px;
+    background-size: 340px;
     height: 100%;
 }
 /*.gmj_logo_hide {
@@ -4488,8 +4494,9 @@ em {
     position: relative;
     margin: 40px 15px;
     padding: 0;
-    max-width: 350px;
+    /* max-width: 350px; */
     width: 350px;
+    width: 340px;
 }
 /*.portfolio_item_main {
     display: flex;
@@ -4528,6 +4535,10 @@ em {
 .portfolio_item_svg h4 {
     color: white;
     text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 100%;
+    padding: 0 40px;
 }
 /*.web_dev_header {
     display: flex;
@@ -4722,6 +4733,7 @@ em {
 .portfolio_svg_anim {
     display: block;
     background-color: white;
+    box-shadow: 0 6px 4px -6px black;
 }
 .kanji_12 .portfolio_svg_anim,
 .kanji_34 .portfolio_svg_anim {
