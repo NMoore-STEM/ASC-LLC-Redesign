@@ -1207,7 +1207,8 @@ p.modal_intro2 {
     z-index: 3;
     position: relative; */
 }
-.start_stop_gmj {
+/* below commented out as style was consolidated, keep class name as script uses this */
+/* .start_stop_gmj {
     display: block;
     position: relative;
     cursor: pointer;
@@ -1220,8 +1221,11 @@ p.modal_intro2 {
     background-color: #253C84;
     color: #91B4DF;
     padding: 10px 20px;
-    box-shadow: 2px 2px 2px black;
-}
+    box-shadow: 2px 2px 2px black;*/
+    /* new style after 20221022 */
+    /*top: -40px;
+    box-shadow: 0 4px 8px -1px black;
+} */
 .gmj_logo .portfolio_svg_anim {
     position: relative;
     /* margin: 20px 0 0; */
@@ -1280,6 +1284,28 @@ p.modal_intro2 {
 .portfolio_item_long {
     /*== Might not be needed as there is no height specified in portfolio_item_main class ==*/
 }
+/* below added 20221022 to consolidate some button styles for animated svg items */
+.svg_play_button {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #91B4DF;
+    border: 2px solid #BDB0E6;
+    transition: all 0.3s ease;
+    margin: 20px auto 20px;
+    appearance: none;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12pt;
+    background-color: #253C84;
+    background-color: #662D91;
+    color: #91B4DF;
+    color: #BDB0E6;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 2px black;
+    /* new style after 20221022 */
+    top: -40px;
+    box-shadow: 0 4px 8px -1px black;
+}
 .kanji_12 {
     display: flex;
     flex-direction: column;
@@ -1333,7 +1359,8 @@ p.modal_intro2 {
     background-size: contain;
     top: 0;
 }
-.start_stop_knj12 {
+/* below commented out as style was consolidated, keep class name as script uses this */
+/* .start_stop_knj12 {
     display: block;
     position: relative;
     cursor: pointer;
@@ -1347,8 +1374,9 @@ p.modal_intro2 {
     color: #91B4DF;
     padding: 10px 20px;
     box-shadow: 2px 2px 2px black;
-}
-.start_stop_knj34 {
+} */
+/* below commented out as style was consolidated, keep class name as script uses this */
+/* .start_stop_knj34 {
     display: block;
     position: relative;
     cursor: pointer;
@@ -1362,7 +1390,7 @@ p.modal_intro2 {
     color: #91B4DF;
     padding: 10px 20px;
     box-shadow: 2px 2px 2px black;
-}
+} */
 iframe {
     border-style: none;
 }
