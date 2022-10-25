@@ -9,6 +9,7 @@
 //desired effect.
 
 //Reveal header for MOBILE and TABLET//
+// ASC page
 $(document).ready(function(){
     // Below to keep header visible if page is refreshed/nav back and not top
     if ($(document).scrollTop() > 430) {
