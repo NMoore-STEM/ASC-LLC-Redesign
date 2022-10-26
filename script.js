@@ -9,6 +9,7 @@
 //desired effect.
 
 //Reveal header for MOBILE and TABLET//
+// ASC page
 $(document).ready(function(){
     // Below to keep header visible if page is refreshed/nav back and not top
     if ($(document).scrollTop() > 430) {
@@ -757,8 +758,25 @@ $(function(){
             },100);
             setTimeout(function(){
                 xModal.addClass("show_close");
+                //xModal.on('focus', enterKey);
+                // Below is for shifting tabindex flow on modal open 20221025
+                $('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a,.modal_scroll').attr('tabindex','-1');
+                //$('.modal_img_tab').attr('tabindex','0');
+                //$('.close_modal').attr('tabindex','1');
             },400);
             $('body, html').css('overflow-y', 'hidden');
+            // function enterKey(e){
+            //     if (e.keyCode == 13) {
+            //         e.preventDefault();
+            //         $(this).trigger('click'); 
+            //         console.log('you pressed the enter key')
+            //     } else if (e.keycode == 9) {
+            //         $(this).blur();
+            //     }
+            //     console.log('keypress bound to modal close button')
+            //     return false;    
+            // };
+        
     });
         xModal.on('click touch', function(event){
             event.preventDefault();
@@ -766,6 +784,9 @@ $(function(){
             $('body, html').css('overflow-y', 'auto');
             $(this).removeClass('show_close');
             sRst.removeClass('g_modal_open');
+            // Below is to restore tabindex to main page after closing modal
+            $('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').attr('tabindex','0');
+            //$('.modal_img_tab').removeAttr('tabindex');
             sRst.one('transitionend', function(e){
                 mScr.removeClass('m_screen_fade').one('transitionend', function(){
                     //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);

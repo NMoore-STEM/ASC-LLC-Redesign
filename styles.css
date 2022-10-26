@@ -942,27 +942,29 @@ also transition opacity with how it is writter currently */
 .m_screen_closing {
     animation: modal_alpha 1s ease reverse;
 }
-.g_modal {
+/* below is original class */
+/* .g_modal {
     position: relative;
-    position:absolute;
+    position:absolute; */
     /* bottom: 0; */
     /* right: 20vw; */
-    overflow-x: hidden;
+    /* overflow-x: hidden;
     overflow-y: hidden;
     overflow-y: scroll;
     margin: 20vh 20vw 10vh;
     margin: 20vh 15vw 10vh;
     padding: 20px 40px;
-    height: 70vh;
+    height: 70vh; */
     /* width: 20vh; */
-    background-color:rgb(43, 57, 96);
+    /* background-color:rgb(43, 57, 96);
     transition: opacity ease-in 150ms, transform ease 300ms;
     transform: scale(0.2);
     transform-origin: top center;
     opacity: 0;
 
-}
-.g_modal_open {
+} */
+/* below is original class */
+/* .g_modal_open {
     position: relative;
     right: auto;
     bottom: auto;
@@ -978,8 +980,9 @@ also transition opacity with how it is writter currently */
     transform: scale(1);
     transform-origin: top center;
     opacity: 1;
-}
-.close_modal {
+} */
+/* below is original design for modal close button */
+/* .close_modal {
     visibility: hidden;
     opacity: 0;
     position: fixed;
@@ -992,21 +995,26 @@ also transition opacity with how it is writter currently */
     z-index: 204;
     outline: 1px rgb(149, 91, 234) solid;
     transition: opacity ease 200ms;
-}
-.show_close {
+} */
+/* below duplicated futher down in style sheet so as to take 
+precedence over other classes when this class is added to an element from the script */
+
+/* .show_close {
     visibility: visible;
     opacity: 1;
-    transition: opacity ease 700ms;
+    transition: opacity ease 700ms; */
     /* animation: modal_fade 1s; */
-}
-.modal_top {
-    display: block;
+/* } */
+/* below is original class */
+/* .modal_top {
+    display: block; */
     /* width: 100%; */
-}
+/* } */
 /* below might not be needed - could use .modal_top h4 instead */
-.modal_title {
+/* below is original class */
+/* .modal_title {
     padding: 20px 0;
-}
+} */
 /* Added after modal HTML restructuring 20220903 */
 .modal_content_00 {
     display:none;
@@ -1014,18 +1022,20 @@ also transition opacity with how it is writter currently */
 .modal_content_01 {
     display:none;
 }
-p.modal_intro {
-    text-align: left;
+/* original class below */
+/* p.modal_intro {
+    text-align: left; */
     /* flex: none;
     padding: 0; */
-    padding: 10px 10px 30px;
+    /* padding: 10px 10px 30px;
     margin: 0;
-}
-.modal_flex {
+} */
+/* below is original class */
+/* .modal_flex {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
     /* height: 100%; */
-}
+/* } */
 .modal_unit_l {
     position: relative;
     display: flex;
@@ -1039,16 +1049,17 @@ p.modal_intro {
     flex-direction: row-reverse;
     margin-bottom: 40px;
 }
-.modal_img {
+/* below is original class */
+/* .modal_img { */
     /* position: absolute; */
-    min-width: 200px;
+    /* min-width: 200px;
     max-width: 350px;
     margin-bottom: 40px;
     position: relative;
     z-index: 202;
     box-shadow: 20px 20px 0 black;
     box-shadow: 20px 20px 0 #2C4A9A;
-}
+} */
 .m_img_l {
 
 }
@@ -1104,15 +1115,19 @@ p.modal_intro {
     padding-top: 20px;
 }
 /* Alternate modal design rules */
-.modal_flex2 {
+/* Late 2022 design */
+/* was previously modal_flex2 */
+.modal_flex {
     display: flex;
     flex-direction: column;
     padding: 20px 40px;
     background-color: #253C84;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
 }
-.g_modal2 {
+/* Late 2022 design */
+/* was previously g_modal2 */
+.g_modal {
     position:absolute;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -1125,12 +1140,14 @@ p.modal_intro {
     opacity: 0;
     overflow: hidden;
 }
-.g_modal_open2 {
+/* Late 2022 design */
+/* was previously g_modal_open2 */
+.g_modal_open {
     position: relative;
     right: auto;
     bottom: auto;
     overflow-x: hidden;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     margin: 20vh 15vw 10vh;
     height: 70vh;
     width: auto;
@@ -1140,29 +1157,40 @@ p.modal_intro {
     transform-origin: top center;
     opacity: 1;
 }
-.modal_top2 {
+/* Late 2022 design */
+/* was previously modal_top2 */
+.modal_top {
     display: block;
     background-color: #253C84;
     background-color: #2C4A9A;
     padding-left: 20px;
 }
-.modal_title2 {
+/* Late 2022 design */
+/* was previously modal_title2 */
+.modal_title {
     padding: 20px 0;
     background-color: #2C4A9A;
     padding: 20px 0 0;
 }
-p.modal_intro2 {
+/* Late 2022 design */
+/* was previously p.modal_intro2 */
+p.modal_intro {
     text-align: left;
     padding: 0 0 20px 30px;
+    margin: 0;
 }
-.modal_img2 {
+/* Late 2022 design */
+/* was previously modal_img2 */
+.modal_img {
     min-width: 200px;
     max-width: 350px;
     margin-bottom: 40px;
     position: relative;
     z-index: 202;
 }
-.close_modal2 {
+/* late 2022 modal close button design below */
+/* was close_modal2 previously */
+.close_modal {
     visibility: hidden;
     opacity: 0;
     position: fixed;
@@ -1174,9 +1202,38 @@ p.modal_intro2 {
     cursor: pointer;
     z-index: 204;
     outline: 1px rgb(149, 91, 234) solid;
-    transition: opacity ease 200ms;
+    transition: opacity ease 150ms,outline ease 150ms;
 }
-
+.close_modal:hover {
+    animation: springy 150ms ease-out forwards;
+    /* animation-fill-mode: backwards; */
+    /* transition: all ease 200ms; */
+}
+@keyframes springy {
+    0%{transform:scale(1);}
+    /* 50%{transform:scale(1.5);}
+    60%{transform:scale(1);} */
+    68%{transform:scale(1.3);}
+    /* 80%{transform:scale(1.1);} */
+    100%{transform:scale(1.15);box-shadow:0 5px 6px -3px black;}
+}
+.close_modal:focus-visible {
+    outline: 2px white solid;
+    outline-offset: 3px;
+    transition: all ease 150ms;
+}
+.show_close {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity ease 700ms;
+}
+.modal_scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* margin: 20vh 15vw 10vh; */
+    height: calc(70vh - 98px);
+    width: auto;
+}
 /* alt stroke color for close button on modal
 /* rgb(149, 91, 234)
 
@@ -2925,6 +2982,27 @@ unique urls for each class */
 } */
 /* ::-webkit-scrollbar-button {
     background: #220e4d;
+} */
+::-webkit-scrollbar-button {
+    background: #220e4d;
+    color: #4C206C;
+}
+/* For Chrome */
+/* none of the below worked */
+/* ::-webkit-scrollbar-button:vertical:start {
+    color: white;
+}
+::-webkit-scrollbar-button:vertical:end {
+    color: white;
+}
+::-webkit-scrollbar-button:vertical:start:decrement {
+    color: black;
+}
+::-webkit-scrollbar-button:vertical:end:increment {
+    color: black;
+}
+::-webkit-scrollbar-button:single-button {
+    color:white;
 } */
 html {
     scrollbar-color: #4C206C #220e4d;
