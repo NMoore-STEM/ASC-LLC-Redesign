@@ -742,6 +742,7 @@ $(function(){
 $(function(){
     var mScr = $('.modal_screen');
         sRst = $('.g_modal');
+        sRst2 = $('.modal_scroll');
         xModal = $('.close_modal')
     $('.more_info').on('click touch', function(event){
             event.preventDefault();
@@ -780,12 +781,13 @@ $(function(){
     });
         xModal.on('click touch', function(event){
             event.preventDefault();
-            sRst.scrollTop(0);
+            sRst2.scrollTop(0);
             $('body, html').css('overflow-y', 'auto');
             $(this).removeClass('show_close');
             sRst.removeClass('g_modal_open');
             // Below is to restore tabindex to main page after closing modal
-            $('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').attr('tabindex','0');
+            //$('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').attr('tabindex','0');
+            $('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').removeAttr('tabIndex');
             //$('.modal_img_tab').removeAttr('tabindex');
             sRst.one('transitionend', function(e){
                 mScr.removeClass('m_screen_fade').one('transitionend', function(){

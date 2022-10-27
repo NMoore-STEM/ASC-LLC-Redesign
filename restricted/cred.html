@@ -18,7 +18,7 @@
 
         <header id=headerMT>
             <div class="head_flex">
-                <a class=home_link href="#">
+                <a role="button" class=home_link href="#">
                     <div class="cred_head">NM</div>
                     <div class="cred_head_sub">portfolio</div>
                 </a>
@@ -29,30 +29,30 @@
             <a id=logoTextMobile href="..\index.html"></a>
             </div> -->
             <nav id=menuFULL class=cred_menu>
-                <a class=menuItem href="#about">
+                <a role="button" class=menuItem href="#about">
                     <span class=nav_text>ABOUT ME</span>
                 </a>
-                <a class=menuItem href="#web_dev">
+                <a role="button" class=menuItem href="#web_dev">
                     <span class=nav_text>WEB DEV WORK</span>
                 </a>
-                <a class=menuItem href="#design">
+                <a role="button" class=menuItem href="#design">
                     <span class=nav_text>DESIGN WORK</span>
                 </a>
-                <a class=menuItem href="contact_r.html">
+                <a role="button" class=menuItem href="contact_r.html">
                     <span class=nav_text>CONTACT</span>
                 </a>
             </nav>
            
         </header>
-        <a id=menuButton>
+        <a role="button" id=menuButton>
             <img src="..\images\headerMenuIcon.svg"></img>
         </a>
         <menu id=menu class=menu_default>
-            <a class=menuItem href="#about">ABOUT ME</a>
-            <a class=menuItem href="#web_dev">WEB DEV WORK</a>
-            <a class=menuItem href="#design">DESIGN WORK</a>
+            <a role="button" class=menuItem href="#about">ABOUT ME</a>
+            <a role="button" class=menuItem href="#web_dev">WEB DEV WORK</a>
+            <a role="button" class=menuItem href="#design">DESIGN WORK</a>
             <!--<a class=menuItem href="#art">ARTWORK</a>-->
-            <a class=menuItem href="contact_r.html">CONTACT</a>
+            <a role="button" class=menuItem href="contact_r.html">CONTACT</a>
         </menu>
         <!--<div class=spacer></div>-->
         <section id=title_cred>
@@ -200,7 +200,7 @@
                         <!--<ul>Please take a look at my GitHub repositories to see how I work.</ul>-->
                         <aside class=top_cred_links>
                             <p>Please take a look at my GitHub repositories to see how I work.</p>
-                            <a href="https://github.com/NMoore-STEM" target="_blank" id=gh02 class="contactButton cred_link">
+                            <a role="button" href="https://github.com/NMoore-STEM" target="_blank" id=gh02 class="contactButton cred_link">
                                 <span class="button_text gh_text">
                                     <span class=gitHub_icon></span>
                                     <span class=link_01>/NMoore-STEM</span>
@@ -219,10 +219,10 @@
                         </div>
                         <div class=portfolio_item_sub>
                             <div class=pb_container>
-                                <a href="../index.html" class="port_button pb_web" target="_blank">
+                                <a role="button" href="../index.html" class="port_button pb_web" target="_blank">
                                     <span class=pb_text>Website</span>
                                 </a>
-                                <a href="https://github.com/NMoore-STEM/ASC-LLC-Redesign"  class="port_button pb_web" target="_blank">
+                                <a role="button" href="https://github.com/NMoore-STEM/ASC-LLC-Redesign"  class="port_button pb_web" target="_blank">
                                     <span class=pb_text>GH Repository</span>
                                 </a>
                             </div>
@@ -269,10 +269,10 @@
                         <div class=portfolio_item_sub>
                             <!--MAKE SURE TO ADD FINAL BAILEY SITE LOCATION AS LINK-->
                             <div class=pb_container>
-                                <a href="../../DBaileyLab_site/index.html" class="port_button pb_web" target="_blank">
+                                <a role="button" href="../../DBaileyLab_site/index.html" class="port_button pb_web" target="_blank">
                                     <span class=pb_text>Website</span>
                                 </a>
-                                <a href="https://github.com/NMoore-STEM/DBaileyLab_site"  class="port_button pb_web" target="_blank">
+                                <a role="button" href="https://github.com/NMoore-STEM/DBaileyLab_site"  class="port_button pb_web" target="_blank">
                                     <span class=pb_text>GH Repository</span>
                                 </a>
                             </div>
@@ -357,12 +357,12 @@
                     <div class=m_container>
                         <!-- Close button for FULL res -->
                         <!-- Had to relocate to here in order to accomodate a logical tabindex flow -->
-                        <a class=close_modal href="javascript:void" alt="close modal window with enter key">
+                        <button class=close_modal alt="close modal window with enter key">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" xml:space="preserve">
-                                <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="12.5" y1="12.5" x2="37.5" y2="37.5"></line>
-                                <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="37.5" y1="12.5" x2="12.5" y2="37.5"></line>
+                                <line fill="none" stroke="#9D90C5" stroke-width="8" x1="12.5" y1="12.5" x2="37.5" y2="37.5"></line>
+                                <line fill="none" stroke="#9D90C5" stroke-width="8" x1="37.5" y1="12.5" x2="12.5" y2="37.5"></line>
                             </svg>
-                        </a>
+                        </button>
                         <aside class="g_modal">
                             <!-- CLOSE WINDOW Button ** Moved up a level - see below -->
                             <!-- <span class="close_modal">
@@ -477,17 +477,17 @@
                         <!--<a href="..\restricted\images_secure\aplza_4in_sticker.svg" target="_blank">-->
                             <img class=portfolio_img_graphic src="..\restricted\images_secure\NM_VM_01_web.png"alt="">
                         <!--</a>-->
-                        <a tabindex=0 class="port_button more_info" alt="Button to show more info in modal">
+                        <button class="port_button more_info" alt="Button to show more info in modal">
                             <span class=pb_text>Click for details...</span>
-                        </a>
-                        <a class="port_button_mobile mobile_info" alt="Button to show more info in modal">
+                        </button>
+                        <button class="port_button_mobile mobile_info" alt="Button to show more info in modal">
                             <span class=pb_text>Expand for details...</span>
                             <span class=details_arrow>
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
                                     <polygon points="17,1 17,30 1,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#8d76d6;"/>
                                 </svg>
                             </span>
-                        </a>
+                        </button>
                     </section>
                     <!-- more info for first graphic design portfolio item -->
                     <!-- Commented out for modal template master one level up -->
@@ -548,17 +548,17 @@
                         <!-- <a href="..\restricted\images_secure\N Moore 2014 poinsettia flyer 1-2.pdf" target="_blank"> -->
                             <img class=portfolio_img_graphic src="..\restricted\images_secure\asc_splash_prev.png" alt="3D Diorama of Scientific Consulting Company Webpage Splash">
                         <!-- </a> -->
-                        <a tabindex=0 class="port_button more_info">
+                        <button class="port_button more_info">
                             <span class=pb_text>Click for details...</span>
-                        </a>
-                        <a class="port_button_mobile mobile_info">
+                        </button>
+                        <button class="port_button_mobile mobile_info">
                             <span class=pb_text>Expand for details...</span>
                             <span class=details_arrow>
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
                                     <polygon points="17,1 17,30 1,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#8d76d6;"/>
                                 </svg>
                             </span>
-                        </a>
+                        </button>
                         <!-- <a>Click image for details...</a> -->
                     </section>
                     <!-- Modal section below (hidden in FULL) -->
@@ -927,16 +927,16 @@
         <footer>
             <div id=colorBand04>
                 <div id=colorBand05>
-                    <a href="contact_r.html" class=footerButton style="margin:0;padding:20px;">
+                    <a role="button" href="contact_r.html" class=footerButton style="margin:0;padding:20px;">
                         CONTACT ME
                     </a>
-                    <a href="#" class=topButton>
+                    <a role="button" href="#" class=topButton>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
                             <line x1="10" y1="32" x2="25" y2="12" stroke="#9D90C5" stroke-width="6" stroke-linecap="round"/>
                             <line x1="25" y1="12" x2="40" y2="32" stroke="#9D90C5" stroke-width="6" stroke-linecap="round"/>
                         </svg>
                     </a>
-                    <a href="#" class=topButtonFULL>
+                    <a role="button" href="#" class=topButtonFULL>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
                             <line x1="10" y1="32" x2="25" y2="12" stroke="#9D90C5" stroke-width="6" stroke-linecap="round"/>
                             <line x1="25" y1="12" x2="40" y2="32" stroke="#9D90C5" stroke-width="6" stroke-linecap="round"/>
