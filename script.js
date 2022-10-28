@@ -743,7 +743,7 @@ $(function(){
     var mScr = $('.modal_screen');
         sRst = $('.g_modal');
         sRst2 = $('.modal_scroll');
-        xModal = $('.close_modal')
+        xModal = $('.close_modal');
     $('.more_info').on('click touch', function(event){
             event.preventDefault();
             // Below to establish coordinates for click location
@@ -779,32 +779,33 @@ $(function(){
             // };
         
     });
-        xModal.on('click touch', function(event){
-            event.preventDefault();
-            sRst2.scrollTop(0);
-            $('body, html').css('overflow-y', 'auto');
-            $(this).removeClass('show_close');
-            sRst.removeClass('g_modal_open');
-            // Below is to restore tabindex to main page after closing modal
-            //$('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').attr('tabindex','0');
-            $('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').removeAttr('tabIndex');
-            //$('.modal_img_tab').removeAttr('tabindex');
-            sRst.one('transitionend', function(e){
-                mScr.removeClass('m_screen_fade').one('transitionend', function(){
-                    //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
-                    console.log('!!! innermost');
-                }).off(e);
-                function hideModal() {
-                    mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
-                    // Added below to hide item-specific content after open
-                    $('.modal_content_00, .modal_content_01').hide();
-                    console.log('new function');
-                }
-                setTimeout(hideModal,175);
-                console.log('mid level');
-            })
-            console.log('top level');
-    })
+    xModal.on('click touch', function(event){
+        event.preventDefault();
+        sRst2.scrollTop(0);
+        $('body, html').css('overflow-y', 'auto');
+        $(this).removeClass('show_close');
+        sRst.removeClass('g_modal_open');
+        // Below is to restore tabindex to main page after closing modal
+        //$('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').attr('tabindex','0');
+        $('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').removeAttr('tabIndex');
+        //$('.modal_img_tab').removeAttr('tabindex');
+        sRst.one('transitionend', function(e){
+            mScr.removeClass('m_screen_fade').one('transitionend', function(){
+                //mScr.css({ 'display':'none','visibility':'hidden'}).off(e);
+                console.log('!!! innermost');
+            }).off(e);
+            function hideModal() {
+                mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
+                // Added below to hide item-specific content after open
+                $('.modal_content_00, .modal_content_01').hide();
+                console.log('new function');
+            }
+            setTimeout(hideModal,175);
+            console.log('mid level');
+        })
+        console.log('top level');
+    });
+    
 });
 
 // Array index experiment to load associated content
@@ -1011,7 +1012,8 @@ $(function(){
         $('body, html').css('overflow-y', 'scroll');
         $('.modal_screen').removeClass('m_s_o_mobile').one('transitionend', function(e){
             // $(this).css({'display':'none'});
-            $('.g_modal').scrollTop(0);
+            //$('.g_modal').scrollTop(0);
+            $('.modal_scroll').scrollTop(0);
             $('.modal_content_00, .modal_content_01').hide();
         })
     })

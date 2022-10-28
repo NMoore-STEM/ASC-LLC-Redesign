@@ -2868,9 +2868,19 @@ unique urls for each class */
     justify-content: center;
     padding: 0;
     background-color: revert;
+    background-color: #2C4A9A;
+    background-color: #253C84;
 }
 .graphic_item h4 {
     width: calc(100% - 40px);
+}
+.graphic_item .pb_text {
+    font-size: 14pt;
+}
+.portfolio_img_graphic {
+    max-width: 320px;
+    margin: 20px auto;
+    border: 2px #213160 solid;
 }
 .port_button {
     display: none;
@@ -2882,6 +2892,7 @@ unique urls for each class */
     background-color: #662D91;
     height: 40px;
     width: 100%;
+    border: none;
 }
 .mobile_info {
     height: 60px;
@@ -2916,6 +2927,7 @@ unique urls for each class */
     z-index: 199;
     left: 0;
     top: 100px;
+    /* box-shadow: -6px 15px 10px black; */
 }
 .m_s_o_mobile {
     transform: translate(0vw);
@@ -2924,13 +2936,14 @@ unique urls for each class */
 }
 .m_container {
     position: relative;
+    background-color: #662D91;
 }
 .g_modal {
     position: relative;
-    overflow-x: hidden;
+    /* overflow-x: hidden;
     overflow-y: scroll;
     max-width: 340px;
-    width: 340px;
+    width: 340px; */
     margin: 0 auto 0;
     background-color: rgb(43, 57, 96);
     height: auto;
@@ -2939,13 +2952,24 @@ unique urls for each class */
     padding: 0;
     height: calc(100vh - 160px);
 }
+.modal_content_00, .modal_content_01 {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 162px);
+    overflow: hidden;
+}
 .modal_top {
     display: block;
 }
-.modal_title {
-    color: #91B4DF;
+.modal_top p {
+    padding: 0 0 15px 30px;
 }
-
+.modal_title {
+    /* color: #91B4DF; */
+    /* for content heirarchy */
+    color: white;
+    padding: 15px 0 0;
+}
 .close_modal {
     display: none;
 }
@@ -2965,6 +2989,10 @@ unique urls for each class */
 .gmj_logo {
     background-color: #253C84;
     padding-bottom: 0;
+}
+.svg_item_heading h4 {
+    width: 100%;
+    color: white;
 }
 }
 /*================================================================*/
