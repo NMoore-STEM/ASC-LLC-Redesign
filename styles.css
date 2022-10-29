@@ -2970,6 +2970,23 @@ unique urls for each class */
     color: white;
     padding: 15px 0 0;
 }
+.modal_scroll {
+    height: auto;
+}
+.modal_flex {
+    padding: 0 20px;
+}
+.modal_unit_l, .modal_unit_r {
+    padding: 0;
+    flex-direction: column-reverse;
+}
+.modal_info_bg {
+    position: static;
+    margin: 40px 0 0 0;
+}
+.modal_img {
+    width: calc(100vw - 40px); 
+}
 .close_modal {
     display: none;
 }
