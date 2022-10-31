@@ -1060,9 +1060,10 @@ precedence over other classes when this class is added to an element from the sc
     box-shadow: 20px 20px 0 black;
     box-shadow: 20px 20px 0 #2C4A9A;
 } */
-.m_img_l {
+/* below may not be needed */
+/* .m_img_l {
 
-}
+} */
 .m_img_r {
     min-width: 200px;
     max-width: 350px;
@@ -1342,9 +1343,11 @@ p.modal_intro {
 }*/
 
 /*=== Special rule specifically for kanji svg animations ===*/
-.portfolio_item_long {
-    /*== Might not be needed as there is no height specified in portfolio_item_main class ==*/
-}
+/*== Might not be needed as there is no height specified in portfolio_item_main class ==*/
+/* Changed all items in this section to match height of tallest */
+/* .portfolio_item_long {
+    
+} */
 /* below added 20221022 to consolidate some button styles for animated svg items */
 .svg_play_button {
     display: block;
@@ -1585,6 +1588,8 @@ header {
     top: 25px;
     height: 53px;
     z-index: 5;
+    /* below for header transition on modal open 20221029 */
+    /* transition: all ease 100ms; */
 }
 #menu {
     /*display: block;*/
@@ -2012,9 +2017,10 @@ section {
 .coreInitial {
     margin: 0;
 }
-.coreFinal {
-    /* width: 45%; */
-}
+/* below may not be needed */
+/* .coreFinal {
+    width: 45%;
+} */
 /* #coreValues::before, #coreValues::after {
     display: flex;
     font-family: 'Spartan', sans-serif;
@@ -2829,14 +2835,15 @@ unique urls for each class */
 #graphic_design h3:nth-of-type(2) {
     border-bottom: 30px solid #253C84;
 }
-#graphic_design p {
+/* migrating some of these rules into .modal_details class below */
+/* #graphic_design p {
     background-color: #2C4A9A;
     width: calc(100% - 30px);
 	max-width: 100vw;
 	padding: 0 0 10px 30px;
     margin: 0;
     text-align: left;
-}
+} */
 .heading_decor {
     width: 100%;
 }
@@ -2960,6 +2967,7 @@ unique urls for each class */
 }
 .modal_top {
     display: block;
+    padding: 0;
 }
 .modal_top p {
     padding: 0 0 15px 30px;
@@ -2982,7 +2990,19 @@ unique urls for each class */
 }
 .modal_info_bg {
     position: static;
-    margin: 40px 0 0 0;
+    margin: 30px 0 0 0;
+    flex-direction: column;
+    background: none;
+}
+.modal_details {
+    width: calc(100% - 30px);
+    margin: 0;
+    text-align: left;
+    /* padding-bottom: 10px; */
+    padding: 0 0 10px 0;
+    /* hyphens: auto; */
+    hyphens: manual;
+    /* text-indent: 2em; */
 }
 .modal_img {
     width: calc(100vw - 40px); 
@@ -3519,9 +3539,10 @@ section {
     flex-wrap: wrap;
     align-items: center;
 }
-.why_top p {
-    /* max-width: 410px; */
-}
+/* below may not be needed */
+/* .why_top p {
+    max-width: 410px;
+} */
 #whyContent p {
     /* margin: 0 0 50px;
     padding: 40px 40px 20px 80px; */
@@ -3540,7 +3561,8 @@ section {
 #whyContent p:nth-child(2) {
     width: revert;
 }
-#coreValues {
+/* below may have all needed styles in GLOBAL */
+/* #coreValues { */
     /* display: flex;
     height:250px;
     background-color: #2C4A9A;
@@ -3550,7 +3572,7 @@ section {
     /* margin: auto 30px; */
     /* transform: scale(0.8);
     -webkit-transform: scale(0.8); */
-}
+/* } */
 /* #coreValues::before, #coreValues::after {
     display: flex;
     font-family: 'Spartan', sans-serif;
@@ -4245,9 +4267,10 @@ textarea:-moz-ui-invalid {
     width: 100%;
     text-align: left;
 }
-.large {
+/* below may not be needed */
+/* .large {
 
-}
+} */
 /* END NEW RULES 20211218 */
 .intro_container h2 {
     width: 100%;
@@ -4753,10 +4776,11 @@ em {
 .portfolio_img_web {
     max-width: 400px;
 }
-.item_details {
-    /*margin-top: 50px;*/
-    /*padding-left: 10px;*/
-}
+/* below may not be needed */
+/* .item_details {
+    margin-top: 50px;
+    padding-left: 10px;
+} */
 /*.item_details li{*/
     /*text-align: center;*/
     /*margin-left: 80px;
@@ -4875,9 +4899,10 @@ em {
 }
 /* For animated svg portfolio_item_main, add a specific svg
     as the portfolio_item_container is smaller in this section*/
-.gmj_logo h4 {
-    /* padding-bottom: 20px; */
-}
+/* below may not be needed */
+/* .gmj_logo h4 {
+    padding-bottom: 20px;
+} */
 .portfolio_svg_anim #gmj_anim {
     /* max-width: 300px; */
     min-width: 200px;
