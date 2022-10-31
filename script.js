@@ -1002,6 +1002,12 @@ $(function(){
         $('body, html').css('overflow-y', 'hidden');
         //$('.modal_screen').css({'top':mTop + 'px'}).addClass('m_s_o_mobile');
         $('.modal_screen').addClass('m_s_o_mobile');
+        $('.home_link').removeAttr('href');
+        //$('.home_link').unbind('click');
+        // $('.home_link').addClass('disabled');
+        // if ($('.home_link').hasClass('disabled')){
+        //     event.preventDefault();
+        // }
         // Below is to prevent unwanted page jumping after click
         return false;
     })
@@ -1009,6 +1015,9 @@ $(function(){
 $(function(){
     $('.close_mobile').on('click touch', function(event){
         event.preventDefault();
+        $('.home_link').attr('href','#');
+        //$('.home_link').bind('click');
+        //$('.home_link').removeClass('disabled');
         $('body, html').css('overflow-y', 'scroll');
         $('.modal_screen').removeClass('m_s_o_mobile').one('transitionend', function(e){
             // $(this).css({'display':'none'});
