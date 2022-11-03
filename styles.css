@@ -1188,6 +1188,7 @@ p.modal_intro {
     margin-bottom: 40px;
     position: relative;
     z-index: 202;
+    cursor: zoom-in;
 }
 /* late 2022 modal close button design below */
 /* was close_modal2 previously */
