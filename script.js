@@ -57,20 +57,376 @@ $(document).ready(function() {
 /////////////////////////////////////////////////
 // Cleaned up menu button script - 20220927
 /////////////////////////////////////////////////
+
+//=== New attempt 20221102
+// $(document).ready(function(){
+//     var mn = $('#menu');
+//         mb = $('#menuButton');
+//         mo = 'menuOpen';
+//         mi = $('.menuItem');
+//         mg = $('#menu,#menuButton,.menuItem');
+//     function menuOpen(){
+//         mn.toggleClass(mo);
+
+
+        //menuItemClicked()
+        // if($('this').not('.menuItem, #menuButton') && mn.hasClass(mo)){
+        //     mn.removeClass(mo);
+        // }
+    //}
+    // function menuItemClicked(){
+    //     console.log('mIC ran')
+    //     if(mn.hasClass(mo)){
+    //         console.log('reached if')
+    //         mi.unbind('click touch').on('click touch', function(){
+    //             mn.removeClass(mo)
+    //         })
+    //         $('body').not(mg).unbind('click touch').on('click touch',function(){
+    //             mn.removeClass(mo)
+    //             console.log('second if')
+    //         })
+    //     }
+        // mi.unbind('click touch').on('click touch', function(){
+        //     console.log('mIC ran')
+        //     if(mn.hasClass(mo)){
+        //         mn.removeClass(mo)
+        //         console.log('reached if')
+        //     }
+        // })
+        // $('body').not(mg).unbind('click touch').on('click touch',function(){
+        //     console.log('mIC body');
+        //     if(mn.hasClass(mo)){
+        //         mn.removeClass(mo)
+        //         console.log('second if')
+        //     }
+        // })
+    //}
+
+
+    // mb.on('click touch',menuOpen)
+    // mi.on('click touch', function(){
+    //     mn.toggleClass('menuOpen');
+    // });
+
+
+    // $(document.body).not(mg).unbind('click touch').on('click touch', function(){
+    //     if(mn.hasClass(mo)){
+    //         mn.removeClass(mo)
+    //     }
+    // })
+//})
+
+//=== final attempt for 20221102
+//=== did not work - *ragequit*
+// $(document).ready(function(){
+//     var mn = $('#menu');
+//         mb = $('#menuButton');
+//         mo = 'menuOpen';
+//         mi = $('.menuItem');
+//         mg = $('#menu').add('#menuButton').add('.menuItem');
+//     function menuClose(){
+//         mn.removeClass(mo);
+//     }
+//     mb.on('click touch',function(){
+//         if(!mn.hasClass(mo)){
+//             mn.addClass(mo)
+//             console.log('menu not open')
+//         } else if (mn.hasClass(mo)){
+//             $('body').not(mg).on('click touch',menuClose)
+//                 //menuClose()
+//             console.log('clicked off-menu')
+//         } else {
+//             menuClose()
+//         }
+//         console.log('menu WAS open')
+//     })
+            
+// })
+
+//=== New attempt placing emphasis on using callback
+//=== 20221103, but copying basic premise of this script
+//=== from over a month ago, when it worked...
+///////////////////////////////////////////////////
+//      KEEP BELOW SHOULD ALTERNATIVE CODE FAIL  //
+///////////////////////////////////////////////////
 $(document).ready(function(){
-    $('#menuButton').on('click touch', function(){
+    // opens menu
+    $('#menuButton,.menuItem').on('click touch', function(){
         $('#menu').toggleClass('menuOpen');
+        console.log('menu control ran')
     });
-    $('.menuItem','#menu').on('click touch', function(){
-        $('#menu').toggleClass('menuOpen');
-    });
+    //closes menu after button in menu is clicked
+    // $('.menuItem').on('click touch', function(){
+    //     $('#menu').toggleClass('menuOpen');
+    // })
 });
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+//=== Same as above, but attempting to use callback
+//=== 20221103
+// $(document).ready(function(){
+//     var mb = $('#menuButton');
+//         mn = $('#menu');
+//         mi = $('.menuItem');
+//         mo = 'menuOpen';
+//         mg = $('#menuButton,#menu,.menuItem');
+//     function togMenu(){
+//         mn.toggleClass(mo);
+//         console.log('toggle func ran...')
+//     };
+//     function closeMenu(){
+//         console.log('closed menu...')
+//         //e.preventDefault();
+//         mn.removeClass(mo);
+//     };
+//     // may not need below function
+//     function openMenu(){
+//         mn.addClass(mo);
+//     };
+//     function menuControl(){
+//         if($('#menu').hasClass('menuOpen')){
+//             //$('*').not($('#menu,#menuButton')).on('click touch', closeMenu);
+//             //$('.menuItem').on('click touch', closeMenu());
+//             closeMenu();
+//             console.log('clickOff ran...');
+//         } else {
+//             //$('#menuButton').on('click touch', togMenu());
+//             togMenu();
+//             console.log('menu opened');
+//             return false;
+//         }
+//     }
+//     function menuControl2(){
+//         $('*').not($('#menu,#menuButton')).on('click touch', function(){
+//             if($('#menu').hasClass('menuOpen')){
+//                 closeMenu();
+//                 console.log('clickOff ran...');
+//             } else {
+//                 $('#menuButton').on('click touch', togMenu());
+//                 console.log('menu opened');
+//             }
+//         });
+//     }
+//     function clickOff(){
+//         console.log('cOff initialized');
+//         if(mn.hasClass(mo)){
+//             $('*').not(mg).on('click touch', closeMenu);
+//             mi.on('click touch', togMenu);
+//             console.log('clickOff ran...');
+//         } else {
+//             console.log('menu not open...')
+//             return false
+//         }
+//     }
+
+    //=== below did not work
+    // opens menu
+    // mb.on('click touch', function(){
+    //     console.log('first click on menu button')
+    //     togMenu(clickOff);
+    // });
+    //$('#menuButton').on('click touch',menuControl);
+    //mb.on('click touch', togMenu);
+
+//     $('*').not($('#menu,#menuButton')).unbind('click touch').on('click touch',menuControl);
+// });
+
+//=== 20221103 event and target approach
+//=== abandoning click-off-menu close menu functionality
+//=== if this is required to be employed, i wont have a job
+// $(document).ready(function(){
+//     var mb = $('#menuButton');
+//         mn = $('#menu');
+//         mi = $('.menuItem');
+//         mo = 'menuOpen';
+//         mg = $('*').not($('#menu,#menuButton,.menuItem'));
+//     function togMenu(){
+//         //e.preventDefault();
+//         mn.toggleClass(mo);
+//         //menuControl1;
+//         setTimeout(function(){
+//             if (mn.hasClass(mo) === true){
+//                 $('*').not(mg).on('click touch',closeMenu);
+//                 console.log('truthy')
+//             } else {
+//                 mn.toggleClass(mo);
+//                 //return false
+//             }
+//         },0)
+//         console.log('toggle func ran...')
+//     };
+//     function closeMenu(){
+//         //e.preventDefault();
+//         mn.removeClass(mo);
+//         //mi.off('click touch');
+//         closeOff;
+//         console.log('closed menu...')
+//         //return false
+//     };
+//     function closeOff(){
+//         //mi.off('click touch');
+//         $('*').not(mg).off('click touch');
+//         console.log('closeOff ran');
+//     }
+//     function starOff(){
+//         $('*').not(mg).off('click touch');
+//     }
+//     function mouseLeave(){
+//         mn.on('mouseout', function(){
+//             menuControl1();
+//         })
+//     }
+//     function menuControl1(){
+//         if (mn.hasClass(mo)){
+//             $(mi).on('click touch',closeMenu(closeOff));
+//             $('*').not(mg).on('click touch',closeMenu(closeOff))
+//             console.log('truthy')
+//         } else {
+//             console.log('false')
+//             return false
+//         }
+//         console.log('menuControl ran');
+//     }
+    //=== Dont really want to add listener to window
+    //=== also, didnt work just went to 1st console.log
+    // $(window).on('click touch', function(e){      
+    //     console.log('click registered')
+    //     if ($(e.target).is(mb) === true){
+    //         togMenu();
+    //         console.log('first level 1st IF')
+    //     } else if ($(this).is(mg) && mn.hasClass(mo)){
+    //         closeMenu();
+    //         console.log('first level 2nd IF')
+    //     } else {
+    //         return false
+    //     }
+    // })
+
+//     mb.add(mi).on('click touch',togMenu)
+
+// })
+//})
+//=== Below was not working as intended - may abandon
+//=== closing menu when clicking off menu...
+// var mn = $('#menu');
+//     mb = $('#menuButton');
+//     mo = $('.menuOpen');
+// $(document).ready(function(){
+//     var mn = $('#menu');
+//         mb = $('#menuButton');
+//         mo = 'menuOpen';
+//         mi = $('.menuItem');
+        //=== below var was the culprit for adding class to all menu items on click
+        //mg = $.merge(mn,mi);
+    //     mg = $('#menuButton,.menuItem')
+    
+    // function menuOC(){
+        //e.stopPropagation();
+        // mn.toggleClass(mo);
+        // console.log('common function');
+        // if(mn.hasClass(mo)){
+        //     mg.on('click touch', function(){
+        //         mn.toggleClass(mo)
+        //     })
+        //     console.log('items visible')
+        // }else{
+        //     mn.removeClass(mo)
+        //     console.log('clicked outside')
+        // }
+        //clickOff();
+        //$(document).on('click touch',clickOff);
+        //return true;
+    //};
+    // function clickOff(){
+    //     $(document).on('click touch', function(e){
+    //         if($(e.target).not(mn)){
+    //             mn.removeClass(mo);
+    //         }
+    //     })
+    // }
+    // mb.on('click touch', () => {
+    //     menuOC().done((e) => {
+    //         if(e.target(!mn)){
+    //             mn.removeClass(mo);
+    //         }
+    //     });
+    // });
+    //mb.on('click touch',menuOC);
+    //=== below was adding menuOpen to all items in menu
+    //== maybe not, behaviour still there after commenting out...
+    //$.merge(mb,mi).on('click touch', menuOC)
+    
+    //$(mb,mi).on('click touch', menuOC)
+    //});
+    // mi.on('click touch', function(){
+    //     mn.toggleClass('menuOpen');
+    // });
+    // if (mn.hasClass(mo)){
+    //     console.log('if reached');
+    //     $('html').on('click touch', menuOC, function(){
+    //         console.log('inner if function');
+    //         //mn.toggleClass(mo);
+    //     })
+    // }
+
+//});
+
+// $(document).ready(function(){
+//     $('body').not(mg).on('click touch', function(){
+//         if (mn.hasClass('menuOpen')){
+//             console.log('NEW if reached');
+//             mn.removeClass(mo);
+//         }
+//     })
+// });
+
+//=== New approach 20221031 ==//
+//=== combining above attempts into one promise function
+// $(document).ready(function(){
+//     var mn = $('#menu');
+//         mb = $('#menuButton');
+//         mo = 'menuOpen';
+//         mi = $('.menuItem');
+//         mg = $.merge(mn,mi,mb);
+    
+//     function menuOC(){
+//         mn.toggleClass(mo);
+//         //.stopPropagation();
+//         console.log('common function')
+//     };
+//     function clickOff(e){
+//         if(!$(mg).is(e.target)){
+//             $('#menu').removeClass('menuOpen');
+//         }
+//     };
+//     $.merge(mb,mi).on('click touch', () => {
+//         menuOC().promise().done(() => {
+//             if ($('#menu').hasClass('menuOpen')) {
+//               $(document).on('mouseup', clickOff) // Only listen for mouseup when menu is active...
+//             } else {
+//               $(document).off('mouseup', clickOff) // else remove listener.
+//             }
+//         })
+//     })
+// });
+//=== New approach above DID NOT WORK!!! 20221031
+
+//});
 // More attempts to close menu when clicking off element
 // 20220927
-$(document).ready(function(){
-    $('#menuButton').on('click touch focusout', function(event){
-        event.stopPropagation();
-        $('#menu').show().toggleClass('menuOpen');
+//$(document).ready(function(){
+    //=== New attempt at off focus menu close 20221031
+    // if (mn.hasClass(mo)){
+    //     console.log('if reached');
+    //     $('html').on('click touch', function(){
+    //         console.log('inner if function');
+    //         mn.toggleClass(mo);
+    //     })
+    // }
+//});
+    //$('#menuButton').on('click touch focusout', function(event){
+        //event.stopPropagation();
+        //$('#menu').show().toggleClass('menuOpen');
 
         // $('html').on('click touch', function(e){
         //     if (e.target !== ($('#menuButton')||$('#menu').children())){
@@ -81,28 +437,36 @@ $(document).ready(function(){
         //     }
         // })
 
-    });
-    $('#menu').children().on('click touch', function(event){
-        event.stopPropagation();
-        $('#menu').toggleClass('menuOpen');
-    });
-    $('html').on('click touch', function(e){
-        if (e.target !== ($('#menuButton'))){
-            $('#menu').hide(100);
-            setTimeout(function(){
-                $('html').off('click touch');
-                $('#menu').toggleClass('menuOpen');
-            }(50))
-        }else{}
-    })
-});
+    //});
+    // $('#menu').children().on('click touch', function(event){
+    //     event.stopPropagation();
+    //     $('#menu').toggleClass('menuOpen');
+    // });
+
+    //=== Below would register before clicking on #menu
+    //=== .menuOpen was only added after second click on
+    //=== #menu, but nothing was visible as the below code
+    //=== overrides visibility with .hide()
+    // $('html').on('click touch', function(e){
+    //     if (e.target !== ($('#menuButton')) && $('#menu').hasClass('menuOpen')){
+    //         $('#menu').hide(100);
+    //         console.log('off menu')
+    //         setTimeout(function(){
+    //             $('html').off('click touch');
+    //             $('#menu').toggleClass('menuOpen');
+    //         }(50))
+    //     }else{}
+    // })
+
+//});
 //MOBILE & TABLET Menu button action//
-$(document).ready(function(){
+//$(document).ready(function(){
     // opens menu
-    $('#menuButton').on('click touch', function(){
+    //$('#menuButton').on('click touch', function(){
     // Below is for dev purposes
         //$('#menu').addClass('menuOpen');
-        $('#menu').toggleClass('menuOpen');
+        //console.log('top lvl open');
+        //$('#menu').toggleClass('menuOpen');
     // Attempt to collapse menuItem elements
         /*$('#menu').on('click touch', function(){
             $('.menuItem').each(function(i){
@@ -112,10 +476,11 @@ $(document).ready(function(){
                 }, i*200);
             });
         });*/
-    });
+    //});
     //closes menu after button in menu is clicked
-    $('.menuItem','#menu').on('click touch', function(){
-        $('#menu').toggleClass('menuOpen');
+    // $('.menuItem','#menu').on('click touch', function(){
+    //     $('#menu').toggleClass('menuOpen');
+    //     console.log('top lvl close');
         /*$('.menuItem').each(function(i){
             if ($('#menu').hasClass('menuOpen'))
             setTimeout(function(){
@@ -123,8 +488,8 @@ $(document).ready(function(){
             }, i*200);
         });*/
         //$('#menu').toggleClass('menuButtonOpen');
-    });
-});
+    //});
+//});
 
 /////////////////////////////////////////////////////
 //           ASC Title Bar Scroll Animation        //
@@ -1405,4 +1770,4 @@ let Nick_Moore = ["your", "new", "employee"];
 //         }
 //     })
 // })
-
+//})
