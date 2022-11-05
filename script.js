@@ -153,7 +153,7 @@ $(document).ready(function(){
     // opens menu
     $('#menuButton,.menuItem').on('click touch', function(){
         $('#menu').toggleClass('menuOpen');
-        console.log('menu control ran')
+        //console.log('menu control ran')
     });
     //closes menu after button in menu is clicked
     // $('.menuItem').on('click touch', function(){
@@ -1367,6 +1367,14 @@ $(function(){
         $('body, html').css('overflow-y', 'hidden');
         //$('.modal_screen').css({'top':mTop + 'px'}).addClass('m_s_o_mobile');
         $('.modal_screen').addClass('m_s_o_mobile');
+
+        //=== below new on 20221104
+        $('#headerMT').addClass('headerMT_modal');
+        $('.head_flex').addClass('mobile_modal');
+        $('#menuButton').addClass('mb_modal_open');
+        //$('.modal_head_frame').addClass('mh_frame_open');
+        //$('.modal_frame_title').addClass('mf_title_open');
+
         $('.home_link').removeAttr('href');
         //$('.home_link').unbind('click');
         // $('.home_link').addClass('disabled');
@@ -1390,6 +1398,11 @@ $(function(){
             $('.modal_scroll').scrollTop(0);
             $('.modal_content_00, .modal_content_01').hide();
         })
+        //=== new on 20221104
+        $('#headerMT').removeClass('headerMT_modal');
+        $('.head_flex').removeClass('mobile_modal');
+        $('#menuButton').removeClass('mb_modal_open');
+
     })
 })
 // ****NOTE: Use "return false;" within click function to help
