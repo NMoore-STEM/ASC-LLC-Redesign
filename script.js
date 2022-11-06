@@ -1372,6 +1372,9 @@ $(function(){
         $('#headerMT').addClass('headerMT_modal');
         $('.head_flex').addClass('mobile_modal');
         $('#menuButton').addClass('mb_modal_open');
+        // setTimeout(function(){
+        //     $('#menuButton').fadeOut();
+        // },300);
         //$('.modal_head_frame').addClass('mh_frame_open');
         //$('.modal_frame_title').addClass('mf_title_open');
 
