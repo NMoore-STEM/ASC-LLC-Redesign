@@ -1536,6 +1536,8 @@ header {
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    transition: all ease 150ms;
+    transition-delay: 350ms;
 }
 .initial {
     visibility: hidden;
@@ -1545,7 +1547,8 @@ header {
 .show {
     visibility: visible;
     opacity: 1;
-    transition: all 0.7s ease;
+    /* below was commented out on 20221105, may still need? */
+    /* transition: all 0.7s ease; */
 }
 .initial #menuButton {
     display: block !important;
@@ -1596,7 +1599,7 @@ header {
     height: 53px;
     overflow: hidden;
     transition: all ease 300ms;
-    /* transition-delay: 700ms; */
+    transition-delay: 300ms;
 }
 #menu {
     /*display: block;*/
@@ -2934,7 +2937,7 @@ unique urls for each class */
     height: 60px;
     background-color: #662D91;
     transition: all ease 300ms;
-    transition-delay: 700ms;
+    /* transition-delay: 700ms; */
 }
 .mobile_modal {
     filter: hue-rotate(30deg);
@@ -2944,7 +2947,7 @@ unique urls for each class */
 .mb_modal_open {
     height: 0;
     transition: all ease 300ms;
-    transition-delay: 700ms;
+    /* transition-delay: 700ms; */
 }
 .modal_screen {
     position: fixed;
@@ -2954,7 +2957,7 @@ unique urls for each class */
     margin: 0;
     background-color:rgb(43, 57, 96);
     transform: translate(100vw);
-    transition: transform ease 0.5s;
+    transition: transform ease-in 250ms;
     z-index: 199;
     left: 0;
     top: 100px;
