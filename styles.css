@@ -1036,19 +1036,20 @@ precedence over other classes when this class is added to an element from the sc
     flex-direction: column; */
     /* height: 100%; */
 /* } */
-.modal_unit_l {
+/* below commented out on 20221108 */
+/* .modal_unit_l {
     position: relative;
     display: flex;
     padding: 0 20px;
     margin-bottom: 40px;
-}
-.modal_unit_r {
+} */
+/* .modal_unit_r {
     position: relative;
-    display: flex;
+    display: flex; */
     /* justify-content: space-evenly; */
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse;
     margin-bottom: 40px;
-}
+} */
 /* below is original class */
 /* .modal_img { */
     /* position: absolute; */
@@ -1064,14 +1065,15 @@ precedence over other classes when this class is added to an element from the sc
 /* .m_img_l {
 
 } */
-.m_img_r {
+/* below may not be needed on 20221108 */
+/* .m_img_r {
     min-width: 200px;
     max-width: 350px;
     margin-bottom: 40px;
     z-index: 202;
     box-shadow: -20px 20px 0 black;
     box-shadow: -20px 20px 0 #2C4A9A;
-}
+} */
 .modal_info_bg {
     position: absolute;
     width: -moz-available;
@@ -1086,18 +1088,19 @@ precedence over other classes when this class is added to an element from the sc
     margin-right: 40px;
     background-color: #253C84;
 }
+/* below kept as placeholder if rules need to be global */
 .modal_info_bg_r {
-    position: absolute;
+    /* position: absolute;
     width: -moz-available;
-    display: flex;
+    display: flex; */
     /* align-items: center; */
-    margin-top: 40px;
+    /* margin-top: 40px;
     background-color: #2C4A9A;
     z-index: 200;
     height: calc(100% - 40px);
     margin-left: 60px;
     margin-right: 40px;
-    background-color: #253C84;
+    background-color: #253C84; */
 }
 .modal_details {
     text-align: right;
@@ -1185,7 +1188,7 @@ p.modal_intro {
 .modal_img {
     min-width: 200px;
     max-width: 350px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     position: relative;
     z-index: 202;
     cursor: zoom-in;
@@ -2930,8 +2933,9 @@ unique urls for each class */
 .details_arrow {
     height: 25px;
     width: 25px;
-    right: 0;
+    /* right: 0; */
     position: absolute;
+    left: 0;
 }
 /* .modal_screen {
     width: 100vw;
@@ -3051,10 +3055,16 @@ unique urls for each class */
 .modal_flex {
     padding: 0 20px;
 }
-.modal_unit_l, .modal_unit_r {
+.modal_unit {
+    display: flex;
+    margin-bottom: 40px;
     padding: 0;
     flex-direction: column-reverse;
 }
+/* .modal_unit_l, .modal_unit_r {
+    padding: 0;
+    flex-direction: column-reverse;
+} */
 .modal_info_bg {
     position: static;
     margin: 30px 0 0 0;
@@ -3073,7 +3083,9 @@ unique urls for each class */
     /* text-indent: 2em; */
 }
 .modal_img {
-    width: calc(100vw - 40px); 
+    width: calc(100vw - 40px);
+    margin-bottom: 0;
+    box-shadow: 0 0 transparent;
 }
 .close_modal {
     display: none;
@@ -4958,6 +4970,50 @@ em {
 }
 .modal_screen {
     display: none;
+}
+.modal_unit {
+    display: flex;
+    flex-direction: row;
+}
+.modal_unit>a {
+    max-width: 350px;
+}
+.modal_unit_alt {
+    flex-direction: row-reverse;
+    margin-left: 20px;
+}
+.modal_img {
+    /* margin-bottom: 40px; */
+}
+/* below moved from global to FULL on 20221108 */
+.modal_info_bg {
+    display: flex;
+    align-items: flex-end;
+    background-color: #2C4A9A;
+    z-index: 200;
+    flex-direction: column;
+    position: static;
+}
+.modal_info_alt {
+    /* position: absolute; */
+    /* width: -moz-available; */
+    display: flex;
+    /* align-items: center; */
+    /* margin-top: 40px; */
+    background-color: #2C4A9A;
+    z-index: 200;
+    /* height: calc(100% - 40px);
+    margin-left: 60px;
+    margin-right: 40px; */
+    background-color: #253C84;
+    margin: 0 20px 0;
+}
+.modal_details {
+    text-align: left;
+    /* width: auto; */
+    padding: 0;
+    margin-block-start: 0;
+    width: 100%;
 }
 /* is the below rule needed still? */
 #graphic_design .portfolio_item_container:nth-of-type(3) {

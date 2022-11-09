@@ -1398,7 +1398,7 @@ $(function(){
         $('.modal_screen').removeClass('m_s_o_mobile').one('transitionend', function(e){
             // $(this).css({'display':'none'});
             //$('.g_modal').scrollTop(0);
-            $('.modal_scroll').scrollTop(0);
+            $('.modal_scroll').scrollTop(0,0);
             $('.modal_content_00, .modal_content_01').hide();
         })
         //=== new on 20221104
