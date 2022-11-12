@@ -4993,7 +4993,12 @@ em {
     z-index: 200;
     flex-direction: column;
     position: static;
+    margin-left: 25px;
+    margin-right: 55px;
 }
+/* may not need below class - 20221111 */
+/* was using this class to stagger text and img between untits
+in modal for FULL resolution */
 .modal_info_alt {
     /* position: absolute; */
     /* width: -moz-available; */
@@ -5006,7 +5011,9 @@ em {
     margin-left: 60px;
     margin-right: 40px; */
     background-color: #253C84;
-    margin: 0 20px 0;
+    /* margin: 0 20px 0; */
+    margin-right: 20px;
+    margin-left: 60px;
 }
 .modal_details {
     text-align: left;
@@ -5014,6 +5021,29 @@ em {
     padding: 0;
     margin-block-start: 0;
     width: 100%;
+}
+.four_img_box {
+    display: flex;
+    width: 350px;
+    height: 250px;
+    background-color: black;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 350px;
+}
+.four_img_box>a {
+    display: block;
+    width: 174px;
+    height: 124px;
+    overflow: hidden;
+    min-width: 174px;
+    min-height: 124px;
+    outline: 2px solid black;
+}
+.img_q {
+    width: 140%;
+    height: auto;
 }
 /* is the below rule needed still? */
 #graphic_design .portfolio_item_container:nth-of-type(3) {
