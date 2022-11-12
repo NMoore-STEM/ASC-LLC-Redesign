@@ -1,0 +1,1993 @@
+/*=====================================================================*/
+/*------------------  RESTRICTED - Global ----------------------------*/
+html {
+    /*height: 100%;*/
+    scroll-behavior: smooth;
+    overflow: auto;
+
+}
+body {
+    padding: 0;
+    margin: 0;
+    /*overflow-y: scroll;*/
+    overflow-y: auto;
+    overflow-x: hidden;
+    /*height: 100%;*/
+}
+h1, h2 {
+    color: white;
+    font-family: 'Spartan', sans-serif;
+}
+h3 {
+    font-family: 'Spartan', sans-serif;
+    color:  #91B4DF;
+}
+h4 {
+    font-family: 'Spartan', sans-serif;
+    font-size: 18pt;
+}
+i {
+    /* font-family: 'Crimson Pro', serif;
+    font-size: 6vw; */
+    font-size: 5.15vw;
+    font-family: 'Times New Roman', serif;
+    line-height: 0.78;
+}
+p, li {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #91B4DF;
+}
+::selection {
+    background: purple; /* WebKit/Blink Browsers */
+    color: #9D90C5;
+}
+::-moz-selection {
+    background: purple; /* Gecko Browsers */
+    color: #9D90C5;
+}
+.bg {
+    background-attachment: fixed;
+    width: 100%;
+    background-color: #16142D;
+    background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
+}
+/* Below is to give h1/top of portfolio some style that differs from rest of Doc */
+#title_cred {
+    background-color: #16142D;
+    margin-top: 30px;
+    width: 100%;
+}
+.cred_arr {
+    font-size: 30pt;
+    color: skyblue;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-top: 180px;
+    max-width: max-content;
+}
+.cred_arr::before {
+    content: "let";
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    color: lightblue;
+    color: royalblue;
+    padding-right: 15px;
+    font-size: 16pt;
+}
+.cred_arr::after {
+    content: "\003D";
+    padding-left: 15px;
+    font-size: 18pt;
+    color: lightblue;
+    color: #ffffff;
+}
+.arr_prop {
+    position: relative;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16pt;
+    color: peru;
+    white-space: pre;
+    margin: 0 auto;
+    padding: 0 0 180px;
+    max-width: max-content;
+}
+.arr_prop::before, .arr_prop::after {
+    position: relative;
+    color: #ffffff;
+    font-size: 20pt;
+    font-weight: bolder;
+}
+.arr_prop::before {
+    content: "\005B";
+}
+.arr_prop::after {
+    content: "\005D\003B";
+}
+.section_heading {
+    margin-bottom: -30px;
+    color: #456299;
+    width: max-content;
+}
+.intro_container {
+    background-color: #253C84;
+}
+.intro_bg {
+    display: block;
+    background-color: #2C4A9A;
+}
+.intro_bg p {
+    text-align: left;
+}
+.gitHub_icon {
+    background-image: url('images/gh_wh.svg');
+    height: 40px;
+    display: block;
+    background-repeat: no-repeat;
+}
+.gh_text {
+    display: flex;
+    justify-content: center;
+}
+/* Added to see if portfolio items can have global rules */
+.portfolio_item_main {
+    position: relative;
+    margin-bottom: 80px;
+    padding: 0;
+    max-width: 340px;
+    width: 340px;
+}
+.web_dev_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2C4A9A;
+}
+.portfolio_item_main h4 {
+    padding: 30px 20px 30px;
+    color: #ffffff;
+}
+.portfolio_item_sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #253C84;
+}
+.portfolio_img_web, .portfolio_img_graphic {
+    max-width: 340px;
+    /* Below to allow framing from the parent container */
+    max-width: 320px;
+}
+/* Should make a common class for web dev portfolio screenshots and just include
+unique urls for each class */
+#asc_img {
+    background-image: url('./images/asc_screen_600X330.png');
+    background-size: cover;
+    height: 174px;
+    width: 100%;
+    max-width: 320px;
+    z-index: 1;
+}
+#lab_img {
+    background-image: url('./images/Bailey_sample02.png');
+    background-size: cover;
+    height: 174px;
+    width: 100%;
+    max-width: 320px;
+    z-index: 1;
+}
+.pb_container {
+    display: flex;
+    width: 320px;
+    gap: 10px;
+    padding: 10px;
+    background-color: #2C4A9A;
+}
+.portfolio_dev_icon {
+    display: flex;
+    width: 60vw;
+    max-width: 275px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 15px;
+}
+.code_icon {
+    height: 35px;
+}
+.item_details {
+    color: #91B4DF;
+    font-family: 'Spartan', sans-serif;
+    margin: 15px 0 35px;
+    padding: 0;
+    /* Added 20210308 */
+    width: 300px;
+}
+.item_details li {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0 0 0 50px;
+}
+.item_placeholder {
+    display: grid;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    font-size: 20pt;
+    text-shadow: 0 0 2px white, 0 6px 1px black;
+    color: #B1C7E1;
+    cursor: crosshair;
+    opacity: 0.4;
+    line-height: 2;
+    height: 174px;
+    width: 100%;
+    z-index: 1;
+    max-width: 280px;
+    align-content: center;
+    border: 20px solid #253C84;
+    margin: 0 0 10px;
+    outline: 20px solid #213160;
+    /* This may not work in IE - make sure to test */
+    outline-offset: -40px;
+    background-color: #11182d;
+}
+/* For <a> inside of portfolio items - did away with <button> parent */
+.port_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #553692;
+    background-color: #532B9E;
+    background-color: #662D91;
+    box-shadow: 2px 2px 0 #322749;
+    transition: all 0.3s linear;
+    font-size: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    border: none;
+    height: 40px;
+    box-shadow: 0 10px 0 -6px #322749;
+    box-shadow: 0 6px 4px -6px #322749;
+}
+/* Style for clicked/touched/tabbed/focused */
+.port_button:any-link:-moz-focusring, 
+.port_button:focus-visible,
+.contactButton:any-link:-moz-focusring,
+.contactButton:focus-visible {
+    outline: 1px solid darkgray;
+}
+.port_button:any-link:-moz-focusring, 
+.port_button:focus-visible {
+    filter: brightness(1.2);
+    transition: 0.3s ease-in;
+}
+.pb_text {
+    color: #BDB0E6;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-bottom: 3px;
+    transition: all 0.2s ease;
+}
+/* Graphic design section */
+.graphic_item {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 6px 4px -6px black;
+    background-color: #253C84;
+}
+.graphic_item h4 {
+    padding: 10px;
+    background-color: #2C4A9A;
+}
+/* Might need to just use below rule instead of above if standardizing portfolio item formatting */
+.portfolio_item_main h4 {
+    background-color: #2C4A9A;
+}
+/*====================================================*/
+/*===========================*/
+/*================================*/
+/*====================================================*/
+/* Graphic Design Portfolio Item Details Window/Modal */
+/* will need to cut some properties and paste in correct viewports */
+.modal_screen {
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(36, 15, 33, 0);
+    transition: background-color ease 1.2s;
+}
+.m_screen_fade {
+    background-color: rgba(36, 15, 33, 0.6);
+    transition: background-color ease 1.2s;
+}
+/* Below might be needed for a smooth, fading transition of modal */
+@keyframes modal_fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes modal_alpha {
+    from {background-color: rgba(36, 15, 33, 0);}
+    to {background-color: rgba(36, 15, 33, 0.6);}
+}
+/* might need to CSS transition background color as all child elements
+also transition opacity with how it is writter currently */
+.m_screen_open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+    backdrop-filter: blur(1.2px);
+    -webkit-backdrop-filter: blur(1.2px);
+    transition: background-color ease 0.3s;
+}
+.m_s_o {
+    display: block;
+    visibility: visible;
+}
+/* reverse animation, may not be needed */
+.m_screen_closing {
+    animation: modal_alpha 1s ease reverse;
+}
+/* Added after modal HTML restructuring 20220903 */
+.modal_content_00 {
+    display:none;
+}
+.modal_content_01 {
+    display:none;
+}
+.modal_info_bg {
+    position: absolute;
+    width: -moz-available;
+    display: flex;
+    justify-content: right;
+    margin-top: 40px;
+    background-color: #2C4A9A;
+    z-index: 200;
+    height: calc(100% - 40px);
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: #253C84;
+}
+.modal_details {
+    text-align: right;
+    width: 100%;
+    width: calc(100% - 375px);
+    padding-right: 30px;
+    font-size: 12pt;
+    padding-top: 20px;
+}
+.modal_details_r {
+    text-align: left;
+    width: 100%;
+    width: calc(100% - 375px);
+    padding-left: 30px;
+    font-size: 12pt;
+    padding-top: 20px;
+}
+/* Alternate modal design rules */
+/* Late 2022 design */
+/* was previously modal_flex2 */
+.modal_flex {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    background-color: #253C84;
+}
+/* Late 2022 design */
+/* was previously g_modal2 */
+.g_modal {
+    position:absolute;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 20vh 15vw 10vh;
+    height: 70vh;
+    background-color:rgb(43, 57, 96);
+    transition: opacity ease-in 150ms, transform ease 300ms;
+    transform: scale(0.2);
+    transform-origin: top center;
+    opacity: 0;
+    overflow: hidden;
+}
+/* Late 2022 design */
+/* was previously g_modal_open2 */
+.g_modal_open {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    overflow-x: hidden;
+    margin: 20vh 15vw 10vh;
+    height: 70vh;
+    width: auto;
+    background-color:rgb(43, 57, 96);
+    transition: opacity ease-in 150ms, transform ease-out 300ms;
+    transform: scale(1);
+    transform-origin: top center;
+    opacity: 1;
+}
+/* Late 2022 design */
+/* was previously modal_top2 */
+.modal_top {
+    display: block;
+    background-color: #253C84;
+    background-color: #2C4A9A;
+    padding-left: 20px;
+}
+/* Late 2022 design */
+/* was previously modal_title2 */
+.modal_title {
+    padding: 20px 0;
+    background-color: #2C4A9A;
+    padding: 20px 0 0;
+}
+/* Late 2022 design */
+/* was previously p.modal_intro2 */
+p.modal_intro {
+    text-align: left;
+    padding: 0 0 20px 30px;
+    margin: 0;
+}
+/* Late 2022 design */
+/* was previously modal_img2 */
+.modal_img {
+    min-width: 200px;
+    max-width: 350px;
+    position: relative;
+    z-index: 202;
+    cursor: zoom-in;
+}
+/* late 2022 modal close button design below */
+/* was close_modal2 previously */
+.close_modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top: calc(20vh + 27px);
+    right: calc(15vw + 30px);
+    background-color:rgb(86, 54, 148);
+    background-color: #4C206C;
+    background-color: #662D91;
+    cursor: pointer;
+    z-index: 204;
+    border: 1px rgb(149, 91, 234) solid;
+    will-change: transform;
+    transition: opacity ease 150ms;
+}
+.close_modal:hover {
+    animation: springy 100ms ease forwards;
+}
+@keyframes springy {
+    0%{transform:scale(1);}
+    63%{transform:scale(1.3);}
+    100%{transform:scale(1.15);box-shadow:0 5px 6px -3px black;}
+}
+.show_close {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity ease 700ms;
+}
+.modal_scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(70vh - 98px);
+    width: auto;
+}
+/* alt stroke color for close button on modal
+/* rgb(149, 91, 234)*/
+.svg_item_heading {
+    background-color: #253C84;
+    width: auto;
+    width: 100%;
+    height: 100px;
+    /* below added after 20221018 */
+    /* may need to declare only for FULL resolution */
+    display: flex;
+    align-items: center;
+    background-color: #2C4A9A;
+}
+.gmj_logo .portfolio_svg_anim {
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    /* below added after 20221018 */
+    height: 500px;
+    display: flex;
+    align-items: center;
+    width: 340px;
+}
+.gmj_logo h4 {
+    font-size: 12pt;
+    font-weight: lighter;
+}
+.gmj_ph {
+    background-image: url('restricted/images_secure/gmj_still.svg');
+    background-color:#253C84;
+    position: absolute;
+    width: 340px;
+    height: 350px;
+    background-size: contain;
+    top: 0;
+    /* below added after 20221018 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 340px;
+    height: 100%;
+}
+/*=== Special rule specifically for kanji svg animations ===*/
+/*== Might not be needed as there is no height specified in portfolio_item_main class ==*/
+/* Changed all items in this section to match height of tallest */
+/* below added 20221022 to consolidate some button styles for animated svg items */
+.svg_play_button {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #91B4DF;
+    border: 2px solid #BDB0E6;
+    transition: all 0.3s ease;
+    margin: 20px auto 20px;
+    appearance: none;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12pt;
+    background-color: #253C84;
+    background-color: #662D91;
+    color: #91B4DF;
+    color: #BDB0E6;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 2px black;
+    /* new style after 20221022 */
+    top: -40px;
+    box-shadow: 0 4px 8px -1px black;
+}
+.kanji_12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.kanji_12 .portfolio_svg_anim {
+    position: relative;
+}
+.kanji_34 .portfolio_svg_anim {
+    position: relative;
+}
+.kanji_12_ph {
+    background-image: url('restricted/images_secure/kibou_still.svg');
+    background-color:#253C84;
+    position: absolute;
+    width: 340px;
+    height: 500px;
+    background-size: contain;
+    top: 0;
+}
+#kanji_1 {
+    padding-top: 43px;
+}
+#kanji_2 {
+    padding-top: 51px;
+}
+#kanji_3, #kanji_4 {
+    padding-top: 46px;
+}
+.kanji_34_ph {
+    background-image: url('restricted/images_secure/yuuki_still.svg');
+    background-color:#253C84;
+    position: absolute;
+    width: 340px;
+    height: 500px;
+    background-size: contain;
+    top: 0;
+}
+iframe {
+    border-style: none;
+}
+/*================================================================*/
+/*------------------ MOBILE - Portfolio/ Restricted --------------*/
+/*================================================================*/
+@media only screen and (max-width:770px) {
+/* Header/ Nav */
+.head_flex {
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    height: 100%;
+}
+.home_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    text-decoration: none;
+    z-index: 5;
+    height: 70%;
+    transform: scale(0.8);
+}
+.cred_head::before {
+    color: #91B4DF;
+    content: "[";
+    position: absolute;
+    left: -13px;
+    top: -3px;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bolder;
+}
+.cred_head::after {
+    color: #91B4DF;
+    content: "]";
+    position: absolute;
+    top: -3px;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bolder;
+}
+.cred_head {
+    position: relative;
+    color: #91B4DF;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    line-height: 0.9;
+}
+.cred_head_sub {
+    color: #91B4DF;
+    font-size: 12pt;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* Hero Styles */
+#title_cred {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+.arr_prop {
+    font-size: 14pt;
+    padding-bottom: 0;
+}
+#intro {
+    background-color: #213160;
+}
+#about {
+    background-color: #16142D;
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    box-shadow: 0 100px 40px 20px #16142D;
+}
+.section_heading {
+    font-size: 35pt;
+}
+.intro_bg {
+    padding: 20px 10px;
+}
+.intro_bg h3 {
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 3px;
+}
+.intro_bg p {
+    padding: 0 10px 0 30px;
+    margin: .75em 0;
+    font-size: 16px;
+    line-height: 1.3;
+}
+#about_me {
+    padding: 30px 0;
+}
+.top_cred_links {
+    padding: 5px;
+    background-color: #213160;
+}
+.top_cred_links a {
+    min-height: 70px;
+}
+.gitHub_icon {
+    width: 105px;
+    height: 32px;
+}
+.link_01 {
+    line-height: 1.77;
+    font-size: 14pt;
+}
+.intro_sub_container {
+    margin-top: 70px;
+    padding-bottom: 20px;
+}
+.intro_sub_container h2 {
+    margin-bottom: -70px;
+}
+#soft_skills {
+    display: flex;
+    padding: 50px 0 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#soft_skills h2 {
+    margin: 0;
+    font-size: 6vw;
+}
+.ss_bg {
+    background-color: #253C84;
+    padding: 0 15px 40px;
+}
+.section_heading sub {
+    display: block;
+    margin-top: -1vw;
+    text-align: right;
+    margin-bottom: 2vw;
+    font-size: 18pt;
+}
+#soft_skills li {
+    display: block;
+    padding: 8px;
+    margin: 4px;
+    font-size: 10pt;
+    background-color: #2C4A9A;
+}
+ul{
+    margin: 15px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 14pt;
+    color: #91B4DF;
+}
+#interests {
+    display: flex;
+    flex-direction: column;
+    background-color: #2C4A9A;
+    margin: 0 15px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    height: max-content;
+    max-width: 330px;
+    max-width: 290px;   
+}
+#interests h2 {
+    margin: 30px 0 0;
+    color: #91B4DF;
+    padding: 0;
+    text-align: left;
+    text-shadow: 0 1px 0 #2A385D;
+}
+#interests ul {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    padding: 0;
+    margin: 10px 0 0;
+    justify-content: center;
+}
+#interests li {
+    margin-left: 30px;
+    padding: 0;
+    list-style-type: circle;
+    font-size: 12pt;
+}
+#portfolio {
+    position: relative;
+}
+#portfolio h2 {
+    /*Nex style 20210306*/
+    padding: 0 0 0 20px;
+    z-index: 1;
+    top: 45px;
+    position: absolute;
+}
+#web_dev {
+    width: 0;
+    height: 0;
+}
+#front_end_dev {
+    max-width: 100vw;
+    background-color: #253C84;
+    /* New style 20210306 */
+    background-color: #213160;
+    padding-top: 80px;
+}
+#front_end_dev h3 {
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+    padding: 30px 10px;
+    letter-spacing: 3px;
+    background-color: #2C4A9A;
+    /*New style 20210306*/
+    border-top: 50px solid #253C84;
+}
+.first_overlay {
+    max-width: 100vw;
+    background-color: #253C84;
+}
+.section_top {
+    /*Might not need this class*/
+    width: 100%;
+}
+.section_top p {
+    text-align: left;
+    background-color: #2C4A9A;
+    margin: 0 15px;
+    padding: 0 10px 40px 25px;
+    line-height: 1.3;
+    white-space: break-spaces;
+    margin: 0;
+    width: auto;
+}
+.section_top em {
+    color: white;
+    font-style: normal;
+}
+.section_top .top_cred_links {
+    background-color: #253C84;
+    /* New style 20210306 */
+    margin: 0 0 80px;
+    padding: 35px 0 40px;
+}
+.top_cred_links p {
+    font-size: 12pt;
+    width: 300px;
+    padding: 0 20px;
+    margin: 0 auto -20px;
+    text-align: center;
+    background-color: transparent;
+}
+.portfolio_item_container {
+    margin: 30px 10px 30px;
+    /* New style 20210306 - might not be needed*/
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio_item_main {
+    margin-bottom: 80px;
+    padding: 0;
+    max-width: 340px;
+    width: 340px;
+}
+.web_dev_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2C4A9A;
+}
+.portfolio_item_main h4 {
+    padding: 30px 20px 30px;
+    color: #ffffff;
+}
+.portfolio_item_sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #253C84;
+}
+.portfolio_img_web, .portfolio_img_graphic {
+    max-width: 340px;
+}
+/* Should make a common class for web dev portfolio screenshots and just include
+unique urls for each class */
+#asc_img {
+    background-image: url('./images/asc_screen_600X330.png');
+    background-size: cover;
+    height: 174px;
+    width: 100%;
+    max-width: 320px;
+    z-index: 1;
+}
+#lab_img {
+    background-image: url('./images/Bailey_sample02.png');
+    background-size: cover;
+    height: 174px;
+    width: 100%;
+    max-width: 320px;
+    z-index: 1;
+}
+.pb_container {
+    display: flex;
+    width: 320px;
+    gap: 10px;
+    padding: 10px;
+    background-color: #2C4A9A;
+}
+.portfolio_dev_icon {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+}
+.code_icon {
+    height: 40px;
+}
+.item_details {
+    color: #91B4DF;
+    font-family: 'Spartan', sans-serif;
+    margin: 15px 0 35px;
+    padding: 0;
+}
+.item_details li {
+    font-size: 11pt;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0 0 0 50px;
+}
+.item_placeholder {
+    display: grid;
+    line-height: 2;
+    height: 174px;
+    width: 100%;
+    z-index: 1;
+    max-width: 280px;
+    align-content: center;
+    border: 20px solid #253C84;
+    margin: 0 0 10px;
+    outline: 20px solid #213160;
+    /* This may not work in IE - make sure to test */
+    outline-offset: -40px;
+    background-color: #11182d;
+}
+/* For <a> inside of portfolio items - did away with <button> parent */
+.port_button {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #553692;
+    background-color: #532B9E;
+    background-color: #662D91;
+    box-shadow: 2px 2px 0 #322749;
+    transition: all 0.3s linear;
+    font-size: 100%;
+    font-family: inherit;
+    border: none;
+    height: 40px;
+    box-shadow: 0 10px 0 -6px #322749;
+    box-shadow: 0 6px 4px -6px #322749;
+}
+/* Style for clicked/touched/tabbed/focused */
+.port_button:any-link:-moz-focusring, 
+.port_button:focus-visible,
+.contactButton:any-link:-moz-focusring,
+.contactButton:focus-visible {
+    outline: 1px solid darkgray;
+}
+.pb_text {
+    color: #BDB0E6;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-bottom: 3px;
+    transition: all 0.2s ease;
+}
+#graphic_design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*New style 20210306*/
+    background-color: #213160;
+}
+#graphic_design h3 {
+    color: #91B4DF;
+    color: #ffffff;
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: left;
+    width: calc(100% - 10px);
+    padding: 30px 0 20px 10px;
+    letter-spacing: 3px;
+    background-color: #2C4A9A;
+    border-top: 30px solid #253C84;
+}
+#graphic_design h3:nth-of-type(2) {
+    border-bottom: 30px solid #253C84;
+}
+.heading_decor {
+    width: 100%;
+}
+.heading_decor h4 {
+    background-color: #2C4A9A;
+    color: #91B4DF;
+    font-size: 12pt;
+    text-align: left;
+    padding-left: 30px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+#graphic_design .portfolio_dev_icon {
+    background-color: #2C4A9A;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 0 20px;
+    border-bottom: 30px solid #253C84;
+    margin: 0;
+    gap: 30px;
+    justify-content: center;
+}
+#graphic_design .code_icon {
+    height: 30px;
+}
+.graphic_item {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    background-color: revert;
+    background-color: #2C4A9A;
+    background-color: #253C84;
+}
+.graphic_item h4 {
+    width: calc(100% - 40px);
+}
+.graphic_item .pb_text {
+    font-size: 14pt;
+}
+.portfolio_img_graphic {
+    max-width: 320px;
+    margin: 20px auto;
+    border: 2px #213160 solid;
+}
+.port_button {
+    display: none;
+}
+.port_button_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #662D91;
+    height: 40px;
+    width: 100%;
+    border: none;
+}
+.mobile_info {
+    height: 60px;
+}
+.details_arrow {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 0;
+}
+/* below is class to apply style to main header once modal is open in MOBILE res */
+.headerMT_modal {
+    height: 60px;
+    background-color: #662D91;
+    transition: all ease 300ms;
+}
+.mobile_modal {
+    filter: hue-rotate(30deg);
+    transition: all ease 300ms;
+    transition-delay: 700ms;
+}
+.mb_modal_open {
+    height: 0;
+    transition: all ease 300ms;
+}
+.modal_screen {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color:rgb(43, 57, 96);
+    transform: translate(100vw);
+    transition: transform ease-in 250ms;
+    z-index: 199;
+    left: 0;
+    top: 100px;
+    /* new on 20221104 */
+    top: 60px;
+    height: calc(100vh - 60px);
+}
+.m_s_o_mobile {
+    transform: translate(0vw);
+    transition: transform ease 0.7s;
+}
+.m_container {
+    position: relative;
+    background-color: #662D91;
+}
+.g_modal {
+    position: relative;
+    margin: 0 auto 0;
+    background-color: rgb(43, 57, 96);
+    height: auto;
+    transform: scale(1);
+    opacity: 1;
+    padding: 0;
+    height: calc(100vh - 160px);
+    /* new on 20221104 */
+    height: calc(100vh - 120px);
+}
+.modal_content_00, .modal_content_01 {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 162px);
+    overflow: hidden;
+    /* new on 20221104 */
+    height: calc(100vh - 122px);
+}
+.modal_top {
+    display: block;
+    padding: 0;
+}
+.modal_top p {
+    padding: 0 0 15px 30px;
+}
+.modal_title {
+    /* for content heirarchy */
+    color: white;
+    padding: 15px 0 0;
+}
+.modal_scroll {
+    height: auto;
+}
+.modal_flex {
+    padding: 0 20px;
+}
+.modal_unit {
+    display: flex;
+    margin-bottom: 40px;
+    padding: 0;
+    flex-direction: column-reverse;
+}
+.modal_info_bg {
+    position: static;
+    margin: 30px 0 0 0;
+    margin: 20px 0 15px 0;
+    flex-direction: column;
+    background: none;
+}
+.modal_details {
+    width: calc(100% - 30px);
+    margin: 0;
+    text-align: left;
+    padding: 0 0 10px 0;
+    hyphens: manual;
+}
+.modal_img {
+    width: calc(100vw - 40px);
+    margin-bottom: 0;
+    box-shadow: 0 0 transparent;
+}
+.close_modal {
+    display: none;
+}
+.close_mobile {
+    position: absolute;
+    height: 60px;
+    display: flex;
+    width: 100%;
+    background-color: #662D91;
+    z-index: 201;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.gmj_logo {
+    background-color: #253C84;
+    padding-bottom: 0;
+}
+.svg_item_heading h4 {
+    width: 100%;
+    color: white;
+}
+}
+/*================================================================*/
+/*================================================================*/
+/*------------------ FULL RESOLUTION  ----------------------------*/
+/*================================================================*/
+/*================================================================*/
+
+@media only screen and (min-width:771px) {
+    /* below two rules for Chromium scroll color */
+    ::-webkit-scrollbar, ::-webkit-scrollbar-button {
+        background: #220e4d;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #4C206C;
+    }
+    ::-webkit-scrollbar-button {
+        background: #220e4d;
+        color: #4C206C;
+    }
+/*======================================================================*/
+/*=======================   RESTRICTED AREA FULL   =====================*/
+/*======================================================================*/
+html {
+    scrollbar-color: #4C206C #220e4d;
+}
+h1 {
+    /* color: white;
+    font-family: 'Spartan', sans-serif; */
+    font-size: 4vw;
+}
+h2 {
+    /*display: grid;*/
+    /* color: white;
+    font-family: 'Spartan',sans-serif; */
+    font-size: 18pt;
+    margin: 2vw 4vw;
+    white-space: nowrap;
+    /*transform: skewX(20deg);*/
+}
+h3 {
+    /* font-family: 'Spartan', sans-serif; */
+    font-size: 16pt;
+    /* color:  #91B4DF; */
+    padding-right: 50px;
+}
+h4 {
+    /* font-family: 'Spartan', sans-serif;
+    font-size: 18pt; */
+    color:  #253C84;
+    margin: 0;
+}
+p {
+    /* font-family: 'Exo 2',sans-serif; */
+    font-size: 15pt;
+    /*color:  #253C84;*/
+    /* color: #91B4DF; */
+    width: 90%;
+    text-align: center;
+}
+li {
+    font-family: 'Exo 2',sans-serif;
+    font-size: 16pt;
+    /*font-size: 2vw;*/
+    /* color: #91B4DF; */
+}
+.bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*position: absolute;*/
+    /* background-attachment: fixed;
+    width: 100%; */
+    /*height: 100%;*/
+    /* background-color: #16142D;
+    background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg); */
+}
+header {
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+    top:0;
+    min-height: 120px;
+    /*below might not be needed*/
+    /* align-content: center;
+    align-items: center; */
+}
+.head_cred {
+    justify-content: space-between;
+}
+.head_flex {
+    display: flex;
+    align-items: center;
+    padding-left: 65px;
+    transition: all 0.2s ease;
+}
+#menuFULL {
+    display: flex;
+    position: relative;
+    width: 85vw;
+    left: -40px;
+    /*transition: right 0.4s ease;*/
+    align-items: center;
+    justify-content: space-around;
+}
+#menuButton {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+#menu {
+    display: none;
+    /*display: flex;*/
+    /*position: absolute;*/
+    position: fixed;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    top: 20px;
+    left: 25%;
+    justify-content: space-between;
+    width: 70%;
+    z-index: 5;
+}
+.menuItem {
+    height: auto;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.2vw;
+    color: white;
+    justify-self: space-between;
+    text-decoration: none;
+    z-index: 6;
+    max-height: 30px;
+    position: relative;
+    padding: 10px;
+    /*-----------------------------------------*/
+    /* image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0) scale(1, 1);
+    -webkit-transform: translateZ(0) translate3d(0,0,0) perspective(1px) scale(1, 1);
+    display: inline-table;
+    transform-style: flat;
+    -webkit-font-smoothing: subpixel-antialiased; */
+}
+.nav_text {
+    display: block;
+    font-size: 1.4vw;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-image: linear-gradient(to right,white 50%, #91B4DF 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    transition: all 0.2s ease;
+    /* Below is attempt to eliminate distortion and 1px jump after scale */
+    /* None of these worked - will need to eliminate scaling factors like % and vw to fix */
+    /* image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0) translate3d(0,0,0) scale(1, 1);
+    -webkit-transform: translateZ(0) translate3d(0,0,0) perspective(1px) scale(1, 1);
+    display: inline-table;
+    transform-style: flat;
+    -webkit-font-smoothing: subpixel-antialiased; */
+}
+.menuItem:hover .nav_text {
+    background-position: 0% 0%;
+    /*font-size: 2vw;*/
+    /* scale: 1.2002;
+    transform: scale(1.2002); */
+    transform: scale(1.4502);
+    /* transition: background-position 0.15s ease 0.2s, scale 0.2s ease, transform 0.2s ease; */
+    transition: background-position 0.15s ease 0.2s, transform 0.2s ease;
+    /*------------------------------*/
+    /* image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0) translate3d(0,0,0) scale(1, 1);
+    -webkit-transform: translateZ(0) translate3d(0,0,0) perspective(1px) scale(1, 1);
+    display: inline-table;
+    transform-style: flat;
+    -webkit-font-smoothing: subpixel-antialiased; */
+}
+.cred_head::before {
+    content: "[";
+    position: absolute;
+    left: -13px;
+    top: -3px;
+    color: #91B4DF;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bolder;
+    transition: all 0.2s ease;
+}
+.cred_head::after {
+    content: "]";
+    position: absolute;
+    top: -3px;
+    color: #91B4DF;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    font-weight: bolder;
+    transition: all 0.2s ease;
+}
+.cred_head {
+    position: relative;
+    color: #91B4DF;
+    font-size: 22pt;
+    font-family: 'Spartan', sans-serif;
+    transition: all 0.2s ease;
+}
+.cred_head_sub {
+    color: #91B4DF;
+    font-size: 12pt;
+    font-family: 'Spartan', sans-serif;
+    transition: all 0.2s ease;
+}
+.home_link {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 5;
+    transition: all 0.2s ease;
+}
+.cred_menu {
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 6vw;
+}
+#title_cred {
+    margin: 0;
+    padding-top: 100px;
+}
+.cred_arr {
+    padding-top: 32vh;
+}
+.arr_prop {
+    padding: 0 0 27vh;
+}
+#about {
+    height: 120px;
+    width: 100%;
+    background-color: #16142D;
+    box-shadow: 0 100px 40px 20px #16142D;
+}
+#intro {
+    width: 80vw;
+    padding: 0 4vw;
+    padding-bottom: 3vw;
+}
+.section_heading {
+    position: relative;
+    font-size: 75pt;
+    margin-left: 10px;
+    z-index: 1;
+}
+.intro_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 65px 0 0 30px;
+    margin-top: -40px;
+    margin-bottom: 90px;
+    height: 210px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+/* New RULES for NEW STYLE 20211218 */
+.largest {
+    font-size: 75pt;
+    z-index: 1;
+    bottom: -35px;
+    margin: 0;
+    left: 28px;
+}
+.intro_container_2 {
+    margin: 30px 7vw 0;
+}
+.intro_article {
+    background-color: #2C4A9A;
+    padding: 20px 6vw;
+    margin: 30px 0 70px 30px;
+    box-shadow: -30px -30px #253C84;
+}
+.intro_article p {
+    font-family: 'Spartan', sans-serif;
+    width: 100%;
+    text-align: left;
+}
+/* END NEW RULES 20211218 */
+.intro_container h2 {
+    width: 100%;
+    font-size: 8vw;
+    color: #486AAC;
+    margin-bottom: -2vw;
+}
+#about_me {
+    margin-top: -30px;
+    margin-right: -30px;
+    min-width: 420px;
+}
+.intro_bg {
+    padding: 20px 5vw;
+}
+.intro_bg h3 {
+    padding: 0 50px 0 30px;
+    text-align: center;
+    max-width: 40vw;
+    font-weight: normal;
+}
+.intro_bg p {
+    max-width: 40vw;
+    text-align: center;
+    font-family: 'Spartan', sans-serif;
+}
+.top_cred_links {
+    display: flex;
+    flex-direction: column;
+    width: 24vw;
+    max-width: 385px;
+    min-width: 285px;
+    margin-left: 15px;
+    gap: 20px;
+    /* NEW 2021 */
+    margin-top: -30px;
+}
+/* === .cred_link will be used to consolidate button styles for cred page*/
+.cred_link {
+    min-width: 300px;
+    width: 300px;
+    height: 78px;
+    margin: 6px;
+    justify-content: center;
+}
+/*=== Below may not be needed, but here for now ===*/
+.cred_link:hover {
+    margin: 0;
+}
+.gh_text {
+    height: 58px;
+    width: 100%;
+    padding: 10px;
+}
+.gh_text h4 {
+    font-size: 14pt;
+    align-self: center;
+    color: #9D90C5;
+}
+.top_cred_links .gitHub_icon {
+    height: 32px;
+    width: 110px;
+    background-color: transparent;
+    align-self: center;
+}
+.top_cred_links .link_01 {
+    font-size: 14pt;
+    align-self: center;
+    color: #9D90C5;
+}
+.resumeButton {
+    margin: 6px;
+}
+.resumeButton .button_text {
+    display: inherit;
+    justify-content: center;
+    width: 150px;
+    padding: 21.5px 100px;
+}
+.resumeButton h4 {
+    color: #9D90C5;
+}
+/*=== Below to replace above ===*/
+.button_text h4 {
+    color: #9D90C5;
+}
+.button_text h4:hover {
+    color: #c88cdf;
+}
+.resumeButton:hover {
+    margin: 0;
+}
+.resumeButton:hover h4 {
+    color: #c88cdf;
+}
+#resume_content h4 {
+    color: #9D90C5;
+}
+sub {
+    font-size: 10pt;
+}
+.intro_sub_container h2 {
+    font-size: 50pt;
+    margin-bottom: -70px;
+    margin-left: 3vw;
+}
+#soft_skills {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 10px;
+    flex-wrap: wrap;
+    max-width: 45vw;
+    justify-content: center;
+    align-content: flex-start;
+}
+#soft_skills h2 {
+    margin: 0;
+    font-size: 6vw;
+}
+.ss_bg {
+    display: flex;
+    background-color: #253C84;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    padding-right: 50px;
+}
+.section_heading sub {
+    display: block;
+    margin-top: -1vw;
+    text-align: right;
+    margin-bottom: 2vw;
+    margin-right: -30px;
+    font-size: 18pt;
+}
+#soft_skills li {
+    padding: 10px 20px;
+    width: max-content;
+    font-size: 10pt;
+    background-color: #2C4A9A;
+    list-style: none;
+    align-self: center;
+    flex-grow: 1;
+    justify-content: center;
+    justify-self: center;
+    text-align: center;
+    /* Below optional??? */
+    max-height: min-content;
+    flex-grow: 1;
+}
+#soft_skills li:last-child, #soft_skills li:nth-child(14) {
+    flex-grow: 0.2;
+}
+li {
+    margin: 15px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 14pt;
+    color: #91B4DF;
+    width: max-content;
+}
+ul{
+    margin: 15px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 14pt;
+    color: #91B4DF;
+    width: max-content;
+}
+#interests {
+    background-color: #2C4A9A;
+    padding: 30px 30px 60px 30px;
+    height: max-content;
+    margin-top: -40px;
+}
+#interests h2 {
+    font-size: 15pt;
+    margin: 30px 0 15px 0;
+    color: #91B4DF;
+}
+#interests li {
+    margin-left: 40px;
+}
+#portfolio {
+    padding: 1.8vw 4vw;
+    width: 80vw;
+}
+#portfolio h2 {
+    text-align: center;
+    margin-bottom: -120px;
+    margin-left: 0;
+}
+.first_overlay {
+    display: block;
+    position: relative;
+}
+#web_dev {
+    height: 100px;
+    margin: -25px;
+}
+#front_end_dev {
+    display: block;
+    background-color: #253C84;
+    padding-top: 60px;
+}
+#portfolio h3 {
+    font-size: 28pt;
+    color: #ffffff;
+    margin-bottom: -20px;
+    margin-left: 3.5vw;
+    padding: 0;
+}
+.section_top {
+    display: block;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+    padding: 0 5vw;
+}
+.section_top p {
+    text-align: left;
+    background-color: #2C4A9A;
+    padding: 60px 80px;
+    line-height: 1.3;
+    white-space: break-spaces;
+    margin: 0;
+    width: auto;
+}
+.section_top .top_cred_links {
+    display: flex;
+    height: auto;
+    width: inherit;
+    max-width: inherit;
+    margin: 20px 0 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.top_cred_links p {
+    background-color: transparent;
+    padding: 15px;
+    max-width: 300px;
+    text-align: right;
+}
+#front_end_dev h4, #graphic_design h4 {
+    color: white;
+}
+em {
+    color: white;
+    font-style: normal;
+}
+.gitHub_icon {
+    width: 135px;
+}
+.link_01 {
+    color: #91B4DF;
+    color: black;
+    font-size: 18pt;
+    font-family: 'Noto Sans KR';
+}
+.portfolio_item_container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    background-color: #1F3160;
+}
+#front_end_dev .portfolio_item_container {
+    width: calc(100% + 8vw - 40px);
+    left: -4vw;
+    padding: 60px 20px 0;
+}
+.portfolio_item_main {
+    margin: 40px 15px;
+}
+.portfolio_item_svg {
+    position: relative;
+    margin: 40px 15px;
+    padding: 0;
+    width: 350px;
+    width: 340px;
+}
+.wd_item {
+    box-shadow: 2px 2px 4px black;
+    /* New style 20210308 */
+    box-shadow: 0 6px 4px -6px #322749;
+    box-shadow: 0 6px 4px -6px black;
+    background-color: #253C84;
+}
+.portfolio_item_main h4 {
+    color: white;
+    padding: 40px;
+    text-align: left;
+    text-align: center;
+}
+.portfolio_item_svg h4 {
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 100%;
+    padding: 0 40px;
+}
+.port_button {
+    position: relative;
+}
+.port_button:hover {
+    filter: brightness(1.2);
+    transition: all 0.2s ease-in;
+}
+.pb_web {
+    flex: 1;
+}
+.portfolio_item_main sub, .item_details {
+    font-size: 14pt;
+    font-family: 'Exo2', sans-serif;
+    color: #91B4DF;
+    margin-top: 30px;
+    padding-left: 15px;
+}
+.portfolio_img_web {
+    max-width: 400px;
+}
+.code_icon {
+    height: 40px;
+    align-self: center;
+}
+.main_port_button, .sub_port_button {
+    font-size: 100%;
+    font-family: inherit;
+    border: none;
+}
+.item_placeholder {
+    line-height: 4.5;
+    /*new styles */
+    max-width: 260px;
+    margin-bottom: 20px;
+    font-size: 16pt;
+}
+#graphic_design h3 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 26pt;
+    margin-bottom: -20px;
+    margin-left: 2.5vw;
+    padding: 4vw 0 0;
+}
+.heading_decor {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #253C84
+}
+.more_info {
+    height: 55px;
+}
+.port_button_mobile {
+    display: none;
+}
+.close_mobile {
+    display: none;
+}
+#graphic_design .portfolio_dev_icon {
+    flex: 1 0;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 30px 50px 30px 0;
+    width: calc(72vw - 50px);
+    margin: 0;
+}
+.heading_decor h4 {
+	font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15pt;
+    font-weight: normal;
+	color: #91B4DF;
+	text-align: right;
+	padding-top: 30px;
+	padding-right: 40px;
+/* below might not be needed */
+	margin: 0;
+	flex: 4 auto;
+	width: calc(72vw - 280px);
+}
+.portfolio_img_graphic {
+    display: grid;
+    align-self: center;
+    max-height: 250px;
+    margin: 20px auto;
+}
+.modal_screen {
+    display: none;
+}
+.modal_unit {
+    display: flex;
+    flex-direction: row;
+}
+.modal_unit>a {
+    max-width: 350px;
+}
+.modal_unit_alt {
+    flex-direction: row-reverse;
+    margin-left: 20px;
+}
+/* below moved from global to FULL on 20221108 */
+.modal_info_bg {
+    display: flex;
+    align-items: flex-end;
+    background-color: #2C4A9A;
+    z-index: 200;
+    flex-direction: column;
+    position: static;
+    margin-left: 25px;
+    margin-right: 55px;
+}
+/* may not need below class - 20221111 */
+/* was using this class to stagger text and img between untits
+in modal for FULL resolution */
+.modal_info_alt {
+    display: flex;
+    background-color: #2C4A9A;
+    z-index: 200;
+    background-color: #253C84;
+    margin-right: 20px;
+    margin-left: 60px;
+}
+.modal_details {
+    text-align: left;
+    padding: 0;
+    margin-block-start: 0;
+    width: 100%;
+}
+.four_img_box {
+    display: flex;
+    width: 350px;
+    height: 250px;
+    background-color: black;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 350px;
+}
+.four_img_box>a {
+    display: block;
+    width: 174px;
+    height: 124px;
+    overflow: hidden;
+    min-width: 174px;
+    min-height: 124px;
+    outline: 2px solid black;
+}
+.img_q {
+    width: 140%;
+    height: auto;
+}
+/* is the below rule needed still? */
+#graphic_design .portfolio_item_container:nth-of-type(3) {
+    border-top: 50px solid #253C84;
+    margin: 0 4vw;
+
+}
+/* For animated svg portfolio_item_main, add a specific svg
+    as the portfolio_item_container is smaller in this section*/
+.portfolio_svg_anim #gmj_anim {
+    min-width: 200px;
+}
+.portfolio_svg_anim {
+    display: block;
+    background-color: white;
+    box-shadow: 0 6px 4px -6px black;
+}
+.kanji_12 .portfolio_svg_anim,
+.kanji_34 .portfolio_svg_anim {
+    width: 340px;
+    height: 500px;
+    overflow: hidden;
+}
+.item_title {
+    display: block;
+}
+}
+/*=== special viewport rules ===*/
+@media only screen and (min-width:1000px) {
+    .cred_arr {
+        font-size: 40pt;
+    }
+    .cred_arr::before, .cred_arr::after {
+        font-size: 22pt;
+    }
+    .arr_prop {
+        font-size: 20pt;
+    }
+    .arr_prop::before, .arr_prop::after {
+        font-size: 26pt;
+    }
+}
+@media only screen and (min-width:771px) and (max-width:1000px) {
+    .head_flex {
+        padding-left: 25px;
+    }
+    .home_link {
+        width: 60px;
+        height: 60px;
+    }
+    .cred_head::before, .cred_head::after, .cred_head {
+        font-size: 18pt;
+    }
+    .cred_head::before, .cred_head::after {
+        top: -2px;
+    }
+    .cred_head::before {
+        left: -11px;
+    }
+    .cred_head_sub {
+        font-size: 10pt;
+    }
+    .cred_menu {
+        padding-right: 0;
+        padding-left: 10vw;
+    }
+    .nav_text {
+        font-size: 10pt;
+        line-height: 2;
+    }
+}
