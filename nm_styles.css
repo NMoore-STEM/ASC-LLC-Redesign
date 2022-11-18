@@ -23,8 +23,6 @@ h4 {
     font-size: 18pt;
 }
 i {
-    /* font-family: 'Crimson Pro', serif;
-    font-size: 6vw; */
     font-size: 5.15vw;
     font-family: 'Times New Roman', serif;
     line-height: 0.78;
@@ -245,6 +243,19 @@ unique urls for each class */
     height: 40px;
     box-shadow: 0 10px 0 -6px #322749;
     box-shadow: 0 6px 4px -6px #322749;
+}
+.contactButton {
+    display: flex;
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #9D90C5;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    box-shadow: 0 10px 6px -6px #322749;
+    overflow: hidden;
+    /* standardized shadow color below */
+    box-shadow: 0 10px 6px -6px #1B253E;
 }
 /* Style for clicked/touched/tabbed/focused */
 .port_button:any-link:-moz-focusring, 
@@ -864,21 +875,19 @@ ul{
 }
 /* Should make a common class for web dev portfolio screenshots and just include
 unique urls for each class */
-#asc_img {
-    background-image: url('./images/asc_screen_600X330.png');
+/* Created web_img to hold common declarations among web dev images */
+.web_img{
     background-size: cover;
     height: 174px;
     width: 100%;
     max-width: 320px;
     z-index: 1;
 }
+#asc_img {
+    background-image: url('./images/asc_screen_600X330.png');
+}
 #lab_img {
     background-image: url('./images/Bailey_sample02.png');
-    background-size: cover;
-    height: 174px;
-    width: 100%;
-    max-width: 320px;
-    z-index: 1;
 }
 .pb_container {
     display: flex;
@@ -946,9 +955,10 @@ unique urls for each class */
     box-shadow: 0 6px 4px -6px #322749;
 }
 /* Style for clicked/touched/tabbed/focused */
-/* === .port_button class not needed on portfolio page
-/* .port_button:any-link:-moz-focusring, 
-.port_button:focus-visible, */
+/* === .port_button class not needed on portfolio page 
+------ Reinstaed port_button class as it IS used on portfolio page */
+.port_button:any-link:-moz-focusring, 
+.port_button:focus-visible,
 .contactButton:any-link:-moz-focusring,
 .contactButton:focus-visible {
     outline: 1px solid darkgray;
@@ -1361,8 +1371,6 @@ header {
 }
 #menu {
     display: none;
-    /*display: flex;*/
-    /*position: absolute;*/
     position: fixed;
     height: auto;
     margin: 0;
@@ -1479,10 +1487,6 @@ sub {
     max-height: min-content;
     flex-grow: 1;
 }
-/* === Below may not be needed 20221114 === */
-/* #soft_skills li:last-child, #soft_skills li:nth-child(14) {
-    flex-grow: 0.2;
-} */
 #interests {
     background-color: #2C4A9A;
     padding: 30px 30px 60px 30px;
@@ -1519,79 +1523,6 @@ sub {
     display: block;
     position: relative;
 }
-
-
-/* === *********************************** === */
-/* === Left off here 20221114 === */
-
-
-
-
-
-/* Below may no longer be in use in HTML 20221114 */
-/* #about_me {
-    margin-top: -30px;
-    margin-right: -30px;
-    min-width: 420px;
-} */
-/* .intro_bg {
-    padding: 20px 5vw;
-}
-.intro_bg h3 {
-    padding: 0 50px 0 30px;
-    text-align: center;
-    max-width: 40vw;
-    font-weight: normal;
-}
-.intro_bg p {
-    max-width: 40vw;
-    text-align: center;
-    font-family: 'Spartan', sans-serif;
-} */
-
-/* === .cred_link will be used to consolidate button styles for cred page*/
-
-/*=== Below may not be needed, but here for now ===*/
-.cred_link:hover {
-    margin: 0;
-}
-.gh_text {
-    height: 58px;
-    width: 100%;
-    padding: 10px;
-}
-.gh_text h4 {
-    font-size: 14pt;
-    align-self: center;
-    color: #9D90C5;
-}
-.top_cred_links .gitHub_icon {
-    height: 32px;
-    width: 110px;
-    background-color: transparent;
-    align-self: center;
-}
-.top_cred_links .link_01 {
-    font-size: 14pt;
-    align-self: center;
-    color: #9D90C5;
-}
-/*=== Below to replace above ===*/
-.button_text h4 {
-    color: #9D90C5;
-}
-.button_text h4:hover {
-    color: #c88cdf;
-}
-
-
-
-
-
-
-
-
-
 #portfolio h3 {
     font-size: 28pt;
     color: #ffffff;
@@ -1621,6 +1552,12 @@ em {
     color: white;
     font-style: normal;
 }
+.button_text h4 {
+    color: #9D90C5;
+}
+.button_text h4:hover {
+    color: #c88cdf;
+}
 .top_cred_links {
     display: flex;
     flex-direction: column;
@@ -1648,24 +1585,12 @@ em {
     max-width: 300px;
     text-align: right;
 }
+/*===============================================*/
+/*========  CONTACT BUTTON CLASS AND FX  ========*/
 .contactButton {
-    
-    /* display: flex;
-    position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #9D90C5;
-    text-align: center;
-    text-decoration: none;
-    background-color: transparent;
-    box-shadow: 0 10px 6px -6px #322749;
-    overflow: hidden; */
-    
     align-content: center;
     align-items: center;
-    /*display: grid;*/
-    /*background-color: #553692;*/
     font-size: 18pt;
-    /*padding: 2vw 4vw;*/
     margin: 2vw 8vw;
     max-width: 400px;
     max-height: 110px;
@@ -1676,6 +1601,68 @@ em {
     /*for button effect*/
     transition: all 0.6s ease;
 }
+.button_text {
+    max-height: 110px;
+    background-color: transparent;
+    color: #9D90C5;
+    align-content: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16pt;
+    padding: 24px;
+    text-decoration: none;
+    text-align: center;
+    outline: solid 2px #9D90C5;
+    outline-offset: 20px;
+    transition: all 0.4s ease-out;
+    z-index: 5;
+    /* NEW 2021 (for cred page buttons, may need to remove) */
+    width: 100%;
+    cursor: pointer;
+}
+.contactButton:hover .button_fx, 
+.contactButton:focus .button_fx {
+    visibility: visible;
+    left: -10%;
+    background: linear-gradient(135deg, rgba(155,57,144,1) 0%,rgba(255,255,255,0) 50%);
+    transition: all 0.2s ease;
+}
+.contactButton:hover .button_text, 
+.contactButton:focus .button_text {
+    color: #c88cdf;
+    outline-offset: -1px;
+    transition: all 0.4s ease-in, outline-offset 0.1s ease-in;
+}
+.contactButton:hover .link_01,
+.contactButton:focus .link_01 {
+    color: #c88cdf;
+    transition: all 0.4s ease-in;
+}
+.contactButton:hover .button_bg, 
+.contactButton:focus .button_bg {
+    box-shadow: 4px 6px rgba(0,0,0,0.6);
+    inset: 2px solid #9D90C5;
+    transition: all 0.8s ease;
+}
+.button_fx {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: -110%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(155,57,144,1) 0%,rgba(255,255,255,0) 50%);
+    transition: all 0.5s ease;
+    z-index: 4;
+}
+.button_bg {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #662D91;
+}
+/*==========  END CONTACT BTTN AND FX  ===========*/
+/*================================================*/
 .cred_link {
     min-width: 300px;
     width: 300px;
@@ -1683,20 +1670,30 @@ em {
     margin: 6px;
     justify-content: center;
 }
-
-
-#front_end_dev h4, #graphic_design h4 {
-    color: white;
+.cred_link:hover {
+    margin: 0;
 }
-
+.gh_text {
+    height: 58px;
+    width: 100%;
+    padding: 10px;
+}
 .gitHub_icon {
     width: 135px;
 }
+.top_cred_links .gitHub_icon {
+    height: 32px;
+    width: 110px;
+    background-color: transparent;
+    align-self: center;
+}
 .link_01 {
-    color: #91B4DF;
-    color: black;
-    font-size: 18pt;
     font-family: 'Noto Sans KR';
+}
+.top_cred_links .link_01 {
+    font-size: 14pt;
+    align-self: center;
+    color: #9D90C5;
 }
 .portfolio_item_container {
     display: flex;
@@ -1713,13 +1710,6 @@ em {
 .portfolio_item_main {
     margin: 40px 15px;
 }
-.portfolio_item_svg {
-    position: relative;
-    margin: 40px 15px;
-    padding: 0;
-    width: 350px;
-    width: 340px;
-}
 .wd_item {
     box-shadow: 2px 2px 4px black;
     /* New style 20210308 */
@@ -1727,19 +1717,15 @@ em {
     box-shadow: 0 6px 4px -6px black;
     background-color: #253C84;
 }
+/* === Might be able to delete??? - - Double check */
+#front_end_dev h4, #graphic_design h4 {
+    color: white;
+}
 .portfolio_item_main h4 {
     color: white;
     padding: 40px;
     text-align: left;
     text-align: center;
-}
-.portfolio_item_svg h4 {
-    color: white;
-    text-align: center;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    width: 100%;
-    padding: 0 40px;
 }
 .port_button {
     position: relative;
@@ -1751,24 +1737,16 @@ em {
 .pb_web {
     flex: 1;
 }
-.portfolio_item_main sub, .item_details {
+.code_icon {
+    height: 40px;
+    align-self: center;
+}
+.item_details {
     font-size: 14pt;
     font-family: 'Exo2', sans-serif;
     color: #91B4DF;
     margin-top: 30px;
     padding-left: 15px;
-}
-.portfolio_img_web {
-    max-width: 400px;
-}
-.code_icon {
-    height: 40px;
-    align-self: center;
-}
-.main_port_button, .sub_port_button {
-    font-size: 100%;
-    font-family: inherit;
-    border: none;
 }
 .item_placeholder {
     line-height: 4.5;
@@ -1791,23 +1769,6 @@ em {
     justify-content: flex-end;
     background-color: #253C84
 }
-.more_info {
-    height: 55px;
-}
-.port_button_mobile {
-    display: none;
-}
-.close_mobile {
-    display: none;
-}
-#graphic_design .portfolio_dev_icon {
-    flex: 1 0;
-    justify-content: flex-end;
-    gap: 30px;
-    padding: 30px 50px 30px 0;
-    width: calc(72vw - 50px);
-    margin: 0;
-}
 .heading_decor h4 {
 	font-family: 'Noto Sans KR', sans-serif;
     font-size: 15pt;
@@ -1821,12 +1782,42 @@ em {
 	flex: 4 auto;
 	width: calc(72vw - 280px);
 }
+#graphic_design .portfolio_dev_icon {
+    flex: 1 0;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 30px 50px 30px 0;
+    width: calc(72vw - 50px);
+    margin: 0;
+}
+.main_port_button, .sub_port_button {
+    font-size: 100%;
+    font-family: inherit;
+    border: none;
+}
+.more_info {
+    height: 55px;
+}
+.port_button_mobile {
+    display: none;
+}
+.close_mobile {
+    display: none;
+}
 .portfolio_img_graphic {
     display: grid;
     align-self: center;
     max-height: 250px;
     margin: 20px auto;
 }
+/* ============================================ */
+/* ===**************************************=== */
+/* === Finished most of the migration of CSS from
+main, original file - Starting at the graphic design
+portfolio item modal, styles do not look right.
+Problem with all items within modal not scrolling the
+same way - animated svgs need work and footer styles
+seem to be completely missing. 20221115 === */
 .modal_screen {
     display: none;
 }
@@ -1841,23 +1832,11 @@ em {
     flex-direction: row-reverse;
     margin-left: 20px;
 }
-/* below moved from global to FULL on 20221108 */
-.modal_info_bg {
-    display: flex;
-    align-items: flex-end;
-    background-color: #2C4A9A;
-    z-index: 200;
-    flex-direction: column;
-    position: static;
-    margin-left: 25px;
-    margin-right: 55px;
-}
 /* may not need below class - 20221111 */
 /* was using this class to stagger text and img between untits
 in modal for FULL resolution */
 .modal_info_alt {
     display: flex;
-    background-color: #2C4A9A;
     z-index: 200;
     background-color: #253C84;
     margin-right: 20px;
@@ -1893,13 +1872,14 @@ in modal for FULL resolution */
     height: auto;
 }
 /* is the below rule needed still? */
+/* YES - still needed 20221115 */
 #graphic_design .portfolio_item_container:nth-of-type(3) {
     border-top: 50px solid #253C84;
     margin: 0 4vw;
 
 }
 /* For animated svg portfolio_item_main, add a specific svg
-    as the portfolio_item_container is smaller in this section*/
+as the portfolio_item_container is smaller in this section*/
 .portfolio_svg_anim #gmj_anim {
     min-width: 200px;
 }
