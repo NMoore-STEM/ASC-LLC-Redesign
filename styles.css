@@ -732,25 +732,19 @@ textarea:-moz-ui-invalid {
 }
 /* Should make a common class for web dev portfolio screenshots and just include
 unique urls for each class */
-#asc_img {
-    background-image: url('./images/asc_screen_600X330.png');
+/* Created web_img to hold common declarations among web dev images */
+.web_img{
     background-size: cover;
-    /*height: 180px;*/
     height: 174px;
     width: 100%;
-    /*max-width: 332px;*/
     max-width: 320px;
     z-index: 1;
 }
+#asc_img {
+    background-image: url('./images/asc_screen_600X330.png');
+}
 #lab_img {
     background-image: url('./images/Bailey_sample02.png');
-    background-size: cover;
-    /*height: 180px;*/
-    height: 174px;
-    width: 100%;
-    /*max-width: 332px;*/
-    max-width: 320px;
-    z-index: 1;
 }
 .pb_container {
     /*margin-top: -50px;*/
@@ -3918,7 +3912,8 @@ section {
     grid-column-start: 2;
     grid-row-start: 2;
 } */
-.lastLi {
+/* below was previously lastLi */
+.firstLi {
     /* grid-column-end: span 2; */
     /* max-width: 90%; */
     /* max-width: 550px; */
@@ -4292,6 +4287,7 @@ textarea:-moz-ui-invalid {
     /* margin-bottom: -30px; */
     z-index: 1;
 }
+/* === Below not in use on portfolio page as of 20221114 ===*/
 .intro_container {
     display: flex;
     flex-wrap: wrap;
