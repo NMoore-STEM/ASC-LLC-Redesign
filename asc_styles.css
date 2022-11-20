@@ -972,6 +972,7 @@ textarea:-moz-ui-invalid {
     }
     .thankYou-sub {
         font-size: 14pt;
+        padding: 0 20px 0;
     }
     @keyframes ty_left01 {
         1% { transform: translateX(-76vw); }
