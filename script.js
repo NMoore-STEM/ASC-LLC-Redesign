@@ -155,13 +155,23 @@ $(document).ready(function(){
         $('#menu').toggleClass('menuOpen');
         //console.log('menu control ran')
     });
+});
     //closes menu after button in menu is clicked
     // $('.menuItem').on('click touch', function(){
     //     $('#menu').toggleClass('menuOpen');
     // })
-});
+//});
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
+// TEMP BELOW
+// $(document).ready(function(){
+//     $('#menuButton').on('click touch', function(){
+//         $('#menu').toggleClass('menuOpen');
+//     });
+//     $('.menuItem').on('click touch', function(){
+//         $('#menu').toggleClass('menuOpen');
+//     })
+// });
 //=== Same as above, but attempting to use callback
 //=== 20221103
 // $(document).ready(function(){
@@ -639,7 +649,7 @@ $(function(){
         if (isInView) {
             setTimeout(function(){
                 $inner.addClass('coreFinal');
-            },500);
+            },100);
             // $('#coreInternal li').each(function(i){
             //     setTimeout(function(){
             //         $coreLi.slice(0).eq(i).css({top:0})
@@ -656,7 +666,7 @@ $(function(){
                     console.log('inner core');
                 });
                 console.log('second core');
-            },1200)
+            },500)
             console.log('first core');
         } else {}
     });
