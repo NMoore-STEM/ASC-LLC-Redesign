@@ -874,6 +874,8 @@ textarea:-moz-ui-invalid {
         margin: 15px 0;
         font-size: 12pt;
         color: rgb(38, 48, 73);
+        /* new color 20221205 */
+        color: rgb(25, 32, 49);
     }
     .coreMask {
         margin: 0;
