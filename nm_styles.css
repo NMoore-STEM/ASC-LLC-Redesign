@@ -587,6 +587,51 @@ p.modal_intro {
 iframe {
     border-style: none;
 }
+#colorBand04 {
+    background-color: #4F2F88;
+    border-bottom: 40px solid #3C2C5E;
+}
+#colorBand05 {
+    display: flex;
+    background-color: #553692;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+/* will keep black shadows on hover for these classes, looks better */
+.footerButton {
+    display: grid;
+    min-width: 120px;
+    color: #9D90C5;
+    background-color: #3C2C5E;
+    text-align: center;
+    margin: 40px 30px 0;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: all 0.5s ease;
+}
+.topButton {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-color: #4F2F88;
+    border-radius: 50% 50%;
+    border: solid 6px #553692;
+    transition: all 0.5s ease;
+}
+.topButtonFULL {
+    display: none;
+}
+.copyright {
+    display: block;
+    position: relative;
+    top: 30px;
+    color: #9D90C5;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px purple;
+    padding-top: 30px;
+    text-align: center;
+}
 /*================================================================*/
 /*------------------ MOBILE - Portfolio/ Restricted --------------*/
 /*================================================================*/
@@ -639,6 +684,18 @@ iframe {
     color: #91B4DF;
     font-size: 12pt;
     font-family: 'Spartan', sans-serif;
+}
+.menu_default {
+    opacity: 0;
+    padding: 37px 15px 0;
+    transform: scaleX(0.28)scaleY(0.28);
+    transform-origin: top right;
+    transition: padding 1.2s linear, transform 0.5s linear 1.6s, opacity 1s linear 1.6s;
+    /* time cut in half for transition */
+    transition: padding 0.6s linear, transform 0.25s linear 0.8s, opacity 0.5s linear 0.8s;
+    /* at .25 */
+    transition: padding 0.3s linear, transform 0.125s linear 0.4s, opacity 0.25s linear 0.4s;
+    transition: all 0.14s linear, transform 0.14s linear 0.14s, opacity 0.12s linear 0.16s;
 }
 
 /* Hero Styles */
@@ -1896,6 +1953,21 @@ as the portfolio_item_container is smaller in this section*/
 }
 .item_title {
     display: block;
+}
+footer {
+    width: 100%;
+    color: #9D90C5;
+    background-color: #3C2C5E;
+    text-align: center;
+    margin: 40px 30px 0;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.footerButton:hover, .topButton:hover {
+    box-shadow: 0 10px 17px -5px black;
+    transform: scale(1.12);
+    -webkit-transform: scale(1.12);
+    transition: all 0.3s ease;
 }
 }
 /*=== special viewport rules ===*/
