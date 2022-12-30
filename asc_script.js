@@ -84,7 +84,6 @@ $(document).ready(function(){
         }
     });
     // WORKING CONTACT FORM VERIFICATION AND SUBMISSION (fr contact_test.js)
-    // can clean up "var" before each variable as it only needs to be declared once if all are grouped below
     $(function(){
         var fA = 'focusActive';
             lA = 'labelActive';
@@ -179,7 +178,6 @@ $(document).ready(function(){
                     $(".load_outline2").addClass("loading02");
                     $(".load_outline").addClass("loading01");
                     setTimeout(function(){
-        // Can't change below .blur() as it is more of a command
                         $('.subB').blur();
                     }, 450);
                     setTimeout(function(){

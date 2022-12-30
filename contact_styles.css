@@ -85,6 +85,10 @@ textarea:-moz-ui-invalid {
     50% { opacity: 1;}
     100% { opacity: 0.3;}
 }
+.botCatfish {
+    display: none;
+    position: relative;
+}
 .focusActive {
     border: solid 1px blueviolet !important;
     scale: 1.02;
@@ -197,15 +201,31 @@ textarea:-moz-ui-invalid {
 /*----------------   CONTACT/ MOBILE TABLET   ----------------*/
 /*============================================================*/
 @media only screen and (max-width:770px) {
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 92vw;
+    background-color: #2F4072;
+    z-index: 5;
+    padding: 0 4vw 0;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    transition: all ease 150ms;
+    transition-delay: 350ms;
+}
 .formContainer{
     display: flex;
     flex-direction: column;
     margin: 0 6vw 0;
     background: transparent;
 }
-.contactTitle {
+/* was throwing off design - removed on 20221205 */
+/* .contactTitle {
     margin-top: 130px;
-}
+} */
 .contactTitle h1 {
     word-spacing: 10px;
 }
