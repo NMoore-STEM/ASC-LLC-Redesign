@@ -676,7 +676,7 @@ textarea:-moz-ui-invalid {
         /* at .25 */
         transition: all 0.5s linear, opacity 0.3s linear 0.15s;
     }
-    .passwordKey {
+    /* .passwordKey {
         opacity: 0;
         border-radius: 50% 50%;
         max-width: min-content;
@@ -686,15 +686,15 @@ textarea:-moz-ui-invalid {
         align-self: center;
         background-color: #553692;
         transition: all 2s ease;
-        pointer-events: none;
+        pointer-events: none; */
         /* Transition time cut in half */
         /*transition: all 1s linear, opacity 0.4s linear;*/
         /* at .25 */
-        transition: all 0.5s linear, opacity 0.2s linear;
-    }
-    .passwordKey img {
+        /* transition: all 0.5s linear, opacity 0.2s linear;
+    } */
+    /* .passwordKey img {
         max-height: 40px;
-    }
+    } */
     #splashFULL {
         visibility: hidden;
         height: 0;
