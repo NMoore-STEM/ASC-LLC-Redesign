@@ -1678,11 +1678,8 @@ em {
 }
 .contactButton:hover {
     padding: 6px;
-    /*box-shadow: 2px 2px 4px rgba(0,0,0,0.6);*/
     transition: all 0.8s ease, padding 0.2s ease, margin 0.2s ease;
     margin: calc(2vw - 6px) 8vw;
-    /* New style 20210309 */
-    /*box-shadow: 0 7px 6px -4px #322749;*/
 }
 .contactButton:hover .button_fx, 
 .contactButton:focus .button_fx {
