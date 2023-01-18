@@ -1676,6 +1676,11 @@ em {
     width: 100%;
     cursor: pointer;
 }
+.contactButton:hover {
+    padding: 6px;
+    transition: all 0.8s ease, padding 0.2s ease, margin 0.2s ease;
+    margin: calc(2vw - 6px) 8vw;
+}
 .contactButton:hover .button_fx, 
 .contactButton:focus .button_fx {
     visibility: visible;
