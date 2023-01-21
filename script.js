@@ -1123,8 +1123,8 @@ $(function(){
             event.preventDefault();
             // Below to establish coordinates for click location
             var x, y;
-            x = event.pageX;
-            y = event.pageY;
+                x = event.pageX;
+                y = event.pageY;
             console.log(x,y);
             //end coordinates code
             mScr.addClass('m_screen_open m_screen_fade');
