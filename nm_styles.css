@@ -320,19 +320,6 @@ precedence over other classes when this class is added to an element from the sc
     box-shadow: 20px 20px 0 black;
     box-shadow: 20px 20px 0 #2C4A9A;
 } */
-/* below may not be needed */
-/* .m_img_l {
-
-} */
-/* below may not be needed on 20221108 */
-/* .m_img_r {
-    min-width: 200px;
-    max-width: 350px;
-    margin-bottom: 40px;
-    z-index: 202;
-    box-shadow: -20px 20px 0 black;
-    box-shadow: -20px 20px 0 #2C4A9A;
-} */
 .modal_info_bg {
     position: absolute;
     width: -moz-available;
@@ -387,6 +374,11 @@ precedence over other classes when this class is added to an element from the sc
     background-color: #253C84;
     /* overflow-x: hidden;
     overflow-y: scroll; */
+    /* new, optional colors for bg 20230124*/
+    /* background-color: #0e2776; */
+    /* background-color: #1b3298; */
+    /* background-color: #0e276c; */
+    background-color: #0f1e64;
 }
 /* Late 2022 design */
 /* was previously g_modal2 */
@@ -2262,10 +2254,17 @@ seem to be completely missing. 20221115 === */
 .modal_unit>a {
     max-width: 350px;
 }
+.modal_unit p {
+    font-size: 12pt;
+    text-align: left;
+}
 .modal_unit_alt {
     flex-direction: row-reverse;
     margin-left: 20px;
 }
+/* .modal_unit_alt p {
+    text-align: left;
+} */
 .modal_info_bg {
     display: flex;
     align-items: flex-end;
