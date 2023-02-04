@@ -327,7 +327,7 @@ precedence over other classes when this class is added to an element from the sc
     /* align-items: center; */
     justify-content: right;
     margin-top: 40px;
-    background-color: #2C4A9A;
+    /* background-color: #2C4A9A; */
     z-index: 200;
     height: calc(100% - 40px);
     margin-left: 40px;
@@ -2250,6 +2250,7 @@ seem to be completely missing. 20221115 === */
 .modal_unit {
     display: flex;
     flex-direction: row;
+    margin-bottom: 30px;
 }
 .modal_unit>a {
     max-width: 350px;
@@ -2268,7 +2269,7 @@ seem to be completely missing. 20221115 === */
 .modal_info_bg {
     display: flex;
     align-items: flex-end;
-    background-color: #2C4A9A;
+    /* background-color: #2C4A9A; */
     z-index: 200;
     flex-direction: column;
     position: static;
@@ -2309,6 +2310,13 @@ in modal for FULL resolution */
     min-width: 174px;
     min-height: 124px;
     outline: 2px solid black;
+    transition: all 100ms ease;
+}
+.four_img_box>a:hover {
+    outline: 4px solid #91B4DF;
+    transform: scale(1.2);
+    transition: all 100ms ease;
+    z-index: 210;
 }
 .img_q {
     width: 140%;
