@@ -139,362 +139,13 @@ p, li {
 .portfolio_item_main h4 {
     padding: 30px 20px 30px;
     color: #ffffff;
+    background-color: #2C4A9A;
 }
 /*====================================================*/
 /* Graphic Design Portfolio Item Details Window/Modal */
-/* will need to cut some properties and paste in correct viewports */
-.modal_screen {
-    /* display: none; */
-    /* opacity: 0; */
-    width: 100vw;
-    height: 100vh;
-    /* background-color:rgba(36, 15, 33, 0.4); */
-    background-color:rgba(36, 15, 33, 0);
-    /* backdrop-filter: blur(1.2px);
-    -webkit-backdrop-filter: blur(1.2px); */
-    /* transition: opacity 400ms;
-    transition: opacity 2s linear; */
-    transition: background-color ease 1.2s;
-    /* visibility: hidden; */
-}
-.m_screen_fade {
-    background-color: rgba(36, 15, 33, 0.6);
-    transition: background-color ease 1.2s;
-}
-/* Below might be needed for a smooth, fading transition of modal */
-@keyframes modal_fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-@keyframes modal_alpha {
-    from {background-color: rgba(36, 15, 33, 0);}
-    to {background-color: rgba(36, 15, 33, 0.6);}
-}
-/* might need to CSS transition background color as all child elements
-also transition opacity with how it is writter currently */
-.m_screen_open {
-    position: fixed;
-    /* display: block; */
-    top: 0;
-    left: 0;
-    /* opacity: 1; */
-    z-index: 400;
-    /* transition: opacity 200ms;
-    transition: opacity 2s linear; */
-    /* visibility: visible; */
-    /* animation: modal_fade 2s; */
+/* ------------- MODAL DUPLICATE DELETED ------------ */
 
-    /* animation: modal_alpha 1.2s ease-out forwards; */
-    
-    /* background-color:rgba(36, 15, 33, 0.6);
-    transition: background-color 3s ease-out; */
-    /* background-color: rgba(36, 15, 33, 0.6); */
-    backdrop-filter: blur(1.2px);
-    -webkit-backdrop-filter: blur(1.2px);
-    transition: background-color ease 0.3s;
-}
-.m_s_o {
-    display: block;
-    visibility: visible;
-}
-/* reverse animation, may not be needed */
-.m_screen_closing {
-    animation: modal_alpha 1s ease reverse;
-}
-/* below is original class */
-/* .g_modal {
-    position: relative;
-    position:absolute; */
-    /* bottom: 0; */
-    /* right: 20vw; */
-    /* overflow-x: hidden;
-    overflow-y: hidden;
-    overflow-y: scroll;
-    margin: 20vh 20vw 10vh;
-    margin: 20vh 15vw 10vh;
-    padding: 20px 40px;
-    height: 70vh; */
-    /* width: 20vh; */
-    /* background-color:rgb(43, 57, 96);
-    transition: opacity ease-in 150ms, transform ease 300ms;
-    transform: scale(0.2);
-    transform-origin: top center;
-    opacity: 0;
 
-} */
-/* below is original class */
-/* .g_modal_open {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    margin: 20vh 20vw 10vh;
-    margin: 20vh 15vw 10vh;
-    padding: 20px 40px;
-    height: 70vh;
-    width: auto;
-    background-color:rgb(43, 57, 96);
-    transition: opacity ease-in 150ms, transform ease-out 300ms;
-    transform: scale(1);
-    transform-origin: top center;
-    opacity: 1;
-} */
-/* below is original design for modal close button */
-/* .close_modal {
-    visibility: hidden;
-    opacity: 0;
-    position: fixed;
-    height: 40px;
-    width: 40px;
-    top: calc(20vh + 20px);
-    right: calc(15vw + 40px);
-    background-color:rgb(86, 54, 148);
-    cursor: pointer;
-    z-index: 204;
-    outline: 1px rgb(149, 91, 234) solid;
-    transition: opacity ease 200ms;
-} */
-/* below duplicated futher down in style sheet so as to take 
-precedence over other classes when this class is added to an element from the script */
-
-/* .show_close {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity ease 700ms; */
-    /* animation: modal_fade 1s; */
-/* } */
-/* below is original class */
-/* .modal_top {
-    display: block; */
-    /* width: 100%; */
-/* } */
-/* below might not be needed - could use .modal_top h4 instead */
-/* below is original class */
-/* .modal_title {
-    padding: 20px 0;
-} */
-/* Added after modal HTML restructuring 20220903 */
-.modal_content_00 {
-    display:none;
-}
-.modal_content_01 {
-    display:none;
-}
-/* original class below */
-/* p.modal_intro {
-    text-align: left; */
-    /* flex: none;
-    padding: 0; */
-    /* padding: 10px 10px 30px;
-    margin: 0;
-} */
-/* below is original class */
-/* .modal_flex {
-    display: flex;
-    flex-direction: column; */
-    /* height: 100%; */
-/* } */
-/* below commented out on 20221108 */
-/* .modal_unit_l {
-    position: relative;
-    display: flex;
-    padding: 0 20px;
-    margin-bottom: 40px;
-} */
-/* .modal_unit_r {
-    position: relative;
-    display: flex; */
-    /* justify-content: space-evenly; */
-    /* flex-direction: row-reverse;
-    margin-bottom: 40px;
-} */
-/* below is original class */
-/* .modal_img { */
-    /* position: absolute; */
-    /* min-width: 200px;
-    max-width: 350px;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 202;
-    box-shadow: 20px 20px 0 black;
-    box-shadow: 20px 20px 0 #2C4A9A;
-} */
-.modal_info_bg {
-    position: absolute;
-    width: -moz-available;
-    display: flex;
-    /* align-items: center; */
-    justify-content: right;
-    margin-top: 40px;
-    /* background-color: #2C4A9A; */
-    z-index: 200;
-    height: calc(100% - 40px);
-    margin-left: 40px;
-    margin-right: 40px;
-    background-color: #253C84;
-}
-/* below kept as placeholder if rules need to be global */
-.modal_info_bg_r {
-    /* position: absolute;
-    width: -moz-available;
-    display: flex; */
-    /* align-items: center; */
-    /* margin-top: 40px;
-    background-color: #2C4A9A;
-    z-index: 200;
-    height: calc(100% - 40px);
-    margin-left: 60px;
-    margin-right: 40px;
-    background-color: #253C84; */
-}
-.modal_details {
-    text-align: right;
-    width: 100%;
-    width: calc(100% - 375px);
-    padding-right: 30px;
-    font-size: 12pt;
-    padding-top: 20px;
-}
-.modal_details_r {
-    text-align: left;
-    width: 100%;
-    width: calc(100% - 375px);
-    padding-left: 30px;
-    font-size: 12pt;
-    padding-top: 20px;
-}
-/* Alternate modal design rules */
-/* Late 2022 design */
-/* was previously modal_flex2 */
-.modal_flex {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 40px;
-    background-color: #253C84;
-    /* overflow-x: hidden;
-    overflow-y: scroll; */
-    /* new, optional colors for bg 20230124*/
-    /* background-color: #0e2776; */
-    /* background-color: #1b3298; */
-    /* background-color: #0e276c; */
-    background-color: #0f1e64;
-}
-/* Late 2022 design */
-/* was previously g_modal2 */
-.g_modal {
-    position:absolute;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    margin: 20vh 15vw 10vh;
-    height: 70vh;
-    background-color:rgb(43, 57, 96);
-    transition: opacity ease-in 150ms, transform ease 300ms;
-    transform: scale(0.2);
-    transform-origin: top center;
-    opacity: 0;
-    overflow: hidden;
-}
-/* Late 2022 design */
-/* was previously g_modal_open2 */
-.g_modal_open {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    overflow-x: hidden;
-    /* overflow-y: scroll; */
-    margin: 20vh 15vw 10vh;
-    height: 70vh;
-    width: auto;
-    background-color:rgb(43, 57, 96);
-    transition: opacity ease-in 150ms, transform ease-out 300ms;
-    transform: scale(1);
-    transform-origin: top center;
-    opacity: 1;
-}
-/* Late 2022 design */
-/* was previously modal_top2 */
-.modal_top {
-    display: block;
-    background-color: #253C84;
-    background-color: #2C4A9A;
-    padding-left: 20px;
-}
-/* Late 2022 design */
-/* was previously modal_title2 */
-.modal_title {
-    padding: 20px 0;
-    background-color: #2C4A9A;
-    padding: 20px 0 0;
-}
-/* Late 2022 design */
-/* was previously p.modal_intro2 */
-p.modal_intro {
-    text-align: left;
-    padding: 0 0 20px 30px;
-    margin: 0;
-}
-/* Late 2022 design */
-/* was previously modal_img2 */
-.modal_img {
-    min-width: 200px;
-    max-width: 350px;
-    /* margin-bottom: 40px; */
-    position: relative;
-    z-index: 202;
-    cursor: zoom-in;
-}
-/* late 2022 modal close button design below */
-/* was close_modal2 previously */
-.close_modal {
-    visibility: hidden;
-    opacity: 0;
-    position: fixed;
-    height: 40px;
-    width: 40px;
-    top: calc(20vh + 27px);
-    right: calc(15vw + 30px);
-    background-color:rgb(86, 54, 148);
-    background-color: #4C206C;
-    background-color: #662D91;
-    cursor: pointer;
-    z-index: 204;
-    /* outline: 1px rgb(149, 91, 234) solid; */
-    border: 1px rgb(149, 91, 234) solid;
-    will-change: transform;
-    transition: opacity ease 150ms;
-}
-.close_modal:hover {
-    animation: springy 100ms ease forwards;
-    /* animation-fill-mode: backwards; */
-    /* transition: all ease 200ms; */
-}
-@keyframes springy {
-    0%{transform:scale(1);}
-    /* 50%{transform:scale(1.5);}
-    60%{transform:scale(1);} */
-    63%{transform:scale(1.3);}
-    /* 80%{transform:scale(1.1);} */
-    100%{transform:scale(1.15);box-shadow:0 5px 6px -3px black;}
-}
-/* .close_modal:focus-visible {
-    outline: 2px white solid;
-    outline-offset: 3px;
-    transition: all ease 150ms;
-} */
-.show_close {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity ease 700ms;
-}
-.modal_scroll {
-    overflow-x: hidden;
-    overflow-y: auto;
-    /* margin: 20vh 15vw 10vh; */
-    height: calc(70vh - 98px);
-    width: auto;
-}
-/* --- GLOBAL Modal Above --- */
 .portfolio_item_sub {
     display: flex;
     flex-direction: column;
@@ -641,13 +292,10 @@ unique urls for each class */
     padding: 10px;
     background-color: #2C4A9A;
 }
-/* Might need to just use below rule instead of above if standardizing portfolio item formatting */
-.portfolio_item_main h4 {
-    background-color: #2C4A9A;
-}
+
 /*====================================================*/
-/*===========================*/
-/*================================*/
+/*===*/
+/*===*/
 /*====================================================*/
 /* Graphic Design Portfolio Item Details Window/Modal */
 /* will need to cut some properties and paste in correct viewports */
@@ -661,17 +309,11 @@ unique urls for each class */
     background-color: rgba(36, 15, 33, 0.6);
     transition: background-color ease 1.2s;
 }
-/* Below might be needed for a smooth, fading transition of modal */
-@keyframes modal_fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
+
 @keyframes modal_alpha {
     from {background-color: rgba(36, 15, 33, 0);}
     to {background-color: rgba(36, 15, 33, 0.6);}
 }
-/* might need to CSS transition background color as all child elements
-also transition opacity with how it is writter currently */
 .m_screen_open {
     position: fixed;
     top: 0;
@@ -685,7 +327,7 @@ also transition opacity with how it is writter currently */
     display: block;
     visibility: visible;
 }
-/* reverse animation, may not be needed */
+/* reverse animation may not be needed */
 .m_screen_closing {
     animation: modal_alpha 1s ease reverse;
 }
@@ -702,7 +344,7 @@ also transition opacity with how it is writter currently */
     display: flex;
     justify-content: right;
     margin-top: 40px;
-    background-color: #2C4A9A;
+    /* background-color: #2C4A9A; */
     z-index: 200;
     height: calc(100% - 40px);
     margin-left: 40px;
@@ -714,14 +356,6 @@ also transition opacity with how it is writter currently */
     width: 100%;
     width: calc(100% - 375px);
     padding-right: 30px;
-    font-size: 12pt;
-    padding-top: 20px;
-}
-.modal_details_r {
-    text-align: left;
-    width: 100%;
-    width: calc(100% - 375px);
-    padding-left: 30px;
     font-size: 12pt;
     padding-top: 20px;
 }
@@ -834,8 +468,12 @@ p.modal_intro {
     height: calc(70vh - 98px);
     width: auto;
 }
-/* alt stroke color for close button on modal
+/* alt stroke color for close button on modal */
 /* rgb(149, 91, 234)*/
+
+/*--------------- END MODAL STYLES - GLOBAL ---------------*/
+/*=======================================================*/
+
 .svg_item_heading {
     background-color: #253C84;
     width: auto;
