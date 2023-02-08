@@ -20,7 +20,7 @@
 </head>
 <body>
     <main class=bg>
-
+        <!-- NAV MENU for larger resolutions -->
         <header id=headerMT>
             <div class="head_flex">
                 <a role="button" class=home_link href="#">
@@ -28,11 +28,6 @@
                     <div class="cred_head_sub">portfolio</div>
                 </a>
             </div>
-            <!-- <div id=logoContainer class=logoR2>
-            <img id=logoGlyphMobile src="..\images\ASC Seed LOGO_linGrad.svg"></img>
-            <img id=logoFullHeader src="..\images\ASC_Seed_LOGO_ltBlue2.svg"></img>
-            <a id=logoTextMobile href="..\index.html"></a>
-            </div> -->
             <nav id=menuFULL class=cred_menu>
                 <a role="button" class=menuItem href="#about">
                     <span class=nav_text>ABOUT ME</span>
@@ -47,108 +42,32 @@
                     <span class=nav_text>CONTACT</span>
                 </a>
             </nav>
-           
         </header>
+        <!-- MOBILE NAV MENU -->
         <a role="button" id=menuButton class="mb_mobile">
             <img src="..\images\headerMenuIcon.svg"></img>
         </a>
+        <!-- MOBILE NAV drop-down menu -->
         <menu id=menu class=menu_default>
             <a role="button" class=menuItem href="#about">ABOUT ME</a>
             <a role="button" class=menuItem href="#web_dev">WEB DEV WORK</a>
             <a role="button" class=menuItem href="#design">DESIGN WORK</a>
-            <!--<a class=menuItem href="#art">ARTWORK</a>-->
             <a role="button" class=menuItem href="contact_r.html">CONTACT</a>
         </menu>
-        <!--<div class=spacer></div>-->
         <section id=title_cred>
             <h1 class=cred_arr>Nick Moore</h1>
             <p class=arr_prop>"your", "new", "employee"</p>
         </section>
         <div id=about class=spacer></div>
         <section id=intro>
-            
-            <!-- <h2 class=section_heading>About me...</h2> -->
-            <!-- SECTION REWORK to simplify elements and layout, better HTML tag semantics -->
-            
             <div class=intro_container_2>
                 <h2 class="section_heading largest">About me...</h2>
-                <!-- <div class=intro_bg_color></div> -->
                 <article class=intro_article>
                     <p>I'm a front-end web developer seeking a career change from lab sciences and consulting.</p>
                     <p>My intention is to improve my skills through continual learning with a team, then work towards a leadership role in the industry.</p>
                 </article>
             </div>
-            <!-- END SECTION REWORK -->
-            <!-- <container class=intro_container>
-                <div id=about_me> -->
-                    <!-- <span class=intro_bg> -->
-                        <!-- <h3>I'm a front-end web developer seeking a career change from lab sciences and consulting.</h3> -->
-                        <!-- <p>My intention is to improve my skills through continual learning with a team, then work towards a leadership role in the industry.</p> -->
-                        <!-- <p>Front-End Web Developer, Designer, Lab Consultant, Analytical Chemist, and Botanist</p> -->
-                        <!-- <h3>Greetings,</h3>
-                        <p>My name is Nick Moore.  I am glad to have you read through the content I provide here 
-                            and look forward to discussing how I can contribute to your endeavors with my experience 
-                            and skill-set.  I am a driven person currently in the process of "re-skilling" in order to better meet 
-                            the demands of our technologically driven economy.
-                        </p>
-                        <p>My background is in field and laboratory sciences which I am discovering translates well into web development.
-                            For example, often while operating an analytical lab, complex equipment can produced unexpected results.
-                            Having faced many scenarios like this in regards to science, I have developed a robust and persistent approach wherein
-                            I logically retrace all steps leading up to the unexpected results in order to identify the source of error.
-                        </p> -->
-                    <!-- </span>
-                </div> -->
-                <!-- <aside class=top_cred_links> -->
-                    <!--Below button will not have an href value as it will be a pop-up semi-modal with more personal info - JS needed-->
-                    <!-- <a class="contactButton cred_link">
-                        <span class=button_text>Read More...</span>
-                        <span class=button_fx></span>
-                        <span class=button_bg></span>
-                    </a> -->
-                    <!-- <a href="https://github.com/NMoore-STEM" target="_blank" id=gh02 class="contactButton cred_link">
-                        <span class="button_text gh_text">
-                            <span class=gitHub_icon></span>
-                            <span class=link_01>/NMoore-STEM</span>
-                        </span>
-                        <span class=button_fx></span>
-                        <span class=button_bg></span>
-                    </a>
-                    <a class="contactButton cred_link" href="contact_r.html">
-                        <span class=button_text>Contact Me</span>
-                        <span class=button_fx></span>
-                        <span class=button_bg></span>
-                    </a>
-                </aside> -->
-                <!--<aside class=top_cred_links>
-                    <a id=gh00 class="contactButton resumeButton cred_link" href="..\pdf\NMoore_ASCResume_2020.pdf" target="_blank" zoom="140">
-                        <span class=button_text>R&Eacute;SUM&Eacute;</span>
-                        <span class=button_fx></span>
-                        <span class=button_bg></span>
-                    </a>
-                    <a href="https://github.com/NMoore-STEM" target="_blank" id=gh01 class="contactButton cred_link">
-                        <span class="button_text gh_text">
-                            <span class=gitHub_icon aria-label="git-hub logo"></span>
-                            <span class=link_01>/NMoore-STEM</span>
-                        </span>
-                        <span class=button_fx></span>
-                        <span class=button_bg></span>
-                    </a>-->
-                    <!--<a id="" class="contactButton resumeButton cred_link" href="https://jsfiddle.net/user/NMoore/fiddles/" target="_blank">
-                        <span class=button_text>JSFiddle</span>
-                        <span class=button_fx></span>
-                        <span class=button_bg></span>
-                    </a>
-                    <a id="" class="contactButton resumeButton cred_link" href="dribble" target="_blank">
-                        <span class=button_text>Dribble</span>
-                        <span class=button_fx></span>
-                        <span class=button_bg></span>
-                    </a>-->
-                <!--</aside>-->
-            <!-- </container> -->
             <container class=intro_sub_container>
-                <!-- <h2 class=section_heading>Soft Skills<br>
-                    <sub>& Personality</sub>
-                </h2> -->
                 <h2 class="section_heading large">Soft Skills<br>
                     <sub>&amp; Personality</sub>
                 </h2>
@@ -169,10 +88,6 @@
                         <li>Artistic</li>
                         <li>Approachable Colleague</li>
                         <li>Team Player</li>
-                <!-- Future home of personality test scores below -->
-                        <!--<h3>Predictive Index Classification: Specialist</h3>-->
-                        <!--<h3>Hogan Personality Inventory</h3>-->
-                        <!--<h3>Big 5 Personality Test</h3>-->
                     </ul>
                     <div id=interests>
                         <h2>On My Desk</h2>
@@ -202,14 +117,12 @@
                     <p>All of my webpages have been designed taking viewport and device responsiveness into account.  The primary tools I use when develping webpages are <em>GitHub</em> (for version control and tracking work or bugs that may arise), <em>Visual Studio Code</em> and the <em>developer tools</em> provided by the web browser I view my code on.
                         <br>I develop with Mozilla Firefox, but always test compatibility across browsers before considering a web page complete.
                         <br>Below is a sampling of my capabilities in producing quality web-pages through front-end development and design.</p>
-                        <!--<ul>Please take a look at my GitHub repositories to see how I work.</ul>-->
                         <aside class=top_cred_links>
                             <p>Please take a look at my GitHub repositories to see how I work.</p>
                             <a role="button" href="https://github.com/NMoore-STEM" target="_blank" id=gh02 class="contactButton cred_link">
                                 <span class="button_text gh_text">
                                     <span class=gitHub_icon></span>
                                     <span class=link_01>/NMoore-STEM</span>
-                                    <!--<div class=link_01>/NMoore-STEM</div>-->
                                 </span>
                                 <span class=button_fx></span>
                                 <span class=button_bg></span>
@@ -246,29 +159,11 @@
                                 <li>3-D Modeled Hero Image</li>
                             </ul>
                         </div>
-                        <!-- Below code is retained for reference until CSS is revised and
-                        classes that are no longer needed are removed -->
-                        <!--<div>
-                            <button class=main_port_button type=button>
-                                <a href="">
-                                    <span class=pb_text>Website</span>
-                                </a>
-                            </button>
-                            <button class=sub_port_button type=button>
-                                <a href="">
-                                    <span class=pb_text>GH Repository</span>
-                                </a>
-                            </button>
-                        </div>-->
-                        <!--<button class=sub_port_button type=button>
-                            <span class=pb_text>Developer Notes</span>
-                        </button>-->
                     </section>
                     <section class="portfolio_item_main wd_item">
                         <div class=web_dev_header>
                             <h4>Academic</h4>
                             <a href="../../DBaileyLab_site/index.html" id=lab_img class=web_img title="Academic website home page screenshot">
-                                <!--<img class=portfolio_img_web src="../images/Bailey_sample02.png">-->
                             </a>
                         </div>
                         <div class=portfolio_item_sub>
@@ -327,20 +222,6 @@
                                 <li>Product Catalog</li>
                                 <li>Shopping Cart</li>
                             </ul>
-                            <!--<a class=case_study>Case Study Notes</a>-->
-                            <!--<div class=case_study_popup>
-                                <h4>Learning by Doing:</h4>
-                                <li>Flashy javascript and vector animation</li>
-                                <li>SCSS for more tidy CSS</li>
-                                <li>Functional Shopping Cart</li>
-                                <li></li>
-                            </div>
-                            <sub>Developed with:</sub>
-                            <span class=portfolio_dev_icon>
-                                <img class=code_icon src='../images/HTML5_logo_word.svg'>
-                                <img class=code_icon src='../images/CSS3_logo_word.svg'>
-                                <img class=code_icon src='../images/reactjs-ar21.svg'>
-                            </span>-->
                         </div>
                     </section>
                 </div>
@@ -356,12 +237,9 @@
                         <img class=code_icon src='../images/blender_logo_socket.svg' alt="Blender 3-D software Logo">
                     </span>
                 </div>
-                <!--<h4>LOGOS</h4>-->
+
                 <!-- Place modal template here -->
                 <span class="modal_screen">
-                    <!-- <div class="modal_head_frame">
-                        <h2 class="modal_frame_title">Item Details</h2>
-                    </div> -->
                     <div class=m_container>
                         <!-- Close button for FULL res -->
                         <!-- Had to relocate to here in order to accomodate a logical tabindex flow -->
@@ -372,20 +250,11 @@
                             </svg>
                         </button>
                         <aside class="g_modal">
-                            <!-- CLOSE WINDOW Button ** Moved up a level - see below -->
-                            <!-- <span class="close_modal">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" xml:space="preserve">
-                                    <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="12.5" y1="12.5" x2="37.5" y2="37.5"></line>
-                                    <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="37.5" y1="12.5" x2="12.5" y2="37.5"></line>
-                                </svg>
-                            </span> -->
-                            
                             <div class="modal_content_00">
                                 <!-- Title Area Victor's Mix -->
                                 <span class="modal_top">
                                     <h4 class="modal_title">Packaging Design</h4>
                                     <p class="modal_intro">A complete packaging design used for a fictional product.</p>
-                                    <!-- <p class="modal_intro">Victor's Mix</p> -->
                                 </span>
                                 <!-- Modal Scroll Container -->
                                 <div class="modal_scroll">
@@ -399,8 +268,8 @@
                                             </a>
                                             <div class="modal_info_bg">
                                                 <p class="modal_details">Initial work was focused on typo&shy;graphy and finding the right fonts.</p>
-                                                    <!-- <br>Once the fonts were selected, individual alterations were made in order to fit the overall design and composition. -->
                                                 <p class="modal_details">Once the fonts were selected, alterations to individual letters were made in order to fit the overall design and composition.</p>
+                                                <p class="modal_details">The font for the title of the product was further modified to conform to the contour of the design on the main, front facing.</p>
                                             </div>
                                         </span>
                                         <!-- IMG and Description Unit 2 -->
@@ -428,10 +297,9 @@
                                                 </a>
                                             </div>
                                             <div class="modal_info_bg modal_info_alt">
-                                                <p class="modal_details">Next, images were selected in which to create illustrations from.
-                                                    <!-- <br>These illustrations represent ingredients found within the product.    -->
-                                                </p>
-                                                <p class="modal_details">These illustrations represent ingredients found within the product.</p>
+                                                <p class="modal_details">Next, images were selected in which to create illustrations from.</p>
+                                                <p class="modal_details">These illustrations represent ingredients found within the product or hint at tradtional salve preparation.</p>
+                                                <p class="modal_details">Banners were used as a decorative frame, much like advertisements or packaging from the 19th century.</p>
                                             </div>
                                         </span>
                                         <!-- IMG and Description Unit 3 -->
@@ -439,15 +307,15 @@
                                             <a href="file:///C:/accumulation/code%20projects/git%20hub/ASC-LLC-Redesign/restricted/images_secure/modal_00/NMp_VM_cropLG_06.png" target="_blank">
                                                 <img class="modal_img" src="..\restricted\images_secure\modal_00\NMp_VM_cropSM_06.png" 
                                                 alt="Thumbnail of completed packaging design with all sides displayed. Click to open larger version in new tab."
-                                                 title="Completed packaging design in a 2D layout. Bonus points for anyone that can identify the primary inspiration for the Ananda Botanicals 'AB' in the logo...">
+                                                 title="Completed packaging design in a 2D layout.">
+                                                <!-- !!! BONUS POINTS for anyone that can identify the primary inspiration for the Ananda Botanicals 'AB' in the logo... -->
                                             </a>
                                             <div class="modal_info_bg">
-                                                <p class="modal_details">The aesthetic implemented in this packaging design is taken from woodcut engravings and contour hatching.
-                                                    <br>This design also draws inspiration from Victorian-era product packaging and advertisements.
-                                                </p>
+                                                <p class="modal_details">The aesthetic implemented in this packaging design is taken from woodcut engravings and contour hatching.</p>
+                                                <p class="modal_details">This design also draws inspiration from Victorian-era ads which were notorius for utilizing many more fonts than we do today.</p>
                                             </div>
                                         </span>
-                                        <!-- will add more descriptions as needed below this point -->
+                                        <!-- more descriptions can be added as needed below this point -->
                                     </div>
                                 </div>
                             </div>
@@ -455,7 +323,7 @@
                                 <!-- Title Area 3D Splash Graphic -->
                                 <span class="modal_top">
                                     <h4 class="modal_title">3D Splash Graphic</h4>
-                                    <p class="modal_intro">This graphic was created as a splash image for my consulting website.  I chose to include many elements that represent the types of services offered through that consultancy.</p>
+                                    <p class="modal_intro">This graphic was created as a splash image for my consulting website.</p>
                                 </span>
                                 <!-- Flex container for detailed descriptions -->
                                 <!-- Modal Scroll Container -->
@@ -464,7 +332,6 @@
                                     <div class="modal_flex">
                                         <!-- IMG and Description Unit 1 -->
                                         <span class="modal_unit">
-                                            <!-- ADD HREF TO LINK BELOW -->
                                             <a href="file:///C:/accumulation/code%20projects/git%20hub/ASC-LLC-Redesign/restricted/images_secure/modal_01/ASC_AI.png" target="_blank">
                                                 <img class="modal_img" src="..\restricted\images_secure\modal_01\ASC_AI.png" 
                                                 alt="Image of multi-channel pipette, petri dish with cartoonish culture of streptobacillus, 96 well plate, science composition book, chromatographs, and manilla folders labelled SOPs, NCRs, and OOSs.  Click to open a larger version of this image in a new tab."
@@ -499,13 +366,10 @@
                                                      title="Working view of ASC splash graphic layout. Lighting is in purple wire-frames and the camera is shown in pink.">
                                                 </a>
                                             </div>
-                                            <!-- Removed classes "modal_info_bg_r" and "modal_details_r"
-                                            replaced with generic classes used on all modal units -->
                                             <div class="modal_info_bg">
                                                 <p class="modal_details">I utilized some of my previously created designs and imported them into Blender.</p>
                                                 <p class="modal_details">The imported (2D) vectors had to be modeled in 3D and placed within the diorama-like stage.</p>
                                                 <p class="modal_details">Once the items were modeled, choosing colors and lighting that matched the color scheme of the website it would be utilized in.</p>
-                                                <!--<p class="modal_details">Next, I constructed a 3D stage in Blender and began importing vectors from AI.  These were all 2D, so I had to create 3D mesh to give them dimension.</p>-->
                                             </div>
                                         </span>
                                         <!-- IMG and Description Unit 3 -->
@@ -517,30 +381,21 @@
                                             </a>
                                             <div class="modal_info_bg">
                                                 <p class="modal_details">The final product blends well with the webpage design, portrays the areas of expertise of the consultant, and offers an interesting graphic to draw the end-user further into the content.</p>
-                                                <!--<p class="modal_details">In the final steps, I made sure to utilize the same colors implemented in the website.  The lighting and camera were placed in the scene and images were exported at medium resolution.</p>-->
                                             </div>
                                         </span>
-                                        <!-- will add more descriptions as needed below this point -->
+                                        <!-- more descriptions can be added to template below here -->
                                     </div>
                                 </div>
                             </div>
                         </aside>
                         <!-- Hide below button in smaller resolutions -->
-                        <!-- Moved close modal button for FULL res to top as tabindex was not working as intended -->
-                        <!-- <a class=close_modal href="javascript:void" alt="close modal window with escape key">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" xml:space="preserve">
-                                <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="12.5" y1="12.5" x2="37.5" y2="37.5"></line>
-                                <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="37.5" y1="12.5" x2="12.5" y2="37.5"></line>
-                            </svg>
-                        </a> -->
+                    
                         <span class=close_mobile>
                             <svg class=details_arrow version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
                                 <polygon points="30,1 30,30 16,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#BDB0E6;;"/>
                             </svg>
                             <span class=pb_text>Return to portfolio...</span>
-                            <!-- <svg class=details_arrow version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
-                                <polygon points="30,1 30,30 16,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#BDB0E6;;"/>
-                            </svg> -->
+                            
                         </span>
                     </div>
                 </span>
@@ -548,145 +403,34 @@
                     <section class="portfolio_item_main graphic_item">
                         <h4>Packaging Design:<br>
                         Victor's Mix</h4>
-                        <!--<a href="..\restricted\images_secure\aplza_4in_sticker.svg" target="_blank">-->
-                            <img class=portfolio_img_graphic src="..\restricted\images_secure\modal_00\NM_VM_01_web.png"alt="">
-                        <!--</a>-->
+                        <img class=portfolio_img_graphic src="..\restricted\images_secure\modal_00\NM_VM_01_web.png"alt="">
                         <button class="port_button more_info" alt="Button to show more info in modal">
                             <span class=pb_text>Click for details...</span>
                         </button>
                         <button class="port_button_mobile mobile_info" alt="Button to show more info in modal">
                             <span class=pb_text>Tap for details...</span>
-                            <!-- <span class=details_arrow>
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
-                                    <polygon points="17,1 17,30 1,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#8d76d6;"/>
-                                </svg>
-                            </span> -->
+                            
                         </button>
                     </section>
-                    <!-- more info for first graphic design portfolio item -->
-                    <!-- Commented out for modal template master one level up -->
-                    <!-- <span class="modal_screen">
-                        <div class=m_container>
-                            <aside class="g_modal"> -->
-                                <!-- Title Area -->
-                                <!-- <span class="modal_top">
-                                    <h4 class="modal_title">Packaging Design</h4>
-                                    <p class="modal_intro">A complete packaging design used for a fictional product.</p>
-                                </span> -->
-                                <!-- Flex container for detailed descriptions -->
-                                <!-- <div class="modal_flex"> -->
-                                    <!-- IMG and Description Unit 1 -->
-                                    <!-- <span class="modal_unit_l">
-                                        <img class="modal_img" src="..\restricted\images_secure\ASC_AI.png" alt="">
-                                        <div class="modal_info_bg">
-                                            <p class="modal_details">TEST: p1</p>
-                                        </div>
-                                    </span> -->
-                                    <!-- IMG and Description Unit 2 -->
-                                    <!-- <span class="modal_unit_r">
-                                        <img class="modal_img_r" src="..\restricted\images_secure\ASC_blender.png" alt="">
-                                        <div class="modal_info_bg_r">
-                                            <p class="modal_details_r">TEST: p2</p>
-                                        </div>
-                                    </span> -->
-                                    <!-- IMG and Description Unit 3 -->
-                                    <!-- <span class="modal_unit_l">
-                                        <img class="modal_img" src="..\restricted\images_secure\ASC_shaded.png" alt="">
-                                        <div class="modal_info_bg">
-                                            <p class="modal_details">TEST: p3</p>
-                                        </div>
-                                    </span> -->
-                                    <!-- will add more descriptions as needed below this point -->
-                                <!-- </div>
-                            </aside> -->
-                            <!-- Hide below button in smaller resolutions -->
-                            <!-- <span class=close_modal alt="close modal window">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" xml:space="preserve">
-                                    <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="12.5" y1="12.5" x2="37.5" y2="37.5"></line>
-                                    <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="37.5" y1="12.5" x2="12.5" y2="37.5"></line>
-                                </svg>
-                            </span>
-                            <span class=close_mobile>
-                                <span class=pb_text>Return to portfolio...</span>
-                                <svg class=details_arrow version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
-                                    <polygon points="1,1 1,30 16,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#BDB0E6;;"/>
-                                </svg>
-                            </span>
-                        </div>
-                    </span> -->
+                    
                     
                     <!-- Might remove ID for below section as it is not unique -->
                     <section class="portfolio_item_main graphic_item">
                         <h4>3D Hero Diorama:<br>
                         ASC LLC</h4>
-                        <!-- <a href="..\restricted\images_secure\N Moore 2014 poinsettia flyer 1-2.pdf" target="_blank"> -->
-                            <img class=portfolio_img_graphic src="..\restricted\images_secure\modal_01\asc_splash_prev.png" alt="3D Diorama of Scientific Consulting Company Webpage Splash">
-                        <!-- </a> -->
+
+                        <img class=portfolio_img_graphic src="..\restricted\images_secure\modal_01\asc_splash_prev.png" alt="3D Diorama of Scientific Consulting Company Webpage Splash">
+
                         <button class="port_button more_info">
                             <span class=pb_text>Click for details...</span>
                         </button>
                         <button class="port_button_mobile mobile_info">
                             <span class=pb_text>Tap for details...</span>
-                            <!-- <span class=details_arrow>
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
-                                    <polygon points="17,1 17,30 1,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#8d76d6;"/>
-                                </svg>
-                            </span> -->
+                            
                         </button>
-                        <!-- <a>Click image for details...</a> -->
+                        
                     </section>
-                    <!-- Modal section below (hidden in FULL) -->
-                    <!-- Commented out for modal template master one level up -->
-                    <!-- make sure to lock the scroll for all bg layers when this is open -->
-                        <!-- darken layer immediately below -->
-                    <!-- <span class="modal_screen">
-                        <div class=m_container>
-                            <aside class="g_modal"> -->
-                                <!-- Title Area -->
-                                <!-- <span class="modal_top">
-                                    <h4 class="modal_title">3D Splash Graphic</h4>
-                                    <p class="modal_intro">This graphic was created as a splash image for my consulting website.  I chose to include many elements that represent the types of services offered through that consultancy.</p>
-                                </span> -->
-                                <!-- Flex container for detailed descriptions -->
-                                <!-- <div class="modal_flex"> -->
-                                    <!-- IMG and Description Unit 1 -->
-                                    <!-- <span class="modal_unit_l">
-                                        <img class="modal_img" src="..\restricted\images_secure\ASC_AI.png" alt="">
-                                        <div class="modal_info_bg">
-                                            <p class="modal_details">First, I began brainstorming ideas and creating vector art to reflect the services provided by Ananda Science Consulting.</p>
-                                        </div>
-                                    </span> -->
-                                    <!-- IMG and Description Unit 2 -->
-                                    <!-- <span class="modal_unit_r">
-                                        <img class="modal_img_r" src="..\restricted\images_secure\ASC_blender.png" alt="">
-                                        <div class="modal_info_bg_r">
-                                            <p class="modal_details_r">Next, I constructed a 3D stage in Blender and began importing vectors from AI.  These were all 2D, so I had to create 3D mesh to give them dimension.</p>
-                                        </div>
-                                    </span> -->
-                                    <!-- IMG and Description Unit 3 -->
-                                    <!-- <span class="modal_unit_l">
-                                        <img class="modal_img" src="..\restricted\images_secure\ASC_shaded.png" alt="">
-                                        <div class="modal_info_bg">
-                                            <p class="modal_details">In the final steps, I made sure to utilize the same colors implemented in the website.  The lighting and camera were placed in the scene and images were exported at medium resolution.</p>
-                                        </div>
-                                    </span>
-                                </div>
-                            </aside> -->
-                            <!-- Hide below button in smaller resolutions -->
-                            <!-- <span class=close_modal>
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" xml:space="preserve">
-                                    <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="12.5" y1="12.5" x2="37.5" y2="37.5"></line>
-                                    <line fill="none" stroke="#FFFFFF" stroke-width="8" x1="37.5" y1="12.5" x2="12.5" y2="37.5"></line>
-                                </svg>
-                            </span>
-                            <span class=close_mobile>
-                                <span class=pb_text>Return to portfolio...</span>
-                                <svg class=details_arrow version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
-                                    <polygon points="1,1 1,30 16,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#BDB0E6;;"/>
-                                </svg>
-                            </span>
-                        </div>
-                    </span> -->
+                    
                 </div>
                 <h3>Animated Vector Graphics</h3>
                 <div class=portfolio_item_container>
@@ -986,17 +730,7 @@
                     </section>
                 </div>
             </span>
-            <!-- Section below not used, may be implemented in future -->
-            <!-- Section below retained for whitespace in design, "spacer"-->
             <div id=art class=spacer></div>
-            <!--<span id=artwork class=first_overlay>
-                <h3>My Artwork</h3>
-                <sub>(at a glance)</sub>
-                <span class=collages>
-                    <img src="">
-                    <img src="">
-                </span>
-            </span>-->
         </section>
         <footer>
             <div id=colorBand04>
