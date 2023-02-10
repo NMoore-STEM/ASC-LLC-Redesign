@@ -2223,3 +2223,14 @@ footer {
         line-height: 2;
     }
 }
+/* Below keeps design flow for "in-between" resolutions */
+@media only screen and (min-width:520px) and (max-width:770px) {
+    section {
+        max-width: 90vw;
+        width: 90vw;
+    }
+    .intro_container_2 {
+        width: 105%;
+        justify-self: center;
+    }
+}
