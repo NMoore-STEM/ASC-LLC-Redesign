@@ -1363,6 +1363,7 @@ iframe {
         text-align: left;
         padding: 0 0 10px 0;
         hyphens: manual;
+        -webkit-hyphens: manual;
     }
     .modal_img {
         width: calc(100vw - 40px);
