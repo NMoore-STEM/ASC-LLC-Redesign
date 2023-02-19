@@ -802,6 +802,11 @@ iframe {
         margin: 0;
         padding: 0;
         max-width: 100%;
+        margin-top: 100px;
+        height: calc(100vh - 200px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     section {
         display: grid;
@@ -833,6 +838,7 @@ iframe {
     }
     .section_heading {
         font-size: 35pt;
+        padding-bottom: 25px;
     }
     .intro_bg {
         padding: 20px 10px;
@@ -845,6 +851,7 @@ iframe {
     }
     .intro_article p {
         margin: 0;
+        padding: 0 0 17px;
     }
     .intro_bg h3 {
         font-size: 18pt;
@@ -877,7 +884,7 @@ iframe {
         font-size: 14pt;
     }
     .intro_sub_container {
-        margin-top: 70px;
+        /* margin-top: 70px; */
         padding-bottom: 20px;
     }
     .intro_sub_container h2 {
@@ -934,6 +941,9 @@ iframe {
         padding: 0;
         text-align: left;
         text-shadow: 0 1px 0 #2A385D;
+        text-shadow: 0 2px 0 #2A385D;
+        letter-spacing: -2px;
+        word-spacing: 9px;
     }
     #interests ul {
         display: flex;
@@ -1363,6 +1373,7 @@ iframe {
         text-align: left;
         padding: 0 0 10px 0;
         hyphens: manual;
+        -webkit-hyphens: manual;
     }
     .modal_img {
         width: calc(100vw - 40px);
@@ -2230,7 +2241,8 @@ footer {
         width: 90vw;
     }
     .intro_container_2 {
-        width: 105%;
+        /* width: 105%; */
         justify-self: center;
+        overflow: hidden;
     }
 }
