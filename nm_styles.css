@@ -56,7 +56,7 @@ p, li {
     color: skyblue;
     margin: 0 auto;
     padding-right: 10px;
-    padding-top: 180px;
+    padding-top: 50px;
     max-width: max-content;
 }
 .cred_arr::before {
@@ -485,10 +485,19 @@ p.modal_intro {
     align-items: center;
     background-color: #2C4A9A;
 }
-
+.portfolio_item_svg {
+    position: relative;
+    margin: 40px 15px;
+    padding: 0;
+    width: 340px;
+}
+.portfolio_svg_anim {
+    height: 500px;
+    width: 340px;
+    background-color: white;
+}
 .gmj_logo .portfolio_svg_anim {
     position: relative;
-    background-color: white;
     overflow: hidden;
     /* below added after 20221018 */
     height: 500px;
@@ -1067,6 +1076,8 @@ iframe {
         margin: 30px 10px 30px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
     .portfolio_item_main {
         margin-bottom: 80px;
@@ -1395,8 +1406,10 @@ iframe {
         align-items: center;
     }
     .gmj_logo {
-        background-color: #253C84;
         padding-bottom: 0;
+    }
+    .portfolio_item_svg {
+        margin: 40px 10px;
     }
     .svg_item_heading h4 {
         width: 100%;
