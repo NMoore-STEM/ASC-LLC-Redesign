@@ -847,16 +847,18 @@ iframe {
     }
     .section_heading {
         font-size: 35pt;
-        padding-bottom: 25px;
+        /* padding-bottom: 25px; */
+        padding-bottom: 7px;
     }
     .intro_bg {
         padding: 20px 10px;
     }
     .intro_article {
         background-color: #2C4A9A;
-        padding: 20px 6vw;
+        /* padding: 20px 6vw; */
         margin: 30px 0 70px;
         box-shadow: -30px -30px #253C84, 30px 30px #253C84;
+        padding: 30px 6vw 20px;
     }
     .intro_article p {
         margin: 0;
@@ -897,7 +899,8 @@ iframe {
         padding-bottom: 20px;
     }
     .intro_sub_container h2 {
-        margin-bottom: -70px;
+        /* margin-bottom: -70px; */
+        margin-bottom: -61px;
     }
     #soft_skills {
         display: flex;
@@ -1195,6 +1198,9 @@ iframe {
         padding-bottom: 3px;
         transition: all 0.2s ease;
     }
+    .more_info {
+        display: none;
+    }
     #graphic_design {
         display: flex;
         flex-direction: column;
@@ -1265,9 +1271,12 @@ iframe {
 
     /* Not sure why below is needed??? */
     /* DELETE later??? */
-    .port_button {
+    /* Was a class used for the details/modal button for
+    /* graphic design items.  Used display: none instead on
+    /* ".more_info"
+    /* .port_button {
         display: none;
-    }
+    } */
 /*///////////////////////////////////////////////====================*/
 
     .port_button_mobile {
