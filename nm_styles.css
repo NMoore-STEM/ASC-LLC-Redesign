@@ -428,7 +428,24 @@ p.modal_intro {
     max-width: 350px;
     position: relative;
     z-index: 202;
-    cursor: zoom-in;
+}
+.four_img_box {
+    display: flex;
+    height: 250px;
+    background-color: black;
+    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.four_img_box>a {
+    display: block;
+    overflow: hidden;
+    transition: all 100ms ease;
+}
+.img_q {
+    width: 140%;
+    height: auto;
 }
 /* late 2022 modal close button design below */
 /* was close_modal2 previously */
@@ -1391,7 +1408,7 @@ iframe {
         width: calc(100% - 30px);
         margin: 0;
         text-align: left;
-        padding: 0 0 10px 0;
+        padding: 0 0 15px 0;
         hyphens: manual;
         -webkit-hyphens: manual;
     }
@@ -1399,6 +1416,18 @@ iframe {
         width: calc(100vw - 40px);
         margin-bottom: 0;
         box-shadow: 0 0 transparent;
+    }
+    .four_img_box {
+        width: 320px;
+        min-width: 320px;
+        background-color: transparent;
+    }
+    .four_img_box>a {
+        width: 156px;
+        min-width: 156px;
+        height: 121px;
+        min-height: 121px;
+        outline: 2px solid rgb(43, 57, 96);
     }
     .close_modal {
         display: none;
@@ -2123,25 +2152,19 @@ in modal for FULL resolution */
     margin-block-start: 0;
     width: 100%;
 }
+.modal_img {
+    cursor: zoom-in;
+}
 .four_img_box {
-    display: flex;
     width: 350px;
-    height: 250px;
-    background-color: black;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
     min-width: 350px;
 }
 .four_img_box>a {
-    display: block;
     width: 174px;
-    height: 124px;
-    overflow: hidden;
     min-width: 174px;
+    height: 124px;
     min-height: 124px;
     outline: 2px solid black;
-    transition: all 100ms ease;
 }
 .four_img_box>a:hover {
     outline: 4px solid #91B4DF;
