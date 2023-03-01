@@ -2051,7 +2051,8 @@ em {
 .heading_decor {
     display: flex;
     justify-content: flex-end;
-    background-color: #253C84
+    background-color: #253C84;
+    min-height: 50px;
 }
 .heading_decor h4 {
 	font-family: 'Noto Sans KR', sans-serif;
@@ -2177,11 +2178,15 @@ in modal for FULL resolution */
 }
 /* is the below rule needed still? */
 /* YES - still needed 20221115 */
-#graphic_design .portfolio_item_container:nth-of-type(3) {
+/* reconsidered usign below rule and instead, repeated
+ the html pattern from above for heading decor */
+
+/* #graphic_design .portfolio_item_container:nth-of-type(3) {
     border-top: 50px solid #253C84;
     margin: 0 4vw;
 
-}
+} */
+
 /* ==== More SoC work resumed for svg section 20230207 === */
 .portfolio_item_svg {
     position: relative;
@@ -2280,17 +2285,28 @@ footer {
     .ss_bg {
         padding-right: 20px;
         flex-direction: column;
+        align-items: center;
     }
     #soft_skills {
         width: calc(80vw - 60px);
         max-width: calc(80vw - 60px);
         margin: 50px 0;
         padding: 50px 30px;
+        padding: 50px 30px 20px;
     }
     #soft_skills li {
         padding: 8px;
         margin: 4px;
         line-height: 1.7;
+    }
+    #interests {
+        margin: 0 0 45px;
+        padding: 0 20px;
+    }
+    .portfolio_item_container {
+        width: calc(100% + 8vw - 40px);
+        left: -4vw;
+        padding: 60px 20px 0;
     }
 }
 @media only screen and (min-width:771px) and (max-width:1200px) {
