@@ -176,7 +176,12 @@ $(function(){
                 $('#menuButton').addClass('mb_modal_open');
                 $('.home_link').removeAttr('href');
                 console.log('m:'+m);
-                $('.modal_content_0'+m).show();
+                // $('.modal_content_0'+m).show();
+
+                // $('.modal_content_0'+m).removeAttr('display');
+
+                $('.modal_content_0'+m).addClass('m_show');
+
                 // targetContent.show();
                 // $('.modal_content_0'+m).addClass('m_show');            
             });
@@ -193,7 +198,8 @@ $(function(){
         $('body, html').css('overflow-y', 'scroll');
         $('.modal_screen').removeClass('m_s_o_mobile').one('transitionend', function(e){
             $('.modal_scroll').scrollTop(0,0);
-            $('.modal_content_00, .modal_content_01').hide();
+            // $('.modal_content_00, .modal_content_01').hide();
+            $('.modal_content_00, .modal_content_01').removeClass('m_show');
         })
         //=== new on 20221104
         $('#headerMT').removeClass('headerMT_modal');
