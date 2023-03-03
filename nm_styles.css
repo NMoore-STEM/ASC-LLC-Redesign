@@ -482,6 +482,7 @@ p.modal_intro {
 .modal_scroll {
     overflow-x: hidden;
     overflow-y: auto;
+    /* overflow-y: scroll; */
     height: calc(70vh - 98px);
     width: auto;
 }
@@ -1365,13 +1366,23 @@ iframe {
         /* new on 20221104 */
         height: calc(100vh - 120px);
     }
+    /* .modal_content_00 {
+        display:none;
+    }
+    .modal_content_01 {
+        display:none;
+    } */
     .modal_content_00, .modal_content_01 {
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
         height: calc(100vh - 162px);
         overflow: hidden;
         /* new on 20221104 */
         height: calc(100vh - 122px);
+    }
+    .m_show {
+        display: flex;
+        flex-direction: column;
     }
     .modal_top {
         display: block;
@@ -1428,6 +1439,13 @@ iframe {
         height: 121px;
         min-height: 121px;
         outline: 2px solid rgb(43, 57, 96);
+    }
+    /* Below is to position thumbnail images so that the user can see the subject more clearly */
+    .m01_qimg_01, .m01_qimg_02, .m01_qimg_03, .m01_qimg_04, 
+    .m02_qimg_01, .m02_qimg_02, .m02_qimg_03, .m02_qimg_04 {
+        width: 100%;
+        margin-left: -30px;
+        margin-top: -15px;
     }
     .close_modal {
         display: none;
@@ -2325,5 +2343,10 @@ footer {
         /* width: 105%; */
         justify-self: center;
         overflow: hidden;
+    }
+}
+@media only screen and (min-width:400px) and (max-width:770px) {
+    .modal_unit > .modal_img {
+        max-width: 200px;
     }
 }
