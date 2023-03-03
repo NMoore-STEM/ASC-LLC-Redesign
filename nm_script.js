@@ -95,9 +95,11 @@ $(function(){
                 console.log('!!! innermost');
             }).off(e);
             function hideModal() {
-                mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
+                // mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
+                mScr.hide().removeClass('m_screen_open').off(e);
                 // Added below to hide item-specific content after open
                 $('.modal_content_00, .modal_content_01').hide();
+                // $('.modal_content_00, .modal_content_01').removeClass('m_show');
                 console.log('new function');
             }
             setTimeout(hideModal,175);
@@ -118,14 +120,20 @@ $(function(){
             console.log('l:'+l);
             $('.modal_content_0'+l).show();
         });
+        return false
     };
-    for(let m=0;m<cBttn.length;m++){
-        cBttn.on('click',function(){
-            var m = cBttn.index(this);
-            console.log('m:'+m);
-            $('.modal_content_0'+m).show();
-        });
-    }
+
+    //// === Below moved/nested under a singular .on('click') for MOBILE
+
+    // for(let m=0;m<cBttn.length;m++){
+    //     cBttn.on('click',function(){
+    //         var m = cBttn.index(this);
+    //         console.log('m:'+m);
+    //         $('.modal_content_0'+m).show();
+    //         // $('.modal_content_0'+m).addClass('m_show');            
+    //     });
+    //     return false
+    // }
 });
 ////////////////////////////////////////////////////////////////
 //         MOBILE version                                     //
@@ -146,19 +154,38 @@ $(function(){
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
 $(function(){
-    $('.mobile_info').on('click touch', function(event){
-        event.preventDefault();
-        $('body, html').css('overflow-y', 'hidden');
-        $('.modal_screen').addClass('m_s_o_mobile');
-        //=== below new on 20221104
-        $('#headerMT').addClass('headerMT_modal');
-        $('.head_flex').addClass('mobile_modal');
-        $('#menuButton').addClass('mb_modal_open');
-        $('.home_link').removeAttr('href');
+    var cBttn = $('.mobile_info');
+    // cBttn.on('click touch', function(event){
+    //     event.preventDefault();
+    //     $('body, html').css('overflow-y', 'hidden');
+    //     $('.modal_screen').addClass('m_s_o_mobile');
+    //     //=== below new on 20221104
+    //     $('#headerMT').addClass('headerMT_modal');
+    //     $('.head_flex').addClass('mobile_modal');
+    //     $('#menuButton').addClass('mb_modal_open');
+    //     $('.home_link').removeAttr('href');
+
+        for(let m=0;m<cBttn.length;m++){
+            cBttn.on('click',function(){
+                var m = cBttn.index(this);
+                    // targetContent = $('.modal_content_0'+m);
+                $('body, html').css('overflow-y', 'hidden');
+                $('.modal_screen').addClass('m_s_o_mobile');
+                $('#headerMT').addClass('headerMT_modal');
+                $('.head_flex').addClass('mobile_modal');
+                $('#menuButton').addClass('mb_modal_open');
+                $('.home_link').removeAttr('href');
+                console.log('m:'+m);
+                $('.modal_content_0'+m).show();
+                // targetContent.show();
+                // $('.modal_content_0'+m).addClass('m_show');            
+            });
+            return false
+        }
         // Below is to prevent unwanted page jumping after click
         return false;
-    })
-})
+    // })
+});
 $(function(){
     $('.close_mobile').on('click touch', function(event){
         event.preventDefault();
@@ -174,7 +201,7 @@ $(function(){
         $('#menuButton').removeClass('mb_modal_open');
 
     })
-})
+});
 //  Button on portfolio page that starts and stops svg animation on items
 $(function(){
     $('.start_stop_gmj').on('click touch', function(event){
