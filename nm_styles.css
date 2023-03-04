@@ -420,6 +420,7 @@ p.modal_intro {
     text-align: left;
     padding: 0 0 20px 30px;
     margin: 0;
+    font-size: 10pt;
 }
 /* Late 2022 design */
 /* was previously modal_img2 */
@@ -1321,6 +1322,8 @@ iframe {
         background-color: #662D91;
         transition: all ease 300ms;
     }
+    /*==============================================*/
+    /*===  MOBILE Modal   ==========================*/
     .mobile_modal {
         filter: hue-rotate(30deg);
         transition: all ease 300ms;
@@ -1388,13 +1391,20 @@ iframe {
         display: block;
         padding: 0;
     }
-    .modal_top p {
-        padding: 0 0 15px 30px;
+    /*== Below is design change - eliminating this element */
+    /*   for MOBILE res only - may remove in global as well? */
+    .modal_intro {
+        display: none;
     }
+    /* .modal_top p {
+        padding: 0 0 15px 30px;
+        text-align: center;
+    } */
+
     .modal_title {
         /* for content heirarchy */
         color: white;
-        padding: 15px 0 0;
+        padding: 15px 0;
     }
     .modal_scroll {
         height: auto;
@@ -1404,9 +1414,11 @@ iframe {
     }
     .modal_unit {
         display: flex;
-        margin-bottom: 40px;
+        /* margin-bottom: 40px; */
+        margin-bottom: 30px;
         padding: 0;
         flex-direction: column-reverse;
+        align-items: center;
     }
     .modal_info_bg {
         position: static;
@@ -2345,8 +2357,31 @@ footer {
         overflow: hidden;
     }
 }
-@media only screen and (min-width:400px) and (max-width:770px) {
-    .modal_unit > .modal_img {
-        max-width: 200px;
+@media only screen and (min-width:600px) and (max-width:770px) {
+    .modal_flex > .modal_unit:first-of-type {
+        margin-bottom: 0;
+    }
+    .modal_unit {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .modal_unit > a {
+        min-width: 250px;
+        max-width: 300px;
+    }
+    .modal_img {
+        width: 100%;
+    }
+    .modal_unit_alt {
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+        /* margin-top: 10px; */
+    }
+    .four_img_box {
+        flex-direction: row;
+    }
+    .m01_qimg_01, .m01_qimg_02, .m01_qimg_03, .m01_qimg_04, 
+    .m02_qimg_01, .m02_qimg_02, .m02_qimg_03, .m02_qimg_04 {
+        margin-left: 0;
     }
 }
