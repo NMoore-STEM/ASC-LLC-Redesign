@@ -663,7 +663,7 @@ textarea:-moz-ui-invalid {
         /* at .25 */
         transition: margin 0.25s linear, color 0.1s linear, opacity 0.15s linear 0.1s;
     }
-    .menuOpen .passwordKey {
+    /* .menuOpen .passwordKey {
         max-width: max-content;
         display: flex;
         opacity: 1;
@@ -674,26 +674,7 @@ textarea:-moz-ui-invalid {
         /* Transition time cut in half */
         /*transition: all 1s ease, opacity 0.6s linear 0.3s;*/
         /* at .25 */
-        transition: all 0.5s linear, opacity 0.3s linear 0.15s;
-    }
-    /* .passwordKey {
-        opacity: 0;
-        border-radius: 50% 50%;
-        max-width: min-content;
-        padding: 10px;
-        display: grid !important;
-        margin: -10px 0;
-        align-self: center;
-        background-color: #553692;
-        transition: all 2s ease;
-        pointer-events: none; */
-        /* Transition time cut in half */
-        /*transition: all 1s linear, opacity 0.4s linear;*/
-        /* at .25 */
-        /* transition: all 0.5s linear, opacity 0.2s linear;
-    } */
-    /* .passwordKey img {
-        max-height: 40px;
+        /* transition: all 0.5s linear, opacity 0.3s linear 0.15s;
     } */
     #splashFULL {
         visibility: hidden;
@@ -1154,9 +1135,6 @@ textarea:-moz-ui-invalid {
         display: inline-table;
         transform-style: flat;
         -webkit-font-smoothing: subpixel-antialiased; */
-    }
-    .passwordKey img {
-        max-height: 2.5vw;
     }
     #splashMT, .mobileValue {
         display: none;
