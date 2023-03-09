@@ -398,6 +398,9 @@ unique urls for each class */
     transform: scale(1);
     transform-origin: top center;
     opacity: 1;
+    /* new 20230308 */
+    margin: 10vh 8vw 10vh;
+    height: 80vh;
 }
 /* Late 2022 design */
 /* was previously modal_top2 */
@@ -466,6 +469,9 @@ p.modal_intro {
     border: 1px rgb(149, 91, 234) solid;
     will-change: transform;
     transition: opacity ease 150ms;
+    /* new 20230308 */
+    top: calc(10vh + 23px);
+    right: calc(8vw + 25px);
 }
 .close_modal:hover {
     animation: springy 100ms ease forwards;
@@ -486,6 +492,8 @@ p.modal_intro {
     /* overflow-y: scroll; */
     height: calc(70vh - 98px);
     width: auto;
+    /* new 20230308 */
+    height: calc(80vh - 88px);
 }
 /* alt stroke color for close button on modal */
 /* rgb(149, 91, 234)*/
@@ -2201,6 +2209,9 @@ in modal for FULL resolution */
     transform: scale(1.2);
     transition: all 100ms ease;
     z-index: 210;
+    /* new 20230308 */
+    transform: scale(1.1);
+    transition: transform 100ms ease, outline 200ms ease-in;
 }
 .img_q {
     width: 140%;
