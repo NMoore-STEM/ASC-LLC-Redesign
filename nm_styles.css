@@ -1005,8 +1005,11 @@ iframe {
         /*Nex style 20210306*/
         padding: 0 0 0 20px;
         z-index: 1;
-        top: 45px;
+        top: 35px;
         position: absolute;
+    }
+    #portfolio .section_heading {
+        font-size: 50pt;
     }
     #web_dev {
         width: 0;
