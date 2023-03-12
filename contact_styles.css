@@ -216,6 +216,10 @@ header {
     transition: all ease 150ms;
     transition-delay: 350ms;
 }
+.bg {
+    /* height: 100vh; */
+    padding-top: 130px;
+}
 .formContainer{
     display: flex;
     flex-direction: column;
