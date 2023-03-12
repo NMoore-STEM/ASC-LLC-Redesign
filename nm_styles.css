@@ -2147,6 +2147,7 @@ seem to be completely missing. 20221115 === */
 .modal_unit {
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin-bottom: 30px;
 }
 .modal_unit>a {
@@ -2171,6 +2172,7 @@ seem to be completely missing. 20221115 === */
     z-index: 200;
     flex-direction: column;
     position: static;
+    margin-top: 10px;
     margin-left: 25px;
     margin-right: 55px;
 }
@@ -2182,7 +2184,7 @@ in modal for FULL resolution */
     z-index: 200;
     background-color: #253C84;
     margin-right: 20px;
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }
 .modal_details {
     text-align: left;
@@ -2363,7 +2365,6 @@ footer {
         width: 90vw;
     }
     .intro_container_2 {
-        /* width: 105%; */
         justify-self: center;
         overflow: hidden;
     }
@@ -2386,7 +2387,6 @@ footer {
     .modal_unit_alt {
         flex-direction: column-reverse;
         margin-bottom: 50px;
-        /* margin-top: 10px; */
     }
     .four_img_box {
         flex-direction: row;
@@ -2394,5 +2394,24 @@ footer {
     .m01_qimg_01, .m01_qimg_02, .m01_qimg_03, .m01_qimg_04, 
     .m02_qimg_01, .m02_qimg_02, .m02_qimg_03, .m02_qimg_04 {
         margin-left: 0;
+    }
+}
+@media only screen and (min-width:790px) and (max-width:900px) {
+    #portfolio h3 {
+        font-size: 22pt;
+    }
+}
+@media only screen and (min-width:771px) and (max-width:950px) {
+    .modal_unit {
+        flex-direction: column-reverse;
+    }
+    .modal_unit_alt {
+        margin-left: 0;
+    }
+    .modal_info_bg {
+        margin: 0 25px 20px;
+    }
+    .modal_info_alt {
+        margin-left: 25px;
     }
 }
