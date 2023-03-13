@@ -1698,3 +1698,47 @@ textarea:-moz-ui-invalid {
         padding-left: 100px;
     }
 }
+@media only screen and (min-width:500px) and (max-width:770px) {
+    .cardContainer {
+        max-width: 500px;
+    }
+    .how_flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sectionMain {
+        min-width: 475px;
+        width: 85vw;
+        max-width: 85vw;
+    }
+    #servicesContent {
+        max-width: 85vw;
+        padding: 20px 6vw;
+    }
+    .firstLi {
+        max-width: 80vw;
+        width: auto;
+        margin-bottom: 60px
+    }
+    .listDeco {
+        margin: 0 10px 5vw;
+        max-width: 70vw;
+    }
+    #qualContent ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 10px;
+    }
+}
+@media only screen and (min-width:650px) and (max-width:770px) {
+    .listDeco {
+        max-width: 220px;
+    }
+    .firstLi {
+        max-width: 80vw;
+        width: auto;
+        margin-bottom: 0
+    }
+}
