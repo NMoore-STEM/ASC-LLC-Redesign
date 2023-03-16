@@ -861,7 +861,9 @@ $(function(){
             return false;
         };
     };
-    $(".contactForm").on('submit',function(e){
+    // Replaced below with just .submit() as it is shorthand
+    // $(".contactForm").on('submit',function(e){
+    $(".contactForm").submit(function(e){
         function validateAll() {
             if (blankCheck() && regex.test(emailF.val()) && botBoot()) {
                 alert('vA PASS!!!');
