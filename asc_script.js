@@ -8,7 +8,8 @@ $(document).ready(function(){
         $('#logoContainer').removeClass('logoReveal');
     }
     // Above might not be best solution, but cannot think of another now
-    $(document).scroll(function(){
+    // $(document).scroll(function(){
+    $(document).on('scroll', function(){
         if ($(document).scrollTop() > 450) {
             $('#headerMT').addClass('show');
         } else {
@@ -16,7 +17,8 @@ $(document).ready(function(){
         }
     });
     //Below will be used to have logo move into header in FULL
-    $(document).scroll(function(){
+    // $(document).scroll(function(){
+    $(document).on('scroll', function(){
         if ($(document).scrollTop() > 430) {
             $('#logoContainer').addClass('logoReveal');
         } else {
