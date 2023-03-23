@@ -11,3 +11,6 @@ All portfolio pieces will be hosted in hidden pages on the backend of the ASC LL
 
 NOTE: By replacing the space with an underscore in my splash code/title for the portfolio page, then using Nick_Moore.toString() in console will produce: "your,new,employee"
 This is important because not only does it have design appeal, but is also functional JavaScript code.
+
+New Notes 20230323:
+Ananda Science Consulting website was the original source of styling and design that is also used in my portfolio page.  This is because, initially, my portfolio was intended to be a password-protected section of my consulting website so potential clients could browse my detailed credentials.  Originally, my portfolio site was to be built around my resume and geared more towards my experience as a lab manager.  I decided to change course as I came to the epiphany that I could continue to learn web development and re-tool my portfolio page to be focused on myexperience with web dev and digital/graphic design.  Although I could have entirely redesigned the look of my portfolio to be distinct from my consulting website, I opted to reuse colors and assets.  The idea was if I did not have to spend more time on a redesign, I could utilize more time learning how to write script and improve my HTML and CSS.
