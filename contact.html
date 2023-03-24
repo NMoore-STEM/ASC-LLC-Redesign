@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT ASC LLC</title>
     <meta name="robots" content="noindex, nofollow, nosnippet, noarchive"/>
+    <link rel="stylesheet" href="asc_styles.css">
+    <link rel="stylesheet" href="contact_styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&family=Exo+2&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg">
-    <script src="jquery-3.5.1.js"></script>
-    <script src="script.js"></script>
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="../scripts/jquery3.6.4.min.js"></script> -->
+    <script src="jquery3.6.4.min.js"></script>
+    <!-- <script src="jquery-3.5.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+    <script src="contact_script.js"></script>
     <!--<script src="contact_test.js"></script>-->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>-->
 </head>
@@ -55,18 +61,28 @@
         <!--Or for FormCarry use action="https://formcarry.com/s/_e7pm-Gb5q"-->
         <!--Use placeholder action="#" for dev process-->
             <form class="contactForm willChangeJQ" action="#" method=POST enctype="multipart/form-data" name=contactASC>
-                <div class="nameContainer willMoveJQ">
+                <!-- <div class="nameContainer willMoveJQ">
                     <label id=nameLabel class=willChangeJQ for=nameField>Name:</label>
                     <input id=nameField class=inputField type=text name=name inputmode=text size=40 autocomplete=off required>
+                </div> -->
+                <div class="main_container">
+                    <label id=nameLabel class=willChangeJQ for=nameField>Name:</label>
+                    <div class="nameContainer willMoveJQ">
+                        <input id=nameField class=inputField type=text name=name inputmode=text size=40 autocomplete=off required>
+                    </div>
                 </div>
-                <div class="emailContainer willMoveJQ">
+                <div class="main_container">
                     <label id=emailLabel class=willChangeJQ for=emailField >Email:</label>
-                    <input id=emailField class=inputField type=email name=email inputmode=email size=40 autocomplete=off required="true" pattern="^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b">
-                    <!--regex developed/tested with tool at https://regexr.com/-->
+                    <div class="emailContainer willMoveJQ">
+                        <input id=emailField class=inputField type=email name=email inputmode=email size=40 autocomplete=off required="true" pattern="^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b">
+                        <!--regex developed/tested with tool at https://regexr.com/-->
+                    </div>
                 </div>
-                <div class="messageContainer willMoveJQ">
+                <div class="main_container">
                     <label id=messageLabel class=willChangeJQ for=messageField>Message:</label>
-                    <textarea id=messageField class=inputField name=message rows=5 cols=50 autocomplete=off required></textarea>
+                    <div class="messageContainer willMoveJQ">
+                        <textarea id=messageField class=inputField name=message rows=5 cols=50 autocomplete=off required></textarea>
+                    </div>
                 </div>
                 <!--Hidden bot trap security device-->
                 <label for=botCatfish class=botCatfish>Fellow Humans, please refrain from entering any characters in this field.</label>
