@@ -11,11 +11,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link rel="stylesheet" href="../nm_styles.css">
     <link rel="stylesheet" href="../contact_styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&family=Exo+2&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Noto+Sans+KR:wght@500&family=Spartan:wght@500&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=League+Spartan:wght@500&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.png">
-    <script src="../jquery-3.5.1.js"></script>
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="jquery3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+    <!-- <script src="../jquery-3.5.1.js"></script> -->
     <!-- <script src="../jquery-3.6.1.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
     <!-- <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script> -->
     <script src="../script.js"></script>
     <!--<script src="contact_test.js"></script>-->
@@ -65,20 +70,28 @@
         <!--Or for FormCarry use action="https://formcarry.com/s/_e7pm-Gb5q"-->
         <!--Use placeholder action="#" for dev process-->
             <form class="contactForm willChangeJQ" action="#" method=POST enctype="multipart/form-data" name=contactASC>
-                <!-- might incorporate below gif to show when XSS attack is detected -->
-                <!-- <div class="tenor-gif-embed" data-postid="13414392" data-share-method="host" data-aspect-ratio="1.05405" data-width="100%"><a href="https://tenor.com/view/dikembe-not-in-my-house-gif-13414392">Dikembe Not GIF</a>from <a href="https://tenor.com/search/dikembe-gifs">Dikembe GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> -->
-                <div class="nameContainer willMoveJQ">
+                <!-- <div class="nameContainer willMoveJQ">
                     <label id=nameLabel class=willChangeJQ for=nameField>Name:</label>
                     <input id=nameField class=inputField type=text name=name inputmode=text size=40 autocomplete=off required>
+                </div> -->
+                <div class="main_container">
+                    <label id=nameLabel class=willChangeJQ for=nameField>Name:</label>
+                    <div class="nameContainer willMoveJQ">
+                        <input id=nameField class=inputField type=text name=name inputmode=text size=40 autocomplete=off required>
+                    </div>
                 </div>
-                <div class="emailContainer willMoveJQ">
+                <div class="main_container">
                     <label id=emailLabel class=willChangeJQ for=emailField >Email:</label>
-                    <input id=emailField class=inputField type=email name=email inputmode=email size=40 autocomplete=off required="true" pattern="^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b">
-                    <!--regex developed/tested with tool at https://regexr.com/-->
+                    <div class="emailContainer willMoveJQ">
+                        <input id=emailField class=inputField type=email name=email inputmode=email size=40 autocomplete=off required="true" pattern="^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b">
+                        <!--regex developed/tested with tool at https://regexr.com/-->
+                    </div>
                 </div>
-                <div class="messageContainer willMoveJQ">
+                <div class="main_container">
                     <label id=messageLabel class=willChangeJQ for=messageField>Message:</label>
-                    <textarea id=messageField class=inputField name=message rows=8 cols=50 autocomplete=off required></textarea>
+                    <div class="messageContainer willMoveJQ">
+                        <textarea id=messageField class=inputField name=message rows=5 cols=50 autocomplete=off required></textarea>
+                    </div>
                 </div>
                 <!--Hidden bot trap security device-->
                 <label for=botCatfish class=botCatfish>Fellow Humans, please refrain from entering any characters in this field.</label>
