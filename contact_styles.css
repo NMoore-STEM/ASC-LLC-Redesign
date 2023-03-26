@@ -1,5 +1,8 @@
 /*=========================================================*/
 /*-----------------   CONTACT global   -------------------*/
+html, body {
+    height: 100%;
+}
 .formContainer {
     overflow: hidden;
 }
@@ -17,6 +20,9 @@
 }
 .contactForm {
     background: whitesmoke;
+    position: relative;
+}
+.main_container {
     position: relative;
 }
 .nameContainer, .emailContainer, .messageContainer {
@@ -37,10 +43,14 @@ label {
     color: black;
     background-color: whitesmoke;
     padding: 0 5px 0;
+
+    margin: 13px 0 0 10px;
+    z-index: 2;
     transition: background-color 2s ease, margin-top 0.2s ease;
 }
 .labelActive {
     margin-top: -23px;
+    margin-top: -12px;
     transition: margin-top 0.3s ease-out, background-color 1.2s ease;
 }
 #nameField, #emailField, #messageField {
@@ -57,7 +67,7 @@ input {
     font-size: 18px;
 	background-color: transparent;
 }
-/* Custom Error Visual Cue */
+/* === Custom Form Error UI === */
 input:-moz-ui-invalid, textarea:-moz-ui-invalid {
     box-shadow: none;
     background-image: url('images/error_x_icon.svg');
@@ -91,13 +101,13 @@ textarea:-moz-ui-invalid {
 }
 .focusActive {
     border: solid 1px blueviolet !important;
-    scale: 1.02;
+    transform: scale(1.02);
     box-shadow: 1px 1px 3px blueviolet;
-    -webkit-transform: translate3d(0,0,0);
+    /* -webkit-transform: translate3d(0,0,0);
     -moz-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     -o-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0); */
     transition: all 0.16s ease;
 }
 .subB {
@@ -137,7 +147,6 @@ textarea:-moz-ui-invalid {
 .loading01 {
     animation: load01 1.4s linear 3;
 }
-
 @keyframes load03 {
     10% { stroke-dashoffset: 0;stroke-dasharray: 30 1084; }
     30% { stroke-dashoffset: -150;stroke-dasharray: 180 1084; }
@@ -171,7 +180,6 @@ textarea:-moz-ui-invalid {
 .willMoveJQ {
     position: relative;
 }
-
 @keyframes form_left {
     60% { transform: translateX(70px); }
     100% { transform: translateX(-1000px); }
@@ -196,6 +204,9 @@ textarea:-moz-ui-invalid {
 .thankYou-sub {
     position: relative;
     color: #9D90C5;
+}
+footer {
+    transition: all 500ms ease;
 }
 /*============================================================*/
 /*----------------   CONTACT/ MOBILE TABLET   ----------------*/
@@ -252,14 +263,14 @@ header {
 }
 .thankYou-sub {
     font-size: 14pt;
+    padding: 0 20px 0;
 }
-
 @keyframes ty_left01 {
     1% { transform: translateX(-76vw); }
     100% { transform: translateX(-88vw); }
 }
 .spacer2 {
-    height: 80px;
+    height: 50px;
     background-color: transparent;
 }
 }
@@ -280,6 +291,9 @@ header {
     ::-webkit-scrollbar-button {
         background: #220e4d;
         color: #4C206C;
+    }
+    html {
+        scrollbar-color: #4C206C #220e4d;
     }
     /*================================================================*/
     /*----------------   CONTACT PAGE FULL   -------------------------*/
