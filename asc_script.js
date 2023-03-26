@@ -180,7 +180,8 @@ $(document).ready(function(){
                     $(".load_outline2").addClass("loading02");
                     $(".load_outline").addClass("loading01");
                     setTimeout(function(){
-                        $('.subB').blur();
+                        // $('.subB').blur();
+                        $('.subB').trigger('blur');
                     }, 450);
                     setTimeout(function(){
                         $(".subB").val("SENT");
