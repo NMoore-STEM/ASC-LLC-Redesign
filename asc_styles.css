@@ -1,5 +1,4 @@
 html {
-    /*height: 100%;*/
     scroll-behavior: smooth;
     overflow: auto;
 
@@ -7,10 +6,8 @@ html {
 body {
     padding: 0;
     margin: 0;
-    /*overflow-y: scroll;*/
     overflow-y: auto;
     overflow-x: hidden;
-    /*height: 100%;*/
 }
 h1, h2 {
     color: white;
@@ -25,8 +22,6 @@ h4 {
     font-size: 18pt;
 }
 i {
-    /* font-family: 'Crimson Pro', serif;
-    font-size: 6vw; */
     font-size: 5.15vw;
     font-family: 'Times New Roman', serif;
     line-height: 0.78;
@@ -90,8 +85,6 @@ p, li {
     padding: 30px;
     /* standardized shadow color below */
     box-shadow: 0 8px 4px -6px #1B253E;
-    /* min-width: 280px;
-    max-width: 350px; */
     height: 190px;
     width: 350px;
     min-width: 350px;
@@ -104,7 +97,6 @@ p, li {
     align-items: center;
     color: transparent;
     background: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
-
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -112,8 +104,6 @@ p, li {
 }
 #coreValues::before {
     content: "\007B";
-    /* below might not be needed */
-    /* height: 100%; */
     margin-right: 24px;
 }
 #coreValues::after {
@@ -126,8 +116,6 @@ p, li {
     text-align: center;
     list-style: none;
     font-size: 14.4pt;
-    /* line-height: 1.5; */
-    /* new declarations 20220702 */
     width: 178px;
     position: absolute;
     height: 40px;
@@ -140,15 +128,12 @@ p, li {
     transition: all 0.4s ease;
 }
 .coreInitial h3 {
-    /* line-height: 4; */
     opacity: 0;
-    /* letter-spacing: 0; */
     letter-spacing: -10px;
     transition: all 0.6s ease;
 }
 .coreMask {
     overflow: hidden;
-    /* margin: 0; */
     margin: 8px 0;
     padding: 0;
     position: relative;
@@ -156,34 +141,24 @@ p, li {
     height: 40px;
 }
 .initialLi {
-    /* line-height: 4; */
     opacity: 0;
     top: -30px;
     transition: opacity 0.8s ease-out, top 0.8s ease-out;
 }
 .coreFinal {
-    animation: coreOpen 2s linear 0.4s 1 forwards;
-    /* animation-fill-mode: forwards; */
     width: 178px;
-    /* min-width: 178px; */
     flex-shrink: 0;
     transition: all 0.4s ease;
 }
 .coreFinal h3 {
     opacity: 1;
     letter-spacing: 4px;
-    /* transition: all 0.8s ease 0.2s; */
     transition: all 0.8s ease;
 }
 .finalLi {
     top: 0;
     opacity: 1;
     transition: opacity 0.8s ease-out, top 0.4s ease-out;
-}
-@keyframes coreOpen {
-    0% {};
-    50% {};
-    100% {};
 }
 .leftAside {
     text-align: left;
@@ -192,7 +167,6 @@ p, li {
 .cardFrame {
     display: flex;
     background-color: #91B4DF;
-    /* border: 2px solid #2C395E; */
     border: 2px solid black;
     border-radius: 15px;
 }
@@ -200,13 +174,10 @@ p, li {
     font-size: 14pt;
     color: black;
     text-align: left;
-    /* padding-left: 50px; */
-    /* padding: 0 0 0 50px; */
 }
 .cardContent p {
     font-family: 'Spartan', sans-serif;
     color: #2A385D;
-    /* color: black; */
     margin: 0;
     padding: 10px 0 0 20px;
     text-align: left;
@@ -240,7 +211,6 @@ p, li {
     height: 75px;
     width: 75px;
     border-radius: 50% 50%;
-    /* background-color: #1D3273; */
     z-index: -1;
 }
 #colorBand04 {
@@ -254,7 +224,6 @@ p, li {
     align-items: center;
     padding: 30px;
 }
-/* will keep black shadows on hover for these classes, looks better */
 .footerButton {
     display: grid;
     min-width: 120px;
@@ -275,10 +244,6 @@ p, li {
     border: solid 6px #553692;
     transition: all 0.5s ease;
 }
-/* Delete this element entirely from HTML and CSS later */
-.topButtonFULL {
-    display: none;
-}
 .copyright {
     display: block;
     position: relative;
@@ -291,197 +256,7 @@ p, li {
 }
 /*=========================================================*/
 /*-----------------   CONTACT global   -------------------*/
-.formContainer {
-    overflow: hidden;
-}
-.contactTitle {
-    display: block;
-    background-color:#553692;
-}
-.contactTitle h1 {
-    font-size: 22pt;
-    color: #9D90C5;
-    font-family: 'Spartan', sans-serif;
-    text-align: center;
-    padding: 30px 20px 30px;
-    margin: 0;
-}
-.contactForm {
-    background: whitesmoke;
-    position: relative;
-}
-.nameContainer, .emailContainer, .messageContainer {
-    display: block;
-    border: solid 1px black;
-    padding: 10px;
-    margin-bottom: 25px;
-    transition: all 0.2s ease;
-}
-.nameContainer, .emailContainer {
-    max-width: 360px;
-}
-label {
-    display: block;
-    position: absolute;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 14px;
-    color: black;
-    background-color: whitesmoke;
-    padding: 0 5px 0;
-    transition: background-color 2s ease, margin-top 0.2s ease;
-}
-.labelActive {
-    margin-top: -23px;
-    transition: margin-top 0.3s ease-out, background-color 1.2s ease;
-}
-#nameField, #emailField, #messageField {
-    width: 99%;
-    outline: none;
-    /* chromium override ? */
-    background-color: transparent;
-}
-input {
-    display: block;
-    border: none;
-	overflow: hidden;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 18px;
-	background-color: transparent;
-}
-/* Custom Error Visual Cue */
-input:-moz-ui-invalid, textarea:-moz-ui-invalid {
-    box-shadow: none;
-    background-image: url('images/error_x_icon.svg');
-    background-repeat: no-repeat;
-    background-size: 20px;
-    animation: glow 2.5s ease-in-out infinite;
-}
-input:-moz-ui-invalid {
-    border-bottom: solid 2px red;
-    background-position: right;
-}
-textarea {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 18px;
-    border: none;
-    width: 99%;
-    background-color: transparent;
-}
-textarea:-moz-ui-invalid {
-    border-top: solid 2px red;
-    background-position: right 2px;
-}
-@keyframes glow {
-    0% { opacity: 0.3;}
-    50% { opacity: 1;}
-    100% { opacity: 0.3;}
-}
-.focusActive {
-    border: solid 1px blueviolet !important;
-    scale: 1.02;
-    box-shadow: 1px 1px 3px blueviolet;
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    transition: all 0.16s ease;
-}
-.subB {
-    cursor: pointer;
-    position: relative;
-    z-index: 3;
-    width: 100%;
-    margin: 0;
-    padding: 15px 50px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all ease 0.4s;
-}
-.submitButton {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto 30px;
-    width: 250px;
-    height: 100%;
-    background-color: #553692;
-    outline: 0 dashed transparent;
-    outline-offset: -10px;
-    transition: all ease 0.6s;
-}
-.loading03 {
-    animation: load03 1.4s linear 3;
-}
-.loading02 {
-    animation: load02 1.4s linear 3;
-}
-.loading01 {
-    animation: load01 1.4s linear 3;
-}
-@keyframes load03 {
-    10% { stroke-dashoffset: 0;stroke-dasharray: 30 1084; }
-    30% { stroke-dashoffset: -150;stroke-dasharray: 180 1084; }
-    60% { stroke-dashoffset: -384;stroke-dasharray: 500 1084;opacity: 1; }
-    100% { stroke-dashoffset: -1084;stroke-dasharray: 0 1094;opacity: 0; }
-}
-@keyframes load02 {
-    10% { stroke-dashoffset: 0;stroke-dasharray: 30 1084; }
-    30% { stroke-dashoffset: -200;stroke-dasharray: 100 1084; }
-    80% { stroke-dasharray: 250 1084;opacity: 1; }
-    100% { stroke-dashoffset: -1084;stroke-dasharray: 0 1094;opacity: 0; }
-}
-@keyframes load01 {
-    10% { stroke-dashoffset: 0;stroke-dasharray: 30 1084; }
-    80% { stroke-dashoffset: -1054;stroke-dasharray: 30 1084;opacity: 1; }
-    100% { stroke-dashoffset: -1084;stroke-dasharray: 0 1094;opacity: 0; }
-}
-.svg_border {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-/*Might be able to move "willChange" solely to class "contactForm"*/
-.willChangeJQ {
-    transition: background-color 2s ease, margin-top 0.2s ease, max-height 0.5s ease;
-}
-.darken {
-    filter: hue-rotate(10deg);
-    transition: all ease 0.8s;
-}
-.willMoveJQ {
-    position: relative;
-}
-@keyframes form_left {
-    60% { transform: translateX(70px); }
-    100% { transform: translateX(-1000px); }
-}
-/* ----  Post-Submit Thank You transition/page ----- */
-#ty {
-    display: flex;
-    position: absolute;
-    top: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.thankYou {
-    position: relative;
-    color:rgb(65, 45, 103);
-    font-size: 35pt;
-    white-space: break-spaces;
-    -webkit-white-space: break-spaces;
-    text-align: center;
-}
-.thankYou-sub {
-    position: relative;
-    color: #9D90C5;
-}
+
 /*=====================================================================*/
 /*---------------------------MOBILE------------------------------------*/
 /*=====================================================================*/
@@ -924,47 +699,8 @@ textarea:-moz-ui-invalid {
     /*============================================================*/
     /*----------------   CONTACT/ MOBILE TABLET   ----------------*/
     /*============================================================*/
-    .formContainer{
-        display: flex;
-        flex-direction: column;
-        margin: 0 6vw 0;
-        background: transparent;
-    }
-    .contactTitle {
-        margin-top: 130px;
-    }
-    .contactTitle h1 {
-        word-spacing: 10px;
-    }
-    .contactForm {
-        display: block;
-        /*max-height used to transition with JS animations*/
-        max-height: 70vh;
-        max-width: 80vw;
-        padding: 30px 30px 0;
-    }
-    #ty {
-        width: 88vw;
-        left: 88vw;
-        height: 290px;
-    }
-    .thankYou {
-        max-width: 80vw;
-        font-size: 22pt;
-        margin-top: -40px;
-    }
-    .thankYou-sub {
-        font-size: 14pt;
-        padding: 0 20px 0;
-    }
-    @keyframes ty_left01 {
-        1% { transform: translateX(-76vw); }
-        100% { transform: translateX(-88vw); }
-    }
-    .spacer2 {
-        height: 80px;
-        background-color: transparent;
-    }
+
+
 }
 /*================================================================*/
 /*================================================================*/
@@ -1501,60 +1237,7 @@ textarea:-moz-ui-invalid {
 /*================================================================*/
 /*----------------   CONTACT PAGE FULL   -------------------------*/
 /*================================================================*/
-#logoContainerContact {
-    width: 100%;
-    align-items: center;
-}
-.logoR2 {
-    opacity: 1;
-    left: 20px;
-    scale: 1;
-    margin-right: 10vw;
-    transition: opacity 0.4s ease, left 0.5s ease-out, scale 0.3s ease, margin 0.4s ease-out;
-}
-.formContainer {
-    margin-top: 130px;
-    background-color: whitesmoke;
-    width: 60vw;
-    min-height: 400px;
-}
-.contactForm {
-    display: flex;
-    flex-direction: column;
-/*Max-height included for smooth JS animation*/
-    max-height: 60vh;
-    padding: 40px 10vw;
-    margin: 0 auto 0;
-    max-width: 60vw;
-}
-.nameContainer, .emailContainer, .messageContainer {
-    margin-bottom: 30px;
-}
-/*Below code for trying to reduce blur on animation*/
-#nameLabel, #emailLabel, #messageLabel {
-    display: inline-table;
-    transform-style: flat;
-    transform: perspective(1px) scale(1) translateZ(0);
-    backface-visibility: hidden;
-    -webkit-font-smoothing: subpixel-antialiased;
-    transition: background-color 2s ease, margin-top 0.2s ease;
-}
-#ty {
-    width: 60vw;
-    left: 60vw;
-    height: 46vh;
-}
-.thankYou {
-    max-width: 50vw;
-}
-.thankYou-sub {
-    margin-left: 5vw;
-    font-size: 22pt;
-}
-@keyframes ty_left02 {
-    1% { transform: translateX(-50vw);}
-    100% { transform: translateX(-60vw);}
-}
+
 }
 /*=====================================================================*/
 /*============       SPECIAL VIEWPORT RULES     =======================*/
