@@ -97,7 +97,8 @@ $(function(){
                 $(".load_outline2").addClass("loading02");
                 $(".load_outline").addClass("loading01");
                 setTimeout(function(){
-                    $('.subB').blur();
+                    $('.subB').trigger('blur').attr('tabindex',-1);
+
                 }, 450);
                 setTimeout(function(){
                     $(".subB").val("SENT");
@@ -115,20 +116,23 @@ $(function(){
                 }, 5700);
                 setTimeout(function(){
                     $('.contactForm').css({'max-height':'35vh','background-color':'whitesmoke'});
+                    $('footer').css({'margin-top':'15vh'});
                 }, 6000);
                 setTimeout(function(){
                     if ($(window).width() <= 770) {
-                    $('.thankYou').css('animation','ty_left01 1s linear forwards');
+                        $('.thankYou').css('animation','ty_left01 1s linear forwards');
                     } else {
                         $('.thankYou').css('animation','ty_left02 1s linear forwards');
                     }
                 }, 6200);
                 setTimeout(function(){
                     if ($(window).width() <= 770) {
-                    $('.thankYou-sub').css('animation','ty_left01 1.2s ease-out forwards');
+                        $('.thankYou-sub').css('animation','ty_left01 1.2s ease-out forwards');
                     } else {
                         $('.thankYou-sub').css('animation','ty_left02 0.8s ease-out forwards');
                     }
+                    $(".submitButton, .submitButton > *").hide();
+                    $("textarea, input").attr('tabindex',-1);
                 }, 6400);
             } else {
     //Below is to give test users feedback
