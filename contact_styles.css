@@ -1,8 +1,5 @@
 /*=========================================================*/
 /*-----------------   CONTACT global   -------------------*/
-/* html, body {
-    height: 100%;
-} */
 .formContainer {
     overflow: hidden;
 }
@@ -226,6 +223,9 @@ header {
     overflow: hidden;
     transition: all ease 150ms;
     transition-delay: 350ms;
+}
+#menuButton {
+    display: hide;
 }
 .bg {
     /* height: 100vh; */
