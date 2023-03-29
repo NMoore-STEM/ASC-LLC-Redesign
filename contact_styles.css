@@ -27,6 +27,14 @@ h2, h3 {
     background-color: #16142D;
     background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
 }
+/* ---------- ASC only - Global - Contact ---------- */
+#logoTextMobile {
+    display: flex;
+    background: url(../ASC-LLC-Redesign/images/ASC_LOGO_Text_ltBlue.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 #menuButton {
     display: none;
 }
@@ -305,6 +313,21 @@ footer {
         padding-left: 2vw;
         height: 100%;
     }
+    #logoGlyphMobile {
+        transform: scale(3);
+        -webkit-transform: scale(3);
+        left: 10vw;
+        top: -60px;
+        position: absolute;
+        z-index: -1;
+    }
+    #logoFullHeader {
+        display: none;
+    }
+    #logoTextMobile {
+        height: 90px;
+        width: 120px;
+    }
     .home_link {
         display: flex;
         flex-direction: column;
@@ -433,13 +456,34 @@ footer {
     /* h3 {
         padding-right: 50px;
     } */
-    /* -- Just for ASC contact page -- */
+    /* ------- Just for ASC contact page ------- */
+    header img {
+        height: 80px;
+        align-self: center;
+    }
+    #logoContainer {
+        display: flex;
+        position: relative;
+        padding: 10px 0 10px 25px;
+        align-items: center;
+    }
     .logoR2 {
         opacity: 1;
         left: 20px;
         scale: 1;
         margin-right: 10vw;
         transition: opacity 0.4s ease, left 0.5s ease-out, scale 0.3s ease, margin 0.4s ease-out;
+    }
+    #logoFullHeader {
+        height: 100px;
+    }
+    #logoGlyphMobile {
+        display: none;
+    }
+    #logoTextMobile {
+        padding-top: 5px;
+        height: 80px;
+        width: 160px;
     }
     header {
         background-color: rgba(0,0,0,0.8);
