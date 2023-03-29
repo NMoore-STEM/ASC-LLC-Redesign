@@ -1,5 +1,38 @@
 /*=========================================================*/
 /*-----------------   CONTACT global   -------------------*/
+html {
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+body {
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+::selection {
+    background: purple; /* WebKit/Blink Browsers */
+    color: #9D90C5;
+}
+::-moz-selection {
+    background: purple; /* Gecko Browsers */
+    color: #9D90C5;
+}
+h2, h3 {
+    font-family: 'Spartan', sans-serif;
+}
+.bg {
+    background-attachment: fixed;
+    width: 100%;
+    background-color: #16142D;
+    background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
+}
+#menuButton {
+    display: none;
+}
+#menu {
+    display: none;
+}
 .formContainer {
     overflow: hidden;
 }
@@ -191,7 +224,7 @@ textarea:-moz-ui-invalid {
     justify-content: center;
 }
 .thankYou {
-    position: relative;
+    /* position: relative; */
     color:rgb(65, 45, 103);
     font-size: 35pt;
     white-space: break-spaces;
@@ -199,80 +232,167 @@ textarea:-moz-ui-invalid {
     text-align: center;
 }
 .thankYou-sub {
-    position: relative;
+    /* position: relative; */
     color: #9D90C5;
 }
 footer {
     transition: all 500ms ease;
 }
+#colorBand04 {
+    background-color: #4F2F88;
+    border-bottom: 40px solid #3C2C5E;
+}
+#colorBand05 {
+    display: flex;
+    background-color: #553692;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+/* will keep black shadows on hover for these classes, looks better */
+.footerButton {
+    display: grid;
+    min-width: 120px;
+    color: #9D90C5;
+    background-color: #3C2C5E;
+    text-align: center;
+    margin: 40px 30px 0;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: all 0.5s ease;
+}
+.copyright {
+    display: block;
+    position: relative;
+    top: 30px;
+    color: #9D90C5;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px purple;
+    padding-top: 30px;
+    text-align: center;
+}
 /*============================================================*/
 /*----------------   CONTACT/ MOBILE TABLET   ----------------*/
 /*============================================================*/
 @media only screen and (max-width:770px) {
-header {
-    display: flex;
-    position: fixed;
-    top: 0;
-    height: 100px;
-    width: 92vw;
-    background-color: #2F4072;
-    z-index: 5;
-    padding: 0 4vw 0;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    transition: all ease 150ms;
-    transition-delay: 350ms;
-}
-#menuButton {
-    display: hide;
-}
-.bg {
-    /* height: 100vh; */
-    padding-top: 130px;
-}
-.formContainer{
-    display: flex;
-    flex-direction: column;
-    margin: 0 6vw 0;
-    background: transparent;
-}
-/* was throwing off design - removed on 20221205 */
-/* .contactTitle {
-    margin-top: 130px;
-} */
-.contactTitle h1 {
-    word-spacing: 10px;
-}
-.contactForm {
-    display: block;
-    /*max-height used to transition with JS animations*/
-    max-height: 70vh;
-    max-width: 80vw;
-    padding: 30px 30px 0;
-}
-#ty {
-    width: 88vw;
-    left: 88vw;
-    height: 290px;
-}
-.thankYou {
-    max-width: 80vw;
-    font-size: 22pt;
-    margin-top: -40px;
-}
-.thankYou-sub {
-    font-size: 14pt;
-    padding: 0 20px 0;
-}
-@keyframes ty_left01 {
-    1% { transform: translateX(-76vw); }
-    100% { transform: translateX(-88vw); }
-}
-.spacer2 {
-    height: 50px;
-    background-color: transparent;
-}
+    h2 {
+        padding: 20px 20px 20px;
+        margin: 0;
+    }
+    h3 {
+        font-weight: normal;
+        text-align: center;
+        margin: 0;
+    }
+    header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        height: 100px;
+        width: 92vw;
+        background-color: #2F4072;
+        z-index: 5;
+        padding: 0 4vw 0;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        transition: all ease 150ms;
+        transition-delay: 350ms;
+    }
+    .head_flex {
+        display: flex;
+        align-items: center;
+        padding-left: 2vw;
+        height: 100%;
+    }
+    .home_link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        text-decoration: none;
+        z-index: 5;
+        height: 70%;
+        transform: scale(0.8);
+    }
+    .cred_head::before {
+        color: #91B4DF;
+        content: "[";
+        position: absolute;
+        left: -13px;
+        top: -3px;
+        font-size: 22pt;
+        font-family: 'Spartan', sans-serif;
+        font-weight: bolder;
+    }
+    .cred_head::after {
+        color: #91B4DF;
+        content: "]";
+        position: absolute;
+        top: -3px;
+        font-size: 22pt;
+        font-family: 'Spartan', sans-serif;
+        font-weight: bolder;
+    }
+    .cred_head {
+        position: relative;
+        color: #91B4DF;
+        font-size: 22pt;
+        font-family: 'Spartan', sans-serif;
+        line-height: 0.9;
+    }
+    .cred_head_sub {
+        color: #91B4DF;
+        font-size: 12pt;
+        font-family: 'Spartan', sans-serif;
+    }
+    .bg {
+        /* height: 100vh; */
+        padding-top: 130px;
+    }
+    .formContainer{
+        display: flex;
+        flex-direction: column;
+        margin: 0 6vw 0;
+        background: transparent;
+    }
+    /* was throwing off design - removed on 20221205 */
+    /* .contactTitle {
+        margin-top: 130px;
+    } */
+    .contactTitle h1 {
+        word-spacing: 10px;
+    }
+    .contactForm {
+        display: block;
+        /*max-height used to transition with JS animations*/
+        max-height: 70vh;
+        max-width: 80vw;
+        padding: 30px 30px 0;
+    }
+    #ty {
+        width: 88vw;
+        left: 88vw;
+        height: 290px;
+    }
+    .thankYou {
+        max-width: 80vw;
+        font-size: 22pt;
+        margin-top: -40px;
+    }
+    .thankYou-sub {
+        font-size: 14pt;
+        padding: 0 20px 0;
+    }
+    @keyframes ty_left01 {
+        1% { transform: translateX(-76vw); }
+        100% { transform: translateX(-88vw); }
+    }
+    .spacer2 {
+        height: 50px;
+        background-color: transparent;
+    }
 }
 /*================================================================*/
 /*================================================================*/
@@ -298,16 +418,92 @@ header {
     /*================================================================*/
     /*----------------   CONTACT PAGE FULL   -------------------------*/
     /*================================================================*/
-    #logoContainerContact {
+    /* #logoContainerContact {
         width: 100%;
         align-items: center;
+    } */
+    .bg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    h2 {
+        margin: 2vw 4vw;
+    }
+    /* h3 {
+        padding-right: 50px;
+    } */
+    /* -- Just for ASC contact page -- */
     .logoR2 {
         opacity: 1;
         left: 20px;
         scale: 1;
         margin-right: 10vw;
         transition: opacity 0.4s ease, left 0.5s ease-out, scale 0.3s ease, margin 0.4s ease-out;
+    }
+    header {
+        background-color: rgba(0,0,0,0.8);
+        display: flex;
+        position: fixed;
+        width: 100%;
+        z-index: 6;
+        top:0;
+        min-height: 120px;
+    }
+    /* -- below not used -- */
+    /* .head_cred {
+        justify-content: space-between;
+    } */
+    .head_flex {
+        display: flex;
+        align-items: center;
+        padding-left: 65px;
+        transition: all 0.2s ease;
+    }
+    .home_link {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        z-index: 5;
+        transition: all 0.2s ease;
+    }
+    .cred_head::before {
+        content: "[";
+        position: absolute;
+        left: -13px;
+        top: -3px;
+        color: #91B4DF;
+        font-size: 22pt;
+        font-family: 'Spartan', sans-serif;
+        font-weight: bolder;
+        transition: all 0.2s ease;
+    }
+    .cred_head::after {
+        content: "]";
+        position: absolute;
+        top: -3px;
+        color: #91B4DF;
+        font-size: 22pt;
+        font-family: 'Spartan', sans-serif;
+        font-weight: bolder;
+        transition: all 0.2s ease;
+    }
+    .cred_head {
+        position: relative;
+        color: #91B4DF;
+        font-size: 22pt;
+        font-family: 'Spartan', sans-serif;
+        transition: all 0.2s ease;
+    }
+    .cred_head_sub {
+        color: #91B4DF;
+        font-size: 12pt;
+        font-family: 'Spartan', sans-serif;
+        transition: all 0.2s ease;
     }
     .formContainer {
         margin-top: 130px;
@@ -329,14 +525,14 @@ header {
         margin-bottom: 30px;
     }
     /*Below code for trying to reduce blur on animation*/
-    #nameLabel, #emailLabel, #messageLabel {
+    /* #nameLabel, #emailLabel, #messageLabel {
         display: inline-table;
         transform-style: flat;
         transform: perspective(1px) scale(1) translateZ(0);
         backface-visibility: hidden;
         -webkit-font-smoothing: subpixel-antialiased;
         transition: background-color 2s ease, margin-top 0.2s ease;
-    }
+    } */
     #ty {
         width: 60vw;
         left: 60vw;
@@ -346,11 +542,26 @@ header {
         max-width: 50vw;
     }
     .thankYou-sub {
-        margin-left: 5vw;
+        /* margin-left: 5vw; */
         font-size: 22pt;
     }
     @keyframes ty_left02 {
         1% { transform: translateX(-50vw);}
         100% { transform: translateX(-60vw);}
+    }
+    footer {
+        width: 100%;
+        color: #9D90C5;
+        background-color: #3C2C5E;
+        text-align: center;
+        margin: 40px 30px 0;
+        text-decoration: none;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .footerButton:hover, .topButton:hover {
+        box-shadow: 0 10px 17px -5px black;
+        transform: scale(1.12);
+        -webkit-transform: scale(1.12);
+        transition: all 0.3s ease;
     }
 }
