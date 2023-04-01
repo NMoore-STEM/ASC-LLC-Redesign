@@ -106,6 +106,7 @@ input {
 	background-color: transparent;
 }
 /* === Custom Form Error UI === */
+/* ==  (mozilla only)  == */
 input:-moz-ui-invalid, textarea:-moz-ui-invalid {
     box-shadow: none;
     background-image: url('images/error_x_icon.svg');
@@ -141,11 +142,6 @@ textarea:-moz-ui-invalid {
     border: solid 1px blueviolet !important;
     transform: scale(1.02);
     box-shadow: 1px 1px 3px blueviolet;
-    /* -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0); */
     transition: all 0.16s ease;
 }
 .subB {
@@ -163,6 +159,7 @@ textarea:-moz-ui-invalid {
     background-position: center;
     transition: all ease 0.4s;
 }
+/* == use :focus-visible next time === */
 .submitButton {
     display: flex;
     position: relative;
@@ -207,7 +204,6 @@ textarea:-moz-ui-invalid {
     height: 100%;
     width: 100%;
 }
-/*Might be able to move "willChange" solely to class "contactForm"*/
 .willChangeJQ {
     transition: background-color 2s ease, margin-top 0.2s ease, max-height 0.5s ease;
 }
@@ -232,7 +228,6 @@ textarea:-moz-ui-invalid {
     justify-content: center;
 }
 .thankYou {
-    /* position: relative; */
     color:rgb(65, 45, 103);
     font-size: 35pt;
     white-space: break-spaces;
@@ -240,7 +235,6 @@ textarea:-moz-ui-invalid {
     text-align: center;
 }
 .thankYou-sub {
-    /* position: relative; */
     color: #9D90C5;
 }
 footer {
@@ -380,10 +374,6 @@ footer {
         margin: 0 6vw 0;
         background: transparent;
     }
-    /* was throwing off design - removed on 20221205 */
-    /* .contactTitle {
-        margin-top: 130px;
-    } */
     .contactTitle h1 {
         word-spacing: 10px;
     }
@@ -438,13 +428,6 @@ footer {
     html {
         scrollbar-color: #4C206C #220e4d;
     }
-    /*================================================================*/
-    /*----------------   CONTACT PAGE FULL   -------------------------*/
-    /*================================================================*/
-    /* #logoContainerContact {
-        width: 100%;
-        align-items: center;
-    } */
     .bg {
         display: flex;
         flex-direction: column;
@@ -453,9 +436,6 @@ footer {
     h2 {
         margin: 2vw 4vw;
     }
-    /* h3 {
-        padding-right: 50px;
-    } */
     /* ------- Just for ASC contact page ------- */
     header img {
         height: 80px;
@@ -494,10 +474,6 @@ footer {
         top:0;
         min-height: 120px;
     }
-    /* -- below not used -- */
-    /* .head_cred {
-        justify-content: space-between;
-    } */
     .head_flex {
         display: flex;
         align-items: center;
@@ -568,15 +544,6 @@ footer {
     .nameContainer, .emailContainer, .messageContainer {
         margin-bottom: 30px;
     }
-    /*Below code for trying to reduce blur on animation*/
-    /* #nameLabel, #emailLabel, #messageLabel {
-        display: inline-table;
-        transform-style: flat;
-        transform: perspective(1px) scale(1) translateZ(0);
-        backface-visibility: hidden;
-        -webkit-font-smoothing: subpixel-antialiased;
-        transition: background-color 2s ease, margin-top 0.2s ease;
-    } */
     #ty {
         width: 60vw;
         left: 60vw;
@@ -586,7 +553,6 @@ footer {
         max-width: 50vw;
     }
     .thankYou-sub {
-        /* margin-left: 5vw; */
         font-size: 22pt;
     }
     @keyframes ty_left02 {

@@ -122,7 +122,6 @@ p, li {
     display: flex;
     justify-content: center;
 }
-/* Added to see if portfolio items can have global rules */
 .portfolio_item_main {
     position: relative;
     margin-bottom: 80px;
@@ -143,9 +142,6 @@ p, li {
 }
 /*====================================================*/
 /* Graphic Design Portfolio Item Details Window/Modal */
-/* ------------- MODAL DUPLICATE DELETED ------------ */
-
-
 .portfolio_item_sub {
     display: flex;
     flex-direction: column;
@@ -153,12 +149,8 @@ p, li {
     background-color: #253C84;
 }
 .portfolio_img_web, .portfolio_img_graphic {
-    max-width: 340px;
-    /* Below to allow framing from the parent container */
     max-width: 320px;
 }
-/* Should make a common class for web dev portfolio screenshots and just include
-unique urls for each class */
 #asc_img {
     background-image: url('./images/asc_screen_600X330.png');
     background-size: cover;
@@ -199,7 +191,6 @@ unique urls for each class */
     font-family: 'Spartan', sans-serif;
     margin: 15px 0 35px;
     padding: 0;
-    /* Added 20210308 */
     width: 300px;
 }
 .item_details li {
@@ -227,11 +218,9 @@ unique urls for each class */
     border: 20px solid #253C84;
     margin: 0 0 10px;
     outline: 20px solid #213160;
-    /* This may not work in IE - make sure to test */
     outline-offset: -40px;
     background-color: #11182d;
 }
-/* For <a> inside of portfolio items - did away with <button> parent */
 .port_button {
     display: flex;
     justify-content: center;
@@ -260,7 +249,6 @@ unique urls for each class */
     background-color: transparent;
     box-shadow: 0 10px 6px -6px #322749;
     overflow: hidden;
-    /* standardized shadow color below */
     box-shadow: 0 10px 6px -6px #1B253E;
 }
 /* Style for clicked/touched/tabbed/focused */
@@ -292,13 +280,7 @@ unique urls for each class */
     padding: 10px;
     background-color: #2C4A9A;
 }
-
-/*====================================================*/
-/*===*/
-/*===*/
-/*====================================================*/
 /* Graphic Design Portfolio Item Details Window/Modal */
-/* will need to cut some properties and paste in correct viewports */
 .modal_screen {
     width: 100vw;
     height: 100vh;
@@ -344,7 +326,6 @@ unique urls for each class */
     display: flex;
     justify-content: right;
     margin-top: 40px;
-    /* background-color: #2C4A9A; */
     z-index: 200;
     height: calc(100% - 40px);
     margin-left: 40px;
@@ -359,17 +340,12 @@ unique urls for each class */
     font-size: 12pt;
     padding-top: 20px;
 }
-/* Alternate modal design rules */
-/* Late 2022 design */
-/* was previously modal_flex2 */
 .modal_flex {
     display: flex;
     flex-direction: column;
     padding: 20px 40px;
     background-color: #253C84;
 }
-/* Late 2022 design */
-/* was previously g_modal2 */
 .g_modal {
     position:absolute;
     overflow-x: hidden;
@@ -383,8 +359,6 @@ unique urls for each class */
     opacity: 0;
     overflow: hidden;
 }
-/* Late 2022 design */
-/* was previously g_modal_open2 */
 .g_modal_open {
     position: relative;
     right: auto;
@@ -398,35 +372,26 @@ unique urls for each class */
     transform: scale(1);
     transform-origin: top center;
     opacity: 1;
-    /* new 20230308 */
     margin: 10vh 8vw 10vh;
     height: 80vh;
 }
-/* Late 2022 design */
-/* was previously modal_top2 */
 .modal_top {
     display: block;
     background-color: #253C84;
     background-color: #2C4A9A;
     padding-left: 20px;
 }
-/* Late 2022 design */
-/* was previously modal_title2 */
 .modal_title {
     padding: 20px 0;
     background-color: #2C4A9A;
     padding: 20px 0 0;
 }
-/* Late 2022 design */
-/* was previously p.modal_intro2 */
 p.modal_intro {
     text-align: left;
     padding: 0 0 20px 30px;
     margin: 0;
     font-size: 10pt;
 }
-/* Late 2022 design */
-/* was previously modal_img2 */
 .modal_img {
     min-width: 200px;
     max-width: 350px;
@@ -451,8 +416,6 @@ p.modal_intro {
     width: 140%;
     height: auto;
 }
-/* late 2022 modal close button design below */
-/* was close_modal2 previously */
 .close_modal {
     visibility: hidden;
     opacity: 0;
@@ -469,7 +432,6 @@ p.modal_intro {
     border: 1px rgb(149, 91, 234) solid;
     will-change: transform;
     transition: opacity ease 150ms;
-    /* new 20230308 */
     top: calc(10vh + 23px);
     right: calc(8vw + 25px);
 }
@@ -489,25 +451,15 @@ p.modal_intro {
 .modal_scroll {
     overflow-x: hidden;
     overflow-y: auto;
-    /* overflow-y: scroll; */
-    height: calc(70vh - 98px);
     width: auto;
-    /* new 20230308 */
     height: calc(80vh - 88px);
 }
-/* alt stroke color for close button on modal */
-/* rgb(149, 91, 234)*/
-
 /*--------------- END MODAL STYLES - GLOBAL ---------------*/
 /*=======================================================*/
 
 .svg_item_heading {
-    /* background-color: #253C84; */
-    /* width: auto; */
     width: 100%;
     height: 100px;
-    /* below added after 20221018 */
-    /* may need to declare only for FULL resolution */
     display: flex;
     align-items: center;
     background-color: #2C4A9A;
@@ -526,7 +478,6 @@ p.modal_intro {
 .gmj_logo .portfolio_svg_anim {
     position: relative;
     overflow: hidden;
-    /* below added after 20221018 */
     height: 500px;
     display: flex;
     align-items: center;
@@ -544,34 +495,25 @@ p.modal_intro {
     height: 350px;
     background-size: contain;
     top: 0;
-    /* below added after 20221018 */
     background-repeat: no-repeat;
     background-position: center;
     background-size: 340px;
     height: 100%;
 }
 /*=== Special rule specifically for kanji svg animations ===*/
-/*== Might not be needed as there is no height specified in portfolio_item_main class ==*/
-/* Changed all items in this section to match height of tallest */
-/* below added 20221022 to consolidate some button styles for animated svg items */
 .svg_play_button {
     display: block;
     position: relative;
     cursor: pointer;
-    /* border: 2px solid #91B4DF; */
     border: 2px solid #BDB0E6;
     transition: all 0.3s ease;
     margin: 20px auto 20px;
     appearance: none;
     font-family: 'Spartan', sans-serif;
     font-size: 12pt;
-    /* background-color: #253C84; */
     background-color: #662D91;
-    /* color: #91B4DF; */
     color: #BDB0E6;
     padding: 10px 20px;
-    /* box-shadow: 2px 2px 2px black; */
-    /* new style after 20221022 */
     top: -40px;
     box-shadow: 0 4px 8px -1px black;
 }
@@ -832,7 +774,6 @@ iframe {
         opacity: 0;
         transition: margin 0.25s linear, color 0.1s linear, opacity 0.15s linear 0.1s;
     }
-
     /* Hero Styles */
     #title_cred {
         margin: 0;
@@ -874,7 +815,6 @@ iframe {
     }
     .section_heading {
         font-size: 35pt;
-        /* padding-bottom: 25px; */
         padding-bottom: 7px;
     }
     .intro_bg {
@@ -882,7 +822,6 @@ iframe {
     }
     .intro_article {
         background-color: #2C4A9A;
-        /* padding: 20px 6vw; */
         margin: 30px 0 70px;
         box-shadow: -30px -30px #253C84, 30px 30px #253C84;
         padding: 30px 6vw 20px;
@@ -922,11 +861,9 @@ iframe {
         font-size: 14pt;
     }
     .intro_sub_container {
-        /* margin-top: 70px; */
         padding-bottom: 20px;
     }
     .intro_sub_container h2 {
-        /* margin-bottom: -70px; */
         margin-bottom: -61px;
     }
     #soft_skills {
@@ -1002,7 +939,6 @@ iframe {
         position: relative;
     }
     #portfolio h2 {
-        /*Nex style 20210306*/
         padding: 0 0 0 20px;
         z-index: 1;
         top: 35px;
@@ -1503,15 +1439,11 @@ iframe {
 
 @media only screen and (min-width:771px) {
     /* below two rules for Chromium scroll color */
-    ::-webkit-scrollbar, ::-webkit-scrollbar-button {
+    ::-webkit-scrollbar {
         background: #220e4d;
     }
     ::-webkit-scrollbar-thumb {
         background: #4C206C;
-    }
-    ::-webkit-scrollbar-button {
-        background: #220e4d;
-        color: #4C206C;
     }
 /*======================================================================*/
 /*=======================   RESTRICTED AREA FULL   =====================*/
@@ -1567,9 +1499,6 @@ header {
     z-index: 6;
     top:0;
     min-height: 120px;
-}
-.head_cred {
-    justify-content: space-between;
 }
 .head_flex {
     display: flex;
@@ -1664,16 +1593,6 @@ header {
     background-size: 200% 100%;
     background-position: 100% 0%;
     transition: all 0.2s ease;
-    /* Below is attempt to eliminate distortion and 1px jump after scale */
-    /* None of these worked - will need to eliminate scaling factors like % and vw to fix */
-    /* image-rendering: crisp-edges;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transform: translateZ(0) translate3d(0,0,0) scale(1, 1);
-    -webkit-transform: translateZ(0) translate3d(0,0,0) perspective(1px) scale(1, 1);
-    display: inline-table;
-    transform-style: flat;
-    -webkit-font-smoothing: subpixel-antialiased; */
 }
 #menuButton {
     display: block;
@@ -1727,7 +1646,6 @@ section {
     margin-left: 10px;
     z-index: 1;
 }
-/* New RULES for NEW STYLE 20211218 */
 .largest {
     font-size: 75pt;
     z-index: 1;
@@ -1791,18 +1709,12 @@ sub {
     font-size: 10pt;
     background-color: #2C4A9A;
     list-style: none;
-    /* align-self: center; */
     flex-grow: 1;
-    /* justify-content: center;
-    justify-self: center; */
     text-align: center;
     max-width: 220px;
-    /* Below optional??? */
-    /* max-height: min-content; */
 }
 #interests {
     background-color: #2C4A9A;
-    /* padding: 30px 30px 60px 30px; */
     padding: 30px;
     padding: 10px 15px;
     height: max-content;
@@ -1886,7 +1798,6 @@ em {
     min-width: 285px;
     margin-left: 15px;
     gap: 20px;
-    /* NEW 2021 */
     margin-top: -30px;
 }
 .section_top .top_cred_links {
@@ -1935,7 +1846,6 @@ em {
     outline-offset: 20px;
     transition: all 0.4s ease-out;
     z-index: 5;
-    /* NEW 2021 (for cred page buttons, may need to remove) */
     width: 100%;
     cursor: pointer;
 }
@@ -2037,14 +1947,9 @@ em {
 }
 .wd_item {
     box-shadow: 2px 2px 4px black;
-    /* New style 20210308 */
     box-shadow: 0 6px 4px -6px #322749;
     box-shadow: 0 6px 4px -6px black;
     background-color: #253C84;
-}
-/* === Might be able to delete??? - - Double check */
-#front_end_dev h4, #graphic_design h4 {
-    color: white;
 }
 .portfolio_item_main h4 {
     color: white;
@@ -2075,7 +1980,6 @@ em {
 }
 .item_placeholder {
     line-height: 4.5;
-    /*new styles */
     max-width: 260px;
     margin-bottom: 20px;
     font-size: 16pt;
@@ -2103,7 +2007,6 @@ em {
 	text-align: right;
 	padding-top: 30px;
 	padding-right: 40px;
-/* below might not be needed */
 	margin: 0;
 	flex: 4 auto;
 	width: calc(72vw - 280px);
@@ -2136,14 +2039,6 @@ em {
     max-height: 250px;
     margin: 20px auto;
 }
-/* ============================================ */
-/* ===**************************************=== */
-/* === Finished most of the migration of CSS from
-main, original file - Starting at the graphic design
-portfolio item modal, styles do not look right.
-Problem with all items within modal not scrolling the
-same way - animated svgs need work and footer styles
-seem to be completely missing. 20221115 === */
 .modal_screen {
     display: none;
 }
@@ -2164,14 +2059,9 @@ seem to be completely missing. 20221115 === */
     flex-direction: row-reverse;
     margin-left: 20px;
 }
-/* -- below slated for removal --*/
-/* .modal_unit_alt p {
-    text-align: left;
-} */
 .modal_info_bg {
     display: flex;
     align-items: flex-end;
-    /* background-color: #2C4A9A; */
     z-index: 200;
     flex-direction: column;
     position: static;
@@ -2179,15 +2069,11 @@ seem to be completely missing. 20221115 === */
     margin-left: 25px;
     margin-right: 55px;
 }
-/* may not need below class - 20221111 */
-/* was using this class to stagger text and img between untits
-in modal for FULL resolution */
 .modal_info_alt {
     display: flex;
     z-index: 200;
     background-color: #253C84;
     margin-right: 20px;
-    /* margin-left: 60px; */
 }
 .modal_details {
     text-align: left;
@@ -2202,44 +2088,33 @@ in modal for FULL resolution */
     width: 350px;
     min-width: 350px;
 }
-.four_img_box>a {
+.four_img_box > a {
     width: 174px;
     min-width: 174px;
     height: 124px;
     min-height: 124px;
+    transform: scale(1);
     outline: 2px solid black;
 }
-.four_img_box>a:hover {
-    outline: 4px solid #91B4DF;
-    transform: scale(1.2);
-    transition: all 100ms ease;
+.four_img_box:hover a,
+.four_img_box:focus-visible a {
+    filter: brightness(50%);
+}
+.four_img_box > a:hover,
+.four_img_box > a:focus-visible {
     z-index: 210;
-    /* new 20230308 */
+    filter: brightness(100%);
     transform: scale(1.1);
-    transition: transform 100ms ease, outline 200ms ease-in;
+    transition: transform 100ms ease;
 }
 .img_q {
     width: 140%;
     height: auto;
 }
-/* is the below rule needed still? */
-/* YES - still needed 20221115 */
-/* reconsidered usign below rule and instead, repeated
- the html pattern from above for heading decor */
-
-/* #graphic_design .portfolio_item_container:nth-of-type(3) {
-    border-top: 50px solid #253C84;
-    margin: 0 4vw;
-
-} */
-
-/* ==== More SoC work resumed for svg section 20230207 === */
 .portfolio_item_svg {
     position: relative;
     margin: 40px 15px;
     padding: 0;
-    /* max-width: 350px; */
-    /* width: 350px; */
     width: 340px;
 }
 .portfolio_item_svg h4 {
