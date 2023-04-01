@@ -1,3 +1,4 @@
+/* GLOBAL rules */
 html {
     scroll-behavior: smooth;
     overflow: auto;
@@ -43,10 +44,6 @@ p, li {
     width: 100%;
     background-color: #16142D;
     background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
-}
-.botCatfish {
-    display: none;
-    position: relative;
 }
 #logoTextMobile {
     display: flex;
@@ -254,24 +251,17 @@ p, li {
     padding-top: 30px;
     text-align: center;
 }
-/*=========================================================*/
-/*-----------------   CONTACT global   -------------------*/
-
 /*=====================================================================*/
-/*---------------------------MOBILE------------------------------------*/
+/*=====================================================================*/
+/*------           MOBILE resolution rules          -------------------*/
+/*=====================================================================*/
 /*=====================================================================*/
 @media only screen and (max-width:770px) {
     h1 {
-        /* color: white; */
-        /* font-family: 'Noto Sans KR', sans-serif; */
-        /* font-family: 'Spartan', sans-serif; */
-        /*font-size: 18pt;*/
         font-size: 3vh;
         text-align: center;
-        /*padding: 0 20px 0;*/
     }
     h2 {
-        /* color: white; */
         font-size: 16pt;
     }
     h2, h4 {
@@ -281,20 +271,15 @@ p, li {
         margin: 0;
     }
     h3 {
-        /* font-family: 'Spartan', sans-serif;
-        color:  #91B4DF; */
         font-size: 10pt;
         font-weight: normal;
         text-align: center;
         margin: 0;
     }
     h4 {
-        /* font-family: 'Spartan', sans-serif;
-        font-size: 18pt; */
         color: #9D90C5;
     }
     p, li {
-        /* color: #91B4DF; */
         font-family: 'Noto Sans KR', sans-serif;
         padding: 10px 30px 20px;
     }
@@ -332,8 +317,6 @@ p, li {
     .show {
         visibility: visible;
         opacity: 1;
-        /* below was commented out on 20221105, may still need? */
-        /* transition: all 0.7s ease; */
     }
     #logoGlyphMobile {
         transform: scale(3);
@@ -342,10 +325,6 @@ p, li {
         top: -60px;
         position: absolute;
         z-index: -1;
-    }
-    /* Below class is not used in any page - needs to be removed if not used */
-    .precise {
-        shape-rendering: geometricPrecision;
     }
     #logoTextMobile {
         height: 90px;
@@ -362,8 +341,6 @@ p, li {
         right: 4vw;
         top: 25px;
         z-index: 5;
-        /* below for header transition on modal open 20221029 */
-        /* transition: all ease 100ms; */
     }
     .mb_mobile {
         height: 53px;
@@ -381,7 +358,6 @@ p, li {
         margin: 0;
         line-height: 1.5;
         z-index: 5;
-        /*transition: all 2s ease;*/
         backdrop-filter: blur(1.2px);
         -webkit-backdrop-filter: blur(1.2px);
     }
@@ -390,11 +366,6 @@ p, li {
         padding: 37px 15px 0;
         transform: scaleX(0.28)scaleY(0.28);
         transform-origin: top right;
-        transition: padding 1.2s linear, transform 0.5s linear 1.6s, opacity 1s linear 1.6s;
-        /* time cut in half for transition */
-        transition: padding 0.6s linear, transform 0.25s linear 0.8s, opacity 0.5s linear 0.8s;
-        /* at .25 */
-        transition: padding 0.3s linear, transform 0.125s linear 0.4s, opacity 0.25s linear 0.4s;
         transition: all 0.14s linear, transform 0.14s linear 0.14s, opacity 0.12s linear 0.16s;
     }
     .menuOpen {
@@ -402,10 +373,6 @@ p, li {
         opacity: 1;
         padding: 15px 15px 15px;
         transform: scale(1);
-        /* transition times cut in half */
-        /*transition: opacity 0.25s linear, padding 0.6s linear 0.6s, transform 0.25s linear;*/
-        /* at .25 */
-        /*transition: opacity 0.125s linear, padding 0.3s linear 0.3s, transform 0.125s linear;*/
         transition: transform 0.125s linear,all 0.15s linear;
     }
     .menuOpen .menuItem {
@@ -413,9 +380,6 @@ p, li {
         margin: 15px 0;
         color: rgba(255,255,255,1);
         pointer-events: all;
-        /* transition time cut in half */
-        /*transition: opacity 0.6s linear, margin 1s linear,color 0.2s linear 0.4s;*/
-        /* at .25 */
         transition: opacity 0.3s linear, margin 0.25s linear,color 0.1s linear 0.2s;
     }
     .menuItem {
@@ -433,24 +397,8 @@ p, li {
         margin: -22px 0;
         pointer-events: none;
         opacity: 0;
-        /* Transition time cut in half */
-        /*transition: margin 0.7s linear, color 0.2s linear, opacity 0.3s linear 0.2s;*/
-        /* at .25 */
         transition: margin 0.25s linear, color 0.1s linear, opacity 0.15s linear 0.1s;
     }
-    /* .menuOpen .passwordKey {
-        max-width: max-content;
-        display: flex;
-        opacity: 1;
-        align-self: center;
-        margin: 15px;
-        border-radius: 50%;
-        pointer-events: all;
-        /* Transition time cut in half */
-        /*transition: all 1s ease, opacity 0.6s linear 0.3s;*/
-        /* at .25 */
-        /* transition: all 0.5s linear, opacity 0.3s linear 0.15s;
-    } */
     #splashFULL {
         visibility: hidden;
         height: 0;
@@ -529,9 +477,6 @@ p, li {
     .contactButton {
         z-index: 4;
         align-items: center;
-        /* Below two declarations may not be needed */
-        align-content: center;
-        justify-content: center;
         max-width: 300px;
         height: 70px;
         margin: 50px auto 0;
@@ -629,8 +574,6 @@ p, li {
         padding: 0;
         margin: 15px 0;
         font-size: 12pt;
-        color: rgb(38, 48, 73);
-        /* new color 20221205 */
         color: rgb(25, 32, 49);
     }
     .coreMask {
@@ -696,15 +639,10 @@ p, li {
     .listDeco::before {
         background-color: #263048;
     }
-    /*============================================================*/
-    /*----------------   CONTACT/ MOBILE TABLET   ----------------*/
-    /*============================================================*/
-
-
 }
 /*================================================================*/
 /*================================================================*/
-/*------------------ FULL RESOLUTION  ----------------------------*/
+/*-------              FULL RESOLUTION                     -------*/
 /*================================================================*/
 /*================================================================*/
 
@@ -847,30 +785,11 @@ p, li {
         background-size: 200% 100%;
         background-position: 100% 0%;
         transition: all 0.2s ease;
-        /* Below is attempt to eliminate distortion and 1px jump after scale */
-        /* None of these worked - will need to eliminate scaling factors like % and vw to fix */
-        /* image-rendering: crisp-edges;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-        transform: translateZ(0) translate3d(0,0,0) scale(1, 1);
-        -webkit-transform: translateZ(0) translate3d(0,0,0) perspective(1px) scale(1, 1);
-        display: inline-table;
-        transform-style: flat;
-        -webkit-font-smoothing: subpixel-antialiased; */
     }
     .menuItem:hover .nav_text {
         background-position: 0% 0%;
         transform: scale(1.4502);
         transition: background-position 0.15s ease 0.2s, transform 0.2s ease;
-        /*------------------------------*/
-        /* image-rendering: crisp-edges;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-        transform: translateZ(0) translate3d(0,0,0) scale(1, 1);
-        -webkit-transform: translateZ(0) translate3d(0,0,0) perspective(1px) scale(1, 1);
-        display: inline-table;
-        transform-style: flat;
-        -webkit-font-smoothing: subpixel-antialiased; */
     }
     #splashMT, .mobileValue {
         display: none;
@@ -882,6 +801,7 @@ p, li {
         height: 87vh;
         margin-top: 3vw;
         padding-top: 0;
+        /* fallback if gradient fails */
         background-image: url(../ASC-LLC-Redesign/images/ASC_HERO_ver_07.png);
         /*  to darken bg image for value phrase legibility  */
         background-image: linear-gradient(to right, rgba(155,57,144, .10), rgba(120,114,180, .10)),
@@ -889,11 +809,6 @@ p, li {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-    }
-    /* Below class might not be in use, double-check, then delete */
-    .hero {
-        display: block;
-        width: 100%;
     }
     .logoValueContainer {
         display: flex;
@@ -935,7 +850,6 @@ p, li {
         margin: 0 5vw 0;
     }
     .filterShadow {
-        filter: drop-shadow(1px 6px 4px black);
         /* standardized shadow color below */
         filter: drop-shadow(1px 6px 4px #1B253E);
         width: 100%;
@@ -1154,7 +1068,6 @@ p, li {
         margin: 10px 40px;
         padding: 10px;
         justify-content: space-around;
-        box-shadow: -2px 2px #2C395E;
         /* standardized shadow color below */
         box-shadow: -2px 2px #1B253E;
     }
@@ -1234,10 +1147,6 @@ p, li {
         -webkit-transform: scale(1.12);
         transition: all 0.3s ease;
     }
-/*================================================================*/
-/*----------------   CONTACT PAGE FULL   -------------------------*/
-/*================================================================*/
-
 }
 /*=====================================================================*/
 /*============       SPECIAL VIEWPORT RULES     =======================*/
