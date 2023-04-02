@@ -382,7 +382,7 @@ p, li {
     padding-left: 20px;
 }
 .modal_title {
-    padding: 20px 0;
+    color: white;
     background-color: #2C4A9A;
     padding: 20px 0 0;
 }
@@ -1011,6 +1011,13 @@ iframe {
         margin: 50px auto 0;
         outline: 2px solid rgba(85,54,146,0);
         outline-offset: 0;
+    }
+    .clicked {
+        animation: outlineGrow 0.4s linear forwards;
+    }
+    @keyframes outlineGrow {
+        10% { outline-offset: 5px; outline-width: 5px; outline-color: rgba(85,54,146,1) }
+        100% { outline-offset: 12px; outline-width: 1px; outline-color: rgba(85,54,146,) }
     }
     .button_text {
         position: absolute;
