@@ -365,7 +365,6 @@ footer {
         font-family: 'Spartan', sans-serif;
     }
     .bg {
-        /* height: 100vh; */
         padding-top: 130px;
     }
     .formContainer{
@@ -529,7 +528,6 @@ footer {
         margin-top: 130px;
         background-color: whitesmoke;
         width: 60vw;
-        /*height: calc(80vh - 250px);*/
         min-height: 400px;
     }
     .contactForm {
