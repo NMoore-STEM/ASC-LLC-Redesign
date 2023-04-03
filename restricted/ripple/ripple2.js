@@ -11,6 +11,7 @@ window.onload = function () {
     
     btn.addEventListener("click", function() {
         clickCount += 1;
+        // This part of "if" statement is to draw initial svg circles
         if (clickCount <= 1){
             main.append(svg1);
             svg1.setAttribute("width","100%");
@@ -29,7 +30,8 @@ window.onload = function () {
                 },i*40);
             };
         }
-
+        // This part of statement is to "ripple" the previously
+        // created svg circles
         else {
             var cirS = document.querySelectorAll('.circle');
             for (var i = 0;i < cirS.length;i++){
