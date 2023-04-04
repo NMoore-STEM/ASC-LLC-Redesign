@@ -1,15 +1,14 @@
 $(document).ready(function(){
-    // opens menu (in mobile)
-    $('#menuButton,.menuItem').on('click touch', function(){
+    // MOBILE header menu
+    $('#menuButton,.menuItem').on('click', function(){
         $('#menu').toggleClass('menuOpen');
     });
 });
-
 /////   MOBILE UX - Button "touch" effect
-//  Another MOBILE button UX approach in attempt to minimize code
 // Previously written code for mobile button UX was 2894 chars - this one
-// is only 2218 chars -- This was a 23.4% improvement! 20210217
+// is only 2218 chars -- This was a 23.4% improvement
 $(function(){
+    // Function that delays page nav on click/touch
     function resetNav(){
         var goTo = $(this).prop('href');
         setTimeout(function(){
@@ -30,13 +29,11 @@ $(function(){
         $(this).find('.button_text').addClass('clicked_txt');
         boundNav();
     }
-///////  20221013 added all button classes in one function
-//       to DRY up code - seems to work as intended
-//     Refactored 50 lines to 10
-    $('#c01,#c02,#gh00,#gh01,#gh02').on('click touch', function(e){
+    //  Button function/click/touch listener
+    //  Refactored 50 lines to 9
+    $('#gh02').on('click', function(e){
         if ($(window).width() < 771) {
             e.preventDefault();
-            console.log($(this));
             let boundUX = mobileUX.bind(this);
             boundUX();
         } else {
@@ -53,23 +50,14 @@ $(function(){
     });
     window.addEventListener('unload', function () {});
 })
-///////////////////////////////////
-//////   portfolio modals    //////
-//////     --Cleaned up--    //////
-///////////////////////////////////
+////  Portfolio Modals
 $(function(){
     var mScr = $('.modal_screen');
         sRst = $('.g_modal');
         sRst2 = $('.modal_scroll');
         xModal = $('.close_modal');
-    $('.more_info').on('click touch', function(event){
+    $('.more_info').on('click', function(event){
         event.preventDefault();
-        // Below to establish coordinates for click location
-        var x, y;
-            x = event.pageX;
-            y = event.pageY;
-        console.log(x,y);
-        //end coordinates code
         mScr.addClass('m_screen_open m_screen_fade');
         mScr.css({ 'display':'block','visibility':'visible'} );
         setTimeout(function(){
@@ -77,43 +65,36 @@ $(function(){
         },100);
         setTimeout(function(){
             xModal.addClass("show_close");
-            // Below is for shifting tabindex flow on modal open 20221025
+            // tabindex flow reassignment on modal open
             $('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a,.modal_scroll').attr('tabindex','-1');
         },400);
         $('body, html').css('overflow-y', 'hidden');
     });
-    xModal.on('click touch', function(event){
+    xModal.on('click', function(event){
         event.preventDefault();
         sRst2.scrollTop(0);
         $('body, html').css('overflow-y', 'auto');
         $(this).removeClass('show_close');
         sRst.removeClass('g_modal_open');
-        // Below is to restore tabindex to main page after closing modal
+        // restore tabindex to main page after closing modal
         $('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').removeAttr('tabIndex');
         sRst.one('transitionend', function(e){
             mScr.removeClass('m_screen_fade').one('transitionend', function(){
-                console.log('!!! innermost');
             }).off(e);
             function hideModal() {
-                // mScr.css({ 'display':'none','visibility':'hidden'}).removeClass('m_screen_open').off(e);
                 mScr.hide().removeClass('m_screen_open').off(e);
                 // Added below to hide item-specific content after open
                 $('.modal_content_00, .modal_content_01').hide();
-                // $('.modal_content_00, .modal_content_01').removeClass('m_show');
-                console.log('new function');
             }
             setTimeout(hideModal,175);
-            console.log('mid level');
         })
-        console.log('top level');
     });
-    
 });
-
-// Array index experiment to load associated content
 $(function(){
     var mBttn = $('.more_info');
         cBttn = $('.mobile_info');
+    // shows modal content based on which button is clicked on page
+    // FULL resolution modals/buttons
     for(let l=0;l<mBttn.length;l++){
         mBttn.on('click',function(){
             var l = mBttn.index(this);
@@ -122,86 +103,38 @@ $(function(){
         });
         return false
     };
-
-    //// === Below moved/nested under a singular .on('click') for MOBILE
-
-    // for(let m=0;m<cBttn.length;m++){
-    //     cBttn.on('click',function(){
-    //         var m = cBttn.index(this);
-    //         console.log('m:'+m);
-    //         $('.modal_content_0'+m).show();
-    //         // $('.modal_content_0'+m).addClass('m_show');            
-    //     });
-    //     return false
-    // }
 });
-////////////////////////////////////////////////////////////////
-//         MOBILE version                                     //
-//   **Create new button that:                                //
-//     - Locks current scroll position of document (and       //
-//       disables)                                            //
-//     - Moves entire document to left (off-screen/out of     //
-//       viewport)                                            //
-//     - Slides in modal content from right side (takes up    //
-//       entire viewport)                                     //
-//     - Enables scroll on modal content (only)               //
-//   **ALTERNATIVELY                                          //
-//     - Lock document scroll position                        //
-//     - Move in modal content from right (off screen), and   //
-//       on top layer/z-index of document                     //
-//     - Top of modal will be determined of current scroll    //
-//       position when the "more info" button is clicked
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
+// MOBILE resolution modal only
 $(function(){
     var cBttn = $('.mobile_info');
-    // cBttn.on('click touch', function(event){
-    //     event.preventDefault();
-    //     $('body, html').css('overflow-y', 'hidden');
-    //     $('.modal_screen').addClass('m_s_o_mobile');
-    //     //=== below new on 20221104
-    //     $('#headerMT').addClass('headerMT_modal');
-    //     $('.head_flex').addClass('mobile_modal');
-    //     $('#menuButton').addClass('mb_modal_open');
-    //     $('.home_link').removeAttr('href');
-
-        for(let m=0;m<cBttn.length;m++){
-            cBttn.on('click',function(){
-                var m = cBttn.index(this);
-                    // targetContent = $('.modal_content_0'+m);
-                $('body, html').css('overflow-y', 'hidden');
-                $('.modal_screen').addClass('m_s_o_mobile');
-                $('#headerMT').addClass('headerMT_modal');
-                $('.head_flex').addClass('mobile_modal');
-                $('#menuButton').addClass('mb_modal_open');
-                $('.home_link').removeAttr('href');
-                console.log('m:'+m);
-                // $('.modal_content_0'+m).show();
-
-                // $('.modal_content_0'+m).removeAttr('display');
-
-                $('.modal_content_0'+m).addClass('m_show');
-
-                // targetContent.show();
-                // $('.modal_content_0'+m).addClass('m_show');            
-            });
-            return false
-        }
-        // Below is to prevent unwanted page jumping after click
-        return false;
-    // })
+    // shows modal content based on which button is clicked on page
+    // MOBILE resolution modals/buttons
+    for(let m=0;m<cBttn.length;m++){
+        cBttn.on('click',function(){
+            var m = cBttn.index(this);
+            $('body, html').css('overflow-y', 'hidden');
+            $('.modal_screen').addClass('m_s_o_mobile');
+            $('#headerMT').addClass('headerMT_modal');
+            $('.head_flex').addClass('mobile_modal');
+            $('#menuButton').addClass('mb_modal_open');
+            $('.home_link').removeAttr('href');
+            console.log('m:'+m);
+            $('.modal_content_0'+m).addClass('m_show');           
+        });
+        // prevent page jump and double-fire
+        return false
+    }
 });
 $(function(){
-    $('.close_mobile').on('click touch', function(event){
+    // to close modal in MOBILE resolution only
+    $('.close_mobile').on('click', function(event){
         event.preventDefault();
         $('.home_link').attr('href','#');
         $('body, html').css('overflow-y', 'scroll');
         $('.modal_screen').removeClass('m_s_o_mobile').one('transitionend', function(e){
             $('.modal_scroll').scrollTop(0,0);
-            // $('.modal_content_00, .modal_content_01').hide();
             $('.modal_content_00, .modal_content_01').removeClass('m_show');
         })
-        //=== new on 20221104
         $('#headerMT').removeClass('headerMT_modal');
         $('.head_flex').removeClass('mobile_modal');
         $('#menuButton').removeClass('mb_modal_open');
@@ -210,9 +143,9 @@ $(function(){
 });
 //  Button on portfolio page that starts and stops svg animation on items
 $(function(){
-    $('.start_stop_gmj').on('click touch', function(event){
+    $('.start_stop_gmj').on('click', function(event){
         event.preventDefault();
-        if ($(this).text() == 'start animation'){
+        if ($(this).text() == "start animation"){
             $(this).text("stop animation")
             $('.gmj_ph').fadeOut(400);
         } else {
@@ -226,11 +159,9 @@ $(function(){
         return false;
     })
 })
-//////////////////////////////////////////////////////////
-//          Original kanji12 button and animation  //
-/////////////////////////////////////////////////////
+//  Kanji12 button and animation
 $(function(){
-    $('.start_stop_knj12').on('click touch', function(event){
+    $('.start_stop_knj12').on('click', function(event){
         event.preventDefault();
         if ($(this).text() == 'start animation'){
             $(this).text("stop animation")
@@ -246,8 +177,8 @@ $(function(){
         return false;
     })
 })
-/////////   Modular functions for kanji12  /////////
-// refactored above code from 18 lines to 14 lines //
+//  Modular functions for kanji12  /////////
+// refactored code from 18 lines to 14 lines //
 function mask1(){
     var msk1 = $('[id^="mask1"]');
     for(let a=1;a<msk1.length+1;a++){
@@ -262,7 +193,7 @@ function mask2(){
 }
 // Kanji 34 button script
 $(function(){
-    $('.start_stop_knj34').on('click touch', function(event){
+    $('.start_stop_knj34').on('click', function(event){
         event.preventDefault();
         if ($(this).text() == 'start animation'){
             $(this).text("stop animation")
@@ -278,8 +209,8 @@ $(function(){
         return false;
     })
 })
-//////    Modular functions for kanji34    ////////
-// refactored 15 lines to a DRY 14 lines         //
+//  Modular functions for kanji34
+//  refactored 15 lines to a DRY 14 lines
 function mask3(){
     var msk3 = $('[id^="mask3"]');
     for(let c=1;c<msk3.length+1;c++){
@@ -292,15 +223,14 @@ function mask4(){
         $('#mask4'+d).toggleClass('knj4'+d);
     }
 }
-///////  For iFrame refresh concentric circles /////
+//  For iFrame refresh concentric circles
 $(function(){
     var iframe = $('.circle_iframe')
-    $('#iframeRefresh').on('click touch', function(){
+    $('#iframeRefresh').on('click', function(){
         iframe.attr("src", iframe.attr("src"));
     })
 });
-
-// These are written here to see color format patterns
-// Possible h1 portfolio intro headings
-
+// Hero statement code
+// with this stated here, one can type: "alert(Nick_Moore)"
+// or "console.log(Nick_Moore)" to see the array displayed
 let Nick_Moore = ["your", "new", "employee"];
