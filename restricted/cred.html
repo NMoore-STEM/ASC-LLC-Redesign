@@ -59,6 +59,7 @@
             <p class=arr_prop>"your", "new", "employee"</p>
         </section>
         <div id=about class=spacer></div>
+        <!-- About Me section -->
         <section id=intro>
             <div class=intro_container_2>
                 <h2 class="section_heading largest">About me...</h2>
@@ -109,8 +110,10 @@
             </container>
         </section>
         <div class=spacer></div>
+        <!-- Portfolio section -->
         <section id=portfolio>
             <h2 class=section_heading>Portfolio</h2>
+        <!-- Web Development -->
             <div id=web_dev class=spacer2></div>
             <span id=front_end_dev class=first_overlay>
                 <h3>Front-end Web Development</h3>
@@ -150,7 +153,6 @@
                                 <img class=code_icon src='../images/CSS3_logo_word.svg'>
                                 <img class=code_icon src='../images/jquery-ar21_ltBlue.svg'>
                             </span>
-                            
                             <ul class=item_details>
                                 Featuring:
                                 <li>Responsive Design</li>
@@ -182,7 +184,6 @@
                                 <img class=code_icon src='../images/CSS3_logo_word.svg'>
                                 <img class=code_icon src='../images/jquery-ar21_ltBlue.svg'>
                             </span>
-                            
                             <ul class=item_details>
                                 Featuring:
                                 <li>Responsive Design</li>
@@ -199,9 +200,8 @@
                                 COMING SOON...
                             </a>
                         </div>
-
                         <div class=portfolio_item_sub>
-                            <!-- Activate below code once there are links -->
+                            <!-- Coming Soon Item - Activate once page is built -->
                             <!--<div class=pb_container>
                                 <a href="" class=port_button target="_blank">
                                     <span class=pb_text>Website</span>
@@ -228,6 +228,7 @@
                 </div>
             </span>
             <div id=design class=spacer></div>
+            <!-- Graphic Design -->
             <span id=graphic_design class=first_overlay>
                 <h3>Graphic Design Work</h3>
                 <div class=heading_decor>
@@ -238,8 +239,7 @@
                         <img class=code_icon src='../images/blender_logo_socket.svg' alt="Blender 3-D software Logo">
                     </span>
                 </div>
-
-                <!-- Place modal template here -->
+                <!-- Modal template here -->
                 <span class="modal_screen">
                     <div class=m_container>
                         <!-- Close button for FULL res -->
@@ -370,7 +370,8 @@
                                             <div class="modal_info_bg">
                                                 <p class="modal_details">I utilized some of my previously created designs and imported them into Blender.</p>
                                                 <p class="modal_details">The imported (2D) vectors had to be modeled in 3D and placed within the diorama-like stage.</p>
-                                                <p class="modal_details">Once the items were modeled, choosing colors and lighting that matched the color scheme of the website it would be utilized in.</p>
+                                                <!-- <p class="modal_details">Once the items were modeled, choosing colors and lighting that matched the color scheme of the website it would be utilized in.</p> -->
+                                                <p class="modal_details">Color scheme in the scene, as well as the lighting, was determined by similar colors utilized in the page styles.</p>
                                             </div>
                                         </span>
                                         <!-- IMG and Description Unit 3 -->
@@ -389,7 +390,7 @@
                                 </div>
                             </div>
                         </aside>
-                        <!-- Hide below button in smaller resolutions -->
+                        <!-- Close button hidden in smaller resolutions -->
                         <span class=close_mobile>
                             <svg class=details_arrow version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
                                 <polygon points="30,1 30,30 16,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#BDB0E6;;"/>
@@ -408,29 +409,21 @@
                         </button>
                         <button class="port_button_mobile mobile_info" alt="Button to show more info in modal">
                             <span class=pb_text>Tap for details...</span>
-                            
                         </button>
                     </section>
-                    
-                    
-                    <!-- Might remove ID for below section as it is not unique -->
                     <section class="portfolio_item_main graphic_item">
                         <h4>3D Hero Diorama:<br>
                         ASC LLC</h4>
-
                         <img class=portfolio_img_graphic src="..\restricted\images_secure\modal_01\asc_splash_prev.png" alt="3D Diorama of Scientific Consulting Company Webpage Splash">
-
                         <button class="port_button more_info">
                             <span class=pb_text>Click for details...</span>
                         </button>
                         <button class="port_button_mobile mobile_info">
                             <span class=pb_text>Tap for details...</span>
-                            
                         </button>
-                        
                     </section>
-                    
                 </div>
+                <!-- SVG showcase -->
                 <h3>Animated Vector Graphics</h3>
                 <div class="heading_decor"></div>
                 <div class=portfolio_item_container>
@@ -453,10 +446,8 @@
                             </svg>
                             <div class=gmj_ph></div>
                         </div>
-                        <!-- Might be able to remove 'href="#0"' below as it may not be needed-->
                         <button type=button href="#0" class="start_stop_gmj svg_play_button">start animation</button>
                     </section>
-                    <!-- ADD animated kanji here-->
                     <section class="portfolio_item_svg kanji_12">
                         <div class="svg_item_heading">
                             <h4>Hope</h4>
@@ -722,7 +713,7 @@
                     </section>
                     <section class="portfolio_item_svg">
                         <div class="svg_item_heading gmj_logo">
-                            <h4>Real-Time Jquery HTML Element Generation</h4>
+                            <h4>Real-Time Javascript SVG Element Generation</h4>
                         </div>
                         <iframe tabindex=-1 class=circle_iframe src="..\restricted\ripple\ripple.html" width="340" height="500">
                         </iframe>
