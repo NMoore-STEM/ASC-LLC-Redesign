@@ -43,7 +43,7 @@ p, li {
     background-attachment: fixed;
     width: 100%;
     background-color: #16142D;
-    background-image: url(../ASC-LLC-Redesign/images/asanoha_patt01.svg);
+    background-image: url(../../images/asanoha-tile.svg);
 }
 /* Below is to give h1/top of portfolio some style that differs from rest of Doc */
 #title_cred {
@@ -113,7 +113,7 @@ p, li {
     text-align: left;
 }
 .gitHub_icon {
-    background-image: url('images/gh_wh.svg');
+    background-image: url(../images/dev-icons/gh-wh.svg);
     height: 40px;
     display: block;
     background-repeat: no-repeat;
@@ -152,7 +152,7 @@ p, li {
     max-width: 320px;
 }
 #asc_img {
-    background-image: url('./images/asc_screen_600X330.png');
+    background-image: url(../images/asc-screen.webp);
     background-size: cover;
     height: 174px;
     width: 100%;
@@ -160,7 +160,7 @@ p, li {
     z-index: 1;
 }
 #lab_img {
-    background-image: url('./images/Bailey_sample02.png');
+    background-image: url(../images/bailey-screen.webp);
     background-size: cover;
     height: 174px;
     width: 100%;
@@ -486,7 +486,7 @@ p.modal_intro {
     font-weight: lighter;
 }
 .gmj_ph {
-    background-image: url('restricted/images_secure/gmj_still.svg');
+    background-image: url(../images/gmj-still.svg);
     background-color:#253C84;
     position: absolute;
     width: 340px;
@@ -528,7 +528,7 @@ p.modal_intro {
     position: relative;
 }
 .kanji_12_ph {
-    background-image: url('restricted/images_secure/kibou_still.svg');
+    background-image: url(../images/kibou-still.svg);
     background-color:#253C84;
     position: absolute;
     width: 340px;
@@ -546,7 +546,7 @@ p.modal_intro {
     padding-top: 46px;
 }
 .kanji_34_ph {
-    background-image: url('restricted/images_secure/yuuki_still.svg');
+    background-image: url(../images/yuuki-still.svg);
     background-color:#253C84;
     position: absolute;
     width: 340px;
@@ -1085,10 +1085,10 @@ iframe {
         z-index: 1;
     }
     #asc_img {
-        background-image: url('./images/asc_screen_600X330.png');
+        background-image: url(../images/asc-screen.webp);
     }
     #lab_img {
-        background-image: url('./images/Bailey_sample02.png');
+        background-image: url(../images/bailey-screen.webp);
     }
     .pb_container {
         display: flex;
