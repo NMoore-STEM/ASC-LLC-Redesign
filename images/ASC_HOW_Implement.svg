@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
 	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
@@ -14,40 +13,25 @@
 </g>
 <g id="flow_chart_paths">
 	<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="27.146" y1="60" x2="72.854" y2="60"/>
-	
 		<line display="none" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="34.209" y1="51.219" x2="31.611" y2="52.719"/>
-	
 		<line display="none" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="63.658" y1="51.219" x2="66.256" y2="52.719"/>
-	
 		<line display="none" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="50" y1="56.926" x2="50" y2="53.926"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="4" stroke-linecap="square" stroke-miterlimit="10" x1="27.24" y1="65" x2="27.24" y2="60"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="4" stroke-linecap="square" stroke-miterlimit="10" x1="50.192" y1="65" x2="50.192" y2="54.723"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="4" stroke-linecap="square" stroke-miterlimit="10" x1="72.948" y1="65" x2="72.948" y2="60"/>
 </g>
 <g id="lightbulb">
 	<path fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 		M54.656,41.119h-8.933c0,0-1.671-4.68-2.612-6.026c-1.515-2.168-3.112-4.396-3.112-7.25c0-5.523,4.477-10,10-10
 		c5.522,0,10,4.477,10,10c0,2.828-1.621,5.011-3.061,7.201C56.049,36.4,54.656,41.119,54.656,41.119z"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="46.218" y1="42.988" x2="54.162" y2="41.018"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="46.647" y1="45.119" x2="53.735" y2="43.361"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="1.7204" stroke-linecap="round" stroke-miterlimit="10" x1="48.389" y1="47.083" x2="51.995" y2="46.188"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="48.5" y1="28.96" x2="51.5" y2="23.765"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="48.5" y1="28.96" x2="51.5" y2="28.96"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="48.5" y1="34.157" x2="51.5" y2="28.96"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="62.658" y1="21.062" x2="65.256" y2="19.562"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="50" y1="14.012" x2="50" y2="11.012"/>
-	
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="36.509" y1="21.062" x2="33.911" y2="19.562"/>
 </g>
 </svg>
