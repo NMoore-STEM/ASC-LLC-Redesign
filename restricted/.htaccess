@@ -1,4 +1,0 @@
-AuthName "Ananda Science Consulting - Restricted Area"
-AuthType Basic
-AuthUserFile /.htpasswd
-Require valid-user 

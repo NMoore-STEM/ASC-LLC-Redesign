@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="frame">
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M95,85c0,5.523-4.478,10-10,10H15
+		C9.477,95,5,90.523,5,85V15C5,9.478,9.477,5,15,5h70c5.522,0,10,4.478,10,10V85z"/>
+</g>
+<g id="Layer_2">
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="15.643" y1="90.796" x2="15.643" y2="87.796"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="25.386" y1="90.796" x2="25.386" y2="87.796"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="35.129" y1="90.797" x2="35.129" y2="87.796"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="44.872" y1="90.797" x2="44.872" y2="87.797"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="54.615" y1="90.797" x2="54.615" y2="87.797"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="64.357" y1="90.797" x2="64.357" y2="87.797"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="74.101" y1="90.797" x2="74.101" y2="87.797"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="83.844" y1="90.797" x2="83.844" y2="87.797"/>
+	</g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="89.959" y1="82.57" x2="86.959" y2="82.57"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="89.959" y1="72.828" x2="86.959" y2="72.828"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="89.959" y1="63.084" x2="86.96" y2="63.084"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="89.96" y1="53.342" x2="86.96" y2="53.342"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="89.96" y1="43.599" x2="86.96" y2="43.599"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="89.961" y1="33.856" x2="86.96" y2="33.856"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="89.961" y1="24.113" x2="86.961" y2="24.113"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="89.961" y1="14.37" x2="86.961" y2="14.37"/>
+	</g>
+	<rect x="15.643" y="72.571" width="10" height="10"/>
+	<rect x="32.253" y="60.344" width="10" height="22.228"/>
+	<rect x="49.176" y="65.329" width="10" height="17.242"/>
+	<rect x="67.166" y="39.066" width="10" height="43.505"/>
+	<polyline fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="14.635,47.124 20.643,51.343 
+		37.253,35.834 54.176,44.519 72.166,16.727 80.02,16.727 	"/>
+</g>
+</svg>
