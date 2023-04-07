@@ -1,4 +1,4 @@
-# ASC-LLC-Redesign
+# Ananda Science Consulting LLC - Full Redesign
 
 This is a website to advertise for my consulting company.
 
