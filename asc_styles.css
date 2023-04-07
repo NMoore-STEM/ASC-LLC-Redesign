@@ -802,10 +802,10 @@ p, li {
         margin-top: 3vw;
         padding-top: 0;
         /* fallback if gradient fails */
-        background-image: url(../ASC-LLC-Redesign/images/ASC_HERO_ver_07.png);
+        background-image: url(../ASC-LLC-Redesign/images/asc-hero-min/ASC_HERO_ver_07.webp);
         /*  to darken bg image for value phrase legibility  */
         background-image: linear-gradient(to right, rgba(155,57,144, .10), rgba(120,114,180, .10)),
-                            url(../ASC-LLC-Redesign/images/ASC_HERO_ver_07.png);
+                            url(../ASC-LLC-Redesign/images/asc-hero-min/ASC_HERO_ver_07.webp);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -904,7 +904,6 @@ p, li {
         outline-offset: 20px;
         transition: all 0.4s ease-out;
         z-index: 5;
-        /* NEW 2021 (for cred page buttons, may need to remove) */
         width: 100%;
         cursor: pointer;
     }
@@ -1115,7 +1114,6 @@ p, li {
         margin: 10px 0 40px;
         width: 250px;
         line-height: 1.5;
-        /* new as of 20221117 */
         font-family: 'Spartan', sans-serif;
         font-size: 14pt;
         color: #91B4DF;
@@ -1153,9 +1151,7 @@ p, li {
 /*=====================================================================*/
 
 @media only screen and (max-width:1000px) {
-    /*   This will be to control the appearance of Services; to enact a drop down
-    /*    "read more" accordian instead of showing desciption content fully.  This
-    /*    will look better at smaller vw.*/
+    /*   Services section - drop-down for smaller resolutions  */
     .service_group {
         display: flex;
         flex-direction: column;

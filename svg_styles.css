@@ -1,5 +1,4 @@
 /* ======= CSS for SVGs used on NM Portfolio page ==== */
-
 /* === GMJ LOGO === */
 #gmj_anim path, #gmj_anim line {
     fill: none;
@@ -30,7 +29,6 @@
 .gmj_a03 {
     animation: draw03 3.8s infinite;
 }
-
 /* === Rework on animations === */
 @keyframes draw01 {
     0%{stroke-dashoffset:299;}
