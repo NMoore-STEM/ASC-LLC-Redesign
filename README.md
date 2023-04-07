@@ -1,16 +1,21 @@
 # ASC-LLC-Redesign
 
-Update on the design of the original ASC LLC website.
-Starting with MOBILE design, then to FULL design, and finally, the TABLET design.
+This is a website to advertise for my consulting company.
 
-Many assets from the original website will either be reused or touched up in AI - especially the Logo/Branding.
-Minimum resolution width taken into account when designing ASC/ Portfolio is 360px wide.
-
-This website is being redesigned for submitting my Junior Web Dev/Designer Portfolio to potential employers.
-All portfolio pieces will be hosted in hidden pages on the backend of the ASC LLC website which only potential employers will have access to the URL.
-
-NOTE: By replacing the space with an underscore in my splash code/title for the portfolio page, then using Nick_Moore.toString() in console will produce: "your,new,employee"
-This is important because not only does it have design appeal, but is also functional JavaScript code.
-
-New Notes 20230323:
-Ananda Science Consulting website was the original source of styling and design that is also used in my portfolio page.  This is because, initially, my portfolio was intended to be a password-protected section of my consulting website so potential clients could browse my detailed credentials.  Originally, my portfolio site was to be built around my resume and geared more towards my experience as a lab manager.  I decided to change course as I came to the epiphany that I could continue to learn web development and re-tool my portfolio page to be focused on myexperience with web dev and digital/graphic design.  Although I could have entirely redesigned the look of my portfolio to be distinct from my consulting website, I opted to reuse colors and assets.  The idea was if I did not have to spend more time on a redesign, I could utilize more time learning how to write script and improve my HTML and CSS.
+**What I used to create this page:**
+<div><img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original-wordmark.svg" title="VSCode" alt="VSCode" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original-wordmark.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/jquery/jquery-original-wordmark.svg" title="Jquery" alt="Jquery" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/illustrator/illustrator-plain.svg" title="Illustrator" alt="Illustrator" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/blender/blender-original.svg" title="Blender" alt="Blender" width="40" height="40"/>&nbsp;
+</div>
+<br>
+There was an earlier, more rudimentary, website before this one that used a different design layout.
+This project and repository were initially created to track the process of updating Ananda Science Consulting.<br>
+<br>
+During the process of updating this webpage, I decided to shift gears and pursue a career in web design while concurrently serving clientele through my consultancy in the interim as I learned more.
+<br>
+<br>
+You will notice that my portfolio and other projects are all rooted in my original domain (www.anandascience.com).
+My portfolio page shares an identical color scheme and design with my consulting website because it was originally intended as a way to showcase my capabilities to potential clients through a password-protected page.
