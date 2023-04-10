@@ -1,4 +1,6 @@
 /* ======= CSS for SVGs used on NM Portfolio page ==== */
+/* == orginal: 620 lines, 14.4KB */
+/* == cleaned: 455 lines, 9.55KB (6.3KB minimized) -  27% and 34% (56%) improvements by line and by file size, respectively */
 /* === GMJ LOGO === */
 #gmj_anim path, #gmj_anim line {
     fill: none;
@@ -32,20 +34,15 @@
 /* === Rework on animations === */
 @keyframes draw01 {
     0%{stroke-dashoffset:299;}
-    21%{stroke-dashoffset:0;}
-    100%{stroke-dashoffset:0;}
+    21%,100%{stroke-dashoffset:0;}
 }
 @keyframes draw02 {
-    0%{stroke-dashoffset:453.16;}
-    10%{stroke-dashoffset:453.16;}
-    50%{stroke-dashoffset:0;}
-    100%{stroke-dashoffset:0;}
+    0%,10%{stroke-dashoffset:453.16;}
+    50%,100%{stroke-dashoffset:0;}
 }
 @keyframes draw03 {
-    0%{stroke-dashoffset:299;}
-    20%{stroke-dashoffset:299;}
-    70%{stroke-dashoffset:0;}
-    100%{stroke-dashoffset:0;}
+    0%,20%{stroke-dashoffset:299;}
+    70%,100%{stroke-dashoffset:0;}
 }
 /*=== KIBOU Kanji New Attempt ===*/
 /*== 12s total run time (including appearing english text) ==*/
@@ -58,10 +55,8 @@
     animation: draw11 12s ease-out infinite;
 }
 @keyframes draw11 {
-    0%{stroke-dashoffset: 0;}
-    3%{stroke-dashoffset: 0;}
-    6%{stroke-dashoffset: 76;}
-    100%{stroke-dashoffset: 76;}
+    0%,3%{stroke-dashoffset: 0;}
+    6%,100%{stroke-dashoffset: 76;}
 }
 #mask12 {
     stroke-dasharray: 86 86;
@@ -71,10 +66,8 @@
     animation: draw12 12s ease-out infinite;
 }
 @keyframes draw12 {
-    0%{stroke-dashoffset: 0;}
-    6%{stroke-dashoffset: 0;}
-    9%{stroke-dashoffset: -86;}
-    100%{stroke-dashoffset: -86;}
+    0%,6%{stroke-dashoffset: 0;}
+    9%,100%{stroke-dashoffset: -86;}
 }
 #mask13 {
     stroke-dasharray: 95 95;
@@ -84,11 +77,8 @@
     animation: draw13 12s ease-in infinite;
 }
 @keyframes draw13 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    9%{stroke-dashoffset: 0;}
-    13%{stroke-dashoffset: 95;}
-    100%{stroke-dashoffset: 95;}
+    0%,9%{stroke-dashoffset: 0;}
+    13%,100%{stroke-dashoffset: 95;}
 }
 #mask14 {
     stroke-dasharray: 157 157;
@@ -98,11 +88,8 @@
     animation: draw14 12s linear infinite;
 }
 @keyframes draw14 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    13%{stroke-dashoffset: 0;}
-    17%{stroke-dashoffset: -157;}
-    100%{stroke-dashoffset: -157;}
+    0%,13%{stroke-dashoffset: 0;}
+    17%,100%{stroke-dashoffset: -157;}
 }
 #mask15 {
     stroke-dasharray: 60 60;
@@ -112,12 +99,8 @@
     animation: draw15 12s linear infinite;
 }
 @keyframes draw15 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    17%{stroke-dashoffset: 0;}
-    19%{stroke-dashoffset: -60;}
-    100%{stroke-dashoffset: -60;}
+    0%,17%{stroke-dashoffset: 0;}
+    19%,100%{stroke-dashoffset: -60;}
 }
 #mask16 {
     stroke-dasharray: 158 162;
@@ -127,12 +110,8 @@
     animation: draw16 12s linear infinite;
 }
 @keyframes draw16 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    19%{stroke-dashoffset: 0;}
-    24%{stroke-dashoffset: -162;}
-    100%{stroke-dashoffset: -162;}
+    0%,19%{stroke-dashoffset: 0;}
+    24%,100%{stroke-dashoffset: -162;}
 }
 #mask17 {
     stroke-dasharray: 106.886 109;
@@ -142,13 +121,8 @@
     animation: draw17 12s ease-in infinite;
 }
 @keyframes draw17 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    24%{stroke-dashoffset: 0;}
-    27%{stroke-dashoffset: -109;}
-    100%{stroke-dashoffset: -109;}
+    0%,24%{stroke-dashoffset: 0;}
+    27%,100%{stroke-dashoffset: -109;}
 }
 /*===================*/
 /*== KIBOU Kanji 2 ==*/
@@ -161,14 +135,8 @@
     animation: draw21 12s linear infinite;
 }
 @keyframes draw21 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    27%{stroke-dashoffset: 0;}
-    29%{stroke-dashoffset: -30;}
-    100%{stroke-dashoffset: -30;}
+    0%,27%{stroke-dashoffset: 0;}
+    29%,100%{stroke-dashoffset: -30;}
 }
 #mask22 {
     stroke-dasharray: 80 85;
@@ -178,15 +146,8 @@
     animation: draw22 12s linear infinite;
 }
 @keyframes draw22 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    29%{stroke-dashoffset: 0;}
-    32%{stroke-dashoffset: -85;}
-    100%{stroke-dashoffset: -85;}
+    0%,29%{stroke-dashoffset: 0;}
+    32%,100%{stroke-dashoffset: -85;}
 }
 #mask23 {
     stroke-dasharray: 85 90;
@@ -196,15 +157,8 @@
     animation: draw23 12s linear infinite;
 }
 @keyframes draw23 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    32%{stroke-dashoffset: 0;}
-    36%{stroke-dashoffset: -90;}
-    100%{stroke-dashoffset: -90;}
+    0%,32%{stroke-dashoffset: 0;}
+    36%,100%{stroke-dashoffset: -90;}
 }
 #mask24 {
     stroke-dasharray: 78 83;
@@ -214,16 +168,8 @@
     animation: draw24 12s linear infinite;
 }
 @keyframes draw24 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    25%{stroke-dashoffset: 0;}
-    36%{stroke-dashoffset: 0;}
-    40%{stroke-dashoffset: -83;}
-    100%{stroke-dashoffset: -83;}
+    0%,5%,10%,15%,20%,23%,25%,36%{stroke-dashoffset: 0;}
+    40%,100%{stroke-dashoffset: -83;}
 }
 #mask25 {
     stroke-dasharray: 143 148;
@@ -233,17 +179,8 @@
     animation: draw25 12s linear infinite;
 }
 @keyframes draw25 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    25%{stroke-dashoffset: 0;}
-    30%{stroke-dashoffset: 0;}
-    40%{stroke-dashoffset: 0;}
-    44%{stroke-dashoffset: -143;}
-    100%{stroke-dashoffset: -143;}
+    0%,40%{stroke-dashoffset: 0;}
+    44%,100%{stroke-dashoffset: -143;}
 }
 #mask26 {
     stroke-dasharray: 40 43;
@@ -253,18 +190,8 @@
     animation: draw26 12s ease-in infinite;
 }
 @keyframes draw26 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    25%{stroke-dashoffset: 0;}
-    30%{stroke-dashoffset: 0;}
-    35%{stroke-dashoffset: 0;}
-    44%{stroke-dashoffset: 0;}
-    46%{stroke-dashoffset: -43;}
-    100%{stroke-dashoffset: -43;}
+    0%,44%{stroke-dashoffset: 0;}
+    46%,100%{stroke-dashoffset: -43;}
 }
 #mask27 {
     stroke-dasharray: 44 47;
@@ -274,19 +201,8 @@
     animation: draw27 12s ease-in infinite;
 }
 @keyframes draw27 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    25%{stroke-dashoffset: 0;}
-    30%{stroke-dashoffset: 0;}
-    35%{stroke-dashoffset: 0;}
-    40%{stroke-dashoffset: 0;}
-    46%{stroke-dashoffset: 0;}
-    48%{stroke-dashoffset: -47;}
-    100%{stroke-dashoffset: -47;}
+    0%,46%{stroke-dashoffset: 0;}
+    48%,100%{stroke-dashoffset: -47;}
 }
 #mask28 {
     stroke-dasharray: 94 98;
@@ -296,19 +212,8 @@
     animation: draw28 12s linear infinite;
 }
 @keyframes draw28 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    25%{stroke-dashoffset: 0;}
-    30%{stroke-dashoffset: 0;}
-    35%{stroke-dashoffset: 0;}
-    40%{stroke-dashoffset: 0;}
-    48%{stroke-dashoffset: 0;}
-    52%{stroke-dashoffset: -98;}
-    100%{stroke-dashoffset: -98;}
+    0%,48%{stroke-dashoffset: 0;}
+    52%,100%{stroke-dashoffset: -98;}
 }
 #mask29 {stroke-dasharray: 55 59;
     stroke-dashoffset: 0;
@@ -317,20 +222,8 @@
     animation: draw29 12s linear infinite;
 }
 @keyframes draw29 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    25%{stroke-dashoffset: 0;}
-    30%{stroke-dashoffset: 0;}
-    35%{stroke-dashoffset: 0;}
-    40%{stroke-dashoffset: 0;}
-    45%{stroke-dashoffset: 0;}
-    52%{stroke-dashoffset: 0;}
-    54%{stroke-dashoffset: -59;}
-    100%{stroke-dashoffset: -59;}
+    0%,52%{stroke-dashoffset: 0;}
+    54%,100%{stroke-dashoffset: -59;}
 }
 #mask210 {
     stroke-dasharray: 83 88;
@@ -340,21 +233,8 @@
     animation: draw210 12s linear infinite;
 }
 @keyframes draw210 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    25%{stroke-dashoffset: 0;}
-    30%{stroke-dashoffset: 0;}
-    35%{stroke-dashoffset: 0;}
-    40%{stroke-dashoffset: 0;}
-    45%{stroke-dashoffset: 0;}
-    50%{stroke-dashoffset: 0;}
-    54%{stroke-dashoffset: 0;}
-    57%{stroke-dashoffset: -88;}
-    100%{stroke-dashoffset: -88;}
+    0%,54%{stroke-dashoffset: 0;}
+    57%,100%{stroke-dashoffset: -88;}
 }
 #mask211 {
     stroke-dasharray: 151 155;
@@ -364,21 +244,8 @@
     animation: draw211 12s ease-in infinite;
 }
 @keyframes draw211 {
-    0%{stroke-dashoffset: 0;}
-    5%{stroke-dashoffset: 0;}
-    10%{stroke-dashoffset: 0;}
-    15%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    25%{stroke-dashoffset: 0;}
-    30%{stroke-dashoffset: 0;}
-    35%{stroke-dashoffset: 0;}
-    40%{stroke-dashoffset: 0;}
-    45%{stroke-dashoffset: 0;}
-    50%{stroke-dashoffset: 0;}
-    57%{stroke-dashoffset: 0;}
-    60%{stroke-dashoffset: -155;}
-    100%{stroke-dashoffset: -155;}
+    0%,57%{stroke-dashoffset: 0;}
+    60%,100%{stroke-dashoffset: -155;}
 }
 /*== YUUKI kanji 3 ==*/
 #mask31 {
@@ -389,10 +256,8 @@
     animation: draw31 12s ease-in infinite;
 }
 @keyframes draw31 {
-    0%{stroke-dashoffset: 0;}
-    3%{stroke-dashoffset: 0;}
-    6%{stroke-dashoffset: -135;}
-    100%{stroke-dashoffset: -135;}
+    0%,3%{stroke-dashoffset: 0;}
+    6%,100%{stroke-dashoffset: -135;}
 }
 #mask32 {
     stroke-dasharray: 25 25;
@@ -402,10 +267,8 @@
     animation: draw32 12s ease-in infinite;
 }
 @keyframes draw32 {
-    0%{stroke-dashoffset: 0;}
-    6%{stroke-dashoffset: 0;}
-    9%{stroke-dashoffset: -25;}
-    100%{stroke-dashoffset: -25;}
+    0%,6%{stroke-dashoffset: 0;}
+    9%,100%{stroke-dashoffset: -25;}
 }
 #mask33 {
     stroke-dasharray: 45 45;
@@ -415,10 +278,8 @@
     animation: draw33 12s ease-in infinite;
 }
 @keyframes draw33 {
-    0%{stroke-dashoffset: 0;}
-    9%{stroke-dashoffset: 0;}
-    13%{stroke-dashoffset: -45;}
-    100%{stroke-dashoffset: -45;}
+    0%,9%{stroke-dashoffset: 0;}
+    13%,100%{stroke-dashoffset: -45;}
 }
 #mask34 {
     stroke-dasharray: 143 143;
@@ -428,10 +289,8 @@
     animation: draw34 12s ease-in infinite;
 }
 @keyframes draw34 {
-    0%{stroke-dashoffset: 0;}
-    13%{stroke-dashoffset: 0;}
-    18%{stroke-dashoffset: -143;}
-    100%{stroke-dashoffset: -143;}
+    0%,13%{stroke-dashoffset: 0;}
+    18%,100%{stroke-dashoffset: -143;}
 }
 #mask35 {
     stroke-dasharray: 32 32;
@@ -441,10 +300,8 @@
     animation: draw35 12s ease-in infinite;
 }
 @keyframes draw35 {
-    0%{stroke-dashoffset: 0;}
-    18%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: -32;}
-    100%{stroke-dashoffset: -32;}
+    0%,18%{stroke-dashoffset: 0;}
+    20%,100%{stroke-dashoffset: -32;}
 }
 #mask36 {
     stroke-dasharray: 45 45;
@@ -454,10 +311,8 @@
     animation: draw36 12s ease-in infinite;
 }
 @keyframes draw36 {
-    0%{stroke-dashoffset: 0;}
-    20%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: -45;}
-    100%{stroke-dashoffset: -45;}
+    0%,20%{stroke-dashoffset: 0;}
+    23%,100%{stroke-dashoffset: -45;}
 }
 #mask37 {
     stroke-dasharray: 66 66;
@@ -467,10 +322,8 @@
     animation: draw37 12s ease-in infinite;
 }
 @keyframes draw37 {
-    0%{stroke-dashoffset: 0;}
-    23%{stroke-dashoffset: 0;}
-    27%{stroke-dashoffset: -66;}
-    100%{stroke-dashoffset: -66;}
+    0%,23%{stroke-dashoffset: 0;}
+    27%,100%{stroke-dashoffset: -66;}
 }
 #mask38 {
     stroke-dasharray: 179 179;
@@ -480,10 +333,8 @@
     animation: draw38 12s ease-in infinite;
 }
 @keyframes draw38 {
-    0%{stroke-dashoffset: 0;}
-    27%{stroke-dashoffset: 0;}
-    33%{stroke-dashoffset: -179;}
-    100%{stroke-dashoffset: -179;}
+    0%,27%{stroke-dashoffset: 0;}
+    33%,100%{stroke-dashoffset: -179;}
 }
 #mask39 {
     stroke-dasharray: 95 105;
@@ -493,10 +344,8 @@
     animation: draw39 12s ease-in infinite;
 }
 @keyframes draw39 {
-    0%{stroke-dashoffset: 0;}
-    33%{stroke-dashoffset: 0;}
-    38%{stroke-dashoffset: -105;}
-    100%{stroke-dashoffset: -105;}
+    0%,33%{stroke-dashoffset: 0;}
+    38%,100%{stroke-dashoffset: -105;}
 }
 /*===YUUKI kanji 4===*/
 #mask41 {
@@ -507,10 +356,8 @@
     animation: draw41 12s ease-in infinite;
 }
 @keyframes draw41 {
-    0%{stroke-dashoffset: 0;}
-    38%{stroke-dashoffset: 0;}
-    41%{stroke-dashoffset: -60;}
-    100%{stroke-dashoffset: -60;}
+    0%,38%{stroke-dashoffset: 0;}
+    41%,100%{stroke-dashoffset: -60;}
 }
 #mask42 {
     stroke-dasharray: 60 60;
@@ -520,10 +367,8 @@
     animation: draw42 12s ease-in infinite;
 }
 @keyframes draw42 {
-    0%{stroke-dashoffset: 0;}
-    41%{stroke-dashoffset: 0;}
-    44%{stroke-dashoffset: -60;}
-    100%{stroke-dashoffset: -60;}
+    0%,41%{stroke-dashoffset: 0;}
+    44%,100%{stroke-dashoffset: -60;}
 }
 #mask43 {
     stroke-dasharray: 52 52;
@@ -533,10 +378,8 @@
     animation: draw43 12s ease-in infinite;
 }
 @keyframes draw43 {
-    0%{stroke-dashoffset: 0;}
-    44%{stroke-dashoffset: 0;}
-    47%{stroke-dashoffset: -52;}
-    100%{stroke-dashoffset: -52;}
+    0%,44%{stroke-dashoffset: 0;}
+    47%,100%{stroke-dashoffset: -52;}
 }
 #mask44 {
     stroke-dasharray: 286 286;
@@ -546,10 +389,8 @@
     animation: draw44 12s ease-in infinite;
 }
 @keyframes draw44 {
-    0%{stroke-dashoffset: 0;}
-    47%{stroke-dashoffset: 0;}
-    53%{stroke-dashoffset: -286;}
-    100%{stroke-dashoffset: -286;}
+    0%,47%{stroke-dashoffset: 0;}
+    53%,100%{stroke-dashoffset: -286;}
 }
 #mask45 {
     stroke-dasharray: 107 107;
@@ -559,10 +400,8 @@
     animation: draw45 12s ease-in infinite;
 }
 @keyframes draw45 {
-    0%{stroke-dashoffset: 0;}
-    53%{stroke-dashoffset: 0;}
-    58%{stroke-dashoffset: -107;}
-    100%{stroke-dashoffset: -107;}
+    0%,53%{stroke-dashoffset: 0;}
+    58%,100%{stroke-dashoffset: -107;}
 }
 #mask46 {
     stroke-dasharray: 62 62;
@@ -572,10 +411,8 @@
     animation: draw46 12s ease-in infinite;
 }
 @keyframes draw46 {
-    0%{stroke-dashoffset: 0;}
-    58%{stroke-dashoffset: 0;}
-    61%{stroke-dashoffset: -62;}
-    100%{stroke-dashoffset: -62;}
+    0%,58%{stroke-dashoffset: 0;}
+    61%,100%{stroke-dashoffset: -62;}
 }
 /*== TEXT ==*/
 #def12 {
@@ -614,7 +451,6 @@
     animation: english 12s ease-in infinite;
 }
 @keyframes english {
-    80%{opacity:1;filter:blur(0);}
-    90%{opacity:1;filter:blur(0);}
+    80%,90%{opacity:1;filter:blur(0);}
     100%{transform:scale(3);opacity:0;filter:blur(10px);}
 }
