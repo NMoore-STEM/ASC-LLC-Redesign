@@ -1245,6 +1245,9 @@ iframe {
         width: 100%;
         border: none;
     }
+    .more_info {
+        display: none;
+    }
     .mobile_info {
         height: 60px;
     }
@@ -1285,7 +1288,11 @@ iframe {
         top: 100px;
         /* new on 20221104 */
         top: 60px;
+        /* fallback for mozilla browsers */
         height: calc(100vh - 60px);
+        /* bottom of modal which included nav button
+        back to portfolio was being hidden by browser UI */
+        height: 100svh;
     }
     .m_s_o_mobile {
         transform: translate(0vw);
