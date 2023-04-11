@@ -151,7 +151,8 @@ $(function(){
                 type: "POST",
                 dataType: "json",
                 url: href,
-                data: $('.contactForm').serialize(),
+                // this needs to be tested before pushing to production - pending changes
+                data: $('.contactForm', 'input[name!=botCatfish]').serialize(),
             });
         });
     });
