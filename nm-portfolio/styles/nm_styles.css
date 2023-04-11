@@ -2267,4 +2267,24 @@ iframe {
     .modal_info_alt {
         margin-left: 25px;
     }
+};
+/* At mobile resolutions less than 360px, the hero title was wrapping into two
+    lines when it should always fit on one.  These rules resolve this issue. */
+@media only screen and (max-width:360px) {
+    #title_cred {
+        align-items: center;
+    }
+    .cred_arr {
+        white-space: nowrap;
+        padding: 50px 10px 0;
+        margin: 0;
+    }
+    .cred_arr::before {
+        padding-right: 9px;
+        font-size: 12pt;
+    }
+    .cred_arr::after {
+        padding-left: 9px;
+        font-size: 14pt;
+    }
 }
