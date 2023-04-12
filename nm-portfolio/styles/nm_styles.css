@@ -2136,6 +2136,34 @@ iframe {
     }
 }
 /*=== special viewport rules ===*/
+/* This @media was not being applied to selectors by the browser in its original placement
+    at the very bottom of the document so it was moved here - which works.
+    At mobile resolutions less than 360px, the hero title was wrapping into two
+    lines when it should always fit on one.  These rules resolve this issue. */
+@media only screen and (max-width:360px) {
+    #title_cred {
+        align-items: center;
+    }
+    .cred_arr {
+        white-space: nowrap;
+        padding: 50px 10px 0;
+        margin: 0;
+    }
+    .cred_arr::before {
+        padding-right: 9px;
+        font-size: 12pt;
+    }
+    .cred_arr::after {
+        padding-left: 9px;
+        font-size: 14pt;
+    }
+    /* This fixes overflow-x issue that made flex-centering broken in intro section */
+    .intro_container_2 .section_heading {
+        white-space: nowrap;
+        padding-right: 0;
+        font-size: 33pt;
+    }
+}
 @media only screen and (min-width:1000px) {
     .cred_arr {
         font-size: 40pt;
@@ -2268,23 +2296,3 @@ iframe {
         margin-left: 25px;
     }
 };
-/* At mobile resolutions less than 360px, the hero title was wrapping into two
-    lines when it should always fit on one.  These rules resolve this issue. */
-@media only screen and (max-width:360px) {
-    #title_cred {
-        align-items: center;
-    }
-    .cred_arr {
-        white-space: nowrap;
-        padding: 50px 10px 0;
-        margin: 0;
-    }
-    .cred_arr::before {
-        padding-right: 9px;
-        font-size: 12pt;
-    }
-    .cred_arr::after {
-        padding-left: 9px;
-        font-size: 14pt;
-    }
-}
