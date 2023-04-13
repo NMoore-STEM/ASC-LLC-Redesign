@@ -48,7 +48,13 @@ $(function(){
         console.log('This page was loaded normally.');
         };
     });
-    window.addEventListener('unload', function () {});
+    // May do away with below - need to test - not essential?
+    // Added this originally to prevent the page from resetting back to top when 
+    // using the back button on the browser.  After some testing, it does not seem that
+    // it is needed as the page will reload at top of document if home button is clicked,
+    // but not if back button is clicked.
+    // Additionally, this was code was being flagged in lighthouse reports - hence the attention post-release
+    // window.addEventListener('unload', function () {});
 })
 ////  Portfolio Modals
 $(function(){
@@ -90,11 +96,10 @@ $(function(){
         })
     });
 });
+// Full resolution modal buttons - open modal
 $(function(){
     var mBttn = $('.more_info');
-        cBttn = $('.mobile_info');
     // shows modal content based on which button is clicked on page
-    // FULL resolution modals/buttons
     for(let l=0;l<mBttn.length;l++){
         mBttn.on('click',function(){
             var l = mBttn.index(this);
@@ -104,11 +109,10 @@ $(function(){
         return false
     };
 });
-// MOBILE resolution modal only
+// MOBILE resolution modal buttons - open modal
 $(function(){
     var cBttn = $('.mobile_info');
     // shows modal content based on which button is clicked on page
-    // MOBILE resolution modals/buttons
     for(let m=0;m<cBttn.length;m++){
         cBttn.on('click',function(){
             var m = cBttn.index(this);
