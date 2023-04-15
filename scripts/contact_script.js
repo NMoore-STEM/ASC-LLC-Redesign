@@ -116,6 +116,7 @@ $(function(){
                 }, 5700);
                 setTimeout(function(){
                     $('.contactForm').css({'max-height':'35vh','background-color':'whitesmoke'});
+                    // max-height might be better as 43vh
                     $('footer').css({'margin-top':'15vh'});
                 }, 6000);
                 setTimeout(function(){
@@ -147,12 +148,19 @@ $(function(){
         $.when(validateAll).done(function(){
             e.preventDefault();
             var href = $('.contactForm').attr("action");
+                selectMessage = $('.contactForm input[name!=botCatfish], textarea');
             $.ajax({
                 type: "POST",
                 dataType: "json",
                 url: href,
                 // this needs to be tested before pushing to production - pending changes
-                data: $('.contactForm', 'input[name!=botCatfish]').serialize(),
+                // data: $('.contactForm', 'input[name!=botCatfish]').serialize(),
+                // data: $('.contactForm').not("#botCatfish").serialize(),
+                //data: $('.contactForm').not($("#botCatfish")).serialize(),
+
+                // After testing with console.log in dev tools, found the correct selector to use
+                // this will exclude hidden security field from being sent in messages
+                data: selectMessage.serialize(),
             });
         });
     });
