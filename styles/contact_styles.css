@@ -371,6 +371,7 @@ footer {
         display: flex;
         flex-direction: column;
         margin: 0 6vw 0;
+
         background: transparent;
     }
     .contactTitle h1 {
@@ -379,7 +380,9 @@ footer {
     .contactForm {
         display: block;
         /*max-height used to transition with JS animations*/
-        max-height: 70vh;
+        /* max-height is causing issues (bc of vh units used) when keyboard is brought up on mobile */
+        /* max-height: 70vh; */
+        max-height: 423px;
         max-width: 80vw;
         padding: 30px 30px 0;
     }
@@ -525,10 +528,11 @@ footer {
         transition: all 0.2s ease;
     }
     .formContainer {
-        margin-top: 130px;
+        /* margin-top: 130px; */
+        margin: 130px 0 100px;
         background-color: whitesmoke;
         width: 60vw;
-        min-height: 400px;
+        /* min-height: 400px; */
     }
     .contactForm {
         display: flex;
@@ -565,6 +569,7 @@ footer {
         margin: 40px 30px 0;
         text-decoration: none;
         font-family: 'Noto Sans KR', sans-serif;
+        transition: all 0.3s ease;
     }
     .footerButton:hover, .topButton:hover {
         box-shadow: 0 10px 17px -5px black;
