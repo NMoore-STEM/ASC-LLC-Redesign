@@ -289,8 +289,8 @@ footer {
     }
     header {
         display: flex;
-        position: fixed;
-        top: 0;
+        /* position: fixed;
+        top: 0; */
         height: 100px;
         width: 92vw;
         background-color: #2F4072;
@@ -365,14 +365,11 @@ footer {
         font-size: 12pt;
         font-family: 'Spartan', sans-serif;
     }
-    .bg {
-        padding-top: 130px;
-    }
     .formContainer{
         display: flex;
         flex-direction: column;
-        margin: 0 6vw 0;
-
+        /* margin: 0 6vw 0; */
+        margin: 8vw 6vw 0;
         background: transparent;
     }
     .contactTitle h1 {
@@ -405,9 +402,12 @@ footer {
         1% { transform: translateX(-76vw); }
         100% { transform: translateX(-88vw); }
     }
-    .spacer2 {
+    /* .spacer2 {
         height: 50px;
         background-color: transparent;
+    } */
+    footer {
+        margin-top: 60px;
     }
 }
 /*================================================================*/
@@ -530,7 +530,8 @@ footer {
     }
     .formContainer {
         /* margin-top: 130px; */
-        margin: 130px 0 100px;
+        /* margin: 130px 0 100px; */
+        margin: 130px 0 0;
         background-color: whitesmoke;
         width: 60vw;
         /* min-height: 400px; */
@@ -567,7 +568,8 @@ footer {
         color: #9D90C5;
         background-color: #3C2C5E;
         text-align: center;
-        margin: 40px 30px 0;
+        /* margin: 40px 30px 0; */
+        margin: 120px 0 0;
         text-decoration: none;
         font-family: 'Noto Sans KR', sans-serif;
         transition: all 0.3s ease;
@@ -580,6 +582,6 @@ footer {
     }
 }
 /* special viewport rules for very small mobile devices */
-@media only screen and (max-width:360px) {
+/* @media only screen and (max-width:360px) {
     
-}
+} */
