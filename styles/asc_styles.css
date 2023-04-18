@@ -411,11 +411,14 @@ p, li {
         position: relative;
         top: 0;
         min-width: 100vw;
-        height: 74vh;
+        /* height: 74vh; */
         background-size: 100% 100%;
         background-image: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
         z-index: 2;
         padding-bottom: 4vh;
+        height: 74svh;
+        align-items: center;
+        justify-content: center;
     }
     #splashGrad {
         width: 100vw;
@@ -440,7 +443,8 @@ p, li {
     #colorBand01 {
         display: block;
         position: relative;
-        height: 22vh;
+        /* height: 22vh; */
+        height: 22svh;
     }
     #colorBand02 {
         display: block;
