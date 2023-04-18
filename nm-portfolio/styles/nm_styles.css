@@ -777,10 +777,14 @@ iframe {
         padding: 0;
         max-width: 100%;
         margin-top: 100px;
-        height: calc(100vh - 200px);
+        /* height: calc(100vh - 200px); */
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: calc(100svh - 200px);
+    }
+    .cred_arr {
+        padding-top: 0;
     }
     section {
         display: grid;
@@ -2146,8 +2150,9 @@ iframe {
     }
     .cred_arr {
         white-space: nowrap;
-        padding: 50px 10px 0;
+        /* padding: 50px 10px 0; */
         margin: 0;
+        padding: 0 10px 0;
     }
     .cred_arr::before {
         padding-right: 9px;
