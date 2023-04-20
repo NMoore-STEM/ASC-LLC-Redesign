@@ -115,26 +115,37 @@ $(function(){
     // shows modal content based on which button is clicked on page
     for(let m=0;m<cBttn.length;m++){
         cBttn.on('click',function(){
+            // function modalCloseIn(){
+            //     $('.close_mobile').toggleClass('show_mobile_close');
+            // }
             var m = cBttn.index(this);
             $('body, html').css('overflow-y', 'hidden');
             $('.modal_screen').addClass('m_s_o_mobile');
             $('#headerMT').addClass('headerMT_modal');
+            $('.close_mobile').toggleClass('mobile_close_initial');
+            setTimeout(modalCloseIn,400);
             $('.head_flex').addClass('mobile_modal');
             $('#menuButton').addClass('mb_modal_open');
             $('.home_link').removeAttr('href');
             console.log('m:'+m);
-            $('.modal_content_0'+m).addClass('m_show');           
+            $('.modal_content_0'+m).addClass('m_show');
+            //setTimeout(modalCloseIn,300);        
         });
         // prevent page jump and double-fire
         return false
     }
 });
+function modalCloseIn(){
+    $('.close_mobile').toggleClass('show_mobile_close');
+}
 $(function(){
     // to close modal in MOBILE resolution only
     $('.close_mobile').on('click', function(event){
         event.preventDefault();
         $('.home_link').attr('href','#');
         $('body, html').css('overflow-y', 'scroll');
+        $('.close_mobile').toggleClass('mobile_close_initial');
+        setTimeout(modalCloseIn,300);
         $('.modal_screen').removeClass('m_s_o_mobile').one('transitionend', function(e){
             $('.modal_scroll').scrollTop(0,0);
             $('.modal_content_00, .modal_content_01').removeClass('m_show');

@@ -1293,10 +1293,11 @@ iframe {
         /* new on 20221104 */
         top: 60px;
         /* fallback for mozilla browsers */
-        height: calc(100vh - 60px);
+        /* height: calc(100vh - 60px); */
         /* bottom of modal which included nav button
         back to portfolio was being hidden by browser UI */
-        height: 100svh;
+        /* height: 100svh; */
+        height: calc(100svh - 60px);
     }
     .m_s_o_mobile {
         transform: translate(0vw);
@@ -1305,23 +1306,56 @@ iframe {
     .m_container {
         position: relative;
         background-color: #662D91;
+        height: 100%;
+    }
+    .close_mobile {
+        position: absolute;
+        height: 60px;
+        display: flex;
+        display: none;
+        width: 100%;
+        /* background-color: #662D91; */
+        z-index: 201;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        align-items: center;
+        top: -60px;
+        transform: scaleX(1.5);
+        opacity: 0;
+        transition: transform 150ms ease, opacity 100ms ease-out;
+    }
+    .mobile_close_x {
+        height: 80%;
+        right: 4px;
+        position: absolute;
+    }
+    .mobile_close_initial {
+        display: flex;
+    }
+    .show_mobile_close {
+        /* display: flex; */
+        transform: scaleX(1);
+        opacity: 1;
+        transition: transform 300ms ease, opacity 550ms ease-in;
     }
     .g_modal {
         position: relative;
         margin: 0 auto 0;
         background-color: rgb(43, 57, 96);
-        height: auto;
+        /* height: auto; */
         transform: scale(1);
         opacity: 1;
         padding: 0;
-        height: calc(100vh - 160px);
+        /* height: calc(100vh - 160px); */
         /* new on 20221104 */
-        height: calc(100vh - 120px);
+        /* height: calc(100vh - 120px); */
+        height: 100%;
     }
     .modal_content_00, .modal_content_01 {
-        height: calc(100vh - 162px);
+        /* height: calc(100vh - 162px); */
         overflow: hidden;
-        height: calc(100vh - 122px);
+        /* height: calc(100vh - 122px); */
+        height: 100%;
     }
     .m_show {
         display: flex;
@@ -1330,6 +1364,9 @@ iframe {
     .modal_top {
         display: block;
         padding: 0;
+    }
+    .modal_scroll {
+        height: calc(100svh - 120px);
     }
     /* -- Only shown in larger resolutions -- */
     .modal_intro {
@@ -1393,17 +1430,6 @@ iframe {
     }
     .close_modal {
         display: none;
-    }
-    .close_mobile {
-        position: absolute;
-        height: 60px;
-        display: flex;
-        width: 100%;
-        background-color: #662D91;
-        z-index: 201;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
     }
     .gmj_logo {
         padding-bottom: 0;
