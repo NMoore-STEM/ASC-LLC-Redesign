@@ -1141,7 +1141,6 @@ iframe {
         background-color: #11182d;
     }
     .port_button {
-        display: inherit;
         justify-content: center;
         align-items: center;
         flex: 1;
