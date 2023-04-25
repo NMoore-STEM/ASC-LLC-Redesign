@@ -115,9 +115,14 @@ $(function(){
                     $(".submitButton").removeClass("loading darken sent").css({'height':'30px','animation':'form_left 0.5s ease-in forwards'});
                 }, 5700);
                 setTimeout(function(){
-                    $('.contactForm').css({'max-height':'35vh','background-color':'whitesmoke'});
-                    // max-height might be better as 43vh
-                    $('footer').css({'margin-top':'15vh'});
+                    if ($(window).width() > 770) {
+                        $('.contactForm').css({'max-height':'35vh','background-color':'whitesmoke'});
+                        // max-height might be better as 43vh
+                        $('footer').css({'margin-top':'15vh'});
+                    } else {
+                        $('.contactForm').css({'max-height':'275px','background-color':'whitesmoke'});
+                        $('footer').css({'margin-top':'100px'});
+                    }
                 }, 6000);
                 setTimeout(function(){
                     if ($(window).width() <= 770) {
