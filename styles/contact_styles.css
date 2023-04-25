@@ -2,7 +2,7 @@
 /*-----------------   CONTACT global   -------------------*/
 html {
     scroll-behavior: smooth;
-    overflow: auto;
+    /* overflow: auto; */
 }
 body {
     padding: 0;
@@ -206,6 +206,7 @@ textarea:-moz-ui-invalid {
     width: 100%;
 }
 .willChangeJQ {
+    /* will-change: -- add properties here -- ; */
     transition: background-color 2s ease, margin-top 0.2s ease, max-height 0.5s ease;
 }
 .darken {
@@ -291,6 +292,7 @@ footer {
         display: flex;
         /* position: fixed;
         top: 0; */
+        position: relative;
         height: 100px;
         width: 92vw;
         background-color: #2F4072;
