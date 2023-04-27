@@ -222,40 +222,31 @@ p, li {
     background-color: #11182d;
 }
 .port_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #553692;
-    background-color: #532B9E;
     background-color: #662D91;
-    box-shadow: 2px 2px 0 #322749;
     transition: all 0.3s linear;
-    font-size: 100%;
     cursor: pointer;
     text-decoration: none;
-    font-family: inherit;
     border: none;
     height: 40px;
-    box-shadow: 0 10px 0 -6px #322749;
     box-shadow: 0 6px 4px -6px #322749;
 }
-.contactButton {
+.ghButton {
     display: flex;
     position: relative;
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #9D90C5;
-    text-align: center;
     text-decoration: none;
-    background-color: transparent;
-    box-shadow: 0 10px 6px -6px #322749;
     overflow: hidden;
     box-shadow: 0 10px 6px -6px #1B253E;
+}
+.link_01 {
+    font-family: 'Noto Sans KR';
+    font-size: 14pt;
+    color: #9D90C5;
 }
 /* Style for clicked/touched/tabbed/focused */
 .port_button:any-link:-moz-focusring, 
 .port_button:focus-visible,
-.contactButton:any-link:-moz-focusring,
-.contactButton:focus-visible {
+.ghButton:any-link:-moz-focusring,
+.ghButton:focus-visible {
     outline: 1px solid darkgray;
 }
 .port_button:any-link:-moz-focusring, 
@@ -266,6 +257,7 @@ p, li {
 .pb_text {
     color: #BDB0E6;
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
     padding-bottom: 3px;
     transition: all 0.2s ease;
 }
@@ -777,7 +769,6 @@ iframe {
         padding: 0;
         max-width: 100%;
         margin-top: 100px;
-        /* height: calc(100vh - 200px); */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1002,10 +993,9 @@ iframe {
         text-align: center;
         background-color: transparent;
     }
-    .contactButton {
+    .ghButton {
         z-index: 4;
         align-items: center;
-        align-content: center;
         justify-content: center;
         max-width: 300px;
         height: 70px;
@@ -1141,26 +1131,22 @@ iframe {
         background-color: #11182d;
     }
     .port_button {
+        background-color: #662D91;
+        transition: all 0.3s linear;
+        border: none;
+        box-shadow: 0 6px 4px -6px #322749;
+    }
+    .pb_web {
+        display: flex;
         justify-content: center;
         align-items: center;
         flex: 1;
-        background-color: #553692;
-        background-color: #532B9E;
-        background-color: #662D91;
-        box-shadow: 2px 2px 0 #322749;
-        transition: all 0.3s linear;
-        font-size: 100%;
-        font-family: inherit;
-        border: none;
-        height: 40px;
-        box-shadow: 0 10px 0 -6px #322749;
-        box-shadow: 0 6px 4px -6px #322749;
     }
     /* Style for clicked/touched/tabbed/focused */
     .port_button:any-link:-moz-focusring, 
     .port_button:focus-visible,
-    .contactButton:any-link:-moz-focusring,
-    .contactButton:focus-visible {
+    .ghButton:any-link:-moz-focusring,
+    .ghButton:focus-visible {
         outline: 1px solid darkgray;
     }
     .pb_text {
@@ -1289,13 +1275,7 @@ iframe {
         z-index: 199;
         left: 0;
         top: 100px;
-        /* new on 20221104 */
         top: 60px;
-        /* fallback for mozilla browsers */
-        /* height: calc(100vh - 60px); */
-        /* bottom of modal which included nav button
-        back to portfolio was being hidden by browser UI */
-        /* height: 100svh; */
         height: calc(100svh - 60px);
     }
     .m_s_o_mobile {
@@ -1313,9 +1293,7 @@ iframe {
         display: flex;
         display: none;
         width: 100%;
-        /* background-color: #662D91; */
         z-index: 201;
-        /* flex-wrap: wrap; */
         justify-content: center;
         align-items: center;
         top: -60px;
@@ -1332,7 +1310,6 @@ iframe {
         display: flex;
     }
     .show_mobile_close {
-        /* display: flex; */
         transform: scaleX(1);
         opacity: 1;
         transition: transform 300ms ease, opacity 550ms ease-in;
@@ -1341,19 +1318,13 @@ iframe {
         position: relative;
         margin: 0 auto 0;
         background-color: rgb(43, 57, 96);
-        /* height: auto; */
         transform: scale(1);
         opacity: 1;
         padding: 0;
-        /* height: calc(100vh - 160px); */
-        /* new on 20221104 */
-        /* height: calc(100vh - 120px); */
         height: 100%;
     }
     .modal_content_00, .modal_content_01 {
-        /* height: calc(100vh - 162px); */
         overflow: hidden;
-        /* height: calc(100vh - 122px); */
         height: 100%;
     }
     .m_show {
@@ -1824,30 +1795,14 @@ iframe {
         text-align: right;
     }
     /*===============================================*/
-    /*  ----   CONTACT BUTTON CLASS AND FX    ----   */
-    .contactButton {
-        align-content: center;
+    /*  ----   GITHUB BUTTON CLASS AND FX    ----   */
+    .ghButton {
         align-items: center;
-        font-size: 18pt;
         margin: 2vw 8vw;
-        max-width: 400px;
-        max-height: 110px;
-        /* grid needs to stay */
-        grid-row-start: 3;
-        grid-column-end: span 2;
-        justify-self: center;
         transition: all 0.6s ease;
     }
     .button_text {
-        max-height: 110px;
-        background-color: transparent;
-        color: #9D90C5;
-        align-content: center;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-size: 16pt;
         padding: 24px;
-        text-decoration: none;
-        text-align: center;
         outline: solid 2px #9D90C5;
         outline-offset: 20px;
         transition: all 0.4s ease-out;
@@ -1855,31 +1810,31 @@ iframe {
         width: 100%;
         cursor: pointer;
     }
-    .contactButton:hover {
+    .ghButton:hover {
         padding: 6px;
         transition: all 0.8s ease, padding 0.2s ease, margin 0.2s ease;
         margin: calc(2vw - 6px) 8vw;
     }
-    .contactButton:hover .button_fx, 
-    .contactButton:focus .button_fx {
+    .ghButton:hover .button_fx, 
+    .ghButton:focus .button_fx {
         visibility: visible;
         left: -10%;
         background: linear-gradient(135deg, rgba(155,57,144,1) 0%,rgba(255,255,255,0) 50%);
         transition: all 0.2s ease;
     }
-    .contactButton:hover .button_text, 
-    .contactButton:focus .button_text {
+    .ghButton:hover .button_text, 
+    .ghButton:focus .button_text {
         color: #c88cdf;
         outline-offset: -1px;
         transition: all 0.4s ease-in, outline-offset 0.1s ease-in;
     }
-    .contactButton:hover .link_01,
-    .contactButton:focus .link_01 {
+    .ghButton:hover .link_01,
+    .ghButton:focus .link_01 {
         color: #c88cdf;
         transition: all 0.4s ease-in;
     }
-    .contactButton:hover .button_bg, 
-    .contactButton:focus .button_bg {
+    .ghButton:hover .button_bg, 
+    .ghButton:focus .button_bg {
         box-shadow: 4px 6px rgba(0,0,0,0.6);
         inset: 2px solid #9D90C5;
         transition: all 0.8s ease;
@@ -1928,11 +1883,7 @@ iframe {
         background-color: transparent;
         align-self: center;
     }
-    .link_01 {
-        font-family: 'Noto Sans KR';
-    }
     .top_cred_links .link_01 {
-        font-size: 14pt;
         align-self: center;
         color: #9D90C5;
     }
@@ -1964,6 +1915,9 @@ iframe {
         text-align: center;
     }
     .port_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
     }
     .port_button:hover {
@@ -2175,7 +2129,6 @@ iframe {
     }
     .cred_arr {
         white-space: nowrap;
-        /* padding: 50px 10px 0; */
         margin: 0;
         padding: 0 10px 0;
     }
