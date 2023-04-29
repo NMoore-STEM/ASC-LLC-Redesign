@@ -772,8 +772,11 @@ iframe {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: calc(100svh - 200px);
+        /* height: calc(100svh - 200px); */
+        height: calc(100vh - 100px);
+        height: calc(100dvh - 100px);
     }
+    height:calc(100vh - 100px);height:calc(100dvh - 100px)
     .cred_arr {
         padding-top: 0;
     }

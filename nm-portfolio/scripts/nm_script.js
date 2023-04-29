@@ -72,7 +72,7 @@ $(function(){
         setTimeout(function(){
             xModal.addClass("show_close");
             // tabindex flow reassignment on modal open
-            $('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a,.modal_scroll').attr('tabindex','-1');
+            $('.home_link,#menuFULL>a,.ghButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a,.modal_scroll').attr('tabindex','-1');
         },400);
         $('body, html').css('overflow-y', 'hidden');
     });
@@ -83,7 +83,7 @@ $(function(){
         $(this).removeClass('show_close');
         sRst.removeClass('g_modal_open');
         // restore tabindex to main page after closing modal
-        $('.home_link,#menuFULL>a,.contactButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').removeAttr('tabIndex');
+        $('.home_link,#menuFULL>a,.ghButton,#asc_img,#lab_img,.port_button,.svg_play_button,footer a').removeAttr('tabIndex');
         sRst.one('transitionend', function(e){
             mScr.removeClass('m_screen_fade').one('transitionend', function(){
             }).off(e);
