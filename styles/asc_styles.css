@@ -363,6 +363,9 @@ p, li {
         backdrop-filter: blur(1.2px);
         -webkit-backdrop-filter: blur(1.2px);
     }
+    #menu li {
+        padding: 0;
+    }
     .menu_default {
         opacity: 0;
         padding: 37px 15px 0;
