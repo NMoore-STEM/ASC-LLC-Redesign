@@ -128,6 +128,7 @@ p, li {
     opacity: 0;
     letter-spacing: -10px;
     transition: all 0.6s ease;
+    white-space: nowrap;
 }
 .coreMask {
     overflow: hidden;
@@ -258,7 +259,8 @@ p, li {
 /*=====================================================================*/
 @media only screen and (max-width:770px) {
     h1 {
-        font-size: 3vh;
+        /* font-size: 3vh; */
+        font-size: 1.13em;
         text-align: center;
     }
     h2 {
@@ -408,54 +410,61 @@ p, li {
     #splashMT {
         display: flex;
         flex-direction: column;
-        position: relative;
+        justify-content: center;
+        align-items: center;
+        /* position: relative;
         top: 0;
-        min-width: 100vw;
+        min-width: 100vw; */
         /* height: 74vh; */
-        background-size: 100% 100%;
-        background-image: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
+        /* background-size: 100% 100%;
+        background-image: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%); */
+        background: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
         z-index: 2;
-        padding-bottom: 4vh;
+        /* padding-bottom: 4vh;
         height: 74svh;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
+        height: clamp(360px, 78svh, 78dvh);
+        margin: 0;
+        padding: 0;
+        transition: all 200ms ease;
     }
     #splashGrad {
         width: 100vw;
         height: 80vh;
     }
     #logoGlyph {
-        display: grid;
+        /* display: grid;
         position: relative;
         margin-top: 15vh;
-        justify-content: center;
+        justify-content: center; */
         filter: drop-shadow( 1px 10px 3px rgba(0, 0, 0, .7));
     }
     #logoText {
-        display: grid;
+        /* display: grid; */
         margin-top: 4vh;
-        justify-content: center;
+        /* justify-content: center; */
         filter: drop-shadow( 1px 10px 3px rgba(0, 0, 0, .7));
     }
     .fullValue, .logoValueContainer {
         display: none;
     }
     #colorBand01 {
-        display: block;
-        position: relative;
+        /* display: block;
+        position: relative; */
         /* height: 22vh; */
         height: 22svh;
     }
     #colorBand02 {
-        display: block;
-        width: 100vw;
+        /* display: block;
+        width: 100vw; */
         height: 19vh;
     }
     #colorBand03 {
-        display: block;
+        /* display: block; */
         padding: 10px;
-        height: auto;
-        min-height: 9vh;
+        /* height: auto;
+        min-height: 9vh; */
     }
     .spacer {
         display: block;
@@ -579,6 +588,7 @@ p, li {
         margin: 15px 0;
         font-size: 12pt;
         color: rgb(25, 32, 49);
+        white-space: nowrap;
     }
     .coreMask {
         margin: 0;
