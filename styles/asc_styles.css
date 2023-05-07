@@ -22,11 +22,6 @@ h4 {
     font-family: 'Spartan', sans-serif;
     font-size: 18pt;
 }
-/* i {
-    font-size: 5.15vw;
-    font-family: 'Times New Roman', serif;
-    line-height: 0.78;
-} */
 p, li {
     font-family: 'Noto Sans KR', sans-serif;
     color: #91B4DF;
@@ -253,13 +248,10 @@ p, li {
     text-align: center;
 }
 /*=====================================================================*/
-/*=====================================================================*/
 /*------           MOBILE resolution rules          -------------------*/
-/*=====================================================================*/
 /*=====================================================================*/
 @media only screen and (max-width:770px) {
     h1 {
-        /* font-size: 3vh; */
         font-size: 1.13em;
         text-align: center;
     }
@@ -365,6 +357,7 @@ p, li {
     }
     #menu li {
         padding: 0;
+        list-style-type: none;
     }
     .menu_default {
         opacity: 0;
@@ -417,7 +410,6 @@ p, li {
         align-items: center;
         background: linear-gradient(30deg, rgb(50, 39, 73) 0%, rgb(65, 45, 103) 16%, rgb(86, 54, 148) 40%, rgb(62, 60, 127) 61%, rgb(47, 64, 114) 74%, rgb(43, 57, 96) 85%, rgb(38, 48, 73) 100%);
         z-index: 2;
-        /* height: clamp(360px, 78svh, 78dvh); */
         height: clamp(360px, 74vh, 600px);
         margin: 0;
         padding: 0;
@@ -478,7 +470,7 @@ p, li {
     }
     @keyframes outlineGrow {
         10% { outline-offset: 5px; outline-width: 5px; outline-color: rgba(85,54,146,1) }
-        100% { outline-offset: 12px; outline-width: 1px; outline-color: rgba(85,54,146,) }
+        100% { outline-offset: 12px; outline-width: 1px; outline-color: rgba(85,54,146,0) }
     }
     .button_fx {
         display: block;
@@ -632,11 +624,8 @@ p, li {
     }
 }
 /*================================================================*/
-/*================================================================*/
 /*-------              FULL RESOLUTION                     -------*/
 /*================================================================*/
-/*================================================================*/
-
 @media only screen and (min-width:771px) {
     /* below two rules for Chromium scroll color */
     ::-webkit-scrollbar, ::-webkit-scrollbar-button {
@@ -704,16 +693,16 @@ p, li {
     .logoHide {
         left: -380px;
         opacity: 0;
-        scale: 2;
+        transform: scale(2);
         margin: 0;
-        transition: opacity 0.4s ease-in, left 0.2s linear 0.4s, scale 0.4s ease, margin 0.4s ease 0.3s;
+        transition: opacity 0.4s ease-in, left 0.2s linear 0.4s, transform 0.4s ease, margin 0.4s ease 0.3s;
     }
     .logoReveal {
         opacity: 1;
         left: 20px;
-        scale: 1;
+        transform: scale(1);
         margin-right: 6vw;
-        transition: opacity 0.4s ease, left 0.5s ease-out, scale 0.3s ease, margin 0.4s ease-out;
+        transition: opacity 0.4s ease, left 0.5s ease-out, transform 0.3s ease, margin 0.4s ease-out;
     }
     #logoGlyphMobile {
         display: none;
@@ -757,7 +746,6 @@ p, li {
         font-family: 'Spartan', sans-serif;
         font-size: 1.2vw;
         color: white;
-        justify-self: space-between;
         text-decoration: none;
         z-index: 6;
         max-height: 30px;
@@ -924,7 +912,6 @@ p, li {
     .contactButton:hover .button_bg, 
     .contactButton:focus .button_bg {
         box-shadow: 4px 6px rgba(0,0,0,0.6);
-        inset: 2px solid #9D90C5;
         transition: all 0.8s ease;
     }
     .button_fx {
@@ -1162,7 +1149,6 @@ p, li {
         overflow: hidden;
         max-width: 60vw;
         display: block;
-        word-break: break-word;
         align-self: center;
     }
     .service_group ul {

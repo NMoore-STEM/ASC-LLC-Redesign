@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N Moore Portfolio</title>
-    <meta name="robots" content="noindex,nofollow,nosnippet,noarchive,noodp,noydir"/>
+    <meta name="robots" content="noindex,nofollow,nosnippet,noarchive,noodp,noydir">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link rel="stylesheet" href="styles/nm_styles.css">
@@ -45,14 +45,22 @@
         </header>
         <!-- MOBILE NAV MENU -->
         <a role="button" id=menuButton class="mb_mobile">
-            <img src="../images/menu-icon.svg"></img>
+            <img src="../images/menu-icon.svg" alt="Icon for button to open menu for webpage in smaller resolutions.">
         </a>
         <!-- MOBILE NAV drop-down menu -->
         <menu id=menu class=menu_default>
-            <a role="button" class=menuItem href="#about">ABOUT ME</a>
-            <a role="button" class=menuItem href="#web_dev">WEB DEV WORK</a>
-            <a role="button" class=menuItem href="#design">DESIGN WORK</a>
-            <a role="button" class=menuItem href="contact_r.html">CONTACT</a>
+            <li>
+                <a role="button" class=menuItem href="#about">ABOUT ME</a>
+            </li>
+            <li>
+                <a role="button" class=menuItem href="#web_dev">WEB DEV WORK</a>
+            </li>
+            <li>
+                <a role="button" class=menuItem href="#design">DESIGN WORK</a>
+            </li>
+            <li>
+                <a role="button" class=menuItem href="contact_r.html">CONTACT</a>
+            </li>
         </menu>
         <section id=title_cred>
             <h1 class=cred_arr>Nick Moore</h1>
@@ -68,7 +76,7 @@
                     <p>My intention is to improve my skills through continual learning with a team, then work towards a leadership role in the industry.</p>
                 </article>
             </div>
-            <container class=intro_sub_container>
+            <div class=intro_sub_container>
                 <h2 class="section_heading large">Soft Skills<br>
                     <sub>&amp; Personality</sub>
                 </h2>
@@ -107,7 +115,7 @@
                         </ul>
                     </div>
                 </div>
-            </container>
+            </div>
         </section>
         <div class=spacer></div>
         <!-- Portfolio section -->
@@ -115,24 +123,24 @@
             <h2 class=section_heading>Portfolio</h2>
         <!-- Web Development -->
             <div id=web_dev class=spacer2></div>
-            <span id=front_end_dev class=first_overlay>
+            <div id=front_end_dev class=first_overlay>
                 <h3>Front-end Web Development</h3>
-                <span class=section_top>
+                <div class=section_top>
                     <p>All of my webpages have been designed taking viewport and device responsiveness into account.  The primary tools I use when develping webpages are <em>GitHub</em> (for version control and tracking work or bugs that may arise), <em>Visual Studio Code</em> and the <em>developer tools</em> provided by the web browser I view my code on.
-                        <br>I develop with Mozilla Firefox, but always test compatibility across browsers before considering a web page complete.
-                        <br>Below is a sampling of my capabilities in producing quality web-pages through front-end development and design.</p>
-                        <aside class=top_cred_links>
-                            <p>Please take a look at my GitHub repositories to see how I work.</p>
-                            <a role="button" href="https://github.com/NMoore-STEM" target="_blank" id=gh02 class="ghButton cred_link">
-                                <span class="button_text gh_text">
-                                    <span class=gitHub_icon></span>
-                                    <span class=link_01>/NMoore-STEM</span>
-                                </span>
-                                <span class=button_fx></span>
-                                <span class=button_bg></span>
-                            </a>
-                        </aside>
-                </span>
+                    <br>I develop with Mozilla Firefox, but always test compatibility across browsers before considering a web page complete.
+                    <br>Below is a sampling of my capabilities in producing quality web-pages through front-end development and design.</p>
+                    <div class=top_cred_links>
+                        <p>Please take a look at my GitHub repositories to see how I work.</p>
+                        <a role="button" href="https://github.com/NMoore-STEM" target="_blank" id=gh02 class="ghButton cred_link">
+                            <span class="button_text gh_text">
+                                <span class=gitHub_icon></span>
+                                <span class=link_01>/NMoore-STEM</span>
+                            </span>
+                            <span class=button_fx></span>
+                            <span class=button_bg></span>
+                        </a>
+                    </div>
+                </div>
                 <div class=portfolio_item_container>
                     <section class="portfolio_item_main wd_item">
                         <div class=web_dev_header>
@@ -149,9 +157,9 @@
                                 </a>
                             </div>
                             <span class=portfolio_dev_icon>
-                                <img class=code_icon src='images/dev-icons/html5-icon.svg'>
-                                <img class=code_icon src='images/dev-icons/css3-icon.svg'>
-                                <img class=code_icon src='images/dev-icons/jquery-blu-icon.svg'>
+                                <img class=code_icon src='images/dev-icons/html5-icon.svg' alt="HTML 5 icon">
+                                <img class=code_icon src='images/dev-icons/css3-icon.svg' alt="CSS 3 icon">
+                                <img class=code_icon src='images/dev-icons/jquery-blu-icon.svg' alt="Jquery icon">
                             </span>
                             <ul class=item_details>
                                 Featuring:
@@ -180,9 +188,9 @@
                                 </a>
                             </div>
                             <span class=portfolio_dev_icon>
-                                <img class=code_icon src='images/dev-icons/html5-icon.svg'>
-                                <img class=code_icon src='images/dev-icons/css3-icon.svg'>
-                                <img class=code_icon src='images/dev-icons/jquery-blu-icon.svg'>
+                                <img class=code_icon src='images/dev-icons/html5-icon.svg' alt="HTML 5 icon">
+                                <img class=code_icon src='images/dev-icons/css3-icon.svg' alt="CSS 3 icon">
+                                <img class=code_icon src='images/dev-icons/jquery-blu-icon.svg' alt="Jquery icon">
                             </span>
                             <ul class=item_details>
                                 Featuring:
@@ -211,9 +219,9 @@
                                 </a>
                             </div>-->
                             <span class=portfolio_dev_icon>
-                                <img class=code_icon src='images/dev-icons/html5-icon.svg'>
-                                <img class=code_icon src='images/dev-icons/css3-icon.svg'>
-                                <img class=code_icon src='images/dev-icons/reactjs-icon.svg'>
+                                <img class=code_icon src='images/dev-icons/html5-icon.svg' alt="HTML 5 icon">
+                                <img class=code_icon src='images/dev-icons/css3-icon.svg' alt="CSS 3 icon">
+                                <img class=code_icon src='images/dev-icons/reactjs-icon.svg' alt="React JS icon">
                             </span>
                             <ul class=item_details>
                                 Featuring:
@@ -229,7 +237,7 @@
             </span>
             <div id=design class=spacer></div>
             <!-- Graphic Design -->
-            <span id=graphic_design class=first_overlay>
+            <div id=graphic_design class=first_overlay>
                 <h3>Graphic Design Work</h3>
                 <div class=heading_decor>
                     <h4>Software used:</h4>
@@ -240,7 +248,7 @@
                     </span>
                 </div>
                 <!-- Modal template here -->
-                <span class="modal_screen">
+                <div class="modal_screen">
                     <div class=m_container>
                         <!-- Close button for FULL res -->
                         <!-- Had to relocate to here in order to accomodate a logical tabindex flow -->
@@ -411,12 +419,12 @@
                             <span class=pb_text>Return to portfolio...</span>
                         </span> -->
                     </div>
-                </span>
+                </div>
                 <div class=portfolio_item_container>
                     <section class="portfolio_item_main graphic_item">
                         <h4>Packaging Design:<br>
                         Victor's Mix</h4>
-                        <img class=portfolio_img_graphic src="images/vm-pack-prev.webp"alt="">
+                        <img class=portfolio_img_graphic src="images/vm-pack-prev.webp" alt="Preview image of packaging design">
                         <button class="port_button more_info" alt="Button to show more info in modal">
                             <span class=pb_text>Click for details...</span>
                         </button>
@@ -733,7 +741,7 @@
                         <button type=button href="#0" id="iframeRefresh" class=svg_play_button value="Refresh">Refresh Iframe</button>
                     </section>
                 </div>
-            </span>
+            </div>
             <div id=art class=spacer></div>
         </section>
         <footer>
@@ -755,7 +763,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class=copyright>COPYRIGHT &#169 2023 ASC,LLC.</div>
+                <div class=copyright>COPYRIGHT &#169; 2023 ASC,LLC.</div>
             </div>
         </footer>
     </main>
