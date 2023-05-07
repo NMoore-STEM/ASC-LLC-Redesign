@@ -704,6 +704,10 @@ iframe {
         backdrop-filter: blur(1.2px);
         -webkit-backdrop-filter: blur(1.2px);
     }
+    #menu li {
+        padding: 0;
+        list-style-type: none;
+    }
     .menu_default {
         opacity: 0;
         padding: 37px 15px 0;
@@ -989,7 +993,7 @@ iframe {
     }
     @keyframes outlineGrow {
         10% { outline-offset: 5px; outline-width: 5px; outline-color: rgba(85,54,146,1) }
-        100% { outline-offset: 12px; outline-width: 1px; outline-color: rgba(85,54,146,) }
+        100% { outline-offset: 12px; outline-width: 1px; outline-color: rgba(85,54,146,0) }
     }
     .button_text {
         position: absolute;
@@ -1514,7 +1518,6 @@ iframe {
         font-family: 'Spartan', sans-serif;
         font-size: 1.2vw;
         color: white;
-        justify-self: space-between;
         text-decoration: none;
         z-index: 6;
         max-height: 30px;
@@ -1803,7 +1806,6 @@ iframe {
     .ghButton:hover .button_bg, 
     .ghButton:focus .button_bg {
         box-shadow: 4px 6px rgba(0,0,0,0.6);
-        inset: 2px solid #9D90C5;
         transition: all 0.8s ease;
     }
     .button_fx {
