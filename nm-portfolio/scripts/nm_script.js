@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // MOBILE header menu
+// MOBILE header menu
     $('#menuButton,.menuItem').on('click', function(){
         $('#menu').toggleClass('menuOpen');
     });
@@ -8,7 +8,8 @@ $(document).ready(function(){
 // Previously written code for mobile button UX was 2894 chars - this one
 // is only 2218 chars -- This was a 23.4% improvement
 $(function(){
-    // Function that delays page nav on click/touch
+    // Function that delays page nav on click/touch to 
+    // allow button UX feedback animation to complete
     function resetNav(){
         var goTo = $(this).prop('href');
         setTimeout(function(){
@@ -29,7 +30,7 @@ $(function(){
         $(this).find('.button_text').addClass('clicked_txt');
         boundNav();
     }
-    //  Button function/click/touch listener
+    //  GitHub button click listener
     //  Refactored 50 lines to 9
     $('#gh02').on('click', function(e){
         if ($(window).width() < 771) {
@@ -48,13 +49,6 @@ $(function(){
         console.log('This page was loaded normally.');
         };
     });
-    // May do away with below - need to test - not essential?
-    // Added this originally to prevent the page from resetting back to top when 
-    // using the back button on the browser.  After some testing, it does not seem that
-    // it is needed as the page will reload at top of document if home button is clicked,
-    // but not if back button is clicked.
-    // Additionally, this was code was being flagged in lighthouse reports - hence the attention post-release
-    // window.addEventListener('unload', function () {});
 })
 ////  Portfolio Modals
 $(function(){
@@ -65,7 +59,10 @@ $(function(){
     $('.more_info').on('click', function(event){
         event.preventDefault();
         mScr.addClass('m_screen_open m_screen_fade');
-        mScr.css({ 'display':'block','visibility':'visible'} );
+        mScr.css({ 
+            'display':'block',
+            'visibility':'visible'
+        } );
         setTimeout(function(){
             sRst.addClass('g_modal_open');
         },100);
@@ -115,9 +112,6 @@ $(function(){
     // shows modal content based on which button is clicked on page
     for(let m=0;m<cBttn.length;m++){
         cBttn.on('click',function(){
-            // function modalCloseIn(){
-            //     $('.close_mobile').toggleClass('show_mobile_close');
-            // }
             var m = cBttn.index(this);
             $('body, html').css('overflow-y', 'hidden');
             $('.modal_screen').addClass('m_s_o_mobile');
@@ -128,8 +122,7 @@ $(function(){
             $('#menuButton').addClass('mb_modal_open');
             $('.home_link').removeAttr('href');
             console.log('m:'+m);
-            $('.modal_content_0'+m).addClass('m_show');
-            //setTimeout(modalCloseIn,300);        
+            $('.modal_content_0'+m).addClass('m_show');      
         });
         // prevent page jump and double-fire
         return false

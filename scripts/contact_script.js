@@ -1,6 +1,4 @@
 // WORKING CONTACT FORM VERIFICATION AND SUBMISSION (fr contact_test.js)
-// can clean up "var" before each variable as it only needs to be 
-// declared once if all are grouped below
 $(function(){
     var fA = 'focusActive';
         lA = 'labelActive';
@@ -69,7 +67,6 @@ $(function(){
     var regex = new RegExp(/^\b[\w\.-]+@{1}[\w\.-]+\.\w{2,6}\b/i);
     function blankCheck() {
         if (emailF.val()!="" && nameF.val()!="" && msgF.val()!="") {
-            alert('blankCheck PASS!!!');
         return true;
         } else {
             alert('BLANK FAIL!!!');
@@ -88,7 +85,6 @@ $(function(){
     $(".contactForm").on('submit',function(e){
         function validateAll() {
             if (blankCheck() && regex.test(emailF.val()) && botBoot()) {
-                alert('vA PASS!!!');
                 $('.subB').val("SENDING...");
     // ANIMATION BELOW
                 $('.willChangeJQ').css("background-color","#B7ACCD");
@@ -117,7 +113,6 @@ $(function(){
                 setTimeout(function(){
                     if ($(window).width() > 770) {
                         $('.contactForm').css({'max-height':'35vh','background-color':'whitesmoke'});
-                        // max-height might be better as 43vh
                         $('footer').css({'margin-top':'15vh'});
                     } else {
                         $('.contactForm').css({'max-height':'275px','background-color':'whitesmoke'});
@@ -153,18 +148,12 @@ $(function(){
         $.when(validateAll).done(function(){
             e.preventDefault();
             var href = $('.contactForm').attr("action");
+        // Prevents message content to include the bot trap field title when emailed
                 selectMessage = $('.contactForm input[name!=botCatfish], textarea');
             $.ajax({
                 type: "POST",
                 dataType: "json",
                 url: href,
-                // this needs to be tested before pushing to production - pending changes
-                // data: $('.contactForm', 'input[name!=botCatfish]').serialize(),
-                // data: $('.contactForm').not("#botCatfish").serialize(),
-                //data: $('.contactForm').not($("#botCatfish")).serialize(),
-
-                // After testing with console.log in dev tools, found the correct selector to use
-                // this will exclude hidden security field from being sent in messages
                 data: selectMessage.serialize(),
             });
         });

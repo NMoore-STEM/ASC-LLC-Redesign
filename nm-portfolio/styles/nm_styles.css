@@ -1311,7 +1311,7 @@ iframe {
         padding: 0;
     }
     .modal_scroll {
-        height: calc(100svh - 120px);
+        height: calc(100vh - 120px);
     }
     /* -- Only shown in larger resolutions -- */
     .modal_intro {
