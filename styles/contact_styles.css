@@ -1,8 +1,6 @@
-/*=========================================================*/
 /*-----------------   CONTACT global   -------------------*/
 html {
     scroll-behavior: smooth;
-    /* overflow: auto; */
 }
 body {
     padding: 0;
@@ -95,7 +93,6 @@ label {
 #nameField, #emailField, #messageField {
     width: 99%;
     outline: none;
-    /* chromium override ? */
     background-color: transparent;
 }
 input {
@@ -206,7 +203,6 @@ textarea:-moz-ui-invalid {
     width: 100%;
 }
 .willChangeJQ {
-    /* will-change: -- add properties here -- ; */
     transition: background-color 2s ease, margin-top 0.2s ease, max-height 0.5s ease;
 }
 .darken {
@@ -275,7 +271,7 @@ footer {
     padding-top: 30px;
     text-align: center;
 }
-/*============================================================*/
+
 /*----------------   CONTACT/ MOBILE TABLET   ----------------*/
 /*============================================================*/
 @media only screen and (max-width:770px) {
@@ -290,8 +286,6 @@ footer {
     }
     header {
         display: flex;
-        /* position: fixed;
-        top: 0; */
         position: relative;
         height: 100px;
         width: 92vw;
@@ -370,7 +364,6 @@ footer {
     .formContainer{
         display: flex;
         flex-direction: column;
-        /* margin: 0 6vw 0; */
         margin: 8vw 6vw 0;
         background: transparent;
     }
@@ -379,9 +372,6 @@ footer {
     }
     .contactForm {
         display: block;
-        /*max-height used to transition with JS animations*/
-        /* max-height is causing issues (bc of vh units used) when keyboard is brought up on mobile */
-        /* max-height: 70vh; */
         max-height: 423px;
         max-width: 80vw;
         padding: 30px 30px 0;
@@ -404,18 +394,12 @@ footer {
         1% { transform: translateX(-76vw); }
         100% { transform: translateX(-88vw); }
     }
-    /* .spacer2 {
-        height: 50px;
-        background-color: transparent;
-    } */
     footer {
         margin-top: 60px;
     }
 }
-/*================================================================*/
-/*================================================================*/
+
 /*------------------ FULL RESOLUTION  ----------------------------*/
-/*================================================================*/
 /*================================================================*/
 
 @media only screen and (min-width:771px) {

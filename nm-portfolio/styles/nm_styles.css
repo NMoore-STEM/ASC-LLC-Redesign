@@ -1,5 +1,4 @@
-/*=====================================================================*/
-/*------------------  RESTRICTED - Global ----------------------------*/
+/*------------------ Global ---------------------*/
 html {
     scroll-behavior: smooth;
     overflow: auto;
@@ -45,7 +44,6 @@ p, li {
     background-color: #16142D;
     background-image: url(../../images/asanoha-tile.svg);
 }
-/* Below is to give h1/top of portfolio some style that differs from rest of Doc */
 #title_cred {
     background-color: #16142D;
     margin-top: 30px;
@@ -140,8 +138,6 @@ p, li {
     color: #ffffff;
     background-color: #2C4A9A;
 }
-/*====================================================*/
-/* Graphic Design Portfolio Item Details Window/Modal */
 .portfolio_item_sub {
     display: flex;
     flex-direction: column;
@@ -571,9 +567,9 @@ iframe {
     padding-top: 30px;
     text-align: center;
 }
-/*================================================================*/
-/*------------------ MOBILE - Portfolio/ Restricted --------------*/
-/*================================================================*/
+
+/*---------------- MOBILE - Portfolio --------------*/
+/*==================================================*/
 @media only screen and (max-width:770px) {
     h1 {
         font-size: 3vh;
@@ -750,12 +746,11 @@ iframe {
         margin: 0;
         padding: 0;
         max-width: 100%;
-        /* margin-top: 100px; */
         margin-top: 50px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* height: calc(100svh - 200px); */
+        /* fallback */
         height: calc(100vh - 100px);
         height: calc(100dvh - 100px);
     }
@@ -1111,7 +1106,6 @@ iframe {
         border: 20px solid #253C84;
         margin: 0 0 10px;
         outline: 20px solid #213160;
-        /* This may not work in IE - make sure to test */
         outline-offset: -40px;
         background-color: #11182d;
     }
@@ -1237,8 +1231,9 @@ iframe {
         background-color: #662D91;
         transition: all ease 300ms;
     }
+
+    /*---------------- MOBILE Modal ----------------*/
     /*==============================================*/
-    /*===  MOBILE Modal   ==========================*/
     .mobile_modal {
         filter: hue-rotate(30deg);
         transition: all ease 300ms;
@@ -1327,7 +1322,6 @@ iframe {
     }
     .modal_unit {
         display: flex;
-        /* margin-bottom: 30px; */
         margin-bottom: 20px;
         padding: 0;
         flex-direction: column-reverse;
@@ -1372,6 +1366,9 @@ iframe {
     .close_modal {
         display: none;
     }
+    /*====================================================*/
+    /*-----   End modal styles ---------------------------*/
+
     .gmj_logo {
         padding-bottom: 0;
     }
@@ -1383,12 +1380,9 @@ iframe {
         color: white;
     }
 }
-/*================================================================*/
-/*================================================================*/
+
 /*------------------ FULL RESOLUTION  ----------------------------*/
 /*================================================================*/
-/*================================================================*/
-
 @media only screen and (min-width:771px) {
     /* below two rules for Chromium scroll color */
     ::-webkit-scrollbar {

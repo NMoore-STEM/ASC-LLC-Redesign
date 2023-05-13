@@ -98,7 +98,7 @@ $(function(){
                 }, 450);
                 setTimeout(function(){
                     $(".subB").val("SENT");
-    //Staggered input field exit animation- Jquery approach - tested and works
+    //Staggered input field exit animation
                     $("form > div").each(function(i){
                         setTimeout(function(){
                             $("form > div").slice(0,3).eq(i).css('animation','form_left 0.5s ease-in forwards')

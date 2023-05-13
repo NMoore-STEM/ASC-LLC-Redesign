@@ -4,9 +4,10 @@ $(document).ready(function(){
         $('#menu').toggleClass('menuOpen');
     });
 });
+
 /////   MOBILE UX - Button "touch" effect
 // Previously written code for mobile button UX was 2894 chars - this one
-// is only 2218 chars -- This was a 23.4% improvement
+// is only 2218 chars -- This was a 23.4% improvement by refactoring
 $(function(){
     // Function that delays page nav on click/touch to 
     // allow button UX feedback animation to complete
@@ -167,7 +168,7 @@ $(function(){
         return false;
     })
 })
-//  Kanji12 button and animation
+//  Kanji12 - HOPE - button and animation
 $(function(){
     $('.start_stop_knj12').on('click', function(event){
         event.preventDefault();
@@ -199,7 +200,7 @@ function mask2(){
         $('#mask2'+b).toggleClass('knj2'+b);
     }
 }
-// Kanji 34 button script
+// Kanji 34 - Courage - button script
 $(function(){
     $('.start_stop_knj34').on('click', function(event){
         event.preventDefault();
@@ -217,8 +218,7 @@ $(function(){
         return false;
     })
 })
-//  Modular functions for kanji34
-//  refactored 15 lines to a DRY 14 lines
+//  Modular functions for kanji34 - Courage
 function mask3(){
     var msk3 = $('[id^="mask3"]');
     for(let c=1;c<msk3.length+1;c++){
