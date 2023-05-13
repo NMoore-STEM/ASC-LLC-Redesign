@@ -16,7 +16,8 @@ I also used a Jquery library called jquery.inview which can be found <a href="ht
   
 ### Features I am proud of:
 - Custom-designed, 3D hero image  
-- Scroll-position-based scripted animation  
+- Custom/designed from scratch SVG icons and images (no fontawesome)
+- Scroll-position-based scripted animation (no GSAP)
 - Contact form designed/written/scripted from scratch  
   - Formcarry redirect overridden
   - Custom regular expression applied to email field
