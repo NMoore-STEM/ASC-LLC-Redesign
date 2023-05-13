@@ -67,6 +67,7 @@ p, li {
     box-shadow: 0 10px 6px -6px #322749;
     overflow: hidden;
     /* standardized shadow color below */
+    /* store as variable w SCSS in future projects */
     box-shadow: 0 10px 6px -6px #1B253E;
 }
 #coreValues {
@@ -247,7 +248,7 @@ p, li {
     padding-top: 30px;
     text-align: center;
 }
-/*=====================================================================*/
+
 /*------           MOBILE resolution rules          -------------------*/
 /*=====================================================================*/
 @media only screen and (max-width:770px) {
@@ -623,7 +624,7 @@ p, li {
         background-color: #263048;
     }
 }
-/*================================================================*/
+
 /*-------              FULL RESOLUTION                     -------*/
 /*================================================================*/
 @media only screen and (min-width:771px) {
@@ -853,7 +854,6 @@ p, li {
         transform: translateX(0) translateZ(0) scaleX(1);
         transition: all 0.25s ease 0.1s;
     }
-    /*===============================================*/
     /*========  CONTACT BUTTON CLASS AND FX  ========*/
     .contactButton {
         align-content: center;
@@ -1124,7 +1124,7 @@ p, li {
         transition: all 0.3s ease;
     }
 }
-/*=====================================================================*/
+
 /*============       SPECIAL VIEWPORT RULES     =======================*/
 /*=====================================================================*/
 

@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="styles/svg_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital@1&family=Spartan:wght@500&family=Noto+Sans+KR:wght@500&family=Ubuntu:wght@500&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.png">
-    <!-- Below are new additions to aid in page loading speed, note that this approach may not work -->
-    <!-- "https" is removed intentionally as it is said to aid in page load speed -->
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../scripts/jquery3.6.4.min.js"></script>
     <script src="scripts/nm_script.js"></script>
 </head>
+
+
 <body>
     <main class=bg>
+
         <!-- NAV MENU for larger resolutions -->
         <header id=headerMT>
             <div class="head_flex">
@@ -43,6 +44,7 @@
                 </a>
             </nav>
         </header>
+
         <!-- MOBILE NAV MENU -->
         <a role="button" id=menuButton class="mb_mobile">
             <img src="../images/menu-icon.svg" alt="Icon for button to open menu for webpage in smaller resolutions.">
@@ -62,11 +64,14 @@
                 <a role="button" class=menuItem href="contact_r.html">CONTACT</a>
             </li>
         </menu>
+
+        <!-- Hero -->
         <section id=title_cred>
             <h1 class=cred_arr>Nick Moore</h1>
             <p class=arr_prop>"your", "new", "employee"</p>
         </section>
         <div id=about class=spacer></div>
+
         <!-- About Me section -->
         <section id=intro>
             <div class=intro_container_2>
@@ -118,9 +123,11 @@
             </div>
         </section>
         <div class=spacer></div>
+
         <!-- Portfolio section -->
         <section id=portfolio>
             <h2 class=section_heading>Portfolio</h2>
+
         <!-- Web Development -->
             <div id=web_dev class=spacer2></div>
             <div id=front_end_dev class=first_overlay>
@@ -141,6 +148,8 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- Projects -->
                 <div class=portfolio_item_container>
                     <section class="portfolio_item_main wd_item">
                         <div class=web_dev_header>
@@ -178,7 +187,6 @@
                             </a>
                         </div>
                         <div class=portfolio_item_sub>
-                            <!--MAKE SURE TO ADD FINAL BAILEY SITE LOCATION AS LINK-->
                             <div class=pb_container>
                                 <a role="button" href="../../DBaileyLab_site/index.html" class="port_button pb_web" target="_blank">
                                     <span class=pb_text>Website</span>
@@ -236,7 +244,8 @@
                 </div>
             </span>
             <div id=design class=spacer></div>
-            <!-- Graphic Design -->
+
+            <!-- Graphic Design Projects -->
             <div id=graphic_design class=first_overlay>
                 <h3>Graphic Design Work</h3>
                 <div class=heading_decor>
@@ -247,7 +256,8 @@
                         <img class=code_icon src='images/dev-icons/blender-icon.svg' alt="Blender 3-D software Logo">
                     </span>
                 </div>
-                <!-- Modal template here -->
+
+                <!-- More Details MODAL Template -->
                 <div class="modal_screen">
                     <div class=m_container>
                         <!-- Close button for FULL res -->
@@ -264,7 +274,6 @@
                             <svg class=details_arrow version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 31">
                                 <polygon points="15,1 15,30 0,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#BDB0E6;;"/>
                             </svg>
-                            <!-- <span class=pb_text>Return to portfolio...</span> -->
                             <svg class=mobile_close_x version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50">
                                 <line fill="none" stroke="#9D90C5" stroke-width="8" x1="12.5" y1="12.5" x2="37.5" y2="37.5"></line>
                                 <line fill="none" stroke="#9D90C5" stroke-width="8" x1="37.5" y1="12.5" x2="12.5" y2="37.5"></line>
@@ -272,6 +281,8 @@
                         </span>
 
                         <aside class="g_modal">
+
+                            <!-- Packaging Design Item -->
                             <div class="modal_content_00">
                                 <!-- Title Area Victor's Mix -->
                                 <span class="modal_top">
@@ -341,6 +352,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- 3D Design Item -->
                             <div class="modal_content_01">
                                 <!-- Title Area 3D Splash Graphic -->
                                 <span class="modal_top">
@@ -391,7 +404,6 @@
                                             <div class="modal_info_bg">
                                                 <p class="modal_details">I utilized some of my previously created designs and imported them into Blender.</p>
                                                 <p class="modal_details">The imported (2D) vectors had to be modeled in 3D and placed within the diorama-like stage.</p>
-                                                <!-- <p class="modal_details">Once the items were modeled, choosing colors and lighting that matched the color scheme of the website it would be utilized in.</p> -->
                                                 <p class="modal_details">Color scheme in the scene, as well as the lighting, was determined by similar colors utilized in the page styles.</p>
                                             </div>
                                         </span>
@@ -406,20 +418,15 @@
                                                 <p class="modal_details">The final product blends well with the webpage design, portrays the areas of expertise of the consultant, and offers an interesting graphic to draw the end-user further into the content.</p>
                                             </div>
                                         </span>
-                                        <!-- more descriptions can be added to template below here -->
                                     </div>
                                 </div>
                             </div>
                         </aside>
-                        <!-- Close button hidden in smaller resolutions -->
-                        <!-- <span class=close_mobile>
-                            <svg class=details_arrow version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31 31" xml:space="preserve">
-                                <polygon points="30,1 30,30 16,16" stroke-linecap="round" stroke-linejoin="round" style="fill:#BDB0E6;;"/>
-                            </svg>
-                            <span class=pb_text>Return to portfolio...</span>
-                        </span> -->
+
                     </div>
                 </div>
+
+                <!-- Basic List of Graphic Design Projects -->
                 <div class=portfolio_item_container>
                     <section class="portfolio_item_main graphic_item">
                         <h4>Packaging Design:<br>
@@ -444,10 +451,13 @@
                         </button>
                     </section>
                 </div>
-                <!-- SVG showcase -->
+
+                <!-- Animated SVG Projects -->
                 <h3>Animated Vector Graphics</h3>
                 <div class="heading_decor"></div>
                 <div class=portfolio_item_container>
+
+                    <!-- Company Logo Animation -->
                     <section class="gmj_logo portfolio_item_svg">
                         <div class="svg_item_heading">
                             <h4>Chanel Doinoff<br>Fine Art Jewelry Logo</h4>
@@ -469,6 +479,8 @@
                         </div>
                         <button type=button href="#0" class="start_stop_gmj svg_play_button">start animation</button>
                     </section>
+
+                    <!-- Kanji Animation 1 -->
                     <section class="portfolio_item_svg kanji_12">
                         <div class="svg_item_heading">
                             <h4>Hope</h4>
@@ -615,6 +627,8 @@
                         </div>
                         <button type=button href="#0" class="start_stop_knj12 svg_play_button">start animation</button>
                     </section>
+
+                    <!-- Kanji Animation 2 -->
                     <section class="portfolio_item_svg kanji_34">
                         <div class="svg_item_heading">
                             <h4>Courage</h4>
@@ -732,6 +746,8 @@
                         </div>
                         <button type=button href="#0" class="start_stop_knj34 svg_play_button">start animation</button>
                     </section>
+
+                    <!-- SVGs Generated Through JS Project -->
                     <section class="portfolio_item_svg">
                         <div class="svg_item_heading gmj_logo">
                             <h4>Real-Time Javascript SVG Element Generation</h4>
@@ -740,10 +756,13 @@
                         </iframe>
                         <button type=button href="#0" id="iframeRefresh" class=svg_play_button value="Refresh">Refresh Iframe</button>
                     </section>
+
                 </div>
             </div>
-            <div id=art class=spacer></div>
+            <div class=spacer></div>
         </section>
+
+        <!-- Footer -->
         <footer>
             <div id=colorBand04>
                 <div id=colorBand05>

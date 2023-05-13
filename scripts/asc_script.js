@@ -104,5 +104,4 @@ $(document).ready(function(){
         console.log('This page was loaded normally.');
         };
     });
-    // window.addEventListener('unload', function () {});
 });
