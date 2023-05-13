@@ -32,7 +32,7 @@ My portfolio page shares an identical color scheme and design with my consulting
 <br>
 
 ```stl
-solid asc
+surface asc
 facet normal 0.000000 0.000000 1.000000
 outer loop
 vertex 0.013512 0.066742 0.021943
@@ -15517,5 +15517,5 @@ vertex 0.116399 0.025244 -0.021943
 vertex 0.109300 0.025207 -0.021943
 endloop
 endfacet
-endsolid asc
+endsurface asc
 ```
