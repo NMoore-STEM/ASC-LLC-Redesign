@@ -29,7 +29,7 @@ I also used a Jquery library called jquery.inview which can be found <a href="ht
 <br>
 <br>
 You will notice that my portfolio and other projects are all rooted in my original domain (www.anandascience.com).
-My portfolio page shares an identical color scheme and design with my consulting website because it was originally intended as a way to showcase my capabilities to potential clients through a credentialed portal.  As a result of my initial plan, the tracking of my portfolio website is also included in this repository.<br>
+My portfolio page shares an identical color scheme and design with my consulting website because it was originally intended as a credentialed portal for my clients to view.  As a result of my initial plan, the tracking of my portfolio website is also included in this repository.<br>
 <br>
 
 ```stl
