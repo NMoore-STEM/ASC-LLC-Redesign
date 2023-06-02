@@ -88,7 +88,7 @@ $(function(){
             function hideModal() {
                 mScr.hide().removeClass('m_screen_open').off(e);
                 // Added below to hide item-specific content after open
-                $('.modal_content_00, .modal_content_01').hide();
+                $('.modal_content_00, .modal_content_01, .modal_content_02').hide();
             }
             setTimeout(hideModal,175);
         })
@@ -142,7 +142,7 @@ $(function(){
         setTimeout(modalCloseIn,300);
         $('.modal_screen').removeClass('m_s_o_mobile').one('transitionend', function(e){
             $('.modal_scroll').scrollTop(0,0);
-            $('.modal_content_00, .modal_content_01').removeClass('m_show');
+            $('.modal_content_00, .modal_content_01,.modal_content_02').removeClass('m_show');
         })
         $('#headerMT').removeClass('headerMT_modal');
         $('.head_flex').removeClass('mobile_modal');
