@@ -157,6 +157,7 @@ p, li {
 .leftAside {
     text-align: left;
     white-space: pre-line;
+    max-width: 70ch;
 }
 .cardFrame {
     display: flex;
@@ -442,11 +443,11 @@ p, li {
         height: 130px;
         max-width: 475px;
     }
-    section {
+    section:not(#splashMT) {
         display: grid;
-        max-width: 475px;
+        /* max-width: 475px; */
         height: auto;
-        padding-bottom: 20px;
+        /* padding-bottom: 20px; */
         margin: 0 auto 0;
     }
     .sectionMain {
