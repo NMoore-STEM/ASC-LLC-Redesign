@@ -306,6 +306,9 @@ p, li {
 .modal_content_01 {
     display:none;
 }
+.modal_content_02 {
+    display: none;
+}
 .modal_info_bg {
     display: flex;
     flex-direction: column;
