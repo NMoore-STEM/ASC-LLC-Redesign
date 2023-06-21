@@ -2254,4 +2254,59 @@ iframe {
     .modal_info_alt {
         margin-left: 25px;
     }
-};
+}
+/* HD+ resolutions */
+@media only screen and (min-width:2500px){
+    header {
+        height: 13%;
+    }
+    .bg {
+        background-size: 5.5vw;
+    }
+    .home_link {
+        width: 7vw;
+        height: 5vw;
+    }
+    .cred_head {
+        font-size: 2.4vw;
+    }
+    .cred_head::before, .cred_head::after {
+        font-size: 2.2vw;
+    }
+    .cred_head::before {
+        left: -1vw;
+    }
+    .cred_head_sub {
+        font-size: 1vw;
+    }
+    .cred_arr {
+        font-size: 3.7vw;
+    }
+    .cred_arr::before, .cred_arr::after {
+        font-size: 2vw;
+    }
+    .arr_prop {
+        font-size: 1.8vw;
+    }
+    #about {
+        height: 6vw;
+    }
+    p {
+        font-size: 1.6vw;
+    }
+    .section_heading {
+        font-size: 1.3vw;
+        bottom: -6.1%;
+    }
+    .intro_article {
+        margin-bottom: 8%;
+        box-shadow: -1.8vw -1.8vw #253C84;
+    }
+    .intro_sub_container h2 {
+        font-size: 2.8vw;
+        margin-bottom: -4.4%;
+    }
+    .section_heading sub {
+        font-size: 1.6vw;
+    }
+}
